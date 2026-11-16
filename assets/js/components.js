@@ -27,13 +27,14 @@
 const basePath = location.pathname.includes('/pages/') ? '../' : './';
 
 // ลิงก์ไปเว็บไซต์/ระบบของราชบัณฑิตยสภา — ใช้กับปุ่มบน topbar และในเมนูมือถือ (เปิดแท็บใหม่)
-// TODO: ใส่ URL จริงที่ได้รับจากหน่วยงาน (ตอนนี้ยังเป็น "#" ตามกฎห้ามเดาข้อมูลจริง)
-const ROYAL_SOCIETY_URL = '#';
+// ที่มา: ลิงก์ "ข้อมูลราชบัณฑิตยสภา" ในเมนูของเว็บไซต์เดิม orst.go.th
+const ROYAL_SOCIETY_URL = 'https://royalsociety.go.th/';
 
 // ลิงก์แชท Facebook Messenger ของเพจสำนักงาน — ใช้กับปุ่ม "เริ่มแชทใน Messenger" ในการ์ดแชทมุมขวาล่าง (เปิดแท็บใหม่)
 // รูปแบบ: https://m.me/<ชื่อผู้ใช้ของเพจ>  (ดูได้จาก URL เพจ facebook.com/<ชื่อผู้ใช้ของเพจ>)
-// TODO: ใส่ลิงก์จริงที่ได้รับจากหน่วยงาน (ตอนนี้ยังเป็น "#" ตามกฎห้ามเดาข้อมูลจริง)
-const MESSENGER_URL = '#';
+// ที่มา: กล่อง Facebook ของเพจ "ราชบัณฑิตยสภา" (page id 206167399441363) บนเว็บไซต์เดิม orst.go.th
+// ใช้ page id เพราะเว็บเดิมไม่ได้ระบุชื่อผู้ใช้ของเพจ — ถ้าหน่วยงานมีชื่อผู้ใช้ เปลี่ยนเป็น https://m.me/<ชื่อผู้ใช้> ได้
+const MESSENGER_URL = 'https://m.me/206167399441363';
 
 const icons = `
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -95,16 +96,16 @@ const megaMenuData = {
         heading: 'บริการคำศัพท์',
         links: [
           ['พจนานุกรมออนไลน์', `${basePath}dictionary.html`, 'ค้นความหมายและการใช้คำ', 'i-dictionary'],
-          ['ศัพท์บัญญัติ', '#', 'ศัพท์เฉพาะทางและคำมาตรฐาน', 'i-form'],
-          ['ค้นคำศัพท์ภาษาไทย', '#', 'ค้นหาคำตามหมวดและคำใกล้เคียง', 'i-search'],
+          ['ศัพท์บัญญัติ', 'https://coined-word.orst.go.th/', 'ศัพท์เฉพาะทางและคำมาตรฐาน', 'i-form'],
+          ['ค้นคำศัพท์ภาษาไทย', 'https://dictionary.orst.go.th/', 'ค้นหาคำตามหมวดและคำใกล้เคียง', 'i-search'],
         ]
       },
       {
         heading: 'ฐานข้อมูลที่เกี่ยวข้อง',
         links: [
-          ['สารานุกรมและอนุกรมวิธาน', '#', 'คลังความรู้และหมวดคำ', 'i-book'],
-          ['หลักเกณฑ์การใช้ภาษา', '#', 'แนวทางการเขียนและการใช้ภาษา', 'i-shield'],
-          ['คำถามที่พบบ่อยด้านภาษา', '#', 'คำตอบสั้นสำหรับประชาชน', 'i-eye'],
+          ['สารานุกรมและอนุกรมวิธาน', 'https://lst.nectec.or.th/encyclopedia/', 'คลังความรู้และหมวดคำ', 'i-book'],
+          ['หลักเกณฑ์การใช้ภาษา', `${basePath}language-guidelines.html`, 'แนวทางการเขียนและการใช้ภาษา', 'i-shield'],
+          ['คำถามที่พบบ่อยด้านภาษา', `${basePath}qa.html`, 'คำตอบสั้นสำหรับประชาชน', 'i-eye'],
         ]
       }
     ]
@@ -120,24 +121,24 @@ const megaMenuData = {
         heading: 'ค้นหาและฐานข้อมูล',
         links: [
           ['คลังองค์ความรู้', `${basePath}knowledge.html`, 'ค้นจากทุกฐานข้อมูล', 'i-database'],
-          ['บทความวิชาการ', '#', 'บทความเผยแพร่และเอกสารอ้างอิง', 'i-file'],
-          ['องค์ความรู้สำหรับประชาชน', '#', 'เนื้อหาเข้าใจง่ายสำหรับทุกกลุ่ม', 'i-people'],
+          ['บทความวิชาการ', `${basePath}knowledge.html?cat=articles#knowledge-content`, 'บทความเผยแพร่และเอกสารอ้างอิง', 'i-file'],
+          ['องค์ความรู้สำหรับประชาชน', `${basePath}knowledge.html?cat=public#knowledge-content`, 'เนื้อหาเข้าใจง่ายสำหรับทุกกลุ่ม', 'i-people'],
         ]
       },
       {
         heading: 'หมวดความรู้',
         links: [
-          ['ภาษาไทย', '#', 'คำศัพท์ การใช้ภาษา และหลักเกณฑ์', 'i-dictionary'],
-          ['วิทยาศาสตร์', '#', 'ศัพท์วิชาการและองค์ความรู้ร่วมสมัย', 'i-puzzle'],
-          ['ศิลปกรรม', '#', 'ศิลปะ วัฒนธรรม และวรรณคดี', 'i-pen'],
-          ['สังคมศาสตร์', '#', 'ชุมชน เศรษฐกิจ สังคม และนโยบาย', 'i-people'],
+          ['ภาษาไทย', `${basePath}knowledge.html?cat=thai#knowledge-content`, 'คำศัพท์ การใช้ภาษา และหลักเกณฑ์', 'i-dictionary'],
+          ['วิทยาศาสตร์', `${basePath}knowledge.html?cat=science#knowledge-content`, 'ศัพท์วิชาการและองค์ความรู้ร่วมสมัย', 'i-puzzle'],
+          ['ศิลปกรรม', `${basePath}knowledge.html?cat=arts#knowledge-content`, 'ศิลปะ วัฒนธรรม และวรรณคดี', 'i-pen'],
+          ['สังคมศาสตร์', `${basePath}knowledge.html?cat=social#knowledge-content`, 'ชุมชน เศรษฐกิจ สังคม และนโยบาย', 'i-people'],
         ]
       },
       {
         heading: 'สื่อดิจิทัล',
         links: [
-          ['วิดีโอและสื่อมัลติมีเดีย', '#', 'องค์ความรู้แบบรับชม', 'i-video'],
-          ['Infographic', '#', 'สรุปความรู้เข้าใจง่าย', 'i-journal'],
+          ['วิดีโอและสื่อมัลติมีเดีย', `${basePath}academic-lectures.html`, 'การบรรยายทางวิชาการและวิดีโอ', 'i-video'],
+          ['Infographic', `${basePath}infographics.html`, 'สรุปความรู้เข้าใจง่าย', 'i-journal'],
         ]
       }
     ]
@@ -152,17 +153,17 @@ const megaMenuData = {
       {
         heading: 'ข่าวสาร',
         links: [
-          ['ข่าวประชาสัมพันธ์', `${basePath}news.html`, 'ข่าวสารทั่วไป', 'i-megaphone'],
-          ['ข่าวกิจกรรม', '#', 'กิจกรรมและงานเผยแพร่', 'i-pin'],
-          ['บทบรรยายทางวิชาการ', '#', 'สื่อความรู้จากกิจกรรม', 'i-file'],
+          ['ข่าวประชาสัมพันธ์', `${basePath}general-news.html`, 'ข่าวสารทั่วไป', 'i-megaphone'],
+          ['ข่าวกิจกรรม', `${basePath}activity-news.html`, 'กิจกรรมและงานเผยแพร่', 'i-pin'],
+          ['บทบรรยายทางวิชาการ', `${basePath}academic-lectures.html`, 'สื่อความรู้จากกิจกรรม', 'i-file'],
         ]
       },
       {
         heading: 'ประกาศ',
         links: [
-          ['ประกาศจัดซื้อจัดจ้าง', '#', 'ประกาศและเอกสารที่เกี่ยวข้อง', 'i-form'],
-          ['ประกาศรับสมัครงาน', '#', 'ข่าวสารงานบุคคล', 'i-people'],
-          ['ข่าวสารทางราชการ', '#', 'ประกาศเผยแพร่ทั่วไป', 'i-journal'],
+          ['ประกาศจัดซื้อจัดจ้าง', `${basePath}procurement-notices.html`, 'ประกาศและเอกสารที่เกี่ยวข้อง', 'i-form'],
+          ['ประกาศรับสมัครงาน', `${basePath}job-announcements.html`, 'ข่าวสารงานบุคคล', 'i-people'],
+          ['ข่าวสารทางราชการ', `${basePath}official-news.html`, 'ประกาศเผยแพร่ทั่วไป', 'i-journal'],
         ]
       }
     ]
@@ -178,16 +179,16 @@ const megaMenuData = {
         heading: 'บริการออนไลน์',
         links: [
           ['สอบถามข้อมูลทางวิชาการ', `${basePath}services.html`, 'ส่งคำถามและรับเลขติดตาม', 'i-search'],
-          ['ขออนุญาตใช้เนื้อหา', '#', 'ยื่นคำขอและแนบเอกสาร', 'i-file'],
-          ['ร้องเรียน / เสนอแนะ', '#', 'ส่งเรื่องและติดตามผล', 'i-mail'],
+          ['ขออนุญาตใช้เนื้อหา', `${basePath}services.html#forms`, 'ยื่นคำขอและแนบเอกสาร', 'i-file'],
+          ['ร้องเรียน / เสนอแนะ', `${basePath}services.html#channels`, 'ส่งเรื่องและติดตามผล', 'i-mail'],
         ]
       },
       {
         heading: 'งานบริการ',
         links: [
-          ['แบบฟอร์มออนไลน์', '#', 'รวมแบบฟอร์มที่ใช้บ่อย', 'i-form'],
-          ['คำถามที่พบบ่อย', '#', 'คำตอบเกี่ยวกับบริการ', 'i-eye'],
-          ['คู่มือการใช้บริการ', '#', 'ขั้นตอนและเอกสารประกอบ', 'i-book'],
+          ['แบบฟอร์มออนไลน์', `${basePath}services.html#forms`, 'รวมแบบฟอร์มที่ใช้บ่อย', 'i-form'],
+          ['คำถามที่พบบ่อย', `${basePath}qa.html`, 'คำตอบเกี่ยวกับบริการ', 'i-eye'],
+          ['คู่มือการใช้บริการ', `${basePath}service-manuals.html`, 'ขั้นตอนและเอกสารประกอบ', 'i-book'],
         ]
       }
     ]
@@ -203,20 +204,20 @@ const megaMenuData = {
         heading: 'ข้อมูลสำนักงาน',
         wide: true,
         links: [
-          ['ประวัติความเป็นมา', '#', 'ข้อมูลและพัฒนาการของสำนักงาน', 'i-book'],
-          ['วิสัยทัศน์', '#', 'ทิศทางและเป้าหมายขององค์กร', 'i-eye'],
-          ['พันธกิจ', '#', 'ภารกิจหลักของสำนักงาน', 'i-service'],
-          ['ค่านิยม', '#', 'ค่านิยมหลักในการทำงาน', 'i-people'],
-          ['การแบ่งส่วนราชการ', '#', 'โครงสร้างและหน่วยงานภายใน', 'i-form'],
-          ['เครื่องหมายราชการ', '#', 'ตราและเครื่องหมายของสำนักงาน', 'i-shield'],
-          ['กฎระเบียบ', '#', 'กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง', 'i-file'],
+          ['ประวัติความเป็นมา', `${basePath}history.html`, 'ข้อมูลและพัฒนาการของสำนักงาน', 'i-book'],
+          ['วิสัยทัศน์', `${basePath}vision-mission.html`, 'ทิศทางและเป้าหมายขององค์กร', 'i-eye'],
+          ['พันธกิจ', `${basePath}vision-mission.html`, 'ภารกิจหลักของสำนักงาน', 'i-service'],
+          ['ค่านิยม', `${basePath}core-values.html`, 'ค่านิยมหลักในการทำงาน', 'i-people'],
+          ['การแบ่งส่วนราชการ', `${basePath}organization-structure.html`, 'โครงสร้างและหน่วยงานภายใน', 'i-form'],
+          ['เครื่องหมายราชการ', `${basePath}emblem.html`, 'ตราและเครื่องหมายของสำนักงาน', 'i-shield'],
+          ['กฎระเบียบ', `${basePath}laws-regulations.html`, 'กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง', 'i-file'],
         ]
       },
       {
         heading: 'ราชบัณฑิตและบุคลากร',
         links: [
-          ['บุคลากร', '#', 'ข้อมูลหน่วยงานและบุคลากร', 'i-user'],
-          ['รายงานและแผนปฏิบัติราชการ', '#', 'ข้อมูลความโปร่งใสและผลการดำเนินงาน', 'i-journal'],
+          ['ผู้บริหาร', `${basePath}executives.html`, 'ผู้บริหารสำนักงานและ CIO', 'i-user'],
+          ['รายงานและแผนปฏิบัติราชการ', `${basePath}operations.html`, 'ข้อมูลความโปร่งใสและผลการดำเนินงาน', 'i-journal'],
         ]
       }
     ]
@@ -347,8 +348,6 @@ function renderDrawer(active) {
         <div class="drawer-foot">
           <a class="drawer-cta" href="${basePath}services.html">บริการออนไลน์ ${icon('i-arrow')}</a>
           <div class="drawer-links">
-            <a href="#">สำหรับเจ้าหน้าที่</a>
-            <a href="#">เข้าสู่ระบบ / สมัครสมาชิก</a>
             <a class="drawer-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer">ราชบัณฑิตยสภา ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>
           </div>
         </div>
@@ -368,9 +367,7 @@ function renderHeader() {
         <div class="topbar-group topbar-right">
           <a class="topbar-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer">ราชบัณฑิตยสภา ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>
           <a href="${basePath}contact.html">ติดต่อเรา</a>
-          <a href="#">สำหรับเจ้าหน้าที่</a>
           <span>ภาษา TH | EN</span>
-          <a href="#">เข้าสู่ระบบ / สมัครสมาชิก</a>
         </div>
       </div>
     </div>
@@ -566,7 +563,7 @@ function renderFooter() {
           <nav class="orst-footer-col" aria-label="ข้อมูลเว็บไซต์">
             ${colHead('ข้อมูลเว็บไซต์', 'Website Information')}
             <ul>
-              ${links([['แผนผังเว็บไซต์', '#'], ['คำถามที่พบบ่อย', '#']])}
+              ${links([['แผนผังเว็บไซต์', `${basePath}sitemap.html`], ['คำถามที่พบบ่อย', `${basePath}qa.html`]])}
               <li><button type="button" data-open-access>การเข้าถึงเว็บไซต์</button></li>
               ${links([['ติดต่อผู้ดูแลเว็บไซต์', `${basePath}contact.html#contact-form`]])}
             </ul>
@@ -575,10 +572,10 @@ function renderFooter() {
           <nav class="orst-footer-col" aria-label="นโยบายและข้อกำหนด">
             ${colHead('นโยบายและข้อกำหนด', 'Policies &amp; Legal')}
             <ul>${links([
-              ['นโยบายเว็บไซต์', '#'],
-              ['นโยบายคุ้มครองข้อมูลส่วนบุคคล', '#'],
-              ['นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์', '#'],
-              ['ข้อจำกัดความรับผิดชอบ', '#'],
+              ['นโยบายเว็บไซต์', `${basePath}website-policy.html`],
+              ['นโยบายคุ้มครองข้อมูลส่วนบุคคล', 'https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038'],
+              ['นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์', `${basePath}security-policy.html`],
+              ['ข้อจำกัดความรับผิดชอบ', `${basePath}disclaimer.html`],
             ])}</ul>
           </nav>
         </div>
@@ -682,6 +679,11 @@ function initMegaMenu() {
     link.addEventListener('click', event => {
       const key = link.dataset.mega;
       if (!megaMenuData[key]) return;
+
+      // อุปกรณ์ที่มีเมาส์: เมนูใหญ่เปิดเองตอนชี้อยู่แล้ว การคลิกชื่อหมวดจึงพาไปหน้าหมวดนั้นตามปกติ
+      // จอสัมผัส (ไม่มี hover): แตะครั้งแรกเปิดเมนูใหญ่ แตะชื่อหมวดซ้ำขณะเมนูเปิดอยู่จึงไปหน้าหมวด
+      const canHover = window.matchMedia('(hover: hover)').matches;
+      if (canHover || (!mega.hidden && currentKey === key)) return;
 
       event.preventDefault();
       clearTimeout(closeTimer);
@@ -866,11 +868,12 @@ function initNewsEventsTabs() {
 
   if (!tabs.length || !panels.length) return;
 
+  // หน้ารายการข่าวของแต่ละแท็บ (ข่าวในแท็บ "อบรม" มาจากทั้งข่าวประชาสัมพันธ์และข่าวกิจกรรม จึงชี้ไปหน้ารวมข่าว)
   const links = {
-    news: 'news.html?type=news',
-    training: 'news.html?type=training',
-    event: 'news.html?type=event',
-    announcement: 'news.html?type=announcement'
+    news: `${basePath}general-news.html`,
+    training: `${basePath}news.html`,
+    event: `${basePath}activity-news.html`,
+    announcement: `${basePath}general-news.html`
   };
 
   const labels = {
@@ -975,6 +978,174 @@ function initCompactFAQ() {
       button.setAttribute('aria-expanded', String(!expanded));
       if (answer) answer.hidden = expanded;
     });
+  });
+}
+
+/* -----------------------------------------------------------------------------
+   document-list (block รายการเอกสาร จาก blocks.js) — ค้นหา / กรองปี / กรองหมวด / แสดงเพิ่ม
+   ทุกรายการอยู่ใน HTML อยู่แล้ว (อ่านได้แม้ปิด JS) ส่วนนี้แค่ซ่อน/แสดง
+   ค้นหาได้ทั้งเลขไทยและเลขอารบิก (ชื่อประกาศจำนวนมากพิมพ์ด้วยเลขไทย)
+   -------------------------------------------------------------------------- */
+function initDocLists() {
+  const norm = s => String(s || '').replace(/[๐-๙]/g, d => String(THAI_DIGITS.indexOf(d)))
+    .toLowerCase().replace(/\s+/g, ' ').trim();
+
+  document.querySelectorAll('[data-doc-list]').forEach(list => {
+    if (list.dataset.docBound === '1') return;
+    list.dataset.docBound = '1';
+
+    const items = [...list.querySelectorAll('.doc-item')];
+    const pageSize = Number(list.dataset.pageSize) || 20;
+    const toolbar = list.querySelector('[data-doc-toolbar]');
+    const search = list.querySelector('[data-doc-search]');
+    const year = list.querySelector('[data-doc-year]');
+    const cat = list.querySelector('[data-doc-cat]');
+    const count = list.querySelector('[data-doc-count]');
+    const empty = list.querySelector('[data-doc-empty]');
+    const more = list.querySelector('[data-doc-more]');
+    const text = new Map(items.map(it => [it, norm(it.querySelector('.doc-title')?.textContent)]));
+    let limit = pageSize;
+
+    // แถบค้นหามีประโยชน์เมื่อรายการยาวพอ
+    if (toolbar && items.length > 5) toolbar.hidden = false;
+
+    function apply() {
+      const q = norm(search?.value);
+      const y = year?.value || '';
+      const c = cat?.value || '';
+      const matched = items.filter(it =>
+        (!q || text.get(it).includes(q)) &&
+        (!y || it.dataset.year === y) &&
+        (!c || it.dataset.cat === c));
+      items.forEach(it => { it.hidden = true; });
+      matched.slice(0, limit).forEach(it => { it.hidden = false; });
+
+      const shown = Math.min(limit, matched.length);
+      const filtered = q || y || c;
+      if (count) {
+        count.textContent = matched.length === items.length && shown === matched.length
+          ? `ทั้งหมด ${items.length} รายการ`
+          : `แสดง ${shown} จาก ${matched.length} รายการ${filtered ? ` (ทั้งหมด ${items.length})` : ''}`;
+      }
+      if (empty) empty.hidden = matched.length > 0;
+      if (more) {
+        more.hidden = matched.length <= limit;
+        more.textContent = `แสดงเพิ่ม (${Math.min(pageSize, matched.length - shown)} รายการ)`;
+      }
+    }
+
+    const reset = () => { limit = pageSize; apply(); };
+    search?.addEventListener('input', reset);
+    year?.addEventListener('change', reset);
+    cat?.addEventListener('change', reset);
+    toolbar?.addEventListener('submit', e => e.preventDefault());
+    more?.addEventListener('click', () => {
+      const firstNew = items.filter(it => !it.hidden).length;
+      limit += pageSize;
+      apply();
+      // ย้ายโฟกัสไปรายการแรกที่เพิ่งแสดง ให้ผู้ใช้คีย์บอร์ด/screen reader อ่านต่อได้ทันที
+      items.filter(it => !it.hidden)[firstNew]?.querySelector('a')?.focus();
+    });
+    apply();
+  });
+}
+
+/* -----------------------------------------------------------------------------
+   Lightbox — ลิงก์ที่มี data-lightbox="<กลุ่ม>" (ภาพในแกลเลอรี/ภาพเด่น จาก blocks.js)
+   เปิดภาพเต็มในหน้าเดิม เลื่อนภาพในกลุ่มเดียวกันได้ด้วยปุ่ม/ลูกศรซ้ายขวา ปิดด้วย Esc
+   -------------------------------------------------------------------------- */
+function initLightbox() {
+  const links = [...document.querySelectorAll('a[data-lightbox]')].filter(a => a.dataset.lbBound !== '1');
+  if (!links.length) return;
+
+  let box = document.getElementById('lightbox');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'lightbox';
+    box.className = 'lightbox';
+    box.hidden = true;
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'ดูภาพขนาดเต็ม');
+    box.innerHTML = `
+      <div class="lightbox-bar">
+        <span data-lb-count aria-live="polite"></span>
+        <span>
+          <a data-lb-open href="#" target="_blank" rel="noopener noreferrer">เปิดภาพต้นฉบับ<span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
+          <button type="button" data-lb-close aria-label="ปิด">ปิด ✕</button>
+        </span>
+      </div>
+      <div class="lightbox-stage"><img alt=""></div>
+      <button type="button" class="lightbox-prev" data-lb-step="-1" aria-label="ภาพก่อนหน้า">‹</button>
+      <button type="button" class="lightbox-next" data-lb-step="1" aria-label="ภาพถัดไป">›</button>`;
+    document.body.appendChild(box);
+    box.addEventListener('click', e => { if (e.target === box || e.target.classList.contains('lightbox-stage')) box.close(); });
+    box.querySelector('[data-lb-close]').addEventListener('click', () => box.close());
+    box.querySelectorAll('[data-lb-step]').forEach(b => b.addEventListener('click', () => box.step(Number(b.dataset.lbStep))));
+    box.addEventListener('keydown', e => {
+      if (e.key === 'Escape') box.close();
+      if (e.key === 'ArrowRight') box.step(1);
+      if (e.key === 'ArrowLeft') box.step(-1);
+    });
+    let group = [], index = 0, opener = null;
+    box.show = (a) => {
+      group = [...document.querySelectorAll(`a[data-lightbox="${CSS.escape(a.dataset.lightbox)}"]`)];
+      index = group.indexOf(a); opener = a;
+      box.hidden = false;
+      document.documentElement.classList.add('drawer-lock');
+      box.render();
+      box.querySelector('[data-lb-close]').focus();
+    };
+    box.render = () => {
+      const a = group[index];
+      const img = box.querySelector('img');
+      img.src = a.href;
+      img.alt = a.querySelector('img')?.alt || '';
+      box.querySelector('[data-lb-open]').href = a.href;
+      box.querySelector('[data-lb-count]').textContent = group.length > 1 ? `ภาพที่ ${index + 1} จาก ${group.length}` : '';
+      box.querySelectorAll('[data-lb-step]').forEach(b => { b.hidden = group.length < 2; });
+    };
+    box.step = d => { if (group.length < 2) return; index = (index + d + group.length) % group.length; box.render(); };
+    box.close = () => { box.hidden = true; document.documentElement.classList.remove('drawer-lock'); opener?.focus(); };
+  }
+  links.forEach(a => {
+    a.dataset.lbBound = '1';
+    a.addEventListener('click', e => {
+      if (e.ctrlKey || e.metaKey || e.shiftKey) return;   // เปิดแท็บใหม่ตามปกติ
+      e.preventDefault();
+      box.show(a);
+    });
+  });
+}
+
+/* แถบเมนูย่อยของหมวด — จอใหญ่เปิดค้าง จอเล็ก (< 1024px) พับไว้ แตะเพื่อเปิด */
+function initSectionNav() {
+  const wide = window.matchMedia('(min-width: 1024px)').matches;
+  document.querySelectorAll('[data-section-nav]').forEach(d => { d.open = wide; });
+}
+
+/* ปุ่มแชร์ (block "share") — ใส่ลิงก์ของหน้าปัจจุบันตอนเปิดหน้า */
+function initShare() {
+  document.querySelectorAll('[data-share]').forEach(el => {
+    if (el.dataset.shareBound === '1') return;
+    el.dataset.shareBound = '1';
+    const url = encodeURIComponent(location.href.split('#')[0]);
+    const text = encodeURIComponent(document.title);
+    const kind = el.dataset.share;
+    if (kind === 'facebook') el.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    if (kind === 'line') el.href = `https://social-plugins.line.me/lineit/share?url=${url}`;
+    if (kind === 'x') el.href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+    if (kind === 'copy') {
+      el.addEventListener('click', async () => {
+        const status = el.parentElement.querySelector('[data-share-status]');
+        try {
+          await navigator.clipboard.writeText(location.href.split('#')[0]);
+          if (status) status.textContent = 'คัดลอกลิงก์แล้ว';
+        } catch {
+          if (status) status.textContent = 'คัดลอกไม่ได้ — คัดลอกจากแถบที่อยู่ของเบราว์เซอร์';
+        }
+      });
+    }
   });
 }
 
@@ -1138,6 +1309,10 @@ window.orstHeader = {
   // เรียกซ้ำได้หลังจากเพิ่มเนื้อหาเข้า DOM ทีหลัง (เช่น หน้าที่ render จาก JSON)
   bindDynamicContent() {
     initCompactFAQ();
+    initDocLists();
+    initLightbox();
+    initShare();
+    initSectionNav();
     initMediaTabs();
     initNewsEventsTabs();
     syncFixedHeaderHeight();

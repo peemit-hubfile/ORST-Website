@@ -31,7 +31,8 @@ node tools/validate.mjs
 | header / เมนู / mega menu / footer | `assets/js/components.js` |
 | สไตล์ของ header / footer | `assets/css/components.css` |
 | สไตล์ของบล็อกเนื้อหา | `assets/css/blocks.css` |
-| ตัวแปรสี ฟอนต์ สไตล์พื้นฐาน | `assets/css/base.css` |
+| ฟอนต์ ขนาดตัวอักษร ระยะห่าง มุมโค้ง | `assets/css/typography.css` |
+| ตัวแปรสี สไตล์พื้นฐาน | `assets/css/base.css` |
 | เพิ่มบล็อกชนิดใหม่ | `assets/js/blocks.js` |
 
 `index.html` · `knowledge.html` · `contact.html` เป็น 3 หน้าที่เขียน HTML เองทั้งหมด
@@ -39,7 +40,7 @@ node tools/validate.mjs
 
 ## กฎที่ห้ามผิด
 
-- ลำดับ CSS: `base.css` → `blocks.css` → `pages/xxx.css` → **`components.css` ท้ายสุดเสมอ**
+- ลำดับ CSS: `typography.css` → `base.css` → `blocks.css` → `pages/xxx.css` → **`components.css` ท้ายสุดเสมอ**
 - ลำดับ JS: **`components.js` ต้องมาก่อน** `page-runtime.js`
 - ห้ามเขียน `<header>` / `<footer>` เองในหน้า ให้แก้ที่ `components.js`
 - ห้ามเพิ่ม dependency / build tool — ทุกอย่างต้องรันได้ด้วย Live Server เฉย ๆ
@@ -61,6 +62,7 @@ node tools/build.mjs
 
 | ไฟล์ | สำหรับใคร |
 |---|---|
-| **[CONTENT-MODEL.md](CONTENT-MODEL.md)** | คนทำเนื้อหา — คลังบล็อก 14 ชนิดพร้อมตัวอย่าง JSON |
+| **[CONTENT-MODEL.md](CONTENT-MODEL.md)** | คนทำเนื้อหา — คลังบล็อก 20 ชนิดพร้อมตัวอย่าง JSON |
+| **[CMS-HANDOFF.md](CMS-HANDOFF.md)** | ทีม dev CMS — สัญญาข้อมูล แม่แบบหน้าย่อย และหน้าตัวอย่าง |
 | **[HANDOFF.md](HANDOFF.md)** | ทีมพัฒนา — สถาปัตยกรรม design tokens และ**หนี้ทางเทคนิคที่ต้องรู้** |
 | **[CLAUDE.md](CLAUDE.md)** | AI agent — กฎการทำงานในโปรเจกต์นี้ |

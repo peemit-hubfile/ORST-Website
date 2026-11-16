@@ -1,0 +1,74 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=42 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+  "navKey": "services",
+  "description": "ข้อมูลเสียงประกอบคู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+      "lead": "ข้อมูลเสียงประกอบคู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ",
+          "href": "services.html"
+        },
+        {
+          "label": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ภาษาเขมรถิ่นไทย",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCO0236009"
+        },
+        {
+          "title": "ภาษาเลอเวือะ",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCP0631075"
+        },
+        {
+          "title": "ภาษาญัฮกุร",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCP1147025"
+        },
+        {
+          "title": "ภาษาโซ่ (ทะวืง)",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCP1656097"
+        },
+        {
+          "title": "ภาษากฺ๋อง",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCP1921072"
+        },
+        {
+          "title": "ภาษาบีซู",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCP2110078"
+        },
+        {
+          "title": "ภาษาโทรฺ",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCP2224041"
+        },
+        {
+          "title": "ภาษาขมุ",
+          "publishedAt": "2023-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001403001012%2F66CCP2356056"
+        }
+      ]
+    }
+  ]
+}

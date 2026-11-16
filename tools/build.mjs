@@ -26,7 +26,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderBlocks, validatePage } from '../assets/js/blocks.js';
+import { renderPage, validatePage } from '../assets/js/blocks.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -90,6 +90,8 @@ async function main() {
   }
 
   const files = (await readdir(PAGES_DIR)).filter(f => f.endsWith('.json'));
+  // โครงเมนูของหมวด (แถบเมนูย่อยข้างเนื้อหา) — ใช้ไฟล์เดียวกับที่ page-runtime.js โหลดในเบราว์เซอร์
+  const nav = JSON.parse(await readFile(join(ROOT, 'content', 'site-nav.json'), 'utf8').catch(() => 'null'));
   let built = 0;
   const problems = [];
   const pages = [];   // ชื่อไฟล์ HTML ทุกหน้าที่ลง dist จริง ใช้ทำ sitemap
@@ -119,7 +121,7 @@ async function main() {
     }
 
     const html = bustAssets(shell
-      .replace(MOUNT_RE, (_, open, __, close) => `${open}\n${renderBlocks(page.blocks)}\n    ${close}`)
+      .replace(MOUNT_RE, (_, open, __, close) => `${open}\n${renderPage(page, nav, slug)}\n    ${close}`)
       .replace(/<title>[\s\S]*?<\/title>/,
         `<title>${page.seoTitle || `${page.title} | สำนักงานราชบัณฑิตยสภา`}</title>`));
 

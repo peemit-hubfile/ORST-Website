@@ -1,0 +1,47 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=28 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "คลังความรู้",
+  "navKey": "services",
+  "description": "เอกสารความรู้เผยแพร่ของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คลังความรู้",
+      "lead": "เอกสารความรู้เผยแพร่ของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ",
+          "href": "services.html"
+        },
+        {
+          "label": "คลังความรู้"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ชื่อสกุลเงินตราต่างประเทศ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A23797OJG5813226226292222622"
+        },
+        {
+          "title": "คำขวัญประจำจังหวัด และต้นไม้ประจำจังหวัด",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3B225%3B7OJG5813226226292222622"
+        },
+        {
+          "title": "ตราประจำจังหวัด",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B2%3B442PJG5813226226292222622"
+        }
+      ],
+      "sort": "none"
+    }
+  ]
+}

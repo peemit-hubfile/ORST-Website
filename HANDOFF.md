@@ -69,7 +69,7 @@ ORST Website/
 │   └── build.mjs           สร้าง HTML นิ่งลง dist/ สำหรับ production
 │
 ├── _archive/               โค้ดเก่าที่ไม่ได้ใช้แล้ว เก็บไว้อ้างอิง (ไม่ถูกโหลด)
-├── CONTENT-MODEL.md        คลังบล็อก 14 ชนิด พร้อมตัวอย่าง JSON
+├── CONTENT-MODEL.md        คลังบล็อก 20 ชนิด พร้อมตัวอย่าง JSON
 ├── CLAUDE.md               กฎการทำงานสำหรับ AI agent
 ├── HANDOFF.md              เอกสารนี้
 └── README.md               สรุปสั้น
@@ -164,10 +164,11 @@ node tools/validate.mjs
 ตรวจให้ครบว่า: โครงสร้าง JSON ถูก · block ทุกตัวมีฟิลด์บังคับ · `navKey` ตรงกับ `data-page`
 · ไอคอนมีอยู่จริง · รูปมีอยู่จริง · ลิงก์ภายในไม่เสีย
 
-### บล็อกที่ใช้ได้ 14 ชนิด
+### บล็อกที่ใช้ได้ 20 ชนิด
 
 `page-hero` · `rich-text` · `card-grid` · `feature-list` · `stat-row` · `link-list` ·
-`media-grid` · `table` · `faq` · `steps` · `two-column` · `cta-band` · `notice` · `contact-info`
+`media-grid` · `table` · `faq` · `steps` · `two-column` · `cta-band` · `notice` · `contact-info` ·
+`document-list` (T1/T4) · `article` (T2) · `page-index` (T3) · `person-grid` (T5) · `figure` · `share` — แม่แบบสำหรับ CMS ดู [TEMPLATES.md](TEMPLATES.md) และ [CMS-HANDOFF.md](CMS-HANDOFF.md)
 
 ตัวอย่าง JSON ของทุกชนิดอยู่ใน **[CONTENT-MODEL.md](CONTENT-MODEL.md)**
 และเปิดดูของจริงได้ที่ **`styleguide.html`**
@@ -223,8 +224,9 @@ node tools/build.mjs
 | `--gold` | `#b99143` | ทอง (สีเน้น) |
 | `--gold-soft` | `#fff4db` | ทองอ่อน |
 | `--line` | `rgba(185,145,67,.24)` | เส้นขอบ |
-| `--radius` | `18px` | มุมโค้ง |
-| `--container` | `1800px` / `1120px` เมื่อจอ ≤ 1280px | ความกว้างสูงสุดของ `.container` |
+| `--radius` | `var(--radius-xl)` = 16px | มุมโค้ง (สูงสุดตาม typography.css) |
+| `--container` | `1680px` (typography.css) / เล็กลงตามจอใน home.css | ความกว้างสูงสุดของ `.container` |
+| `--text-*` `--leading-*` `--space-*` `--radius-sm…pill` | ดู `assets/css/typography.css` | ตัวอักษร ระยะบรรทัด ระยะห่าง มุมโค้ง |
 
 **โหมดการเข้าถึง** ทำงานโดยสลับ class ที่ `<body>` แล้วเขียนทับตัวแปรข้างบน:
 `.high-contrast` · `.readable-mode` · `.no-motion`
@@ -377,7 +379,7 @@ content/pages/about.json  ──►  assets/js/blocks.js  ──►  HTML
 
 | ไฟล์ | คืออะไร |
 |---|---|
-| `assets/js/blocks.js` | คลังบล็อก 14 ชนิด + ตัวตรวจความถูกต้อง |
+| `assets/js/blocks.js` | คลังบล็อก 20 ชนิด + ตัวตรวจความถูกต้อง |
 | `assets/js/page-runtime.js` | โหลด JSON แล้ว render (ข้ามอัตโนมัติถ้าหน้าถูก build มาแล้ว) |
 | `assets/css/blocks.css` | สไตล์ของ block — ใช้ตัวแปรสีล้วน ไม่ฮาร์ดโค้ด |
 | `content/blocks.schema.json` | JSON Schema — VS Code เติมคำและตรวจ error ให้ขณะพิมพ์ |
@@ -507,9 +509,11 @@ Netlify เสิร์ฟ `404.html` ให้ทุก URL ที่ไม่�
 
 ### 11.2 สิ่งที่ทำไปในรอบนี้ (ดูรายละเอียดใน `git log`)
 
-- **ฟอนต์**: ภาษาไทยทั้งเว็บเป็น TH Sarabun New (self-host `assets/fonts/`), หัวข้อเด่นใช้ Sarabun
+- **ฟอนต์** (อัปเดต 16 พ.ย. 2569 ตาม `rs-typography-kit/`): ภาษาไทยใช้ TH Sarabun New ตัวเดียวทั้งเว็บ (เลิกใช้ Sarabun แล้ว)
+  อังกฤษใช้ Geist / Newsreader จาก Google Fonts ผ่าน `<link>` ในทุกหน้า — ทั้งหมดตั้งค่าใน `assets/css/typography.css`
   ทุกหน้า preload ฟอนต์หลัก 3 ไฟล์ และ `_headers`/`netlify.toml` ให้ cache ฟอนต์ 1 ปี
-- **สเกลตัวอักษร**: ตัวแปร `--fs-meta/body/title/subhead/panel/h2/h1/label-en` ใน `base.css`
+- **สเกลตัวอักษร**: ใช้ `--text-xs … --text-3xl` จาก `typography.css` (ฐาน html โตตามจอ 17.5–23px)
+  ตัวแปรเดิม `--fs-*` ใน `base.css` ยังใช้ได้ แต่ชี้ไปที่ `--text-*` แล้ว
   ข้อความไทยต่ำสุด 16px — เพิ่ม/แก้ส่วนใหม่ให้ใช้ตัวแปรเหล่านี้
 - **header**: ตัดปุ่มช่วยการเข้าถึงออกจาก topbar (ใช้ปุ่มลอยแทน), topbar ซ่อนที่จอ <= 900px,
   เมนูมือถือเป็นแผงเลื่อนจากขวาแบบรายการเรียบ (`renderDrawer()`)
@@ -537,9 +541,9 @@ Netlify เสิร์ฟ `404.html` ให้ทุก URL ที่ไม่�
 
 ### 11.4 งานค้าง / รอข้อมูลจากลูกค้า
 
-- URL จริงของ "ราชบัณฑิตยสภา ↗" (`ROYAL_SOCIETY_URL` ใน `assets/js/components.js`)
+- ~~URL จริงของ "ราชบัณฑิตยสภา ↗"~~ ใส่แล้ว `https://royalsociety.go.th/` (จากเมนูเว็บเดิม) และ `MESSENGER_URL` ใช้ page id ของเพจ Facebook จากเว็บเดิม
 - วันและเวลาทำการ (ตอนนี้เป็น placeholder `[วันและเวลาทำการ]` ในหน้าติดต่อ)
-- ไฟล์อินโฟกราฟิกจริง / ลิงก์วิดีโอจริง / ข่าวจริง (ตอนนี้เป็นข้อมูลตัวอย่าง)
+- ข่าว ประกาศ เอกสาร อินโฟกราฟิก สิ่งพิมพ์ ในหน้าย่อย ดึงจากเว็บเดิมแล้ว (ดูหัวข้อ 11.6) — ส่วนข่าวสารและกิจกรรมบน **หน้าแรก** ใช้ข่าวจริงแล้ว (step5_news.py) แต่การ์ดส่วนอื่นของหน้าแรกยังเป็นข้อมูลตัวอย่าง
   เนื้อหาบนการ์ดอินโฟกราฟิกควรให้ฝ่ายเนื้อหาของราชบัณฑิตยสภาตรวจก่อนขึ้นจริง
 - หน้าที่ลิงก์ชี้ไปแต่ยังไม่มี: `faq.html`, `calendar.html`(เลิกใช้แล้ว), `/privacy`, `encyclopedia.html`
 - ปุ่มเลื่อนเดือนในปฏิทินยังไม่ทำงาน (ยังไม่มีข้อมูลกิจกรรมจริง)
@@ -552,3 +556,15 @@ Netlify เสิร์ฟ `404.html` ให้ทุก URL ที่ไม่�
 - `_source-images/orst-bg-original.jpg` — ภาพตึกต้นฉบับ 6.8MB (เว็บใช้ไฟล์ย่อ `assets/images/orst-bg.jpg`)
 - `assets/images/orst-bg01.png` — ภาพพื้นหลังเดิมที่ไม่ได้ใช้แล้ว (ควรย้ายออกจาก `assets/` เพราะ build จะส่งขึ้นเว็บด้วย)
 - ไฟล์ `.docx` สคริปต์นำเสนอที่ root
+
+### 11.6 ย้ายข้อมูลจากเว็บเดิม (13 พ.ย. 2569)
+
+- สร้างหน้าใหม่ 51 หน้าจากข้อมูลจริงบน www.orst.go.th ตาม sitemap มาตรฐานเว็บไซต์ภาครัฐ (ดู [TEMPLATES.md](TEMPLATES.md))
+  ดึงซ้ำได้ด้วย `python tools/scrape-old-site/migrate.py` (ดู [README](tools/scrape-old-site/README.md))
+  ที่มาของแต่ละหน้าอยู่ในฟิลด์ `_note` ของไฟล์ JSON
+- **ไฟล์ PDF และหน้ารายละเอียดข่าวยังลิงก์ไปเว็บเดิม** — ต้องย้ายไฟล์เข้า CMS ก่อนปิดเว็บเดิม
+- รูปที่ดึงมาเก็บใน `assets/images/orst/` (ผู้บริหาร ตัดจากภาพรวมของเว็บเดิม, เครื่องหมายราชการ, รูปย่ออินโฟกราฟิก 136 รูป, ปกสิ่งพิมพ์ 177 รูป)
+- ข้อมูลที่ดูเก่าและต้องให้ ORST ยืนยัน: เบอร์ 0 2356 xxxx ในหน้าช่องทางร้องเรียนทุจริตและหน้าสั่งซื้อหนังสือ,
+  ที่อยู่ธนาณัติ "สนามเสือป่า" ในหน้าสั่งซื้อหนังสือ
+- หน้าหมวด 4 (การปฏิบัติราชการ) ยังใช้ `navKey: about` เพราะเมนูหลักยังไม่มีหมวดนี้
+

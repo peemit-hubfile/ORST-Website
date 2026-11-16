@@ -1,0 +1,108 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HNI1055034 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "โครงการราชบัณฑิตยสภานำความรู้สู่สังคม การเสวนาวิชาการ เรื่อง “ความหลากหลายทางชีวภาพ: สินทรัพย์เพื่อการพัฒนาเศรษฐกิจและ ส",
+  "navKey": "news",
+  "description": "ภาพประกอบ 7 ภาพ",
+  "updatedAt": "2026-08-14",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "อบรมและเสวนา",
+      "heading": "โครงการราชบัณฑิตยสภานำความรู้สู่สังคม การเสวนาวิชาการ เรื่อง “ความหลากหลายทางชีวภาพ: สินทรัพย์เพื่อการพัฒนาเศรษฐกิจและ สังคมแห่งอนาคต”",
+      "lead": "เผยแพร่เมื่อ 14 สิงหาคม 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "โครงการราชบัณฑิตยสภานำความรู้สู่สังคม การเสวนาวิชาการ เรื่อง “ความหลากหลายทางชีวภาพ: สินทรัพย์เพื่อการพัฒนาเศรษฐกิจและ สังคมแห่งอนาคต”"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005386-960.jpg",
+      "alt": "ภาพประกอบข่าว โครงการราชบัณฑิตยสภานำความรู้สู่สังคม การเสวนาวิชาการ เรื่อง “ความหลากหลายทางชีว",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005386.JPG"
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (7 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005386-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005386.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005387-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005387.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005388-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005388.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005389-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005389.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005390-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005390.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005391-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005391.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005392-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005392.JPG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

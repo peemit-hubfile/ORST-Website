@@ -1,0 +1,95 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "หลักเกณฑ์ต่าง ๆ",
+  "navKey": "services",
+  "description": "หลักเกณฑ์การใช้ภาษาไทย การทับศัพท์ การถอดอักษร การอ่าน และการเขียนชื่อต่าง ๆ ที่สำนักงานราชบัณฑิตยสภากำหนด",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "หลักเกณฑ์ต่าง ๆ",
+      "lead": "หลักเกณฑ์การใช้ภาษาไทย การทับศัพท์ การถอดอักษร การอ่าน และการเขียนชื่อต่าง ๆ ที่สำนักงานราชบัณฑิตยสภากำหนด",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ",
+          "href": "services.html"
+        },
+        {
+          "label": "หลักเกณฑ์ต่าง ๆ"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F65CRO0017088"
+        },
+        {
+          "title": "หลักเกณฑ์การทับศัพท์",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8728397LTG5813223326234222622"
+        },
+        {
+          "title": "การถอดอักษรไทยเป็นอักษรโรมัน",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERJ5814038"
+        },
+        {
+          "title": "การอ่านตัวเลขต่างๆ",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0020019"
+        },
+        {
+          "title": "การอ่านวิสามานยนาม",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0129056"
+        },
+        {
+          "title": "การอ่านเครื่องหมาย",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0201056"
+        },
+        {
+          "title": "เครื่องหมายวรรคตอน",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0249069"
+        },
+        {
+          "title": "การเว้นวรรค",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3529352MTG5813223326234222622"
+        },
+        {
+          "title": "การเขียนคำย่อ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6622562MTG5813223326234222622"
+        },
+        {
+          "title": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0503006"
+        },
+        {
+          "title": "ชื่อทะเล",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0548006"
+        },
+        {
+          "title": "ชื่อธาตุ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6529482MTG5813223326234222622"
+        },
+        {
+          "title": "ชื่อประเทศ/เมืองหลวง",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0700072"
+        },
+        {
+          "title": "ลักษณนาม",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0729009"
+        },
+        {
+          "title": "ราชาศัพท์",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=65233%3A2MTG5813223326234222622"
+        }
+      ],
+      "sort": "none"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HEP1411031 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "พิธีบำเพ็ญกุศลปัญญาสมวาร เพื่ออุทิศถวายแด่ สมเด็จพระเจ้าลูกเธอ เจ้าฟ้าพัชรกิติยาภา นเรนทิราเทพยวดี กรมหลวงราชสาริณีสิริพ",
+  "navKey": "news",
+  "description": "ภาพประกอบ 11 ภาพ",
+  "updatedAt": "2026-08-05",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ข่าวประชาสัมพันธ์",
+      "heading": "พิธีบำเพ็ญกุศลปัญญาสมวาร เพื่ออุทิศถวายแด่ สมเด็จพระเจ้าลูกเธอ เจ้าฟ้าพัชรกิติยาภา นเรนทิราเทพยวดี กรมหลวงราชสาริณีสิริพัชร มหาวัชรราชธิดา",
+      "lead": "เผยแพร่เมื่อ 5 สิงหาคม 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "พิธีบำเพ็ญกุศลปัญญาสมวาร เพื่ออุทิศถวายแด่ สมเด็จพระเจ้าลูกเธอ เจ้าฟ้าพัชรกิติยาภา นเรนทิราเทพยวดี กรมหลวงราชสาริณีสิริพัชร มหาวัชรราชธิดา"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005374-960.jpg",
+      "alt": "ภาพประกอบข่าว พิธีบำเพ็ญกุศลปัญญาสมวาร เพื่ออุทิศถวายแด่ สมเด็จพระเจ้าลูกเธอ เจ้าฟ้าพัชรกิติยา",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005374.JPG"
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (11 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005374-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005374.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005375-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005375.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005376-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005376.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005377-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005377.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005378-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005378.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005379-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005379.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005380-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005380.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005381-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8",
+          "title": "ภาพที่ 8",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005381.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005382-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9",
+          "title": "ภาพที่ 9",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005382.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005383-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10",
+          "title": "ภาพที่ 10",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005383.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005384-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11",
+          "title": "ภาพที่ 11",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005384.JPG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

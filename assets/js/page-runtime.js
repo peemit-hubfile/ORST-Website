@@ -22,7 +22,7 @@
      ซึ่งจะเขียนเนื้อหาลงไฟล์ HTML ให้เลย โดยใช้ตัว render ตัวเดียวกัน
    ============================================================================= */
 
-import { renderBlocks, validatePage } from './blocks.js';
+import { renderPage, validatePage } from './blocks.js';
 
 const MOUNT_ID = 'app-content';
 
@@ -109,7 +109,10 @@ async function main() {
   }
 
   applyMeta(page);
-  mount.innerHTML = renderBlocks(page.blocks);
+  // โครงเมนูของหมวด สำหรับแถบเมนูย่อยข้างเนื้อหา — โหลดไม่ได้ก็ยังแสดงหน้าได้ (แค่ไม่มีแถบ)
+  const nav = await fetch('content/site-nav.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
+  const slug = path.split('/').pop().replace(/\.json$/, '');
+  mount.innerHTML = renderPage(page, nav, slug);
 
   // ผูก event ให้ block ที่ต้องใช้ JS (เช่น faq) เพราะเนื้อหาเพิ่งถูกใส่เข้า DOM
   window.orstHeader?.bindDynamicContent?.();

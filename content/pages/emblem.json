@@ -1,0 +1,59 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-EMB (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "เครื่องหมายราชการ",
+  "navKey": "about",
+  "description": "ความหมายของเครื่องหมายราชการของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "เครื่องหมายราชการ",
+      "lead": "ความหมายของเครื่องหมายราชการของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา",
+          "href": "about.html"
+        },
+        {
+          "label": "เครื่องหมายราชการ"
+        }
+      ]
+    },
+    {
+      "type": "two-column",
+      "id": "emblem",
+      "image": "assets/images/orst/about/emblem.png",
+      "imageAlt": "เครื่องหมายราชการของสำนักงานราชบัณฑิตยสภา",
+      "imageSide": "left",
+      "subheading": "เครื่องหมายราชการของสำนักงานราชบัณฑิตยสภา",
+      "paragraphs": [
+        "เครื่องหมายเป็นรูปพระมหามงกุฎ ซึ่งเป็นสัญลักษณ์แทนพระมหากษัตริย์ครอบเหนือพระแสงขรรค์ที่มีปลายตั้งขึ้น ตรงกลางพระแสงขรรค์มีหนังสือเปิดกางอยู่ และมีคำว่า “ปณฺฑิโต” อยู่ที่หน้าหนังสือนั้น ซึ่งหมายถึงราชบัณฑิตผู้มีปัญญาเปรียบประดุจดังอาวุธ เบื้องหลังพระแสงขรรค์และหนังสือมีรัศมีแผ่อยู่โดยรอบอันหมายถึงแสงสว่างแห่งปัญญา เบื้องล่างมีริบบิ้น ปลาย ๒ ข้างโค้งขึ้นไปจดกรรเจียกพระมหามงกุฎ สีเขียวบนแถบริบบิ้นหมายถึงสีแห่งวันพระบรมราชสมภพของพระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวที่ทรงพระกรุณาโปรดเกล้าโปรดกระหม่อมให้สถาปนาราชบัณฑิตยสภาขึ้นเมื่อวันที่ ๑๙ เมษายน พุทธศักราช ๒๔๖๙ ใต้เครื่องหมายรูปพระมหามงกุฎมีคำว่า สำนักงานราชบัณฑิตยสภา โค้งตามแนวแถบริบบิ้น"
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "emblem-en",
+      "variant": "alt",
+      "heading": "Official Emblem of the Office of the Royal Society",
+      "html": "<p lang=\"en\">The emblem consists of the Royal Crown, symbol of kingship, placed over the upright Royal Sword with the tip pointing upward. In the center of the Royal Sword is an open book inscribed with the word “bandito”, signifying that Fellows of the Royal Society are armed with knowledge. Behind the Royal Sword and the book are rays representing the light of wisdom. Below is a green ribbon the ends of which curve up to reach the ear-shaped part of the Royal Crown on both sides. The color green on the ribbon is the color of the day of birth of King Prajadhipok, Rama VII, who graciously founded the Royal Society on 19 April B.E. 2469. Underneath the Royal Crown and the green ribbon are the words The Office of the Royal Society, which appear in a curved line to correspond with the green ribbon.</p>"
+    },
+    {
+      "type": "document-list",
+      "id": "reference",
+      "items": [
+        {
+          "title": "ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดภาพเครื่องหมายราชการ ตามพระราชบัญญัติเครื่องหมายราชการ พุทธศักราช ๒๔๘๒ (ฉบับที่ ๒๙๕)",
+          "file": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2561/E/100/1.PDF",
+          "note": "ราชกิจจานุเบกษา"
+        }
+      ],
+      "heading": "เอกสารอ้างอิง",
+      "layout": "compact"
+    }
+  ]
+}

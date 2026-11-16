@@ -1,0 +1,154 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69J%40J1403044 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+  "navKey": "news",
+  "description": "ภาพประกอบ 10 ภาพ · เอกสารแนบ 5 ไฟล์",
+  "updatedAt": "2026-10-31",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ประกาศ",
+      "heading": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+      "lead": "เผยแพร่เมื่อ 31 ตุลาคม 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005446-960.jpg",
+      "alt": "ภาพประกอบข่าว ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005446.PNG"
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (10 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005446.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005447-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005447.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005448-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005448.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005449-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005449.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005450-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005450.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005451-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005451.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005452-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005452.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005453-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8",
+          "title": "ภาพที่ 8",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005453.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005454-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9",
+          "title": "ภาพที่ 9",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005454.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005455-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10",
+          "title": "ภาพที่ 10",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005455.PNG"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "attachments",
+      "heading": "เอกสารที่เกี่ยวข้อง",
+      "layout": "compact",
+      "items": [
+        {
+          "title": "ประกาศรับสมัครจ้างเหมาบริการ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005456.PDF"
+        },
+        {
+          "title": "คุณสมบัติและขอบเขตงานจ้าง จนท บริหารทั่วไป",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005457.PDF"
+        },
+        {
+          "title": "คุณสมบัติและขอบเขตงาน จนท พัสดุ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005458.PDF"
+        },
+        {
+          "title": "คุณสมบัติและขอบเขตงานจ้าง พนง ขับรถ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005459.PDF"
+        },
+        {
+          "title": "ใบสมัคร",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005460.PDF"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

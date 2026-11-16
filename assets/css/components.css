@@ -14,14 +14,14 @@
 :root {
   --deep: #073b34;
   --deep-2: #124c43;
-  --gold: #b99143;
+  --gold: #9e7a2f;
   --gold-2: #d8bd74;
-  --gold-soft: #fff4db;
+  --gold-soft: #f2f4f1;
   --ink: #102033;
   --muted: #667085;
-  --surface: #fffdf8;
-  --surface-soft: #fbf7ef;
-  --line: rgba(185, 145, 67, .24);
+  --surface: #fcfcfb;
+  --surface-soft: #f5f6f4;
+  --line: rgba(158, 122, 47, .24);
   --shadow: 0 24px 70px rgba(16, 32, 51, .16);
 }
 
@@ -50,7 +50,7 @@
   background: var(--deep);
   color: #fff;
   padding: 10px 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   transition: transform .18s ease;
 }
 
@@ -59,7 +59,7 @@
 .topbar {
   background: var(--deep);
   color: rgba(255,255,255,.92);
-  font-size: .88rem;
+  font-size: var(--text-sm);
 }
 
 .topbar-inner, .header-inner {
@@ -104,7 +104,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 253, 248, .96);
+  background: rgba(252, 252, 251, .96);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
 }
@@ -140,14 +140,14 @@
 }
 
 .brand-text-th {
-  font-size: 1.22rem;
+  font-size: var(--text-md);
   font-weight: 700;
   color: var(--deep);
   letter-spacing: .01em;
 }
 
 .brand-text-en {
-  font-size: .68rem;
+  font-size: var(--text-xs);
   font-weight: 700;
   color: var(--deep-2);
   opacity: .82;
@@ -173,12 +173,12 @@
   min-height: 44px;
   padding: 10px 12px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
-  font-size: .94rem;
+  font-size: var(--text-sm);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -187,7 +187,7 @@
 
 .main-nav a:hover, .main-nav button:hover,
 .main-nav a.is-open, .main-nav button.is-open {
-  background: #fff7e8;
+  background: #f7f8f6;
   color: var(--deep);
 }
 
@@ -196,7 +196,7 @@
    (override .main-nav a.active::after ใน pages/*.css ที่วางเส้นไว้ในปุ่ม) */
 .main-nav a.active { background: transparent; color: var(--deep); }
 .main-nav a.active:hover,
-.main-nav a.active.is-open { background: #fff7e8; }
+.main-nav a.active.is-open { background: #f7f8f6; }
 .main-nav a.active::after {
   content: "";
   position: absolute;
@@ -254,7 +254,7 @@
 
 .round-btn {
   min-height: 44px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--line);
   background: #fff;
   color: var(--ink);
@@ -277,7 +277,7 @@
   display: none;
   width: 46px;
   height: 46px;
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: #fff;
   padding: 10px;
@@ -288,7 +288,7 @@
   height: 2px;
   margin: 5px 0;
   background: var(--deep);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 
 .mega-menu {
@@ -308,7 +308,7 @@
   grid-template-columns: 264px 1fr;
   gap: 26px;
   padding: 24px;
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   background: #fff;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -319,7 +319,7 @@
   position: relative;
   overflow: hidden;
   padding: 26px 24px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   background: var(--deep);
   color: #fff;
 }
@@ -329,7 +329,7 @@
   height: 48px;
   display: grid;
   place-items: center;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   color: var(--gold-2);
   background: rgba(255,255,255,.12);
   margin-bottom: 16px;
@@ -338,21 +338,21 @@
 .mega-feature .section-kicker {
   color: #f7df9d;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: var(--text-sm);
 }
 
 .mega-feature h3 {
   color: #fff;
   margin: 8px 0 8px;
   font-family: var(--font-th);
-  font-size: 1.8rem;
-  line-height: 1.25;
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
 }
 
 .mega-feature p {
   color: rgba(255,255,255,.78);
-  line-height: 1.6;
-  font-size: 1.05rem;
+  line-height: var(--leading-reading);
+  font-size: var(--text-base);
   margin: 0 0 16px;
 }
 
@@ -362,7 +362,7 @@
   gap: 8px;
   min-height: 42px;
   padding: 10px 18px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--gold);
   color: #13231f;
   text-decoration: none;
@@ -393,7 +393,7 @@
   margin: 0 10px 10px;
   padding-bottom: 7px;
   border-bottom: 2px solid var(--gold);
-  font-size: 1.1rem;
+  font-size: var(--text-md);
 }
 
 /* กลุ่มที่มีรายการเยอะ — ขยายกว้าง 2 ช่องแล้วจัดลิงก์เป็น 2 คอลัมน์ให้สมดุล ไม่ยาวเกิน */
@@ -417,7 +417,7 @@
   padding: 10px 0;
   color: var(--ink);
   text-decoration: none;
-  border-top: 1px solid rgba(185,145,67,.13);
+  border-top: 1px solid rgba(158, 122, 47,.13);
 }
 
 .mega-link:first-of-type { border-top: 0; }
@@ -425,16 +425,16 @@
 .mega-link strong {
   display: block;
   color: var(--ink);
-  line-height: 1.35;
-  font-size: 1.08rem;
+  line-height: var(--leading-normal);
+  font-size: var(--text-base);
 }
 
 .mega-link small {
   display: block;
   color: var(--muted);
   margin-top: 2px;
-  line-height: 1.4;
-  font-size: .92rem;
+  line-height: var(--leading-normal);
+  font-size: var(--text-sm);
 }
 
 .mega-link em {
@@ -450,11 +450,11 @@
 .mega-link::after { content: none; }            /* เอาลูกศร › ที่ซ้ำกับ → ออก เหลืออันเดียว */
 
 .mega-group a,
-.mega-link { position: relative; border-radius: 6px; }
+.mega-link { position: relative; border-radius: var(--radius-sm); }
 
 .mega-group a:hover,
 .mega-link:hover {
-  background: rgba(185,145,67,.09);
+  background: rgba(158, 122, 47,.09);
   color: var(--deep);
   transform: none;
 }
@@ -475,7 +475,7 @@
   padding: 9px 10px;
   margin: 0 0 2px;
   border-top: 0;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 .mega-groups .mega-link em { display: none; }
 .mega-link strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -484,7 +484,7 @@
   height: 36px;
   display: grid;
   place-items: center;
-  border-radius: 9px;
+  border-radius: var(--radius-md);
   background: var(--surface-soft);
   border: 1px solid var(--line);
   color: var(--deep);
@@ -573,13 +573,13 @@ html.drawer-lock .access-float { visibility: hidden; }
 }
 .drawer-brand-th {
   display: block;
-  font-size: 1.02rem;
+  font-size: var(--text-base);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--leading-tight);
 }
 .drawer-brand-en {
   display: block;
-  font-size: .62rem;
+  font-size: var(--text-xs);
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--deep-2);
@@ -610,7 +610,7 @@ html.drawer-lock .access-float { visibility: hidden; }
   gap: 10px;
   padding: 0 18px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: #fff;
   color: var(--muted);
   font: inherit;
@@ -643,7 +643,7 @@ html.drawer-lock .access-float { visibility: hidden; }
   background: transparent;
   color: var(--ink);
   font: inherit;
-  font-size: 1.08rem;
+  font-size: var(--text-base);
   font-weight: 700;
   text-align: left;
   text-decoration: none;
@@ -660,7 +660,7 @@ html.drawer-lock .access-float { visibility: hidden; }
   top: 12px;
   bottom: 12px;
   width: 4px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   background: var(--gold);
 }
 
@@ -681,7 +681,7 @@ html.drawer-lock .access-float { visibility: hidden; }
 .drawer-label {
   flex: 1;
   min-width: 0;
-  line-height: 1.3;
+  line-height: var(--leading-tight);
 }
 
 .drawer-chev {
@@ -744,7 +744,7 @@ html.drawer-lock .access-float { visibility: hidden; }
 .drawer-sub-group { display: grid; }
 .drawer-sub-title {
   padding: 2px 0 2px;
-  font-size: .82rem;
+  font-size: var(--text-xs);
   font-weight: 700;
   letter-spacing: .02em;
   color: var(--muted);
@@ -772,10 +772,10 @@ html.drawer-lock .access-float { visibility: hidden; }
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--deep);
   color: #fff;
-  font-size: 1.05rem;
+  font-size: var(--text-base);
   font-weight: 700;
   text-decoration: none;
 }
@@ -896,14 +896,14 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
 .orst-footer-wordmark-th {
   color: #fff;
   font-family: var(--font-th);
-  font-size: 1.12rem;
+  font-size: var(--text-md);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: var(--leading-tight);
 }
 .orst-footer-wordmark-en {
   color: var(--gold-2);
   font-family: var(--font-th);
-  font-size: .66rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -928,8 +928,8 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   grid-template-columns: 16px minmax(0, 1fr);
   gap: 10px;
   align-items: start;
-  font-size: .95rem;
-  line-height: 1.6;
+  font-size: var(--text-sm);
+  line-height: var(--leading-reading);
 }
 .orst-footer-reach .icon {
   width: 16px;
@@ -958,7 +958,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   text-decoration: none;
   transition: background .18s ease, border-color .18s ease;
@@ -992,14 +992,14 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
 .orst-footer-head span {
   color: #fff;
   font-family: var(--font-th);
-  font-size: 1.08rem;
+  font-size: var(--text-base);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: var(--leading-tight);
 }
 .orst-footer-head small {
   color: var(--gold-2);
   font-family: var(--font-th);
-  font-size: .66rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -1026,8 +1026,8 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   background: none;
   color: rgba(255, 255, 255, .74);
   font: inherit;
-  font-size: .98rem;
-  line-height: 1.5;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
   text-align: left;
   text-decoration: none;
   cursor: pointer;
@@ -1049,7 +1049,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   justify-content: space-between;
   gap: 10px 24px;
   color: rgba(255, 255, 255, .6);
-  font-size: .9rem;
+  font-size: var(--text-sm);
 }
 .orst-footer-totop {
   min-height: 38px;
@@ -1058,11 +1058,11 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   gap: 8px;
   padding: 6px 16px;
   border: 1px solid rgba(255, 255, 255, .22);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: none;
   color: #fff;
   font: inherit;
-  font-size: .9rem;
+  font-size: var(--text-sm);
   cursor: pointer;
 }
 .orst-footer-totop .icon { width: 15px; height: 15px; transform: rotate(-90deg); }
@@ -1142,7 +1142,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
 .newsletter input {
   min-height: 44px;
   border: 1px solid rgba(255,255,255,.18);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 10px 14px;
   background: rgba(255,255,255,.1);
   color: #fff;
@@ -1156,7 +1156,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
-  font-size: .88rem;
+  font-size: var(--text-sm);
 }
 
 .access-float {
@@ -1166,7 +1166,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   z-index: 90;
   min-height: 48px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--deep);
   color: #fff;
   padding: 10px 16px;
@@ -1198,8 +1198,8 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   position: relative;
   z-index: 1;
   width: min(640px, 100%);
-  border-radius: 28px;
-  background: #fffdf8;
+  border-radius: var(--radius-xl);
+  background: #fcfcfb;
   border: 1px solid var(--line);
   box-shadow: 0 28px 90px rgba(8,22,31,.28);
   overflow: hidden;
@@ -1224,7 +1224,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   background: #fff;
   display: grid;
   place-items: center;
-  font-size: 1.3rem;
+  font-size: var(--text-md);
 }
 
 .modal-body { padding: 20px 22px 24px; }
@@ -1234,7 +1234,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
   gap: 10px;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 6px;
 }
 
@@ -1265,7 +1265,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
 .search-result-item {
   padding: 12px;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   background: #fff;
 }
 
@@ -1278,7 +1278,7 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
 .tool-grid button {
   min-height: 54px;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   background: #fff;
   color: var(--ink);
   font-weight: 700;
@@ -1307,7 +1307,7 @@ body.no-motion *, body.no-motion *::before, body.no-motion *::after { animation:
   .topbar > .container {
     width: min(1800px, calc(100% - 48px));
   }
-  .topbar { font-size: .94rem; }
+  .topbar { font-size: var(--text-sm); }
   .header-inner { gap: 16px; }
   .brand.brand-image { min-width: auto; }
   .main-nav { min-width: 0; }
@@ -1315,25 +1315,25 @@ body.no-motion *, body.no-motion *::before, body.no-motion *::after { animation:
 
 /* จอกว้าง */
 @media (min-width: 1560px) {
-  .brand-text-th { font-size: 1.3rem; }
-  .brand-text-en { font-size: .72rem; }
+  .brand-text-th { font-size: var(--text-base); }
+  .brand-text-en { font-size: var(--text-xs); }
   .main-nav { gap: 4px; }
-  .main-nav a, .main-nav button { font-size: 1.12rem; padding: 10px 14px; }
+  .main-nav a, .main-nav button { font-size: var(--text-sm); padding: 10px 14px; }
 }
 
 /* laptop ใหญ่ */
 @media (min-width: 1440px) and (max-width: 1559.98px) {
-  .brand-text-th { font-size: 1.2rem; }
+  .brand-text-th { font-size: var(--text-base); }
   .main-nav { gap: 2px; }
-  .main-nav a, .main-nav button { font-size: 1.04rem; padding: 10px 10px; }
+  .main-nav a, .main-nav button { font-size: var(--text-sm); padding: 10px 10px; }
   .main-nav a[data-mega] { gap: 6px; }
 }
 
 /* laptop 1366 */
 @media (min-width: 1366px) and (max-width: 1439.98px) {
-  .brand-text-th { font-size: 1.15rem; }
+  .brand-text-th { font-size: var(--text-base); }
   .main-nav { gap: 2px; }
-  .main-nav a, .main-nav button { font-size: .98rem; padding: 10px 9px; }
+  .main-nav a, .main-nav button { font-size: var(--text-sm); padding: 10px 9px; }
   .main-nav a[data-mega] { gap: 5px; }
   .header-actions { gap: 6px; }
 }
@@ -1350,14 +1350,14 @@ body.no-motion *, body.no-motion *::before, body.no-motion *::after { animation:
   .topbar { display: none; }
   .brand.brand-image { min-width: auto; }
   .brand-emblem { height: 50px; }
-  .brand-text-th { font-size: 1.1rem; }
+  .brand-text-th { font-size: var(--text-base); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
   .brand-emblem { height: 42px; }
-  .brand-text-th { font-size: .98rem; }
-  .brand-text-en { font-size: .6rem; letter-spacing: .04em; }
+  .brand-text-th { font-size: var(--text-base); }
+  .brand-text-en { font-size: var(--text-xs); letter-spacing: .04em; }
   .header-inner { min-height: 68px; gap: 10px; }
   .header-actions .round-btn.primary { display: none; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -1368,7 +1368,7 @@ body.no-motion *, body.no-motion *::before, body.no-motion *::after { animation:
 
 @media (max-width: 420px) {
   .brand-emblem { height: 38px; }
-  .brand-text-th { font-size: .92rem; }
+  .brand-text-th { font-size: var(--text-sm); }
   .brand-text-en { display: none; }
 }
 
@@ -1436,7 +1436,7 @@ body.no-motion *, body.no-motion *::before, body.no-motion *::after { animation:
 
 .section-kicker[lang="en"],
 .block-eyebrow[lang="en"] {
-  font-size: .76rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -1444,16 +1444,16 @@ body.no-motion *, body.no-motion *::before, body.no-motion *::after { animation:
 .brand-text-en[lang="en"],
 .orst-footer-wordmark-en[lang="en"],
 .drawer-brand-en[lang="en"] { font-weight: 500; letter-spacing: .06em; }
-.orst-footer-head small[lang="en"] { font-size: .72rem; font-weight: 500; letter-spacing: .08em; }
+.orst-footer-head small[lang="en"] { font-size: var(--text-xs); font-weight: 500; letter-spacing: .08em; }
 a[href^="mailto:"][lang="en"],
 .channel-value[lang="en"] { font-size: .92em; }
 /* ส่วนที่เดิมใช้ Sarabun → TH Sarabun New: ขยายชดเชย (~1.2 เท่า) */
-.page-hero h1 { font-size: clamp(2.75rem, 4.8vw, 3.85rem); }
-.page-hero p { font-size: 1.4rem; }
-.orst-footer-wordmark-th { font-size: 1.35rem; }
-.orst-footer-head span { font-size: 1.3rem; }
+.page-hero h1 { font-size: var(--text-2xl); }
+.page-hero p { font-size: var(--text-md); }
+.orst-footer-wordmark-th { font-size: var(--text-md); }
+.orst-footer-head span { font-size: var(--text-base); }
 .section-kicker:not([lang="en"]),
-.eyebrow:not([lang="en"]) { font-size: 1.1rem; }
+.eyebrow:not([lang="en"]) { font-size: var(--text-sm); }
 
 /* หัวข้อเล็กเหนือหัวข้อ section (section-kicker / block-eyebrow) — ภาษาไทย มีเส้นสั้นนำหน้า
    (ลูกค้า: ใช้ภาษาไทยก่อนจนกว่าจะมีระบบเปลี่ยนภาษา — ข้อความอังกฤษเก็บไว้ที่ data-en)
@@ -1465,7 +1465,7 @@ a[href^="mailto:"][lang="en"],
   gap: 10px;
   color: color-mix(in srgb, var(--gold) 72%, var(--ink));
   font-family: var(--font-th);
-  font-size: 1.1rem;
+  font-size: var(--text-md);
   font-weight: 700;
   letter-spacing: 0;
   text-transform: none;
@@ -1489,34 +1489,34 @@ body.high-contrast .block-eyebrow { color: var(--ink); }
    - ใส่ .orst-footer นำหน้า เพื่อชนะ ".footer a/li" (0.95rem) ใน base.css และ pages/*.css
    ลำดับขั้น: ชื่อหน่วยงาน 26px > หัวคอลัมน์ 24px > เนื้อหา/ลิงก์ 20px > ปุ่ม 19px > แถบล่าง 18px
    ============================================================================= */
-.orst-footer .orst-footer-wordmark-th { font-size: 1.45rem; }
-.orst-footer .orst-footer-head span { font-size: 1.35rem; }
+.orst-footer .orst-footer-wordmark-th { font-size: var(--text-base); }
+.orst-footer .orst-footer-head span { font-size: var(--text-base); }
 .orst-footer .orst-footer-wordmark-en,
 .orst-footer .orst-footer-head small {
   font-family: var(--font-en);
-  font-size: .68rem;
+  font-size: var(--text-xs);
   font-weight: 500;
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-.orst-footer .orst-footer-wordmark-en { font-size: .72rem; letter-spacing: .08em; }
+.orst-footer .orst-footer-wordmark-en { font-size: var(--text-xs); letter-spacing: .08em; }
 .orst-footer .orst-footer-reach li,
 .orst-footer .orst-footer-reach a,
 .orst-footer .orst-footer-col a,
 .orst-footer .orst-footer-col button {
-  font-size: 1.1rem;
-  line-height: 1.55;
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
 }
 .orst-footer .orst-footer-reach a[href^="mailto:"] {
   font-family: var(--font-en);
-  font-size: .8rem;
+  font-size: var(--text-xs);
   letter-spacing: .01em;
 }
 .orst-footer .orst-footer-primary,
-.orst-footer .orst-footer-secondary { font-size: 1.05rem; }
+.orst-footer .orst-footer-secondary { font-size: var(--text-sm); }
 .orst-footer .orst-footer-bottom,
 .orst-footer .orst-footer-bottom span,
-.orst-footer .orst-footer-totop { font-size: 1rem; }
+.orst-footer .orst-footer-totop { font-size: var(--text-sm); }
 
 /* สีข้อความ footer (ลูกค้า: ให้เหมือนกันทั้งหมด) — ที่อยู่ เบอร์โทร อีเมล และลิงก์ทุกคอลัมน์ใช้สีเดียว
    เดิม: ที่อยู่ .76 / เบอร์โทร-อีเมล ขาวล้วน / ลิงก์ .74 จึงดูไม่เท่ากัน */
@@ -1559,22 +1559,22 @@ body.high-contrast .block-eyebrow { color: var(--ink); }
    TH Sarabun New ที่ 20px ดูเท่าฟอนต์ทั่วไปราว 14–15px จึงต้องตั้งตัวเลขสูงกว่าปกติ
    เมนูหลักแสดงเฉพาะจอ ≥ 1366px (ต่ำกว่านั้นเป็นปุ่มเมนูมือถือ) — แต่ละช่วงจอขยายเท่าที่ยังอยู่บรรทัดเดียว
    ============================================================================= */
-.topbar { font-size: 1rem; }                                            /* 17 -> 18px */
+.topbar { font-size: var(--text-sm); }
 @media (min-width: 1560px) {
-  .main-nav a, .main-nav button { font-size: 1.22rem; }                 /* 20 -> 22px */
+  .main-nav a, .main-nav button { font-size: var(--text-sm); }
 }
 @media (min-width: 1440px) and (max-width: 1559.98px) {
-  .main-nav a, .main-nav button { font-size: 1.12rem; }                 /* 18.7 -> 20px */
+  .main-nav a, .main-nav button { font-size: var(--text-sm); }
 }
 @media (min-width: 1366px) and (max-width: 1439.98px) {
-  .main-nav a, .main-nav button { font-size: 1.04rem; }                 /* 17.6 -> 18.7px */
+  .main-nav a, .main-nav button { font-size: var(--text-sm); }
 }
 
-.mega-feature h3 { font-size: 1.8rem; text-wrap: balance; }            /* คง 32px — 34px แล้ว "พจนานุกรมและคำศัพท์" ล้นแผงจนตัดเหลือ "ศัพท์" บรรทัดเดียว */
-.mega-feature p { font-size: 1.15rem; }                                 /* 19 -> 21px */
-.mega-group h4 { font-size: 1.22rem; }                                  /* 20 -> 22px */
-.mega-link strong { font-size: 1.22rem; }                               /* 19.4 -> 22px */
-.mega-link small { font-size: 1.03rem; }                                /* 16.6 -> 18.5px */
+.mega-feature h3 { font-size: var(--text-xl); text-wrap: balance; }            /* คง 32px — 34px แล้ว "พจนานุกรมและคำศัพท์" ล้นแผงจนตัดเหลือ "ศัพท์" บรรทัดเดียว */
+.mega-feature p { font-size: var(--text-base); }
+.mega-group h4 { font-size: var(--text-base); }
+.mega-link strong { font-size: var(--text-base); }
+.mega-link small { font-size: var(--text-sm); }
 
 /* ตัวหนังสือเมนู "บางไป" (ลูกค้า) — TH Sarabun New มีแค่ Regular(400) กับ Bold(700)
    ไม่มีน้ำหนักกลาง จึงเติมเส้นขอบบาง ๆ สีเดียวกับตัวอักษร ให้ได้ความหนาราว Medium
@@ -1631,14 +1631,14 @@ html.drawer-lock .chat-widget { visibility: hidden; }
   right: calc(100% + 10px);
   top: 50%;
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface);
   color: var(--ink);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
-  font-size: 1rem;
+  font-size: var(--text-base);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: var(--leading-normal);
   white-space: nowrap;
   opacity: 0;
   transform: translate(6px, -50%);
@@ -1657,7 +1657,7 @@ html.drawer-lock .chat-widget { visibility: hidden; }
   width: min(340px, calc(100vw - 24px));
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   background: var(--surface);
   box-shadow: 0 24px 60px rgba(16, 32, 51, .22);
   transform-origin: bottom right;
@@ -1692,8 +1692,8 @@ body.no-motion .chat-panel { animation: none; }
 }
 .chat-avatar img { width: auto; height: 34px; }
 .chat-panel-title { display: grid; min-width: 0; }
-.chat-panel-title strong { font-size: 1.15rem; line-height: 1.3; }
-.chat-panel-title small { color: rgba(255, 255, 255, .78); font-size: .94rem; line-height: 1.4; }
+.chat-panel-title strong { font-size: var(--text-md); line-height: var(--leading-tight); }
+.chat-panel-title small { color: rgba(255, 255, 255, .78); font-size: var(--text-sm); line-height: var(--leading-normal); }
 .chat-close {
   width: 36px;
   height: 36px;
@@ -1720,11 +1720,11 @@ body.no-motion .chat-panel { animation: none; }
   margin: 0;
   padding: 12px 14px;
   border: 1px solid var(--line);
-  border-radius: 4px 16px 16px 16px;
+  border-radius: var(--radius-sm) var(--radius-xl) var(--radius-xl) var(--radius-xl);
   background: var(--surface);
   color: var(--ink);
-  font-size: 1.05rem;
-  line-height: 1.55;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
 }
 .chat-cta {
   min-height: 48px;
@@ -1732,10 +1732,10 @@ body.no-motion .chat-panel { animation: none; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: linear-gradient(200deg, #ff6968 0%, #a334fa 45%, #0695ff 100%);
   color: #fff;
-  font-size: 1.1rem;
+  font-size: var(--text-md);
   font-weight: 700;
   text-decoration: none;
 }
@@ -1745,7 +1745,7 @@ body.no-motion .chat-panel { animation: none; }
 .chat-note {
   margin: -4px 0 0;
   color: var(--muted);
-  font-size: .94rem;
+  font-size: var(--text-sm);
   text-align: center;
 }
 .chat-alt {
@@ -1755,7 +1755,7 @@ body.no-motion .chat-panel { animation: none; }
   gap: 6px;
   min-height: 36px;
   color: var(--deep);
-  font-size: 1rem;
+  font-size: var(--text-base);
   font-weight: 700;
   text-decoration: none;
 }
@@ -1773,3 +1773,36 @@ body.no-motion .chat-panel { animation: none; }
 body.high-contrast .chat-fab,
 body.high-contrast .chat-cta { background: #000; border: 2px solid var(--gold); color: var(--gold); box-shadow: none; }
 body.high-contrast .chat-panel-head { border-bottom: 1px solid var(--line); }
+
+/* =============================================================================
+   ปรับ header ให้พอดีกับสเกลตัวอักษรของ typography.css (เมนูและปุ่ม = --text-sm)
+   ตัวอักษรใหญ่ขึ้น จึงลดช่องไฟเมนู และซ่อนคำว่า "ค้นหา" (เหลือไอคอน มี aria-label อยู่แล้ว)
+   ในช่วงจอที่เมนูเต็มยังแคบ
+   ============================================================================= */
+.header-actions .round-btn { font-size: var(--text-sm); }
+@media (min-width: 1366px) and (max-width: 1679.98px) {
+  .main-nav a, .main-nav button { padding-inline: 7px; }
+  .header-actions [data-open-search] span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .header-actions [data-open-search] { padding-inline: 12px; }
+}
+/* footer: เมนูหลักเรียงคอลัมน์เดียว จนกว่าจอจะกว้างพอให้สองคอลัมน์ไม่ตัดคำกลางชื่อเมนู */
+@media (max-width: 1679.98px) {
+  .orst-footer-col--menu ul { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+}
+
+/* =============================================================================
+   ชื่อหน่วยงานใน header — ลดขนาดให้เล็กกว่าเมนู (ลูกค้า: ส่วนโลโก้ใหญ่เกิน)
+   ชื่อไทย = --text-sm (ขนาดเดียวกับเมนู) / ชื่ออังกฤษตัวพิมพ์ใหญ่ (Geist) ดูใหญ่กว่าไทย ~1.37 เท่า
+   จึงย่อเหลือ 70% ของ --text-xs ให้สมดุลกับชื่อไทย
+   ============================================================================= */
+.brand-emblem { height: 46px; }
+.brand-text { gap: 0; line-height: var(--leading-tight); }
+.brand-text-th { font-size: var(--text-sm); letter-spacing: 0; }
+.brand-text-en { font-size: calc(var(--text-xs) * .7); letter-spacing: .06em; }
+@media (max-width: 900px) {
+  .brand-emblem { height: 42px; }
+}
+@media (max-width: 600px) {
+  .brand-emblem { height: 38px; }
+  .brand-text-th { font-size: var(--text-sm); }
+}

@@ -1,0 +1,171 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69F%2DI2503034 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "การประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒/๒๕๖๙",
+  "navKey": "news",
+  "description": "สำนักงานราชบัณฑิตยสภาจัดการประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒ มุ่งถ่ายทอดนโยบายองค์กร พร้อมเสริมสร้างสุขภาวะทางจิตใจให้บุคลากร เมื่อวันที่ ",
+  "updatedAt": "2026-06-30",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ข่าวประชาสัมพันธ์",
+      "heading": "การประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒/๒๕๖๙",
+      "lead": "เผยแพร่เมื่อ 30 มิถุนายน 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "การประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒/๒๕๖๙"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005277-960.jpg",
+      "alt": "ภาพประกอบข่าว การประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒/๒๕๖๙",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005277.JPG"
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "สำนักงานราชบัณฑิตยสภาจัดการประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒ มุ่งถ่ายทอดนโยบายองค์กร พร้อมเสริมสร้างสุขภาวะทางจิตใจให้บุคลากร เมื่อวันที่ ๒๖",
+        "มิถุนายน ๒๕๖๙ เวลา ๙.๐๐-๑๖.๓๐ น. ณ โรงแรมโนโวเทล กรุงเทพ สยามสแควร์",
+        "โดยช่วงเช้าได้รับเกียรติจาก รองศาสตราจารย์ ดร.ศานติ ภักดีคำ รองเลขาธิการราชบัณฑิตยสภา",
+        "เป็นประธานเปิดการประชุม พร้อมทั้งจัดกิจกรรมส่งเสริมจริยธรรม และบรรยายเรื่อง หลักเกณฑ์การรับทรัพย์สินหรือประโยชน์อื่นใดโดยธรรมจรรยาของเจ้าพนักงานของรัฐ",
+        "ตามมาตรา ๑๒๘ เพื่อให้บุคลากรของสำนักงานราชบัณฑิตยสภาต้องปฏิบัติตนตามข้อกำหนดจริยธรรมของสำนักงานราชบัณฑิตยสภา",
+        "และตามประมวลจริยธรรมข้าราชการพลเรือน รวมทั้งห้ามรับทรัพย์สินหรือประโยชน์อื่นใดอันอาจคำนวณเป็นเงินได้",
+        "ซึ่งอาจส่งผลต่อการปฏิบัติหน้าที่ และหากมีการรับเกิน ๓,๐๐๐ บาท",
+        "ต้องรายงานหัวหน้าส่วนราชการภายใน ๓๐ วัน ตามแบบที่สำนักงาน ป.ป.ท. กำหนด",
+        "จากนั้น ดร.ศุภฤกษ์",
+        "ภู่พงศ์ศักดิ์ เลขาธิการราชบัณฑิตยสภา",
+        "ได้ให้เกียรติถ่ายทอดนโยบายและทิศทางของสำนักงานราชบัณฑิตยสภา",
+        "ส่วนภาคบ่ายเป็นการสัมมนาเชิงปฏิบัติการ",
+        "เรื่อง \"สุขภาพ (จิต) เรื่องใกล้ตัว : รู้ทันก่อนหมดไฟ ชีวิตคนวัยทำงาน\"",
+        "โดยทีมวิทยากรจาก To Grow Training ซึ่งจัดขึ้นเพื่อส่งเสริมความรู้ความเข้าใจในด้านสุขภาพจิตที่ดี",
+        "ป้องกันภาวะหมดไฟในการทำงาน (Burnout Syndrome) ตลอดจนช่วยกระชับความสัมพันธ์อันดีระหว่างผู้บริหารและบุคลากรในองค์กร"
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (14 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005277-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005277.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005278-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005278.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005279-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005279.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005280-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005280.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005281-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005281.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005282-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005282.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005283-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005283.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005284-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8",
+          "title": "ภาพที่ 8",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005284.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005285-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9",
+          "title": "ภาพที่ 9",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005285.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005286-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10",
+          "title": "ภาพที่ 10",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005286.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005287-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11",
+          "title": "ภาพที่ 11",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005287.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005288-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12",
+          "title": "ภาพที่ 12",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005288.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005289-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 13",
+          "title": "ภาพที่ 13",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005289.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005290-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 14",
+          "title": "ภาพที่ 14",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005290.JPG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

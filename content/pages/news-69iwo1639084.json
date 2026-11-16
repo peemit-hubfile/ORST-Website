@@ -1,0 +1,100 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69IWO1639084 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+  "navKey": "news",
+  "description": "ภาพประกอบ 3 ภาพ · เอกสารแนบ 2 ไฟล์",
+  "updatedAt": "2026-09-23",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ประกาศ",
+      "heading": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+      "lead": "เผยแพร่เมื่อ 23 กันยายน 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005407-960.jpg",
+      "alt": "ภาพประกอบข่าว ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมา",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005407.JPG"
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (3 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005407-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005407.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005408-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005408.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005409-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005409.JPG"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "attachments",
+      "heading": "เอกสารที่เกี่ยวข้อง",
+      "layout": "compact",
+      "items": [
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005410.PDF"
+        },
+        {
+          "title": "ข้อบังคับฯ คุณวุฒิของผู้สมัครเป็นภาคีสมาชิก",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005411.PDF"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

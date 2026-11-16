@@ -1,0 +1,176 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69GTI3132000 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธ",
+  "navKey": "news",
+  "description": "เมื่อวันพุธที่ ๑๕ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๐.๐๐ น. ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นายกราชบัณฑิตยสภา เป็นประธานนำผู้บริหาร ข้าราชการและเ",
+  "updatedAt": "2026-07-20",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ข่าวประชาสัมพันธ์",
+      "heading": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙",
+      "lead": "เผยแพร่เมื่อ 20 กรกฎาคม 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "alt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรร",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG"
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "เมื่อวันพุธที่ ๑๕ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๐.๐๐ น. ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นายกราชบัณฑิตยสภา เป็นประธานนำผู้บริหาร ข้าราชการและเจ้าหน้าที่สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙ โดยเปิดกรวยกระทงดอกไม้ธูปเทียนแพ และกล่าวคำถวายพระพรชัยมงคล พร้อมลงนามถวายพระพรหน้าพระบรมฉายาลักษณ์พระบาทสมเด็จพระเจ้าอยู่หัว ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐",
+        "จากนั้น เวลา ๑๓.๕๐ น. ดร.ศุภฤกษ์ ภู่พงศ์ศักดิ์ เลขาธิการราชบัณฑิตยสภา นำผู้บริหารและคณะ เดินทางไปจัดกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙ มอบหนังสือให้กับห้องสมุดประชาชน “เฉลิมราชกุมารี” เขตคลองสามวา กรุงเทพมหานคร โดยมี นายปรีชา ผลชมภู่ ผู้อำนวยการ สกร.ระดับเขตดอนเมือง รักษาการในตำแหน่งผู้อำนวยการ สกร.ระดับเขตคลองสามวา และคณะให้การต้อนรับ"
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (17 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005306-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005307-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005307.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005308-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005308.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005309-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005309.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005310-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005310.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005311-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005311.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005312-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005312.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005313-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8",
+          "title": "ภาพที่ 8",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005313.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005314-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9",
+          "title": "ภาพที่ 9",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005314.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005315-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10",
+          "title": "ภาพที่ 10",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005315.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005316-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11",
+          "title": "ภาพที่ 11",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005316.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005317-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12",
+          "title": "ภาพที่ 12",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005317.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005318-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 13",
+          "title": "ภาพที่ 13",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005318.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005319-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 14",
+          "title": "ภาพที่ 14",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005319.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005320-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 15",
+          "title": "ภาพที่ 15",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005320.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005321-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 16",
+          "title": "ภาพที่ 16",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005321.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005322-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 17",
+          "title": "ภาพที่ 17",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005322.JPG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

@@ -17,6 +17,7 @@
       "enum": ["home", "dictionary", "knowledge", "publications", "news", "services", "about", "contact"]
     },
     "description": { "type": "string", "description": "คำอธิบายหน้าใช้ทำ meta description ยาว 1-2 ประโยค" },
+    "updatedAt": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "วันที่ปรับปรุงข้อมูลล่าสุด (ค.ศ. YYYY-MM-DD) แสดงท้ายหน้าเป็น พ.ศ. — CMS ควรเขียนให้อัตโนมัติเมื่อบันทึก" },
     "blocks": {
       "type": "array",
       "minItems": 1,
@@ -61,7 +62,8 @@
         "i-search", "i-book", "i-eye", "i-menu", "i-x", "i-user", "i-access",
         "i-shield", "i-people", "i-file", "i-video", "i-form", "i-dictionary",
         "i-database", "i-journal", "i-ebook", "i-megaphone", "i-service",
-        "i-chevron", "i-arrow", "i-plus", "i-map", "i-phone", "i-pen", "i-puzzle"
+        "i-chevron", "i-arrow", "i-plus", "i-map", "i-phone", "i-pen", "i-puzzle",
+        "i-home", "i-phone-call", "i-mail", "i-pin", "i-external"
       ]
     },
 
@@ -86,7 +88,13 @@
             { "$ref": "#/definitions/twoColumn" },
             { "$ref": "#/definitions/ctaBand" },
             { "$ref": "#/definitions/notice" },
-            { "$ref": "#/definitions/contactInfo" }
+            { "$ref": "#/definitions/contactInfo" },
+            { "$ref": "#/definitions/documentList" },
+            { "$ref": "#/definitions/article" },
+            { "$ref": "#/definitions/pageIndex" },
+            { "$ref": "#/definitions/personGrid" },
+            { "$ref": "#/definitions/figure" },
+            { "$ref": "#/definitions/share" }
           ]
         }
       ]
@@ -190,6 +198,150 @@
       "required": ["type", "items"]
     },
 
+    "documentList": {
+      "description": "T1 รายการเอกสาร/ประกาศ — ค้นหา กรองปี กรองหมวด และแสดงทีละหน้า (ใช้ layout: compact เป็นเอกสารแนบท้ายหน้า)",
+      "properties": {
+        "type": { "const": "document-list" },
+        "layout": { "enum": ["full", "compact", "news"], "description": "compact = ไม่มีแถบค้นหา/ปุ่มแสดงเพิ่ม, news = แม่แบบ T4 รายการข่าว (แถวมีรูปปก/ป้ายวันที่ + คำโปรย)" },
+        "yearBy": { "enum": ["fiscal", "calendar"], "description": "ตัวกรองปี: fiscal = ปีงบประมาณ (เริ่ม 1 ต.ค.), calendar = ปี พ.ศ." },
+        "sort": { "enum": ["newest", "none"], "description": "newest = เรียงวันที่/ปีใหม่ไปเก่า (ค่าเริ่มต้น), none = ตามลำดับในไฟล์" },
+        "pageSize": { "type": "integer", "minimum": 5, "description": "จำนวนรายการต่อการแสดงหนึ่งครั้ง (ค่าเริ่มต้น 20)" },
+        "emptyText": { "type": "string", "description": "ข้อความเมื่อยังไม่มีเอกสาร" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title"],
+            "additionalProperties": false,
+            "properties": {
+              "title": { "type": "string" },
+              "file": { "type": "string", "description": "URL ไฟล์เอกสาร (PDF/DOCX/XLSX) — เปิดในแท็บใหม่" },
+              "href": { "type": "string", "description": "ลิงก์หน้าเว็บแทนไฟล์ (เช่น ระบบ e-GP)" },
+              "publishedAt": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "วันที่ประกาศ ค.ศ. YYYY-MM-DD (แสดงเป็น พ.ศ.)" },
+              "fiscalYear": { "type": "integer", "minimum": 2400, "description": "ปีงบประมาณ พ.ศ. — ใส่เมื่อไม่มี publishedAt" },
+              "category": { "type": "string" },
+              "refNo": { "type": "string", "description": "เลขที่ประกาศ/สัญญา" },
+              "fileType": { "type": "string", "description": "ชนิดไฟล์ (ถ้าไม่ใส่ เดาจากนามสกุล)" },
+              "fileSize": { "type": ["integer", "string"], "description": "ขนาดไฟล์เป็นไบต์ หรือข้อความเช่น \"1.8 MB\"" },
+              "note": { "type": "string" },
+              "image": { "type": "string", "description": "รูปปกข่าว (layout: news)" },
+              "excerpt": { "type": "string", "description": "คำโปรยข่าว (layout: news)" }
+            }
+          }
+        }
+      },
+      "required": ["type", "items"]
+    },
+
+    "figure": {
+      "description": "ภาพเด่น เช่น ภาพปกข่าว — เห็นทั้งภาพ กดดูภาพเต็มใน lightbox ได้เมื่อมี href",
+      "properties": {
+        "type": { "const": "figure" },
+        "image": { "type": "string" },
+        "alt": { "type": "string" },
+        "caption": { "type": "string" },
+        "href": { "type": "string", "description": "ภาพขนาดเต็ม" }
+      },
+      "required": ["type", "image"]
+    },
+
+    "share": {
+      "description": "ปุ่มแชร์ Facebook / LINE / X / คัดลอกลิงก์ (ข้อ 7.2 (5)) — ใส่ลิงก์ของหน้าให้อัตโนมัติ",
+      "properties": { "type": { "const": "share" }, "label": { "type": "string" } },
+      "required": ["type"]
+    },
+
+    "article": {
+      "description": "T2 บทความยาวแบ่งหัวข้อ พร้อมสารบัญ \"หัวข้อในหน้านี้\"",
+      "properties": {
+        "type": { "const": "article" },
+        "toc": { "type": "boolean", "description": "แสดงสารบัญ (ค่าเริ่มต้น: แสดงเมื่อมีหัวข้อ >= 3)" },
+        "intro": { "type": "array", "items": { "type": "string" }, "description": "ย่อหน้านำ ตัวใหญ่กว่าเนื้อหา" },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "heading": { "type": "string" },
+              "id": { "type": "string", "description": "anchor ของหัวข้อ (ถ้าไม่ใส่ สร้างให้อัตโนมัติ)" },
+              "paragraphs": { "type": "array", "items": { "type": "string" } },
+              "list": { "type": "array", "items": { "type": "string" } },
+              "html": { "type": "string", "description": "HTML ดิบ — ใช้เฉพาะเนื้อหาที่เชื่อถือได้" }
+            }
+          }
+        }
+      },
+      "required": ["type", "sections"]
+    },
+
+    "pageIndex": {
+      "description": "T3 สารบัญหน้าลูกของหมวด แบ่งเป็นกลุ่ม — รายการไม่มี href แสดงเป็น \"รอเนื้อหา\"",
+      "properties": {
+        "type": { "const": "page-index" },
+        "columns": { "enum": [1, 2, 3] },
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["heading", "items"],
+            "additionalProperties": false,
+            "properties": {
+              "heading": { "type": "string" },
+              "href": { "type": "string" },
+              "desc": { "type": "string" },
+              "icon": { "$ref": "#/definitions/iconId" },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["title"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": { "type": "string" },
+                    "href": { "type": "string" },
+                    "desc": { "type": "string" },
+                    "tag": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": ["type", "groups"]
+    },
+
+    "personGrid": {
+      "description": "T5 บุคคล/ผู้บริหาร — รูปแนวตั้ง 3:4 (ครอปจากด้านล่าง ศีรษะไม่ขาด) ชื่อ ตำแหน่ง ช่องทางติดต่อ",
+      "properties": {
+        "type": { "const": "person-grid" },
+        "columns": { "$ref": "#/definitions/columns" },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "position": { "type": "string" },
+              "image": { "type": "string", "description": "รูปแนวตั้ง (กว้างอย่างน้อย 480px)" },
+              "alt": { "type": "string" },
+              "phone": { "type": "string" },
+              "fax": { "type": "string" },
+              "email": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      },
+      "required": ["type", "items"]
+    },
+
     "linkList": {
       "description": "รายการเอกสาร/ลิงก์ พร้อมชนิดไฟล์และวันที่",
       "properties": {
@@ -219,6 +371,8 @@
       "properties": {
         "type": { "const": "media-grid" },
         "columns": { "$ref": "#/definitions/columns" },
+        "ratio": { "enum": ["4:3", "3:4", "1:1", "16:9"], "description": "สัดส่วนกรอบรูป: 4:3 (ค่าเริ่มต้น), 3:4 ปกหนังสือ/รูปแนวตั้ง, 1:1, 16:9" },
+        "fit": { "enum": ["cover", "contain"], "description": "cover = เต็มกรอบ (อาจครอป), contain = เห็นทั้งภาพ เช่น ภาพสแกน อินโฟกราฟิก" },
         "items": {
           "type": "array",
           "minItems": 1,

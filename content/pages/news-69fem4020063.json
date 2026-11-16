@@ -1,0 +1,121 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FEM4020063 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา",
+  "navKey": "news",
+  "description": "เมื่อวันที่ ๔ มิถุนายน พ.ศ. ๒๕๖๙ เวลา ๑๕.๐๐ น. ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ดร.ศุภฤกษ์ ภู่พงศ์",
+  "updatedAt": "2026-06-05",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ข่าวประชาสัมพันธ์",
+      "heading": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙",
+      "lead": "เผยแพร่เมื่อ 5 มิถุนายน 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005229-960.jpg",
+      "alt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิม",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG"
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "เมื่อวันที่ ๔ มิถุนายน พ.ศ. ๒๕๖๙ เวลา ๑๕.๐๐ น. ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ดร.ศุภฤกษ์ ภู่พงศ์ศักดิ์ เลขาธิการราชบัณฑิตยสภา เป็นประธานเปิดกรวยกระทงดอกไม้ และกล่าวคำถวายพระพรชัยมงคล พร้อมลงนามถวายพระพรหน้าพระฉายาลักษณ์สมเด็จพระนางเจ้าฯ พระบรมราชินี เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙ โดยมีผู้บริหาร ข้าราชการ และบุคลากรสำนักงานราชบัณฑิตยสภาเข้าร่วมพิธีอย่างพร้อมเพรียง"
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (8 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005229-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005230-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005230.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005231-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005231.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005232-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005232.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005233-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005233.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005234-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005234.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005235-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005235.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005236-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8",
+          "title": "ภาพที่ 8",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005236.JPG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

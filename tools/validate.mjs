@@ -50,6 +50,12 @@ const REQUIRED = {
   'cta-band': ['heading'],
   'notice': ['body'],
   'contact-info': [],
+  'document-list': ['items'],
+  'article': ['sections'],
+  'page-index': ['groups'],
+  'person-grid': ['items'],
+  'figure': ['image'],
+  'share': [],
 };
 
 async function spriteIcons() {
@@ -96,6 +102,9 @@ async function main() {
     if (!page.title) err(rel, 'ขาด "title"');
     if (!page.navKey) err(rel, 'ขาด "navKey"');
     if (!page.description) warn(rel, 'ไม่มี "description" — ควรใส่เพื่อ SEO');
+    if (page.updatedAt && !/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(page.updatedAt)) {
+      err(rel, `"updatedAt" ต้องเป็นรูปแบบ YYYY-MM-DD (ค.ศ.) — ได้ "${page.updatedAt}"`);
+    }
     if (!Array.isArray(page.blocks) || !page.blocks.length) {
       err(rel, 'ขาด "blocks" หรือเป็น array ว่าง');
       continue;
@@ -119,6 +128,16 @@ async function main() {
         b.rows.forEach((row, r) => {
           if (row.length !== b.columns.length) {
             err(rel, `${at} rows[${r}] มี ${row.length} ช่อง แต่ columns มี ${b.columns.length}`);
+          }
+        });
+      }
+      if (b.type === 'document-list') {
+        (b.items || []).forEach((it, k) => {
+          if (!it.publishedAt) return;
+          if (!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(it.publishedAt)) {
+            err(rel, `${at} items[${k}] publishedAt ต้องเป็น YYYY-MM-DD (ค.ศ.)`);
+          } else if (+it.publishedAt.slice(0, 4) > 2400) {
+            err(rel, `${at} items[${k}] publishedAt ดูเหมือนเป็น พ.ศ. — ต้องใส่เป็น ค.ศ.`);
           }
         });
       }

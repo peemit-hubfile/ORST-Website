@@ -1,0 +1,147 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63HQN2359047 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้",
+  "navKey": "news",
+  "description": "เมื่อวันที่ ๑๕ สิงหาคม พ.ศ. ๒๕๖๓ ที่ห้องแก้วสมุย ๑ โรงแรมแก้วสมุย จังหวัดสุราษฎร์ธานี นางสาวบุญธรรม กรานทอง รองเลขาธิการราชบัณฑิตยสภา เป็นประธานตัดสิน",
+  "updatedAt": "2020-08-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ข่าวกิจกรรม",
+      "heading": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้",
+      "lead": "เผยแพร่เมื่อ 17 สิงหาคม 2563",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวกิจกรรม",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0001-00001939-960.jpg",
+      "alt": "ภาพประกอบข่าว ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาค",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001939.JPG"
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "เมื่อวันที่ ๑๕ สิงหาคม พ.ศ. ๒๕๖๓ ที่ห้องแก้วสมุย ๑ โรงแรมแก้วสมุย จังหวัดสุราษฎร์ธานี นางสาวบุญธรรม กรานทอง รองเลขาธิการราชบัณฑิตยสภา เป็นประธานตัดสินการประกวดเล่าเรื่องหัวข้อ “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้ รอบชิงชนะเลิศ โดยมีคณะกรรมการตัดสิน นักเรียนผู้เข้าประกวดและครูฝึกสอนนักเรียนที่ผ่านการคัดเลือกในรอบแรกเข้าร่วมกิจกรรมในครั้งนี้",
+        "ผลการประกวด มีดังนี้ รางวัลชนะเลิศ ได้แก่ เด็กชายศรุต ทองสง โรงเรียนเทศบาลบ้านคูหาสวรรค์ จังหวัดพัทลุง ได้รับเงินทุนการศึกษาจำนวน ๑๒,๐๐๐ บาท พร้อมประกาศนียบัตร รางวัลรองชนะเลิศอันดับ ๑ ได้แก่ เด็กหญิงอนัญลักษณ์ สุขเอียด โรงเรียนเทศบาล ๑ (ชุมชนบ้านอุดมทอง) จังหวัดสงขลา ได้รับเงินทุนการศึกษา ๑๐,๐๐๐ บาท พร้อมเกียรติบัตร และรางวัลรองชนะเลิศอันดับ ๒ ได้แก่ เด็กหญิงณัฐกานต์ ฤทธิรงค์ โรงเรียนเทศบาลวัดภูผาภิมุข จังหวัดพัทลุง ได้รับเงินทุนการศึกษา ๘,๐๐๐ บาท พร้อมเกียรติ",
+        "รางวัลชมเชย ได้แก่ เด็กหญิงณัฐชยา สังฆกิจ โรงเรียนบ้านหน้าทอง จังหวัดสงขลา เด็กหญิงตัสนีม นาราวัน โรงรียนอนุบาลท่าแพ จังหวัดสตูล เด็กหญิงนิฐานัญ จันทร์สุขศรี โรงเรียนวัดควนใส จังหวัดนครศรีธรรมราช เด็กหญิงนิสรีน ลางีตัน โรงเรียนบ้านคลองขุด จังหวัดสตูล เด็กหญิงปาณกวิน ไชยทอง โรงเรียนเทศบาลวัดชัยชุมพล จังหวัดนครศรีธรรมราช เด็กหญิงมุขอันดา มุขรัษฎา โรงเรียนวัดควนท่าแร่ จังหวัดสุราษฎร์ธานี และ เด็กชายอารอฟัด หวังดี โรงเรียนบ้านไร่ใหญ่ จังหวัดตรัง ทั้งนี้ นักเรียนที่ได้รับรางวัลชมเชยจะได้รับเงินทุนการศึกษา ๓,๐๐๐ บาท พร้อมเกียรติบัตร"
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (12 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0001-00001939-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001939.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001940-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001940.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001941-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001941.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001942-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001942.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001943-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001943.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001944-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001944.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001945-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001945.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001946-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8",
+          "title": "ภาพที่ 8",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001946.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001947-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9",
+          "title": "ภาพที่ 9",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001947.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001948-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10",
+          "title": "ภาพที่ 10",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001948.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001949-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11",
+          "title": "ภาพที่ 11",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001949.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001950-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12",
+          "title": "ภาพที่ 12",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001950.JPG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวกิจกรรม",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "activity-news.html"
+        }
+      ]
+    }
+  ]
+}

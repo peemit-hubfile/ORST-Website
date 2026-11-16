@@ -1,0 +1,54 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-ORGCHART (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
+  "navKey": "about",
+  "description": "แผนภูมิและการแบ่งส่วนราชการของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
+      "lead": "แผนภูมิและการแบ่งส่วนราชการของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา",
+          "href": "about.html"
+        },
+        {
+          "label": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "divisions",
+      "toc": false,
+      "sections": [
+        {
+          "heading": "การแบ่งส่วนราชการ",
+          "list": null,
+          "paragraphs": []
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "chart",
+      "items": [
+        {
+          "title": "แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF",
+          "fileSize": 584921
+        }
+      ],
+      "heading": "แผนภูมิการแบ่งส่วนราชการ",
+      "variant": "alt",
+      "layout": "compact"
+    }
+  ]
+}

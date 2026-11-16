@@ -1,0 +1,78 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F65CQJ0810081 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๕ รอบชิงชนะเล",
+  "navKey": "news",
+  "description": "ภาพประกอบ 2 ภาพ",
+  "updatedAt": "2022-03-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ข่าวกิจกรรม",
+      "heading": "ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๕ รอบชิงชนะเลิศ เพื่อเข้าร่วมแข่งขัน ในวันเสาร์ที่ ๒๖ มีนาคม พ.ศ. ๒๕๖๕ ดังแนบ",
+      "lead": "เผยแพร่เมื่อ 17 มีนาคม 2565",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวกิจกรรม",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๕ รอบชิงชนะเลิศ เพื่อเข้าร่วมแข่งขัน ในวันเสาร์ที่ ๒๖ มีนาคม พ.ศ. ๒๕๖๕ ดังแนบ"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0002-00002523-960.jpg",
+      "alt": "ภาพประกอบข่าว ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรั",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG"
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (2 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0002-00002523-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002524-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002524.PNG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวกิจกรรม",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "activity-news.html"
+        }
+      ]
+    }
+  ]
+}

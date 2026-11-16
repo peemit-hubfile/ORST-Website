@@ -14,7 +14,13 @@ const qs = (s, r = document) => r ? r.querySelector(s) : null;
 const qsa = (s, r = document) => r ? [...r.querySelectorAll(s)] : [];
 let activeCategory = 'all'; let fontStep = 0;
 
-function init() { initMobileMenu(); initReveal(); initSearch(); initFilter(); initView(); initTopTools(); }
+function init() { initMobileMenu(); initReveal(); initSearch(); initFilter(); initView(); initTopTools(); initCategoryFromUrl(); }
+
+/* เปิดหน้าพร้อมเลือกหมวดจากลิงก์ เช่น knowledge.html?cat=thai (ใช้กับเมนู "หมวดความรู้" ใน header) */
+function initCategoryFromUrl() {
+  const cat = new URLSearchParams(location.search).get('cat');
+  if (cat) qs(`.category-btn[data-category="${CSS.escape(cat)}"]`)?.click();
+}
 
 function initMobileMenu() {
     const b = qs('[data-mobile-menu]');

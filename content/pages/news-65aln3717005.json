@@ -1,0 +1,121 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F65ALN3717005 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕",
+  "navKey": "news",
+  "description": "ขอเชิญโรงเรียนทั่วประเทศ ส่งนักเรียนระดับประถมศึกษาปีที่ ๕-๖ สมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕ (ทักษะการอ่าน",
+  "updatedAt": "2022-01-12",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "ข่าวกิจกรรม",
+      "heading": "ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕",
+      "lead": "เผยแพร่เมื่อ 12 มกราคม 2565",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวกิจกรรม",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0002-00002439-960.jpg",
+      "alt": "ภาพประกอบข่าว ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002439.JPG"
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "ขอเชิญโรงเรียนทั่วประเทศ ส่งนักเรียนระดับประถมศึกษาปีที่ ๕-๖ สมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕ (ทักษะการอ่านออกเสียง) ผ่านระบบ Zoom Cloud Meetings",
+        "ชิงทุนการศึกษาและรับรางวัลราชบัณฑิตยสภาสรรเสริญ",
+        "รับสมัครจำนวน ๑๐๐ คน ตั้งแต่บัดนี้เป็นต้นไปจนถึงวันจันทร์ที่ ๓๑ มกราคม พ.ศ. ๒๕๖๕ (เมื่อครบจำนวน ๑๐๐ คน จะปิดรับสมัครทันที แม้จะยังไม่ถึงวันสิ้นสุดการรับสมัคร)",
+        "ลิงก์รับสมัคร",
+        "https://forms.gle/9EjEXa1rDAHUUNFd9",
+        "กำหนดแข่งขันรอบคัดเลือกในวันเสาร์ที่ ๑๒ กุมภาพันธ์ พ.ศ. ๒๕๖๕ และรอบชิงชนะเลิศในวันเสาร์ที่ ๒๖ กุมภาพันธ์ พ.ศ. ๒๕๖๕",
+        "รายละเอียดดังประกาศที่แนบ"
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (7 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0002-00002439-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002439.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002440-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002440.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002441-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3",
+          "title": "ภาพที่ 3",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002441.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002442-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4",
+          "title": "ภาพที่ 4",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002442.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002443-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5",
+          "title": "ภาพที่ 5",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002443.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002444-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6",
+          "title": "ภาพที่ 6",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002444.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002445-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7",
+          "title": "ภาพที่ 7",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002445.JPG"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวกิจกรรม",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "activity-news.html"
+        }
+      ]
+    }
+  ]
+}

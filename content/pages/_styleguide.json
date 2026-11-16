@@ -11,12 +11,24 @@
       "heading": "คลังบล็อก",
       "lead": "block ทุกชนิดที่ระบบรองรับ พร้อมตัวอย่างการใช้งาน — คัดลอก JSON จาก content/pages/_styleguide.json ไปใช้ได้เลย",
       "breadcrumb": [
-        { "label": "หน้าหลัก", "href": "index.html" },
-        { "label": "คลังบล็อก" }
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังบล็อก"
+        }
       ],
       "actions": [
-        { "label": "อ่าน CONTENT-MODEL.md", "href": "#" },
-        { "label": "กลับหน้าหลัก", "href": "index.html", "variant": "ghost" }
+        {
+          "label": "อ่าน CONTENT-MODEL.md",
+          "href": "#"
+        },
+        {
+          "label": "กลับหน้าหลัก",
+          "href": "index.html",
+          "variant": "ghost"
+        }
       ]
     },
     {
@@ -45,12 +57,29 @@
       "id": "b-card-grid",
       "heading": "card-grid",
       "lead": "การ์ดเนื้อหาเรียงเป็นตาราง — block ที่ใช้บ่อยที่สุด (columns: 2, 3 หรือ 4)",
-      "action": { "label": "ตัวอย่างปุ่มมุมขวา", "href": "#" },
+      "action": {
+        "label": "ตัวอย่างปุ่มมุมขวา",
+        "href": "#"
+      },
       "columns": 3,
       "items": [
-        { "icon": "i-book", "title": "การ์ดที่มีไอคอน", "body": "ใส่ icon เป็น id จาก sprite เช่น i-book, i-file, i-people", "meta": "ฟิลด์ meta อยู่ล่างสุด" },
-        { "tag": "มี tag", "title": "การ์ดที่คลิกได้", "body": "ถ้าใส่ href การ์ดทั้งใบจะกลายเป็นลิงก์และมี hover effect ใส่ action เพื่อแสดงปุ่มท้ายการ์ด", "href": "#", "action": "ยื่นคำขอ" },
-        { "title": "การ์ดแบบเรียบ", "body": "ไม่ใส่ icon ไม่ใส่ href ก็ได้ เหลือแค่หัวข้อกับเนื้อหา" }
+        {
+          "icon": "i-book",
+          "title": "การ์ดที่มีไอคอน",
+          "body": "ใส่ icon เป็น id จาก sprite เช่น i-book, i-file, i-people",
+          "meta": "ฟิลด์ meta อยู่ล่างสุด"
+        },
+        {
+          "tag": "มี tag",
+          "title": "การ์ดที่คลิกได้",
+          "body": "ถ้าใส่ href การ์ดทั้งใบจะกลายเป็นลิงก์และมี hover effect ใส่ action เพื่อแสดงปุ่มท้ายการ์ด",
+          "href": "#",
+          "action": "ยื่นคำขอ"
+        },
+        {
+          "title": "การ์ดแบบเรียบ",
+          "body": "ไม่ใส่ icon ไม่ใส่ href ก็ได้ เหลือแค่หัวข้อกับเนื้อหา"
+        }
       ]
     },
     {
@@ -61,10 +90,26 @@
       "lead": "ไอคอน + หัวข้อ + คำอธิบาย เรียงเป็นแถว เหมาะกับการสรุปจุดเด่นหรือคุณสมบัติ",
       "columns": 2,
       "items": [
-        { "icon": "i-shield", "title": "หัวข้อรายการที่ 1", "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ" },
-        { "icon": "i-people", "title": "หัวข้อรายการที่ 2", "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ" },
-        { "icon": "i-service", "title": "หัวข้อรายการที่ 3", "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ" },
-        { "icon": "i-database", "title": "หัวข้อรายการที่ 4", "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ" }
+        {
+          "icon": "i-shield",
+          "title": "หัวข้อรายการที่ 1",
+          "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ"
+        },
+        {
+          "icon": "i-people",
+          "title": "หัวข้อรายการที่ 2",
+          "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ"
+        },
+        {
+          "icon": "i-service",
+          "title": "หัวข้อรายการที่ 3",
+          "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ"
+        },
+        {
+          "icon": "i-database",
+          "title": "หัวข้อรายการที่ 4",
+          "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ"
+        }
       ]
     },
     {
@@ -73,9 +118,21 @@
       "heading": "stat-row",
       "lead": "ตัวเลขสถิติ ปรับจำนวนคอลัมน์อัตโนมัติตามความกว้างจอ",
       "items": [
-        { "value": "14", "label": "ชนิดของ block", "note": "ขยายเพิ่มได้" },
-        { "value": "0", "label": "dependency ภายนอก", "note": "ไม่ต้อง npm install" },
-        { "value": "1", "label": "ไฟล์ JSON ต่อ 1 หน้า", "note": "แก้ที่เดียว" }
+        {
+          "value": "14",
+          "label": "ชนิดของ block",
+          "note": "ขยายเพิ่มได้"
+        },
+        {
+          "value": "0",
+          "label": "dependency ภายนอก",
+          "note": "ไม่ต้อง npm install"
+        },
+        {
+          "value": "1",
+          "label": "ไฟล์ JSON ต่อ 1 หน้า",
+          "note": "แก้ที่เดียว"
+        }
       ]
     },
     {
@@ -85,10 +142,259 @@
       "heading": "link-list",
       "lead": "รายการเอกสาร/ลิงก์ พร้อมชนิดไฟล์และวันที่ เหมาะกับหน้าดาวน์โหลดและประกาศ",
       "items": [
-        { "title": "รายการที่มีครบทุกฟิลด์", "desc": "คำอธิบายใต้ชื่อรายการ", "tag": "PDF", "meta": "1 ม.ค. 2569", "href": "#" },
-        { "title": "รายการที่มีเฉพาะชื่อ", "href": "#" },
-        { "title": "รายการที่เปลี่ยนไอคอนได้", "desc": "ใส่ icon เพื่อเปลี่ยนจากไอคอนไฟล์เริ่มต้น", "icon": "i-journal", "tag": "วารสาร", "href": "#" }
+        {
+          "title": "รายการที่มีครบทุกฟิลด์",
+          "desc": "คำอธิบายใต้ชื่อรายการ",
+          "tag": "PDF",
+          "meta": "1 ม.ค. 2569",
+          "href": "#"
+        },
+        {
+          "title": "รายการที่มีเฉพาะชื่อ",
+          "href": "#"
+        },
+        {
+          "title": "รายการที่เปลี่ยนไอคอนได้",
+          "desc": "ใส่ icon เพื่อเปลี่ยนจากไอคอนไฟล์เริ่มต้น",
+          "icon": "i-journal",
+          "tag": "วารสาร",
+          "href": "#"
+        }
       ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-document-list",
+      "heading": "document-list",
+      "lead": "แม่แบบ T1 รายการเอกสาร/ประกาศ — มีช่องค้นหา ตัวกรองปีงบประมาณ และปุ่มแสดงเพิ่ม (แถบค้นหาขึ้นเมื่อมีมากกว่า 5 รายการ) ตัวอย่างนี้ใช้ข้อมูลจริงจากเว็บเดิม",
+      "pageSize": 5,
+      "items": [
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF",
+          "fiscalYear": 2569,
+          "fileSize": 1839934
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๘ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF",
+          "fiscalYear": 2568,
+          "fileSize": 296823
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๗ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF",
+          "fiscalYear": 2567,
+          "fileSize": 333458
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 320585
+        },
+        {
+          "title": "แผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 20243363
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๕ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF",
+          "fiscalYear": 2565,
+          "fileSize": 683368
+        },
+        {
+          "title": "แผนปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF",
+          "fiscalYear": 2564,
+          "fileSize": 505108
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-document-list-compact",
+      "variant": "alt",
+      "layout": "compact",
+      "heading": "document-list (layout: compact)",
+      "lead": "แบบย่อ ไม่มีแถบค้นหา — ใช้เป็น \"เอกสารแนบ\" ท้ายหน้าเนื้อหา",
+      "items": [
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF",
+          "fiscalYear": 2569,
+          "fileSize": 1839934
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-document-list-empty",
+      "heading": "document-list (ยังไม่มีเอกสาร)",
+      "lead": "เมื่อ items ว่าง จะแสดงข้อความแจ้งแทนหน้าเปล่า — เปลี่ยนข้อความได้ด้วย emptyText",
+      "emptyText": "ยังไม่มีเอกสารในหมวดนี้ อยู่ระหว่างรวบรวมข้อมูล",
+      "items": []
+    },
+    {
+      "type": "article",
+      "id": "b-article",
+      "variant": "alt",
+      "heading": "article",
+      "lead": "แม่แบบ T2 เนื้อหายาวแบ่งหัวข้อ — มีสารบัญ \"หัวข้อในหน้านี้\" อัตโนมัติเมื่อมีหัวข้อตั้งแต่ 3 หัวข้อ (ติดด้านข้างบนจอใหญ่ ย้ายขึ้นบนบนมือถือ)",
+      "intro": [
+        "ย่อหน้านำ (intro) ตัวใหญ่กว่าเนื้อหาเล็กน้อย ใช้สรุปใจความของหน้า"
+      ],
+      "sections": [
+        {
+          "heading": "หัวข้อที่มีย่อหน้า",
+          "paragraphs": [
+            "แต่ละหัวข้อมี paragraphs เป็นรายการย่อหน้า",
+            "ย่อหน้าที่สองของหัวข้อเดียวกัน"
+          ]
+        },
+        {
+          "heading": "หัวข้อที่มีรายการ",
+          "list": [
+            "รายการแบบจุดข้อที่ ๑",
+            "รายการแบบจุดข้อที่ ๒",
+            "รายการแบบจุดข้อที่ ๓"
+          ]
+        },
+        {
+          "heading": "หัวข้อที่ใช้ HTML",
+          "html": "<p>ใช้ฟิลด์ <strong>html</strong> เมื่อต้องการตัวหนา ลิงก์ หรือตาราง — ใส่เฉพาะเนื้อหาที่เชื่อถือได้</p>"
+        }
+      ]
+    },
+    {
+      "type": "page-index",
+      "id": "b-page-index",
+      "heading": "page-index",
+      "columns": 2,
+      "lead": "แม่แบบ T3 หน้าหมวด — สารบัญหน้าลูกแบ่งเป็นกลุ่ม ลิงก์ภายนอก (http) เปิดแท็บใหม่ รายการที่ไม่มี href แสดงเป็น \"รอเนื้อหา\"",
+      "groups": [
+        {
+          "heading": "กลุ่มที่มีไอคอนและคำอธิบาย",
+          "icon": "i-journal",
+          "desc": "คำอธิบายกลุ่ม (desc) แสดงใต้ชื่อกลุ่ม",
+          "items": [
+            {
+              "title": "ลิงก์ไปหน้าในเว็บ",
+              "href": "styleguide.html"
+            },
+            {
+              "title": "รายการที่มีคำอธิบาย",
+              "href": "styleguide.html",
+              "desc": "คำอธิบายสั้นใต้ชื่อรายการ"
+            },
+            {
+              "title": "ลิงก์ภายนอกพร้อมป้าย",
+              "href": "https://www.orst.go.th/",
+              "tag": "เว็บไซต์เดิม"
+            },
+            {
+              "title": "รายการที่ยังไม่มีหน้า"
+            }
+          ]
+        },
+        {
+          "heading": "กลุ่มที่ไม่มีไอคอน",
+          "items": [
+            {
+              "title": "รายการที่ ๑",
+              "href": "styleguide.html"
+            },
+            {
+              "title": "รายการที่ ๒",
+              "href": "styleguide.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "b-person-grid",
+      "variant": "alt",
+      "heading": "person-grid",
+      "columns": 4,
+      "lead": "แม่แบบ T5 บุคคล — รูปแนวตั้ง 3:4 ครอปจากด้านล่างให้ศีรษะไม่ขาด เบอร์โทรและอีเมลกดได้ ไม่มีรูปจะแสดงไอคอนแทน",
+      "items": [
+        {
+          "name": "นายศานติ ภักดีคำ",
+          "position": "รองเลขาธิการราชบัณฑิตยสภา",
+          "image": "assets/images/orst/people/deputy-secretary-general.jpg",
+          "alt": "นายศานติ ภักดีคำ",
+          "phone": "02-141-1718",
+          "email": "Santi.p@orst.go.th"
+        },
+        {
+          "name": "[ชื่อ-นามสกุล]",
+          "position": "[ตำแหน่ง]",
+          "note": "ตัวอย่างกรณียังไม่มีรูป"
+        }
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "b-media-contain",
+      "heading": "media-grid (ratio 3:4, fit contain)",
+      "columns": 4,
+      "ratio": "3:4",
+      "fit": "contain",
+      "lead": "ปกหนังสือหรือภาพสแกน — เห็นทั้งภาพไม่ครอป",
+      "items": [
+        {
+          "image": "assets/images/orst/publications/00000355.jpg",
+          "alt": "ปกหนังสือตัวอย่าง",
+          "title": "ตัวอย่างปกหนังสือ"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-news-list",
+      "layout": "news",
+      "heading": "document-list (layout: news)",
+      "lead": "แม่แบบ T4 รายการข่าว — รูปปก + ชื่อข่าว + วันที่ + คำโปรย ข่าวที่ไม่มีรูปแสดงป้ายวันที่ (ข้อมูลจริงจากเว็บเดิม)",
+      "items": [
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
+          "publishedAt": "2026-11-02",
+          "href": "news-69kbj5538066.html",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "excerpt": "ภาพประกอบ 3 ภาพ"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+          "publishedAt": "2026-10-31",
+          "href": "news-69jaj1403044.html",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "excerpt": "ภาพประกอบ 10 ภาพ · เอกสารแนบ 5 ไฟล์"
+        },
+        {
+          "title": "ประกาศรับสมัครภาคีสมาชิกเป็นราชบัณฑิต",
+          "publishedAt": "2026-08-26",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HZK5054022"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "b-share"
+    },
+    {
+      "type": "figure",
+      "id": "b-figure",
+      "variant": "alt",
+      "heading": "figure",
+      "lead": "ภาพเด่นของหน้าข่าว — เห็นทั้งภาพ กดเพื่อดูภาพเต็มใน lightbox",
+      "image": "assets/images/orst/news/data0005-00005324-960.jpg",
+      "alt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่น",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005324.JPG",
+      "caption": "คำบรรยายภาพ (caption)"
     },
     {
       "type": "media-grid",
@@ -97,10 +403,34 @@
       "lead": "การ์ดที่มีรูปภาพ อัตราส่วนภาพถูกบังคับเป็น 4:3 เพื่อให้แถวเรียงเสมอกัน",
       "columns": 4,
       "items": [
-        { "image": "assets/images/e-Book01.png", "alt": "ตัวอย่างปกหนังสือ 1", "title": "การ์ดสื่อที่คลิกได้", "desc": "ใส่ href เพื่อให้คลิกได้", "tag": "e-Book", "href": "#" },
-        { "image": "assets/images/e-Book02.png", "alt": "ตัวอย่างปกหนังสือ 2", "title": "การ์ดที่ไม่มี tag", "desc": "ไม่ใส่ tag ก็ได้", "href": "#" },
-        { "image": "assets/images/e-Book03.png", "alt": "ตัวอย่างปกหนังสือ 3", "title": "การ์ดที่คลิกไม่ได้", "desc": "ไม่ใส่ href จะเป็นการ์ดเฉย ๆ" },
-        { "image": "assets/images/e-Book04.png", "alt": "ตัวอย่างปกหนังสือ 4", "title": "การ์ดที่มีเฉพาะชื่อ", "tag": "ใหม่", "href": "#" }
+        {
+          "image": "assets/images/e-Book01.png",
+          "alt": "ตัวอย่างปกหนังสือ 1",
+          "title": "การ์ดสื่อที่คลิกได้",
+          "desc": "ใส่ href เพื่อให้คลิกได้",
+          "tag": "e-Book",
+          "href": "#"
+        },
+        {
+          "image": "assets/images/e-Book02.png",
+          "alt": "ตัวอย่างปกหนังสือ 2",
+          "title": "การ์ดที่ไม่มี tag",
+          "desc": "ไม่ใส่ tag ก็ได้",
+          "href": "#"
+        },
+        {
+          "image": "assets/images/e-Book03.png",
+          "alt": "ตัวอย่างปกหนังสือ 3",
+          "title": "การ์ดที่คลิกไม่ได้",
+          "desc": "ไม่ใส่ href จะเป็นการ์ดเฉย ๆ"
+        },
+        {
+          "image": "assets/images/e-Book04.png",
+          "alt": "ตัวอย่างปกหนังสือ 4",
+          "title": "การ์ดที่มีเฉพาะชื่อ",
+          "tag": "ใหม่",
+          "href": "#"
+        }
       ]
     },
     {
@@ -110,11 +440,27 @@
       "heading": "table",
       "lead": "ตารางข้อมูล คอลัมน์แรกจะถูกทำเป็น row header อัตโนมัติ และเลื่อนแนวนอนได้บนจอเล็ก",
       "caption": "ตัวอย่างตาราง — columns คือหัวตาราง rows คือ array ซ้อน array",
-      "columns": ["ชื่อ block", "ใช้ทำอะไร", "ฟิลด์บังคับ"],
+      "columns": [
+        "ชื่อ block",
+        "ใช้ทำอะไร",
+        "ฟิลด์บังคับ"
+      ],
       "rows": [
-        ["page-hero", "หัวหน้าเพจ", "heading"],
-        ["card-grid", "การ์ดเรียงตาราง", "items"],
-        ["faq", "คำถามที่พบบ่อย", "items"]
+        [
+          "page-hero",
+          "หัวหน้าเพจ",
+          "heading"
+        ],
+        [
+          "card-grid",
+          "การ์ดเรียงตาราง",
+          "items"
+        ],
+        [
+          "faq",
+          "คำถามที่พบบ่อย",
+          "items"
+        ]
       ]
     },
     {
@@ -123,9 +469,18 @@
       "heading": "steps",
       "lead": "ขั้นตอนการทำงาน ระบบใส่เลขลำดับให้อัตโนมัติ",
       "items": [
-        { "title": "ขั้นตอนที่หนึ่ง", "body": "คำอธิบายของขั้นตอน" },
-        { "title": "ขั้นตอนที่สอง", "body": "คำอธิบายของขั้นตอน" },
-        { "title": "ขั้นตอนที่สาม", "body": "คำอธิบายของขั้นตอน" }
+        {
+          "title": "ขั้นตอนที่หนึ่ง",
+          "body": "คำอธิบายของขั้นตอน"
+        },
+        {
+          "title": "ขั้นตอนที่สอง",
+          "body": "คำอธิบายของขั้นตอน"
+        },
+        {
+          "title": "ขั้นตอนที่สาม",
+          "body": "คำอธิบายของขั้นตอน"
+        }
       ]
     },
     {
@@ -143,8 +498,15 @@
       "imageAlt": "ตัวอย่างภาพประกอบ",
       "imageSide": "right",
       "actions": [
-        { "label": "ปุ่มหลัก", "href": "#" },
-        { "label": "ปุ่มรอง", "href": "#", "variant": "ghost" }
+        {
+          "label": "ปุ่มหลัก",
+          "href": "#"
+        },
+        {
+          "label": "ปุ่มรอง",
+          "href": "#",
+          "variant": "ghost"
+        }
       ]
     },
     {
@@ -153,9 +515,18 @@
       "heading": "faq",
       "lead": "คำถามที่พบบ่อย กดเปิด/ปิดได้ (components.js ผูก event ให้อัตโนมัติ)",
       "items": [
-        { "q": "ต้องใส่ id ให้ block ไหม", "a": "ไม่บังคับ แต่ถ้าใส่จะทำ anchor link มาที่ section นั้นได้ และ block faq ใช้ id ในการสร้าง id ของคำตอบด้วย" },
-        { "q": "เปลี่ยนสีพื้นหลัง section ยังไง", "a": "ใส่ variant เป็น alt จะได้พื้นสีขาว ถ้าไม่ใส่จะเป็นพื้นสีกระดาษตามธีม" },
-        { "q": "เพิ่ม block ชนิดใหม่ได้ไหม", "a": "ได้ เขียนฟังก์ชัน render ใน assets/js/blocks.js แล้วลงทะเบียนใน BLOCKS ท้ายไฟล์" }
+        {
+          "q": "ต้องใส่ id ให้ block ไหม",
+          "a": "ไม่บังคับ แต่ถ้าใส่จะทำ anchor link มาที่ section นั้นได้ และ block faq ใช้ id ในการสร้าง id ของคำตอบด้วย"
+        },
+        {
+          "q": "เปลี่ยนสีพื้นหลัง section ยังไง",
+          "a": "ใส่ variant เป็น alt จะได้พื้นสีขาว ถ้าไม่ใส่จะเป็นพื้นสีกระดาษตามธีม"
+        },
+        {
+          "q": "เพิ่ม block ชนิดใหม่ได้ไหม",
+          "a": "ได้ เขียนฟังก์ชัน render ใน assets/js/blocks.js แล้วลงทะเบียนใน BLOCKS ท้ายไฟล์"
+        }
       ]
     },
     {
@@ -175,9 +546,17 @@
       "heading": "cta-band",
       "body": "แถบเรียกให้ทำอะไรบางอย่าง วางไว้ท้ายหน้าเพื่อชี้ทางผู้ใช้ต่อ",
       "actions": [
-        { "label": "ปุ่มหลัก", "href": "#" },
-        { "label": "ปุ่มรอง", "href": "#", "variant": "ghost" }
+        {
+          "label": "ปุ่มหลัก",
+          "href": "#"
+        },
+        {
+          "label": "ปุ่มรอง",
+          "href": "#",
+          "variant": "ghost"
+        }
       ]
     }
-  ]
+  ],
+  "updatedAt": "2026-11-13"
 }

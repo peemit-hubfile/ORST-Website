@@ -15,3 +15,7 @@ dist/
 
 # ไฟล์ภาพต้นฉบับขนาดใหญ่ (ไม่ deploy) — ไฟล์ที่เว็บใช้จริงคือเวอร์ชันย่อใน assets/images/
 _source-images/
+
+# cache หน้าเว็บเดิมของสคริปต์ย้ายข้อมูล (tools/scrape-old-site)
+tools/scrape-old-site/cache/
+__pycache__/

@@ -1,0 +1,90 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HSI4542053 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย",
+  "navKey": "news",
+  "description": "ภาพประกอบ 2 ภาพ · เอกสารแนบ 1 ไฟล์",
+  "updatedAt": "2026-08-19",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "อบรมและเสวนา",
+      "heading": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย",
+      "lead": "เผยแพร่เมื่อ 19 สิงหาคม 2569",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "share"
+    },
+    {
+      "type": "figure",
+      "id": "cover",
+      "image": "assets/images/orst/news/data0005-00005399-960.jpg",
+      "alt": "ภาพประกอบข่าว ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) ",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005399.JPG"
+    },
+    {
+      "type": "media-grid",
+      "id": "gallery",
+      "variant": "alt",
+      "heading": "ภาพประกอบ (2 ภาพ)",
+      "columns": 4,
+      "ratio": "4:3",
+      "fit": "contain",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005399-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1",
+          "title": "ภาพที่ 1",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005399.JPG"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005400-640.jpg",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2",
+          "title": "ภาพที่ 2",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005400.JPG"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "attachments",
+      "heading": "เอกสารที่เกี่ยวข้อง",
+      "layout": "compact",
+      "items": [
+        {
+          "title": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (FONT) อักษรโบราณในประเทศไทย",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005401.PDF"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
+      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "ดูข่าวทั้งหมด",
+          "href": "general-news.html"
+        }
+      ]
+    }
+  ]
+}

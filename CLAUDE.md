@@ -16,7 +16,10 @@
 
 1. **ห้ามเพิ่ม dependency / framework / build tool** — ไม่มี `package.json` และจะไม่มี
    ทุกอย่างต้องรันได้ด้วยการเปิด Live Server เฉย ๆ
-2. **ลำดับ CSS ห้ามสลับ** — `base.css` → `blocks.css` → `pages/<หน้า>.css` → `components.css`
+2. **ลำดับ CSS ห้ามสลับ** — `typography.css` → `base.css` → `blocks.css` → `pages/<หน้า>.css` → `components.css`
+   `typography.css` (ฟอนต์ ขนาดตัวอักษร ระยะห่าง มุมโค้ง — ชุดเดียวกับเว็บไซต์ราชบัณฑิตยสภา) ต้องเป็นไฟล์แรก
+   **ขนาดตัวอักษรใช้ `var(--text-xs|sm|base|md|lg|xl|2xl|3xl)` เท่านั้น ห้ามใส่ rem/px เอง** ระยะบรรทัดใช้ `var(--leading-tight|normal|reading)`
+   มุมโค้งใช้ `var(--radius-sm|md|lg|xl|pill)` (สูงสุด 16px ยกเว้นวงกลม `50%` และ pill)
    `components.css` ต้องเป็นไฟล์สุดท้ายเสมอ (เดิมมันถูก inject ผ่าน JS จึงชนะทุกไฟล์)
 3. **ลำดับ JS ห้ามสลับ** — `components.js` (classic script) ต้องมาก่อน `page-runtime.js` (module)
 4. **ห้ามเขียน `<header>` / `<footer>` ในไฟล์หน้า** — สร้างจาก `assets/js/components.js` ที่เดียว
