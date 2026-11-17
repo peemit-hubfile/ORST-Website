@@ -7,39 +7,6 @@
       "href": "about.html",
       "groups": [
         {
-          "heading": "ข้อมูลองค์กร",
-          "items": [
-            {
-              "title": "ประวัติความเป็นมา",
-              "href": "history.html"
-            },
-            {
-              "title": "วิสัยทัศน์ พันธกิจ",
-              "href": "vision-mission.html"
-            },
-            {
-              "title": "ค่านิยม",
-              "href": "core-values.html"
-            },
-            {
-              "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
-              "href": "organization-structure.html"
-            },
-            {
-              "title": "เครื่องหมายราชการ",
-              "href": "emblem.html"
-            },
-            {
-              "title": "กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง",
-              "href": "laws-regulations.html"
-            },
-            {
-              "title": "อำนาจหน้าที่และภารกิจ",
-              "href": "duties.html"
-            }
-          ]
-        },
-        {
           "heading": "ผู้บริหาร",
           "items": [
             {
@@ -49,6 +16,10 @@
             {
               "title": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
               "href": "cio.html"
+            },
+            {
+              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO",
+              "href": "cio-it-management.html"
             }
           ]
         },
@@ -86,11 +57,56 @@
           ]
         },
         {
+          "heading": "ข้อมูลองค์กร",
+          "items": [
+            {
+              "title": "ประวัติความเป็นมา",
+              "href": "history.html"
+            },
+            {
+              "title": "วิสัยทัศน์ พันธกิจ",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "ค่านิยม",
+              "href": "core-values.html"
+            },
+            {
+              "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "เครื่องหมายราชการ",
+              "href": "emblem.html"
+            },
+            {
+              "title": "กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "อำนาจหน้าที่และภารกิจ",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
           "heading": "บุคลากรและการบริหารทรัพยากรบุคคล",
           "items": [
             {
               "title": "คณะกรรมการวิชาการ และกรรมการอื่น",
               "href": "committees.html"
+            },
+            {
+              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล",
+              "href": "hr-plan.html"
+            },
+            {
+              "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล",
+              "href": "hr-criteria.html"
+            },
+            {
+              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี",
+              "href": "hr-annual-report.html"
             }
           ]
         }
@@ -139,6 +155,10 @@
             {
               "title": "กฎบัตรการตรวจสอบภายใน",
               "href": "internal-audit-charter.html"
+            },
+            {
+              "title": "แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี",
+              "href": "annual-budget-plan.html"
             }
           ]
         },
@@ -154,12 +174,65 @@
               "href": "monthly-performance.html"
             },
             {
+              "title": "มาตรฐานระยะเวลาการให้บริการ",
+              "href": "service-time-standards.html"
+            },
+            {
               "title": "สรุปผลการปฏิบัติราชการตามคำรับรองการปฏิบัติราชการ",
               "href": "performance-agreement.html"
             },
             {
               "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิต / งบทดลอง",
               "href": "unit-cost.html"
+            },
+            {
+              "title": "รายงานการกำกับติดตามการดำเนินงานและการใช้งบประมาณ รอบ ๖ เดือน",
+              "href": "six-month-report.html"
+            },
+            {
+              "title": "รายงานผลการดำเนินงานประจำปี",
+              "href": "annual-report.html"
+            },
+            {
+              "title": "รายงานผลการใช้จ่ายงบประมาณประจำปี",
+              "href": "budget-spending-report.html"
+            },
+            {
+              "title": "ข้อมูลเชิงสถิติการให้บริการ",
+              "href": "service-statistics.html"
+            },
+            {
+              "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการ",
+              "href": "satisfaction-survey.html"
+            }
+          ]
+        },
+        {
+          "heading": "ข้อมูลเปิดภาครัฐและการเปิดเผยข้อมูล",
+          "items": [
+            {
+              "title": "ข้อมูลข่าวสารตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. ๒๕๔๐",
+              "href": "official-information.html"
+            },
+            {
+              "title": "ชุดข้อมูลเปิดภาครัฐ (Open Data)",
+              "href": "open-data.html"
+            },
+            {
+              "title": "แบบคำขอชุดข้อมูลเปิด",
+              "href": "open-data-request.html"
+            },
+            {
+              "title": "นโยบายและแผนด้านข้อมูล (ธรรมาภิบาลข้อมูล การเปิดเผยข้อมูล และการคุ้มครองข้อมูลส่วนบุคคล)",
+              "href": "data-policy.html"
+            },
+            {
+              "title": "การเปิดเผยข้อมูลสาธารณะ (ITA / OIT)",
+              "href": "public-disclosure.html"
+            },
+            {
+              "title": "ช่องทางยื่นคำขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล",
+              "href": "data-subject-request.html"
             }
           ]
         }
@@ -192,6 +265,14 @@
             {
               "title": "คำถาม-คำตอบ (Q&A)",
               "href": "qa.html"
+            },
+            {
+              "title": "คลังภาพและวิดีโอ",
+              "href": "media-gallery.html"
+            },
+            {
+              "title": "RSS ข่าวสาร",
+              "href": "rss.html"
             }
           ]
         },
@@ -248,27 +329,87 @@
       "href": "services.html",
       "groups": [
         {
-          "heading": "ความรู้และสิ่งพิมพ์",
+          "heading": "บริการวิชาการ",
           "items": [
             {
-              "title": "เอกสารความรู้เผยแพร่",
+              "title": "พจนานุกรม",
+              "href": "dictionary.html"
+            },
+            {
+              "title": "คลังความรู้",
               "href": "knowledge-base.html"
             },
             {
-              "title": "หลักเกณฑ์ภาษาไทย",
-              "href": "language-guidelines.html"
+              "title": "ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน",
+              "href": "book-ordering.html"
             },
             {
               "title": "อินโฟกราฟิก",
               "href": "infographics.html"
             },
             {
-              "title": "ข้อมูลเสียงภาษาถิ่น",
+              "title": "หลักเกณฑ์ต่าง ๆ",
+              "href": "language-guidelines.html"
+            },
+            {
+              "title": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
               "href": "ethnic-language-audio.html"
             },
             {
-              "title": "ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน",
-              "href": "book-ordering.html"
+              "title": "งานบริการ (E-Service)",
+              "href": "e-services.html"
+            },
+            {
+              "title": "คู่มือสำหรับประชาชน",
+              "href": "citizen-manual.html"
+            },
+            {
+              "title": "ดาวน์โหลดแบบฟอร์ม",
+              "href": "download-forms.html"
+            },
+            {
+              "title": "ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ",
+              "href": "e-channels.html"
+            },
+            {
+              "title": "ข้อมูลการอนุญาตที่ดำเนินการแล้ว",
+              "href": "permits-issued.html"
+            },
+            {
+              "title": "ติดตามสถานะคำขอรับบริการ",
+              "href": "track-request.html"
+            },
+            {
+              "title": "คำแนะนำการใช้บริการออนไลน์",
+              "href": "e-service-guide.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "title": "ติดต่อเรา",
+      "href": "contact.html",
+      "groups": [
+        {
+          "heading": "ติดต่อเรา",
+          "items": [
+            {
+              "title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
+              "href": "complaints.html"
+            },
+            {
+              "title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)",
+              "href": "contact.html#message-form"
+            },
+            {
+              "title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
+              "href": "website-survey.html"
+            },
+            {
+              "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
+              "href": "social-media.html"
             }
           ]
         }

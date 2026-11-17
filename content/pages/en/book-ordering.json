@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-BUY-BOOK — ที่อยู่ ธนาณัติ/แฟกซ์/โทร เป็นของเดิมสมัยสนามเสือป่า ให้ ORST ยืนยัน (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Book ordering procedure and payment methods",
+  "title": "How to Order Books and Payment",
   "navKey": "services",
   "description": "Procedure for ordering books from the Office of the Royal Society and payment methods",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Book ordering procedure and payment methods",
+      "heading": "How to Order Books and Payment",
       "lead": "Procedure for ordering books from the Office of the Royal Society and payment methods",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "Academic services",
+          "label": "Academic Services",
           "href": "services.html"
         },
         {
-          "label": "Book ordering procedure and payment methods"
+          "label": "How to Order Books and Payment"
         }
       ]
     },

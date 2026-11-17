@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=7 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Job announcements and personnel administration announcements",
+  "title": "Job Vacancies & HR Notices",
   "navKey": "news",
   "description": "Job announcements and personnel administration announcements of the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Job announcements and personnel administration announcements",
+      "heading": "Job Vacancies & HR Notices",
       "lead": "Job announcements and personnel administration announcements of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Job announcements and personnel administration announcements"
+          "label": "Job Vacancies & HR Notices"
         }
       ]
     },

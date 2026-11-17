@@ -48,15 +48,11 @@ p["blocks"] = [hero,
     {"type": "rich-text", "id": "overview", "heading": "ภาพรวมองค์กร",
      "paragraphs": [history[0], "วิสัยทัศน์ : " + vision]},
     {"type": "page-index", "id": "sections", "variant": "alt", "columns": 2, "groups": [
-        {"heading": "ข้อมูลองค์กร", "icon": "i-book", "items": [
-            I("ประวัติความเป็นมา", "history.html"), I("วิสัยทัศน์ พันธกิจ", "vision-mission.html"),
-            I("ค่านิยม", "core-values.html"), I("โครงสร้างหน่วยงานและการแบ่งส่วนราชการ", "organization-structure.html"),
-            I("เครื่องหมายราชการ", "emblem.html"), I("กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง", "laws-regulations.html"),
-            I("อำนาจหน้าที่และภารกิจ", "duties.html")]},
+        # ลำดับตามผังเว็บไซต์ ORST: 3.1 ผู้บริหาร · 3.2 ศปท. · 3.3 ข้อมูลองค์กร · 3.4 บุคลากร
         {"heading": "ผู้บริหาร", "icon": "i-user", "items": [
             I("ผู้บริหารสำนักงานราชบัณฑิตยสภา", "executives.html"),
             I("ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)", "cio.html"),
-            I("การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO")]},
+            I("การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO", "cio-it-management.html")]},
         {"heading": "ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)", "icon": "i-shield", "href": "anti-corruption-center.html", "items": [
             I("ข้อมูลของ ศปท.", "anti-corruption-center.html"),
             I("ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ", "corruption-complaints.html"),
@@ -65,10 +61,15 @@ p["blocks"] = [hero,
             I("มาตรการป้องกันการรับสินบน (No Gift Policy)", "no-gift-policy.html"),
             I("การประเมินความเสี่ยงและแผนป้องกันการทุจริต", "anti-corruption-plan.html"),
             I("จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส", "ethics.html")]},
+        {"heading": "ข้อมูลองค์กร", "icon": "i-book", "items": [
+            I("ประวัติความเป็นมา", "history.html"), I("วิสัยทัศน์ พันธกิจ", "vision-mission.html"),
+            I("ค่านิยม", "core-values.html"), I("โครงสร้างหน่วยงานและการแบ่งส่วนราชการ", "organization-structure.html"),
+            I("เครื่องหมายราชการ", "emblem.html"), I("กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง", "laws-regulations.html"),
+            I("อำนาจหน้าที่และภารกิจ", "duties.html")]},
         {"heading": "บุคลากรและการบริหารทรัพยากรบุคคล", "icon": "i-people", "items": [
             I("คณะกรรมการวิชาการ และกรรมการอื่น", "committees.html"),
-            I("นโยบายและแผนการบริหารทรัพยากรบุคคล"), I("หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล"),
-            I("รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี")]},
+            I("นโยบายและแผนการบริหารทรัพยากรบุคคล", "hr-plan.html"), I("หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล", "hr-criteria.html"),
+            I("รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี", "hr-annual-report.html")]},
     ]},
     {"type": "cta-band", "heading": "การปฏิบัติราชการ", "body": "แผนปฏิบัติราชการ ผลการปฏิบัติราชการ และข้อมูลเปิดภาครัฐ",
      "actions": [{"label": "ดูการปฏิบัติราชการ", "href": "operations.html"}]}]
@@ -116,7 +117,7 @@ p["blocks"] = [hero,
         {"heading": "ข่าวประชาสัมพันธ์", "icon": "i-megaphone", "items": [
             I("ข่าวประชาสัมพันธ์ทั่วไป", "general-news.html"), I("ข่าวกิจกรรม", "activity-news.html"),
             I("การบรรยายทางวิชาการ", "academic-lectures.html"), I("ปฏิทินกิจกรรม", "event-calendar.html"),
-            I("คำถาม-คำตอบ (Q&A)", "qa.html"), I("คลังภาพและวิดีโอ"), I("RSS ข่าวสาร")]},
+            I("คำถาม-คำตอบ (Q&A)", "qa.html"), I("คลังภาพและวิดีโอ", "media-gallery.html"), I("RSS ข่าวสาร", "rss.html")]},
         {"heading": "ประกาศ", "icon": "i-file", "items": [
             I("ประกาศการจัดซื้อจัดจ้าง", "procurement-notices.html"), I("ประกาศผลจัดซื้อจัดจ้าง", "procurement-results.html"),
             I("ประกาศราคากลาง", "reference-prices.html"), I("สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)", "procurement-summary.html"),

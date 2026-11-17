@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "แม่แบบ T1 (รายการเอกสาร) — เมนู 5.2.1 ข้อมูลจาก orst.go.th/iwfm_table.asp?a=2 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์ยังชี้ไปหน้าประกาศบนเว็บเดิม",
-  "title": "Procurement announcements",
+  "title": "Procurement Notices",
   "navKey": "news",
   "description": "Procurement announcements of the Office of the Royal Society. Search by announcement title or filter by fiscal year",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Procurement announcements",
+      "heading": "Procurement Notices",
       "lead": "Procurement announcements of the Office of the Royal Society. Search by announcement title or filter by fiscal year",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Procurement announcements"
+          "label": "Procurement Notices"
         }
       ]
     },

@@ -1,0 +1,82 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารนโยบายจากเว็บเดิม (orst.go.th) — ไฟล์ยังชี้ไปเว็บไซต์เดิม รอย้ายเข้า CMS",
+  "title": "Privacy Policy",
+  "navKey": "home",
+  "description": "Personal data protection policy of the Office of the Royal Society under the Personal Data Protection Act B.E. 2562 (2019)",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Privacy Policy",
+      "lead": "Personal data protection policy of the Office of the Royal Society under the Personal Data Protection Act B.E. 2562 (2019)",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Privacy Policy"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "heading": "Policy document",
+      "items": [
+        {
+          "title": "Personal Data Protection Policy of the Office of the Royal Society",
+          "publishedAt": "2022-10-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "rights",
+      "heading": "Rights of data subjects",
+      "items": [
+        {
+          "title": "Data Subject Request",
+          "href": "data-subject-request.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "Data Policy & Plan",
+          "href": "data-policy.html",
+          "icon": "i-file"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "policies",
+      "variant": "alt",
+      "heading": "Other website policies",
+      "items": [
+        {
+          "title": "Website Policy",
+          "href": "website-policy.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Cookie Policy",
+          "href": "cookie-policy.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Security Policy",
+          "href": "security-policy.html",
+          "icon": "i-shield"
+        },
+        {
+          "title": "Disclaimer",
+          "href": "disclaimer.html",
+          "icon": "i-file"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

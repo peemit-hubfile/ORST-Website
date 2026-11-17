@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "หน้าหมวด 5 ข่าวสารและกิจกรรม (แม่แบบ T3) ข่าวล่าสุดจาก orst.go.th/iwfm_table.asp?a=34",
-  "title": "News and activities",
+  "title": "News and Activities",
   "navKey": "news",
   "description": "Press releases, announcements, activities and the latest updates from the Office of the Royal Society",
   "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "News and activities",
+      "heading": "News and Activities",
       "lead": "Press releases, announcements, activities and latest updates",
       "breadcrumb": [
         {
@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities"
+          "label": "News and Activities"
         }
       ],
       "image": "assets/images/orst/news/data0005-00005374-960.jpg",
@@ -38,7 +38,7 @@
           "href": "news-69kbj5538066.html",
           "image": "assets/images/orst/news/data0005-00005462-640.jpg",
           "excerpt": "3 photos",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
@@ -46,7 +46,7 @@
           "href": "news-69jaj1403044.html",
           "image": "assets/images/orst/news/data0005-00005446-640.jpg",
           "excerpt": "10 photos · 5 attachments",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
@@ -54,7 +54,7 @@
           "href": "news-69jsh5647044.html",
           "image": "assets/images/orst/news/data0005-00005428-640.jpg",
           "excerpt": "3 images · 1 attachment",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
@@ -62,7 +62,7 @@
           "href": "news-69jsn0030075.html",
           "image": "assets/images/orst/news/data0005-00005433-640.jpg",
           "excerpt": "3 images · 4 attachments",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
@@ -70,7 +70,7 @@
           "href": "news-69jsm4847075.html",
           "image": "assets/images/orst/news/data0005-00005420-640.jpg",
           "excerpt": "3 images · 4 attachments",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
@@ -78,7 +78,7 @@
           "href": "news-69jgi2510013.html",
           "image": "assets/images/orst/news/data0005-00005414-640.jpg",
           "excerpt": "3 images · 1 attachment",
-          "category": "Announcement"
+          "category": "Announcements"
         }
       ]
     },
@@ -89,19 +89,19 @@
       "columns": 2,
       "groups": [
         {
-          "heading": "Press releases",
+          "heading": "Press Releases",
           "icon": "i-megaphone",
           "items": [
             {
-              "title": "General Press Releases",
+              "title": "General News",
               "href": "general-news.html"
             },
             {
-              "title": "Activity news",
+              "title": "Activities",
               "href": "activity-news.html"
             },
             {
-              "title": "Academic lectures",
+              "title": "Academic Lectures",
               "href": "academic-lectures.html"
             },
             {
@@ -109,59 +109,61 @@
               "href": "event-calendar.html"
             },
             {
-              "title": "Questions and answers (Q&A)",
+              "title": "Q&A",
               "href": "qa.html"
             },
             {
-              "title": "Photo and video gallery"
+              "title": "Photos & Videos",
+              "href": "media-gallery.html"
             },
             {
-              "title": "News RSS"
+              "title": "RSS Feed",
+              "href": "rss.html"
             }
           ]
         },
         {
-          "heading": "Announcement",
+          "heading": "Announcements",
           "icon": "i-file",
           "items": [
             {
-              "title": "Procurement announcements",
+              "title": "Procurement Notices",
               "href": "procurement-notices.html"
             },
             {
-              "title": "Procurement result announcements",
+              "title": "Procurement Results",
               "href": "procurement-results.html"
             },
             {
-              "title": "Reference price announcements",
+              "title": "Reference Prices",
               "href": "reference-prices.html"
             },
             {
-              "title": "Monthly procurement summary (Form Sor Kho Ro 1)",
+              "title": "Monthly Procurement Summary (SKR.1)",
               "href": "procurement-summary.html"
             },
             {
-              "title": "Procurement result announcements (quarterly)",
+              "title": "Quarterly Procurement Results",
               "href": "procurement-quarterly.html"
             },
             {
-              "title": "Procurement plan announcements",
+              "title": "Procurement Plan",
               "href": "procurement-plans.html"
             },
             {
-              "title": "Auction announcements",
+              "title": "Auction Notices",
               "href": "auctions.html"
             },
             {
-              "title": "Job announcements and personnel administration announcements",
+              "title": "Job Vacancies & HR Notices",
               "href": "job-announcements.html"
             },
             {
-              "title": "Official news",
+              "title": "Official News",
               "href": "official-news.html"
             },
             {
-              "title": "Contract publication announcements",
+              "title": "Contracts",
               "href": "contracts.html"
             }
           ]

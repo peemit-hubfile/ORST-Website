@@ -1,0 +1,71 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมไม่มีแบบสำรวจความพึงพอใจเว็บไซต์ — รอลิงก์ (เช่น Google Form) จาก ORST",
+  "title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
+  "navKey": "contact",
+  "description": "ร่วมประเมินความพึงพอใจการใช้งานเว็บไซต์สำนักงานราชบัณฑิตยสภา เพื่อนำไปปรับปรุงการให้บริการ",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
+      "lead": "ร่วมประเมินความพึงพอใจการใช้งานเว็บไซต์สำนักงานราชบัณฑิตยสภา เพื่อนำไปปรับปรุงการให้บริการ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ติดต่อเรา",
+          "href": "contact.html"
+        },
+        {
+          "label": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "อยู่ระหว่างจัดทำแบบสำรวจ",
+      "body": "[ลิงก์แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์ — รอข้อมูลจากสำนักงาน]"
+    },
+    {
+      "type": "link-list",
+      "id": "feedback",
+      "heading": "แสดงความคิดเห็นได้ทางช่องทางนี้",
+      "items": [
+        {
+          "title": "แบบรับฟังความคิดเห็น/ข้อเสนอแนะที่มีต่อการดำเนินงาน",
+          "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+          "icon": "i-form",
+          "tag": "Google Form"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "ช่องทางติดต่ออื่น",
+      "items": [
+        {
+          "title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
+          "href": "complaints.html",
+          "icon": "i-megaphone"
+        },
+        {
+          "title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)",
+          "href": "contact.html#message-form",
+          "icon": "i-form"
+        },
+        {
+          "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
+          "href": "social-media.html",
+          "icon": "i-share"
+        }
+      ]
+    }
+  ]
+}

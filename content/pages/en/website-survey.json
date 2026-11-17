@@ -1,0 +1,72 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมไม่มีแบบสำรวจความพึงพอใจเว็บไซต์ — รอลิงก์ (เช่น Google Form) จาก ORST",
+  "title": "Website Survey",
+  "navKey": "contact",
+  "description": "Rate your satisfaction with the Office of the Royal Society website to help us improve our services",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Website Survey",
+      "lead": "Rate your satisfaction with the Office of the Royal Society website to help us improve our services",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Contact Us",
+          "href": "contact.html"
+        },
+        {
+          "label": "Website Survey"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Survey in preparation",
+      "body": "[Website satisfaction survey link — awaiting information from the Office]"
+    },
+    {
+      "type": "link-list",
+      "id": "feedback",
+      "heading": "Share your feedback here",
+      "items": [
+        {
+          "title": "Feedback Form",
+          "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+          "icon": "i-form",
+          "tag": "Google Form"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Other contact channels",
+      "items": [
+        {
+          "title": "Complaints",
+          "href": "complaints.html",
+          "icon": "i-megaphone"
+        },
+        {
+          "title": "Contact Form",
+          "href": "contact.html#message-form",
+          "icon": "i-form"
+        },
+        {
+          "title": "Social Media",
+          "href": "social-media.html",
+          "icon": "i-share"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

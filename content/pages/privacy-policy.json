@@ -1,0 +1,81 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารนโยบายจากเว็บเดิม (orst.go.th) — ไฟล์ยังชี้ไปเว็บไซต์เดิม รอย้ายเข้า CMS",
+  "title": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)",
+  "navKey": "home",
+  "description": "นโยบายการคุ้มครองข้อมูลส่วนบุคคลของสำนักงานราชบัณฑิตยสภา ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)",
+      "lead": "นโยบายการคุ้มครองข้อมูลส่วนบุคคลของสำนักงานราชบัณฑิตยสภา ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "heading": "เอกสารนโยบาย",
+      "items": [
+        {
+          "title": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล สำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2022-10-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "rights",
+      "heading": "สิทธิของเจ้าของข้อมูลส่วนบุคคล",
+      "items": [
+        {
+          "title": "ช่องทางยื่นคำขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล",
+          "href": "data-subject-request.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "นโยบายและแผนด้านข้อมูล",
+          "href": "data-policy.html",
+          "icon": "i-file"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "policies",
+      "variant": "alt",
+      "heading": "นโยบายอื่นของเว็บไซต์",
+      "items": [
+        {
+          "title": "นโยบายเว็บไซต์ (Website Policy)",
+          "href": "website-policy.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "นโยบายคุกกี้ (Cookies Policy)",
+          "href": "cookie-policy.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์ (Website Security Policy)",
+          "href": "security-policy.html",
+          "icon": "i-shield"
+        },
+        {
+          "title": "การปฏิเสธความรับผิด (Disclaimer)",
+          "href": "disclaimer.html",
+          "icon": "i-file"
+        }
+      ]
+    }
+  ]
+}

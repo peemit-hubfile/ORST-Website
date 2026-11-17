@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=22 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Summary report on unit cost per output analysis / trial balance",
+  "title": "Unit Cost & Trial Balance",
   "navKey": "about",
   "description": "Unit Cost Analysis and Trial Balance Reports",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Summary report on unit cost per output analysis / trial balance",
+      "heading": "Unit Cost & Trial Balance",
       "lead": "Unit Cost Analysis and Trial Balance Reports",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "Government operations",
+          "label": "Operations",
           "href": "operations.html"
         },
         {
-          "label": "Summary report on unit cost per output analysis / trial balance"
+          "label": "Unit Cost & Trial Balance"
         }
       ]
     },

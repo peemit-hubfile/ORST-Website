@@ -1,0 +1,93 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "บัญชีที่เว็บเดิม/เว็บนี้ใช้อยู่: เพจ Facebook id 206167399441363 และช่อง YouTube ของคลังองค์ความรู้ — ถ้ามีบัญชีอื่น (LINE, X, TikTok) ให้เพิ่มใน accounts",
+  "title": "Social Media",
+  "navKey": "contact",
+  "description": "Follow news, activities and knowledge from the Office of the Royal Society on social media",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Social Media",
+      "lead": "Follow news, activities and knowledge from the Office of the Royal Society on social media",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Contact Us",
+          "href": "contact.html"
+        },
+        {
+          "label": "Social Media"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "accounts",
+      "layout": "cards",
+      "heading": "Official accounts",
+      "items": [
+        {
+          "icon": "i-people",
+          "title": "Facebook",
+          "body": "The Royal Society page: Office news and activities",
+          "links": [
+            {
+              "label": "Open Facebook page",
+              "href": "https://www.facebook.com/206167399441363"
+            }
+          ]
+        },
+        {
+          "icon": "i-mail",
+          "title": "Messenger",
+          "body": "Send questions via the Royal Society page on Facebook Messenger",
+          "links": [
+            {
+              "label": "Start a chat in Messenger",
+              "href": "https://m.me/206167399441363"
+            }
+          ]
+        },
+        {
+          "icon": "i-video",
+          "title": "YouTube",
+          "body": "Lectures, academic forums and knowledge videos",
+          "links": [
+            {
+              "label": "Open YouTube channel",
+              "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Other contact channels",
+      "items": [
+        {
+          "title": "Complaints",
+          "href": "complaints.html",
+          "icon": "i-megaphone"
+        },
+        {
+          "title": "Contact Form",
+          "href": "contact.html#message-form",
+          "icon": "i-form"
+        },
+        {
+          "title": "Website Survey",
+          "href": "website-survey.html",
+          "icon": "i-check"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=3 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Procurement result announcements",
+  "title": "Procurement Results",
   "navKey": "news",
   "description": "Procurement results of the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Procurement result announcements",
+      "heading": "Procurement Results",
       "lead": "Procurement results of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Procurement result announcements"
+          "label": "Procurement Results"
         }
       ]
     },

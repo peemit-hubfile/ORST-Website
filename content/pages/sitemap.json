@@ -67,41 +67,6 @@
           ]
         },
         {
-          "heading": "เกี่ยวกับเรา · ข้อมูลองค์กร",
-          "href": "about.html",
-          "icon": "i-book",
-          "items": [
-            {
-              "title": "ประวัติความเป็นมา",
-              "href": "history.html"
-            },
-            {
-              "title": "วิสัยทัศน์ พันธกิจ",
-              "href": "vision-mission.html"
-            },
-            {
-              "title": "ค่านิยม",
-              "href": "core-values.html"
-            },
-            {
-              "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
-              "href": "organization-structure.html"
-            },
-            {
-              "title": "เครื่องหมายราชการ",
-              "href": "emblem.html"
-            },
-            {
-              "title": "กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง",
-              "href": "laws-regulations.html"
-            },
-            {
-              "title": "อำนาจหน้าที่และภารกิจ",
-              "href": "duties.html"
-            }
-          ]
-        },
-        {
           "heading": "เกี่ยวกับเรา · ผู้บริหาร",
           "href": "about.html",
           "icon": "i-user",
@@ -115,7 +80,8 @@
               "href": "cio.html"
             },
             {
-              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO"
+              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO",
+              "href": "cio-it-management.html"
             }
           ]
         },
@@ -155,6 +121,41 @@
           ]
         },
         {
+          "heading": "เกี่ยวกับเรา · ข้อมูลองค์กร",
+          "href": "about.html",
+          "icon": "i-book",
+          "items": [
+            {
+              "title": "ประวัติความเป็นมา",
+              "href": "history.html"
+            },
+            {
+              "title": "วิสัยทัศน์ พันธกิจ",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "ค่านิยม",
+              "href": "core-values.html"
+            },
+            {
+              "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "เครื่องหมายราชการ",
+              "href": "emblem.html"
+            },
+            {
+              "title": "กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "อำนาจหน้าที่และภารกิจ",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
           "heading": "เกี่ยวกับเรา · บุคลากรและการบริหารทรัพยากรบุคคล",
           "href": "about.html",
           "icon": "i-people",
@@ -164,13 +165,16 @@
               "href": "committees.html"
             },
             {
-              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล"
+              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล",
+              "href": "hr-plan.html"
             },
             {
-              "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล"
+              "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล",
+              "href": "hr-criteria.html"
             },
             {
-              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี"
+              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี",
+              "href": "hr-annual-report.html"
             }
           ]
         },
@@ -216,7 +220,8 @@
               "href": "internal-audit-charter.html"
             },
             {
-              "title": "แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี"
+              "title": "แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี",
+              "href": "annual-budget-plan.html"
             }
           ]
         },
@@ -234,7 +239,8 @@
               "href": "monthly-performance.html"
             },
             {
-              "title": "มาตรฐานระยะเวลาการให้บริการ"
+              "title": "มาตรฐานระยะเวลาการให้บริการ",
+              "href": "service-time-standards.html"
             },
             {
               "title": "สรุปผลการปฏิบัติราชการตามคำรับรองการปฏิบัติราชการ",
@@ -249,19 +255,24 @@
               "href": "https://forms.gle/mc1qF9RCDQbvLnho6"
             },
             {
-              "title": "รายงานการกำกับติดตามการดำเนินงานและการใช้งบประมาณ รอบ ๖ เดือน"
+              "title": "รายงานการกำกับติดตามการดำเนินงานและการใช้งบประมาณ รอบ ๖ เดือน",
+              "href": "six-month-report.html"
             },
             {
-              "title": "รายงานผลการดำเนินงานประจำปี"
+              "title": "รายงานผลการดำเนินงานประจำปี",
+              "href": "annual-report.html"
             },
             {
-              "title": "รายงานผลการใช้จ่ายงบประมาณประจำปี"
+              "title": "รายงานผลการใช้จ่ายงบประมาณประจำปี",
+              "href": "budget-spending-report.html"
             },
             {
-              "title": "ข้อมูลเชิงสถิติการให้บริการ"
+              "title": "ข้อมูลเชิงสถิติการให้บริการ",
+              "href": "service-statistics.html"
             },
             {
-              "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการ"
+              "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการ",
+              "href": "satisfaction-survey.html"
             }
           ]
         },
@@ -271,23 +282,28 @@
           "icon": "i-database",
           "items": [
             {
-              "title": "ข้อมูลข่าวสารตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. ๒๕๔๐"
+              "title": "ข้อมูลข่าวสารตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. ๒๕๔๐",
+              "href": "official-information.html"
             },
             {
-              "title": "ชุดข้อมูลเปิดภาครัฐ (Open Data)"
+              "title": "ชุดข้อมูลเปิดภาครัฐ (Open Data)",
+              "href": "open-data.html"
             },
             {
-              "title": "แบบคำขอชุดข้อมูลเปิด"
+              "title": "แบบคำขอชุดข้อมูลเปิด",
+              "href": "open-data-request.html"
             },
             {
-              "title": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล",
-              "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038"
+              "title": "นโยบายและแผนด้านข้อมูล (ธรรมาภิบาลข้อมูล การเปิดเผยข้อมูล และการคุ้มครองข้อมูลส่วนบุคคล)",
+              "href": "data-policy.html"
             },
             {
-              "title": "การเปิดเผยข้อมูลสาธารณะ (ITA / OIT)"
+              "title": "การเปิดเผยข้อมูลสาธารณะ (ITA / OIT)",
+              "href": "public-disclosure.html"
             },
             {
-              "title": "ช่องทางยื่นคำขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล"
+              "title": "ช่องทางยื่นคำขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล",
+              "href": "data-subject-request.html"
             }
           ]
         },
@@ -317,10 +333,12 @@
               "href": "qa.html"
             },
             {
-              "title": "คลังภาพและวิดีโอ"
+              "title": "คลังภาพและวิดีโอ",
+              "href": "media-gallery.html"
             },
             {
-              "title": "RSS ข่าวสาร"
+              "title": "RSS ข่าวสาร",
+              "href": "rss.html"
             }
           ]
         },
@@ -372,25 +390,17 @@
           ]
         },
         {
-          "heading": "บริการวิชาการ · ระบบสืบค้นออนไลน์",
+          "heading": "บริการวิชาการ · บริการวิชาการ",
           "href": "services.html",
-          "icon": "i-dictionary",
+          "icon": "i-service",
           "items": [
             {
               "title": "พจนานุกรม",
-              "href": "https://dictionary.orst.go.th/"
+              "href": "dictionary.html"
             },
             {
               "title": "ศัพท์บัญญัติ",
               "href": "https://coined-word.orst.go.th/"
-            },
-            {
-              "title": "ฐานข้อมูลคำทับศัพท์",
-              "href": "https://transliteration.orst.go.th/search"
-            },
-            {
-              "title": "อักขรานุกรมภูมิศาสตร์ไทย",
-              "href": "https://gazetteer.orst.go.th/"
             },
             {
               "title": "สารานุกรมและอนุกรมวิธาน",
@@ -401,45 +411,91 @@
               "href": "https://da3.thaidlt.org/"
             },
             {
-              "title": "ระบบทดสอบความรู้ด้านภาษาไทย",
-              "href": "https://etest.orst.go.th/"
+              "title": "ระบบฐานข้อมูลคำทับศัพท์",
+              "href": "https://transliteration.orst.go.th/search"
             },
             {
-              "title": "พจนานุกรมภาษามือไทย",
-              "href": "http://164.115.33.116/"
-            }
-          ]
-        },
-        {
-          "heading": "บริการวิชาการ · ความรู้และสิ่งพิมพ์",
-          "href": "services.html",
-          "icon": "i-database",
-          "items": [
+              "title": "อักขรานุกรมภูมิศาสตร์ไทย",
+              "href": "https://gazetteer.orst.go.th/"
+            },
             {
-              "title": "เอกสารความรู้เผยแพร่",
+              "title": "คลังความรู้",
               "href": "knowledge-base.html"
-            },
-            {
-              "title": "หลักเกณฑ์ภาษาไทย",
-              "href": "language-guidelines.html"
-            },
-            {
-              "title": "อินโฟกราฟิก",
-              "href": "infographics.html"
-            },
-            {
-              "title": "ข้อมูลเสียงภาษาถิ่น",
-              "href": "ethnic-language-audio.html"
             },
             {
               "title": "ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน",
               "href": "book-ordering.html"
             },
             {
-              "title": "คู่มือสำหรับประชาชน"
+              "title": "อินโฟกราฟิก",
+              "href": "infographics.html"
             },
             {
-              "title": "ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ"
+              "title": "ระบบทดสอบความรู้ด้านภาษาไทย",
+              "href": "https://etest.orst.go.th/"
+            },
+            {
+              "title": "พจนานุกรมภาษามือไทย",
+              "href": "http://164.115.33.116/"
+            },
+            {
+              "title": "หลักเกณฑ์ต่าง ๆ",
+              "href": "language-guidelines.html"
+            },
+            {
+              "title": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+              "href": "ethnic-language-audio.html"
+            },
+            {
+              "title": "งานบริการ (E-Service)",
+              "href": "e-services.html"
+            },
+            {
+              "title": "คู่มือสำหรับประชาชน",
+              "href": "citizen-manual.html"
+            },
+            {
+              "title": "ดาวน์โหลดแบบฟอร์ม",
+              "href": "download-forms.html"
+            },
+            {
+              "title": "ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ",
+              "href": "e-channels.html"
+            },
+            {
+              "title": "ข้อมูลการอนุญาตที่ดำเนินการแล้ว",
+              "href": "permits-issued.html"
+            },
+            {
+              "title": "ติดตามสถานะคำขอรับบริการ",
+              "href": "track-request.html"
+            },
+            {
+              "title": "คำแนะนำการใช้บริการออนไลน์",
+              "href": "e-service-guide.html"
+            }
+          ]
+        },
+        {
+          "heading": "ติดต่อเรา",
+          "href": "contact.html",
+          "icon": "i-phone-call",
+          "items": [
+            {
+              "title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
+              "href": "complaints.html"
+            },
+            {
+              "title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)",
+              "href": "contact.html#message-form"
+            },
+            {
+              "title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
+              "href": "website-survey.html"
+            },
+            {
+              "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
+              "href": "social-media.html"
             }
           ]
         },
@@ -448,20 +504,36 @@
           "icon": "i-shield",
           "items": [
             {
-              "title": "คำถาม-คำตอบ (Q&A)",
+              "title": "คำถามที่พบบ่อย (FAQ)",
               "href": "qa.html"
             },
             {
-              "title": "นโยบายเว็บไซต์",
+              "title": "เว็บลิงก์หน่วยงานที่เกี่ยวข้อง",
+              "href": "related-links.html"
+            },
+            {
+              "title": "การปฏิเสธความรับผิด (Disclaimer)",
+              "href": "disclaimer.html"
+            },
+            {
+              "title": "นโยบายเว็บไซต์ (Website Policy)",
               "href": "website-policy.html"
             },
             {
-              "title": "นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์",
+              "title": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)",
+              "href": "privacy-policy.html"
+            },
+            {
+              "title": "นโยบายคุกกี้ (Cookies Policy)",
+              "href": "cookie-policy.html"
+            },
+            {
+              "title": "นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์ (Website Security Policy)",
               "href": "security-policy.html"
             },
             {
-              "title": "ข้อจำกัดความรับผิดชอบ",
-              "href": "disclaimer.html"
+              "title": "การเข้าถึงเว็บไซต์ (Web Accessibility)",
+              "href": "accessibility.html"
             }
           ]
         }

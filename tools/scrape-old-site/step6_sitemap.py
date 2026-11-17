@@ -16,7 +16,11 @@ def load(n):
 def groups_of(name):
     """กลุ่มลิงก์ของหน้าหมวด: page-index (ทุกกลุ่ม) + card-grid แบบ tiles (1 block = 1 กลุ่ม ชื่อกลุ่มจาก eyebrow/heading)"""
     out = []
-    for b in load(name)["blocks"]:
+    blocks = load(name)["blocks"]
+    # หน้าหมวดที่มี page-index ใช้ page-index อย่างเดียว (เรียงตามผังเว็บไซต์ ORST) — การ์ดอื่นในหน้าเป็นส่วนประกอบหน้าตา
+    if any(b["type"] == "page-index" for b in blocks):
+        blocks = [b for b in blocks if b["type"] == "page-index"]
+    for b in blocks:
         if b["type"] == "page-index":
             out += b["groups"]
         elif b["type"] == "card-grid" and b.get("layout") in ("tiles", "list"):
@@ -44,10 +48,24 @@ groups += index_groups("about", "about.html", "เกี่ยวกับเร
 groups += index_groups("operations", "operations.html", "การปฏิบัติราชการ")
 groups += index_groups("news", "news.html", "ข่าวสาร")
 groups += index_groups("services", "services.html", "บริการวิชาการ")
+# หมวด 7 ติดต่อเรา — contact.html เขียน HTML เอง (ไม่มี page-index) ลำดับตามผังเว็บไซต์ ORST
+CONTACT_ITEMS = [
+    {"title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ", "href": "complaints.html"},
+    {"title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)", "href": "contact.html#message-form"},
+    {"title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์", "href": "website-survey.html"},
+    {"title": "เครือข่ายสังคมออนไลน์ (Social Media)", "href": "social-media.html"},
+]
+groups.append({"heading": "ติดต่อเรา", "href": "contact.html", "icon": "i-phone-call", "items": CONTACT_ITEMS})
+# FOOTER ตามผังเว็บไซต์ ORST (ลิงก์เดียวกับคอลัมน์ "ข้อมูลเว็บไซต์และนโยบาย" ใน renderFooter ของ components.js)
 groups.append({"heading": "ข้อมูลเว็บไซต์และนโยบาย", "icon": "i-shield", "items": [
-    {"title": "คำถาม-คำตอบ (Q&A)", "href": "qa.html"}, {"title": "นโยบายเว็บไซต์", "href": "website-policy.html"},
-    {"title": "นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์", "href": "security-policy.html"},
-    {"title": "ข้อจำกัดความรับผิดชอบ", "href": "disclaimer.html"}]})
+    {"title": "คำถามที่พบบ่อย (FAQ)", "href": "qa.html"},
+    {"title": "เว็บลิงก์หน่วยงานที่เกี่ยวข้อง", "href": "related-links.html"},
+    {"title": "การปฏิเสธความรับผิด (Disclaimer)", "href": "disclaimer.html"},
+    {"title": "นโยบายเว็บไซต์ (Website Policy)", "href": "website-policy.html"},
+    {"title": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)", "href": "privacy-policy.html"},
+    {"title": "นโยบายคุกกี้ (Cookies Policy)", "href": "cookie-policy.html"},
+    {"title": "นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์ (Website Security Policy)", "href": "security-policy.html"},
+    {"title": "การเข้าถึงเว็บไซต์ (Web Accessibility)", "href": "accessibility.html"}]})
 
 page = {"$schema": "../blocks.schema.json",
         "_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step6_sitemap.py — อย่าแก้ด้วยมือ ให้แก้หน้าหมวดแล้วรันใหม่",
@@ -70,14 +88,15 @@ print(f"  sitemap.html  {len(groups)} กลุ่ม {sum(len(g['items']) for g
 # (page-runtime.js และ tools/build.mjs อ่านไฟล์นี้ — ตอนต่อ CMS ให้ CMS สร้างไฟล์/endpoint รูปแบบเดียวกัน)
 # ---------------------------------------------------------------------------
 SECTIONS = [("about", "เกี่ยวกับเรา", "about.html"), ("operations", "การปฏิบัติราชการ", "operations.html"),
-            ("news", "ข่าวสารและกิจกรรม", "news.html"), ("services", "บริการวิชาการ", "services.html")]
+            ("news", "ข่าวสารและกิจกรรม", "news.html"), ("services", "บริการวิชาการ", "services.html"),
+            ("contact", "ติดต่อเรา", "contact.html")]
 nav = {"_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step6_sitemap.py (อ่านจาก page-index ของหน้าหมวด) — อย่าแก้ด้วยมือ",
        "sections": []}
 for key, title, href in SECTIONS:
     sec = {"key": key, "title": title, "href": href, "groups": []}
-    for g in groups_of(key):
+    for g in ([{"heading": "ติดต่อเรา", "items": CONTACT_ITEMS}] if key == "contact" else groups_of(key)):
         items = [{"title": it["title"], "href": it["href"]} for it in g["items"]
-                 if it.get("href", "").endswith(".html") and not it["href"].startswith("http")]
+                 if it.get("href", "").split("#")[0].endswith(".html") and not it["href"].startswith("http")]
         if items:
             sec["groups"].append({"heading": g["heading"], "items": items})
     nav["sections"].append(sec)

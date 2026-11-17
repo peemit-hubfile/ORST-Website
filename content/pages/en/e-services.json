@@ -1,0 +1,105 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/info.asp (งานบริการ e-Services) — ไฟล์ระเบียบ/แบบฟอร์มยังชี้ไปเว็บไซต์เดิม เว็บเดิมส่งไฟล์อัปโหลดไปที่ saraban@orst.go.th",
+  "title": "e-Services",
+  "navKey": "services",
+  "description": "Online permit request services of the Office of the Royal Society: read the regulations, download the forms and submit documents by email",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "e-Services",
+      "lead": "Online permit request services of the Office of the Royal Society: read the regulations, download the forms and submit documents by email",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services",
+          "href": "services.html"
+        },
+        {
+          "label": "e-Services"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "services",
+      "layout": "cards",
+      "heading": "Available services",
+      "items": [
+        {
+          "icon": "i-form",
+          "title": "Request for permission to print and publish publications, electronic media, electronic data and other media of the Office of the Royal Society",
+          "body": "Under the Office of the Royal Society Regulation on Permission to Print and Publish Publications, Electronic Media, Electronic Data and Other Media, B.E. 2561 (2018)",
+          "links": [
+            {
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF"
+            },
+            {
+              "label": "Form (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF"
+            },
+            {
+              "label": "Submit documents: saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
+        },
+        {
+          "icon": "i-form",
+          "title": "Request for the right to print and sell books produced by the Office of the Royal Society for publication and sale",
+          "body": "Under the Office of the Royal Society Regulation on Granting the Right to Print and Sell Books Produced by the Office for Publication and Sale, B.E. 2561 (2018)",
+          "links": [
+            {
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF"
+            },
+            {
+              "label": "Form (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF"
+            },
+            {
+              "label": "Submit documents: saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "files",
+      "tone": "info",
+      "title": "Submitting documents",
+      "body": "Email the completed form and supporting documents to saraban@orst.go.th. Accepted files: .pdf .doc .docx, up to 10MB"
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related services",
+      "items": [
+        {
+          "title": "Download Forms",
+          "href": "download-forms.html",
+          "icon": "i-download"
+        },
+        {
+          "title": "How to Use e-Services",
+          "href": "e-service-guide.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Contact the Office",
+          "href": "contact.html",
+          "icon": "i-phone-call"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

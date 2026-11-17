@@ -1,0 +1,78 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากประกาศฝ่ายบริหารงานบุคคล orst.go.th (iwfm_table.asp?a=7) — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "HR Annual Report",
+  "navKey": "about",
+  "description": "Reports on human resource management and development of the Office of the Royal Society for each fiscal year",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "HR Annual Report",
+      "lead": "Reports on human resource management and development of the Office of the Royal Society for each fiscal year",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us",
+          "href": "about.html"
+        },
+        {
+          "label": "HR Annual Report"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2025",
+          "publishedAt": "2026-03-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F69FXN5828003"
+        },
+        {
+          "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2024",
+          "publishedAt": "2025-04-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F68DBK3237075"
+        },
+        {
+          "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2023",
+          "publishedAt": "2024-03-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67CUP0140056"
+        },
+        {
+          "title": "Human Resource Management and Development Report, fiscal year 2021 (revised)",
+          "publishedAt": "2022-04-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F65D%23G2526008"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related information",
+      "items": [
+        {
+          "title": "HR Plan",
+          "href": "hr-plan.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "HR Criteria",
+          "href": "hr-criteria.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Job Vacancies & HR Notices",
+          "href": "job-announcements.html",
+          "icon": "i-file"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

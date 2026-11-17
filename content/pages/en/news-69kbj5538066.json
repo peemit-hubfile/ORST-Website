@@ -10,7 +10,7 @@
     {
       "type": "page-hero",
       "variant": "article",
-      "tag": "Announcement",
+      "tag": "Announcements",
       "date": "2026-11-02",
       "heading": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
       "image": "assets/images/orst/news/data0005-00005462-960.jpg",
@@ -22,11 +22,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "General Press Releases",
+          "label": "General News",
           "href": "general-news.html"
         },
         {
@@ -76,13 +76,13 @@
         {
           "title": "Announcement of the Office of the Royal Society: Results of the Competition for Writing Books Teaching Buddhism to Children 2024, on the theme \"Adaptation\"",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67ECR1056094",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2024-05-03"
         },
         {
           "title": "Call for entries to the Competition for Writing Books Teaching Buddhism to Children 2020",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0106091",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2019-08-27"
         }
       ]

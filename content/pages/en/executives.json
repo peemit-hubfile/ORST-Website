@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-EXC (ชื่อ ตำแหน่ง เบอร์โทร ถอดจากภาพบนเว็บเดิม) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Executives of the Office of the Royal Society",
+  "title": "Office Executives",
   "navKey": "about",
   "description": "Executives of the Office of the Royal Society and their contact telephone numbers",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Executives of the Office of the Royal Society",
+      "heading": "Office Executives",
       "lead": "Executives of the Office of the Royal Society and their contact telephone numbers",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
-          "label": "Executives of the Office of the Royal Society"
+          "label": "Office Executives"
         }
       ]
     },

@@ -1,0 +1,59 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีหน้านี้ — รอเอกสารจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "IT Management",
+  "navKey": "about",
+  "description": "Policies, guidelines and results of IT management by the Chief Information Officer of the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "IT Management",
+      "lead": "Policies, guidelines and results of IT management by the Chief Information Officer of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us",
+          "href": "about.html"
+        },
+        {
+          "label": "IT Management"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[CIO IT management documents — awaiting information from the Office]"
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related information",
+      "items": [
+        {
+          "title": "Chief Information Officer (CIO)",
+          "href": "cio.html",
+          "icon": "i-user"
+        },
+        {
+          "title": "IT Master Plan",
+          "href": "it-master-plan.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Website Security Policy",
+          "href": "security-policy.html",
+          "icon": "i-shield"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

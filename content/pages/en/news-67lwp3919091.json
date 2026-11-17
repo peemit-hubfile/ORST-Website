@@ -10,7 +10,7 @@
     {
       "type": "page-hero",
       "variant": "article",
-      "tag": "Activity news",
+      "tag": "Activities",
       "date": "2024-12-23",
       "heading": "The Office of the Royal Society organizes volunteer public service and charitable activities on the occasion of the birthday anniversary of His Majesty King Bhumibol Adulyadej The Great, National Day and National Father's Day, 5 December 2024",
       "image": "assets/images/orst/news/data0004-00004279-960.jpg",
@@ -22,11 +22,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Activity news",
+          "label": "Activities",
           "href": "activity-news.html"
         },
         {

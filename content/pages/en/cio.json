@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
@@ -46,7 +46,7 @@
       "heading": "Related information",
       "items": [
         {
-          "title": "Information Technology Master Plan",
+          "title": "IT Master Plan",
           "href": "it-master-plan.html",
           "icon": "i-file"
         }

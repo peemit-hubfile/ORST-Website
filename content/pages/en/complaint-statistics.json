@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=14 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Statistics on complaints of corruption and misconduct",
+  "title": "Complaint Statistics",
   "navKey": "about",
   "description": "Statistics on complaints of corruption and misconduct by staff of the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Statistics on complaints of corruption and misconduct",
+      "heading": "Complaint Statistics",
       "lead": "Statistics on complaints of corruption and misconduct by staff of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
@@ -24,7 +24,7 @@
           "href": "anti-corruption-center.html"
         },
         {
-          "label": "Statistics on complaints of corruption and misconduct"
+          "label": "Complaint Statistics"
         }
       ]
     },

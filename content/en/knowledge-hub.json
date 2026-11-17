@@ -82,7 +82,7 @@
       "icon": "i-dictionary"
     },
     {
-      "title": "Coined technical terms",
+      "title": "ORST Coined Words Online",
       "desc": "Specialized terms and standard words",
       "href": "https://coined-word.orst.go.th/",
       "icon": "i-form"
@@ -94,7 +94,7 @@
       "icon": "i-search"
     },
     {
-      "title": "Encyclopedias and taxonomy",
+      "title": "Encyclopedia & Taxonomy",
       "desc": "Knowledge repository and word categories",
       "href": "https://lst.nectec.or.th/encyclopedia/",
       "icon": "i-book"

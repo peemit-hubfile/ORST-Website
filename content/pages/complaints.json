@@ -1,0 +1,142 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ช่องทางรับเรื่องเดียวกับหน้าบริการวิชาการ (services.json id=channels ข้อมูลจาก orst.go.th) — แก้ที่ step3_hubs.py",
+  "title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
+  "navKey": "contact",
+  "description": "ช่องทางร้องเรียน ร้องทุกข์ แจ้งเบาะแสการทุจริต และเสนอแนะต่อการดำเนินงานของสำนักงานราชบัณฑิตยสภา พร้อมการติดตามสถานะเรื่อง",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
+      "lead": "ช่องทางร้องเรียน ร้องทุกข์ แจ้งเบาะแสการทุจริต และเสนอแนะต่อการดำเนินงานของสำนักงานราชบัณฑิตยสภา พร้อมการติดตามสถานะเรื่อง",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ติดต่อเรา",
+          "href": "contact.html"
+        },
+        {
+          "label": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "channels",
+      "layout": "cards",
+      "heading": "ช่องทางรับเรื่อง",
+      "items": [
+        {
+          "icon": "i-megaphone",
+          "title": "ร้องเรียนการให้บริการ",
+          "body": "แจ้งปัญหาหรือข้อขัดข้องในการรับบริการของสำนักงาน",
+          "links": [
+            {
+              "label": "0 2141 1718",
+              "href": "tel:021411718"
+            },
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
+        },
+        {
+          "icon": "i-shield",
+          "title": "แจ้งเบาะแสการทุจริต",
+          "body": "หรือใช้กล่องรับเรื่องร้องเรียนบริเวณชั้น 1 สำนักงานราชบัณฑิตยสภา",
+          "links": [
+            {
+              "label": "anti.corruption@orst.go.th",
+              "href": "mailto:anti.corruption@orst.go.th"
+            },
+            {
+              "label": "ช่องทางร้องเรียนการทุจริต",
+              "href": "corruption-complaints.html"
+            }
+          ]
+        },
+        {
+          "icon": "i-pen",
+          "title": "เสนอแนะต่อการดำเนินงาน",
+          "body": "แบบรับฟังความคิดเห็น/ข้อเสนอแนะที่มีต่อการดำเนินงานของสำนักงาน",
+          "links": [
+            {
+              "label": "แบบรับฟังความคิดเห็น (Google Form)",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "follow",
+      "layout": "cards",
+      "variant": "alt",
+      "heading": "ติดตามสถานะและข้อมูลที่เกี่ยวข้อง",
+      "items": [
+        {
+          "icon": "i-search",
+          "title": "ติดตามสถานะเรื่อง",
+          "body": "สอบถามความคืบหน้าของเรื่องที่ยื่นไว้",
+          "links": [
+            {
+              "label": "ติดตามสถานะคำขอรับบริการ",
+              "href": "track-request.html"
+            }
+          ]
+        },
+        {
+          "icon": "i-file",
+          "title": "แนวปฏิบัติการจัดการเรื่องร้องเรียน",
+          "body": "ขั้นตอนการรับและจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+          "links": [
+            {
+              "label": "อ่านแนวปฏิบัติ",
+              "href": "complaint-guidelines.html"
+            }
+          ]
+        },
+        {
+          "icon": "i-journal",
+          "title": "สถิติเรื่องร้องเรียน",
+          "body": "ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+          "links": [
+            {
+              "label": "ดูสถิติ",
+              "href": "complaint-statistics.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "ช่องทางติดต่ออื่น",
+      "items": [
+        {
+          "title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)",
+          "href": "contact.html#message-form",
+          "icon": "i-form"
+        },
+        {
+          "title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
+          "href": "website-survey.html",
+          "icon": "i-check"
+        },
+        {
+          "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
+          "href": "social-media.html",
+          "icon": "i-share"
+        }
+      ]
+    }
+  ]
+}

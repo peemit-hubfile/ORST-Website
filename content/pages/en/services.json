@@ -1,7 +1,7 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "หน้าหมวด 6 บริการวิชาการ — ช่องทางร้องเรียนและแบบฟอร์มจาก orst.go.th ระยะเวลาให้บริการยังรอข้อมูลจาก ORST | รูป hero: assets/images/orst/services-hero.jpg (ภาพประกอบ ไม่ใช่ภาพถ่ายสถานที่จริง)",
-  "title": "Academic services",
+  "title": "Academic Services",
   "navKey": "services",
   "description": "Academic services of the Office of the Royal Society: online requests, academic enquiries, dictionary and coined-term search systems, forms and complaint channels.",
   "blocks": [
@@ -17,7 +17,7 @@
           "href": "index.html"
         },
         {
-          "label": "Academic services"
+          "label": "Academic Services"
         }
       ],
       "actions": [
@@ -72,6 +72,10 @@
         {
           "label": "Manuals and learning materials",
           "href": "#academic-services"
+        },
+        {
+          "label": "All services",
+          "href": "#all-services"
         }
       ]
     },
@@ -159,7 +163,7 @@
         },
         {
           "icon": "i-journal",
-          "title": "Coined technical terms",
+          "title": "ORST Coined Words Online",
           "body": "Academic terms coined in Thai",
           "href": "https://coined-word.orst.go.th/"
         },
@@ -171,31 +175,31 @@
         },
         {
           "icon": "i-map",
-          "title": "Thai Geographical Gazetteer",
+          "title": "Thai Gazetteer",
           "body": "Thai place names and geography",
           "href": "https://gazetteer.orst.go.th/"
         },
         {
           "icon": "i-book",
-          "title": "Encyclopedias and taxonomy",
+          "title": "Encyclopedia & Taxonomy",
           "body": "Encyclopedias and knowledge classification",
           "href": "https://lst.nectec.or.th/encyclopedia/"
         },
         {
           "icon": "i-database",
-          "title": "Archive of old documents",
+          "title": "Archives",
           "body": "Digitized old documents and publications",
           "href": "https://da3.thaidlt.org/"
         },
         {
           "icon": "i-puzzle",
-          "title": "Thai Language Proficiency Test System",
+          "title": "Thai Language Proficiency Test",
           "body": "Online Thai language knowledge tests",
           "href": "https://etest.orst.go.th/"
         },
         {
           "icon": "i-people",
-          "title": "Thai Sign Language Dictionary",
+          "title": "Thai Sign Language Dictionary (Royal Society Edition)",
           "body": "Thai sign language vocabulary (website uses HTTP)",
           "href": "http://164.115.33.116/"
         }
@@ -313,16 +317,110 @@
         },
         {
           "icon": "i-form",
-          "title": "Manual for the Public",
-          "tag": "In preparation"
+          "title": "Citizen's Manual",
+          "href": "citizen-manual.html"
         },
         {
           "icon": "i-megaphone",
-          "title": "Announcement on electronic channels for contacting the Office",
-          "tag": "In preparation"
+          "title": "e-Channels Notice",
+          "href": "e-channels.html"
         }
       ],
       "variant": "alt"
+    },
+    {
+      "type": "page-index",
+      "id": "all-services",
+      "heading": "All Academic Services",
+      "columns": 2,
+      "groups": [
+        {
+          "heading": "Academic Services",
+          "icon": "i-service",
+          "items": [
+            {
+              "title": "Dictionary",
+              "href": "dictionary.html"
+            },
+            {
+              "title": "ORST Coined Words Online",
+              "href": "https://coined-word.orst.go.th/"
+            },
+            {
+              "title": "Encyclopedia & Taxonomy",
+              "href": "https://lst.nectec.or.th/encyclopedia/"
+            },
+            {
+              "title": "Archives",
+              "href": "https://da3.thaidlt.org/"
+            },
+            {
+              "title": "ORST Transliteration Database",
+              "href": "https://transliteration.orst.go.th/search"
+            },
+            {
+              "title": "Thai Gazetteer",
+              "href": "https://gazetteer.orst.go.th/"
+            },
+            {
+              "title": "Knowledge Base",
+              "href": "knowledge-base.html"
+            },
+            {
+              "title": "How to Order Books and Payment",
+              "href": "book-ordering.html"
+            },
+            {
+              "title": "Infographics",
+              "href": "infographics.html"
+            },
+            {
+              "title": "Thai Language Proficiency Test",
+              "href": "https://etest.orst.go.th/"
+            },
+            {
+              "title": "Thai Sign Language Dictionary (Royal Society Edition)",
+              "href": "http://164.115.33.116/"
+            },
+            {
+              "title": "Language Guidelines",
+              "href": "language-guidelines.html"
+            },
+            {
+              "title": "Ethnic Language Audio",
+              "href": "ethnic-language-audio.html"
+            },
+            {
+              "title": "e-Services",
+              "href": "e-services.html"
+            },
+            {
+              "title": "Citizen's Manual",
+              "href": "citizen-manual.html"
+            },
+            {
+              "title": "Download Forms",
+              "href": "download-forms.html"
+            },
+            {
+              "title": "e-Channels Notice",
+              "href": "e-channels.html"
+            },
+            {
+              "title": "Permits Issued",
+              "href": "permits-issued.html"
+            },
+            {
+              "title": "Track Request",
+              "href": "track-request.html"
+            },
+            {
+              "title": "How to Use e-Services",
+              "href": "e-service-guide.html"
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "cta-band",
@@ -330,7 +428,7 @@
       "body": "Contact our staff for more information",
       "actions": [
         {
-          "label": "Contact us",
+          "label": "Contact Us",
           "href": "contact.html"
         },
         {

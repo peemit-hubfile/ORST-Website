@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "หน้าหมวด 3 เกี่ยวกับสำนักงาน (แม่แบบ T3) ข้อความภาพรวมจาก orst.go.th — รายการที่ไม่มี href = รอเนื้อหาจาก ORST",
-  "title": "About us",
+  "title": "About Us",
   "navKey": "about",
   "description": "History, vision, executives, structure, laws and anti-corruption information of the Office of the Royal Society",
   "blocks": [
     {
       "type": "page-hero",
       "eyebrow": "About the Office",
-      "heading": "About us",
+      "heading": "About Us",
       "lead": "History, vision, executives, structure, laws and anti-corruption information of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About us"
+          "label": "About Us"
         }
       ]
     },
@@ -36,45 +36,11 @@
       "columns": 2,
       "groups": [
         {
-          "heading": "Organization information",
-          "icon": "i-book",
-          "items": [
-            {
-              "title": "History",
-              "href": "history.html"
-            },
-            {
-              "title": "Vision and mission",
-              "href": "vision-mission.html"
-            },
-            {
-              "title": "Core values",
-              "href": "core-values.html"
-            },
-            {
-              "title": "Organizational structure and divisions",
-              "href": "organization-structure.html"
-            },
-            {
-              "title": "Official emblem",
-              "href": "emblem.html"
-            },
-            {
-              "title": "Related laws, regulations and rules",
-              "href": "laws-regulations.html"
-            },
-            {
-              "title": "Powers, duties and missions",
-              "href": "duties.html"
-            }
-          ]
-        },
-        {
           "heading": "Executives",
           "icon": "i-user",
           "items": [
             {
-              "title": "Executives of the Office of the Royal Society",
+              "title": "Office Executives",
               "href": "executives.html"
             },
             {
@@ -82,61 +48,99 @@
               "href": "cio.html"
             },
             {
-              "title": "Information technology management by the CIO"
+              "title": "IT Management",
+              "href": "cio-it-management.html"
             }
           ]
         },
         {
-          "heading": "Anti-Corruption Operation Center (ACOC)",
+          "heading": "Anti-Corruption Center",
           "icon": "i-shield",
           "href": "anti-corruption-center.html",
           "items": [
             {
-              "title": "ACOC information",
+              "title": "About the Center",
               "href": "anti-corruption-center.html"
             },
             {
-              "title": "Channels for reporting complaints of corruption and misconduct",
+              "title": "Report Corruption & Misconduct",
               "href": "corruption-complaints.html"
             },
             {
-              "title": "Guidelines for handling complaints of corruption and misconduct",
+              "title": "Complaint Handling Guidelines",
               "href": "complaint-guidelines.html"
             },
             {
-              "title": "Statistics on complaints of corruption and misconduct",
+              "title": "Complaint Statistics",
               "href": "complaint-statistics.html"
             },
             {
-              "title": "Anti-bribery measures (No Gift Policy)",
+              "title": "No Gift Policy",
               "href": "no-gift-policy.html"
             },
             {
-              "title": "Risk assessment and corruption prevention plan",
+              "title": "Anti-Corruption Plan",
               "href": "anti-corruption-plan.html"
             },
             {
-              "title": "Ethics and measures to promote integrity and transparency",
+              "title": "Integrity & Transparency",
               "href": "ethics.html"
             }
           ]
         },
         {
-          "heading": "Personnel and human resource management",
+          "heading": "Organization",
+          "icon": "i-book",
+          "items": [
+            {
+              "title": "History",
+              "href": "history.html"
+            },
+            {
+              "title": "Vision & Mission",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "Core Values",
+              "href": "core-values.html"
+            },
+            {
+              "title": "Organization Structure & Divisions",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "Official Emblem",
+              "href": "emblem.html"
+            },
+            {
+              "title": "Laws & Regulations",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "Duties & Responsibilities",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
+          "heading": "Personnel & HR Management",
           "icon": "i-people",
           "items": [
             {
-              "title": "Academic committees and other committees",
+              "title": "Committees",
               "href": "committees.html"
             },
             {
-              "title": "Human resource management policy and plan"
+              "title": "HR Plan",
+              "href": "hr-plan.html"
             },
             {
-              "title": "Human resource management and development guidelines"
+              "title": "HR Criteria",
+              "href": "hr-criteria.html"
             },
             {
-              "title": "Annual report on human resource management and development"
+              "title": "HR Annual Report",
+              "href": "hr-annual-report.html"
             }
           ]
         }
@@ -144,7 +148,7 @@
     },
     {
       "type": "cta-band",
-      "heading": "Government operations",
+      "heading": "Operations",
       "body": "Action plans, performance results and open government data",
       "actions": [
         {

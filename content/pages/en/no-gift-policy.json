@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=11 (เฉพาะรายการที่เกี่ยวกับ No Gift) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Anti-bribery measures (No Gift Policy)",
+  "title": "No Gift Policy",
   "navKey": "about",
   "description": "Declaration of intent and results of the No Gift Policy",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Anti-bribery measures (No Gift Policy)",
+      "heading": "No Gift Policy",
       "lead": "Declaration of intent and results of the No Gift Policy",
       "breadcrumb": [
         {
@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
@@ -24,7 +24,7 @@
           "href": "anti-corruption-center.html"
         },
         {
-          "label": "Anti-bribery measures (No Gift Policy)"
+          "label": "No Gift Policy"
         }
       ]
     },

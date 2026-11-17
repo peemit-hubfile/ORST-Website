@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-VALUE (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Core values",
+  "title": "Core Values",
   "navKey": "about",
   "description": "Core values of the Royal Society of Thailand",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Core values",
+      "heading": "Core Values",
       "lead": "Core values of the Royal Society of Thailand",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
-          "label": "Core values"
+          "label": "Core Values"
         }
       ]
     },

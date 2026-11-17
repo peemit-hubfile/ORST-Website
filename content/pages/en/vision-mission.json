@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-VISION (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Vision and mission",
+  "title": "Vision & Mission",
   "navKey": "about",
   "description": "Vision and Mission of the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Vision and mission",
+      "heading": "Vision & Mission",
       "lead": "Vision and Mission of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
-          "label": "Vision and mission"
+          "label": "Vision & Mission"
         }
       ]
     },

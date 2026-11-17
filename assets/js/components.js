@@ -221,7 +221,7 @@ window.orstI18n = I18N;
 /* ปุ่มสลับภาษา TH | EN (topbar + เมนูมือถือ) */
 function langSwitch(cls = '') {
   const a = (code, label, name) => `<a href="?lang=${code}" data-lang-switch="${code}" lang="${code}" hreflang="${code}"${ORST_LANG === code ? ' aria-current="true"' : ''} aria-label="${name}">${label}</a>`;
-  return `<span class="lang-switch ${cls}" role="group" aria-label="Language / ภาษา" data-i18n-skip>${a('th', 'TH', 'ภาษาไทย')}<span aria-hidden="true">|</span>${a('en', 'EN', 'English')}</span>`;
+  return `<span class="lang-switch ${cls}" role="group" aria-label="Language / ภาษา" data-i18n-skip>${icon('i-globe')}<span class="lang-switch-track">${a('th', 'TH', 'ภาษาไทย')}${a('en', 'EN', 'English')}</span></span>`;
 }
 document.addEventListener('click', e => {
   const a = e.target.closest('[data-lang-switch]');
@@ -270,6 +270,7 @@ const icons = `
   <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"></rect><path d="M8 3v4M16 3v4M3.5 10h17"></path></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></symbol>
   <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6"></path><path d="M10 14 20 4"></path><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></symbol>
   <symbol id="i-service" viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"></path><path d="M9 12l2 2 4-5"></path></symbol>
 </svg>`;
 
@@ -279,11 +280,10 @@ function icon(id, className = 'icon') {
 
 const navItems = [
   ['home', 'หน้าหลัก', `${basePath}index.html`],
-  ['dictionary', 'พจนานุกรมและคำศัพท์', `${basePath}dictionary.html`],
-  ['knowledge', 'องค์ความรู้', `${basePath}knowledge.html`],
+  ['about', 'เกี่ยวกับเรา', `${basePath}about.html`],
+  ['operations', 'การปฏิบัติราชการ', `${basePath}operations.html`],
   ['news', 'ข่าวสารและกิจกรรม', `${basePath}news.html`],
   ['services', 'บริการวิชาการ', `${basePath}services.html`],
-  ['about', 'เกี่ยวกับเรา', `${basePath}about.html`],
   ['contact', 'ติดต่อเรา', `${basePath}contact.html`],
 ];
 
@@ -292,176 +292,298 @@ const isExtUrl = url => /^https?:\/\//i.test(url);
 const extAttrs = url => isExtUrl(url) ? ' target="_blank" rel="noopener noreferrer"' : '';
 const extMark = url => isExtUrl(url) ? `<svg class="icon mega-ext" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span>` : '';
 
+// เมนูใหญ่ของแต่ละหมวด — ลำดับตามผังเว็บไซต์ ORST (หมวด 3-7) ตรงกับ page-index ของหน้าหมวดและ content/site-nav.json
+// [ชื่อ, ลิงก์] · image = รูปพื้นหลังแผงซ้าย assets/images/menu/<image>.jpg
 const megaMenuData = {
-  dictionary: {
-    title: 'พจนานุกรมและคำศัพท์',
-    eyebrow: 'Language Services',
-    description: 'ค้นคำศัพท์ ความหมาย ศัพท์บัญญัติ และหลักเกณฑ์การใช้ภาษาไทยจากแหล่งข้อมูลเดียว',
-    icon: 'i-dictionary',
-    featured: ['เปิดพจนานุกรมออนไลน์', `${basePath}dictionary.html`],
+  about: {
+    title: 'เกี่ยวกับเรา',
+    image: 'about',
+    description: 'ผู้บริหาร ศูนย์ปฏิบัติการต่อต้านการทุจริต ข้อมูลองค์กร และการบริหารทรัพยากรบุคคลของสำนักงาน',
+    featured: ['ดูทั้งหมดในหมวด', `${basePath}about.html`],
     groups: [
       {
-        heading: 'บริการคำศัพท์',
+        heading: 'ผู้บริหาร',
         links: [
-          ['พจนานุกรมออนไลน์', `${basePath}dictionary.html`, 'ค้นความหมายและการใช้คำ', 'i-dictionary'],
-          ['ศัพท์บัญญัติ', 'https://coined-word.orst.go.th/', 'ศัพท์เฉพาะทางและคำมาตรฐาน', 'i-form'],
-          ['ค้นคำศัพท์ภาษาไทย', 'https://dictionary.orst.go.th/', 'ค้นหาคำตามหมวดและคำใกล้เคียง', 'i-search'],
+          ['ผู้บริหารสำนักงานราชบัณฑิตยสภา', `${basePath}executives.html`],
+          ['ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)', `${basePath}cio.html`],
+          ['การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO', `${basePath}cio-it-management.html`],
         ]
       },
       {
-        heading: 'ฐานข้อมูลที่เกี่ยวข้อง',
+        heading: 'ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)',
         links: [
-          ['สารานุกรมและอนุกรมวิธาน', 'https://lst.nectec.or.th/encyclopedia/', 'คลังความรู้และหมวดคำ', 'i-book'],
-          ['หลักเกณฑ์ภาษาไทย', `${basePath}language-guidelines.html`, 'แนวทางการเขียนและการใช้ภาษา', 'i-shield'],
-          ['คำถามที่พบบ่อยด้านภาษา', `${basePath}qa.html`, 'คำตอบสั้นสำหรับประชาชน', 'i-eye'],
+          ['ข้อมูลของ ศปท.', `${basePath}anti-corruption-center.html`],
+          ['ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}corruption-complaints.html`],
+          ['แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}complaint-guidelines.html`],
+          ['ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}complaint-statistics.html`],
+          ['มาตรการป้องกันการรับสินบน (No Gift Policy)', `${basePath}no-gift-policy.html`],
+          ['การประเมินความเสี่ยงและแผนป้องกันการทุจริต', `${basePath}anti-corruption-plan.html`],
+          ['จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส', `${basePath}ethics.html`],
+        ]
+      },
+      {
+        heading: 'ข้อมูลองค์กร',
+        links: [
+          ['ประวัติความเป็นมา', `${basePath}history.html`],
+          ['วิสัยทัศน์ พันธกิจ', `${basePath}vision-mission.html`],
+          ['ค่านิยม', `${basePath}core-values.html`],
+          ['โครงสร้างหน่วยงานและการแบ่งส่วนราชการ', `${basePath}organization-structure.html`],
+          ['เครื่องหมายราชการ', `${basePath}emblem.html`],
+          ['กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง', `${basePath}laws-regulations.html`],
+          ['อำนาจหน้าที่และภารกิจ', `${basePath}duties.html`],
+        ]
+      },
+      {
+        heading: 'บุคลากรและการบริหารทรัพยากรบุคคล',
+        links: [
+          ['คณะกรรมการวิชาการ และกรรมการอื่น', `${basePath}committees.html`],
+          ['นโยบายและแผนการบริหารทรัพยากรบุคคล', `${basePath}hr-plan.html`],
+          ['หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล', `${basePath}hr-criteria.html`],
+          ['รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี', `${basePath}hr-annual-report.html`],
         ]
       }
     ]
   },
-  knowledge: {
-    title: 'องค์ความรู้',
-    eyebrow: 'Knowledge Archive',
-    description: 'เข้าสู่คลังปัญญาแห่งชาติ บทความ ฐานข้อมูล และองค์ความรู้สำหรับประชาชน',
-    icon: 'i-book',
-    featured: ['เข้าสู่คลังองค์ความรู้', `${basePath}knowledge.html`],
+  operations: {
+    title: 'การปฏิบัติราชการ',
+    image: 'dictionary',
+    description: 'แผนปฏิบัติราชการ ผลการปฏิบัติราชการ และข้อมูลเปิดภาครัฐของสำนักงาน',
+    featured: ['ดูทั้งหมดในหมวด', `${basePath}operations.html`],
     groups: [
       {
-        heading: 'ค้นหาและฐานข้อมูล',
+        heading: 'แผนปฏิบัติราชการ',
         links: [
-          ['คลังองค์ความรู้', `${basePath}knowledge.html`, 'ค้นจากทุกฐานข้อมูล', 'i-database'],
-          ['เอกสารความรู้เผยแพร่', `${basePath}knowledge-base.html`, 'เอกสารความรู้ของสำนักงาน', 'i-file'],
+          ['กฎหมายที่เกี่ยวข้อง', `${basePath}related-laws.html`],
+          ['คู่มือหรือมาตรฐานการปฏิบัติงาน', `${basePath}operation-manuals.html`],
+          ['แผนยุทธศาสตร์และแผนปฏิบัติการราชการ ๕ ปี', `${basePath}strategic-plans.html`],
+          ['แผนปฏิบัติราชการประจำปี', `${basePath}annual-action-plan.html`],
+          ['แผนบริหารความต่อเนื่อง', `${basePath}continuity-plan.html`],
+          ['แผนแม่บทเทคโนโลยีสารสนเทศ', `${basePath}it-master-plan.html`],
+          ['แผนบริหารความเสี่ยง', `${basePath}risk-management-plan.html`],
+          ['การลดใช้พลังงานของสำนักงานราชบัณฑิตยสภา', `${basePath}energy-saving.html`],
+          ['กฎบัตรการตรวจสอบภายใน', `${basePath}internal-audit-charter.html`],
+          ['แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี', `${basePath}annual-budget-plan.html`],
         ]
       },
       {
-        // ประเภทเนื้อหาในคลังองค์ความรู้ — แต่ละประเภทมีหน้ารวมของตัวเอง (ตรงกับ SOURCES ใน assets/js/pages/knowledge.js)
-        heading: 'ประเภทความรู้',
+        heading: 'ผลการปฏิบัติราชการ',
         links: [
-          ['อินโฟกราฟิก', `${basePath}infographics.html`, 'ความรู้ภาษาไทยแบบภาพ', 'i-eye'],
-          ['หนังสือและสิ่งพิมพ์', `${basePath}publications.html`, 'หนังสือของสำนักงาน', 'i-book'],
-          ['หลักเกณฑ์ภาษาไทย', `${basePath}language-guidelines.html`, 'การทับศัพท์ การถอดอักษร', 'i-dictionary'],
-          ['ข้อมูลเสียงภาษาถิ่น', `${basePath}ethnic-language-audio.html`, 'ภาษาของกลุ่มชาติพันธุ์', 'i-megaphone'],
+          ['คู่มือหรือมาตรฐานการให้บริการ', `${basePath}service-manuals.html`],
+          ['ผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม', `${basePath}monthly-performance.html`],
+          ['มาตรฐานระยะเวลาการให้บริการ', `${basePath}service-time-standards.html`],
+          ['สรุปผลการปฏิบัติราชการตามคำรับรองการปฏิบัติราชการ', `${basePath}performance-agreement.html`],
+          ['รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิต / งบทดลอง', `${basePath}unit-cost.html`],
+          ['แบบรับฟังความคิดเห็น/ข้อเสนอแนะที่มีต่อการดำเนินงาน', 'https://forms.gle/mc1qF9RCDQbvLnho6'],
+          ['รายงานการกำกับติดตามการดำเนินงานและการใช้งบประมาณ รอบ ๖ เดือน', `${basePath}six-month-report.html`],
+          ['รายงานผลการดำเนินงานประจำปี', `${basePath}annual-report.html`],
+          ['รายงานผลการใช้จ่ายงบประมาณประจำปี', `${basePath}budget-spending-report.html`],
+          ['ข้อมูลเชิงสถิติการให้บริการ', `${basePath}service-statistics.html`],
+          ['รายงานผลการสำรวจความพึงพอใจการให้บริการ', `${basePath}satisfaction-survey.html`],
         ]
       },
       {
-        heading: 'สื่อดิจิทัล',
+        heading: 'ข้อมูลเปิดภาครัฐและการเปิดเผยข้อมูล',
         links: [
-          ['วิดีโอและสื่อมัลติมีเดีย', `${basePath}videos.html`, 'การเสวนา การอบรม และวีดิทัศน์', 'i-video'],
-          ['Infographic', `${basePath}infographics.html`, 'สรุปความรู้เข้าใจง่าย', 'i-journal'],
+          ['ข้อมูลข่าวสารตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. ๒๕๔๐', `${basePath}official-information.html`],
+          ['ชุดข้อมูลเปิดภาครัฐ (Open Data)', `${basePath}open-data.html`],
+          ['แบบคำขอชุดข้อมูลเปิด', `${basePath}open-data-request.html`],
+          ['นโยบายและแผนด้านข้อมูล (ธรรมาภิบาลข้อมูล การเปิดเผยข้อมูล และการคุ้มครองข้อมูลส่วนบุคคล)', `${basePath}data-policy.html`],
+          ['การเปิดเผยข้อมูลสาธารณะ (ITA / OIT)', `${basePath}public-disclosure.html`],
+          ['ช่องทางยื่นคำขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล', `${basePath}data-subject-request.html`],
         ]
       }
     ]
   },
   news: {
     title: 'ข่าวสารและกิจกรรม',
-    eyebrow: 'News & Events',
-    description: 'ติดตามข่าวประชาสัมพันธ์ ประกาศ กิจกรรม และความเคลื่อนไหวล่าสุด',
-    icon: 'i-megaphone',
-    featured: ['อ่านข่าวทั้งหมด', `${basePath}news.html`],
+    image: 'news',
+    description: 'ข่าวประชาสัมพันธ์ กิจกรรม การบรรยายทางวิชาการ และประกาศต่าง ๆ ของสำนักงาน',
+    featured: ['ดูทั้งหมดในหมวด', `${basePath}news.html`],
     groups: [
       {
-        heading: 'ข่าวสาร',
+        heading: 'ข่าวประชาสัมพันธ์',
         links: [
-          ['ข่าวประชาสัมพันธ์', `${basePath}general-news.html`, 'ข่าวสารทั่วไป', 'i-megaphone'],
-          ['ข่าวกิจกรรม', `${basePath}activity-news.html`, 'กิจกรรมและงานเผยแพร่', 'i-pin'],
-          ['บทบรรยายทางวิชาการ', `${basePath}academic-lectures.html`, 'สื่อความรู้จากกิจกรรม', 'i-file'],
+          ['ข่าวประชาสัมพันธ์ทั่วไป', `${basePath}general-news.html`],
+          ['ข่าวกิจกรรม', `${basePath}activity-news.html`],
+          ['การบรรยายทางวิชาการ', `${basePath}academic-lectures.html`],
+          ['ปฏิทินกิจกรรม', `${basePath}event-calendar.html`],
+          ['คำถาม-คำตอบ (Q&A)', `${basePath}qa.html`],
+          ['คลังภาพและวิดีโอ', `${basePath}media-gallery.html`],
+          ['RSS ข่าวสาร', `${basePath}rss.html`],
         ]
       },
       {
         heading: 'ประกาศ',
         links: [
-          ['ประกาศจัดซื้อจัดจ้าง', `${basePath}procurement-notices.html`, 'ประกาศและเอกสารที่เกี่ยวข้อง', 'i-form'],
-          ['ประกาศรับสมัครงาน', `${basePath}job-announcements.html`, 'ข่าวสารงานบุคคล', 'i-people'],
-          ['ข่าวสารทางราชการ', `${basePath}official-news.html`, 'ประกาศเผยแพร่ทั่วไป', 'i-journal'],
+          ['ประกาศการจัดซื้อจัดจ้าง', `${basePath}procurement-notices.html`],
+          ['ประกาศผลจัดซื้อจัดจ้าง', `${basePath}procurement-results.html`],
+          ['ประกาศราคากลาง', `${basePath}reference-prices.html`],
+          ['สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)', `${basePath}procurement-summary.html`],
+          ['ประกาศผลการจัดซื้อจัดจ้าง (รายไตรมาส)', `${basePath}procurement-quarterly.html`],
+          ['ประกาศแผนจัดซื้อจัดจ้าง', `${basePath}procurement-plans.html`],
+          ['ประกาศขายทอดตลาด', `${basePath}auctions.html`],
+          ['ประกาศรับสมัครงานและประกาศด้านการบริหารงานบุคคล', `${basePath}job-announcements.html`],
+          ['ข่าวสารทางราชการ', `${basePath}official-news.html`],
+          ['ประกาศเผยแพร่สัญญา', `${basePath}contracts.html`],
         ]
       }
     ]
   },
   services: {
     title: 'บริการวิชาการ',
-    eyebrow: 'Digital Services',
-    description: 'รวมบริการออนไลน์ แบบฟอร์ม การติดตามสถานะ และช่องทางติดต่อเจ้าหน้าที่',
-    icon: 'i-service',
-    featured: ['เข้าสู่บริการวิชาการ', `${basePath}services.html`],
+    image: 'knowledge',
+    description: 'พจนานุกรม ฐานข้อมูลภาษาไทย คลังความรู้ และงานบริการออนไลน์ของสำนักงาน',
+    featured: ['ดูทั้งหมดในหมวด', `${basePath}services.html`],
     groups: [
       {
-        heading: 'บริการออนไลน์',
+        heading: 'ฐานข้อมูลและคลังความรู้',
         links: [
-          ['สอบถามข้อมูลทางวิชาการ', `${basePath}contact.html#contact-form`, 'ส่งคำถามและรับเลขติดตาม', 'i-search'],
-          ['ขออนุญาตใช้เนื้อหา', `${basePath}services.html#forms`, 'ยื่นคำขอและแนบเอกสาร', 'i-file'],
-          ['ร้องเรียน / เสนอแนะ', `${basePath}services.html#channels`, 'ส่งเรื่องและติดตามผล', 'i-mail'],
+          ['พจนานุกรม', `${basePath}dictionary.html`],
+          ['ศัพท์บัญญัติ', 'https://coined-word.orst.go.th/'],
+          ['สารานุกรมและอนุกรมวิธาน', 'https://lst.nectec.or.th/encyclopedia/'],
+          ['คลังเอกสารเก่า', 'https://da3.thaidlt.org/'],
+          ['ระบบฐานข้อมูลคำทับศัพท์', 'https://transliteration.orst.go.th/search'],
+          ['อักขรานุกรมภูมิศาสตร์ไทย', 'https://gazetteer.orst.go.th/'],
+          ['คลังความรู้', `${basePath}knowledge-base.html`],
         ]
       },
       {
-        heading: 'งานบริการ',
+        heading: 'สื่อความรู้และหลักเกณฑ์',
         links: [
-          ['แบบฟอร์มออนไลน์', `${basePath}services.html#forms`, 'รวมแบบฟอร์มที่ใช้บ่อย', 'i-form'],
-          ['คำถามที่พบบ่อย', `${basePath}qa.html`, 'คำตอบเกี่ยวกับบริการ', 'i-eye'],
-          ['คู่มือการใช้บริการ', `${basePath}service-manuals.html`, 'ขั้นตอนและเอกสารประกอบ', 'i-book'],
+          ['ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน', `${basePath}book-ordering.html`],
+          ['อินโฟกราฟิก', `${basePath}infographics.html`],
+          ['ระบบทดสอบความรู้ด้านภาษาไทย', 'https://etest.orst.go.th/'],
+          ['พจนานุกรมภาษามือไทย', 'http://164.115.33.116/'],
+          ['หลักเกณฑ์ต่าง ๆ', `${basePath}language-guidelines.html`],
+          ['ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย', `${basePath}ethnic-language-audio.html`],
+        ]
+      },
+      {
+        heading: 'งานบริการออนไลน์',
+        links: [
+          ['งานบริการ (E-Service)', `${basePath}e-services.html`],
+          ['คู่มือสำหรับประชาชน', `${basePath}citizen-manual.html`],
+          ['ดาวน์โหลดแบบฟอร์ม', `${basePath}download-forms.html`],
+          ['ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ', `${basePath}e-channels.html`],
+          ['ข้อมูลการอนุญาตที่ดำเนินการแล้ว', `${basePath}permits-issued.html`],
+          ['ติดตามสถานะคำขอรับบริการ', `${basePath}track-request.html`],
+          ['คำแนะนำการใช้บริการออนไลน์', `${basePath}e-service-guide.html`],
         ]
       }
     ]
   },
-  about: {
-    title: 'เกี่ยวกับเรา',
-    eyebrow: 'About ORST',
-    description: 'ข้อมูลสำนักงาน โครงสร้าง ผู้บริหาร ราชบัณฑิต ภาคีสมาชิก และข้อมูลหน่วยงาน',
-    icon: 'i-shield',
-    featured: ['ข้อมูลสำนักงาน', `${basePath}about.html`],
+  contact: {
+    title: 'ติดต่อเรา',
+    image: 'services',
+    description: 'ช่องทางติดต่อ ร้องเรียน แบบฟอร์มสอบถาม และเครือข่ายสังคมออนไลน์ของสำนักงาน',
+    featured: ['ข้อมูลติดต่อและแผนที่', `${basePath}contact.html`],
     groups: [
       {
-        heading: 'ข้อมูลสำนักงาน',
-        wide: true,
+        heading: 'ติดต่อเรา',
         links: [
-          ['ประวัติความเป็นมา', `${basePath}history.html`, 'ข้อมูลและพัฒนาการของสำนักงาน', 'i-book'],
-          ['วิสัยทัศน์', `${basePath}vision-mission.html`, 'ทิศทางและเป้าหมายขององค์กร', 'i-eye'],
-          ['พันธกิจ', `${basePath}vision-mission.html`, 'ภารกิจหลักของสำนักงาน', 'i-service'],
-          ['ค่านิยม', `${basePath}core-values.html`, 'ค่านิยมหลักในการทำงาน', 'i-people'],
-          ['การแบ่งส่วนราชการ', `${basePath}organization-structure.html`, 'โครงสร้างและหน่วยงานภายใน', 'i-form'],
-          ['เครื่องหมายราชการ', `${basePath}emblem.html`, 'ตราและเครื่องหมายของสำนักงาน', 'i-shield'],
-          ['กฎระเบียบ', `${basePath}laws-regulations.html`, 'กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง', 'i-file'],
-        ]
-      },
-      {
-        heading: 'ราชบัณฑิตและบุคลากร',
-        links: [
-          ['ผู้บริหาร', `${basePath}executives.html`, 'ผู้บริหารสำนักงานและ CIO', 'i-user'],
-          ['รายงานและแผนปฏิบัติราชการ', `${basePath}operations.html`, 'ข้อมูลความโปร่งใสและผลการดำเนินงาน', 'i-journal'],
+          ['รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ', `${basePath}complaints.html`],
+          ['แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)', `${basePath}contact.html#message-form`],
+          ['แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์', `${basePath}website-survey.html`],
+          ['เครือข่ายสังคมออนไลน์ (Social Media)', `${basePath}social-media.html`],
         ]
       }
     ]
   }
 };
 
+// หน้าที่เปิดอยู่ (ชื่อไฟล์) — ใช้ไฮไลต์ลิงก์ในเมนูใหญ่/เมนูมือถือ และหาหมวดของหน้า
+const HERE_FILE = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+const isHereUrl = url => !isExtUrl(url) && String(url).split(/[?#]/)[0].split('/').pop().toLowerCase() === HERE_FILE
+  && !String(url).includes('#');
+// หมวดของหน้า: ถ้าหน้านี้อยู่ในเมนูใหญ่ของหมวดใด ใช้หมวดนั้น (เช่น หน้าในหมวด 4 การปฏิบัติราชการ)
+// ไม่อยู่ในเมนูไหน ใช้ data-page ของหน้า — navKey เดิมที่ไม่มีในเมนูหลักแล้ว (พจนานุกรม องค์ความรู้ สิ่งพิมพ์) อยู่ใต้บริการวิชาการ
+const NAV_ALIAS = { dictionary: 'services', knowledge: 'services', publications: 'services' };
+function activeNavKey() {
+  for (const [key, data] of Object.entries(megaMenuData)) {
+    if (data.featured && isHereUrl(data.featured[1])) return key;
+    if (data.groups.some(g => g.links.some(([, url]) => isHereUrl(url)))) return key;
+  }
+  const page = document.body.dataset.page || 'home';
+  return NAV_ALIAS[page] || page;
+}
+
+/* เมนูใหญ่ (megax) — แผงเต็มความกว้างใต้ header
+   ซ้าย: ชื่อหมวด + คำอธิบาย + ปุ่มดูทั้งหมด แล้วตามด้วยหัวข้อย่อยของหมวด (ระดับ 3 ในผังเว็บไซต์)
+   ขวา: รายการของหัวข้อที่เลือก เป็นแถวใน 2 คอลัมน์กว้าง — ชื่อยาวก็ไม่ตกบรรทัดถี่
+   ชี้/โฟกัส/ลูกศรขึ้นลงที่หัวข้อเพื่อสลับ · เปิดมาที่หัวข้อของหน้าที่เปิดอยู่ (ถ้ามี) */
 function renderMegaMenu(key) {
   const data = megaMenuData[key];
   if (!data) return '';
+  const single = data.groups.length === 1;
+  const curGroup = Math.max(0, data.groups.findIndex(g => g.links.some(([, url]) => isHereUrl(url))));
+
+  const tabs = single ? '' : `
+          <div class="megax-tabs" role="tablist" aria-orientation="vertical" aria-label="หัวข้อในหมวด${data.title}">
+            ${data.groups.map((g, i) => `
+            <button class="megax-tab" type="button" role="tab" id="megax-tab-${key}-${i}" aria-controls="megax-panel-${key}-${i}"
+              aria-selected="${i === curGroup}" tabindex="${i === curGroup ? 0 : -1}" data-megax-tab="${i}">
+              <span>${g.heading}</span>${icon('i-chevron', 'icon megax-tab-go')}
+            </button>`).join('')}
+          </div>`;
+
+  const panels = data.groups.map((g, i) => `
+          <section class="megax-panel${i === curGroup ? ' is-active' : ''}"${single ? '' : ` role="tabpanel" id="megax-panel-${key}-${i}" aria-labelledby="megax-tab-${key}-${i}"`} data-megax-panel="${i}">
+            <p class="megax-panel-head">${single ? data.title : g.heading}</p>
+            <ul class="megax-list" style="--rows:${Math.ceil(g.links.length / 2)}">
+              ${g.links.map(([text, url], k) => {
+                const cur = isHereUrl(url);
+                // แถวสุดท้ายของแต่ละคอลัมน์ ไม่มีเส้นคั่นด้านล่าง
+                const rows = Math.ceil(g.links.length / 2);
+                const end = k === rows - 1 || k === g.links.length - 1;
+                return `<li${end ? ' class="is-col-end"' : ''}><a class="megax-row${cur ? ' is-current' : ''}" href="${url}"${extAttrs(url)}${cur ? ' aria-current="page"' : ''}><span>${text}${extMark(url)}</span>${icon(isExtUrl(url) ? 'i-external' : 'i-arrow', 'icon megax-go')}</a></li>`;
+              }).join('')}
+            </ul>
+          </section>`).join('');
 
   return `
-    <div class="mega-inner" role="region" aria-label="เมนูย่อย ${data.title}">
-      <div class="mega-feature">
-        <img class="mega-feature-bg" src="${basePath}assets/images/menu/${key}.jpg" alt="" decoding="async">
-        <h3>${data.title}</h3>
-        <p>${data.description}</p>
-        <a class="mega-feature-cta" href="${data.featured[1]}">${data.featured[0]} ${icon('i-arrow')}</a>
-      </div>
-      <div class="mega-groups">
-        ${data.groups.map(group => `
-          <div class="mega-group${group.wide ? ' mega-group--wide' : ''}">
-            <h4>${group.heading}</h4>
-            <div class="mega-group-links">
-            ${group.links.map(([text, url, desc, ic]) => `
-              <a class="mega-link" href="${url}"${extAttrs(url)}>
-                <span class="mega-link-tx"><strong>${text}${extMark(url)}</strong>${desc ? `<small>${desc}</small>` : ''}</span>
-                <span class="mega-link-go" aria-hidden="true">${icon(isExtUrl(url) ? 'i-external' : 'i-arrow')}</span>
-                <em aria-hidden="true">→</em>
-              </a>
-            `).join('')}
-            </div>
-          </div>
-        `).join('')}
+    <div class="megax" role="region" aria-label="เมนูย่อย ${data.title}">
+      <div class="megax-in">
+        <div class="megax-side">
+          <img class="megax-mark" src="${basePath}assets/images/orst-emblem.png" alt="" aria-hidden="true" width="181" height="320" loading="lazy">
+          <div class="megax-intro">
+            <p class="megax-eyebrow">สำนักงานราชบัณฑิตยสภา</p>
+            <p class="megax-title">${data.title}</p>
+            <p class="megax-desc">${data.description}</p>
+          </div>${tabs}
+        </div>
+        <div class="megax-panels">${panels}
+        </div>
       </div>
     </div>
   `;
+}
+
+/* สลับหัวข้อในเมนูใหญ่ — ชี้เมาส์ (หน่วงเล็กน้อย กันสลับเองตอนลากเมาส์ทแยง) / โฟกัส / ลูกศรขึ้นลง Home End / ลูกศรขวาเข้ารายการ */
+function bindMegaTabs(root) {
+  const tabs = [...root.querySelectorAll('[data-megax-tab]')];
+  const panels = [...root.querySelectorAll('[data-megax-panel]')];
+  if (tabs.length < 2) return;
+  let timer;
+  const select = (i, focus = false) => {
+    tabs.forEach((t, k) => {
+      t.setAttribute('aria-selected', String(k === i));
+      t.tabIndex = k === i ? 0 : -1;
+      panels[k].classList.toggle('is-active', k === i);
+    });
+    if (focus) tabs[i].focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('mouseenter', () => { clearTimeout(timer); timer = setTimeout(() => select(i), 80); });
+    t.addEventListener('mouseleave', () => clearTimeout(timer));
+    t.addEventListener('click', () => select(i));
+    t.addEventListener('focus', () => select(i));
+    t.addEventListener('keydown', e => {
+      const last = tabs.length - 1;
+      const next = { ArrowDown: i === last ? 0 : i + 1, ArrowUp: i === 0 ? last : i - 1, Home: 0, End: last }[e.key];
+      if (next !== undefined) { e.preventDefault(); select(next, true); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); panels[i].querySelector('a')?.focus(); }
+    });
+  });
 }
 
 function renderDesktopNav(active) {
@@ -493,6 +615,7 @@ const navIcons = {
   news: 'i-megaphone',
   services: 'i-service',
   about: 'i-shield',
+  operations: 'i-journal',
   contact: 'i-phone',
 };
 
@@ -501,8 +624,7 @@ const navIcons = {
    ข้างในไม่อิงกับหน้าจอ */
 function renderDrawer(active) {
   // ลิงก์ของหน้าที่เปิดอยู่ — ไฮไลต์ในเมนูย่อย (ผู้ใช้รู้ว่าอยู่ตรงไหน)
-  const here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  const isHere = url => !isExtUrl(url) && String(url).split(/[?#]/)[0].split('/').pop().toLowerCase() === here;
+  const isHere = isHereUrl;
   const items = navItems.map(([key, label, href]) => {
     const data = megaMenuData[key];
     const isActive = active === key;
@@ -527,15 +649,20 @@ function renderDrawer(active) {
         <div class="drawer-sub${isActive ? ' is-open' : ''}" id="drawer-sub-${key}">
           <div class="drawer-sub-inner">
             <div class="drawer-sub-body">
-              <a class="drawer-featured" href="${data.featured[1]}">${data.featured[0]} ${icon('i-arrow')}</a>
-              ${data.groups.map(group => `
-                <div class="drawer-sub-group">
-                  <span class="drawer-sub-title">${group.heading}</span>
+              ${data.groups.map(group => {
+                // หัวข้อย่อยพับ/กางได้ — กางไว้เมื่อมีหน้าที่เปิดอยู่ หรือหมวดมีหัวข้อเดียว
+                const open = data.groups.length === 1 || group.links.some(([, url]) => isHere(url));
+                return `
+                <details class="drawer-sub-group"${open ? ' open' : ''}>
+                  <summary class="drawer-sub-title"><span>${group.heading}</span>${icon('i-chevron', 'icon drawer-sub-chev')}</summary>
+                  <div class="drawer-sub-links">
                   ${group.links.map(([text, url]) => {
                     const cur = isHere(url);
                     return `<a class="drawer-sub-link${cur ? ' is-current' : ''}" href="${url}"${extAttrs(url)}${cur ? ' aria-current="page"' : ''}><span>${text}${extMark(url)}</span>${isExtUrl(url) ? '' : icon('i-chevron', 'icon drawer-sub-go')}</a>`;
                   }).join('')}
-                </div>`).join('')}
+                  </div>
+                </details>`;
+              }).join('')}
             </div>
           </div>
         </div>
@@ -574,7 +701,7 @@ function renderDrawer(active) {
 }
 
 function renderHeader() {
-  const active = document.body.dataset.page || 'home';
+  const active = activeNavKey();
 
   return `
     ${icons}
@@ -740,10 +867,48 @@ function renderChat() {
   `;
 }
 
+// ---------------------------------------------------------------------------
+// FOOTER — ลำดับตามผังเว็บไซต์ ORST (ส่วน FOOTER)
+//   จำนวนผู้เข้าชม · บริการทั่วไป · ติดต่อ (ที่อยู่ โทรศัพท์ โทรสาร อีเมล) · เมนูหลักแบบข้อความ
+//   · Webmaster · ผังเว็บไซต์ · เว็บลิงก์ · ลิขสิทธิ์ · Disclaimer · นโยบายเว็บไซต์ · Privacy · Cookies · Security
+//   · การเข้าถึงเว็บไซต์ · วันที่ปรับปรุงข้อมูลล่าสุด
+// ---------------------------------------------------------------------------
+// อีเมลผู้ดูแลเว็บไซต์ — เว็บเดิมไม่ได้ระบุ ใส่เมื่อสำนักงานยืนยัน (ว่าง = ลิงก์ไปฟอร์มติดต่อแทน)
+const WEBMASTER_EMAIL = '';
+// วันที่ปรับปรุงเว็บไซต์ (ค.ศ.) — หน้าที่มี updatedAt ใน JSON จะแสดงวันที่ของหน้านั้นแทน
+const SITE_UPDATED = '2026-11-17';
+// จำนวนผู้เข้าชม — ยังไม่มีระบบนับ (เว็บเดิมใช้ตัวนับของระบบหลังบ้าน) ตอนต่อ CMS ให้เติมตัวเลขใน [data-visitor-*]
+const FOOTER_SERVICES = [
+  ['พจนานุกรม', 'https://dictionary.orst.go.th/'],
+  ['ศัพท์บัญญัติ สำนักงานราชบัณฑิตยสภา ออนไลน์', 'https://coined-word.orst.go.th/'],
+  ['ระบบฐานข้อมูลคำทับศัพท์สำนักงานราชบัณฑิตยสภา', 'https://transliteration.orst.go.th/'],
+  ['ระบบทดสอบความรู้ด้านภาษาไทย', 'https://etest.orst.go.th/'],
+  ['พจนานุกรมภาษามือไทย ฉบับราชบัณฑิตยสภา', 'http://164.115.33.116/'],
+  ['คลังความรู้', `${basePath}knowledge-base.html`],
+  ['ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน', `${basePath}book-ordering.html`],
+  ['คำถามที่พบบ่อย (FAQ)', `${basePath}qa.html`],
+];
+
+function footerDate(iso) {
+  const [y, m, d] = String(iso).split('-').map(Number);
+  if (!y || !m || !d) return '';
+  const months = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+  return `${d} ${months[m - 1]} ${y + 543}`;
+}
+// หน้าที่ render จาก JSON: ใช้ updatedAt ของหน้านั้น
+document.addEventListener('orst:content-rendered', e => {
+  const iso = e.detail?.page?.updatedAt;
+  const el = document.querySelector('[data-footer-updated]');
+  if (iso && el) el.textContent = footerDate(iso);
+});
+
 function renderFooter() {
   // หัวคอลัมน์: เส้นทองสั้น + ชื่อไทย + ชื่ออังกฤษ
   const colHead = (th, en) => `<h3 class="orst-footer-head"><span>${th}</span><small lang="en">${en}</small></h3>`;
-  const links = items => items.map(([text, url]) => `<li><a href="${url}">${text}</a></li>`).join('');
+  const links = items => items.map(([text, url]) => `<li><a href="${url}"${extAttrs(url)}>${text}${extMark(url)}</a></li>`).join('');
+  const webmaster = WEBMASTER_EMAIL
+    ? [`อีเมลผู้ดูแลเว็บไซต์ (Webmaster)`, `mailto:${WEBMASTER_EMAIL}`]
+    : ['อีเมลผู้ดูแลเว็บไซต์ (Webmaster)', `${basePath}contact.html#message-form`];
 
   return `
     <footer class="footer orst-footer" id="footer">
@@ -760,10 +925,12 @@ function renderFooter() {
               </span>
             </a>
 
+            <h3 class="orst-footer-subhead">ติดต่อ สำนักงานราชบัณฑิตยสภา</h3>
             <ul class="orst-footer-reach">
               <li>${icon('i-pin')}<span>เลขที่ ๑๒๐ หมู่ ๓ ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ (อาคารซี) ถนนแจ้งวัฒนะ แขวงทุ่งสองห้อง เขตหลักสี่ กรุงเทพมหานคร ๑๐๒๑๐</span></li>
-              <li>${icon('i-phone-call')}<a href="tel:021411718">0 2141 1718</a></li>
-              <li>${icon('i-mail')}<a href="mailto:saraban@orst.go.th" lang="en">saraban@orst.go.th</a></li>
+              <li>${icon('i-phone-call')}<span>โทรศัพท์ <a href="tel:021411718">0 2141 1718</a></span></li>
+              <li>${icon('i-print')}<span>โทรสาร -</span></li>
+              <li>${icon('i-mail')}<span>อีเมล <a href="mailto:saraban@orst.go.th" lang="en">saraban@orst.go.th</a></span></li>
             </ul>
 
             <div class="orst-footer-actions">
@@ -772,33 +939,38 @@ function renderFooter() {
             </div>
           </div>
 
-          <nav class="orst-footer-col orst-footer-col--menu" aria-label="เมนูหลัก">
-            ${colHead('เมนูหลัก', 'Main Menu')}
+          <nav class="orst-footer-col orst-footer-col--services" aria-label="บริการทั่วไป">
+            ${colHead('บริการทั่วไป', 'Services')}
+            <ul>${links(FOOTER_SERVICES)}</ul>
+          </nav>
+
+          <nav class="orst-footer-col orst-footer-col--menu" aria-label="เมนูหลักในรูปแบบข้อความ">
+            ${colHead('เมนูหลัก', 'Text Menu')}
             <ul>${links(navItems.map(([, label, href]) => [label, href]))}</ul>
           </nav>
 
-          <nav class="orst-footer-col" aria-label="ข้อมูลเว็บไซต์">
-            ${colHead('ข้อมูลเว็บไซต์', 'Website Information')}
-            <ul>
-              ${links([['แผนผังเว็บไซต์', `${basePath}sitemap.html`], ['คำถามที่พบบ่อย', `${basePath}qa.html`]])}
-              <li><button type="button" data-open-access>การเข้าถึงเว็บไซต์</button></li>
-              ${links([['ติดต่อผู้ดูแลเว็บไซต์', `${basePath}contact.html#contact-form`]])}
-            </ul>
-          </nav>
-
-          <nav class="orst-footer-col" aria-label="นโยบายและข้อกำหนด">
-            ${colHead('นโยบายและข้อกำหนด', 'Policies &amp; Legal')}
+          <nav class="orst-footer-col" aria-label="ข้อมูลเว็บไซต์และนโยบาย">
+            ${colHead('ข้อมูลเว็บไซต์และนโยบาย', 'Website &amp; Policies')}
             <ul>${links([
-              ['นโยบายเว็บไซต์', `${basePath}website-policy.html`],
-              ['นโยบายคุ้มครองข้อมูลส่วนบุคคล', 'https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038'],
-              ['นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์', `${basePath}security-policy.html`],
-              ['ข้อจำกัดความรับผิดชอบ', `${basePath}disclaimer.html`],
+              webmaster,
+              ['ผังเว็บไซต์ (Sitemap)', `${basePath}sitemap.html`],
+              ['เว็บลิงก์หน่วยงานที่เกี่ยวข้อง', `${basePath}related-links.html`],
+              ['การปฏิเสธความรับผิด (Disclaimer)', `${basePath}disclaimer.html`],
+              ['นโยบายเว็บไซต์ (Website Policy)', `${basePath}website-policy.html`],
+              ['นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)', `${basePath}privacy-policy.html`],
+              ['นโยบายคุกกี้ (Cookies Policy)', `${basePath}cookie-policy.html`],
+              ['นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์ (Website Security Policy)', `${basePath}security-policy.html`],
+              ['การเข้าถึงเว็บไซต์ (Web Accessibility)', `${basePath}accessibility.html`],
             ])}</ul>
           </nav>
         </div>
 
         <div class="orst-footer-bottom">
-          <span>© 2026 สำนักงานราชบัณฑิตยสภา · สงวนลิขสิทธิ์</span>
+          <span class="orst-footer-copy">${ORST_LANG === 'en' ? '© 2026' : 'สงวนลิขสิทธิ์ © พ.ศ. 2569'} สำนักงานราชบัณฑิตยสภา${ORST_LANG === 'en' ? ' · สงวนลิขสิทธิ์' : ''}</span>
+          <span class="orst-footer-meta">
+            <span>วันที่ปรับปรุงข้อมูลล่าสุด <time data-footer-updated>${footerDate(SITE_UPDATED)}</time></span>
+            <span class="orst-footer-visitors" aria-label="จำนวนผู้เข้าชมเว็บไซต์">จำนวนผู้เข้าชมเว็บไซต์ · วันนี้ <b data-visitor-today>–</b> · สถิติรวม <b data-visitor-total>–</b></span>
+          </span>
           <button class="orst-footer-totop" type="button" data-scroll-top>ขึ้นบนสุด ${icon('i-arrow')}</button>
         </div>
 
@@ -872,6 +1044,7 @@ function initMegaMenu() {
     currentKey = key;
     mega.innerHTML = html;
     mega.hidden = false;
+    bindMegaTabs(mega);
     setOpenState(key, true);
   }
 
@@ -1760,7 +1933,7 @@ function initComponents() {
 
   if (headerMount) {
     headerMount.innerHTML = renderHeader();
-    document.body.insertAdjacentHTML('beforeend', renderDrawer(document.body.dataset.page || 'home'));
+    document.body.insertAdjacentHTML('beforeend', renderDrawer(activeNavKey()));
   }
   if (footerMount) {
     footerMount.innerHTML = renderFooter();
@@ -1780,9 +1953,45 @@ function initComponents() {
   initFixedHeader();
   initScrollTop();
   initChat();
+  initCookieBar();
   // ภาษาไทย: แปลงเลขเป็นเลขไทย · ภาษาอังกฤษ: โหลดคำแปลแล้วแปลข้อความทั้งหน้า (ไม่แปลงเลขไทย)
   if (ORST_LANG === 'en') I18N.load().then(I18N.start);
   else initThaiDigits();
+}
+
+/* =============================================================================
+   แถบขอความยินยอมคุกกี้ (ผังเว็บไซต์ ORST: นโยบายคุกกี้และแถบขอความยินยอม)
+   เว็บนี้ไม่มีคุกกี้ติดตาม/วิเคราะห์ — ใช้ localStorage เท่าที่จำเป็น (ภาษา มุมมองรายการ ค่าความยินยอม)
+   ค่าที่เลือกเก็บใน localStorage "orst-cookie-consent" = all | necessary
+   ถ้าภายหลังเพิ่มระบบสถิติ (เช่น Google Analytics) ให้โหลดเฉพาะเมื่อ window.orstConsent() === 'all'
+   ============================================================================= */
+const CONSENT_KEY = 'orst-cookie-consent';
+window.orstConsent = () => { try { return localStorage.getItem(CONSENT_KEY) || ''; } catch { return ''; } };
+
+function initCookieBar() {
+  if (window.orstConsent()) return;
+  document.body.insertAdjacentHTML('beforeend', `
+    <div class="cookie-bar" role="region" aria-label="การใช้คุกกี้" data-cookie-bar>
+      <div class="container cookie-bar-inner">
+        <p>เว็บไซต์นี้ใช้คุกกี้และพื้นที่จัดเก็บข้อมูลในเบราว์เซอร์เท่าที่จำเป็นต่อการใช้งาน เช่น จดจำภาษาและรูปแบบการแสดงผล
+          <a href="${basePath}cookie-policy.html">อ่านนโยบายคุกกี้</a></p>
+        <div class="cookie-bar-actions">
+          <button type="button" class="cookie-bar-btn is-ghost" data-consent="necessary">เฉพาะที่จำเป็น</button>
+          <button type="button" class="cookie-bar-btn" data-consent="all">ยอมรับทั้งหมด</button>
+        </div>
+      </div>
+    </div>`);
+  const bar = document.querySelector('[data-cookie-bar]');
+  const fit = () => document.body.style.setProperty('--cookie-h', `${bar.offsetHeight}px`);
+  fit();
+  window.addEventListener('resize', fit);
+  bar.addEventListener('click', e => {
+    const btn = e.target.closest('[data-consent]');
+    if (!btn) return;
+    try { localStorage.setItem(CONSENT_KEY, btn.dataset.consent); } catch { /* โหมดส่วนตัว — แค่ปิดแถบ */ }
+    window.removeEventListener('resize', fit);
+    bar.remove();
+  });
 }
 
 /* =============================================================================

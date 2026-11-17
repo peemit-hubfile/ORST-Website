@@ -1,0 +1,143 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ช่องทางรับเรื่องเดียวกับหน้าบริการวิชาการ (services.json id=channels ข้อมูลจาก orst.go.th) — แก้ที่ step3_hubs.py",
+  "title": "Complaints",
+  "navKey": "contact",
+  "description": "Channels for complaints, grievances, corruption reports and suggestions to the Office of the Royal Society, and how to follow up on your case",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Complaints",
+      "lead": "Channels for complaints, grievances, corruption reports and suggestions to the Office of the Royal Society, and how to follow up on your case",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Contact Us",
+          "href": "contact.html"
+        },
+        {
+          "label": "Complaints"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "channels",
+      "layout": "cards",
+      "heading": "Ways to submit",
+      "items": [
+        {
+          "icon": "i-megaphone",
+          "title": "Service complaints",
+          "body": "Report problems or difficulties in receiving the Office's services",
+          "links": [
+            {
+              "label": "0 2141 1718",
+              "href": "tel:021411718"
+            },
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
+        },
+        {
+          "icon": "i-shield",
+          "title": "Report corruption",
+          "body": "Or use the complaint box on the 1st floor of the Office of the Royal Society",
+          "links": [
+            {
+              "label": "anti.corruption@orst.go.th",
+              "href": "mailto:anti.corruption@orst.go.th"
+            },
+            {
+              "label": "Corruption complaint channels",
+              "href": "corruption-complaints.html"
+            }
+          ]
+        },
+        {
+          "icon": "i-pen",
+          "title": "Suggestions on our operations",
+          "body": "Feedback and suggestion form on the Office's operations",
+          "links": [
+            {
+              "label": "Feedback form (Google Form)",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "follow",
+      "layout": "cards",
+      "variant": "alt",
+      "heading": "Follow-up and related information",
+      "items": [
+        {
+          "icon": "i-search",
+          "title": "Track your case",
+          "body": "Ask about the progress of a submitted case",
+          "links": [
+            {
+              "label": "Track Request",
+              "href": "track-request.html"
+            }
+          ]
+        },
+        {
+          "icon": "i-file",
+          "title": "Complaint handling guidelines",
+          "body": "How corruption and misconduct complaints are received and handled",
+          "links": [
+            {
+              "label": "Read the guidelines",
+              "href": "complaint-guidelines.html"
+            }
+          ]
+        },
+        {
+          "icon": "i-journal",
+          "title": "Complaint statistics",
+          "body": "Complaint Statistics",
+          "links": [
+            {
+              "label": "View statistics",
+              "href": "complaint-statistics.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Other contact channels",
+      "items": [
+        {
+          "title": "Contact Form",
+          "href": "contact.html#message-form",
+          "icon": "i-form"
+        },
+        {
+          "title": "Website Survey",
+          "href": "website-survey.html",
+          "icon": "i-check"
+        },
+        {
+          "title": "Social Media",
+          "href": "social-media.html",
+          "icon": "i-share"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

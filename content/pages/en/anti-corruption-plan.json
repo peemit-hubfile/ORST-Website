@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=11, a=12 และ iwfm_list.asp?p=ATP-ACCP (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Risk assessment and corruption prevention plan",
+  "title": "Anti-Corruption Plan",
   "navKey": "about",
   "description": "Risk assessment results, action plans and reports on corruption prevention and suppression",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Risk assessment and corruption prevention plan",
+      "heading": "Anti-Corruption Plan",
       "lead": "Risk assessment results, action plans and reports on corruption prevention and suppression",
       "breadcrumb": [
         {
@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
@@ -24,7 +24,7 @@
           "href": "anti-corruption-center.html"
         },
         {
-          "label": "Risk assessment and corruption prevention plan"
+          "label": "Anti-Corruption Plan"
         }
       ]
     },

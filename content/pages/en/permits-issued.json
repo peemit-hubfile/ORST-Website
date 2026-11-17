@@ -1,0 +1,64 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีหน้านี้ — รอข้อมูลจาก ORST (เหมาะกับ table: เลขที่คำขอ เรื่อง วันที่อนุญาต)",
+  "title": "Permits Issued",
+  "navKey": "services",
+  "description": "Completed permissions to print, publish and use the rights to Office of the Royal Society publications",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Permits Issued",
+      "lead": "Completed permissions to print, publish and use the rights to Office of the Royal Society publications",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services",
+          "href": "services.html"
+        },
+        {
+          "label": "Permits Issued"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Permits Issued — awaiting information from the Office]"
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related services",
+      "items": [
+        {
+          "title": "e-Services",
+          "href": "e-services.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "Download Forms",
+          "href": "download-forms.html",
+          "icon": "i-download"
+        },
+        {
+          "title": "How to Use e-Services",
+          "href": "e-service-guide.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Contact the Office",
+          "href": "contact.html",
+          "icon": "i-phone-call"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

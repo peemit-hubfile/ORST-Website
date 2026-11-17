@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=13 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Guidelines for handling complaints of corruption and misconduct",
+  "title": "Complaint Handling Guidelines",
   "navKey": "about",
   "description": "Manual and guidelines for handling complaints of corruption and misconduct",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Guidelines for handling complaints of corruption and misconduct",
+      "heading": "Complaint Handling Guidelines",
       "lead": "Manual and guidelines for handling complaints of corruption and misconduct",
       "breadcrumb": [
         {
@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
@@ -24,7 +24,7 @@
           "href": "anti-corruption-center.html"
         },
         {
-          "label": "Guidelines for handling complaints of corruption and misconduct"
+          "label": "Complaint Handling Guidelines"
         }
       ]
     },

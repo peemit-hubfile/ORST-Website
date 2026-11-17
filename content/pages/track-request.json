@@ -1,0 +1,63 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ยังไม่มีระบบหลังบ้าน — เมื่อมี CMS/ระบบคำขอ ให้เปลี่ยนเป็นฟอร์มค้นหาด้วยเลขที่คำขอ",
+  "title": "ติดตามสถานะคำขอรับบริการ",
+  "navKey": "services",
+  "description": "ตรวจสอบความคืบหน้าของคำขอรับบริการที่ยื่นต่อสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ติดตามสถานะคำขอรับบริการ",
+      "lead": "ตรวจสอบความคืบหน้าของคำขอรับบริการที่ยื่นต่อสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ",
+          "href": "services.html"
+        },
+        {
+          "label": "ติดตามสถานะคำขอรับบริการ"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "ระบบติดตามสถานะออนไลน์อยู่ระหว่างพัฒนา",
+      "body": "ระหว่างนี้สอบถามความคืบหน้าของคำขอได้ทางอีเมล saraban@orst.go.th หรือโทรศัพท์ 02 141 1717 (สำนักงานเลขานุการกรม)"
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "บริการที่เกี่ยวข้อง",
+      "items": [
+        {
+          "title": "งานบริการ (E-Service)",
+          "href": "e-services.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "ดาวน์โหลดแบบฟอร์ม",
+          "href": "download-forms.html",
+          "icon": "i-download"
+        },
+        {
+          "title": "คำแนะนำการใช้บริการออนไลน์",
+          "href": "e-service-guide.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "ติดต่อสำนักงาน",
+          "href": "contact.html",
+          "icon": "i-phone-call"
+        }
+      ]
+    }
+  ]
+}

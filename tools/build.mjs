@@ -183,6 +183,43 @@ async function main() {
     console.log('  ข้าม sitemap.xml และบรรทัด Sitemap ใน robots.txt — ยังไม่ได้ตั้ง SITE_URL');
   }
 
+  // ---- rss.xml (หน้า rss.html: เมนู 5.1.7 RSS ข่าวสาร) — ข่าว 30 รายการล่าสุดจากข่าวประชาสัมพันธ์ทั่วไป + ข่าวกิจกรรม ----
+  if (SITE_URL) {
+    const xml = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const seen = new Set();
+    const news = [];
+    for (const slug of ['general-news', 'activity-news']) {
+      const page = JSON.parse(await readFile(join(ROOT, 'content', 'pages', `${slug}.json`), 'utf8').catch(() => '{}'));
+      for (const b of page.blocks || []) {
+        if (b.type !== 'document-list') continue;
+        for (const it of b.items || []) {
+          if (!it.href || seen.has(it.href)) continue;
+          seen.add(it.href);
+          news.push(it);
+        }
+      }
+    }
+    news.sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+    const abs = href => /^https?:/.test(href) ? href : `${SITE_URL}/${href}`;
+    const items = news.slice(0, 30).map(it => [
+      '    <item>',
+      `      <title>${xml(it.title)}</title>`,
+      `      <link>${xml(abs(it.href))}</link>`,
+      `      <guid>${xml(abs(it.href))}</guid>`,
+      it.publishedAt ? `      <pubDate>${new Date(`${it.publishedAt}T09:00:00+07:00`).toUTCString()}</pubDate>` : '',
+      '    </item>',
+    ].filter(Boolean).join('\n')).join('\n');
+    await writeFile(join(DIST, 'rss.xml'),
+      `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n` +
+      `    <title>ข่าวสารและกิจกรรม | สำนักงานราชบัณฑิตยสภา</title>\n` +
+      `    <link>${SITE_URL}/news.html</link>\n` +
+      `    <description>ข่าวประชาสัมพันธ์และข่าวกิจกรรมของสำนักงานราชบัณฑิตยสภา</description>\n` +
+      `    <language>th</language>\n${items}\n  </channel>\n</rss>\n`, 'utf8');
+    console.log(`  สร้าง dist/rss.xml  (${Math.min(news.length, 30)} ข่าว)`);
+  } else {
+    console.log('  ข้าม rss.xml — ยังไม่ได้ตั้ง SITE_URL');
+  }
+
   console.log(`\nสร้างเสร็จ ${built} หน้า -> dist/`);
   if (problems.length) {
     console.log('\nมีรายการที่ต้องดู');

@@ -22,11 +22,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "General Press Releases",
+          "label": "General News",
           "href": "general-news.html"
         },
         {
@@ -65,7 +65,7 @@
         {
           "title": "List of Applicants for the Office of the Royal Society’s Transliteration Guidelines Training",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67IDK1656059",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2024-09-04"
         },
         {
@@ -77,14 +77,14 @@
         {
           "title": "List of applicants for the Royal Society Fellows Share Knowledge with Society Project, Academy of Arts, 2025, on \"Thai Songkran Tradition: Values and the Preservation of Thai Identity in the Context of Globalization\", 31 March 2025 — 100 people",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68CSP1710022",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2025-03-19"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
           "href": "news-69kbj5538066.html",
           "image": "assets/images/orst/news/data0005-00005462-640.jpg",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2026-11-02"
         }
       ]

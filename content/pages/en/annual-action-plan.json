@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "แม่แบบ T1 (รายการเอกสาร) — เมนู 4.1.4 ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-AAP ไฟล์ยังชี้ไปเว็บเดิม รอย้ายเข้า CMS",
-  "title": "Annual action plan",
+  "title": "Annual Action Plan",
   "navKey": "about",
   "description": "Annual action plans and budget expenditure plans of the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Annual action plan",
+      "heading": "Annual Action Plan",
       "lead": "Annual action plans and budget expenditure plans of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "Government operations",
+          "label": "Operations",
           "href": "operations.html"
         },
         {
-          "label": "Annual action plan"
+          "label": "Annual Action Plan"
         }
       ]
     },

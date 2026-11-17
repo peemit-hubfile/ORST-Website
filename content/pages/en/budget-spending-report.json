@@ -1,0 +1,80 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Budget Spending Report",
+  "navKey": "about",
+  "description": "Annual reports on budget disbursement and spending of the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Budget Spending Report",
+      "lead": "Annual reports on budget disbursement and spending of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Budget Spending Report"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Summary of project/activity results under the action plan and budget expenditure plan, fiscal year 2024, 12-month period",
+          "publishedAt": "2025-03-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F68CNM2500025"
+        },
+        {
+          "title": "Report on operational results and budget expenditure of the Office of the Royal Society, fiscal year 2023, 12-month period (1 October 2022 - 30 September 2023)",
+          "publishedAt": "2024-02-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F67BIN0428009"
+        },
+        {
+          "title": "Budget disbursement results, fiscal year 2021, 12-month period (1 October 2020 - 30 September 2021)",
+          "publishedAt": "2022-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F65DTN3906038"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2020, 12-month period",
+          "publishedAt": "2021-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F64D%21R5337094"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2020, as of 29 June 2020",
+          "publishedAt": "2020-06-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63HCO1258063"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2019, from 1 October 2018 to 31 March 2019",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP1525091"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2018, from 1 October 2017 to 30 September 2018",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP1632025"
+        },
+        {
+          "title": "Report on the audit of financial statements by the Office of the Auditor General under the State Fiscal and Financial Discipline Act, B.E. 2561",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP2501005"
+        },
+        {
+          "title": "Budget expenditure report, fiscal year 2019, from 1 October 2018 to 30 September 2019",
+          "publishedAt": "2019-09-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63HCO2507019"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

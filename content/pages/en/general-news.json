@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=34 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "General Press Releases",
+  "title": "General News",
   "navKey": "news",
   "description": "Press releases of the Office of the Royal Society",
   "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "General Press Releases",
+      "heading": "General News",
       "lead": "Press releases of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "General Press Releases"
+          "label": "General News"
         }
       ],
       "image": "assets/images/orst/news/data0005-00005306-960.jpg",
@@ -36,7 +36,7 @@
           "href": "news-69kbj5538066.html",
           "image": "assets/images/orst/news/data0005-00005462-640.jpg",
           "excerpt": "3 photos",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
@@ -44,7 +44,7 @@
           "href": "news-69jaj1403044.html",
           "image": "assets/images/orst/news/data0005-00005446-640.jpg",
           "excerpt": "10 photos · 5 attachments",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
@@ -52,7 +52,7 @@
           "href": "news-69jsh5647044.html",
           "image": "assets/images/orst/news/data0005-00005428-640.jpg",
           "excerpt": "3 images · 1 attachment",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
@@ -60,7 +60,7 @@
           "href": "news-69jsn0030075.html",
           "image": "assets/images/orst/news/data0005-00005433-640.jpg",
           "excerpt": "3 images · 4 attachments",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
@@ -68,7 +68,7 @@
           "href": "news-69jsm4847075.html",
           "image": "assets/images/orst/news/data0005-00005420-640.jpg",
           "excerpt": "3 images · 4 attachments",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
@@ -76,7 +76,7 @@
           "href": "news-69jgi2510013.html",
           "image": "assets/images/orst/news/data0005-00005414-640.jpg",
           "excerpt": "3 images · 1 attachment",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
@@ -84,13 +84,13 @@
           "href": "news-69iwo1639084.html",
           "image": "assets/images/orst/news/data0005-00005407-640.jpg",
           "excerpt": "3 images · 2 attachments",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement on the Recruitment of Associate Fellows as Fellows of the Royal Society",
           "publishedAt": "2026-08-26",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HZK5054022",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of Participants: Workshop on “Using Ancient Script Font Sets in Thailand",
@@ -98,7 +98,7 @@
           "href": "news-69hsi4542053.html",
           "image": "assets/images/orst/news/data0005-00005399-640.jpg",
           "excerpt": "2 images · 1 attachment",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal Society Brings Knowledge to Society Project: Academic Forum on “Biodiversity: Assets for Future Economic and Social Development”",
@@ -112,7 +112,7 @@
           "title": "Announcement of the Office of the Royal Society: Call for Applications for Appointment as Associate Fellows, Academy of Arts",
           "publishedAt": "2026-08-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HQK0845005",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of Applicants for the Young Creative Writers Camp, Fiscal Year 2026",
@@ -120,7 +120,7 @@
           "href": "news-69hep0842063.html",
           "image": "assets/images/orst/news/data0005-00005370-640.jpg",
           "excerpt": "2 images · 1 attachment",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Merit-Making Ceremony on the 50th Day in Dedication to Her Royal Highness Princess Bajrakitiyabha Narendiradebyavati Kromluang Rajasarini Siribajra Maha Vajrarajadhita",
@@ -134,7 +134,7 @@
           "title": "Announcement of the Office of the Royal Society: Criteria and Rates of Remuneration for Persons or Committees Responsible for Public Procurement and Supplies Management, Office of the Royal Society",
           "publishedAt": "2026-08-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HDN0816047",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society Holds Oath-Taking Ceremony to Be Good Civil Servants and the Strength of the Nation on the Occasion of His Majesty the King’s Birthday",
@@ -148,7 +148,7 @@
           "title": "Announcement of the Office of the Royal Society: Call for applications from government personnel for government scholarships, fiscal year 2026",
           "publishedAt": "2026-07-24",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69GXJ2940075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society holds a ceremony to offer blessings to His Majesty the King, together with volunteer public service and charitable activities in honor of His Majesty the King, on the occasion of His Majesty's Birthday, 28 July 2026",
@@ -163,7 +163,7 @@
           "publishedAt": "2026-07-20",
           "href": "news-69fdn3044019.html",
           "image": "assets/images/orst/news/data0005-00005292-640.jpg",
-          "excerpt": "Channels for reporting complaints of corruption and misconduct",
+          "excerpt": "Report Corruption & Misconduct",
           "category": "News"
         },
         {
@@ -186,31 +186,31 @@
           "title": "Announcement of the Office of the Royal Society: List of Successful Candidates for Employment as General Government Employees, Position of Computer Technical Officer",
           "publishedAt": "2026-06-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FSM0022009",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: List of Successful Candidates for Employment as General Government Employees, Position of Computer Technical Officer",
           "publishedAt": "2026-06-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FSM0419097",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Sub-Committee on Civil Service of the Office of the Royal Society: Criteria, Methods and Conditions for Personal and Performance Assessment for Promotion to Academic Positions at Professional and Senior Professional Levels",
           "publishedAt": "2026-06-11",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FKI2614013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: List of Candidates Eligible for the Additional Assessment of Knowledge, Skills and Competencies for the Position of Computer Technical Officer, with the Date, Time and Venue of the Assessment",
           "publishedAt": "2026-06-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FJN0317028",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Selection of Associate Fellows for Appointment as Fellows of the Royal Society",
           "publishedAt": "2026-06-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FHM4912075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society holds a ceremony to offer blessings on the auspicious occasion of the 4th Cycle Birthday Anniversary of Her Majesty Queen Suthida Bajrasudhabimalalakshana, 3 June 2026",
@@ -238,7 +238,7 @@
           "title": "Announcement of the Office of the Royal Society: Operational Guidelines in Response to the Impact of the Conflict in the Middle East",
           "publishedAt": "2026-05-11",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69EKI0647013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the Competition for Writing Books Teaching Buddhism to Children 2026, on the theme “Honesty Lasts, Dishonesty Doesn't”",
@@ -250,13 +250,13 @@
           "title": "Announcement of the Sub-Committee on Civil Service of the Office of the Royal Society: Standards of Knowledge, Skills and Competencies Required for Civil Service Positions in the Office of the Royal Society",
           "publishedAt": "2026-05-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69EHM5757059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Guidelines for Naming Works and Concept Proposals, and for Announcing Names, Work Outlines and Concept Proposals",
           "publishedAt": "2026-05-01",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69EAN5253053",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society Regulation on Complimentary Copies of Books Produced by the Office of the Royal Society for Distribution and Sale, B.E. 2569 (2026)",
@@ -280,7 +280,7 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2026-04-09",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69DIK0627075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Congratulations to Ms. Suwatthana Rotchanapradit, Typist, Level S3, Supplies, Premises and Vehicles Unit, Finance Section, Office of the Secretary, on being selected as an Outstanding Civil Servant of the Office of the Royal Society for 2026",
@@ -292,19 +292,19 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Arts",
           "publishedAt": "2026-03-23",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69CWO4316078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Science",
           "publishedAt": "2026-02-16",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69BPN0202081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
           "publishedAt": "2026-02-16",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69BQP4237000",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Invitation to the Royal Society Brings Knowledge to Society Project, fiscal year 2026, No. 6",
@@ -316,13 +316,13 @@
           "title": "Announcement of the Screening Committee on Candidates for the Screened List for Selection of Civil Servants for Appointment to Junior Executive Positions in the Office of the Royal Society",
           "publishedAt": "2026-02-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69BES5001013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: List of Successful Candidates for Employment as Graphic Designer",
           "publishedAt": "2026-01-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69A%24K1426059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society holds the activity “United in Loyalty” during the 100 days following the passing of Her Majesty Queen Sirikit The Queen Mother",
@@ -340,19 +340,19 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2026-01-12",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69ALP0424016",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Recruitment of Contract Service Personnel at Bachelor’s–Master’s Degree Level (Graphic Designer)",
           "publishedAt": "2026-01-09",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69AIT1600094",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Extension of Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2026-01-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69AEJ1809025",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Ms. Piyarat In-on, Director of the Arts Division, assigned by Dr. Supharoek Phuphongsak, led executives, civil servants and staff of the Office of the Royal Society",
@@ -384,7 +384,7 @@
           "title": "Announcement of the Office of the Royal Society: List of Successful Candidates for Employment as Graphic Designer and Corporate Strategy Officer",
           "publishedAt": "2025-12-24",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LXR3107063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society: “No Receiving, No Giving” of Gifts, Presents or Any Other Benefits in the Performance of Duties",
@@ -420,7 +420,7 @@
           "title": "Announcement of the Office of the Royal Society: No Gift Policy (no acceptance of gifts or presents of any kind in the performance of duties) of the Office of the Royal Society, fiscal year 2026",
           "publishedAt": "2025-12-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LSN1051084",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Volunteer public service and charitable activities on the birthday anniversary of His Majesty King Bhumibol Adulyadej The Great, National Day and National Father's Day, 5 December 2025",
@@ -438,7 +438,7 @@
           "title": "Announcement of the Office of the Royal Society: List of Candidates Eligible for Assessment of Suitability for Contract Service Positions at Bachelor’s–Master’s Degree Level",
           "publishedAt": "2025-12-18",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LRN4521091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society holds a workshop to prepare the budget request for 2027",
@@ -462,19 +462,19 @@
           "title": "Announcement of the Office of the Royal Society: Recruitment of Contract Service Personnel at Bachelor’s–Master’s Degree Level",
           "publishedAt": "2025-12-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LDT1617088",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of an Associate Fellow for appointment as a Fellow of the Royal Society, Fine Arts, Music, Academy of Arts, 1 position",
           "publishedAt": "2025-12-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LCJ5416034",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of an Associate Fellow for appointment as a Fellow of the Royal Society, Architecture, Vernacular Architecture, Academy of Arts, 1 position",
           "publishedAt": "2025-12-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LCM4337006",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Newsletter and press release: Meeting of the Committee for the Study and Development of Psychological and Social Knowledge No. 16/2025",
@@ -492,7 +492,7 @@
           "title": "Announcement of the Office of the Royal Society: List of Candidates Eligible for Assessment of Suitability for Contract Service Positions at Bachelor’s–Master’s Degree Level",
           "publishedAt": "2025-11-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68KYU3201031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "24 November 2025: 100th Birthday Anniversary of Her Royal Highness Princess Bejaratana Rajasuda Sirisobhabannavadi, Krom Phra Nakhon Pathom Boromkhattiyani Mahathiraratchathida",
@@ -504,25 +504,25 @@
           "title": "Announcement of the Office of the Royal Society: List of Successful Candidates for Employment as General Administration Officer and Legal Officer",
           "publishedAt": "2025-11-24",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68KXV5817081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2025-11-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68KUN5554013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Recruitment of Contract Service Personnel at Bachelor’s–Master’s Degree Level",
           "publishedAt": "2025-11-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68KSS4006075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: List of Candidates Eligible for Assessment of Suitability for the Positions of General Administration Officer and Legal Officer",
           "publishedAt": "2025-11-17",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68KQQ5614044",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Due to the migration of the server hosting the Office of the Royal Society’s transliteration database, the transliteration database on the Office of the Royal Society website (transliteration.orst.go.th) will be temporarily unavailable from 15 to 23 November 2025",
@@ -540,13 +540,13 @@
           "title": "Announcement of the Office of the Royal Society: Recruitment of Contract Service Personnel",
           "publishedAt": "2025-11-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68KCQ3425016",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
           "publishedAt": "2025-11-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68KCR1059044",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "2nd Memorial Lecture in honor of Professor Emeritus Dr. Athasit Vejjajiva, M.D., former President of the Royal Institute",
@@ -570,7 +570,7 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2025-10-30",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68J%2DP3914066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Usage of the Expression “เสด็จสู่สวรรคาลัย” (sadet su sawankhalai, ‘passed away’ for royalty)",
@@ -594,7 +594,7 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Arts",
           "publishedAt": "2025-10-22",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68JVU3944088",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Article: The Cycle of Domestic Violence, Rayong Province, by Assistant Professor Dr. Pathamaphon Butsapathamrong, Fellow of the Royal Society in Social Sciences, Field of Social Work and Social Welfare, and Member of the Committee on Community Psychology",
@@ -606,7 +606,7 @@
           "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2026, on the theme \"Honesty Lasts, Dishonesty Doesn't\"",
           "publishedAt": "2025-10-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68JNP3932009",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Article Part 1 (The Problem): Developing life and professional skills in line with the digital age, by Associate Professor Dr. Prachak Patithat, Associate Fellow, Academy of Moral and Political Sciences",
@@ -642,13 +642,13 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Moral and Political Sciences",
           "publishedAt": "2025-09-01",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68IAM4825028",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2025-09-01",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68IAN5115047",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "National Thai Language Day 2025",
@@ -660,19 +660,19 @@
           "title": "Announcement of the Office of the Royal Society: Call for applicants for the Thai History Knowledge Promotion Project in 4 Regions in honor of His Majesty the King on the auspicious occasion of His Majesty's 6th Cycle Birthday Anniversary, 28 July 2024 (Eastern Region)",
           "publishedAt": "2025-08-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68H%24I1515053",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Extension of Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2025-08-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68H%24I3358009",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of those eligible to attend National Thai Language Day 2025, Saturday, 30 August 2025, at the Phra Witsanu Room, 3rd floor, Asawin Grand Convention Hotel, Bangkok (academic committee members, judges and the general public only)",
           "publishedAt": "2025-08-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68H%24P3222081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Royal Society of Thailand holds an open house to hear views on “Fellows of the Royal Society from the Media's Perspective” and announces activities celebrating its 100th anniversary",
@@ -684,7 +684,7 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Moral and Political Sciences",
           "publishedAt": "2025-08-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HTM2230006",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "What is the answer to treating knee osteoarthritis? Find out at a lecture in the Royal Society Brings Knowledge to Society Project, fiscal year 2025, No. 9",
@@ -718,31 +718,31 @@
           "href": "news-68hkp1453078.html",
           "image": "assets/images/orst/news/data0004-00004651-640.jpg",
           "excerpt": "1 image",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Pride in One's Locality” 2025, Group 1, Central, Eastern and Western Regions: award-winning students and schools as per the attached announcement",
           "publishedAt": "2025-08-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HEI3011006",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Pride in One's Locality” 2025, Group 4, Southern Region: award-winning students and schools as per the attached announcement",
           "publishedAt": "2025-08-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HEN0253016",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Results of the Youth Handwriting Competition 2025",
           "publishedAt": "2025-08-01",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HAN1248053",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Pride in One's Locality” 2025, Group 3, Northeastern Region: award-winning students and schools as per the attached announcement",
           "publishedAt": "2025-07-31",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68G%40I0138047",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Storytelling Contest in the Southern Thai Dialect",
@@ -802,13 +802,13 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Arts",
           "publishedAt": "2025-07-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GUH5033075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2025-07-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GUH5258008",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Storytelling Contest in the Northeastern (Isan) Thai Dialect — the Secretary-General of the Royal Society of Thailand assigned Mr. Santi Phakdikham, Deputy Secretary-General of the Royal Society of Thailand, to preside over the Storytelling Contest in Standard Thai and Thai Dialects",
@@ -820,25 +820,25 @@
           "title": "Results of the Storytelling Contest in Standard Thai and Thai Dialects on the Theme “Pride in My Local Community”",
           "publishedAt": "2025-07-18",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GRK4249075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Pride in One's Locality” 2025, Group 2, Northern Region: award-winning students and schools as per the attached announcement",
           "publishedAt": "2025-07-18",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GRP0327084",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Results of the Youth Thai Language Skills Competition (Melodic Recitation) 2025",
           "publishedAt": "2025-07-15",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GOJ3117005",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Pride in One's Locality”, Group 3, Northeastern Region, qualifying round",
           "publishedAt": "2025-07-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GNN1037075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Deputy Secretary-General of the Royal Society opens the Youth Thai Language Skills Competition (Melodic Recitation) 2025 (final round)",
@@ -850,7 +850,7 @@
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Pride in One's Locality”, Group 2, Northern Region, qualifying round: 10 students advance to the final round, as per the attached announcement",
           "publishedAt": "2025-07-07",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GGL0136034",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society joins the Buddhist Lent Merit Saving activity 2025 at the Atrium, 2nd floor, Government Complex, Building C",
@@ -862,13 +862,13 @@
           "title": "Announcement of the Office of the Royal Society: Finalists of the Youth Handwriting Competition 2025",
           "publishedAt": "2025-07-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GDN4440063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Pride in One's Locality”, Group 2, Northern Region, qualifying round: 10 students advance to the final round, as per the attached announcement",
           "publishedAt": "2025-07-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GDO3337084",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Participants of the Royal Society of Thailand 100th Anniversary Project on “Dance Research in a Changing Context”, held on Friday, 14 February 2025 at the theater of the Faculty of Fine and Applied Arts, Khon Kaen University, Khon Kaen Province, are invited",
@@ -892,13 +892,13 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
           "publishedAt": "2025-06-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68FTT3628019",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: List of those eligible for the Youth Thai Language Skills Competition (Melodic Recitation) 2025 (qualifying round)",
           "publishedAt": "2025-06-18",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68FRI2243000",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal Society of Thailand Meeting No. 2/2025, Wednesday, 11 June 2025",
@@ -928,7 +928,7 @@
           "title": "Announcement of the Office of the Royal Society: Extension of the application period for the Youth Handwriting Competition 2025",
           "publishedAt": "2025-05-30",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68E%2DO2120069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Participants of the Royal Society Fellows Share Knowledge with Society Project, Academy of Arts, 2025, held on Monday, 31 March 2025 at the Pinklao Room, S.D. Avenue Hotel, Bang Phlat, Bangkok, may download their online certificates from the link and QR code below",
@@ -940,7 +940,7 @@
           "title": "Announcement of the Office of the Royal Society: Extension of the application period for the Youth Thai Language Skills Competition (Melodic Recitation) 2025 (No. 1)",
           "publishedAt": "2025-05-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68E%2DO1302016",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Video: Children, Youth and Online Communities",
@@ -958,7 +958,7 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2025-05-28",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68E%23K5330031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Extension of Applications for the Translation Training and Selection Contest",
@@ -976,25 +976,25 @@
           "title": "Announcement of the Office of the Royal Society: Youth Handwriting Competition 2025",
           "publishedAt": "2025-05-07",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68EGN1525066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Results of the Competition for Writing Books Teaching Buddhism to Children 2025, on the theme \"One Who Trains Oneself Is Excellent\"",
           "publishedAt": "2025-05-02",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68EBM3544028",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Youth Thai Language Skills Competition (Melodic Recitation) 2025",
           "publishedAt": "2025-05-01",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68EBI4012013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Call for applicants for training and the translation selection contest under the Advanced Translation Skills Training Project for the Outstanding Translated Academic Book Award, on the auspicious occasion of His Majesty the King's 6th Cycle Birthday Anniversary, 28 July 2024",
           "publishedAt": "2025-04-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68DYK2026053",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Academic Conference and Exhibition on Food for Life: Health, Safety and Thai Food Innovation for the World",
@@ -1006,7 +1006,7 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Science",
           "publishedAt": "2025-04-23",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68DWL3157094",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Activities on the 99th anniversary of the founding of the Royal Society of Thailand",
@@ -1018,7 +1018,7 @@
           "title": "List of applicants for the Royal Society Fellows Share Knowledge with Society Project, Academy of Arts, 2025, on \"Thai Songkran Tradition: Values and the Preservation of Thai Identity in the Context of Globalization\", 31 March 2025 — 100 people",
           "publishedAt": "2025-03-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68CSP1710022",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Chair of the Academy of Arts opens the Traveling Royal Society Fellows Project, Academy of Arts, 2025, on “Developing Ceramic Designs for SUPPORT Members of the Suan Phueng SUPPORT Group, Ratchaburi Province”",
@@ -1036,7 +1036,7 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Science",
           "publishedAt": "2025-03-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68CNJ1622059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Invitation to the Royal Society Fellows Share Knowledge with Society Project, Academy of Arts, 2025: “Thai Songkran Tradition: Values and the Preservation of Thai Identity in the Context of Globalization”",
@@ -1054,7 +1054,7 @@
           "title": "List of applicants for the Thai History Knowledge Promotion Project in 4 Regions, No. 1, Northern Region, Chiang Mai Province, 6–8 March 2025 — 48 people",
           "publishedAt": "2025-02-28",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68B%23Q2604028",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for social studies and history teachers to join the Thai History Knowledge Promotion Project in 4 Regions (Northern Region), No. 1, 6–8 March 2025, Chiang Mai",
@@ -1072,7 +1072,7 @@
           "title": "List of applicants for the Royal Society of Thailand 100th Anniversary Project academic forum on “Dance Research in a Changing Context”",
           "publishedAt": "2025-02-11",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68BKH5905067",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Integrity and Transparency Assessment of Public Agencies",
@@ -1090,13 +1090,13 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Arts",
           "publishedAt": "2025-02-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68BEN4742063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2025-02-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68BEN5710005",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society organizes volunteer public service and charitable activities on the occasion of the Royal Ceremony celebrating His Majesty the King reaching the same age as King Buddha Yodfa Chulaloke the Great, founder of the Chakri Dynasty, 2025",
@@ -1120,7 +1120,7 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2024-12-13",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67LMO5543069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society Holds Awareness Activity to Build a Culture in Which No Official Accepts Gifts or Presents in the Performance of Duties (No Gift Policy)",
@@ -1132,19 +1132,19 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Arts",
           "publishedAt": "2024-12-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67LDM5823094",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2024-12-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67LDS0047063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: No Gift Policy (no acceptance of gifts or presents of any kind in the performance of duties) of the Office of the Royal Society, fiscal year 2025",
           "publishedAt": "2024-12-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67LDK5807069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "His Majesty King Maha Vajiralongkorn Graciously Bestows Royal Kathin Robes on the Office of the Royal Society to Offer to Monks Who Completed the Rains Retreat at Wat Boromniwat Ratchaworawihan, Pathum Wan, Bangkok",
@@ -1156,13 +1156,13 @@
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society",
           "publishedAt": "2024-09-30",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67I%2DI4948053",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications from Associate Fellows for Appointment as Fellows of the Royal Society",
           "publishedAt": "2024-09-18",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67IRI0927038",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Academic conference celebrating the 100th anniversary of the Royal Society of Thailand: \"Fellows of the Royal Society Look Ahead, Leading Research to Adapt to Global Warming\"",
@@ -1174,7 +1174,7 @@
           "title": "List of Applicants for the Office of the Royal Society’s Transliteration Guidelines Training",
           "publishedAt": "2024-09-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67IDK1656059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Competition for Writing Books Teaching Buddhism to Children 2025, on the theme \"One Who Trains Oneself Is Excellent\"",
@@ -1216,19 +1216,19 @@
           "title": "Call for applications from Associate Fellows for appointment as Fellows of the Royal Society, Academy of Arts, 1 position",
           "publishedAt": "2024-07-23",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67GWI5156003",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of those eligible to attend the academic forum of the Philosophy category, Academy of Moral and Political Sciences, on Philosophy, Religion and Quality of Life, Thursday, 25 July 2024",
           "publishedAt": "2024-07-22",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67GVM3114078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of applicants for the Traveling Royal Society Fellows Lecture Project, Academy of Arts, Royal Society of Thailand, 2024, on Thai Language Today: National Identity, Soft Power and Communication in the Digital Age, Thursday, 25 July 2024",
           "publishedAt": "2024-07-22",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67GVM5651063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Invitation to the Traveling Royal Society Fellows Lecture Project, Academy of Arts, 2024",
@@ -1270,19 +1270,19 @@
           "title": "Extended deadline for submissions to the Outstanding Translated Academic Book Award: publishers, educational institutions and freelance translators are invited to submit books to the Outstanding Translated Academic Book Award in honor of His Majesty the King on the auspicious occasion of His Majesty's 6th Cycle Birthday Anniversary, 2…",
           "publishedAt": "2024-05-27",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67E%21P1331047",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Results of the Competition for Writing Books Teaching Buddhism to Children 2024, on the theme \"Adaptation\"",
           "publishedAt": "2024-05-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67ECR1056094",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of those who completed the workshop under the Thai History Knowledge Promotion Training Project in 4 Regions, fiscal year 2024",
           "publishedAt": "2024-04-30",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67EGN4501091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Service users of the Office of the Royal Society are invited to complete the EIT perception survey, from now until 1 July 2024",
@@ -1294,7 +1294,7 @@
           "title": "Announcement of those eligible to attend the Thai History Knowledge Enrichment Training in 4 Regions, fiscal year 2024",
           "publishedAt": "2024-04-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67DJJ1141078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Article: Strong Families Can Prevent Depression in Children, by Associate Professor Dr. Duangduen Sattraphat",
@@ -1372,7 +1372,7 @@
           "title": "Announcement of the Office of the Royal Society: Selection of Associate Fellows for Appointment as Fellows of the Royal Society",
           "publishedAt": "2024-02-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67BHP0340088",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Mr. Kritsada Khongkhachan, Secretary-General of the Royal Society of Thailand, Inspects the Readiness of the Chao Chom Manda Luean Residence",
@@ -1426,7 +1426,7 @@
           "title": "Announcement of the No Gift Policy (no acceptance of gifts or presents of any kind in the performance of duties), fiscal year 2024",
           "publishedAt": "2023-12-07",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66LGN5047063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Ceremony of Laying Floral Offerings in Homage at the Royal Monument of His Majesty King Bhumibol Adulyadej The Great",
@@ -1468,7 +1468,7 @@
           "title": "Announcement of the Office of the Royal Society: Selection of Associate Fellows for Appointment as Fellows of the Royal Society",
           "publishedAt": "2023-11-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66KII0333036",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal Society of Thailand Holds Memorial Lecture in Honour of Professor Emeritus Dr. Atthasit Vejjajiva: “Good Friends in My Memory”",
@@ -1492,7 +1492,7 @@
           "title": "Call for applications for appointment as Associate Fellow, Academy of Arts: Literary Arts, 1 position; Fine Arts, 1 position",
           "publishedAt": "2023-10-12",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66JLP0805005",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society Joins Wreath-Laying on the Anniversary of the Passing of His Majesty King Mongkut",
@@ -1654,7 +1654,7 @@
           "title": "Announcement of students qualifying for the final round of the Youth Handwriting Competition 2023",
           "publishedAt": "2023-07-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66GCM0502063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Apply for the Office of the Royal Society Transliteration Training No. 2: Transliteration of Neighboring Languages (Malay and Indonesian)",
@@ -1672,7 +1672,7 @@
           "title": "Announcement of students qualifying for the final round of the Youth Thai Language Skills Competition 2023",
           "publishedAt": "2023-06-26",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66FZO0708013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Thai History Knowledge Promotion Project in 4 Regions (Batch 1)",
@@ -1696,7 +1696,7 @@
           "title": "Call for applications for appointment as Associate Fellow, History (all fields), Academy of Moral and Political Sciences, 1 position",
           "publishedAt": "2023-06-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66FTI2210069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of those eligible to attend the Thai History Knowledge Enrichment Training in 4 Regions, Batch 2 — 58 people in total",
@@ -1708,7 +1708,7 @@
           "title": "Call for applications for appointment as Associate Fellow, Fine Arts (all fields), Academy of Arts, 1 position",
           "publishedAt": "2023-06-15",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66FOI1238059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society Ethics Project: Panel Discussion on “Public Service Based on Ethics and Law”",
@@ -1720,7 +1720,7 @@
           "title": "Announcement of those eligible to attend the Thai History Knowledge Enrichment Training in 4 Regions, Batch 1 (additional)",
           "publishedAt": "2023-06-12",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66FLM2703081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Wreath-laying ceremony in tribute on the Commemoration Day of His Majesty King Ananda Mahidol, 9 June 2023",
@@ -1756,7 +1756,7 @@
           "title": "Announcement of the Office of the Royal Society: Cancellation of the Call for Applications for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
           "publishedAt": "2023-05-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66EYJ0634075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the Competition for Writing Books Teaching Buddhism to Children 2023, on the theme \"Judge Your Friends Carefully\"",
@@ -1774,7 +1774,7 @@
           "title": "Call for applications for Associate Fellow, History, European History, Academy of Moral and Political Sciences, 1 position",
           "publishedAt": "2023-05-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66EHK2123097",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the Storytelling Contest in the Southern Thai Dialect on the Theme “Visit My Hometown, Create Local Value”",
@@ -1786,7 +1786,7 @@
           "title": "Call for applications for Associate Fellow, Medicine and Dentistry, Academy of Science, 1 position",
           "publishedAt": "2023-05-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66ECN5438003",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Workshop on monitoring performance and budget disbursement, fiscal year 2023 expenditure, quarters 1 and 2, Office of the Royal Society",
@@ -1840,37 +1840,37 @@
           "title": "List of participants in the Office of the Royal Society Transliteration Guidelines Training No. 1: Transliteration Guidelines for Economic Languages (Japanese), Saturday, 1 April 2023",
           "publishedAt": "2023-03-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66C%24L0116081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Screening Committee on Candidates for the List for Appointment to Junior Executive Positions: Criteria and Methods for Personal Assessment and/or Screening of Candidates for Appointment to Junior Executive Positions",
           "publishedAt": "2023-03-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66C%24L0247031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students qualifying for the final round of the storytelling contest on \"Visit My Hometown, Create My Locality\", Group 1, Central, Eastern and Western Regions",
           "publishedAt": "2023-03-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66CTI5438056",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students qualifying for the final round of the storytelling contest on \"Visit My Hometown, Create My Locality\", Group 3, Northeastern Region",
           "publishedAt": "2023-03-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66CTL2041031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students qualifying for the final round of the storytelling contest on \"Visit My Hometown, Create My Locality\", Group 4, Southern Region",
           "publishedAt": "2023-03-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66CTL2840094",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of an Associate Fellow for appointment as a Fellow of the Royal Society, Academy of Science, 1 position",
           "publishedAt": "2023-03-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66CTM4930059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Opinion Survey on the Ethical Requirements and Guidelines for Conduct of Civil Servants and Staff of the Office of the Royal Society",
@@ -1882,7 +1882,7 @@
           "title": "Announcement of the Office of the Royal Society: Students selected for the storytelling contest in Standard Thai and regional Thai dialects on \"Visit My Hometown, Create My Locality\", Group 2, Northern Region (qualifying round)",
           "publishedAt": "2023-03-09",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66CIN5103047",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society Transliteration Training No. 1: Transliteration of Economic Languages (Japanese), Saturday, 1 April 2023, via Zoom Cloud Meeting",
@@ -1900,7 +1900,7 @@
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Moral and Political Sciences",
           "publishedAt": "2023-02-07",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66BGN0509078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Participants in the academic forum under the Traveling Royal Society Fellows Lecture Project, Academy of Arts, 2023, on “Water Plans, City Plans: Adapting to Flood Hazards”, Saturday, 4 February 2023",
@@ -1984,7 +1984,7 @@
           "title": "Announcement of the Office of the Royal Society: List of Candidates Eligible for Assessment of Suitability for Employment as Contract Service Personnel",
           "publishedAt": "2022-11-30",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65K%2DO1237063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society invites primary schools nationwide to send upper primary students (Grades 4–6) to the storytelling contest in Standard Thai and regional Thai dialects on “Visit My Hometown, Create My Locality”",
@@ -2008,7 +2008,7 @@
           "title": "Job Vacancies: 4 Positions, 5 Openings",
           "publishedAt": "2022-11-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65KUU1223013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "His Majesty the King graciously bestowed the Royal Kathina Robes for 2022 upon the Office of the Royal Society to present to monks who completed the rains retreat at Wat Woranayok Rangsan Chetiya Banphataram, Bang Pahan District, Phra Nakhon Si Ayutthaya Province",
@@ -2044,7 +2044,7 @@
           "title": "List of certificate recipients who completed the enrichment training on language in classical and local literature for Thai language teachers, 3–4 September 2022",
           "publishedAt": "2022-09-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65IHJ2458005",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society Holds Volunteer Project in Honour of Her Majesty Queen Sirikit The Queen Mother",
@@ -2068,13 +2068,13 @@
           "title": "Announcement of the Office of the Prime Minister on the names of countries, territories, administrative divisions and capitals (30 August 2022)",
           "publishedAt": "2022-09-02",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65IBM1956063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of certificate recipients who completed the enrichment training on Thai and regional Thai dialects, 20–21 August 2022",
           "publishedAt": "2022-08-26",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HZJ3450053",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Invitation to co-host the Royal Kathina Robe Offering Ceremony 2022",
@@ -2092,7 +2092,7 @@
           "title": "Announcement of those eligible to attend the enrichment training on language in classical and local literature, 3–4 September 2022",
           "publishedAt": "2022-08-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HSK5047006",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Traveling Royal Society Fellows Project, Academy of Moral and Political Sciences: “Soft Power: Thai Identity Winning Global Hearts”",
@@ -2134,7 +2134,7 @@
           "title": "Announcement of those eligible to attend the enrichment training on Thai and regional Thai dialects — 402 people in total",
           "publishedAt": "2022-08-11",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HKJ4818078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Royal Society of Thailand holds the academic forum “Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 11”, honoring members of the Royal Society who have contributed to the nation",
@@ -2158,7 +2158,7 @@
           "title": "Announcement of the Office of the Royal Society: Correction to the Announcement on the Selection of Associate Fellows for Appointment as Fellows of the Royal Society",
           "publishedAt": "2022-08-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HEP3621031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Names of history teaching staff from educational institutions in the Central, Eastern and Western Regions eligible to attend the Thai History Knowledge Enrichment Training in 4 Regions, No. 4",
@@ -2242,13 +2242,13 @@
           "title": "Call for Applications for Selection as Associate Fellows, Academy of Moral and Political Sciences (2 Positions, All Disciplines)",
           "publishedAt": "2022-07-22",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65GVP1653053",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Selection as Associate Fellow, Academy of Moral and Political Sciences (1 Position, Education)",
           "publishedAt": "2022-07-22",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65GVP2317084",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Thai history teaching staff in both general and vocational education are invited to attend the Thai History Knowledge Enrichment Training in 4 Regions, No. 4, for educational institutions in the Central, Eastern and Western Regions",
@@ -2260,13 +2260,13 @@
           "title": "Call for applications for appointment as Associate Fellow, Architecture, Academy of Arts, 1 position",
           "publishedAt": "2022-07-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65GUO1036059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications from Associate Fellows for appointment as Fellows of the Royal Society, Academy of Science, 1 position",
           "publishedAt": "2022-07-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65GTL2417003",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Participants who completed the Thai History Knowledge Promotion Training in 4 Regions, Batch 3, Southern Region, 9–10 July 2022",
@@ -2284,7 +2284,7 @@
           "title": "Announcement of the Office of the Royal Society: Names of Countries, Territories, Administrative Divisions and Capitals",
           "publishedAt": "2022-07-12",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65GLN5247041",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Article: The Thung Rangsit Community: From Royal Fields to Urban Community, by Piyanat Bunnak and Yuraphon Sombunsuk",
@@ -2302,7 +2302,7 @@
           "title": "Call for applications from Associate Fellows for appointment as Fellows of the Royal Society, Academy of Moral and Political Sciences, 2 positions",
           "publishedAt": "2022-07-07",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65GGK1444066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Names of history teaching staff from educational institutions in the Southern Region eligible to attend the Thai History Knowledge Enrichment Training in 4 Regions, No. 3 — 500 people in total",
@@ -2344,7 +2344,7 @@
           "title": "Additional applications: Thai History Knowledge Enrichment Training in 4 Regions, No. 2, Northeastern educational institutions*, Round 2 — 50 participants, no more than 2 per school",
           "publishedAt": "2022-06-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65FJJ1730006",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society invites 50 more history teaching staff from educational institutions in the Northeastern Region",
@@ -2386,7 +2386,7 @@
           "title": "List of participants: Thai History Knowledge Enrichment Training in 4 Regions, No. 1, Northern Region educational institutions, via electronic meeting system, 28–29 May 2022",
           "publishedAt": "2022-05-17",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65EQN2156025",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal prize presentation ceremony before His Majesty's portrait for the winners of the Competition for Writing Books Teaching Buddhism to Children 2021, on the theme “Dhammam Saranam Gacchami”",
@@ -2398,7 +2398,7 @@
           "title": "Call for applications for appointment as Associate Fellow, Literary Arts, Academy of Arts, 1 position",
           "publishedAt": "2022-05-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65EJK1009047",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the storytelling contest in Standard Thai and regional Thai dialects on “Locality, Origins, Language, Culture”, final round, Group 3, Northeastern Region",
@@ -2422,7 +2422,7 @@
           "title": "Finalists of the storytelling contest in Standard Thai and regional Thai dialects on \"Locality, Origins, Language, Culture\", Group 1, Central, Eastern and Western Regions",
           "publishedAt": "2022-04-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65D%24O5804016",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the Competition for Writing Books Teaching Buddhism to Children 2022",
@@ -2446,25 +2446,25 @@
           "title": "Finalists of the storytelling contest in Standard Thai and regional Thai dialects on \"Locality, Origins, Language, Culture\", Group 3, Northeastern Region",
           "publishedAt": "2022-04-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65DTO5337069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Finalists of the storytelling contest in Standard Thai and regional Thai dialects on \"Locality, Origins, Language, Culture\", Group 2, Northern Region",
           "publishedAt": "2022-04-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65DSN2633022",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Winners of the Youth Handwriting Competition 2022",
           "publishedAt": "2022-04-18",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65DRP0614019",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Finalists of the storytelling contest in Standard Thai and regional Thai dialects on \"Locality, Origins, Language, Culture\", Group 4, Southern Region",
           "publishedAt": "2022-04-12",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65DLM3220097",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal Address on the occasion of Civil Service Day 2022",
@@ -2512,7 +2512,7 @@
           "title": "Announcement of award-winning students in the Youth Thai Language Skills Competition of the Office of the Royal Society 2022",
           "publishedAt": "2022-03-01",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65CAM3428013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Extension of Applications for the Storytelling Contest in Standard Thai and Thai Dialects on the Theme “Localities: Origins, Language and Culture”",
@@ -2548,13 +2548,13 @@
           "title": "Call for applications for Associate Fellow, Philosophy, Academy of Moral and Political Sciences, 1 position",
           "publishedAt": "2022-02-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65BNJ2225097",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications for Associate Fellow, all subject categories, Academy of Moral and Political Sciences, 1 position",
           "publishedAt": "2022-02-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65BNJ2831063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Students eligible for the qualifying round of the Youth Thai Language Skills Competition 2022",
@@ -2590,13 +2590,13 @@
           "title": "Announcement of the Office of the Royal Society: No Gift Policy (Not Accepting Any Gifts or Presents in the Performance of Duties)",
           "publishedAt": "2021-12-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64L%24J5237041",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Names of Countries, Territories, Administrative Divisions and Capitals",
           "publishedAt": "2021-12-02",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64LBN2407069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Cancellation and New Call for Applications for Appointment as Associate Fellows, Academy of Arts",
@@ -2620,7 +2620,7 @@
           "title": "Call for applications for Associate Fellow, Academy of Science, 2 positions",
           "publishedAt": "2021-11-02",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64KBK0451034",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Competition for Writing Books Teaching Buddhism to Children 2021, on the theme Sangham Saranam Gacchami",
@@ -2632,13 +2632,13 @@
           "title": "Selection of an Associate Fellow for appointment as a Fellow of the Royal Society, Academy of Arts, 1 position",
           "publishedAt": "2021-10-27",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64J%21O1428069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Certificate of honor for government agencies participating in the Integrity and Transparency Assessment of Government Agencies, fiscal year 2021",
           "publishedAt": "2021-10-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64LAK2749075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Deputy Secretary-General of the Royal Society leads executives, civil servants and staff of the Office of the Royal Society in paying respect to the guardian spirit shrine on taking office as Deputy Secretary-General and at the start of fiscal year 2022",
@@ -2650,7 +2650,7 @@
           "title": "Call for applications for Associate Fellow, Academy of Arts, 3 positions",
           "publishedAt": "2021-09-29",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64I%24I3519034",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Flag-Saluting and National Anthem Ceremony on Thai National Flag Day",
@@ -2662,13 +2662,13 @@
           "title": "List of Participants Who Completed the Thai Language Training for Thai Language Teachers and Received Certificates",
           "publishedAt": "2021-09-16",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64IPL0417041",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Results of the Youth Handwriting Competition 2021",
           "publishedAt": "2021-09-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64INP0155044",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society invites donors to contribute offerings to the Kathina fund for the Royal Kathina Robe Offering Ceremony 2021 at Wat Wiwek Wayuphat, Bang Pa-in District, Phra Nakhon Si Ayutthaya Province, on Friday, 5 November 2021",
@@ -2686,13 +2686,13 @@
           "title": "List of Civil Servants Receiving",
           "publishedAt": "2021-08-31",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64H%40S0316025",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of trainees: Thai history teaching personnel, 2021",
           "publishedAt": "2021-08-30",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64H%2DN1701003",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Integrity and Transparency Assessment of Public Agencies, 2021",
@@ -2722,7 +2722,7 @@
           "title": "Announcement of the Civil Service Selection Committee: List of Candidates Eligible for Selection for Appointment as Deputy Secretary-General of the Royal Society of Thailand (Executive, Junior Level)",
           "publishedAt": "2021-08-16",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64HPN5507022",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Schedule of the Youth Handwriting Competition 2021",
@@ -2758,7 +2758,7 @@
           "title": "Announcement of the Office of the Royal Society: Selection of Associate Fellows for appointment as Fellows of the Royal Society, Academy of Moral and Political Sciences, 2 positions",
           "publishedAt": "2021-08-03",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64HCO4351075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Cabinet Approves the (Draft) National Language Policy Action Plan (2021–2022)",
@@ -2782,7 +2782,7 @@
           "title": "Announcement of the Office of the Royal Society: Selection Results for the Storytelling Contest on the Theme “Local History: Stories, Legends and Biographies of Notable Figures” in Thai Dialects (Preliminary Round)",
           "publishedAt": "2021-07-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64GEO5151091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Contacting the Office During the COVID-19 Outbreak",
@@ -2794,7 +2794,7 @@
           "title": "Call for Applications for Selection of Civil Servants for Appointment as Deputy Secretary-General of the Royal Society of Thailand (Executive, Junior Level)",
           "publishedAt": "2021-07-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64GFI4207031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal appointment of the President and Vice Presidents of the Royal Society of Thailand",
@@ -2818,7 +2818,7 @@
           "title": "Postponement of the Youth Thai Language Skills Competition 2020",
           "publishedAt": "2021-06-07",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64FGN2540066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Extension of Student Applications for the Storytelling Contest on the Theme “Local History: Stories, Legends and Biographies of Notable Figures” in Thai Dialects",
@@ -2884,13 +2884,13 @@
           "title": "Extension of Applications for Associate Fellows, Academy of Arts (4 Positions)",
           "publishedAt": "2021-03-26",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64CZO4159031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2021",
           "publishedAt": "2021-03-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64CYO5723088",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Join the Youth Thai Language Skills Competition 2020",
@@ -2914,13 +2914,13 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Science (4 Positions)",
           "publishedAt": "2021-02-11",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64BKJ4919044",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of an Associate Fellow for appointment as a Fellow of the Royal Society, Academy of Science, 1 position",
           "publishedAt": "2021-02-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64BJO4201091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Youth Handwriting Competition 2021",
@@ -2932,19 +2932,19 @@
           "title": "Selection of an Associate Fellow for appointment as a Fellow of the Royal Society, Academy of Moral and Political Sciences, 1 position",
           "publishedAt": "2021-01-26",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64AZR4719025",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications for appointment as Associate Fellow, Academy of Moral and Political Sciences, 1 position",
           "publishedAt": "2021-01-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64AYN2731075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications for appointment as Associate Fellow, Academy of Arts, 4 positions",
           "publishedAt": "2021-01-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64ANJ1646025",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Office of the Royal Society: “No Giving or Receiving of Gifts on Any Occasion” — Please Send Your Good Wishes via Social Media Instead of Gifts",
@@ -3016,19 +3016,19 @@
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Science",
           "publishedAt": "2020-09-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63INI5855088",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2020-09-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63INJ0855066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2020",
           "publishedAt": "2020-09-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63INJ1335072",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society holds activities for National Thai Language Day 2020",
@@ -3052,13 +3052,13 @@
           "title": "List of participants in the Academic Conference on Interdisciplinary Day No. 10: “Good Governance and Corruption Prevention in Thai Society”",
           "publishedAt": "2020-08-26",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63H%40O0502005",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for entries to the Competition for Writing Books Teaching Buddhism to Children 2021, on the theme Dhammam Saranam Gacchami",
           "publishedAt": "2020-08-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63H%21I3709078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Signing ceremony of birthday blessings for Her Majesty Queen Sirikit The Queen Mother on the occasion of Her Majesty's Birthday, 12 August 2020",
@@ -3106,7 +3106,7 @@
           "title": "Call for applications for appointment as Associate Fellow, Academy of Moral and Political Sciences, 3 positions",
           "publishedAt": "2020-07-23",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HFO0917003",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society invites donors to contribute offerings to the Kathina fund for the Royal Kathina Robe Offering Ceremony 2020",
@@ -3124,7 +3124,7 @@
           "title": "Announcement of the Office of the Prime Minister: Appointment of Fellows of the Royal Society",
           "publishedAt": "2020-07-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HFM3002081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Top 5 best-selling books, May 2020",
@@ -3154,13 +3154,13 @@
           "title": "Extension of Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2020-04-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DVN0233088",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Science",
           "publishedAt": "2020-04-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOM1457091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Contacting the Office of the Royal Society During the COVID-19 Outbreak",
@@ -3172,13 +3172,13 @@
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2020-04-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOM2203038",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications for appointment as Associate Fellow, Academy of Arts, 5 positions",
           "publishedAt": "2020-04-07",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOM2358091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal Address on Civil Service Day 2020",
@@ -3190,7 +3190,7 @@
           "title": "Call for applications for appointment as Associate Fellow, Academy of Science, 7 positions",
           "publishedAt": "2020-03-17",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOM3241069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Everyone is invited to take the online website opinion survey to improve the performance of the Royal Society of Thailand, 2020",
@@ -3202,13 +3202,13 @@
           "title": "List of Successful Candidates for Employment as General Affairs Officer",
           "publishedAt": "2020-02-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOM4838097",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of Candidates Eligible for Assessment of Suitability for the Position of General Affairs Officer",
           "publishedAt": "2020-02-11",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOM5040009",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Consultation Meeting with the Fine Arts Department on Repairing the Chao Chom Manda Luean Residence in Line with the Department’s Conservation Guidelines",
@@ -3232,31 +3232,31 @@
           "title": "Call for applications for appointment as Associate Fellow, Academy of Arts, 1 position",
           "publishedAt": "2020-01-28",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON0358000",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Science",
           "publishedAt": "2020-01-13",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON0755038",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society, Academy of Arts",
           "publishedAt": "2020-01-13",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON0924013",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Extension of the application period for selection and appointment as Associate Fellow, Academy of Science, 1 position",
           "publishedAt": "2020-01-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON1038038",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of Outstanding Users of the Thai Language 2019",
           "publishedAt": "2019-12-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON1343091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Secretary-General, executives and personnel of the Office of the Royal Society observe “No Giving or Receiving of Gifts or Other Benefits” during the New Year and on all occasions — “Turn Gifts into Good Wishes”: please send your good wishes via social media",
@@ -3268,37 +3268,37 @@
           "title": "Call for applications from government personnel for government scholarships to study abroad, fiscal year 2020",
           "publishedAt": "2019-11-27",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON1935088",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Royal Gazette Announces Appointment of Mrs. Duangta Tancho as Secretary-General of the Royal Society of Thailand",
           "publishedAt": "2019-11-14",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON2343091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Additional announcement of students eligible for the Youth Thai Language Skills Competition 2019",
           "publishedAt": "2019-10-17",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON3440075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications for appointment as Associate Fellow, Academy of Moral and Political Sciences, 1 position",
           "publishedAt": "2019-10-09",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON4406066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications for appointment as Associate Fellow, Academy of Arts, 3 positions",
           "publishedAt": "2019-10-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON4505003",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students eligible for the Youth Thai Language Skills Competition 2019",
           "publishedAt": "2019-10-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON4629028",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Dictionary of Soil Science, Royal Society of Thailand Edition, Published to Commemorate the Royal Cremation of His Majesty King Bhumibol Adulyadej, with e-book",
@@ -3316,7 +3316,7 @@
           "title": "Call for applications for appointment as Associate Fellow, Academy of Science, 2 positions",
           "publishedAt": "2019-09-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DON5431081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Workshop project on monitoring progress and preparing the fiscal year 2020 action plan with the participation of the Royal Society of Thailand Interdisciplinary Network",
@@ -3334,7 +3334,7 @@
           "title": "Call for Applications for Appointment as Associate Fellows in Social Sciences, Academy of Moral and Political Sciences",
           "publishedAt": "2019-08-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOO1432016",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society in History",
@@ -3358,7 +3358,7 @@
           "title": "Cancellation of the Call for Applications for Appointment as Associate Fellows in Literary Arts, Academy of Arts",
           "publishedAt": "2019-08-01",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOO2234094",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Video of the Interdisciplinary Day Academic Conference No. 9 on Driving the 20-Year National Strategy into Practice through an Interdisciplinary Approach, at the Miracle Grand Convention Hotel, Vibhavadi Rangsit Road, Bangkok",
@@ -3394,13 +3394,13 @@
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Arts",
           "publishedAt": "2019-06-06",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOO4902016",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of participants: Thai language enrichment training for Thai language teachers, Wednesday 12 – Thursday 13 June 2019, Avani Khon Kaen Hotel & Convention Centre, Khon Kaen Province",
           "publishedAt": "2019-05-31",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63DOO5123066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Traveling Royal Society Fellows Lecture Project, Academy of Arts, 2019 (No. 2): Art and Life in Thai Society 4.0",
@@ -3496,13 +3496,13 @@
           "title": "Additional announcement of students selected for the storytelling contest on local food culture “Food of My Hometown”, Group 2, Northern Region (first round)",
           "publishedAt": "2019-03-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23P0953038",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of the Office of the Royal Society on Measures to Promote Transparency in Procurement by the Office of the Royal Society",
           "publishedAt": "2019-03-19",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23P1125038",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Passenger Transport Services by Private Cars via Applications (Professor Dr. Phaithachit Ekchariyakon)",
@@ -3514,25 +3514,25 @@
           "title": "Announcement of students selected for the storytelling contest on local food culture “Food of My Hometown”, Group 2, Northern Region (first round)",
           "publishedAt": "2019-03-13",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23P2430038",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Science",
           "publishedAt": "2019-03-08",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23P3704066",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students selected for the storytelling contest on local food culture “Food of My Hometown”, Group 3, Northeastern Region (first round)",
           "publishedAt": "2019-03-06",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23P5807069",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Additional announcement of students selected for the storytelling contest on local food culture “Food of My Hometown”, Group 1, Central, Eastern and Western Regions (first round)",
           "publishedAt": "2019-03-05",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23Q0205031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "List of Successful Candidates for Employment as General Government Employees, Position of Data Entry Officer, Office of the Royal Society",
@@ -3550,19 +3550,19 @@
           "title": "Additional announcement of students selected for the storytelling contest on local food culture “Food of My Hometown”, Group 4, Southern Region (first round)",
           "publishedAt": "2019-02-27",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23Q1917081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for applications for appointment as Associate Fellow, Academy of Arts, 5 positions",
           "publishedAt": "2019-02-25",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24I4741075",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of students selected for the storytelling contest on local food culture “Food of My Hometown”, Group 4, Southern Region (first round)",
           "publishedAt": "2019-02-21",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24I5201025",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Trainees in the Thai language enrichment training for Thai language teachers, Central Region, Wednesday 27 – Thursday 28 February 2019, at the Grand Ballroom Saen Suk, Bangsaen Heritage Hotel, Mueang District, Chon Buri Province",
@@ -3574,13 +3574,13 @@
           "title": "Announcement of the Office of the Royal Society: List of those who passed the 1st–2nd assessments of knowledge, abilities, skills and competencies (written and interview examinations) for recruitment and selection as a general government employee, Data Entry Officer",
           "publishedAt": "2019-02-06",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24J2000094",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Announcement of government personnel eligible for government scholarships to study abroad, fiscal year 2019",
           "publishedAt": "2019-02-04",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24J2349078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows in Geography, Academy of Moral and Political Sciences",
@@ -3604,7 +3604,7 @@
           "title": "Announcement of candidates eligible for the 1st assessment of knowledge, abilities, skills and competencies (written examination), with the date, time, venue and assessment rules, for selection as a general government employee, Data Entry Officer",
           "publishedAt": "2019-01-10",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24J4659063",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "On the occasion of the New Year 2019, the Office of the Royal Society will “not accept New Year gifts or gifts on any occasion” and kindly asks for everyone's good wishes through greeting cards or online social media messages instead of gifts",
@@ -3616,7 +3616,7 @@
           "title": "Announcement of Outstanding Users of the Thai Language 2018",
           "publishedAt": "2018-12-20",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24J5848078",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Three Seals Law Inscribed as Thailand’s Memory of the World Heritage",
@@ -3628,13 +3628,13 @@
           "title": "Call for applications from government personnel for government scholarships to study abroad, fiscal year 2019",
           "publishedAt": "2018-12-18",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24K0722006",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Extension of Applications for Appointment as Associate Fellows in Natural Sciences, Field of Biochemistry, Academy of Science",
           "publishedAt": "2018-12-13",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24K0853056",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Ms. Kanokwali Chuchaiya, Secretary-General of the Royal Society, attends the ceremony of offering royal floral tributes, royal eulogy and obeisance on the birthday anniversary of His Majesty King Bhumibol Adulyadej, National Day and National Father's Day, 5 December 2018",
@@ -3646,13 +3646,13 @@
           "title": "Announcement of the Candidate List for the Position of General Affairs Officer (Practitioner Level), Office of the Royal Society",
           "publishedAt": "2018-11-30",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24K1725081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Call for Applications for Selection as General Government Employees, Position of Data Entry Officer",
           "publishedAt": "2018-11-15",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24L3118059",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Book of the Traveling Royal Society Fellows Academic Conference 2018, Academy of Moral and Political Sciences, Royal Society of Thailand, on “Building Fairness to Reduce Inequality in Society”",
@@ -3664,7 +3664,7 @@
           "title": "List of Candidates Eligible for Assessment of Suitability for the Position of General Affairs Officer (Practitioner Level), with the Date, Time and Venue of the Assessment",
           "publishedAt": "2018-11-13",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24L3935034",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Online public hearing on the (draft) Strategic Plan under the National Language Policy (2018–2021)",
@@ -3676,7 +3676,7 @@
           "title": "Announcement of students eligible for the Youth Thai Language Skills Competition 2018",
           "publishedAt": "2018-10-22",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%24M2621047",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Selection of Associate Fellows for Appointment as Fellows of the Royal Society in Fine Arts, Field of Painting",

@@ -1,0 +1,65 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Satisfaction Survey Results",
+  "navKey": "about",
+  "description": "Satisfaction survey results of service recipients and stakeholders of the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Satisfaction Survey Results",
+      "lead": "Satisfaction survey results of service recipients and stakeholders of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Satisfaction Survey Results"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Service satisfaction survey report of the Office of the Royal Society, fiscal year 2022",
+          "publishedAt": "2023-02-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F66BII0858053"
+        },
+        {
+          "title": "Service satisfaction survey results of the Office of the Royal Society, fiscal year 2021",
+          "publishedAt": "2022-02-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F65BBI1930005"
+        },
+        {
+          "title": "Satisfaction survey results of service users and stakeholders, Office of the Royal Society, 2020",
+          "publishedAt": "2021-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F64DTT3321025"
+        },
+        {
+          "title": "Report on the listener satisfaction survey of 5 programs on the Kasetsart University radio station, fiscal year 2019",
+          "publishedAt": "2020-08-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F63HCO4100044"
+        },
+        {
+          "title": "Report on the listener popularity survey of 4 programs on Radio Thailand, fiscal year 2019",
+          "publishedAt": "2020-08-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F63HCO4454044"
+        },
+        {
+          "title": "Satisfaction survey results, 2018",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F63EGP3648097"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

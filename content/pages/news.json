@@ -113,10 +113,12 @@
               "href": "qa.html"
             },
             {
-              "title": "คลังภาพและวิดีโอ"
+              "title": "คลังภาพและวิดีโอ",
+              "href": "media-gallery.html"
             },
             {
-              "title": "RSS ข่าวสาร"
+              "title": "RSS ข่าวสาร",
+              "href": "rss.html"
             }
           ]
         },

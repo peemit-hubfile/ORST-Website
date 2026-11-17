@@ -1,0 +1,98 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากประกาศฝ่ายบริหารงานบุคคล orst.go.th (iwfm_table.asp?a=7) — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "HR Plan",
+  "navKey": "about",
+  "description": "Human resource management policy and the annual human resource management and development plans of the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "HR Plan",
+      "lead": "Human resource management policy and the annual human resource management and development plans of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us",
+          "href": "about.html"
+        },
+        {
+          "label": "HR Plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2026",
+          "publishedAt": "2026-05-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F69FXO0027091"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2025",
+          "publishedAt": "2025-04-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F68DIM2451084"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2024",
+          "publishedAt": "2024-04-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67DRO1638097"
+        },
+        {
+          "title": "Human Resource Management and Development Plan and Action Plan of the Office of the Royal Society, fiscal years 2023-2027",
+          "publishedAt": "2023-04-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F66D%23L0845066"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2022",
+          "publishedAt": "2022-04-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F65D%23G4639048"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2021",
+          "publishedAt": "2021-04-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F64D%23Q2744072"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on human resource management policy",
+          "publishedAt": "2020-01-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F63HDK2420081"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2020",
+          "publishedAt": "2020-01-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F63HDL3522028"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related information",
+      "items": [
+        {
+          "title": "HR Criteria",
+          "href": "hr-criteria.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "HR Annual Report",
+          "href": "hr-annual-report.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Job Vacancies & HR Notices",
+          "href": "job-announcements.html",
+          "icon": "i-file"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

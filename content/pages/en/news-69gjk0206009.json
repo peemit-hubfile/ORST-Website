@@ -22,11 +22,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "General Press Releases",
+          "label": "General News",
           "href": "general-news.html"
         },
         {
@@ -101,28 +101,28 @@
           "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
           "href": "news-69kbj5538066.html",
           "image": "assets/images/orst/news/data0005-00005462-640.jpg",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2026-11-02"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
           "href": "news-69jaj1403044.html",
           "image": "assets/images/orst/news/data0005-00005446-640.jpg",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2026-10-31"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
           "href": "news-69jsn0030075.html",
           "image": "assets/images/orst/news/data0005-00005433-640.jpg",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2026-10-29"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
           "href": "news-69jsm4847075.html",
           "image": "assets/images/orst/news/data0005-00005420-640.jpg",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2026-10-19"
         }
       ]

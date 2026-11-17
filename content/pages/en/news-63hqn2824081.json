@@ -10,7 +10,7 @@
     {
       "type": "page-hero",
       "variant": "article",
-      "tag": "Activity news",
+      "tag": "Activities",
       "date": "2020-08-17",
       "heading": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region",
       "image": "assets/images/orst/news/data0001-00001953-960.jpg",
@@ -22,11 +22,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Activity news",
+          "label": "Activities",
           "href": "activity-news.html"
         },
         {

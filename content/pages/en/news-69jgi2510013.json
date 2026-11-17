@@ -10,7 +10,7 @@
     {
       "type": "page-hero",
       "variant": "article",
-      "tag": "Announcement",
+      "tag": "Announcements",
       "date": "2026-10-07",
       "heading": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
       "image": "assets/images/orst/news/data0005-00005414-960.jpg",
@@ -22,11 +22,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "General Press Releases",
+          "label": "General News",
           "href": "general-news.html"
         },
         {
@@ -70,26 +70,26 @@
         {
           "title": "Announcement of the Office of the Royal Society: Extension of Applications for Appointment as Associate Fellows, Academy of Science",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69AEJ1809025",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2026-01-05"
         },
         {
           "title": "Call for Applications for Appointment as Associate Fellows, Academy of Science",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GUH5258008",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2025-07-21"
         },
         {
           "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
           "href": "news-69jsn0030075.html",
           "image": "assets/images/orst/news/data0005-00005433-640.jpg",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2026-10-29"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Cancellation of the Call for Applications for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66EYJ0634075",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2023-05-25"
         }
       ]

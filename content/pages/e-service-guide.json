@@ -1,0 +1,75 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ขั้นตอนตามระบบงานบริการ e-Services ของเว็บเดิม (orst.go.th/info.asp)",
+  "title": "คำแนะนำการใช้บริการออนไลน์",
+  "navKey": "services",
+  "description": "ขั้นตอนการยื่นคำขอรับบริการออนไลน์ของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คำแนะนำการใช้บริการออนไลน์",
+      "lead": "ขั้นตอนการยื่นคำขอรับบริการออนไลน์ของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ",
+          "href": "services.html"
+        },
+        {
+          "label": "คำแนะนำการใช้บริการออนไลน์"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "steps",
+      "layout": "timeline",
+      "heading": "ขั้นตอนการยื่นคำขอ",
+      "items": [
+        {
+          "title": "เลือกบริการ",
+          "body": "เลือกบริการที่ต้องการในหน้างานบริการ (E-Service)"
+        },
+        {
+          "title": "อ่านระเบียบ",
+          "body": "อ่านระเบียบและเงื่อนไขของบริการนั้นให้ครบถ้วน"
+        },
+        {
+          "title": "ดาวน์โหลดและกรอกแบบฟอร์ม",
+          "body": "ดาวน์โหลดแบบฟอร์มคำขอ กรอกข้อมูล และเตรียมเอกสารประกอบ"
+        },
+        {
+          "title": "ส่งเอกสาร",
+          "body": "ส่งแบบฟอร์มและเอกสารประกอบทางอีเมล saraban@orst.go.th (ไฟล์ .pdf .doc .docx ขนาดไม่เกิน 10MB)"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "บริการที่เกี่ยวข้อง",
+      "items": [
+        {
+          "title": "งานบริการ (E-Service)",
+          "href": "e-services.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "ดาวน์โหลดแบบฟอร์ม",
+          "href": "download-forms.html",
+          "icon": "i-download"
+        },
+        {
+          "title": "ติดต่อสำนักงาน",
+          "href": "contact.html",
+          "icon": "i-phone-call"
+        }
+      ]
+    }
+  ]
+}

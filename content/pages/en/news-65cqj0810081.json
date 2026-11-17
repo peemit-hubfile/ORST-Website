@@ -10,7 +10,7 @@
     {
       "type": "page-hero",
       "variant": "article",
-      "tag": "Activity news",
+      "tag": "Activities",
       "date": "2022-03-17",
       "heading": "Announcement of students qualifying for the final round of the Youth Handwriting Competition 2022, to compete on Saturday, 26 March 2022, as attached",
       "image": "assets/images/orst/news/data0002-00002523-960.jpg",
@@ -22,11 +22,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Activity news",
+          "label": "Activities",
           "href": "activity-news.html"
         },
         {
@@ -59,7 +59,7 @@
         {
           "title": "Announcement of the Office of the Royal Society: Youth Handwriting Competition 2025",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68EGN1525066",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2025-05-07"
         },
         {
@@ -71,13 +71,13 @@
         {
           "title": "Announcement of students qualifying for the final round of the Youth Handwriting Competition 2023",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66GCM0502063",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2023-07-03"
         },
         {
           "title": "Announcement of the Office of the Royal Society: Results of the Youth Handwriting Competition 2025",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HAN1248053",
-          "category": "Announcement",
+          "category": "Announcements",
           "publishedAt": "2025-08-01"
         }
       ]

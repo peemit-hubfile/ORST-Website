@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-RUL-0 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Related laws, regulations and rules",
+  "title": "Laws & Regulations",
   "navKey": "about",
   "description": "Acts, regulations, rules and announcements relating to the Royal Society of Thailand and the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Related laws, regulations and rules",
+      "heading": "Laws & Regulations",
       "lead": "Acts, regulations, rules and announcements relating to the Royal Society of Thailand and the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
-          "label": "Related laws, regulations and rules"
+          "label": "Laws & Regulations"
         }
       ]
     },

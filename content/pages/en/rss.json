@@ -1,0 +1,70 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "rss.xml สร้างโดย tools/build.mjs จาก general-news.json + activity-news.json (ต้องตั้ง SITE_URL ตอน build)",
+  "title": "RSS Feed",
+  "navKey": "news",
+  "description": "Follow the latest press releases and activity news of the Office of the Royal Society with an RSS reader",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "RSS Feed",
+      "lead": "Follow the latest press releases and activity news of the Office of the Royal Society with an RSS reader",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities",
+          "href": "news.html"
+        },
+        {
+          "label": "RSS Feed"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "about-rss",
+      "heading": "What is RSS?",
+      "paragraphs": [
+        "RSS (Really Simple Syndication) is a file format for publishing frequently updated news. Add the RSS link to an RSS reader or news app to receive the Office's latest news without visiting the website."
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "feeds",
+      "variant": "alt",
+      "heading": "Office RSS feeds",
+      "items": [
+        {
+          "title": "News and Activities (general news and activity news)",
+          "href": "rss.xml",
+          "icon": "i-megaphone",
+          "desc": "Copy this link into your RSS reader"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "how",
+      "heading": "How to follow news via RSS",
+      "items": [
+        {
+          "title": "Copy the RSS link",
+          "body": "Right-click the RSS feed link above and choose Copy link address"
+        },
+        {
+          "title": "Open your RSS reader",
+          "body": "Open the RSS reader or app you use and choose to add a new feed"
+        },
+        {
+          "title": "Paste the link and save",
+          "body": "Paste the copied link and save. New Office news will then appear in the reader automatically."
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=35 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Activity news",
+  "title": "Activities",
   "navKey": "news",
   "description": "Activity news of the Office of the Royal Society",
   "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Activity news",
+      "heading": "Activities",
       "lead": "Activity news of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Activity news"
+          "label": "Activities"
         }
       ],
       "image": "assets/images/orst/news/data0004-00004279-960.jpg",
@@ -44,7 +44,7 @@
           "href": "news-65cqj0810081.html",
           "image": "assets/images/orst/news/data0002-00002523-640.jpg",
           "excerpt": "2 photos",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Invitation to apply for the Youth Thai Language Skills Competition 2022",
@@ -58,7 +58,7 @@
           "title": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2021",
           "publishedAt": "2021-03-25",
           "href": "news-64cyo5521081.html",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Minister Attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society",
@@ -106,7 +106,7 @@
           "title": "Announcement of the postponement of the Royal Society of Thailand Commendation Award ceremony 2019",
           "publishedAt": "2020-03-17",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOM3028031",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Project to build awareness and understanding of the Integrity and Transparency Assessment of the Office of the Royal Society, and study visit on the sufficiency economy in Chachoengsao Province",
@@ -208,7 +208,7 @@
           "title": "Call for entries to the Competition for Writing Books Teaching Buddhism to Children 2020",
           "publishedAt": "2019-08-27",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0106091",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "Minister Attached to the Prime Minister's Office and delegation visit the Office of the Royal Society and give policy guidance",
@@ -622,7 +622,7 @@
           "title": "Call for entries: Contest for Writing Books Teaching Buddhism to Children 2019",
           "publishedAt": "2018-08-09",
           "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQQ0444081",
-          "category": "Announcement"
+          "category": "Announcements"
         },
         {
           "title": "The Office of the Royal Society holds a workshop and study visit to collect Thai dialect data in the Northern Region in Chiang Rai Province",

@@ -1,0 +1,36 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีเอกสารหน้านี้ — รอข้อมูลจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "Service Time Standards",
+  "navKey": "about",
+  "description": "Service time standards of the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Service Time Standards",
+      "lead": "Service time standards of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Service Time Standards"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Service Time Standards documents — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

@@ -36,40 +36,6 @@
       "columns": 2,
       "groups": [
         {
-          "heading": "ข้อมูลองค์กร",
-          "icon": "i-book",
-          "items": [
-            {
-              "title": "ประวัติความเป็นมา",
-              "href": "history.html"
-            },
-            {
-              "title": "วิสัยทัศน์ พันธกิจ",
-              "href": "vision-mission.html"
-            },
-            {
-              "title": "ค่านิยม",
-              "href": "core-values.html"
-            },
-            {
-              "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
-              "href": "organization-structure.html"
-            },
-            {
-              "title": "เครื่องหมายราชการ",
-              "href": "emblem.html"
-            },
-            {
-              "title": "กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง",
-              "href": "laws-regulations.html"
-            },
-            {
-              "title": "อำนาจหน้าที่และภารกิจ",
-              "href": "duties.html"
-            }
-          ]
-        },
-        {
           "heading": "ผู้บริหาร",
           "icon": "i-user",
           "items": [
@@ -82,7 +48,8 @@
               "href": "cio.html"
             },
             {
-              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO"
+              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO",
+              "href": "cio-it-management.html"
             }
           ]
         },
@@ -122,6 +89,40 @@
           ]
         },
         {
+          "heading": "ข้อมูลองค์กร",
+          "icon": "i-book",
+          "items": [
+            {
+              "title": "ประวัติความเป็นมา",
+              "href": "history.html"
+            },
+            {
+              "title": "วิสัยทัศน์ พันธกิจ",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "ค่านิยม",
+              "href": "core-values.html"
+            },
+            {
+              "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "เครื่องหมายราชการ",
+              "href": "emblem.html"
+            },
+            {
+              "title": "กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "อำนาจหน้าที่และภารกิจ",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
           "heading": "บุคลากรและการบริหารทรัพยากรบุคคล",
           "icon": "i-people",
           "items": [
@@ -130,13 +131,16 @@
               "href": "committees.html"
             },
             {
-              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล"
+              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล",
+              "href": "hr-plan.html"
             },
             {
-              "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล"
+              "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล",
+              "href": "hr-criteria.html"
             },
             {
-              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี"
+              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี",
+              "href": "hr-annual-report.html"
             }
           ]
         }

@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=23 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Academic lectures",
+  "title": "Academic Lectures",
   "navKey": "news",
   "description": "Academic lectures by Fellows of the Royal Society and experts",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Academic lectures",
+      "heading": "Academic Lectures",
       "lead": "Academic lectures by Fellows of the Royal Society and experts",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "News and activities",
+          "label": "News and Activities",
           "href": "news.html"
         },
         {
-          "label": "Academic lectures"
+          "label": "Academic Lectures"
         }
       ]
     },

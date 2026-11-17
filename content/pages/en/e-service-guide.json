@@ -1,0 +1,76 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ขั้นตอนตามระบบงานบริการ e-Services ของเว็บเดิม (orst.go.th/info.asp)",
+  "title": "How to Use e-Services",
+  "navKey": "services",
+  "description": "Steps for submitting online service requests to the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "How to Use e-Services",
+      "lead": "Steps for submitting online service requests to the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services",
+          "href": "services.html"
+        },
+        {
+          "label": "How to Use e-Services"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "steps",
+      "layout": "timeline",
+      "heading": "How to submit a request",
+      "items": [
+        {
+          "title": "Choose a service",
+          "body": "Choose the service you need on the e-Services page"
+        },
+        {
+          "title": "Read the regulations",
+          "body": "Read the regulations and conditions of the service in full"
+        },
+        {
+          "title": "Download and complete the form",
+          "body": "Download the request form, fill it in and prepare supporting documents"
+        },
+        {
+          "title": "Submit documents",
+          "body": "Email the form and supporting documents to saraban@orst.go.th (.pdf .doc .docx files, up to 10MB)"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related services",
+      "items": [
+        {
+          "title": "e-Services",
+          "href": "e-services.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "Download Forms",
+          "href": "download-forms.html",
+          "icon": "i-download"
+        },
+        {
+          "title": "Contact the Office",
+          "href": "contact.html",
+          "icon": "i-phone-call"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

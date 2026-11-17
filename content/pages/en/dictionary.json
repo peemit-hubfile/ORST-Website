@@ -48,14 +48,14 @@
         },
         {
           "icon": "i-form",
-          "title": "Coined technical terms",
+          "title": "ORST Coined Words Online",
           "body": "Coined technical terms, organized by academic field",
           "href": "https://coined-word.orst.go.th/",
           "meta": "Academic terms"
         },
         {
           "icon": "i-database",
-          "title": "Encyclopedias and taxonomy",
+          "title": "Encyclopedia & Taxonomy",
           "body": "Knowledge repository and word categories for academic reference",
           "href": "https://lst.nectec.or.th/encyclopedia/",
           "meta": "Reference repository"
@@ -134,7 +134,7 @@
           "href": "services.html"
         },
         {
-          "label": "Contact us",
+          "label": "Contact Us",
           "href": "contact.html",
           "variant": "ghost"
         }

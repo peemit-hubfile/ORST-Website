@@ -1,0 +1,63 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีหน้านี้ — รอเอกสารจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "คู่มือสำหรับประชาชน",
+  "navKey": "services",
+  "description": "คู่มือสำหรับประชาชนในการขอรับบริการจากสำนักงานราชบัณฑิตยสภา ตามพระราชบัญญัติการอำนวยความสะดวกในการพิจารณาอนุญาตของทางราชการ",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คู่มือสำหรับประชาชน",
+      "lead": "คู่มือสำหรับประชาชนในการขอรับบริการจากสำนักงานราชบัณฑิตยสภา ตามพระราชบัญญัติการอำนวยความสะดวกในการพิจารณาอนุญาตของทางราชการ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ",
+          "href": "services.html"
+        },
+        {
+          "label": "คู่มือสำหรับประชาชน"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "อยู่ระหว่างรวบรวมข้อมูล",
+      "body": "[คู่มือสำหรับประชาชน — รอข้อมูลจากสำนักงาน]"
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "บริการที่เกี่ยวข้อง",
+      "items": [
+        {
+          "title": "งานบริการ (E-Service)",
+          "href": "e-services.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "ดาวน์โหลดแบบฟอร์ม",
+          "href": "download-forms.html",
+          "icon": "i-download"
+        },
+        {
+          "title": "คำแนะนำการใช้บริการออนไลน์",
+          "href": "e-service-guide.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "ติดต่อสำนักงาน",
+          "href": "contact.html",
+          "icon": "i-phone-call"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีเอกสารหน้านี้ — รอข้อมูลจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "Public Disclosure (ITA/OIT)",
+  "navKey": "about",
+  "description": "Public disclosure under the Integrity and Transparency Assessment of public agencies (ITA / OIT)",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Public Disclosure (ITA/OIT)",
+      "lead": "Public disclosure under the Integrity and Transparency Assessment of public agencies (ITA / OIT)",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Public Disclosure (ITA/OIT)"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Public Disclosure (ITA/OIT) documents — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

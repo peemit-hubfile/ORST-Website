@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-VISION (อำนาจหน้าที่) และ ABOUT-ORGCHART (หน่วยงานภายใน) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Powers, duties and missions",
+  "title": "Duties & Responsibilities",
   "navKey": "about",
   "description": "Powers and duties of the Office of the Royal Society under the Royal Society of Thailand Act B.E. 2558 and its organizational divisions",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Powers, duties and missions",
+      "heading": "Duties & Responsibilities",
       "lead": "Powers and duties of the Office of the Royal Society under the Royal Society of Thailand Act B.E. 2558 and its organizational divisions",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "About us",
+          "label": "About Us",
           "href": "about.html"
         },
         {
-          "label": "Powers, duties and missions"
+          "label": "Duties & Responsibilities"
         }
       ]
     },

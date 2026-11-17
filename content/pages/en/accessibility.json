@@ -1,0 +1,82 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "อธิบายเครื่องมือที่มีจริงในเว็บ (โมดัลช่วยการเข้าถึงใน components.js) — ระดับมาตรฐานรอผลตรวจ",
+  "title": "Accessibility",
+  "navKey": "home",
+  "description": "Tools and practices that help everyone access content on the Office of the Royal Society website",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Accessibility",
+      "lead": "Tools and practices that help everyone access content on the Office of the Royal Society website",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Accessibility"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "tools",
+      "layout": "cards",
+      "heading": "Accessibility tools",
+      "intro": "Use the “Accessibility” button at the bottom right of every page to open these tools",
+      "items": [
+        {
+          "icon": "i-access",
+          "title": "Adjust text size",
+          "body": "Increase, decrease or reset the text size of the whole page"
+        },
+        {
+          "icon": "i-eye",
+          "title": "High contrast colors",
+          "body": "Switch to strongly contrasting background and text colours"
+        },
+        {
+          "icon": "i-book",
+          "title": "Easy reading mode",
+          "body": "Increase line and letter spacing for easier reading"
+        },
+        {
+          "icon": "i-check",
+          "title": "Stop motion",
+          "body": "Turn off animations and auto-scrolling"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "keyboard",
+      "heading": "Keyboard and screen reader use",
+      "paragraphs": [
+        "Press Tab at the top of a page to use the “Skip to main content” link. All menus and buttons work with the keyboard.",
+        "Images have text descriptions, and links that open in a new tab are announced to screen readers."
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "standard",
+      "tone": "info",
+      "body": "[Accessibility conformance level achieved (e.g. WCAG 2.1 / Thai government website standard) — awaiting audit results]"
+    },
+    {
+      "type": "link-list",
+      "id": "contact",
+      "variant": "alt",
+      "heading": "Report an accessibility problem",
+      "items": [
+        {
+          "title": "Report it through the contact form",
+          "href": "contact.html#message-form",
+          "icon": "i-form"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

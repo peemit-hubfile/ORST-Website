@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-ITMS (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Information Technology Master Plan",
+  "title": "IT Master Plan",
   "navKey": "about",
   "description": "Information Technology Master Plan and Digital Action Plan of the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Information Technology Master Plan",
+      "heading": "IT Master Plan",
       "lead": "Information Technology Master Plan and Digital Action Plan of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "Government operations",
+          "label": "Operations",
           "href": "operations.html"
         },
         {
-          "label": "Information Technology Master Plan"
+          "label": "IT Master Plan"
         }
       ]
     },

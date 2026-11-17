@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=19 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Monthly performance results by output and activity",
+  "title": "Monthly Performance",
   "navKey": "about",
   "description": "Monthly performance report by output and activity",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Monthly performance results by output and activity",
+      "heading": "Monthly Performance",
       "lead": "Monthly performance report by output and activity",
       "breadcrumb": [
         {
@@ -16,11 +16,11 @@
           "href": "index.html"
         },
         {
-          "label": "Government operations",
+          "label": "Operations",
           "href": "operations.html"
         },
         {
-          "label": "Monthly performance results by output and activity"
+          "label": "Monthly Performance"
         }
       ]
     },

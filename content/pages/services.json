@@ -72,6 +72,10 @@
         {
           "label": "คู่มือและสื่อความรู้",
           "href": "#academic-services"
+        },
+        {
+          "label": "บริการทั้งหมด",
+          "href": "#all-services"
         }
       ]
     },
@@ -314,15 +318,109 @@
         {
           "icon": "i-form",
           "title": "คู่มือสำหรับประชาชน",
-          "tag": "อยู่ระหว่างจัดทำ"
+          "href": "citizen-manual.html"
         },
         {
           "icon": "i-megaphone",
           "title": "ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ",
-          "tag": "อยู่ระหว่างจัดทำ"
+          "href": "e-channels.html"
         }
       ],
       "variant": "alt"
+    },
+    {
+      "type": "page-index",
+      "id": "all-services",
+      "heading": "บริการวิชาการทั้งหมด",
+      "columns": 2,
+      "groups": [
+        {
+          "heading": "บริการวิชาการ",
+          "icon": "i-service",
+          "items": [
+            {
+              "title": "พจนานุกรม",
+              "href": "dictionary.html"
+            },
+            {
+              "title": "ศัพท์บัญญัติ",
+              "href": "https://coined-word.orst.go.th/"
+            },
+            {
+              "title": "สารานุกรมและอนุกรมวิธาน",
+              "href": "https://lst.nectec.or.th/encyclopedia/"
+            },
+            {
+              "title": "คลังเอกสารเก่า",
+              "href": "https://da3.thaidlt.org/"
+            },
+            {
+              "title": "ระบบฐานข้อมูลคำทับศัพท์",
+              "href": "https://transliteration.orst.go.th/search"
+            },
+            {
+              "title": "อักขรานุกรมภูมิศาสตร์ไทย",
+              "href": "https://gazetteer.orst.go.th/"
+            },
+            {
+              "title": "คลังความรู้",
+              "href": "knowledge-base.html"
+            },
+            {
+              "title": "ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน",
+              "href": "book-ordering.html"
+            },
+            {
+              "title": "อินโฟกราฟิก",
+              "href": "infographics.html"
+            },
+            {
+              "title": "ระบบทดสอบความรู้ด้านภาษาไทย",
+              "href": "https://etest.orst.go.th/"
+            },
+            {
+              "title": "พจนานุกรมภาษามือไทย",
+              "href": "http://164.115.33.116/"
+            },
+            {
+              "title": "หลักเกณฑ์ต่าง ๆ",
+              "href": "language-guidelines.html"
+            },
+            {
+              "title": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+              "href": "ethnic-language-audio.html"
+            },
+            {
+              "title": "งานบริการ (E-Service)",
+              "href": "e-services.html"
+            },
+            {
+              "title": "คู่มือสำหรับประชาชน",
+              "href": "citizen-manual.html"
+            },
+            {
+              "title": "ดาวน์โหลดแบบฟอร์ม",
+              "href": "download-forms.html"
+            },
+            {
+              "title": "ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ",
+              "href": "e-channels.html"
+            },
+            {
+              "title": "ข้อมูลการอนุญาตที่ดำเนินการแล้ว",
+              "href": "permits-issued.html"
+            },
+            {
+              "title": "ติดตามสถานะคำขอรับบริการ",
+              "href": "track-request.html"
+            },
+            {
+              "title": "คำแนะนำการใช้บริการออนไลน์",
+              "href": "e-service-guide.html"
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "cta-band",

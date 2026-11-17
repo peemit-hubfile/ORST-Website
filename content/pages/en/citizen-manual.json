@@ -1,0 +1,64 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีหน้านี้ — รอเอกสารจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "Citizen's Manual",
+  "navKey": "services",
+  "description": "Citizen's manuals for requesting services from the Office of the Royal Society under the Licensing Facilitation Act",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Citizen's Manual",
+      "lead": "Citizen's manuals for requesting services from the Office of the Royal Society under the Licensing Facilitation Act",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services",
+          "href": "services.html"
+        },
+        {
+          "label": "Citizen's Manual"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Citizen's Manual — awaiting information from the Office]"
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related services",
+      "items": [
+        {
+          "title": "e-Services",
+          "href": "e-services.html",
+          "icon": "i-form"
+        },
+        {
+          "title": "Download Forms",
+          "href": "download-forms.html",
+          "icon": "i-download"
+        },
+        {
+          "title": "How to Use e-Services",
+          "href": "e-service-guide.html",
+          "icon": "i-file"
+        },
+        {
+          "title": "Contact the Office",
+          "href": "contact.html",
+          "icon": "i-phone-call"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,14 +1,14 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "แม่แบบ T3 (หน้าหมวด) — เมนู 4 การปฏิบัติราชการ ลิงก์ไปหน้าที่สร้างจากข้อมูลจริงของ orst.go.th รายการที่ไม่มี href = รอเนื้อหาจาก ORST",
-  "title": "Government operations",
+  "_note": "แม่แบบ T3 (หน้าหมวด) — เมนู 4 การปฏิบัติราชการ ลำดับตามผังเว็บไซต์ ORST (สร้างโดย step10_operations.py)",
+  "title": "Operations",
   "navKey": "about",
   "description": "Action plans, performance results and open government data of the Office of the Royal Society",
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Government operations",
+      "heading": "Operations",
       "lead": "Action plans, performance results and open government data of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -16,7 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "Government operations"
+          "label": "Operations"
         }
       ]
     },
@@ -25,39 +25,39 @@
       "columns": 3,
       "groups": [
         {
-          "heading": "Action plan",
+          "heading": "Plans",
           "icon": "i-journal",
           "items": [
             {
-              "title": "Related laws",
+              "title": "Related Laws",
               "href": "related-laws.html"
             },
             {
-              "title": "Operation manuals and standards",
+              "title": "Operation Manuals & Standards",
               "href": "operation-manuals.html"
             },
             {
-              "title": "5-year strategic plan and action plan",
+              "title": "5-Year Strategic Plan",
               "href": "strategic-plans.html"
             },
             {
-              "title": "Annual action plan",
+              "title": "Annual Action Plan",
               "href": "annual-action-plan.html"
             },
             {
-              "title": "Business continuity plan",
+              "title": "Business Continuity Plan",
               "href": "continuity-plan.html"
             },
             {
-              "title": "Information Technology Master Plan",
+              "title": "IT Master Plan",
               "href": "it-master-plan.html"
             },
             {
-              "title": "Risk management plan",
+              "title": "Risk Management Plan",
               "href": "risk-management-plan.html"
             },
             {
-              "title": "Energy Conservation at the Office of the Royal Society",
+              "title": "Energy Saving",
               "href": "energy-saving.html"
             },
             {
@@ -65,78 +65,89 @@
               "href": "internal-audit-charter.html"
             },
             {
-              "title": "Annual operational plan and expenditure budget"
+              "title": "Annual Plan & Budget",
+              "href": "annual-budget-plan.html"
             }
           ]
         },
         {
-          "heading": "Performance results",
+          "heading": "Performance",
           "icon": "i-file",
           "items": [
             {
-              "title": "Service manuals and standards",
+              "title": "Service Manuals & Standards",
               "href": "service-manuals.html"
             },
             {
-              "title": "Monthly performance results by output and activity",
+              "title": "Monthly Performance",
               "href": "monthly-performance.html"
             },
             {
-              "title": "Service time standards"
+              "title": "Service Time Standards",
+              "href": "service-time-standards.html"
             },
             {
-              "title": "Summary of performance under the performance agreement",
+              "title": "Performance Agreement Results",
               "href": "performance-agreement.html"
             },
             {
-              "title": "Summary report on unit cost per output analysis / trial balance",
+              "title": "Unit Cost & Trial Balance",
               "href": "unit-cost.html"
             },
             {
-              "title": "Feedback and suggestions form on operations",
+              "title": "Feedback Form",
               "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
               "tag": "Google Form"
             },
             {
-              "title": "6-month report on monitoring of operations and budget use"
+              "title": "6-Month Report",
+              "href": "six-month-report.html"
             },
             {
-              "title": "Annual operational results report"
+              "title": "Annual Report",
+              "href": "annual-report.html"
             },
             {
-              "title": "Annual budget expenditure report"
+              "title": "Budget Spending Report",
+              "href": "budget-spending-report.html"
             },
             {
-              "title": "Service statistics"
+              "title": "Service Statistics",
+              "href": "service-statistics.html"
             },
             {
-              "title": "Service satisfaction survey report"
+              "title": "Satisfaction Survey Results",
+              "href": "satisfaction-survey.html"
             }
           ]
         },
         {
-          "heading": "Open government data and information disclosure",
+          "heading": "Open Government Data",
           "icon": "i-database",
           "items": [
             {
-              "title": "Information under the Official Information Act B.E. 2540 (1997)"
+              "title": "Official Information",
+              "href": "official-information.html"
             },
             {
-              "title": "Open government datasets (Open Data)"
+              "title": "Open Datasets",
+              "href": "open-data.html"
             },
             {
-              "title": "Open dataset request form"
+              "title": "Request a Dataset",
+              "href": "open-data-request.html"
             },
             {
-              "title": "Personal Data Protection Policy",
-              "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038",
-              "tag": "Former website"
+              "title": "Data Policy & Plan",
+              "href": "data-policy.html"
             },
             {
-              "title": "Public information disclosure (ITA / OIT)"
+              "title": "Public Disclosure (ITA/OIT)",
+              "href": "public-disclosure.html"
             },
             {
-              "title": "Channels for data subjects to exercise their rights"
+              "title": "Data Subject Request",
+              "href": "data-subject-request.html"
             }
           ]
         }
