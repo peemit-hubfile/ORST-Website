@@ -1,0 +1,159 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าหมวด 3 เกี่ยวกับสำนักงาน (แม่แบบ T3) ข้อความภาพรวมจาก orst.go.th — รายการที่ไม่มี href = รอเนื้อหาจาก ORST",
+  "title": "About us",
+  "navKey": "about",
+  "description": "History, vision, executives, structure, laws and anti-corruption information of the Office of the Royal Society",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "About the Office",
+      "heading": "About us",
+      "lead": "History, vision, executives, structure, laws and anti-corruption information of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About us"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "overview",
+      "heading": "Organization overview",
+      "paragraphs": [
+        "The Office of the Royal Society is a department-level government agency that is not part of the Office of the Prime Minister, any ministry or sub-ministry, and reports directly to the Prime Minister",
+        "Vision: The Office of the Royal Society is the principal institution of the national intellectual network and a knowledge development organization that serves as a source of academic reference"
+      ]
+    },
+    {
+      "type": "page-index",
+      "id": "sections",
+      "variant": "alt",
+      "columns": 2,
+      "groups": [
+        {
+          "heading": "Organization information",
+          "icon": "i-book",
+          "items": [
+            {
+              "title": "History",
+              "href": "history.html"
+            },
+            {
+              "title": "Vision and mission",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "Core values",
+              "href": "core-values.html"
+            },
+            {
+              "title": "Organizational structure and divisions",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "Official emblem",
+              "href": "emblem.html"
+            },
+            {
+              "title": "Related laws, regulations and rules",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "Powers, duties and missions",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
+          "heading": "Executives",
+          "icon": "i-user",
+          "items": [
+            {
+              "title": "Executives of the Office of the Royal Society",
+              "href": "executives.html"
+            },
+            {
+              "title": "Chief Information Officer (CIO)",
+              "href": "cio.html"
+            },
+            {
+              "title": "Information technology management by the CIO"
+            }
+          ]
+        },
+        {
+          "heading": "Anti-Corruption Operation Center (ACOC)",
+          "icon": "i-shield",
+          "href": "anti-corruption-center.html",
+          "items": [
+            {
+              "title": "ACOC information",
+              "href": "anti-corruption-center.html"
+            },
+            {
+              "title": "Channels for reporting complaints of corruption and misconduct",
+              "href": "corruption-complaints.html"
+            },
+            {
+              "title": "Guidelines for handling complaints of corruption and misconduct",
+              "href": "complaint-guidelines.html"
+            },
+            {
+              "title": "Statistics on complaints of corruption and misconduct",
+              "href": "complaint-statistics.html"
+            },
+            {
+              "title": "Anti-bribery measures (No Gift Policy)",
+              "href": "no-gift-policy.html"
+            },
+            {
+              "title": "Risk assessment and corruption prevention plan",
+              "href": "anti-corruption-plan.html"
+            },
+            {
+              "title": "Ethics and measures to promote integrity and transparency",
+              "href": "ethics.html"
+            }
+          ]
+        },
+        {
+          "heading": "Personnel and human resource management",
+          "icon": "i-people",
+          "items": [
+            {
+              "title": "Academic committees and other committees",
+              "href": "committees.html"
+            },
+            {
+              "title": "Human resource management policy and plan"
+            },
+            {
+              "title": "Human resource management and development guidelines"
+            },
+            {
+              "title": "Annual report on human resource management and development"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "Government operations",
+      "body": "Action plans, performance results and open government data",
+      "actions": [
+        {
+          "label": "View government operations",
+          "href": "operations.html"
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-11-13",
+  "lang": "en"
+}

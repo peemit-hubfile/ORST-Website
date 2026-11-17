@@ -1,0 +1,140 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=8 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Official news",
+  "navKey": "news",
+  "description": "Official news published by the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Official news",
+      "lead": "Official news published by the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Official news"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Personal Data Protection Policy of the Office of the Royal Society",
+          "publishedAt": "2022-10-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 19 (12 September 2015 - 30 April 2016)",
+          "publishedAt": "2016-07-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EHQ2224088"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 18 (12 September 2015 - 31 March 2016)",
+          "publishedAt": "2016-06-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EHQ2320034"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 17 (12 September 2015 - 29 February 2016)",
+          "publishedAt": "2016-05-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMI5025088"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy by the Kor Kho Ro committee, January 2016",
+          "publishedAt": "2016-04-12",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMI5226025"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 15 (12 September 2014 - 31 December 2015)",
+          "publishedAt": "2016-03-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMI5355038"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 14 (12 September 2014 - 30 November 2015)",
+          "publishedAt": "2016-02-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMI5506009"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 13 (12 September 2014 - 31 October 2015)",
+          "publishedAt": "2016-01-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMI5809081"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 12 (12 September 2014 - 30 September 2015)",
+          "publishedAt": "2015-11-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMI5942078"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 11 (12 September 2014 - 31 August 2015)",
+          "publishedAt": "2015-11-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ0043088"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 10 (12 September 2014 - 31 July 2015)",
+          "publishedAt": "2015-09-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ0211009"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 9 (12 September 2014 - 30 June 2015)",
+          "publishedAt": "2015-08-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ0336019"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 8 (12 September 2014 - 31 May 2015)",
+          "publishedAt": "2015-07-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ0927028"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 7 (12 September 2014 - 30 April 2015)",
+          "publishedAt": "2015-06-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ1058094"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 6 (12 September 2014 - 31 March 2015)",
+          "publishedAt": "2015-05-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ1210028"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 5 (12 September 2014 - 28 February 2015)",
+          "publishedAt": "2015-04-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ1326069"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 4 (12 September 2014 - 31 January 2015)",
+          "publishedAt": "2015-03-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ1508081"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 3 (12 September - 31 December 2014), part 2",
+          "publishedAt": "2015-02-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ1613041"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 3 (12 September - 31 December 2014), part 1",
+          "publishedAt": "2015-02-12",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ1844056"
+        },
+        {
+          "title": "Summary report on driving and accelerating the implementation of government policy, 2-month period (12 September - 30 November 2014)",
+          "publishedAt": "2015-01-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ2116094"
+        },
+        {
+          "title": "Notice of amendment to a Royal Institute announcement",
+          "publishedAt": "2013-09-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F63EMJ2320081"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

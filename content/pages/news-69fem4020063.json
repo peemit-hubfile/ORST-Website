@@ -4,13 +4,18 @@
   "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา",
   "navKey": "news",
   "description": "เมื่อวันที่ ๔ มิถุนายน พ.ศ. ๒๕๖๙ เวลา ๑๕.๐๐ น. ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ดร.ศุภฤกษ์ ภู่พงศ์",
+  "sideNav": false,
   "updatedAt": "2026-06-05",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ข่าวประชาสัมพันธ์",
+      "variant": "article",
+      "tag": "ข่าวประชาสัมพันธ์",
+      "date": "2026-06-05",
       "heading": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙",
-      "lead": "เผยแพร่เมื่อ 5 มิถุนายน 2569",
+      "image": "assets/images/orst/news/data0005-00005229-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิม",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,17 +35,6 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0005-00005229-960.jpg",
-      "alt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิม",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG"
-    },
-    {
       "type": "rich-text",
       "id": "content",
       "paragraphs": [
@@ -48,72 +42,80 @@
       ]
     },
     {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (8 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
         {
           "image": "assets/images/orst/news/data0005-00005229-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
         },
         {
           "image": "assets/images/orst/news/data0005-00005230-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005230.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005230.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
         },
         {
           "image": "assets/images/orst/news/data0005-00005231-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 3",
-          "title": "ภาพที่ 3",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005231.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005231.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
         },
         {
           "image": "assets/images/orst/news/data0005-00005232-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 4",
-          "title": "ภาพที่ 4",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005232.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005232.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
         },
         {
           "image": "assets/images/orst/news/data0005-00005233-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 5",
-          "title": "ภาพที่ 5",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005233.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005233.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
         },
         {
           "image": "assets/images/orst/news/data0005-00005234-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 6",
-          "title": "ภาพที่ 6",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005234.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005234.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
         },
         {
           "image": "assets/images/orst/news/data0005-00005235-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 7",
-          "title": "ภาพที่ 7",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005235.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005235.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
         },
         {
           "image": "assets/images/orst/news/data0005-00005236-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 8",
-          "title": "ภาพที่ 8",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005236.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005236.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
         }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "general-news.html"
+          "title": "พิธีลงนามถวายพระพรชัยมงคลสมเด็จพระนางเจ้าฯ พระบรมราชินี เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๓ มิถุนายน ๒๕๖๓",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63FTU3628056",
+          "category": "ข่าว",
+          "publishedAt": "2020-06-02"
+        },
+        {
+          "title": "กิจกรรมเฉลิมพระเกียรติ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๓ มิถุนายน ๒๕๖๘",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68FWS0141005",
+          "category": "ข่าว",
+          "publishedAt": "2025-06-23"
+        },
+        {
+          "title": "“การใช้ถ้อยคำถวายพระพรชัยมงคลแด่สมเด็จพระนางเจ้าฯ พระบรมราชินีนาถ ในรัชกาลที่ ๙”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP5903094",
+          "category": "กิจกรรม",
+          "publishedAt": "2018-08-10"
+        },
+        {
+          "title": "ตัวอย่างบทอาศิรวาทและถ้อยคำกล่าวถวายพระพรชัยมงคล แด่สมเด็จพระนางเจ้าฯ พระบรมราชินี ในโอกาสวันเฉลิมพระชนมพรรษา ๓ มิถุนายน ๒๕๖๒",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23N1522075",
+          "category": "ข่าว",
+          "publishedAt": "2019-05-21"
         }
       ]
     }

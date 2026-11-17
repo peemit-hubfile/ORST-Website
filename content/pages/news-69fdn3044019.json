@@ -4,13 +4,18 @@
   "title": "ช่องทางแจ้งเรื่องร้องเรียนการทุจริตของสำนักงาน ป.ป.ช. และสำนักงาน ป.ป.ท.",
   "navKey": "news",
   "description": "ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+  "sideNav": false,
   "updatedAt": "2026-07-20",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ข่าวประชาสัมพันธ์",
+      "variant": "article",
+      "tag": "ข่าวประชาสัมพันธ์",
+      "date": "2026-07-20",
       "heading": "ช่องทางแจ้งเรื่องร้องเรียนการทุจริตของสำนักงาน ป.ป.ช. และสำนักงาน ป.ป.ท.",
-      "lead": "เผยแพร่เมื่อ 20 กรกฎาคม 2569",
+      "image": "assets/images/orst/news/data0005-00005292-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ช่องทางแจ้งเรื่องร้องเรียนการทุจริตของสำนักงาน ป.ป.ช. และสำนักงาน ป.ป.ท.",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005292.PNG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,17 +35,6 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0005-00005292-960.jpg",
-      "alt": "ภาพประกอบข่าว ช่องทางแจ้งเรื่องร้องเรียนการทุจริตของสำนักงาน ป.ป.ช. และสำนักงาน ป.ป.ท.",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005292.PNG"
-    },
-    {
       "type": "rich-text",
       "id": "content",
       "paragraphs": [
@@ -52,13 +46,38 @@
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวอื่น ๆ",
+      "href": "general-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "general-news.html"
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
+          "href": "news-69kbj5538066.html",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-11-02"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+          "href": "news-69jaj1403044.html",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-31"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+          "href": "news-69jsn0030075.html",
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์",
+          "href": "news-69jsm4847075.html",
+          "image": "assets/images/orst/news/data0005-00005420-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-19"
         }
       ]
     }

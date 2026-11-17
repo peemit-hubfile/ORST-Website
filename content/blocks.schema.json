@@ -17,7 +17,8 @@
       "enum": ["home", "dictionary", "knowledge", "publications", "news", "services", "about", "contact"]
     },
     "description": { "type": "string", "description": "คำอธิบายหน้าใช้ทำ meta description ยาว 1-2 ประโยค" },
-    "updatedAt": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "วันที่ปรับปรุงข้อมูลล่าสุด (ค.ศ. YYYY-MM-DD) แสดงท้ายหน้าเป็น พ.ศ. — CMS ควรเขียนให้อัตโนมัติเมื่อบันทึก" },
+    "sideNav": { "type": "boolean", "description": "false = ไม่แสดงแถบเมนูย่อยของหมวดข้างเนื้อหา (หน้าเต็มความกว้าง เช่น หน้ารวมข่าว) — ค่าเริ่มต้น true" },
+    "updatedAt": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "วันที่ปรับปรุงข้อมูลล่าสุด (ค.ศ. YYYY-MM-DD) ตอนนี้ไม่แสดงบนหน้า — CMS ควรเขียนให้อัตโนมัติเมื่อบันทึก" },
     "blocks": {
       "type": "array",
       "minItems": 1,
@@ -30,7 +31,7 @@
     "common": {
       "properties": {
         "id": { "type": "string", "description": "id ของ <section> ใช้ทำ anchor link" },
-        "variant": { "enum": ["default", "alt"], "description": "alt = พื้นหลังสีขาว, default = พื้นสีกระดาษ" },
+        "variant": { "enum": ["default", "alt", "dark"], "description": "alt = พื้นหลังสีขาว, default = พื้นสีกระดาษ, dark = แถบสีเขียวเข้ม ตัวอักษรขาว (ใช้คั่นจังหวะหน้า)" },
         "heading": { "type": "string" },
         "lead": { "type": "string" },
         "eyebrow": { "type": "string", "description": "ข้อความตัวเล็กสีทองเหนือหัวข้อ" },
@@ -59,7 +60,7 @@
       "type": "string",
       "description": "id ไอคอนจาก sprite ใน assets/js/components.js",
       "enum": [
-        "i-search", "i-book", "i-eye", "i-menu", "i-x", "i-user", "i-access",
+        "i-search", "i-calendar", "i-download", "i-share", "i-copy", "i-print", "i-book", "i-eye", "i-menu", "i-x", "i-user", "i-access",
         "i-shield", "i-people", "i-file", "i-video", "i-form", "i-dictionary",
         "i-database", "i-journal", "i-ebook", "i-megaphone", "i-service",
         "i-chevron", "i-arrow", "i-plus", "i-map", "i-phone", "i-pen", "i-puzzle",
@@ -76,6 +77,7 @@
         {
           "oneOf": [
             { "$ref": "#/definitions/pageHero" },
+            { "$ref": "#/definitions/anchorNav" },
             { "$ref": "#/definitions/richText" },
             { "$ref": "#/definitions/cardGrid" },
             { "$ref": "#/definitions/featureList" },
@@ -94,7 +96,9 @@
             { "$ref": "#/definitions/pageIndex" },
             { "$ref": "#/definitions/personGrid" },
             { "$ref": "#/definitions/figure" },
-            { "$ref": "#/definitions/share" }
+            { "$ref": "#/definitions/share" },
+            { "$ref": "#/definitions/newsMedia" },
+            { "$ref": "#/definitions/newsRelated" }
           ]
         }
       ]
@@ -113,9 +117,55 @@
             "properties": { "label": { "type": "string" }, "href": { "type": "string" } }
           }
         },
-        "actions": { "$ref": "#/definitions/actionList" }
+        "actions": { "$ref": "#/definitions/actionList" },
+        "image": { "type": "string", "description": "รูปพื้นหลังเต็มความกว้าง (แนวนอน ≥ 1600px) — ไม่ใส่ = หัวหน้าเพจแบบเรียบ" },
+        "imageAlt": { "type": "string", "description": "คำอธิบายรูป — เว้นว่างถ้าเป็นภาพประกอบตกแต่ง" },
+        "variant": { "enum": ["article"], "description": "article = หัวหน้าเพจรายละเอียดข่าว/บทความ: ป้ายประเภท (tag) + หัวข้อ + แถบข้อมูล (meta) พื้นหลังเป็นภาพของข่าวใต้ม่านสีเขียว (ไม่มีภาพ = พื้นเขียวลายตราสัญลักษณ์)" },
+        "tag": { "type": "string", "description": "ป้ายประเภทเหนือหัวข้อ (variant article) เช่น ข่าว / ประกาศ / กิจกรรม" },
+        "date": { "type": "string", "description": "วันที่เผยแพร่ YYYY-MM-DD (variant article) แสดงต่อจากประเภท" },
+        "imageHref": { "type": "string", "description": "ภาพขนาดเต็มของภาพเด่น (variant article) กดแล้วเปิด lightbox" },
+        "caption": { "type": "string", "description": "คำบรรยายใต้ภาพเด่น (variant article)" },
+        "share": { "type": "boolean", "description": "false = ไม่แสดงปุ่ม แชร์ / คัดลอกลิงก์ / พิมพ์ (variant article)" },
+        "meta": {
+          "type": "array",
+          "maxItems": 4,
+          "description": "ข้อมูลสั้น ๆ ใต้หัวข้อ (variant article) เช่น วันที่เผยแพร่ จำนวนภาพ จำนวนไฟล์แนบ",
+          "items": {
+            "type": "object",
+            "required": ["label"],
+            "properties": { "icon": { "$ref": "#/definitions/iconId" }, "label": { "type": "string" } }
+          }
+        },
+        "highlights": {
+          "type": "array",
+          "maxItems": 4,
+          "description": "จุดเด่นสั้น ๆ ใต้ปุ่ม (แสดงเฉพาะแบบมีรูป)",
+          "items": {
+            "type": "object",
+            "required": ["label"],
+            "properties": { "icon": { "$ref": "#/definitions/iconId" }, "label": { "type": "string" } }
+          }
+        }
       },
       "required": ["type", "heading"]
+    },
+
+    "anchorNav": {
+      "description": "เมนูลัดไปหัวข้อในหน้า ติดใต้ header ขณะเลื่อน ไฮไลต์หัวข้อที่กำลังอ่าน — วางต่อจาก page-hero ในหน้าที่ยาว",
+      "properties": {
+        "type": { "const": "anchor-nav" },
+        "label": { "type": "string", "description": "ชื่อเมนูสำหรับ screen reader (ค่าเริ่มต้น: ไปยังหัวข้อในหน้านี้)" },
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["label", "href"],
+            "properties": { "label": { "type": "string" }, "href": { "type": "string", "pattern": "^#" } }
+          }
+        }
+      },
+      "required": ["type", "items"]
     },
 
     "richText": {
@@ -134,6 +184,7 @@
       "properties": {
         "type": { "const": "card-grid" },
         "columns": { "$ref": "#/definitions/columns" },
+        "layout": { "enum": ["default", "service", "tiles", "list"], "description": "service = การ์ดบริการขนาดใหญ่ (ป้าย tags + ปุ่มชิดล่าง), tiles = การ์ดลิงก์แนวตั้ง (ไอคอน | ชื่อ | คำอธิบาย | โดเมน), list = รายการแถวในกรอบเดียว 2 คอลัมน์" },
         "items": {
           "type": "array",
           "minItems": 1,
@@ -146,6 +197,7 @@
               "href": { "type": "string" },
               "icon": { "$ref": "#/definitions/iconId" },
               "tag": { "type": "string" },
+              "tags": { "type": "array", "items": { "type": "string" }, "description": "ป้ายสั้น ๆ หลายป้าย เช่น ออนไลน์ / แนบเอกสารได้" },
               "meta": { "type": "string" },
               "action": { "type": "string", "description": "ข้อความปุ่มท้ายการ์ด เช่น \"ยื่นคำขอ\" (ใช้คู่กับ href)" }
             }
@@ -160,6 +212,22 @@
       "properties": {
         "type": { "const": "feature-list" },
         "columns": { "$ref": "#/definitions/columns" },
+        "layout": { "enum": ["list", "cards"], "description": "cards = แต่ละรายการเป็นการ์ดมีกรอบ" },
+        "footnote": {
+          "type": "object",
+          "required": ["body"],
+          "description": "แถบหมายเหตุใต้รายการ (ไอคอนโล่)",
+          "properties": { "title": { "type": "string" }, "body": { "type": "string" },
+              "links": {
+                "type": "array",
+                "description": "ปุ่มติดต่อท้ายรายการ — tel: / mailto: / https: (ไอคอนเลือกให้ตามชนิดลิงก์)",
+                "items": {
+                  "type": "object",
+                  "required": ["label", "href"],
+                  "properties": { "label": { "type": "string" }, "href": { "type": "string" }, "icon": { "$ref": "#/definitions/iconId" } }
+                }
+              } }
+        },
         "items": {
           "type": "array",
           "minItems": 1,
@@ -243,6 +311,51 @@
         "href": { "type": "string", "description": "ภาพขนาดเต็ม" }
       },
       "required": ["type", "image"]
+    },
+
+    "newsMedia": {
+      "description": "ท้ายหน้าข่าว: เอกสารแนบ (ซ้าย) | ภาพประกอบข่าวแบบโมเสก (ขวา) — ภาพเกิน 5 ภาพแสดง \"+N\" กดดูทุกภาพใน lightbox",
+      "properties": {
+        "type": { "const": "news-media" },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title"],
+            "properties": { "title": { "type": "string" }, "file": { "type": "string" }, "href": { "type": "string" },
+                            "fileType": { "type": "string" }, "fileSize": { "type": "string" } }
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["image"],
+            "properties": { "image": { "type": "string" }, "href": { "type": "string", "description": "ภาพขนาดเต็ม" }, "alt": { "type": "string" } }
+          }
+        }
+      },
+      "required": ["type"]
+    },
+
+    "newsRelated": {
+      "description": "ข่าวอื่น ๆ ท้ายหน้าข่าว — การ์ดแบบเดียวกับหน้ารวมข่าว (สูงสุด 4 ข่าว)",
+      "properties": {
+        "type": { "const": "news-related" },
+        "heading": { "type": "string" },
+        "href": { "type": "string", "description": "ลิงก์ \"ดูทั้งหมด\"" },
+        "items": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["title", "href"],
+            "properties": { "title": { "type": "string" }, "href": { "type": "string" }, "image": { "type": "string" },
+                            "category": { "type": "string" }, "publishedAt": { "type": "string" } }
+          }
+        }
+      },
+      "required": ["type", "items"]
     },
 
     "share": {
@@ -369,6 +482,8 @@
     "mediaGrid": {
       "description": "การ์ดที่มีรูปภาพ อัตราส่วน 4:3",
       "properties": {
+        "pageSize": { "type": "integer", "minimum": 4, "description": "แบ่งหน้า + ช่องค้นหา (เมื่อรายการมากกว่าค่านี้) เช่น 20" },
+        "unit": { "type": "string", "description": "คำเรียกรายการในข้อความ เช่น \"ภาพ\" (พบ 136 ภาพ)" },
         "type": { "const": "media-grid" },
         "columns": { "$ref": "#/definitions/columns" },
         "ratio": { "enum": ["4:3", "3:4", "1:1", "16:9"], "description": "สัดส่วนกรอบรูป: 4:3 (ค่าเริ่มต้น), 3:4 ปกหนังสือ/รูปแนวตั้ง, 1:1, 16:9" },
@@ -385,6 +500,7 @@
               "title": { "type": "string" },
               "desc": { "type": "string" },
               "href": { "type": "string" },
+              "youtube": { "type": "string", "description": "รหัสวิดีโอ YouTube (เช่น trzQRPLZ9Xw) — การ์ดมีปุ่มเล่น กดแล้วเล่นในป๊อปอัป ไม่ต้องใส่ href" },
               "tag": { "type": "string" }
             }
           }
@@ -425,6 +541,7 @@
       "description": "ขั้นตอนการทำงาน ใส่เลขลำดับให้อัตโนมัติ",
       "properties": {
         "type": { "const": "steps" },
+        "layout": { "enum": ["list", "timeline"], "description": "timeline = เรียงแนวนอนต่อกันด้วยเส้น (เหมาะกับ 3-5 ขั้น)" },
         "items": {
           "type": "array",
           "minItems": 1,

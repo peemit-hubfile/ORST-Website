@@ -1,0 +1,639 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=35 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Activity news",
+  "navKey": "news",
+  "description": "Activity news of the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Activity news",
+      "lead": "Activity news of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Activity news"
+        }
+      ],
+      "image": "assets/images/orst/news/data0004-00004279-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "The Office of the Royal Society organizes volunteer public service and charitable activities on the occasion of the birthday anniversary of His Majesty King Bhumibol Adulyadej The Great, National Day and National Father's Day, 5 December 2024",
+          "publishedAt": "2024-12-23",
+          "href": "news-67lwp3919091.html",
+          "image": "assets/images/orst/news/data0004-00004279-640.jpg",
+          "excerpt": "5 photos",
+          "category": "Activities"
+        },
+        {
+          "title": "Announcement of students qualifying for the final round of the Youth Handwriting Competition 2022, to compete on Saturday, 26 March 2022, as attached",
+          "publishedAt": "2022-03-17",
+          "href": "news-65cqj0810081.html",
+          "image": "assets/images/orst/news/data0002-00002523-640.jpg",
+          "excerpt": "2 photos",
+          "category": "Announcement"
+        },
+        {
+          "title": "Invitation to apply for the Youth Thai Language Skills Competition 2022",
+          "publishedAt": "2022-01-12",
+          "href": "news-65aln3717005.html",
+          "image": "assets/images/orst/news/data0002-00002439-640.jpg",
+          "excerpt": "Schools nationwide are invited to enter Prathom 5-6 (Grade 5-6) students in the Youth Thai Language Skills Competition 2022 (reading aloud skills) via Zoom Cloud Meetings",
+          "category": "Activities"
+        },
+        {
+          "title": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2021",
+          "publishedAt": "2021-03-25",
+          "href": "news-64cyo5521081.html",
+          "category": "Announcement"
+        },
+        {
+          "title": "Minister Attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society",
+          "publishedAt": "2020-08-26",
+          "href": "news-63hyj1446063.html",
+          "image": "assets/images/orst/news/data0001-00001961-640.jpg",
+          "excerpt": "Today (21 August 2020) at 09:00, Mr. Anucha Nakhasai, Minister Attached to the Prime Minister's Office, visited the Office of the Royal Society to attend a meeting of the Office of the Royal Society's Civil Service Sub-Committee acting as the Ministerial Civil Service Sub-Committee, welcomed by Dr. Duangta Tancho, Secretary-General of the Office of the Royal Society, together with executives, civil servants and staff. At 10:00 he went to survey the Residence of Chao Chom Manda Luean, a historic building for which the Office of the Royal Society has received budget approval for renovation into an office and history hall of the Royal Society of Thailand, separate from the offices of the Office of the Royal Society, which are expected to move from Sanam Suea Pa to the Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5th December B.E. 2550, Zone C, around early 2024. He then returned to visit and give policy guidance to the Office of the Royal Society in the 4th-floor meeting room from 11:00 to 12:00",
+          "category": "Activities"
+        },
+        {
+          "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 4, Southern Region",
+          "publishedAt": "2020-08-17",
+          "href": "news-63hqn2359047.html",
+          "image": "assets/images/orst/news/data0001-00001939-640.jpg",
+          "excerpt": "On 15 August 2020, at Kaeo Samui 1 Room, Kaeo Samui Hotel, Surat Thani Province, Ms. Bunthom Kranthong, Deputy Secretary-General of the Royal Society, chaired the judging of the final round of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 4, Southern Region, attended by the judging committee, contestants and the teachers who coached students selected in the first round",
+          "category": "Activities"
+        },
+        {
+          "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region",
+          "publishedAt": "2020-08-17",
+          "href": "news-63hqn2824081.html",
+          "image": "assets/images/orst/news/data0001-00001953-640.jpg",
+          "excerpt": "On 15 August 2020, in the Benjarong Room, Wiang Lakhon Hotel, Lampang Province, Dr. Duangta Tancho, Secretary-General of the Office of the Royal Society, chaired the judging of the final round of the storytelling contest on “Local Wisdom: Food, Toys and Everyday Objects”, Group 2, Northern Region. The judging committee, contestants and the coaching teachers of students who passed the first round took part in the activity",
+          "category": "Activities"
+        },
+        {
+          "title": "Invitation to an academic forum on National Thai Language Day 2020",
+          "publishedAt": "2020-08-13",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63HQN2158094",
+          "category": "Activities"
+        },
+        {
+          "title": "Results of the selection of students for the final round of the storytelling contest “Local Wisdom: Food, Toys and Everyday Objects”, Group 1 (Central, Eastern and Western Regions) and Group 3 (Northeastern Region)",
+          "publishedAt": "2020-07-31",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63HGM2235031",
+          "category": "Activities"
+        },
+        {
+          "title": "Youth Handwriting Contest 2020",
+          "publishedAt": "2020-07-14",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63HFM3953069",
+          "category": "Activities"
+        },
+        {
+          "title": "Announcement of the postponement of the Royal Society of Thailand Commendation Award ceremony 2019",
+          "publishedAt": "2020-03-17",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOM3028031",
+          "category": "Announcement"
+        },
+        {
+          "title": "Project to build awareness and understanding of the Integrity and Transparency Assessment of the Office of the Royal Society, and study visit on the sufficiency economy in Chachoengsao Province",
+          "publishedAt": "2020-03-17",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOM3753022",
+          "category": "Activities"
+        },
+        {
+          "title": "Royal Society of Thailand public forum: “Overcoming the Drought Crisis and Salty Tap Water in 2020”",
+          "publishedAt": "2020-03-05",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOM4259063",
+          "category": "Activities"
+        },
+        {
+          "title": "Postponement of the Thai language training for Thai language teachers in the Northern Region, Office of the Royal Society",
+          "publishedAt": "2020-03-03",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOM4457084",
+          "category": "Activities"
+        },
+        {
+          "title": "Meeting to review and confirm the construction and interior design specifications for the building at the Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5th December B.E. 2550, Zone C",
+          "publishedAt": "2020-02-11",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOM5543063",
+          "category": "Activities"
+        },
+        {
+          "title": "Press conference: “The Current Situation of Coronavirus Disease 2019 and Guidelines for Prevention and Treatment”",
+          "publishedAt": "2020-01-29",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON0011088",
+          "category": "Activities"
+        },
+        {
+          "title": "Press conference: “The PM2.5 Dust Situation”",
+          "publishedAt": "2020-01-24",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON0548038",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society takes part in activities for National Father's Day, 5 December 2020",
+          "publishedAt": "2019-12-06",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON1747075",
+          "category": "Activities"
+        },
+        {
+          "title": "His Majesty the King graciously bestows a royal Kathin robe to be offered at Wat Udom Thani, a royal monastery in Nakhon Nayok Province",
+          "publishedAt": "2019-11-11",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON2529013",
+          "category": "Activities"
+        },
+        {
+          "title": "Youth Thai Language Skills Competition 2019",
+          "publishedAt": "2019-11-06",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON2706025",
+          "category": "Activities"
+        },
+        {
+          "title": "Academic forum: “Older People… Not Dying on the Road”",
+          "publishedAt": "2019-10-30",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON2837005",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society receives the “Award for Supporting Government Policy under the Project to Abolish Copies of Official Documents”",
+          "publishedAt": "2019-10-30",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON3051016",
+          "category": "Activities"
+        },
+        {
+          "title": "Volunteer development activity to make merit for the King and commemorate the royal benevolence of the Kings of Thailand",
+          "publishedAt": "2019-10-18",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON3243038",
+          "category": "Activities"
+        },
+        {
+          "title": "Wreath-laying and homage ceremony on the anniversary of the passing of His Majesty King Bhumibol Adulyadej The Great",
+          "publishedAt": "2019-10-16",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON4123075",
+          "category": "Activities"
+        },
+        {
+          "title": "Volunteer activity to improve the landscape along the Chao Phraya River",
+          "publishedAt": "2019-10-03",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON4916028",
+          "category": "Activities"
+        },
+        {
+          "title": "Wreath-laying ceremony in homage on the anniversary of the passing of King Mongkut (Rama IV)",
+          "publishedAt": "2019-10-03",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON5113041",
+          "category": "Activities"
+        },
+        {
+          "title": "Meeting No. 1/2019 of the Office of the Royal Society's Civil Service Sub-Committee acting as the Ministerial Civil Service Sub-Committee",
+          "publishedAt": "2019-09-04",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON5755053",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for entries to the Competition for Writing Books Teaching Buddhism to Children 2020",
+          "publishedAt": "2019-08-27",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0106091",
+          "category": "Announcement"
+        },
+        {
+          "title": "Minister Attached to the Prime Minister's Office and delegation visit the Office of the Royal Society and give policy guidance",
+          "publishedAt": "2019-08-23",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0456091",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for television drama actors to join the selection of outstanding Thai language users among television drama actors",
+          "publishedAt": "2019-08-21",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0750053",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for Prathom 5-6 (Grade 5-6) students to join the Youth Thai Language Skills Competition",
+          "publishedAt": "2019-08-21",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0922091",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for television hosts to join the selection of outstanding Thai language users among television hosts",
+          "publishedAt": "2019-08-21",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO1013016",
+          "category": "Activities"
+        },
+        {
+          "title": "Executives meet the Minister Attached to the Prime Minister's Office to offer congratulations on taking office and to summarize the missions, powers and duties of the Office of the Royal Society",
+          "publishedAt": "2019-08-05",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO1930031",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds a training project on developing printed media to electronic publication (e-publication) standards and on preparing the action plan and procurement plan for fiscal year 2020",
+          "publishedAt": "2019-08-05",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO2032019",
+          "category": "Activities"
+        },
+        {
+          "title": "National Thai Language Day event under the theme “Thai Language in the 4.0 Trend”",
+          "publishedAt": "2019-08-05",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO2117006",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society takes part in activities honoring His Majesty the King on the occasion of His Majesty's Birthday, 28 July 2019",
+          "publishedAt": "2019-07-30",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO2744019",
+          "category": "Activities"
+        },
+        {
+          "title": "Oath-taking ceremony to be good civil servants and a strength of the land, on the occasion of His Majesty the King's Birthday, 28 July 2019",
+          "publishedAt": "2019-07-24",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO3030044",
+          "category": "Activities"
+        },
+        {
+          "title": "Workshop on Thai Ageing Society",
+          "publishedAt": "2019-07-23",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO3136094",
+          "category": "Activities"
+        },
+        {
+          "title": "List of registrants for the academic forum on National Thai Language Day 2019: Thai Language and Thai Dialects, “Thai Language in the 4.0 Trend”",
+          "publishedAt": "2019-07-18",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO3425006",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society records a video of blessings on the occasion of His Majesty the King's Birthday, 28 July 2019",
+          "publishedAt": "2019-06-26",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO4004041",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds a project to raise awareness of corruption prevention with a visit to the Anti-Corruption Museum",
+          "publishedAt": "2019-06-26",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO4112053",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds Thai language training for Thai language teachers: Northeastern Region",
+          "publishedAt": "2019-06-17",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO4245003",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds a workshop to collect Thai dialect data in the Northern Region in Phrae Province",
+          "publishedAt": "2019-06-13",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO4401094",
+          "category": "Activities"
+        },
+        {
+          "title": "Executives and staff of the Office of the Royal Society join a merit-making ceremony offering alms and sign the book of well-wishes on the occasion of the Birthday of Her Majesty the Queen, 2019",
+          "publishedAt": "2019-06-04",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO5005016",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds a workshop to collect Thai dialect data in the Northeastern Region in Khon Kaen and Maha Sarakham Provinces",
+          "publishedAt": "2019-05-30",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO5225028",
+          "category": "Activities"
+        },
+        {
+          "title": "Workshop on “Directions and Operations of the Royal Society of Thailand”",
+          "publishedAt": "2019-05-30",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO5336031",
+          "category": "Activities"
+        },
+        {
+          "title": "Executives and civil servants of the Office of the Royal Society join in welcoming His Majesty the King at the Royal Coronation Ceremony",
+          "publishedAt": "2019-05-21",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23N1845072",
+          "category": "Activities"
+        },
+        {
+          "title": "Results of the Contest for Writing Books Teaching Buddhism to Children 2019",
+          "publishedAt": "2019-05-02",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23N3248084",
+          "category": "Activities"
+        },
+        {
+          "title": "The updated coined technical terms system of the Office of the Royal Society is now available",
+          "publishedAt": "2019-04-30",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23N3549009",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds training on “Using the Office of the Royal Society's Online Coined Technical Terms System” under the project to develop the Office of the Royal Society's academic database, 2019",
+          "publishedAt": "2019-04-25",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23N5039009",
+          "category": "Activities"
+        },
+        {
+          "title": "Royal appointment of the President and Vice Presidents of the Royal Society of Thailand",
+          "publishedAt": "2019-04-22",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23N5800000",
+          "category": "Activities"
+        },
+        {
+          "title": "93rd anniversary of the founding of the Royal Society of Thailand",
+          "publishedAt": "2019-04-19",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23O0201075",
+          "category": "Activities"
+        },
+        {
+          "title": "Training on “Using the Integrated Academic Work System for Staff of the Office of the Royal Society” under the project to develop the Office of the Royal Society's academic database, 2019",
+          "publishedAt": "2019-04-04",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23O2010038",
+          "category": "Activities"
+        },
+        {
+          "title": "Results of the storytelling contest on local food culture, “Local Foods of My Hometown”, Northern Region",
+          "publishedAt": "2019-04-02",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23O3938078",
+          "category": "Activities"
+        },
+        {
+          "title": "Invitation to an academic seminar under the Traveling Royal Society Fellows Lecture Project: Academy of Arts, on Art and Life in Thai Society 4.0",
+          "publishedAt": "2019-03-29",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23O5155022",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds an academic seminar on “Thai Language and Dialects: Time, Language and Inscriptions” to disseminate knowledge and honor the contributions of Professor Dr. Prasoet Na Nakhon, Fellow of the Royal Society, on the occasion of his upcoming 100th birthday",
+          "publishedAt": "2019-03-14",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23P1705038",
+          "category": "Activities"
+        },
+        {
+          "title": "List of registrants for the academic seminar on Thai Language and Dialects: “Time, Language and Inscriptions”",
+          "publishedAt": "2019-03-11",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23P2710005",
+          "category": "Activities"
+        },
+        {
+          "title": "Storytelling contest on local food culture, “Local Foods of My Hometown”, Group 1: Central, Eastern and Western Regions (final round)",
+          "publishedAt": "2019-03-11",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23P2917025",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds a storytelling contest on local food culture, “Local Foods of My Hometown”, Southern Region",
+          "publishedAt": "2019-03-06",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23P4040053",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds a Thai language training project for Thai language teachers, Central Region",
+          "publishedAt": "2019-03-01",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23Q0405056",
+          "category": "Activities"
+        },
+        {
+          "title": "Results of the selection of students for the storytelling contest on local food culture, “Local Foods of My Hometown”, Group 1: Central, Eastern and Western Regions (first round)",
+          "publishedAt": "2019-02-28",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%23Q1215094",
+          "category": "Activities"
+        },
+        {
+          "title": "Academic seminar under the Traveling Royal Society Fellows Lecture Project: Academy of Arts, on Linguistic Culture: Thai Language and Culture",
+          "publishedAt": "2019-02-20",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24I5318038",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds a morality and ethics training and study visit project for fiscal year 2019",
+          "publishedAt": "2019-02-15",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J0042053",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society presents the “Royal Society of Thailand Commendation Award” to outstanding Thai language users, 2018",
+          "publishedAt": "2019-02-13",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J1047025",
+          "category": "Activities"
+        },
+        {
+          "title": "Applications open for primary and secondary school Thai language teachers in the Central Region to join the Thai language training project for Thai language teachers (Central Region)",
+          "publishedAt": "2019-02-08",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J1730081",
+          "category": "Activities"
+        },
+        {
+          "title": "Invitation to the “Royal Society of Thailand Commendation Award” ceremony for outstanding Thai language users, 2018",
+          "publishedAt": "2019-02-05",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J2149041",
+          "category": "Activities"
+        },
+        {
+          "title": "Thai language training for Thai language teachers, Northern Region",
+          "publishedAt": "2019-01-28",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J3300069",
+          "category": "Activities"
+        },
+        {
+          "title": "Project to build awareness and understanding of correct and appropriate use of the Thai language",
+          "publishedAt": "2019-01-28",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J4024009",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds the “Project to Build Awareness and Understanding of Correct and Appropriate Use of the Thai Language” in Udon Thani and Nong Bua Lam Phu Provinces, on the occasion of the visit by the Minister Attached to the Prime Minister's Office (Mr. Suwaphan Tanyuwattana) to the village funds",
+          "publishedAt": "2019-01-21",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J5401016",
+          "category": "Activities"
+        },
+        {
+          "title": "Thai language training project for Thai language teachers (Northern Region)",
+          "publishedAt": "2018-12-28",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J5046088",
+          "category": "Activities"
+        },
+        {
+          "title": "The Prime Minister stays at the Office of the Royal Society while awaiting His Majesty the King's arrival to open the “Un Ai Rak Khlai Khwam Nao: River of Rattanakosin” event and the “Bike UnAiRak” activity",
+          "publishedAt": "2018-12-09",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24K1150031",
+          "category": "Activities"
+        },
+        {
+          "title": "Schools are invited to enter upper primary students (Prathom 4 to Prathom 6) in the storytelling contest on local food culture, “Local Foods of My Hometown”",
+          "publishedAt": "2018-11-28",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24K1925044",
+          "category": "Activities"
+        },
+        {
+          "title": "His Majesty King Maha Vajiralongkorn Bodindradebayavarangkun graciously bestows a royal Kathin robe upon the Office of the Royal Society, as requested, to be offered to monks who have completed the three-month Buddhist Lent",
+          "publishedAt": "2018-11-19",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24K2355009",
+          "category": "Activities"
+        },
+        {
+          "title": "The Royal Society of Thailand contributes funding to a charity bowling tournament in support of “Her Majesty Queen Sirikit's Royal Fund for the Education of Underprivileged Children”",
+          "publishedAt": "2018-11-09",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24L4152075",
+          "category": "Activities"
+        },
+        {
+          "title": "A delegation from the Chinese Academy of Social Sciences (CASS), People's Republic of China, visits to strengthen relations and hold a joint meeting on “Cooperation between China and Thailand under the Belt and Road Initiatives”",
+          "publishedAt": "2018-11-09",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24L4440016",
+          "category": "Activities"
+        },
+        {
+          "title": "Project for knowledge exchange and coordination in science, technology, arts and culture with foreign academies in the People's Republic of China",
+          "publishedAt": "2018-11-07",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M0143044",
+          "category": "Activities"
+        },
+        {
+          "title": "Youth Thai Language Skills Competition 2018",
+          "publishedAt": "2018-11-05",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M0743003",
+          "category": "Activities"
+        },
+        {
+          "title": "Thai language Q&A",
+          "publishedAt": "2018-10-31",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M2119059",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds the “Project to Build Awareness and Understanding of Correct and Appropriate Use of the Thai Language” in Phrae and Phayao Provinces",
+          "publishedAt": "2018-10-30",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000402001002%2F63E%24M2243028",
+          "category": "Activities"
+        },
+        {
+          "title": "Ceremony to express loyalty and commemorate the royal benevolence of His Majesty King Bhumibol Adulyadej, on 13 October, the anniversary of his passing",
+          "publishedAt": "2018-10-12",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M3311016",
+          "category": "Activities"
+        },
+        {
+          "title": "Examples of wording to commemorate the royal benevolence of His Majesty King Bhumibol Adulyadej, on 13 October, the anniversary of his passing",
+          "publishedAt": "2018-10-03",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M4413044",
+          "category": "Activities"
+        },
+        {
+          "title": "Members of the Federation of Organizations for Book and Reading Development from Thammasat University, the Translators and Interpreters Association, and committee members and members of the Proofreaders Club make a study visit on Thai language work at the Office of the Royal Society",
+          "publishedAt": "2018-10-03",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M4705053",
+          "category": "Activities"
+        },
+        {
+          "title": "Application period for the Youth Thai Language Skills Competition 2018 extended to 17 October 2018",
+          "publishedAt": "2018-09-28",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M5204000",
+          "category": "Activities"
+        },
+        {
+          "title": "The public is invited to view and try the “Thai Sign Language Dictionary, Royal Society Edition, in Honor of Her Majesty Queen Sirikit on the Occasion of Her 84th Birthday Anniversary, 12 August 2016”",
+          "publishedAt": "2018-09-25",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24M5431088",
+          "category": "Activities"
+        },
+        {
+          "title": "Thai Families under Thailand 4.0: Challenges to Overcome",
+          "publishedAt": "2018-09-18",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24N0741006",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds the “Project to Build Awareness and Understanding of Correct and Appropriate Use of the Thai Language” in Loei and Phetchabun Provinces",
+          "publishedAt": "2018-09-18",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24N1545091",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds Thai language training for Thai language teachers: Central Region",
+          "publishedAt": "2018-09-03",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GCL5316063",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for television hosts to join the selection of outstanding Thai language users among television hosts, 2018",
+          "publishedAt": "2018-08-27",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQO5526072",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for television hosts to join the selection of outstanding Thai language users among television hosts, 2018",
+          "publishedAt": "2018-08-27",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQO5713075",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for television drama actors to join the selection of outstanding Thai language users among television drama actors, 2018",
+          "publishedAt": "2018-08-27",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP0807000",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for students to join the Youth Thai Language Skills Competition 2018",
+          "publishedAt": "2018-08-27",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP1052075",
+          "category": "Activities"
+        },
+        {
+          "title": "Minister Attached to the Prime Minister's Office visits the Office of the Royal Society to meet and discuss how the academies of the Royal Society of Thailand can support the government's work",
+          "publishedAt": "2018-08-24",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP1600013",
+          "category": "Activities"
+        },
+        {
+          "title": "The Department of Thai Language, Shanghai International Studies University, under the Ministry of Education of China, requests a meeting for assistance with information on the national language policy of the Office of the Royal Society",
+          "publishedAt": "2018-08-22",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP2400003",
+          "category": "Activities"
+        },
+        {
+          "title": "The Office of the Royal Society holds the “Project to Build Awareness and Understanding of Correct and Appropriate Use of the Thai Language” in Ranong and Chumphon Provinces",
+          "publishedAt": "2018-08-22",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP2605041",
+          "category": "Activities"
+        },
+        {
+          "title": "Invitation to donate toward the royal Kathin robe offering ceremony 2018 at Wat Nang Ratchaworawihan",
+          "publishedAt": "2018-08-16",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP4631094",
+          "category": "Activities"
+        },
+        {
+          "title": "“Wording for Blessings to Her Majesty Queen Sirikit in the Reign of King Rama IX”",
+          "publishedAt": "2018-08-10",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP5903094",
+          "category": "Activities"
+        },
+        {
+          "title": "Call for entries: Contest for Writing Books Teaching Buddhism to Children 2019",
+          "publishedAt": "2018-08-09",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQQ0444081",
+          "category": "Announcement"
+        },
+        {
+          "title": "The Office of the Royal Society holds a workshop and study visit to collect Thai dialect data in the Northern Region in Chiang Rai Province",
+          "publishedAt": "2018-08-08",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQQ0836059",
+          "category": "Activities"
+        }
+      ],
+      "layout": "news"
+    }
+  ],
+  "updatedAt": "2026-11-13",
+  "lang": "en"
+}

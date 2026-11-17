@@ -69,7 +69,7 @@ ORST Website/
 │   └── build.mjs           สร้าง HTML นิ่งลง dist/ สำหรับ production
 │
 ├── _archive/               โค้ดเก่าที่ไม่ได้ใช้แล้ว เก็บไว้อ้างอิง (ไม่ถูกโหลด)
-├── CONTENT-MODEL.md        คลังบล็อก 20 ชนิด พร้อมตัวอย่าง JSON
+├── CONTENT-MODEL.md        คลังบล็อก 21 ชนิด พร้อมตัวอย่าง JSON
 ├── CLAUDE.md               กฎการทำงานสำหรับ AI agent
 ├── HANDOFF.md              เอกสารนี้
 └── README.md               สรุปสั้น
@@ -164,11 +164,11 @@ node tools/validate.mjs
 ตรวจให้ครบว่า: โครงสร้าง JSON ถูก · block ทุกตัวมีฟิลด์บังคับ · `navKey` ตรงกับ `data-page`
 · ไอคอนมีอยู่จริง · รูปมีอยู่จริง · ลิงก์ภายในไม่เสีย
 
-### บล็อกที่ใช้ได้ 20 ชนิด
+### บล็อกที่ใช้ได้ 21 ชนิด
 
 `page-hero` · `rich-text` · `card-grid` · `feature-list` · `stat-row` · `link-list` ·
 `media-grid` · `table` · `faq` · `steps` · `two-column` · `cta-band` · `notice` · `contact-info` ·
-`document-list` (T1/T4) · `article` (T2) · `page-index` (T3) · `person-grid` (T5) · `figure` · `share` — แม่แบบสำหรับ CMS ดู [TEMPLATES.md](TEMPLATES.md) และ [CMS-HANDOFF.md](CMS-HANDOFF.md)
+`document-list` (T1/T4) · `article` (T2) · `page-index` (T3) · `person-grid` (T5) · `figure` · `share` · `anchor-nav` (เมนูลัดในหน้า) — แม่แบบสำหรับ CMS ดู [TEMPLATES.md](TEMPLATES.md) และ [CMS-HANDOFF.md](CMS-HANDOFF.md)
 
 ตัวอย่าง JSON ของทุกชนิดอยู่ใน **[CONTENT-MODEL.md](CONTENT-MODEL.md)**
 และเปิดดูของจริงได้ที่ **`styleguide.html`**
@@ -225,7 +225,7 @@ node tools/build.mjs
 | `--gold-soft` | `#fff4db` | ทองอ่อน |
 | `--line` | `rgba(185,145,67,.24)` | เส้นขอบ |
 | `--radius` | `var(--radius-xl)` = 16px | มุมโค้ง (สูงสุดตาม typography.css) |
-| `--container` | `1680px` (typography.css) / เล็กลงตามจอใน home.css | ความกว้างสูงสุดของ `.container` |
+| `--container` / `--container-pad` | `1680px` / ขอบ 16·24·32·48px ตามจอ (typography.css) | `.container` กรอบเดียวทุกหน้า เนื้อหาจริงบนจอใหญ่ 1584px |
 | `--text-*` `--leading-*` `--space-*` `--radius-sm…pill` | ดู `assets/css/typography.css` | ตัวอักษร ระยะบรรทัด ระยะห่าง มุมโค้ง |
 
 **โหมดการเข้าถึง** ทำงานโดยสลับ class ที่ `<body>` แล้วเขียนทับตัวแปรข้างบน:
@@ -379,7 +379,7 @@ content/pages/about.json  ──►  assets/js/blocks.js  ──►  HTML
 
 | ไฟล์ | คืออะไร |
 |---|---|
-| `assets/js/blocks.js` | คลังบล็อก 20 ชนิด + ตัวตรวจความถูกต้อง |
+| `assets/js/blocks.js` | คลังบล็อก 21 ชนิด + ตัวตรวจความถูกต้อง |
 | `assets/js/page-runtime.js` | โหลด JSON แล้ว render (ข้ามอัตโนมัติถ้าหน้าถูก build มาแล้ว) |
 | `assets/css/blocks.css` | สไตล์ของ block — ใช้ตัวแปรสีล้วน ไม่ฮาร์ดโค้ด |
 | `content/blocks.schema.json` | JSON Schema — VS Code เติมคำและตรวจ error ให้ขณะพิมพ์ |

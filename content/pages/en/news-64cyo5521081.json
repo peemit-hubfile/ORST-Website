@@ -1,0 +1,68 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F64CYO5521081 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2021",
+  "navKey": "news",
+  "description": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2021",
+  "sideNav": false,
+  "updatedAt": "2021-03-25",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Activity news",
+      "date": "2021-03-25",
+      "heading": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2021",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Activity news",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "Announcement of students eligible for the final round of the Youth Handwriting Competition 2021"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "activity-news.html",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Youth Handwriting Competition 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68EGN1525066",
+          "category": "Announcement",
+          "publishedAt": "2025-05-07"
+        },
+        {
+          "title": "Youth Handwriting Competition 2020, Final Round",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63JEJ2639056",
+          "category": "News",
+          "publishedAt": "2020-09-28"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Results of the Youth Handwriting Competition 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HAN1248053",
+          "category": "Announcement",
+          "publishedAt": "2025-08-01"
+        },
+        {
+          "title": "Results of the Youth Handwriting Competition 2020",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63JPK4627025",
+          "category": "News",
+          "publishedAt": "2020-10-16"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

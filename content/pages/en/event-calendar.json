@@ -1,0 +1,35 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_calendar.asp (Google Calendar) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Event Calendar",
+  "navKey": "news",
+  "description": "Event calendar of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Event Calendar",
+      "lead": "Event calendar of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Event Calendar"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "calendar",
+      "width": "full",
+      "html": "<iframe src=\"https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FBangkok&showTz=0&title=%E0%B8%9B%E0%B8%8F%E0%B8%B4%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%93%E0%B8%91%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B8%AA%E0%B8%A0%E0%B8%B2&showPrint=0&src=em9vbW9yc3RAZ21haWwuY29t&src=MWVmYmJhYzYxN2Q3NGMzYjY2MzE5ZGFhNzVhYzczMGQ5NmI4ZWJjMzEzOTdiY2QyYTk2YTU0YjFkNzg3MzdmOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OGEwZmM0ZTZjYTA3ZmIwZGE5Y2M5MjMzNjhmNTYzZDIzMWRlMzYxODY5ZTFhOTFjODQzZDlmNTI0ZDhhNzc2MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NTU4MGM2Yjg4MzVkNjMzMDBmYmE5ZmMzYjFkNDE0MmEyNWQ1OWY0ZTEwMzA5MmU1YTZiODRkYjczNDQyNzFhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YTY0MmM4ZTIzYzExMjBlZDE5ZTJlYzJlZTYwMmQyOWViNjViYjUxNjQyYmJjMGUwNmQyOGNlOTY0Y2E2MmI0M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MTIwZWViZDhjYzcwZDIxMDYxODg0OWExM2IwMWE3YmEyMjdmZGUyODYwNTVjNzkwMzUyMDM4ZjM0MWM2YTYwZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23F6BF26&color=%233F51B5&color=%23E67C73&color=%23EF6C00&color=%23795548&color=%230B8043\" title=\"ปฏิทินกิจกรรมสำนักงานราชบัณฑิตยสภา (Google Calendar)\" style=\"width:100%;height:640px;border:0\" loading=\"lazy\"></iframe>"
+    }
+  ],
+  "lang": "en"
+}

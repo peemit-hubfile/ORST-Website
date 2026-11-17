@@ -251,11 +251,11 @@
           "heading": "ความรู้และสิ่งพิมพ์",
           "items": [
             {
-              "title": "คลังความรู้",
+              "title": "เอกสารความรู้เผยแพร่",
               "href": "knowledge-base.html"
             },
             {
-              "title": "หลักเกณฑ์ต่าง ๆ",
+              "title": "หลักเกณฑ์ภาษาไทย",
               "href": "language-guidelines.html"
             },
             {
@@ -263,7 +263,7 @@
               "href": "infographics.html"
             },
             {
-              "title": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+              "title": "ข้อมูลเสียงภาษาถิ่น",
               "href": "ethnic-language-audio.html"
             },
             {

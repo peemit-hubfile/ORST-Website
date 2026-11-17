@@ -1,0 +1,117 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63HQN2824081 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region",
+  "navKey": "news",
+  "description": "On 15 August 2020, at the Benjarong Room, Wiang Lakhon Hotel, Lampang Province, Dr. Duangta Tancho, Secretary-General of the Royal Society, chaired the judging of the storytelling contest",
+  "sideNav": false,
+  "updatedAt": "2020-08-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Activity news",
+      "date": "2020-08-17",
+      "heading": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region",
+      "image": "assets/images/orst/news/data0001-00001953-960.jpg",
+      "imageAlt": "News image: results of the storytelling contest “Local Wisdom: Food, Toys and Everyday Items”, Group 2, region",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001953.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Activity news",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "On 15 August 2020, in the Benjarong Room, Wiang Lakhon Hotel, Lampang Province, Dr. Duangta Tancho, Secretary-General of the Office of the Royal Society, chaired the judging of the final round of the storytelling contest on “Local Wisdom: Food, Toys and Everyday Objects”, Group 2, Northern Region. The judging committee, contestants and the coaching teachers of students who passed the first round took part in the activity",
+        "The contest results are as follows. First prize: Miss Chiratchaya Sariya, Ban Mai School, Lampang Province, received a scholarship of 12,000 baht and a certificate. First runner-up: Miss Samita Ngamthae, Ban Sop Phlueng School, Lampang Province, received a scholarship of 10,000 baht and a certificate of honor. Second runner-up: Master Noppakao Khapphap, Ban Thung Tam School, Lampang Province, received a scholarship of 8,000 baht and a certificate of honor.",
+        "Honorable mentions: Miss Kirana Li, Kirana Homeschool, Chiang Mai Province; Miss Kumphaphak Khatsutha, Ban Tin Pet School, Chiang Rai Province; Master Chanawin Inkhamchuea, Ban Pong Sanuk School, Lampang Province; Miss Netnapha Yaemthat, Ban Mae Ang School, Lampang Province; Miss Priyaphat Saensuk, Ban Rai School, Chiang Mai Province; Master Phirawat Chanthra, Kowit Thamrong Chiang Mai School, Chiang Mai Province; Miss Fasai Chanthama, San Pa Tong (Suwannarat Withayakhan) School, Chiang Mai Province. Students receiving honorable mentions each receive a scholarship of 3,000 baht and a certificate of honor."
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0001-00001953-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001953.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001954-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001954.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001955-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001955.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001956-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001956.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001957-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001957.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001958-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001958.JPG",
+          "alt": "News image 6"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "activity-news.html",
+      "items": [
+        {
+          "title": "Students selected for the storytelling contest on “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region, and Group 4, Southern Region",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HGM2640091",
+          "category": "News",
+          "publishedAt": "2020-08-04"
+        },
+        {
+          "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 4, Southern Region",
+          "href": "news-63hqn2359047.html",
+          "image": "assets/images/orst/news/data0001-00001939-640.jpg",
+          "category": "Activities",
+          "publishedAt": "2020-08-17"
+        },
+        {
+          "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 3, Northeastern Region",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HQM5624016",
+          "category": "News",
+          "publishedAt": "2020-08-10"
+        },
+        {
+          "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 1, Central, Eastern and Western Regions",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HQN0009047",
+          "category": "News",
+          "publishedAt": "2020-08-10"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=28 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Knowledge publications",
+  "navKey": "knowledge",
+  "description": "Knowledge publications of the Office of the Royal Society",
+  "sideNav": false,
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Knowledge publications",
+      "image": "assets/images/orst/news/data0005-00005428-960.jpg",
+      "lead": "Knowledge publications of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Knowledge publications"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Names of foreign currencies",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A23797OJG5813226226292222622"
+        },
+        {
+          "title": "Provincial mottos and provincial trees",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3B225%3B7OJG5813226226292222622"
+        },
+        {
+          "title": "Provincial seals",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B2%3B442PJG5813226226292222622"
+        }
+      ],
+      "sort": "none"
+    }
+  ],
+  "lang": "en"
+}

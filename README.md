@@ -62,7 +62,7 @@ node tools/build.mjs
 
 | ไฟล์ | สำหรับใคร |
 |---|---|
-| **[CONTENT-MODEL.md](CONTENT-MODEL.md)** | คนทำเนื้อหา — คลังบล็อก 20 ชนิดพร้อมตัวอย่าง JSON |
+| **[CONTENT-MODEL.md](CONTENT-MODEL.md)** | คนทำเนื้อหา — คลังบล็อก 21 ชนิดพร้อมตัวอย่าง JSON |
 | **[CMS-HANDOFF.md](CMS-HANDOFF.md)** | ทีม dev CMS — สัญญาข้อมูล แม่แบบหน้าย่อย และหน้าตัวอย่าง |
 | **[HANDOFF.md](HANDOFF.md)** | ทีมพัฒนา — สถาปัตยกรรม design tokens และ**หนี้ทางเทคนิคที่ต้องรู้** |
 | **[CLAUDE.md](CLAUDE.md)** | AI agent — กฎการทำงานในโปรเจกต์นี้ |

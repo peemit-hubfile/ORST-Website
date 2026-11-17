@@ -4,13 +4,18 @@
   "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้",
   "navKey": "news",
   "description": "เมื่อวันที่ ๑๕ สิงหาคม พ.ศ. ๒๕๖๓ ที่ห้องแก้วสมุย ๑ โรงแรมแก้วสมุย จังหวัดสุราษฎร์ธานี นางสาวบุญธรรม กรานทอง รองเลขาธิการราชบัณฑิตยสภา เป็นประธานตัดสิน",
+  "sideNav": false,
   "updatedAt": "2020-08-17",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ข่าวกิจกรรม",
+      "variant": "article",
+      "tag": "ข่าวกิจกรรม",
+      "date": "2020-08-17",
       "heading": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้",
-      "lead": "เผยแพร่เมื่อ 17 สิงหาคม 2563",
+      "image": "assets/images/orst/news/data0001-00001939-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาค",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001939.JPG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,17 +35,6 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0001-00001939-960.jpg",
-      "alt": "ภาพประกอบข่าว ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาค",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001939.JPG"
-    },
-    {
       "type": "rich-text",
       "id": "content",
       "paragraphs": [
@@ -50,96 +44,101 @@
       ]
     },
     {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (12 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
         {
           "image": "assets/images/orst/news/data0001-00001939-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001939.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001939.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
         },
         {
           "image": "assets/images/orst/news/data0001-00001940-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001940.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001940.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
         },
         {
           "image": "assets/images/orst/news/data0001-00001941-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 3",
-          "title": "ภาพที่ 3",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001941.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001941.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
         },
         {
           "image": "assets/images/orst/news/data0001-00001942-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 4",
-          "title": "ภาพที่ 4",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001942.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001942.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
         },
         {
           "image": "assets/images/orst/news/data0001-00001943-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 5",
-          "title": "ภาพที่ 5",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001943.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001943.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
         },
         {
           "image": "assets/images/orst/news/data0001-00001944-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 6",
-          "title": "ภาพที่ 6",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001944.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001944.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
         },
         {
           "image": "assets/images/orst/news/data0001-00001945-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 7",
-          "title": "ภาพที่ 7",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001945.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001945.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
         },
         {
           "image": "assets/images/orst/news/data0001-00001946-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 8",
-          "title": "ภาพที่ 8",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001946.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001946.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
         },
         {
           "image": "assets/images/orst/news/data0001-00001947-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 9",
-          "title": "ภาพที่ 9",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001947.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001947.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
         },
         {
           "image": "assets/images/orst/news/data0001-00001948-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 10",
-          "title": "ภาพที่ 10",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001948.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001948.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
         },
         {
           "image": "assets/images/orst/news/data0001-00001949-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 11",
-          "title": "ภาพที่ 11",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001949.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001949.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11"
         },
         {
           "image": "assets/images/orst/news/data0001-00001950-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 12",
-          "title": "ภาพที่ 12",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001950.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001950.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12"
         }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวกิจกรรม",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "activity-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "activity-news.html"
+          "title": "ผลการคัดเลือกนักเรียนผู้เข้าประกวดเล่าเรื่องหัวข้อ “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาคเหนือ และกลุ่มที่ ๔ ภาคใต้",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HGM2640091",
+          "category": "ข่าว",
+          "publishedAt": "2020-08-04"
+        },
+        {
+          "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาคเหนือ",
+          "href": "news-63hqn2824081.html",
+          "image": "assets/images/orst/news/data0001-00001953-640.jpg",
+          "category": "กิจกรรม",
+          "publishedAt": "2020-08-17"
+        },
+        {
+          "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๓ ภาคอีสาน",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HQM5624016",
+          "category": "ข่าว",
+          "publishedAt": "2020-08-10"
+        },
+        {
+          "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๑ ภาคกลาง ภาคตะวันออก ภาคตะวันตก",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HQN0009047",
+          "category": "ข่าว",
+          "publishedAt": "2020-08-10"
         }
       ]
     }

@@ -1,0 +1,236 @@
+{
+  "_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step7_calendar.py (Google Calendar สาธารณะของหน่วยงานที่เว็บเดิมฝังไว้) — วันที่เป็น ค.ศ. YYYY-MM-DD, end = วันสุดท้ายของกิจกรรม (ถ้าจัดหลายวัน)",
+  "source": "https://www.orst.go.th/iwfm_calendar.asp",
+  "events": [
+    {
+      "id": "ev-20250122-1",
+      "start": "2025-01-22",
+      "title": "Academic Forum Marking the 100th Anniversary of the Royal Society of Thailand",
+      "location": "Lecture Room, 5th Floor, Building B, Bank of Thailand Learning Center, Bangkok",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250206-2",
+      "start": "2025-02-06",
+      "end": "2025-02-08",
+      "title": "Project to Promote Knowledge of Thai History in 4 Regions",
+      "location": "Wat Chedi Luang Worawihan, 103 Phra Pok Klao Road, Si Phum Subdistrict, Mueang Chiang Mai District",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250214-3",
+      "start": "2025-02-14",
+      "title": "Royal Society Centenary Project, Academy of Arts",
+      "location": "FA Theater KKU, Faculty of Fine and Applied Arts Theatre, 123 Mitraparp Road",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250226-4",
+      "start": "2025-02-26",
+      "title": "Academic Forum Marking the 100th Anniversary of the Royal Society of Thailand",
+      "location": "Lecture Room, 5th Floor, Building B, Bank of Thailand Learning Center, Bangkok",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250307-5",
+      "start": "2025-03-07",
+      "title": "Project to Compile a Dictionary of Muay Thai Terms in Thai and Foreign Languages",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250310-6",
+      "start": "2025-03-10",
+      "end": "2025-03-12",
+      "title": "Traveling Royal Society Fellows Project, No. 1",
+      "location": "Ratchaburi",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250310-7",
+      "start": "2025-03-10",
+      "end": "2025-03-12",
+      "title": "Traveling Royal Society Fellows Project, No. 2",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250310-8",
+      "start": "2025-03-10",
+      "end": "2025-03-12",
+      "title": "Traveling Royal Society Fellows Project, No. 3",
+      "location": "Ratchaburi",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250326-9",
+      "start": "2025-03-26",
+      "title": "Academic Forum Marking the 100th Anniversary of the Royal Society of Thailand",
+      "location": "Room BB-201, 2nd Floor, Centara Life Government Complex and Convention Centre",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250331-10",
+      "start": "2025-03-31",
+      "title": "Royal Society Fellows Share Knowledge with Society Project, Academy of Arts",
+      "location": "S.D. Avenue Hotel, 94 Borommaratchachonnani Road",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250410-11",
+      "start": "2025-04-10",
+      "title": "Royal Society Brings Knowledge to Society Project, Academy of Science",
+      "unit": "Academy of Science"
+    },
+    {
+      "id": "ev-20250418-12",
+      "start": "2025-04-18",
+      "title": "99th Anniversary of the Founding of the Royal Society of Thailand",
+      "location": "Chao Chom Manda Ruean House",
+      "unit": "Council Affairs"
+    },
+    {
+      "id": "ev-20250522-13",
+      "start": "2025-05-22",
+      "title": "Training: Youth Staying Safe in the Digital Age",
+      "location": "Miracle Grand Convention Hotel, 99 Vibhavadi Rangsit Road",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250526-14",
+      "start": "2025-05-26",
+      "end": "2025-05-28",
+      "title": "Traveling Royal Society Fellows Project \"Developing Ceramic Designs for SUPPORT Arts and Crafts Member Groups\"",
+      "location": "Suan Phueng District, Ratchaburi",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250531-15",
+      "start": "2025-05-31",
+      "title": "Academic Conference on the 15th Interdisciplinary Day",
+      "location": "Centara Life, The Government Complex, 120 Chaeng Watthana Road, Thung Song Hong",
+      "unit": "Central Academic Committee"
+    },
+    {
+      "id": "ev-20250602-16",
+      "start": "2025-06-02",
+      "title": "Compiling the Royal Society Dictionary",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250605-17",
+      "start": "2025-06-05",
+      "end": "2025-06-06",
+      "title": "Food Ideas Forum Project, Academy of Science",
+      "location": "Rama Gardens Hotel Bangkok, 9/9 Vibhavadi Rangsit Road, Talat Bang Khen",
+      "unit": "Academy of Science"
+    },
+    {
+      "id": "ev-20250606-18",
+      "start": "2025-06-06",
+      "title": "Ethics for Society Project \"Uniting Volunteer Hearts, Enhancing Ethical Values, Sharing...\"",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250611-19",
+      "start": "2025-06-11",
+      "title": "Youth Handwriting Competition Project, 2025",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250614-20",
+      "start": "2025-06-14",
+      "title": "Youth Thai Language Skills Competition (Thai Verse Recitation)",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250626-21",
+      "start": "2025-06-26",
+      "end": "2025-06-28",
+      "title": "Project to Promote Knowledge of Thai History in 4 Regions, No. 2",
+      "location": "Ubon Ratchathani",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250627-22",
+      "start": "2025-06-27",
+      "title": "Traveling Royal Society Fellows Project \"Developing Ceramic Designs for SUPPORT Arts and Crafts Member Groups\"",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250628-23",
+      "start": "2025-06-28",
+      "title": "Youth Handwriting Competition Project, 2025",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250630-24",
+      "start": "2025-06-30",
+      "title": "Traveling Royal Society Fellows Project \"Developing Ceramic Designs for SUPPORT Arts and Crafts Member Groups\"",
+      "location": "Chulalongkorn University, 254 Phaya Thai Road, Wang Mai, Pathum Wan, Bangkok",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250701-25",
+      "start": "2025-07-01",
+      "title": "Traveling Royal Society Fellows Project, Academy of Moral and Political Sciences (around the first week of...)",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250703-26",
+      "start": "2025-07-03",
+      "title": "Traveling Royal Society Fellows Project, Academy of Moral and Political Sciences",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250704-27",
+      "start": "2025-07-04",
+      "title": "Academic Seminar Project, Academy of Science",
+      "unit": "Academy of Science"
+    },
+    {
+      "id": "ev-20250705-28",
+      "start": "2025-07-05",
+      "title": "Youth Thai Language Skills Competition (Thai Verse Recitation)",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250717-29",
+      "start": "2025-07-17",
+      "title": "Academic Forum Project, Academy of Science",
+      "location": "Office of the Royal Society, Chaeng Watthana Government Complex",
+      "unit": "Academy of Science"
+    },
+    {
+      "id": "ev-20250727-30",
+      "start": "2025-07-27",
+      "title": "Traveling Royal Society Fellows Project \"Developing Ceramic Designs for SUPPORT Arts and Crafts Member Groups\"",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250728-31",
+      "start": "2025-07-28",
+      "title": "Academic Conference Project, No. 2",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250729-32",
+      "start": "2025-07-29",
+      "end": "2025-07-31",
+      "title": "National Thai Language Day Activities, 2025",
+      "unit": "Academy of Arts"
+    },
+    {
+      "id": "ev-20250801-33",
+      "start": "2025-08-01",
+      "title": "Royal Society Fellows Share Knowledge with Society Project, Academy of Moral and Political Sciences (around...)",
+      "unit": "Academy of Moral and Political Sciences"
+    },
+    {
+      "id": "ev-20250815-34",
+      "start": "2025-08-15",
+      "end": "2025-08-17",
+      "title": "Thai History Knowledge Promotion Project in 4 Regions, No. 3",
+      "location": "Nakhon Si Thammarat",
+      "unit": "Academy of Moral and Political Sciences"
+    }
+  ]
+}

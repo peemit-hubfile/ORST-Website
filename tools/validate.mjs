@@ -19,7 +19,7 @@
 import { readFile, readdir, access } from 'node:fs/promises';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { BLOCKS, BLOCK_TYPES } from '../assets/js/blocks.js';
+import { BLOCKS, BLOCK_TYPES, validatePage } from '../assets/js/blocks.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PAGES_DIR = join(ROOT, 'content', 'pages');
@@ -37,6 +37,7 @@ async function exists(path) {
 /* ฟิลด์บังคับของแต่ละชนิด block */
 const REQUIRED = {
   'page-hero': ['heading'],
+  'anchor-nav': ['items'],
   'rich-text': [],
   'card-grid': ['items'],
   'feature-list': ['items'],
@@ -56,6 +57,8 @@ const REQUIRED = {
   'person-grid': ['items'],
   'figure': ['image'],
   'share': [],
+  'news-media': [],
+  'news-related': ['items'],
 };
 
 async function spriteIcons() {
@@ -121,8 +124,9 @@ async function main() {
       for (const field of REQUIRED[b.type] || []) {
         if (b[field] === undefined) err(rel, `${at} (${b.type}) ขาดฟิลด์บังคับ "${field}"`);
       }
-      if (b.variant && !['default', 'alt'].includes(b.variant)) {
-        err(rel, `${at} variant ต้องเป็น "default" หรือ "alt" เท่านั้น`);
+      // page-hero มี variant ของตัวเอง: article = หัวหน้าเพจรายละเอียดข่าว
+      if (b.variant && !(b.type === 'page-hero' && b.variant === 'article') && !['default', 'alt', 'dark'].includes(b.variant)) {
+        err(rel, `${at} variant ต้องเป็น "default" "alt" หรือ "dark" เท่านั้น`);
       }
       if (b.type === 'table' && Array.isArray(b.rows) && Array.isArray(b.columns)) {
         b.rows.forEach((row, r) => {
@@ -190,6 +194,29 @@ async function main() {
     if (found.placeholders) {
       warn(rel, `ยังมี placeholder แบบ [...] ค้างอยู่ ${found.placeholders} จุด`);
     }
+  }
+
+  /* --- ภาษาอังกฤษ: content/pages/en/<slug>.json (สร้างโดย tools/i18n/i18n.py apply) ---
+     ต้องมีคู่ภาษาไทย · โครงถูกต้อง · จำนวน/ชนิด block ตรงกับไฟล์ไทย · เตือนถ้ายังมีข้อความไทยค้าง */
+  const EN_DIR = join(PAGES_DIR, 'en');
+  const enFiles = await readdir(EN_DIR).then(fs => fs.filter(f => f.endsWith('.json')).sort()).catch(() => []);
+  let enThai = 0;
+  for (const file of enFiles) {
+    const rel = `content/pages/en/${file}`;
+    if (!files.includes(file)) { err(rel, 'ไม่มีไฟล์ภาษาไทยคู่กันใน content/pages/'); continue; }
+    let en, th;
+    try {
+      en = JSON.parse(await readFile(join(EN_DIR, file), 'utf8'));
+      th = JSON.parse(await readFile(join(PAGES_DIR, file), 'utf8'));
+    } catch (e) { err(rel, `JSON ไม่ถูกต้อง: ${e.message}`); continue; }
+    validatePage(en).forEach(p => err(rel, p));
+    const sig = p => (p.blocks || []).map(b => b.type).join(',');
+    if (sig(en) !== sig(th)) err(rel, 'ชนิด/ลำดับ block ไม่ตรงกับไฟล์ภาษาไทย — รัน python tools/i18n/i18n.py apply ใหม่');
+    const left = (JSON.stringify(en.blocks).match(/[฀-๿]+/g) || []).length;
+    if (left) enThai++;
+  }
+  if (enFiles.length) {
+    console.log(`ภาษาอังกฤษ: ${enFiles.length}/${files.length} หน้า${enThai ? ` (${enThai} หน้ายังมีข้อความไทยบางส่วน — ปกติสำหรับคำไทยที่เป็นตัวอย่างในหน้าหลักเกณฑ์ภาษา)` : ''}`);
   }
 
   /* --- สรุปผล --- */

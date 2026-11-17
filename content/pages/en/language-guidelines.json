@@ -1,0 +1,144 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Thai language guidelines",
+  "navKey": "knowledge",
+  "description": "Guidelines on Thai language usage, transliteration, romanization, reading, and the writing of names, as set by the Office of the Royal Society",
+  "sideNav": false,
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Thai language guidelines",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines on Thai language usage, transliteration, romanization, reading, and the writing of names, as set by the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "topics",
+      "layout": "tiles",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-book",
+          "title": "6 ancient script typeface or font sets",
+          "href": "guideline-ancient-fonts.html",
+          "body": "The Royal Society of Thailand and international standards for the Thai language · Thai Noi script · Isan Tham script …",
+          "meta": "6 topics"
+        },
+        {
+          "icon": "i-dictionary",
+          "title": "Transliteration guidelines",
+          "href": "guideline-transcription.html",
+          "body": "",
+          "meta": "Read content"
+        },
+        {
+          "icon": "i-pen",
+          "title": "Romanization of Thai",
+          "href": "guideline-romanization.html",
+          "body": "",
+          "meta": "Read content"
+        },
+        {
+          "icon": "i-list",
+          "title": "Reading Numbers",
+          "href": "guideline-reading-numbers.html",
+          "body": "Reading numbers of 2 or more digits · Reading numbers that tell time · Reading numbers that show scales or ratios …",
+          "meta": "12 topics"
+        },
+        {
+          "icon": "i-megaphone",
+          "title": "Reading Proper Nouns",
+          "href": "guideline-reading-proper-nouns.html",
+          "body": "General proper nouns · Provinces · Roads, lanes and sois in Bangkok …",
+          "meta": "6 topics"
+        },
+        {
+          "icon": "i-megaphone",
+          "title": "Reading Symbols",
+          "href": "guideline-reading-symbols.html",
+          "body": "Reading words or text in parentheses · Reading the pai-yan yai (ฯลฯ) mark · Reading the ellipsis (ไข่ปลา) mark …",
+          "meta": "6 topics"
+        },
+        {
+          "icon": "i-pen",
+          "title": "Punctuation marks",
+          "href": "guideline-punctuation.html",
+          "body": "Question mark · Full stop · Hyphen …",
+          "meta": "23 topics"
+        },
+        {
+          "icon": "i-file",
+          "title": "Spacing",
+          "href": "guideline-spacing.html",
+          "body": "",
+          "meta": "Read content"
+        },
+        {
+          "icon": "i-file",
+          "title": "Writing abbreviations",
+          "href": "guideline-abbreviations.html",
+          "body": "",
+          "meta": "Read content"
+        },
+        {
+          "icon": "i-map",
+          "title": "Names of Provinces, Districts, Subdistricts, Khet and Khwaeng",
+          "href": "guideline-place-names.html",
+          "body": "Names of provinces, districts, subdistricts, khet and khwaeng · Spelling of Bangkok district names in Thai and Roman script, with their history",
+          "meta": "2 topics"
+        },
+        {
+          "icon": "i-map",
+          "title": "Names of Seas",
+          "href": "guideline-sea-names.html",
+          "body": "Seas connected to the Pacific Ocean · Seas connected to the Indian Ocean · Seas connected to the Atlantic Ocean …",
+          "meta": "5 topics"
+        },
+        {
+          "icon": "i-puzzle",
+          "title": "Chemical Element Names",
+          "href": "guideline-element-names.html",
+          "body": "",
+          "meta": "Read content"
+        },
+        {
+          "icon": "i-pin",
+          "title": "Country and Capital Names",
+          "href": "guideline-country-names.html",
+          "body": "Announcement of the Office of the Prime Minister on the names of countries, territories, administrative divisions and capitals (30 Aug 2022) · Announcement of the Office of the Royal Society on the names of countries, territories, administrative divisions and capitals (29 Jun 2022) · Link to the announcement in the Royal Gazette",
+          "meta": "3 topics"
+        },
+        {
+          "icon": "i-list",
+          "title": "Classifiers",
+          "href": "guideline-classifiers.html",
+          "body": "Explanatory notes · Letter ก · Letter ข …",
+          "meta": "35 topics"
+        },
+        {
+          "icon": "i-shield",
+          "title": "Royal vocabulary",
+          "href": "guideline-royal-vocabulary.html",
+          "body": "",
+          "meta": "Read content"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

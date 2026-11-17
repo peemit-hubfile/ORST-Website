@@ -1,0 +1,278 @@
+{
+  "_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step6_sitemap.py (อ่านจาก page-index ของหน้าหมวด) — อย่าแก้ด้วยมือ",
+  "sections": [
+    {
+      "key": "about",
+      "title": "About us",
+      "href": "about.html",
+      "groups": [
+        {
+          "heading": "Organization information",
+          "items": [
+            {
+              "title": "History",
+              "href": "history.html"
+            },
+            {
+              "title": "Vision and mission",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "Core values",
+              "href": "core-values.html"
+            },
+            {
+              "title": "Organizational structure and divisions",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "Official emblem",
+              "href": "emblem.html"
+            },
+            {
+              "title": "Related laws, regulations and rules",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "Powers, duties and missions",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
+          "heading": "Executives",
+          "items": [
+            {
+              "title": "Executives of the Office of the Royal Society",
+              "href": "executives.html"
+            },
+            {
+              "title": "Chief Information Officer (CIO)",
+              "href": "cio.html"
+            }
+          ]
+        },
+        {
+          "heading": "Anti-Corruption Operation Center (ACOC)",
+          "items": [
+            {
+              "title": "ACOC information",
+              "href": "anti-corruption-center.html"
+            },
+            {
+              "title": "Channels for reporting complaints of corruption and misconduct",
+              "href": "corruption-complaints.html"
+            },
+            {
+              "title": "Guidelines for handling complaints of corruption and misconduct",
+              "href": "complaint-guidelines.html"
+            },
+            {
+              "title": "Statistics on complaints of corruption and misconduct",
+              "href": "complaint-statistics.html"
+            },
+            {
+              "title": "Anti-bribery measures (No Gift Policy)",
+              "href": "no-gift-policy.html"
+            },
+            {
+              "title": "Risk assessment and corruption prevention plan",
+              "href": "anti-corruption-plan.html"
+            },
+            {
+              "title": "Ethics and measures to promote integrity and transparency",
+              "href": "ethics.html"
+            }
+          ]
+        },
+        {
+          "heading": "Personnel and human resource management",
+          "items": [
+            {
+              "title": "Academic committees and other committees",
+              "href": "committees.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "operations",
+      "title": "Government operations",
+      "href": "operations.html",
+      "groups": [
+        {
+          "heading": "Action plan",
+          "items": [
+            {
+              "title": "Related laws",
+              "href": "related-laws.html"
+            },
+            {
+              "title": "Operation manuals and standards",
+              "href": "operation-manuals.html"
+            },
+            {
+              "title": "5-year strategic plan and action plan",
+              "href": "strategic-plans.html"
+            },
+            {
+              "title": "Annual action plan",
+              "href": "annual-action-plan.html"
+            },
+            {
+              "title": "Business continuity plan",
+              "href": "continuity-plan.html"
+            },
+            {
+              "title": "Information Technology Master Plan",
+              "href": "it-master-plan.html"
+            },
+            {
+              "title": "Risk management plan",
+              "href": "risk-management-plan.html"
+            },
+            {
+              "title": "Energy Conservation at the Office of the Royal Society",
+              "href": "energy-saving.html"
+            },
+            {
+              "title": "Internal Audit Charter",
+              "href": "internal-audit-charter.html"
+            }
+          ]
+        },
+        {
+          "heading": "Performance results",
+          "items": [
+            {
+              "title": "Service manuals and standards",
+              "href": "service-manuals.html"
+            },
+            {
+              "title": "Monthly performance results by output and activity",
+              "href": "monthly-performance.html"
+            },
+            {
+              "title": "Summary of performance under the performance agreement",
+              "href": "performance-agreement.html"
+            },
+            {
+              "title": "Summary report on unit cost per output analysis / trial balance",
+              "href": "unit-cost.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "news",
+      "title": "News and activities",
+      "href": "news.html",
+      "groups": [
+        {
+          "heading": "Press releases",
+          "items": [
+            {
+              "title": "General Press Releases",
+              "href": "general-news.html"
+            },
+            {
+              "title": "Activity news",
+              "href": "activity-news.html"
+            },
+            {
+              "title": "Academic lectures",
+              "href": "academic-lectures.html"
+            },
+            {
+              "title": "Event Calendar",
+              "href": "event-calendar.html"
+            },
+            {
+              "title": "Questions and answers (Q&A)",
+              "href": "qa.html"
+            }
+          ]
+        },
+        {
+          "heading": "Announcement",
+          "items": [
+            {
+              "title": "Procurement announcements",
+              "href": "procurement-notices.html"
+            },
+            {
+              "title": "Procurement result announcements",
+              "href": "procurement-results.html"
+            },
+            {
+              "title": "Reference price announcements",
+              "href": "reference-prices.html"
+            },
+            {
+              "title": "Monthly procurement summary (Form Sor Kho Ro 1)",
+              "href": "procurement-summary.html"
+            },
+            {
+              "title": "Procurement result announcements (quarterly)",
+              "href": "procurement-quarterly.html"
+            },
+            {
+              "title": "Procurement plan announcements",
+              "href": "procurement-plans.html"
+            },
+            {
+              "title": "Auction announcements",
+              "href": "auctions.html"
+            },
+            {
+              "title": "Job announcements and personnel administration announcements",
+              "href": "job-announcements.html"
+            },
+            {
+              "title": "Official news",
+              "href": "official-news.html"
+            },
+            {
+              "title": "Contract publication announcements",
+              "href": "contracts.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "title": "Academic services",
+      "href": "services.html",
+      "groups": [
+        {
+          "heading": "Knowledge and Publications",
+          "items": [
+            {
+              "title": "Knowledge publications",
+              "href": "knowledge-base.html"
+            },
+            {
+              "title": "Thai language guidelines",
+              "href": "language-guidelines.html"
+            },
+            {
+              "title": "Infographics",
+              "href": "infographics.html"
+            },
+            {
+              "title": "Local Language Audio Recordings",
+              "href": "ethnic-language-audio.html"
+            },
+            {
+              "title": "Book ordering procedure and payment methods",
+              "href": "book-ordering.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

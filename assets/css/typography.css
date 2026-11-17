@@ -35,10 +35,22 @@
   --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
   --space-16: 64px; --space-20: 80px; --space-24: 96px;
   --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 16px; --radius-pill: 999px;
-  --container: 1680px; --reading: 760px; --header-h: 64px;
+  --container: 1680px;        /* the widest the content runs, centred */
+  --container-pad: 16px;      /* side gutter: 16 → 24 → 32 → 48 (see below) */
+  --reading: 760px;           /* long text: articles, policies */
+  --header-h: 64px;
   --ease: cubic-bezier(.2, .6, .2, 1);
   --duration-fast: 120ms; --duration: 180ms; --duration-slow: 240ms;
 }
+
+/* Layout: one centred column, 1680px at most; the gutter grows with the screen.
+   Content width on a large screen = 1680 - 2 x 48 = 1584px.
+   ห้ามตั้งความกว้าง .container ซ้ำในไฟล์อื่น — ทุกหน้าใช้กรอบนี้กรอบเดียว */
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--container-pad); }
+.container--reading { max-width: calc(var(--reading) + 2 * var(--container-pad)); }
+@media (min-width: 640px)  { :root { --container-pad: 24px; } }
+@media (min-width: 1024px) { :root { --container-pad: 32px; } }
+@media (min-width: 1440px) { :root { --container-pad: 48px; } }
 
 /* Breakpoints: sm 640 · md 768 · lg 1024 · nav 1280 · xl 1440
    @media (min-width: 40rem)  { … }   640

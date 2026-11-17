@@ -1,14 +1,15 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "รายการสิ่งพิมพ์จาก orst.go.th/iwfm_book.asp?p=PUB-% (ดึงเมื่อ 13 พ.ย. 2569) รูปปกย่อเก็บใน assets/images/orst/publications ลิงก์รายละเอียดยังชี้ไปเว็บไซต์เดิม",
-  "title": "สื่อและสิ่งพิมพ์",
-  "navKey": "publications",
+  "title": "หนังสือและสิ่งพิมพ์",
+  "navKey": "knowledge",
   "description": "หนังสือ วารสาร สื่อดิจิทัล และเอกสารเผยแพร่ของสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "สิ่งพิมพ์และสื่อ",
-      "heading": "สื่อและสิ่งพิมพ์",
+      "heading": "หนังสือและสิ่งพิมพ์",
+      "image": "assets/images/orst/news/data0004-00004279-960.jpg",
       "lead": "หนังสือ วารสาร สื่อดิจิทัล และเอกสารเผยแพร่ของสำนักงาน",
       "breadcrumb": [
         {
@@ -16,7 +17,11 @@
           "href": "index.html"
         },
         {
-          "label": "สื่อและสิ่งพิมพ์"
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หนังสือและสิ่งพิมพ์"
         }
       ]
     },
@@ -1091,7 +1096,9 @@
         }
       ],
       "ratio": "3:4",
-      "fit": "contain"
+      "fit": "contain",
+      "pageSize": 24,
+      "unit": "เล่ม"
     },
     {
       "type": "card-grid",

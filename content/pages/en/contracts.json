@@ -1,0 +1,47 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=41 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Contract publication announcements",
+  "navKey": "news",
+  "description": "Publication of procurement contracts of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Contract publication announcements",
+      "lead": "Publication of procurement contracts of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Contract publication announcements"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Contract publication, fiscal year 2023",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7224493MPM7813323225253222522"
+        },
+        {
+          "title": "Contract publication, fiscal year 2022",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=832%3B347PMM7813323225253222522"
+        },
+        {
+          "title": "Outsourced Service Contracts for External Personnel (Contract Workers), Fiscal Year 2023",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=4928342QMM7813323225253222522"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

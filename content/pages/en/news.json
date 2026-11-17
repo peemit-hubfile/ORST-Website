@@ -1,0 +1,174 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าหมวด 5 ข่าวสารและกิจกรรม (แม่แบบ T3) ข่าวล่าสุดจาก orst.go.th/iwfm_table.asp?a=34",
+  "title": "News and activities",
+  "navKey": "news",
+  "description": "Press releases, announcements, activities and the latest updates from the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "News and activities",
+      "lead": "Press releases, announcements, activities and latest updates",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities"
+        }
+      ],
+      "image": "assets/images/orst/news/data0005-00005374-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "document-list",
+      "id": "latest",
+      "heading": "Latest press releases",
+      "layout": "news",
+      "action": {
+        "label": "View all news",
+        "href": "general-news.html"
+      },
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "publishedAt": "2026-11-02",
+          "href": "news-69kbj5538066.html",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "excerpt": "3 photos",
+          "category": "Announcement"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+          "publishedAt": "2026-10-31",
+          "href": "news-69jaj1403044.html",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "excerpt": "10 photos · 5 attachments",
+          "category": "Announcement"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "publishedAt": "2026-10-29",
+          "href": "news-69jsh5647044.html",
+          "image": "assets/images/orst/news/data0005-00005428-640.jpg",
+          "excerpt": "3 images · 1 attachment",
+          "category": "Announcement"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+          "publishedAt": "2026-10-29",
+          "href": "news-69jsn0030075.html",
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "excerpt": "3 images · 4 attachments",
+          "category": "Announcement"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
+          "publishedAt": "2026-10-19",
+          "href": "news-69jsm4847075.html",
+          "image": "assets/images/orst/news/data0005-00005420-640.jpg",
+          "excerpt": "3 images · 4 attachments",
+          "category": "Announcement"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
+          "publishedAt": "2026-10-07",
+          "href": "news-69jgi2510013.html",
+          "image": "assets/images/orst/news/data0005-00005414-640.jpg",
+          "excerpt": "3 images · 1 attachment",
+          "category": "Announcement"
+        }
+      ]
+    },
+    {
+      "type": "page-index",
+      "id": "sections",
+      "variant": "alt",
+      "columns": 2,
+      "groups": [
+        {
+          "heading": "Press releases",
+          "icon": "i-megaphone",
+          "items": [
+            {
+              "title": "General Press Releases",
+              "href": "general-news.html"
+            },
+            {
+              "title": "Activity news",
+              "href": "activity-news.html"
+            },
+            {
+              "title": "Academic lectures",
+              "href": "academic-lectures.html"
+            },
+            {
+              "title": "Event Calendar",
+              "href": "event-calendar.html"
+            },
+            {
+              "title": "Questions and answers (Q&A)",
+              "href": "qa.html"
+            },
+            {
+              "title": "Photo and video gallery"
+            },
+            {
+              "title": "News RSS"
+            }
+          ]
+        },
+        {
+          "heading": "Announcement",
+          "icon": "i-file",
+          "items": [
+            {
+              "title": "Procurement announcements",
+              "href": "procurement-notices.html"
+            },
+            {
+              "title": "Procurement result announcements",
+              "href": "procurement-results.html"
+            },
+            {
+              "title": "Reference price announcements",
+              "href": "reference-prices.html"
+            },
+            {
+              "title": "Monthly procurement summary (Form Sor Kho Ro 1)",
+              "href": "procurement-summary.html"
+            },
+            {
+              "title": "Procurement result announcements (quarterly)",
+              "href": "procurement-quarterly.html"
+            },
+            {
+              "title": "Procurement plan announcements",
+              "href": "procurement-plans.html"
+            },
+            {
+              "title": "Auction announcements",
+              "href": "auctions.html"
+            },
+            {
+              "title": "Job announcements and personnel administration announcements",
+              "href": "job-announcements.html"
+            },
+            {
+              "title": "Official news",
+              "href": "official-news.html"
+            },
+            {
+              "title": "Contract publication announcements",
+              "href": "contracts.html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-11-13",
+  "lang": "en"
+}

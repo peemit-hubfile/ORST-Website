@@ -1,0 +1,59 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
+  "navKey": "knowledge",
+  "description": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง — ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง · ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "หลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด — ๒ หัวข้อ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หลักเกณฑ์ภาษาไทย",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": false,
+      "sections": [
+        {
+          "heading": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000804.PDF\" data-doc-title=\"ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง\" hidden>ดูเอกสาร<span class=\"sr-only\"> ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000804.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง (เปิดในแท็บใหม่)</span></a></span></div>"
+        },
+        {
+          "heading": "ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000805.PDF\" data-doc-title=\"ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา\" hidden>ดูเอกสาร<span class=\"sr-only\"> ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000805.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา (เปิดในแท็บใหม่)</span></a></span></div>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ดูหลักเกณฑ์เรื่องอื่น",
+      "body": "หลักเกณฑ์การใช้ภาษาไทยทั้งหมดของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "หลักเกณฑ์ภาษาไทยทั้งหมด",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ]
+}

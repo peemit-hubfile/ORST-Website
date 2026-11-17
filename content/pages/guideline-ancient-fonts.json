@@ -1,0 +1,75 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด",
+  "navKey": "knowledge",
+  "description": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด — ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย · อักษรไทยน้อย · อักษรธรรมอีสาน และอื่น ๆ",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "หลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด — ๖ หัวข้อ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หลักเกณฑ์ภาษาไทย",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": true,
+      "sections": [
+        {
+          "heading": "ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004907.PDF\" data-doc-title=\"ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย\" hidden>ดูเอกสาร<span class=\"sr-only\"> ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004907.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย (เปิดในแท็บใหม่)</span></a></span></div>"
+        },
+        {
+          "heading": "อักษรไทยน้อย",
+          "html": "<p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- ผังข้อมูลฟอนต์อักษรไทยน้อย</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- คู่มือการพิมพ์ฟอนต์อักษรไทยน้อย</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- รายละเอียดสำหรับการดาวน์โหลดฟอนต์อักษรไทยน้อย</a></p><p><a href=\"https://drive.google.com/file/d/1Nb92ATAgCMZHQ3dxkTsXN5O5gu-q1GPV/view?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">- Font-RST-THNOI.zip Dowload</a><br></p><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรไทยน้อย (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF\" data-doc-title=\"อักษรไทยน้อย (1)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรไทยน้อย (1)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรไทยน้อย (1) (เปิดในแท็บใหม่)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรไทยน้อย (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF\" data-doc-title=\"อักษรไทยน้อย (2)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรไทยน้อย (2)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรไทยน้อย (2) (เปิดในแท็บใหม่)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรไทยน้อย (3)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF\" data-doc-title=\"อักษรไทยน้อย (3)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรไทยน้อย (3)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรไทยน้อย (3) (เปิดในแท็บใหม่)</span></a></span></div>"
+        },
+        {
+          "heading": "อักษรธรรมอีสาน",
+          "html": "<p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- ผังข้อมูลฟอนต์อักษรธรรมอีสาน</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- คู่มือการพิมพ์ฟอนต์อักษรธรรมอีสาน</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- รายละเอียดสำหรับการดาวน์โหลดฟอนต์อักษรธรรมอีสาน</a></p><p><a href=\"https://drive.google.com/file/d/1ytQM8zxUyk_sOCT_ozgs25O5oP9HjNJp/view?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">- Font RST-ISAN.zip Dowload</a><br></p><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรธรรมอีสาน (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF\" data-doc-title=\"อักษรธรรมอีสาน (1)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรธรรมอีสาน (1)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรธรรมอีสาน (1) (เปิดในแท็บใหม่)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรธรรมอีสาน (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF\" data-doc-title=\"อักษรธรรมอีสาน (2)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรธรรมอีสาน (2)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรธรรมอีสาน (2) (เปิดในแท็บใหม่)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรธรรมอีสาน (3)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF\" data-doc-title=\"อักษรธรรมอีสาน (3)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรธรรมอีสาน (3)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรธรรมอีสาน (3) (เปิดในแท็บใหม่)</span></a></span></div>"
+        },
+        {
+          "heading": "อักษรธรรมล้านนา",
+          "html": "<a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- ผังข้อมูลฟอนต์อักษรธรรมล้านนา</a><br><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- คู่มือการพิมพ์ฟอนต์อักษรธรรมล้านนา</a><br><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- รายละเอียดสำหรับการดาวน์โหลดฟอนต์อักษรธรรมล้านนา</a><br><a href=\"https://drive.google.com/file/d/1yUvuQAXRWLpsodlLIJpjMV7ZYjTEnqdy/view?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">- Font RST-LANNA.zip Dowload</a><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรธรรมล้านนา (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF\" data-doc-title=\"อักษรธรรมล้านนา (1)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรธรรมล้านนา (1)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรธรรมล้านนา (1) (เปิดในแท็บใหม่)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรธรรมล้านนา (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF\" data-doc-title=\"อักษรธรรมล้านนา (2)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรธรรมล้านนา (2)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรธรรมล้านนา (2) (เปิดในแท็บใหม่)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรธรรมล้านนา (3)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF\" data-doc-title=\"อักษรธรรมล้านนา (3)\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรธรรมล้านนา (3)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรธรรมล้านนา (3) (เปิดในแท็บใหม่)</span></a></span></div>"
+        },
+        {
+          "heading": "อักษรไทยนิเทศ",
+          "html": "<a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- คู่มือการพิมพ์ฟอนต์อักษรธรรมล้านนา</a><br><a href=\"https://drive.google.com/drive/folders/1R6pSh3J9kxir7zHOkYQ9gwFY244PAwO8\" target=\"_blank\" rel=\"noopener noreferrer\">- Font RST-NITHET.zip Dowload</a><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">อักษรไทยนิเทศ</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF\" data-doc-title=\"อักษรไทยนิเทศ\" hidden>ดูเอกสาร<span class=\"sr-only\"> อักษรไทยนิเทศ</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> อักษรไทยนิเทศ (เปิดในแท็บใหม่)</span></a></span></div>"
+        },
+        {
+          "heading": "แบบอักษรขอมไทย",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">แบบอักษรขอมไทย</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005336.PDF\" data-doc-title=\"แบบอักษรขอมไทย\" hidden>ดูเอกสาร<span class=\"sr-only\"> แบบอักษรขอมไทย</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005336.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> แบบอักษรขอมไทย (เปิดในแท็บใหม่)</span></a></span></div>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ดูหลักเกณฑ์เรื่องอื่น",
+      "body": "หลักเกณฑ์การใช้ภาษาไทยทั้งหมดของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "หลักเกณฑ์ภาษาไทยทั้งหมด",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ]
+}

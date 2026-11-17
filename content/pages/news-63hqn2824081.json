@@ -4,13 +4,18 @@
   "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาคเหนือ",
   "navKey": "news",
   "description": "เมื่อวันที่ ๑๕ สิงหาคม พ.ศ. ๒๕๖๓ ที่ห้องเบญจรงค์ โรงแรมเวียงลคอร จังหวัดลำปาง ดร.ดวงตา ตันโช เลขาธิการราชบัณฑิตยสภา เป็นประธานตัดสินการประกวดเล่าเรื่อ",
+  "sideNav": false,
   "updatedAt": "2020-08-17",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ข่าวกิจกรรม",
+      "variant": "article",
+      "tag": "ข่าวกิจกรรม",
+      "date": "2020-08-17",
       "heading": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาคเหนือ",
-      "lead": "เผยแพร่เมื่อ 17 สิงหาคม 2563",
+      "image": "assets/images/orst/news/data0001-00001953-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาค",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001953.JPG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,17 +35,6 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0001-00001953-960.jpg",
-      "alt": "ภาพประกอบข่าว ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาค",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001953.JPG"
-    },
-    {
       "type": "rich-text",
       "id": "content",
       "paragraphs": [
@@ -50,60 +44,71 @@
       ]
     },
     {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (6 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
         {
           "image": "assets/images/orst/news/data0001-00001953-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001953.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001953.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
         },
         {
           "image": "assets/images/orst/news/data0001-00001954-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001954.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001954.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
         },
         {
           "image": "assets/images/orst/news/data0001-00001955-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 3",
-          "title": "ภาพที่ 3",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001955.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001955.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
         },
         {
           "image": "assets/images/orst/news/data0001-00001956-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 4",
-          "title": "ภาพที่ 4",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001956.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001956.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
         },
         {
           "image": "assets/images/orst/news/data0001-00001957-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 5",
-          "title": "ภาพที่ 5",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001957.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001957.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
         },
         {
           "image": "assets/images/orst/news/data0001-00001958-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 6",
-          "title": "ภาพที่ 6",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001958.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001958.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
         }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวกิจกรรม",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "activity-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "activity-news.html"
+          "title": "ผลการคัดเลือกนักเรียนผู้เข้าประกวดเล่าเรื่องหัวข้อ “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาคเหนือ และกลุ่มที่ ๔ ภาคใต้",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HGM2640091",
+          "category": "ข่าว",
+          "publishedAt": "2020-08-04"
+        },
+        {
+          "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้",
+          "href": "news-63hqn2359047.html",
+          "image": "assets/images/orst/news/data0001-00001939-640.jpg",
+          "category": "กิจกรรม",
+          "publishedAt": "2020-08-17"
+        },
+        {
+          "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๓ ภาคอีสาน",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HQM5624016",
+          "category": "ข่าว",
+          "publishedAt": "2020-08-10"
+        },
+        {
+          "title": "ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๑ ภาคกลาง ภาคตะวันออก ภาคตะวันตก",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HQN0009047",
+          "category": "ข่าว",
+          "publishedAt": "2020-08-10"
         }
       ]
     }

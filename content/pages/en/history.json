@@ -1,0 +1,80 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบ T2 (หน้าเนื้อหา) — เมนู 3.3.1 ข้อความจาก orst.go.th/iwfm_list.asp?p=ABOUT-HISTORY-ORS คงถ้อยคำเดิม หัวข้อย่อยตั้งขึ้นใหม่เพื่อทำสารบัญ ให้ ORST ตรวจ",
+  "title": "History",
+  "navKey": "about",
+  "description": "History of the Royal Society of Thailand and the Office of the Royal Society, from 1926 to the present",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "History",
+      "lead": "The Office of the Royal Society is a department-level government agency that is not part of the Office of the Prime Minister, any ministry or sub-ministry, and reports directly to the Prime Minister",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About us",
+          "href": "about.html"
+        },
+        {
+          "label": "History"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "history",
+      "sections": [
+        {
+          "heading": "The Origins of the Royal Society of Thailand",
+          "paragraphs": [
+            "On 19 April 1926, His Majesty King Prajadhipok, King Rama VII of the Chakri Dynasty, graciously proclaimed the establishment of the “ราชบัณฑิตยสภา” (Royal Society). The King saw fit to revive the work of the Krom Ratchabandit, an ancient department and a position to which those learned in the arts and sciences were appointed to serve the Crown. Later, in 1933, the House of Representatives advised His Majesty King Prajadhipok that a Royal Institute should be established, with members of learning who might in future be elected as Fellows, to carry out research and disseminate knowledge to the public and to produce textbooks widely. His Majesty therefore graciously enacted the Royal Institute Act in 1933 and repealed the proclamation establishing the Royal Society dated 19 April 1926.",
+            "When the Royal Institute was first established, there were as yet no Fellows, only Associate Fellows, who held their first meeting in the Grand Palace on 16 June 1934. Later, the Royal Institute Act B.E. 2485 was issued, and the first Fellows were appointed by Royal Command on 30 September 1942, numbering 51 people."
+          ]
+        },
+        {
+          "heading": "Key Work and Premises",
+          "paragraphs": [
+            "Key work in the early period arose from the royal initiative of His Majesty King Prajadhipok, namely the annual competition for writing books teaching Buddhism to children, which the Royal Institute has carried on from 1934 to the present. In addition, there are 5 other main areas of work: revising the dictionary, which was originally the work of revising the Pathanukrom transferred from the Ministry of Public Instruction in 1934; the encyclopedia; coining Thai technical terms; the geographical gazetteer; and setting the guidelines for the romanization of Thai.",
+            "The Royal Institute's premises were first the upper floor of the Somdet residence at Bang Khun Phrom Palace. It later moved to the Thawon Watthu Building, the northern part of the Vajiravudh Library building on Na Phra That Road, until 1988, then to the Ratchawallop Building in the Grand Palace until 2006, when it moved to Sanam Suea Pa, Dusit District, Bangkok, where it remains today."
+          ]
+        },
+        {
+          "heading": "Structure and Operations",
+          "paragraphs": [
+            "The Royal Institute's operations were divided into 2 parts: the Council of Fellows and the civil service. The Council of Fellows set policy for academic work and consisted of council members who were Fellows from 3 academies, namely the Academy of Moral and Political Sciences, the Academy of Science and the Academy of Arts. The President of the Royal Institute was President of the Council, the Vice President of the Royal Institute was Vice President of the Council, the Secretary-General of the Royal Institute served as Secretary of the Council, and the Deputy Secretary-General served as Assistant Secretary of the Council. In the civil service part, the Secretary-General of the Royal Institute was head of the agency, assisted by the Deputy Secretary-General, overseeing the academic and administrative work of the Office of the Secretary, the Moral and Political Sciences Division, the Science Division and the Arts Division, and coordinating work with all the academies.",
+            "Academic work is carried out through academic committees, which hold meetings to consider terms, coin technical terms, write explanations of terms in various fields and set language guidelines. The results, as bodies of knowledge, are then disseminated to the public through various channels, including print, radio, television and electronic media, so as to meet the public's needs widely. Feedback is also gathered in order to make services more effective.",
+            "In addition, the Royal Institute has run many projects to disseminate knowledge in various fields and to preserve and promote the Thai language, including the “Know and Love Thai” project, a key project under government policy; the ASEAN Languages and Cultures project; and the National Language Policy project. It also exchanges knowledge and coordinates with other learned societies and academic institutions in Thailand and abroad. The Royal Institute has continuously carried out its mission of study, research and the advancement of all branches of knowledge. Its best-known academic work, used as a reference and as the standard for writing Thai, both in official documents and in education, so that usage is uniform, is the Royal Institute Dictionary."
+          ]
+        },
+        {
+          "heading": "From the Royal Institute to the Royal Society of Thailand",
+          "paragraphs": [
+            "In 2013, the Council of Fellows considered it appropriate to change the name “ราชบัณฑิตยสถาน” (Royal Institute) to “ราชบัณฑิตยสภา” (Royal Society of Thailand), the original name given by His Majesty King Prajadhipok when he founded it on 19 April 1926, in honour of the 120th anniversary of his birth. It also sought to improve the powers, duties and academic administration of the Royal Society so that its work would reach the national academic community and the general public more widely; to establish a welfare fund for members of the Royal Society for their benefit; and to allow income the Royal Society receives from academic administration and from education and training to be spent on the duties of the Office of the Royal Society without having to remit it to the Treasury as state revenue, giving greater flexibility in academic administration.",
+            "In 2015, His Majesty the King issued a Royal Command proclaiming that it was appropriate to revise the law on the Royal Institute, and graciously enacted the Royal Society Act B.E. 2558, published in the Royal Gazette, Volume 132, Part 10 Kor, dated 13 February 2015, and in force from 14 February 2015. The name of the agency “ราชบัณฑิตยสถาน” (Royal Institute) was therefore changed to “สำนักงานราชบัณฑิตยสภา” (Office of the Royal Society), and “สภาราชบัณฑิต” (Council of Fellows) was changed to “ราชบัณฑิตยสภา” (Royal Society of Thailand).",
+            "Section 6 of the Royal Society Act B.E. 2558 states that the Royal Society of Thailand is an institution for the advancement of all branches of knowledge, founded by His Majesty King Prajadhipok, with the objective of carrying out study and research in order to disseminate, promote and exchange knowledge, and to develop, preserve and provide academic services for the benefit of the country and the people. Under Section 12, the Royal Society of Thailand has 3 types of members: 1. Associate Fellows, 2. Fellows, 3. Honorary Fellows. Section 24 of the Act establishes a council within the Office of the Royal Society, called the “ราชบัณฑิตยสภา” (Royal Society of Thailand), consisting of the President of the Royal Society of Thailand as President of the Council, 2 Vice Presidents of the Royal Society of Thailand as Vice Presidents of the Council, and all Fellows as council members, with the Secretary-General of the Office of the Royal Society serving as Secretary of the Council and the Deputy Secretary-General serving as Assistant Secretary of the Council."
+          ]
+        },
+        {
+          "heading": "Powers and Duties of the Office and the Royal Society of Thailand",
+          "paragraphs": [
+            "The Office of the Royal Society is a government agency known by another name, with the status of a department not under the Office of the Prime Minister, a ministry or a sub-ministry, under the law on state administration. It has many important powers and duties, such as conducting study and research, advancing all branches of knowledge and disseminating its work for the benefit of the country and the people; producing dictionaries, encyclopedias, gazetteers and taxonomies; coining technical terms in various fields, including compiling dictionaries of foreign-language technical terms in Thai, and other academic work; setting guidelines on the use of the Thai language; preserving the Thai language so that it does not change for the worse; and promoting the Thai language, a hallmark of the nation, so that it becomes ever more prominent.",
+            "The Royal Society of Thailand has the power and duty to set policy for academic work within the powers and duties of the Office of the Royal Society; to consider and approve rules and regulations on the operations of the Royal Society; to elect the President and Vice Presidents of the Royal Society of Thailand; and to resolve to approve nominations for the appointment of Fellows and Honorary Fellows."
+          ]
+        },
+        {
+          "heading": "Developing Services Today",
+          "paragraphs": [
+            "Since 14 February 2015, the agency “ราชบัณฑิตยสถาน” (Royal Institute) has been renamed “สำนักงานราชบัณฑิตยสภา” (Office of the Royal Society), and “สภาราชบัณฑิต” (Council of Fellows) has been renamed “ราชบัณฑิตยสภา” (Royal Society of Thailand), but academic work and services disseminating its work to the public continue, along with development to meet the public's needs more widely and quickly. Besides producing academic books in various fields, radio and television programmes, CDs and DVDs disseminating knowledge, and e-learning materials, in 2015 the Office of the Royal Society made its most-demanded books more usable by engaging the National Electronics and Computer Technology Center (NECTEC) to develop applications of the Royal Institute Dictionary B.E. 2554 and of How to Read and How to Write, Royal Institute edition, for use on smartphones. The Office of the Royal Society and NECTEC have also agreed to cooperate in turning other academic works into applications. In addition, the Office of the Royal Society has improved and promoted Thai-language learning for people with disabilities, for example by producing Braille editions of the Royal Institute Dictionary and How to Read and How to Write for people with visual impairments, and by holding training in correct Thai pronunciation for blind people and teachers of the blind, so that people with visual impairments and blind people can learn correct Thai pronunciation on an equal footing with others.",
+            "The Office of the Royal Society also runs a project to build a database of words in the Royal Institute Dictionary, and promotes the preservation of local dialects and local wisdom in every region of the country by compiling knowledge on the dialects of the North, the Northeast and the South and disseminating it through printed books, radio programmes and competitions in which students tell stories of pride in their home communities in their local dialect.",
+            "The duties, mission and key roles of the Office of the Royal Society — creating knowledge in various fields, setting standards for the use of the Thai language and improving academic services to the public — have been carried out and developed continuously over the 90 years since the founding of the Royal Society of Thailand on 19 April 1926 to the present."
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

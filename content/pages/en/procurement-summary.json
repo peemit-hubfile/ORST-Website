@@ -1,0 +1,525 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=5 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Monthly procurement summary (Form Sor Kho Ro 1)",
+  "navKey": "news",
+  "description": "Monthly Procurement Summaries of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Monthly procurement summary (Form Sor Kho Ro 1)",
+      "lead": "Monthly Procurement Summaries of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Monthly procurement summary (Form Sor Kho Ro 1)"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: June 2026",
+          "publishedAt": "2026-07-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69GMP4016003"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: May 2026",
+          "publishedAt": "2026-05-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3905031"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: April 2026",
+          "publishedAt": "2026-04-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3816000"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: March 2026",
+          "publishedAt": "2026-03-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3723088"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: February 2026",
+          "publishedAt": "2026-02-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3637022"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: January 2026",
+          "publishedAt": "2026-01-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3544069"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: December 2025",
+          "publishedAt": "2025-12-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3446034"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: November 2025",
+          "publishedAt": "2025-11-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3339097"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2025",
+          "publishedAt": "2025-10-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69F%24P3829063"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: October 2025",
+          "publishedAt": "2025-10-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP3229022"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: September 2025",
+          "publishedAt": "2025-09-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2956034"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: August 2025",
+          "publishedAt": "2025-08-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2854056"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: July 2025",
+          "publishedAt": "2025-07-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2728063"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: June 2025",
+          "publishedAt": "2025-06-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2614075"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: May 2025",
+          "publishedAt": "2025-05-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2516025"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: April 2025",
+          "publishedAt": "2025-04-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2346056"
+        },
+        {
+          "title": "ITA: Procurement and Supply Results for 2024",
+          "publishedAt": "2025-03-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F68DVJ5822078"
+        },
+        {
+          "title": "ITA: Procurement and Supply List and Procurement Progress for 2025",
+          "publishedAt": "2025-03-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F68DVK0050084"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: March 2025",
+          "publishedAt": "2025-03-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2145097"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: February 2025",
+          "publishedAt": "2025-02-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP2007022"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: January 2025",
+          "publishedAt": "2025-01-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP1857006"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: December 2024",
+          "publishedAt": "2024-12-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP1637066"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: November 2024",
+          "publishedAt": "2024-11-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP1533078"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: October 2024",
+          "publishedAt": "2024-10-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F69FVP1329056"
+        },
+        {
+          "title": "Summary Report of Procurement and Supply Results for Fiscal Year 2023",
+          "publishedAt": "2024-03-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67CMI0646075"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: September 2023",
+          "publishedAt": "2023-10-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66JLL1113038"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: August 2023",
+          "publishedAt": "2023-08-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66JII4523053"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: July 2023",
+          "publishedAt": "2023-07-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66JII4423059"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: June 2023",
+          "publishedAt": "2023-06-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66JII4335091"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: May 2023",
+          "publishedAt": "2023-05-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66JII4242028"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: April 2023",
+          "publishedAt": "2023-05-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66ESO3205091"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2022",
+          "publishedAt": "2023-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66DTM1132066"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: March 2023",
+          "publishedAt": "2023-04-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66DUI0625094"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: February 2023",
+          "publishedAt": "2023-03-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66DUI0504033"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: January 2023",
+          "publishedAt": "2023-02-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66BJN4621078"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: December 2022",
+          "publishedAt": "2023-01-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66BJN4540088"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: November 2022",
+          "publishedAt": "2022-12-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66BJN4453044"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: October 2022",
+          "publishedAt": "2022-11-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66BJN4358094"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: September 2022",
+          "publishedAt": "2022-10-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66BJN4306038"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: August 2022",
+          "publishedAt": "2022-09-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66BJN4209000"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: July 2022",
+          "publishedAt": "2022-08-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F66BJN4102041"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: April 2022",
+          "publishedAt": "2022-05-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65EQK1450088"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: March 2022",
+          "publishedAt": "2022-03-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65DSM2613088"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: February 2022",
+          "publishedAt": "2022-02-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65DSM2348072"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: January 2022",
+          "publishedAt": "2022-01-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65DSM2231028"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: December 2021",
+          "publishedAt": "2021-12-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65DSM2109063"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: November 2021",
+          "publishedAt": "2021-11-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65DSM1757053"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: October 2021",
+          "publishedAt": "2021-10-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65DSM1556072"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2021",
+          "publishedAt": "2021-10-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F65DTS1201025"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2021",
+          "publishedAt": "2021-08-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64HSQ0719006"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2021",
+          "publishedAt": "2021-06-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64GIQ3512028"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2021",
+          "publishedAt": "2021-05-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64FOR2217013"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), April 2021",
+          "publishedAt": "2021-04-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64EFL1601066"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), March 2021",
+          "publishedAt": "2021-03-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64DIN4717028"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2020",
+          "publishedAt": "2021-03-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64CIK4334078"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), February 2021",
+          "publishedAt": "2021-02-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64DIN4629006"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), January 2021",
+          "publishedAt": "2021-01-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64DIN4538022"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), December 2020",
+          "publishedAt": "2021-01-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F64AKJ0534016"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), November 2020",
+          "publishedAt": "2020-12-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63LDP4828047"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), October 2020",
+          "publishedAt": "2020-11-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63KEI3600000"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), September 2020",
+          "publishedAt": "2020-10-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63KBV2349044"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), August 2020",
+          "publishedAt": "2020-09-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63INJ2545019"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2020",
+          "publishedAt": "2020-08-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63HYJ5417044"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2020",
+          "publishedAt": "2020-07-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63HCN1024081"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2020",
+          "publishedAt": "2020-06-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63HCN0911016"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), April 2020",
+          "publishedAt": "2020-05-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK1322000"
+        },
+        {
+          "title": "Procurement Results Analysis Report Table for Fiscal Year 2019",
+          "publishedAt": "2020-04-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK1450063"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), March 2020",
+          "publishedAt": "2020-04-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK1607088"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), February 2020",
+          "publishedAt": "2020-03-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK1800005"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), January 2020",
+          "publishedAt": "2020-02-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK1844000"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), December 2019",
+          "publishedAt": "2020-01-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK1957005"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), November 2019",
+          "publishedAt": "2019-12-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2109013"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), October 2019",
+          "publishedAt": "2019-10-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2208000"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), September 2019",
+          "publishedAt": "2019-10-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2257038"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), August 2019",
+          "publishedAt": "2019-09-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2407063"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2019",
+          "publishedAt": "2019-08-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2529038"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2019",
+          "publishedAt": "2019-07-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2627013"
+        },
+        {
+          "title": "Summary of the Procurement Results Analysis Report 2018",
+          "publishedAt": "2019-06-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2806066"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2019",
+          "publishedAt": "2019-06-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK2940044"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), April 2019",
+          "publishedAt": "2019-05-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63HDJ2732097"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), March 2019",
+          "publishedAt": "2019-04-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK3056084"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), February 2019",
+          "publishedAt": "2019-02-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK3347006"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), January 2019",
+          "publishedAt": "2019-01-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK3452006"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), December 2018",
+          "publishedAt": "2019-01-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK3544034"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), November 2018",
+          "publishedAt": "2018-11-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK3715084"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), October 2018",
+          "publishedAt": "2018-10-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK3836084"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), September 2018",
+          "publishedAt": "2018-09-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK3958097"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), August 2018",
+          "publishedAt": "2018-08-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK4101097"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2018",
+          "publishedAt": "2018-07-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK4213059"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2018",
+          "publishedAt": "2018-06-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK4423097"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2018",
+          "publishedAt": "2018-05-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK4526084"
+        },
+        {
+          "title": "Procurement Summary for April 2018",
+          "publishedAt": "2018-04-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK5315009"
+        },
+        {
+          "title": "Procurement Summary for March 2018",
+          "publishedAt": "2018-03-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK5424097"
+        },
+        {
+          "title": "Procurement Summary for February 2018",
+          "publishedAt": "2018-02-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK5537009"
+        },
+        {
+          "title": "Procurement Summary for January 2018",
+          "publishedAt": "2018-01-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK5649084"
+        },
+        {
+          "title": "Procurement Summary for December 2017",
+          "publishedAt": "2018-01-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK5816072"
+        },
+        {
+          "title": "Procurement Summary for November 2017",
+          "publishedAt": "2017-12-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZK5921059"
+        },
+        {
+          "title": "Procurement Summary for October 2017",
+          "publishedAt": "2017-11-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000403001004%2F63EZL0028088"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

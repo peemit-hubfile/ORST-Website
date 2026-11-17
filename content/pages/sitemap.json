@@ -41,7 +41,7 @@
               "href": "knowledge.html"
             },
             {
-              "title": "สื่อและสิ่งพิมพ์",
+              "title": "หนังสือและสิ่งพิมพ์",
               "href": "publications.html"
             },
             {
@@ -372,9 +372,9 @@
           ]
         },
         {
-          "heading": "บริการวิชาการ · ระบบออนไลน์",
+          "heading": "บริการวิชาการ · ระบบสืบค้นออนไลน์",
           "href": "services.html",
-          "icon": "i-database",
+          "icon": "i-dictionary",
           "items": [
             {
               "title": "พจนานุกรม",
@@ -385,20 +385,20 @@
               "href": "https://coined-word.orst.go.th/"
             },
             {
+              "title": "ฐานข้อมูลคำทับศัพท์",
+              "href": "https://transliteration.orst.go.th/search"
+            },
+            {
+              "title": "อักขรานุกรมภูมิศาสตร์ไทย",
+              "href": "https://gazetteer.orst.go.th/"
+            },
+            {
               "title": "สารานุกรมและอนุกรมวิธาน",
               "href": "https://lst.nectec.or.th/encyclopedia/"
             },
             {
               "title": "คลังเอกสารเก่า",
               "href": "https://da3.thaidlt.org/"
-            },
-            {
-              "title": "ระบบฐานข้อมูลคำทับศัพท์",
-              "href": "https://transliteration.orst.go.th/search"
-            },
-            {
-              "title": "อักขรานุกรมภูมิศาสตร์ไทย",
-              "href": "https://gazetteer.orst.go.th/"
             },
             {
               "title": "ระบบทดสอบความรู้ด้านภาษาไทย",
@@ -413,14 +413,14 @@
         {
           "heading": "บริการวิชาการ · ความรู้และสิ่งพิมพ์",
           "href": "services.html",
-          "icon": "i-book",
+          "icon": "i-database",
           "items": [
             {
-              "title": "คลังความรู้",
+              "title": "เอกสารความรู้เผยแพร่",
               "href": "knowledge-base.html"
             },
             {
-              "title": "หลักเกณฑ์ต่าง ๆ",
+              "title": "หลักเกณฑ์ภาษาไทย",
               "href": "language-guidelines.html"
             },
             {
@@ -428,7 +428,7 @@
               "href": "infographics.html"
             },
             {
-              "title": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+              "title": "ข้อมูลเสียงภาษาถิ่น",
               "href": "ethnic-language-audio.html"
             },
             {

@@ -1,0 +1,187 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LYO0509028 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "The Royal Society of Thailand holds the Royal Society Tribute project with the academic seminar \"Fellows of the Royal Society: Revered Persons and Sages of the Land, No. 14\" and",
+  "navKey": "news",
+  "description": "On 24 December 2025 at 9:00 a.m., at the Ratchadamnoen Room, Royal Princess Larn Luang Hotel, Bangkok, Professor Emeritus Dr. Suraphon Itsarakraisin, M.D.,",
+  "sideNav": false,
+  "updatedAt": "2025-12-25",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Training and seminars",
+      "date": "2025-12-25",
+      "heading": "The Royal Society of Thailand holds the Royal Society Tribute Project: academic forum on \"Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 14\" and brainstorming forum on the Royal Society of Thailand 5-Year Strategy, No. 3, on the occasion of the 100th anniversary of the Royal Society of Thailand",
+      "image": "assets/images/orst/news/data0005-00005024-960.jpg",
+      "imageAlt": "News image: The Royal Society of Thailand holds the Royal Society Tribute project with the academic seminar \"Fellows of the Royal Society: Revered Persons",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General Press Releases",
+          "href": "general-news.html"
+        },
+        {
+          "label": "The Royal Society of Thailand holds the Royal Society Tribute Project: academic forum on \"Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 14\" and brainstorming forum on the Royal Society of Thailand 5-Year Strategy, No. 3, on the occasion of the 100th anniversary of the Royal Society of Thailand"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "On 24 December 2025 at 9:00 a.m., at the Ratchadamnoen Room, Royal Princess Larn Luang Hotel, Bangkok, Professor Emeritus Dr. Suraphon Itsarakraisin, M.D., President of the Royal Society of Thailand, opened the academic forum \"Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 14\" and the brainstorming forum on the Royal Society of Thailand 5-Year Strategy, No. 3, on the occasion of the 100th anniversary of the Royal Society of Thailand. Dr. Supharoek Phuphongsak, Secretary-General of the Royal Society, delivered the report. A total of 147 participants attended, including Fellows, Associate Fellows, executives and staff of the Office of the Royal Society, and speakers who are descendants and students of the revered Fellows",
+        "The project was held on Wednesday 24 and Thursday 25 December 2025. On the morning of 24 December, there were commemorations and eulogies for Fellows and Associate Fellows who passed away during 2023-2025, followed by the academic seminar \"Fellows of the Royal Society: Revered Persons and Sages of the Land, No. 14\" to honor and publicize the distinction and work of 3 revered Fellows: 1. Professor Dr. Wit Siwasariyanon, Fellow, Academy of Moral and Political Sciences; 2. Professor Dr. Sa-nga Sanphasi, Fellow, Academy of Science; and 3. Phra Phrom Phichit (U Laphanon), Fellow, Academy of Arts, all of whom were learned, admirable and exemplary contributors to the nation. In the afternoon, the Royal Society of Thailand held its meeting No. 4/2025, whose key agenda items were the election of the First Vice President of the Royal Society of Thailand and the endorsement of 15 Associate Fellows as Fellows.",
+        "Activities on 25 December included presenting Fellow and Associate Fellow insignia pins to newly appointed Fellows and Associate Fellows, and the third seminar and brainstorming session on the Royal Society of Thailand 5-year strategy, to jointly set the strategy and operational direction of the Royal Society of Thailand covering all its missions, use it to drive the Royal Society of Thailand toward its stated vision, and develop a master plan framing the preparation of action plans and budget requests (5-year period)."
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005024-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005026-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005026.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005027-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005027.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005028-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005028.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005029-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005029.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005030-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005030.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005031-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005031.JPG",
+          "alt": "News image 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005032-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005032.JPG",
+          "alt": "News image 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005033-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005033.JPG",
+          "alt": "News image 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005034-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005034.JPG",
+          "alt": "News image 10"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005035-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005035.JPG",
+          "alt": "News image 11"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005036-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005036.JPG",
+          "alt": "News image 12"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005037-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005037.JPG",
+          "alt": "News image 13"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005038-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005038.JPG",
+          "alt": "News image 14"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005039-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005039.JPG",
+          "alt": "News image 15"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005040-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005040.JPG",
+          "alt": "News image 16"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005041-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005041.JPG",
+          "alt": "News image 17"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005042-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005042.JPG",
+          "alt": "News image 18"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005043-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005043.JPG",
+          "alt": "News image 19"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005044-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005044.JPG",
+          "alt": "News image 20"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Academic forum: “Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 12”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66HWO2601063",
+          "category": "News",
+          "publishedAt": "2023-08-23"
+        },
+        {
+          "title": "The Royal Society of Thailand holds the academic forum “Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 11”, honoring members of the Royal Society who have contributed to the nation",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HKN5949034",
+          "category": "News",
+          "publishedAt": "2022-08-11"
+        },
+        {
+          "title": "Article: “The Royal Society of Thailand, the Royal Institute and the Office of the Royal Society”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65G%24K5800003",
+          "category": "News",
+          "publishedAt": "2022-07-29"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "href": "news-69kbj5538066.html",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "Announcement",
+          "publishedAt": "2026-11-02"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

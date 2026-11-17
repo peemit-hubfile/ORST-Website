@@ -35,6 +35,9 @@ MONTHS = ["มกราคม", "กุมภาพันธ์", "มีนา�
 TRAINING = re.compile(r"อบรม|เสวนา|บรรยาย|ค่าย|สัมมนา|ประชุมวิชาการ")
 
 
+SHORT_MONTHS = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
+
+
 def thai_date(iso):
     y, m, d = map(int, iso.split("-"))
     return f"{d} {MONTHS[m - 1]} {y + 543}"
@@ -138,31 +141,40 @@ for it in all_items:
                                      f"เอกสารแนบ {len(it['attachments'])} ไฟล์" if it["attachments"] else ""] if x)
     it["excerpt"] = body[0] if body else summary
     list_label, list_href = LIST_PAGE[it["source"]]
-    blocks = [{"type": "page-hero", "eyebrow": TAB_LABEL[it["tab"]], "heading": it["title"],
-               "lead": "เผยแพร่เมื่อ " + thai_date(it["publishedAt"]),
-               "breadcrumb": [{"label": "หน้าหลัก", "href": "index.html"}, {"label": "ข่าวสารและกิจกรรม", "href": "news.html"},
-                              {"label": list_label, "href": list_href}, {"label": it["title"]}]}]
-    blocks.append({"type": "share", "id": "share"})
+    # หัวหน้าเพจแบบข่าว (variant article) แบ่งสองฝั่ง: ประเภท · วันที่ / หัวข้อ / ปุ่มแชร์-คัดลอก-พิมพ์ | ภาพเด่น (กดดูภาพเต็ม)
+    hero = {"type": "page-hero", "variant": "article", "tag": TAB_LABEL[it["tab"]], "date": it["publishedAt"], "heading": it["title"]}
     if it["images"]:
-        # ภาพแรกเป็นภาพเด่น ภาพที่เหลือเป็นแกลเลอรี — กดเปิดดูภาพเต็มใน lightbox
-        blocks.append({"type": "figure", "id": "cover", "image": saved[(it["images"][0], 960)],
-                       "alt": f"ภาพประกอบข่าว {it['title'][:80]}", "href": it["images"][0]})
+        hero.update({"image": saved[(it["images"][0], 960)], "imageAlt": f"ภาพประกอบข่าว {it['title'][:80]}", "imageHref": it["images"][0]})
+    hero["breadcrumb"] = [{"label": "หน้าหลัก", "href": "index.html"}, {"label": "ข่าวสารและกิจกรรม", "href": "news.html"},
+                          {"label": list_label, "href": list_href}, {"label": it["title"]}]
+    blocks = [hero]
     if body:
         blocks.append({"type": "rich-text", "id": "content", "paragraphs": body})
-    if len(it["images"]) > 1:
-        blocks.append({"type": "media-grid", "id": "gallery", "variant": "alt", "heading": f"ภาพประกอบ ({len(it['images'])} ภาพ)",
-                       "columns": 4, "ratio": "4:3", "fit": "contain",
-                       "items": [{"image": saved[(u, 640)], "alt": f"ภาพประกอบข่าว ภาพที่ {i + 1}",
-                                  "title": f"ภาพที่ {i + 1}", "href": u} for i, u in enumerate(it["images"])]})
+    # ท้ายหน้า: เอกสารแนบ | ภาพประกอบข่าว (โมเสก) — ภาพเดียวอยู่ใน hero แล้ว ไม่ต้องแสดงซ้ำ
+    media = {"type": "news-media", "id": "news-media"}
     if it["attachments"]:
-        blocks.append({"type": "document-list", "id": "attachments", "heading": "เอกสารที่เกี่ยวข้อง",
-                       "layout": "compact", "items": it["attachments"]})
-    blocks.append({"type": "cta-band", "heading": list_label, "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-                   "actions": [{"label": "ดูข่าวทั้งหมด", "href": list_href}]})
+        media["attachments"] = it["attachments"]
+    if len(it["images"]) > 1:
+        media["images"] = [{"image": saved[(u, 640)], "href": u, "alt": f"ภาพประกอบข่าว ภาพที่ {i + 1}"} for i, u in enumerate(it["images"])]
+    if len(media) > 2:
+        blocks.append(media)
+    # ข่าวอื่น ๆ: ข่าวล่าสุด 4 ข่าวจากหน้ารวมเดียวกัน (ไม่รวมข่าวนี้)
+    others = sorted((o for o in all_items if o["source"] == it["source"] and o is not it),
+                    key=lambda o: o["publishedAt"], reverse=True)[:4]
+    if others:
+        blocks.append({"type": "news-related", "id": "related", "heading": "ข่าวอื่น ๆ", "href": list_href,
+                       "items": [{"title": o["title"], "href": f"news-{news_id(o['href'])}.html",
+                                  **({"image": saved[(o["images"][0], 640)]} if o["images"] else {}),
+                                  "category": TAB_LABEL[o["tab"]], "publishedAt": o["publishedAt"]} for o in others]})
+    else:
+        blocks.append({"type": "cta-band", "heading": list_label, "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
+                       "actions": [{"label": "ดูข่าวทั้งหมด", "href": list_href}]})
     desc = (it["excerpt"] or it["title"])[:150]
     page = {"$schema": "../blocks.schema.json",
             "_note": f"หน้าข่าว — ข้อมูลจาก {it['href']} (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
-            "title": it["title"][:120], "navKey": "news", "description": desc, "updatedAt": it["publishedAt"], "blocks": blocks}
+            "title": it["title"][:120], "navKey": "news", "description": desc,
+            "sideNav": False,   # หน้าข่าวเต็มความกว้าง ไม่มีแถบเมนูย่อย
+            "updatedAt": it["publishedAt"], "blocks": blocks}
     with open(f"{ROOT}/content/pages/{slug}.json", "w", encoding="utf-8", newline="\n") as f:
         json.dump(page, f, ensure_ascii=False, indent=2)
         f.write("\n")
@@ -191,7 +203,7 @@ def feature(it):
                 <article class="news-mosaic-feature">
                   <a href="{it['slug']}.html" class="news-mosaic-feature-img" aria-label="อ่านข่าว{e(short(it['title'], 80))}">
                     <img src="{img}" alt="{e(short(it['title'], 120))}" loading="lazy">
-                    <span class="news-type-badge">{label}</span>
+                    <span class="news-type-badge">ข่าวเด่น</span>
                   </a>
 
                   <div class="news-mosaic-feature-body">
@@ -203,10 +215,17 @@ def feature(it):
                     <p>
                       {e(short(it['excerpt'], 220))}
                     </p>
-                    <a class="news-primary-action" href="{it['slug']}.html">อ่านต่อ →</a>
+                    <a class="news-primary-action" href="{it['slug']}.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a>
                   </div>
                 </article>
 """
+
+
+def date_badge(iso):
+    """ป้ายวันที่บนภาพ: วันตัวใหญ่ + เดือนย่อ ปีย่อ (เช่น 20 / ก.ค. 69)"""
+    y, m, d = map(int, iso.split("-"))
+    return (f'<time class="news-date-badge" datetime="{iso}" aria-label="{thai_date(iso)}">'
+            f'<b>{d}</b><span>{SHORT_MONTHS[m - 1]} {str(y + 543)[-2:]}</span></time>')
 
 
 def card(it):
@@ -215,11 +234,11 @@ def card(it):
                     <a href="{it['slug']}.html" class="news-mosaic-thumb">
                       <img src="{img}" alt="{e(short(it['title'], 120))}" loading="lazy">
                     </a>
+                    {date_badge(it['publishedAt'])}
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">{TAB_LABEL[it['tab']]}</span>
                       <h4>{e(it['title'])}</h4>
                       <p>{e(short(it['excerpt'], 120))}</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="{it['publishedAt']}">{thai_date(it['publishedAt'])}</time><a href="{it['slug']}.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">{TAB_LABEL[it['tab']]}</span><a href="{it['slug']}.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
 """
@@ -276,7 +295,29 @@ for name in ["general-news", "activity-news", "news"]:
                 n += 1
         if b.get("type") == "document-list":
             b["layout"] = "news"   # แม่แบบ T4 รายการข่าว: แถวมีรูปปก / ป้ายวันที่
+            # ประเภทข่าวสำหรับชิปกรอง (ทั้งหมด / ข่าว / ประกาศ / กิจกรรม) — แยกจากคำขึ้นต้นชื่อเรื่อง
+            for doc in b.get("items", []):
+                doc["category"] = "ประกาศ" if doc["title"].strip().startswith("ประกาศ") else (
+                    "กิจกรรม" if name == "activity-news" else "ข่าว")
+    page["sideNav"] = False   # หน้ารวมข่าวเต็มความกว้าง (การ์ดหลายคอลัมน์) ไม่มีแถบเมนูย่อย
+    # hero แบบมีรูป: ใช้ภาพข่าวล่าสุดที่มีภาพขนาด 960px (ถ้ายังไม่ได้ตั้งรูปไว้)
+    hero = page["blocks"][0] if page["blocks"] and page["blocks"][0].get("type") == "page-hero" else None
+    if hero is not None and not hero.get("image"):
+        for b in page["blocks"]:
+            for doc in b.get("items", []) if b.get("type") == "document-list" else []:
+                big = (doc.get("image") or "").replace("-640.jpg", "-960.jpg")
+                if big and os.path.exists(f"{ROOT}/{big}"):
+                    hero["image"], hero["imageAlt"] = big, ""
+                    break
+            if hero.get("image"):
+                break
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(page, f, ensure_ascii=False, indent=2)
         f.write("\n")
     print(f"  {name}.json: ลิงก์ไปหน้าข่าวใหม่ {n} รายการ")
+
+# 6) "ข่าวที่เกี่ยวข้อง" ท้ายหน้ารายละเอียดข่าว — เลือกจากชื่อข่าวที่คล้ายกัน (related.py) หลังเขียนหน้ารวมข่าวแล้ว
+#    ไม่มีข่าวเรื่องเดียวกัน = แสดง "ข่าวอื่น ๆ" (ข่าวล่าสุดของหมวด) · ไม่แสดงประกาศชื่อซ้ำ
+import related  # noqa: E402
+print("\nข่าวที่เกี่ยวข้อง")
+related.apply(ROOT)

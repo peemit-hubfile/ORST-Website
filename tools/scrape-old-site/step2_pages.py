@@ -20,8 +20,9 @@ P = {  # หน้าแม่ของแต่ละหมวด (ใช้ท
     "ops": ("การปฏิบัติราชการ", "operations.html"),
     "news": ("ข่าวสารและกิจกรรม", "news.html"),
     "services": ("บริการวิชาการ", "services.html"),
+    "knowledge": ("คลังองค์ความรู้", "knowledge.html"),
 }
-NAV = {"about": "about", "ops": "about", "news": "news", "services": "services"}
+NAV = {"about": "about", "ops": "about", "news": "news", "services": "services", "knowledge": "knowledge"}
 CREATED = []
 
 
@@ -30,16 +31,19 @@ def crumbs(parent, title, mid=None):
     return [{"label": l, **({"href": h} if h else {})} for l, h in c]
 
 
-def save(slug, title, parent, description, blocks, source, mid=None, lead=None):
+def save(slug, title, parent, description, blocks, source, mid=None, lead=None, image=None, side_nav=True):
+    """image = ภาพพื้นหลัง hero, side_nav=False = หน้ารวมเต็มความกว้าง (ไม่มีเมนูข้าง)"""
+    hero = {"type": "page-hero", "heading": title, **({"image": image} if image else {}), "lead": lead or description,
+            "breadcrumb": crumbs(parent, title, mid)}
     page = {
         "$schema": "../blocks.schema.json",
         "_note": SRC_NOTE.format(source),
         "title": title,
         "navKey": NAV[parent],
         "description": description,
+        **({} if side_nav else {"sideNav": False}),
         "updatedAt": TODAY,
-        "blocks": [{"type": "page-hero", "heading": title, "lead": lead or description,
-                    "breadcrumb": crumbs(parent, title, mid)}] + blocks,
+        "blocks": [hero] + blocks,
     }
     with open(f"{ROOT}/content/pages/{slug}.json", "w", encoding="utf-8", newline="\n") as f:
         json.dump(page, f, ensure_ascii=False, indent=2)
@@ -81,8 +85,8 @@ def docs(items, **kw):
     return {"type": "document-list", "id": kw.pop("id", "documents"), "items": clean(sizes(items)), **kw}
 
 
-def doc_page(slug, title, parent, description, items, source, **kw):
-    save(slug, title, parent, description, [docs(items, **kw)], source)
+def doc_page(slug, title, parent, description, items, source, image=None, side_nav=True, **kw):
+    save(slug, title, parent, description, [docs(items, **kw)], source, image=image, side_nav=side_nav)
 
 
 # ============================================================================
@@ -303,13 +307,15 @@ save("qa", "คำถาม-คำตอบ (Q&A)", "news", "คำถามแ�
 # หมวด 6 บริการวิชาการ
 # ============================================================================
 print("หมวด 6")
-doc_page("knowledge-base", "คลังความรู้", "services", "เอกสารความรู้เผยแพร่ของสำนักงานราชบัณฑิตยสภา",
-         table(28), "orst.go.th/iwfm_table.asp?a=28", sort="none")
-doc_page("language-guidelines", "หลักเกณฑ์ต่าง ๆ", "services",
+# หน้ารวมของแต่ละประเภทในเมนู "คลังองค์ความรู้" — เต็มความกว้าง มีภาพ hero
+KB = dict(image=None, side_nav=False)
+doc_page("knowledge-base", "เอกสารความรู้เผยแพร่", "knowledge", "เอกสารความรู้เผยแพร่ของสำนักงานราชบัณฑิตยสภา",
+         table(28), "orst.go.th/iwfm_table.asp?a=28", sort="none", **{**KB, "image": "assets/images/orst/news/data0005-00005428-960.jpg"})
+doc_page("language-guidelines", "หลักเกณฑ์ภาษาไทย", "knowledge",
          "หลักเกณฑ์การใช้ภาษาไทย การทับศัพท์ การถอดอักษร การอ่าน และการเขียนชื่อต่าง ๆ ที่สำนักงานราชบัณฑิตยสภากำหนด",
-         table(36), "orst.go.th/iwfm_table.asp?a=36", sort="none")
-doc_page("ethnic-language-audio", "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย", "services",
-         "ข้อมูลเสียงประกอบคู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย", table(42), "orst.go.th/iwfm_table.asp?a=42")
+         table(36), "orst.go.th/iwfm_table.asp?a=36", sort="none", **{**KB, "image": "assets/images/orst/news/data0005-00005306-960.jpg"})
+doc_page("ethnic-language-audio", "ข้อมูลเสียงภาษาถิ่น", "knowledge",
+         "ข้อมูลเสียงประกอบคู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย", table(42), "orst.go.th/iwfm_table.asp?a=42", **{**KB, "image": "assets/images/orst/news/data0005-00005324-960.jpg"})
 
 bb = text(main_wrapper(get("iwfm_list.asp?p=ABOUT-BUY-BOOK")))
 save("book-ordering", "ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน", "services",
@@ -348,10 +354,11 @@ def thumb(it):
 
 with cf.ThreadPoolExecutor(8) as ex:
     paths = list(ex.map(thumb, infos))
-save("infographics", "อินโฟกราฟิก", "services", "อินโฟกราฟิกความรู้ด้านภาษาไทยและศาสตร์ต่าง ๆ จากสำนักงานราชบัณฑิตยสภา",
-     [{"type": "media-grid", "id": "infographics", "columns": 4, "ratio": "1:1", "fit": "contain",
+save("infographics", "อินโฟกราฟิก", "knowledge", "อินโฟกราฟิกความรู้ด้านภาษาไทยและศาสตร์ต่าง ๆ จากสำนักงานราชบัณฑิตยสภา",
+     [{"type": "media-grid", "id": "infographics", "columns": 4, "ratio": "1:1", "pageSize": 20, "unit": "ภาพ",
        "items": [{"image": p, "alt": it["title"], "title": it["title"], "href": it["src"]} for p, it in zip(paths, infos)]}],
-     "orst.go.th/iwfm_book.asp?p=INFO-% (รูปย่อเก็บใน assets/images/orst/infographic ลิงก์ไปภาพเต็มบนเว็บเดิม)")
+     "orst.go.th/iwfm_book.asp?p=INFO-% (รูปย่อเก็บใน assets/images/orst/infographic ลิงก์ไปภาพเต็มบนเว็บเดิม)",
+     image="assets/images/orst/news/data0005-00005374-960.jpg", side_nav=False)
 
 json.dump({"created": CREATED, "news": {k: v[:8] for k, v in NEWS_DATA.items()}, "privacy": next(
     (it for it in NEWS_DATA["official-news"] if "คุ้มครองข้อมูลส่วนบุคคล" in it["title"]), None)},

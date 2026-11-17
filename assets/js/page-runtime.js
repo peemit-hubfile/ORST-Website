@@ -55,7 +55,7 @@ function showError(mount, title, details = []) {
 
 function applyMeta(page) {
   if (page.title) {
-    document.title = page.seoTitle || `${page.title} | สำนักงานราชบัณฑิตยสภา`;
+    document.title = page.seoTitle || `${page.title} | ${window.orstI18n?.lang === 'en' ? 'Office of the Royal Society' : 'สำนักงานราชบัณฑิตยสภา'}`;
   }
   if (page.description) {
     let meta = document.querySelector('meta[name="description"]');
@@ -79,9 +79,10 @@ async function main() {
   const mount = document.getElementById(MOUNT_ID);
   if (!mount) return;
 
-  // ถ้าเนื้อหาถูกใส่มาแล้วตั้งแต่ฝั่งเซิร์ฟเวอร์ (ผลจาก node tools/build.mjs)
-  // ไม่ต้อง fetch ซ้ำ แค่ผูก event ให้ block ที่ต้องใช้ JS ก็พอ
-  if (mount.children.length > 0) {
+  const en = window.orstI18n?.lang === 'en';
+  // ถ้าเนื้อหาถูกใส่มาแล้วตั้งแต่ฝั่งเซิร์ฟเวอร์ (ผลจาก node tools/build.mjs = ภาษาไทย)
+  // ภาษาไทย: ไม่ต้อง fetch ซ้ำ แค่ผูก event ให้ block ที่ต้องใช้ JS ก็พอ · ภาษาอังกฤษ: โหลดเนื้อหาอังกฤษมาแทน
+  if (mount.children.length > 0 && !en) {
     window.orstHeader?.bindDynamicContent?.();
     return;
   }
@@ -89,10 +90,16 @@ async function main() {
   const path = mount.dataset.content || guessContentPath();
 
   let page;
+  let translated = true;
   try {
-    const response = await fetch(path, { cache: 'no-cache' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    page = await response.json();
+    // ภาษาอังกฤษ: content/pages/en/<slug>.json (ไม่มี = ใช้ไฟล์ไทย + แถบแจ้ง) — ดู orstI18n ใน components.js
+    if (window.orstI18n) {
+      ({ data: page, translated } = await window.orstI18n.fetchJSON(path));
+    } else {
+      const response = await fetch(path, { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      page = await response.json();
+    }
   } catch (error) {
     showError(mount, `โหลดไฟล์เนื้อหาไม่สำเร็จ: ${path}`, [
       error.message,
@@ -110,9 +117,16 @@ async function main() {
 
   applyMeta(page);
   // โครงเมนูของหมวด สำหรับแถบเมนูย่อยข้างเนื้อหา — โหลดไม่ได้ก็ยังแสดงหน้าได้ (แค่ไม่มีแถบ)
-  const nav = await fetch('content/site-nav.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
+  const nav = await (window.orstI18n ? window.orstI18n.fetchJSON('content/site-nav.json').then(r => r.data) : fetch('content/site-nav.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null)).catch(() => null);
   const slug = path.split('/').pop().replace(/\.json$/, '');
   mount.innerHTML = renderPage(page, nav, slug);
+  if (!translated) {
+    mount.insertAdjacentHTML('afterbegin', `
+    <div class="lang-notice" role="note" lang="en" data-i18n-skip><div class="container">
+      <strong>This page is currently available in Thai only.</strong>
+      <span>An English version is being prepared. <a href="?lang=th" data-lang-switch="th">View in Thai</a></span>
+    </div></div>`);
+  }
 
   // ผูก event ให้ block ที่ต้องใช้ JS (เช่น faq) เพราะเนื้อหาเพิ่งถูกใส่เข้า DOM
   window.orstHeader?.bindDynamicContent?.();

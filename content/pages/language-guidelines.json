@@ -1,14 +1,16 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "หลักเกณฑ์ต่าง ๆ",
-  "navKey": "services",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "หลักเกณฑ์ภาษาไทย",
+  "navKey": "knowledge",
   "description": "หลักเกณฑ์การใช้ภาษาไทย การทับศัพท์ การถอดอักษร การอ่าน และการเขียนชื่อต่าง ๆ ที่สำนักงานราชบัณฑิตยสภากำหนด",
+  "sideNav": false,
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "หลักเกณฑ์ต่าง ๆ",
+      "heading": "หลักเกณฑ์ภาษาไทย",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
       "lead": "หลักเกณฑ์การใช้ภาษาไทย การทับศัพท์ การถอดอักษร การอ่าน และการเขียนชื่อต่าง ๆ ที่สำนักงานราชบัณฑิตยสภากำหนด",
       "breadcrumb": [
         {
@@ -16,80 +18,126 @@
           "href": "index.html"
         },
         {
-          "label": "บริการวิชาการ",
-          "href": "services.html"
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
         },
         {
-          "label": "หลักเกณฑ์ต่าง ๆ"
+          "label": "หลักเกณฑ์ภาษาไทย"
         }
       ]
     },
     {
-      "type": "document-list",
-      "id": "documents",
+      "type": "card-grid",
+      "id": "topics",
+      "layout": "tiles",
+      "columns": 3,
       "items": [
         {
+          "icon": "i-book",
           "title": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F65CRO0017088"
+          "href": "guideline-ancient-fonts.html",
+          "body": "ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย · อักษรไทยน้อย · อักษรธรรมอีสาน …",
+          "meta": "๖ หัวข้อ"
         },
         {
+          "icon": "i-dictionary",
           "title": "หลักเกณฑ์การทับศัพท์",
-          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8728397LTG5813223326234222622"
+          "href": "guideline-transcription.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
         },
         {
+          "icon": "i-pen",
           "title": "การถอดอักษรไทยเป็นอักษรโรมัน",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERJ5814038"
+          "href": "guideline-romanization.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
         },
         {
+          "icon": "i-list",
           "title": "การอ่านตัวเลขต่างๆ",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0020019"
+          "href": "guideline-reading-numbers.html",
+          "body": "การอ่านจำนวนเลขตั้งแต่ ๒ หลักขึ้นไป · การอ่านตัวเลขบอกเวลา · การอ่านตัวเลขที่แสดงมาตราส่วนหรืออัตราส่วน …",
+          "meta": "๑๒ หัวข้อ"
         },
         {
+          "icon": "i-megaphone",
           "title": "การอ่านวิสามานยนาม",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0129056"
+          "href": "guideline-reading-proper-nouns.html",
+          "body": "วิสามานยนามทั่วไป · จังหวัด · ถนน ตรอก ซอย ในเขตกรุงเทพมหานคร …",
+          "meta": "๖ หัวข้อ"
         },
         {
+          "icon": "i-megaphone",
           "title": "การอ่านเครื่องหมาย",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0201056"
+          "href": "guideline-reading-symbols.html",
+          "body": "การอ่านคำหรือข้อความที่มีเครื่องหมายวงเล็บกำกับอยู่ · การอ่านเครื่องหมายไปยาลใหญ่ หรือ เปยยาลใหญ่ · การอ่านเครื่องหมายไข่ปลา หรือ จุดไข่ปลา …",
+          "meta": "๖ หัวข้อ"
         },
         {
+          "icon": "i-pen",
           "title": "เครื่องหมายวรรคตอน",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0249069"
+          "href": "guideline-punctuation.html",
+          "body": "ปรัศนี · มหัพภาค · ยัติภังค์ …",
+          "meta": "๒๓ หัวข้อ"
         },
         {
+          "icon": "i-file",
           "title": "การเว้นวรรค",
-          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3529352MTG5813223326234222622"
+          "href": "guideline-spacing.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
         },
         {
+          "icon": "i-file",
           "title": "การเขียนคำย่อ",
-          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6622562MTG5813223326234222622"
+          "href": "guideline-abbreviations.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
         },
         {
+          "icon": "i-map",
           "title": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0503006"
+          "href": "guideline-place-names.html",
+          "body": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง · ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา",
+          "meta": "๒ หัวข้อ"
         },
         {
+          "icon": "i-map",
           "title": "ชื่อทะเล",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0548006"
+          "href": "guideline-sea-names.html",
+          "body": "ทะเลติดต่อมหาสมุทรแปซิฟิก · ทะเลติดต่อมหาสมุทรอินเดีย · ทะเลติดต่อมหาสมุทรแอตแลนติก …",
+          "meta": "๕ หัวข้อ"
         },
         {
+          "icon": "i-puzzle",
           "title": "ชื่อธาตุ",
-          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6529482MTG5813223326234222622"
+          "href": "guideline-element-names.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
         },
         {
+          "icon": "i-pin",
           "title": "ชื่อประเทศ/เมืองหลวง",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0700072"
+          "href": "guideline-country-names.html",
+          "body": "ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕) · ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕) · ลิงก์ไปยังประกาศในราชกิจจานุเบกษา",
+          "meta": "๓ หัวข้อ"
         },
         {
+          "icon": "i-list",
           "title": "ลักษณนาม",
-          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0729009"
+          "href": "guideline-classifiers.html",
+          "body": "คำชี้แจง · อักษร ก · อักษร ข …",
+          "meta": "๓๕ หัวข้อ"
         },
         {
+          "icon": "i-shield",
           "title": "ราชาศัพท์",
-          "href": "https://www.orst.go.th/iwfm_modal.asp?i=65233%3A2MTG5813223326234222622"
+          "href": "guideline-royal-vocabulary.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
         }
-      ],
-      "sort": "none"
+      ]
     }
   ]
 }

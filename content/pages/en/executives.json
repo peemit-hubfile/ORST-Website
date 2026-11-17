@@ -1,0 +1,88 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-EXC (ชื่อ ตำแหน่ง เบอร์โทร ถอดจากภาพบนเว็บเดิม) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Executives of the Office of the Royal Society",
+  "navKey": "about",
+  "description": "Executives of the Office of the Royal Society and their contact telephone numbers",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Executives of the Office of the Royal Society",
+      "lead": "Executives of the Office of the Royal Society and their contact telephone numbers",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About us",
+          "href": "about.html"
+        },
+        {
+          "label": "Executives of the Office of the Royal Society"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "executives",
+      "columns": 4,
+      "items": [
+        {
+          "name": "Mr. Supharoek Phuphongsak",
+          "position": "Secretary-General of the Royal Society of Thailand",
+          "image": "assets/images/orst/people/secretary-general.jpg",
+          "alt": "Mr. Supharoek Phuphongsak",
+          "phone": "02-141-1725"
+        },
+        {
+          "name": "Mr. Santi Phakdikham",
+          "position": "Deputy Secretary-General of the Office of the Royal Society",
+          "image": "assets/images/orst/people/deputy-secretary-general.jpg",
+          "alt": "Mr. Santi Phakdikham",
+          "phone": "02-141-1718",
+          "email": "Santi.p@orst.go.th"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "directors",
+      "columns": 4,
+      "items": [
+        {
+          "name": "Ms. Ari Phondi",
+          "position": "Secretary of the Office",
+          "image": "assets/images/orst/people/director-1.jpg",
+          "alt": "Ms. Ari Phondi",
+          "phone": "02-141-1723"
+        },
+        {
+          "name": "Mrs. Kanokwan Thongtako",
+          "position": "Director, Moral and Political Sciences Division",
+          "image": "assets/images/orst/people/director-2.jpg",
+          "alt": "Mrs. Kanokwan Thongtako",
+          "phone": "02-141-1732"
+        },
+        {
+          "name": "Ms. Kunsirin Nakphaichit",
+          "position": "Director, Science Division",
+          "image": "assets/images/orst/people/director-3.jpg",
+          "alt": "Ms. Kunsirin Nakphaichit",
+          "phone": "02-141-1730"
+        },
+        {
+          "name": "Ms. Piyarat In-on",
+          "position": "Director, Arts Division",
+          "image": "assets/images/orst/people/director-4.jpg",
+          "alt": "Ms. Piyarat In-on",
+          "phone": "02-141-1733"
+        }
+      ],
+      "heading": "Directors of Internal Units",
+      "variant": "alt"
+    }
+  ],
+  "lang": "en"
+}

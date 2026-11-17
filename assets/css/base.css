@@ -42,6 +42,7 @@
   --gold: #9e7a2f;
   --gold-soft: #ebeee9;
   --line: #e2e5e1;
+  --file-pdf: #b42318;          /* ป้ายชนิดไฟล์ PDF ในรายการเอกสาร */
   --shadow: 0 14px 35px rgba(16, 32, 51, .10);
   --radius: var(--radius-xl);   /* มุมโค้งสูงสุด 16px ตาม typography.css */
 
@@ -94,6 +95,7 @@ body.high-contrast {
   --gold: #ffda6a;
   --gold-soft: #30270d;
   --line: #fff;
+  --file-pdf: #ffda6a;
 }
 
 body.readable-mode {
@@ -122,10 +124,7 @@ svg {
   max-width: 100%;
 }
 
-.container {
-  width: min(var(--container), calc(100% - 40px));
-  margin-inline: auto;
-}
+
 
 .skip-link {
   position: fixed;
@@ -862,9 +861,7 @@ svg {
 }
 
 @media (max-width: 760px) {
-  .container {
-    width: min(100% - 26px, var(--container));
-  }
+
 
   .topbar .topbar-right {
     display: none;

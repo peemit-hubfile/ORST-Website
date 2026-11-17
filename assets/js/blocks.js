@@ -53,11 +53,19 @@ function langAttr(text) {
   return text && !/[฀-๿]/.test(text) ? ' lang="en"' : '';
 }
 
+/** ปุ่ม "ดูทั้งหมด" มุมขวาของ section — ป้ายที่ขึ้นต้นด้วย "ดู" แสดงสั้นเป็น "ดูทั้งหมด" (ชื่อเต็มอยู่ใน aria-label) */
+function viewAll(action) {
+  const label = action.label || 'ดูทั้งหมด';
+  const short = label.startsWith('ดู') ? 'ดูทั้งหมด' : label;
+  const aria = short !== label ? ` aria-label="${esc(label)}"` : '';
+  return `<a class="view-all" href="${esc(action.href)}"${aria}>${esc(short)} ${icon('i-arrow', 'icon view-all-ic')}</a>`;
+}
+
 /** หัว section มาตรฐาน: หัวข้อ + คำโปรย + ปุ่มมุมขวา */
 function sectionHead(block) {
   if (!block.heading && !block.lead) return '';
   const action = block.action?.href
-    ? `<a class="view-all" href="${esc(block.action.href)}">${esc(block.action.label || 'ดูทั้งหมด')}</a>`
+    ? viewAll(block.action)
     : '';
   return `
       <div class="section-head">
@@ -72,7 +80,8 @@ function sectionHead(block) {
 
 /** ห่อเนื้อหาด้วย <section class="section"> + .container ให้เป็นมาตรฐานเดียวกัน */
 function section(block, inner, extraClass = '') {
-  const variant = block.variant === 'alt' ? ' alt' : '';
+  // variant: alt = พื้นขาว (สลับกับพื้นหน้า), dark = แถบสีเขียวเข้ม ตัวอักษรขาว (ใช้คั่นจังหวะหน้า 1-2 ส่วนต่อหน้า)
+  const variant = block.variant === 'alt' ? ' alt' : block.variant === 'dark' ? ' is-dark' : '';
   const cls = `section${variant}${extraClass ? ' ' + extraClass : ''}`;
   return `
     <section class="${cls}"${attr('id', block.id)}>
@@ -99,25 +108,96 @@ function colsClass(n) {
 
 /* ---------- Block: page-hero ---------- */
 /* หัวหน้าเพจ ใช้ได้หน้าละ 1 อันและควรอยู่บนสุด
-   { type, heading, lead, eyebrow?, breadcrumb?: [{label, href}], actions?: [] } */
+   { type, heading, lead, eyebrow?, breadcrumb?: [{label, href}], actions?: [],
+     image?, imageAlt?, highlights?: [{ icon, label }] }
+   image = รูปพื้นหลังเต็มความกว้าง (แนวนอน ≥ 1600px) — มีเงาไล่สีเขียวเข้มด้านซ้ายให้อ่านตัวอักษรได้
+           ไม่ใส่ = หัวหน้าเพจแบบเรียบ (พื้นสีอ่อน) เหมือนเดิม
+   highlights = จุดเด่นสั้น ๆ ใต้ปุ่ม (ไอคอน + ข้อความ 2-4 คำ) แสดงเฉพาะแบบมีรูป */
 function pageHero(b) {
   const crumbs = (b.breadcrumb || []).length
     ? `<nav class="block-breadcrumb" aria-label="เส้นทางหน้า">${b.breadcrumb.map((c, i, arr) =>
         i === arr.length - 1
           ? `<span aria-current="page">${esc(c.label)}</span>`
           : `<a href="${esc(c.href || '#')}">${esc(c.label)}</a>`
-      ).join('<span aria-hidden="true">/</span>')}</nav>`
+      ).join(`<span class="crumb-sep" aria-hidden="true">${icon('i-chevron')}</span>`)}</nav>`
     : '';
+  const media = b.image
+    ? `<img class="page-hero-bg" src="${esc(b.image)}" alt="${esc(b.imageAlt || '')}" fetchpriority="high">`
+    : '';
+  const highlights = b.image && (b.highlights || []).length
+    ? `<ul class="page-hero-highlights">${b.highlights.map(h =>
+        `<li>${icon(h.icon || 'i-shield')}<span>${esc(h.label)}</span></li>`).join('')}</ul>`
+    : '';
+  // variant article = หัวหน้าเพจรายละเอียดข่าว แบ่งสองฝั่ง:
+  //   ซ้าย: ประเภท · วันที่ → หัวข้อ → คำโปรย (ถ้ามี) → ปุ่ม แชร์ / คัดลอกลิงก์ / พิมพ์
+  //   ขวา: ภาพเด่นของข่าว (กดดูภาพเต็ม) + คำบรรยายภาพ (ถ้ามี) — ไม่มีภาพ = ข้อความเต็มความกว้าง + ตราสัญลักษณ์จาง ๆ
+  if (b.variant === 'article') {
+    const date = b.date ? `<time datetime="${esc(b.date)}">${esc(formatThaiDate(b.date, true))}</time>` : '';
+    const kicker = b.tag || date
+      ? `<p class="article-kicker">${b.tag ? `<span class="article-kicker-tag">${esc(b.tag)}</span>` : ''}${date ? `<span class="article-kicker-date">${icon('i-calendar')}${date}</span>` : ''}</p>`
+      : '';
+    const meta = (b.meta || []).length
+      ? `<ul class="page-hero-meta">${b.meta.map(m =>
+          `<li>${icon(m.icon || 'i-file')}<span>${esc(m.label)}</span></li>`).join('')}</ul>`
+      : '';
+    const shareLink = (kind, label) => `<a href="#" data-share="${kind}" target="_blank" rel="noopener noreferrer">${label}<span class="sr-only"> (เปิดในแท็บใหม่)</span></a>`;
+    const tools = b.share === false ? '' : `
+          <div class="article-tools">
+            <details class="article-share">
+              <summary class="article-tool">${icon('i-share')}<span>แชร์</span></summary>
+              <div class="article-share-menu">${shareLink('facebook', 'Facebook')}${shareLink('line', 'LINE')}${shareLink('x', 'X')}</div>
+            </details>
+            <button type="button" class="article-tool" data-share="copy">${icon('i-copy')}<span>คัดลอกลิงก์</span></button>
+            <button type="button" class="article-tool" data-share="print">${icon('i-print')}<span>พิมพ์</span></button>
+            <span class="share-status" data-share-status aria-live="polite"></span>
+          </div>`;
+    const img = b.image ? `<img src="${esc(b.image)}" alt="${esc(b.imageAlt || '')}" fetchpriority="high">` : '';
+    const media = b.image ? `
+        <figure class="article-hero-media">
+          ${b.imageHref ? `<a href="${esc(b.imageHref)}" data-lightbox="cover">${img}<span class="sr-only">ดูภาพขนาดเต็ม</span></a>` : img}
+          ${b.caption ? `<figcaption>${esc(b.caption)}</figcaption>` : ''}
+        </figure>` : '';
+    return `
+    <section class="page-hero is-article${b.image ? ' has-media' : ' no-photo'}"${attr('id', b.id)}>
+      ${b.image ? `<img class="article-hero-glow" src="${esc(b.image)}" alt="" aria-hidden="true">` : '<span class="page-hero-mark" aria-hidden="true"></span>'}
+      <div class="container">
+        ${crumbs}
+        <div class="article-hero-grid">
+          <div class="article-hero-text">
+            ${kicker}
+            <h1>${esc(b.heading)}</h1>
+            ${b.lead ? `<p class="article-lead">${esc(b.lead)}</p>` : ''}
+            ${meta}
+            ${tools}
+          </div>${media}
+        </div>
+      </div>
+    </section>`;
+  }
   return `
-    <section class="page-hero"${attr('id', b.id)}>
+    <section class="page-hero${b.image ? ' has-image' : ''}"${attr('id', b.id)}>
+      ${media}
       <div class="container">
         ${crumbs}
         ${b.eyebrow ? `<span class="block-eyebrow"${langAttr(b.eyebrow)}>${esc(b.eyebrow)}</span>` : ''}
         <h1>${esc(b.heading)}</h1>
         ${b.lead ? `<p>${esc(b.lead)}</p>` : ''}
         ${actions(b.actions)}
+        ${highlights}
       </div>
     </section>`;
+}
+
+/* ---------- Block: anchor-nav ---------- */
+/* เมนูลัดไปหัวข้อในหน้า — ติดใต้ header ขณะเลื่อน (sticky) และไฮไลต์หัวข้อที่กำลังอ่าน (initAnchorNav ใน components.js)
+   วางต่อจาก page-hero ในหน้าที่ยาวหลายส่วน  { type, label?, items: [{ label, href: "#id-ของ-block" }] } */
+function anchorNav(b) {
+  const items = (b.items || []).map(it =>
+    `<li><a href="${esc(it.href)}">${esc(it.label)}</a></li>`).join('');
+  return `
+    <nav class="anchor-nav"${attr('id', b.id)} aria-label="${esc(b.label || 'ไปยังหัวข้อในหน้านี้')}" data-anchor-nav>
+      <div class="container"><ul>${items}</ul></div>
+    </nav>`;
 }
 
 /* ---------- Block: rich-text ---------- */
@@ -136,42 +216,95 @@ function richText(b) {
 /* ---------- Block: card-grid ---------- */
 /* การ์ดเนื้อหาเรียงเป็นตาราง — block ที่ใช้บ่อยที่สุด
    { type, heading?, lead?, columns?: 2|3|4,
-     items: [{ title, body?, href?, icon?, tag?, meta?, action? }] }
-   action = ข้อความปุ่มท้ายการ์ด (เช่น "ยื่นคำขอ") แสดงเมื่อการ์ดมี href */
+     layout?: "default"|"service"|"tiles"|"list",
+     items: [{ title, body?, href?, icon?, tag?, tags?: [string], meta?, action? }] }
+   action = ข้อความปุ่มท้ายการ์ด (เช่น "ยื่นคำขอ") แสดงเมื่อการ์ดมี href
+   layout "service" = การ์ดบริการขนาดใหญ่: ไอคอนในกรอบสี + ป้าย tags + ปุ่มชิดล่าง (เหมาะกับ 2-3 รายการ)
+   layout "tiles"   = การ์ดแนวตั้ง: ไอคอน + ลูกศร | ชื่อ | คำอธิบาย | โดเมน (ลิงก์ภายนอก) — เหมาะกับรายการระบบ 4-12 รายการ
+   layout "list"    = รายการแถวในกรอบเดียว (2 คอลัมน์บนจอกว้าง): ไอคอน | ชื่อ + คำอธิบาย | ลูกศร
+                      รายการที่ไม่มี href แสดงจาง พร้อมป้าย tag (เช่น "อยู่ระหว่างจัดทำ") — เหมาะกับคู่มือ/ลิงก์เอกสาร
+   ลิงก์ภายนอก (http...) เปิดแท็บใหม่ พร้อมข้อความสำหรับ screen reader */
+const CARD_LAYOUTS = { service: ' block-cards-service', tiles: ' block-cards-tiles', list: ' block-cards-list' };
+
 function cardGrid(b) {
+  const layout = CARD_LAYOUTS[b.layout] || '';
   const cards = (b.items || []).map(it => {
-    const inner = `
+    const ext = isExternal(it.href);
+    const tags = [it.tag, ...(it.tags || [])].filter(Boolean);
+    const arrow = icon(ext ? 'i-external' : 'i-arrow', 'icon block-card-arrow');
+    const host = ext ? String(it.href).replace(/^https?:\/\//i, '').split(/[/?#]/)[0].replace(/^www\./, '') : '';
+    const listRow = `
+            <span class="block-card-icon">${icon(it.icon || 'i-file', 'icon-lg')}</span>
+            <span class="block-card-text">
+              <strong>${esc(it.title)}</strong>
+              ${it.body ? `<span>${esc(it.body)}</span>` : ''}
+            </span>
+            ${it.href ? arrow : tags.length ? `<span class="block-tag">${esc(tags[0])}</span>` : ''}`;
+    const inner = layout === ' block-cards-list' ? listRow : layout === ' block-cards-tiles' ? `
+            <span class="block-tile-top">
+              <span class="block-card-icon">${icon(it.icon || 'i-file', 'icon-lg')}</span>
+              ${it.href ? arrow : ''}
+            </span>
+            <span class="block-card-text">
+              <strong>${esc(it.title)}</strong>
+              ${it.body ? `<span>${esc(it.body)}</span>` : ''}
+            </span>
+            ${host ? `<small class="block-tile-host" lang="en">${esc(host)}</small>` : it.meta ? `<small class="block-tile-host">${esc(it.meta)}</small>` : ''}` : `
             ${it.icon ? `<span class="block-card-icon">${icon(it.icon, 'icon-lg')}</span>` : ''}
-            ${it.tag ? `<span class="block-tag">${esc(it.tag)}</span>` : ''}
+            ${tags.length ? `<span class="block-card-tags">${tags.map(t => `<span class="block-tag">${esc(t)}</span>`).join('')}</span>` : ''}
             <h3>${esc(it.title)}</h3>
             ${it.body ? `<p>${esc(it.body)}</p>` : ''}
             ${it.meta ? `<small class="block-meta">${esc(it.meta)}</small>` : ''}
-            ${it.action ? `<span class="block-card-action">${esc(it.action)} <span aria-hidden="true">→</span></span>` : ''}`;
+            ${it.action ? `<span class="block-card-action">${esc(it.action)} ${layout ? arrow : '<span aria-hidden="true">→</span>'}</span>` : ''}`;
+    const sr = ext ? '<span class="sr-only"> (เปิดในแท็บใหม่)</span>' : '';
     return it.href
-      ? `<a class="content-card block-card is-link" href="${esc(it.href)}">${inner}
+      ? `<a class="content-card block-card is-link" href="${esc(it.href)}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ''}>${inner}${sr}
           </a>`
-      : `<article class="content-card block-card">${inner}
+      : `<article class="content-card block-card${layout === ' block-cards-list' ? ' is-pending' : ''}">${inner}
           </article>`;
   }).join('\n          ');
-  return section(b, `<div class="${colsClass(b.columns)}">
+  return section(b, `<div class="${colsClass(b.columns)}${layout}">
           ${cards}
         </div>`);
 }
 
 /* ---------- Block: feature-list ---------- */
 /* รายการไอคอน + หัวข้อ + คำอธิบาย เรียงเป็นแถว
-   { type, heading?, lead?, columns?, items: [{ icon, title, body? }] } */
+   { type, heading?, lead?, columns?, layout?: "list"|"cards", footnote?: { title?, body },
+     items: [{ icon, title, body?, links?: [{ label, href, icon? }] }] }
+   layout "cards" = แต่ละรายการเป็นการ์ดมีกรอบ ไอคอนในวงกลมสี
+   links    = ปุ่มติดต่อท้ายรายการ: tel: (โทร) mailto: (อีเมล) http (เปิดแท็บใหม่) — ไอคอนเลือกให้ตามชนิดลิงก์
+   footnote = แถบหมายเหตุใต้รายการ (ไอคอนโล่) ใช้แทน block notice แยก เมื่อข้อความเกี่ยวกับรายการนี้โดยตรง */
+function linkIcon(href) {
+  if (/^tel:/i.test(href)) return 'i-phone-call';
+  if (/^mailto:/i.test(href)) return 'i-mail';
+  return isExternal(href) ? 'i-external' : 'i-arrow';
+}
+
 function featureList(b) {
-  const items = (b.items || []).map(it => `
+  const items = (b.items || []).map(it => {
+    const links = (it.links || []).filter(l => l && l.href).map(l => {
+      const ext = isExternal(l.href);
+      const isEn = /^(tel|mailto):/i.test(l.href) || /^[A-Za-z0-9@._+()\s-]+$/.test(l.label || '');
+      return `<a class="block-feature-link" href="${esc(l.href)}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ''}>${icon(l.icon || linkIcon(l.href))}<span${isEn ? ' lang="en"' : ''}>${esc(l.label || l.href)}</span>${ext ? '<span class="sr-only"> (เปิดในแท็บใหม่)</span>' : ''}</a>`;
+    }).join('');
+    return `
             <li class="block-feature">
               <span class="block-feature-icon">${icon(it.icon || 'i-shield', 'icon-lg')}</span>
               <div>
                 <strong>${esc(it.title)}</strong>
                 ${it.body ? `<p>${esc(it.body)}</p>` : ''}
+                ${links ? `<div class="block-feature-links">${links}</div>` : ''}
               </div>
-            </li>`).join('');
-  return section(b, `<ul class="${colsClass(b.columns)} block-feature-list">${items}
-        </ul>`);
+            </li>`;
+  }).join('');
+  const foot = b.footnote?.body ? `
+        <div class="block-footnote" role="note">
+          ${icon('i-shield')}
+          <p>${b.footnote.title ? `<strong>${esc(b.footnote.title)}</strong> ` : ''}${esc(b.footnote.body)}</p>
+        </div>` : '';
+  return section(b, `<ul class="${colsClass(b.columns)} block-feature-list${b.layout === 'cards' ? ' block-feature-cards' : ''}">${items}
+        </ul>${foot}`);
 }
 
 /* ---------- Block: stat-row ---------- */
@@ -219,25 +352,57 @@ const isImageUrl = href => /\.(jpe?g|png|gif|webp)(\?|#|$)/i.test(String(href ||
 function mediaGrid(b) {
   const ratio = MEDIA_RATIOS[b.ratio] || '4-3';
   const fit = b.fit === 'contain' ? ' media-fit-contain' : '';
+  // pageSize = แบ่งหน้า + ช่องค้นหา (ใช้ตัวจัดการเดียวกับ document-list: initDocLists ใน components.js)
+  const paged = Number(b.pageSize) > 0 && (b.items || []).length > Number(b.pageSize);
+  const pg = paged ? ' doc-item' : '';
   const items = (b.items || []).map(it => {
+    // youtube = รหัสวิดีโอ YouTube — ลิงก์ไป YouTube แต่กดแล้วเล่นในป๊อปอัป (initVideoPlayer ใน components.js)
+    const yt = it.youtube ? String(it.youtube) : '';
+    const href = yt ? `https://www.youtube.com/watch?v=${encodeURIComponent(yt)}` : it.href;
+    const goLabel = yt ? 'ดูวิดีโอ' : isImageUrl(href) ? 'ดูภาพ' : 'เปิดดู';
     const inner = `
             <span class="block-media-thumb">
               <img src="${esc(it.image)}" alt="${esc(it.alt || it.title || '')}" loading="lazy">
-              ${it.tag ? `<span class="block-tag">${esc(it.tag)}</span>` : ''}
+              ${yt ? '<span class="media-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></span>' : ''}
+              ${it.tag && !yt ? `<span class="block-tag">${esc(it.tag)}</span>` : ''}
             </span>
             <span class="block-media-body">
-              <strong>${esc(it.title)}</strong>
+              ${it.tag && yt ? `<small class="media-kicker">${esc(it.tag)}</small>` : ''}
+              <strong${paged ? ' class="doc-title"' : ''}>${esc(it.title)}</strong>
               ${it.desc ? `<span>${esc(it.desc)}</span>` : ''}
+              ${(paged || yt) && href ? `<span class="media-go" aria-hidden="true">${goLabel} ${icon('i-arrow')}</span>` : ''}
             </span>`;
-    if (!it.href) return `<div class="block-media-card">${inner}
+    if (!href) return `<div class="block-media-card${pg}">${inner}
           </div>`;
-    const lightbox = isImageUrl(it.href) ? ` data-lightbox="${esc(b.id || 'gallery')}"` : '';
-    const ext = !lightbox && isExternal(it.href) ? ' target="_blank" rel="noopener noreferrer"' : '';
-    return `<a class="block-media-card is-link" href="${esc(it.href)}"${lightbox}${ext}>${inner}
+    const lightbox = isImageUrl(href) ? ` data-lightbox="${esc(b.id || 'gallery')}"` : '';
+    const ext = !lightbox && isExternal(href) ? ' target="_blank" rel="noopener noreferrer"' : '';
+    const play = yt ? ` data-yt="${esc(yt)}" data-yt-title="${esc(it.title)}"` : '';
+    return `<a class="block-media-card is-link${yt ? ' is-video' : ''}${pg}" href="${esc(href)}"${lightbox}${ext}${play}>${inner}${yt ? '<span class="sr-only"> (เล่นวิดีโอ)</span>' : ''}
           </a>`;
   }).join('\n          ');
-  return section(b, `<div class="${colsClass(b.columns)} block-media-grid media-ratio-${ratio}${fit}">
+  const grid = `<div class="${colsClass(b.columns)} block-media-grid media-ratio-${ratio}${fit}${paged ? ' doc-items' : ''}">
           ${items}
+        </div>`;
+  if (!paged) return section(b, grid);
+  const unit = b.unit || 'รายการ';
+  return section(b, `<div class="media-list" data-doc-list data-page-size="${Number(b.pageSize)}" data-unit="${esc(unit)}" data-view-key="media-view">
+          <form class="doc-toolbar is-news media-toolbar" data-doc-toolbar hidden role="search" aria-label="ค้นหา${esc(unit)}">
+            <p class="doc-count" data-doc-count aria-live="polite">พบ ${(b.items || []).length} ${esc(unit)}</p>
+            <div class="doc-tools">
+              <label class="doc-search-pill">
+                ${icon('i-search')}
+                <span class="sr-only">ค้นหา${esc(unit)}</span>
+                <input type="search" data-doc-search placeholder="ค้นหาชื่อ${esc(unit)}" autocomplete="off">
+              </label>
+              <div class="doc-view" role="group" aria-label="รูปแบบการแสดงผล">
+                <button type="button" data-doc-view="grid" aria-pressed="true">${icon('i-grid')}<span>ตาราง</span></button>
+                <button type="button" data-doc-view="list" aria-pressed="false">${icon('i-list')}<span>รายการ</span></button>
+              </div>
+            </div>
+          </form>
+          ${grid}
+          <p class="doc-empty" data-doc-empty hidden>ไม่พบ${esc(unit)}ที่ตรงกับคำค้น</p>
+          <nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>
         </div>`);
 }
 
@@ -309,8 +474,19 @@ function faq(b) {
 
 /* ---------- Block: steps ---------- */
 /* ขั้นตอนการทำงาน มีเลขลำดับให้อัตโนมัติ
-   { type, heading?, lead?, items: [{ title, body? }] } */
+   { type, heading?, lead?, layout?: "list"|"timeline", items: [{ title, body? }] }
+   layout "timeline" = เรียงแนวนอนต่อกันด้วยเส้น (จอเล็กกลับเป็นแนวตั้ง) — เหมาะกับ 3-5 ขั้น */
 function steps(b) {
+  if (b.layout === 'timeline') {
+    const items = (b.items || []).map((it, i) => `
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">${i + 1}</span>
+              <strong>${esc(it.title)}</strong>
+              ${it.body ? `<p>${esc(it.body)}</p>` : ''}
+            </li>`).join('');
+    return section(b, `<ol class="block-steps block-steps-timeline">${items}
+        </ol>`);
+  }
   const items = (b.items || []).map((it, i) => `
             <li class="block-step">
               <span class="block-step-no" aria-hidden="true">${i + 1}</span>
@@ -444,6 +620,16 @@ const thaiNum = v => String(v).replace(/[0-9]/g, d => '๐๑๒๓๔๕๖๗�
 
 const isExternal = href => /^https?:\/\//i.test(String(href || ''));
 
+/* ปกแม่แบบสำหรับข่าวที่ไม่มีรูป — พื้นเขียวเข้มไล่ทอง + ตราสัญลักษณ์กลางภาพ + ประเภท + วันที่
+   (CSS: .news-cover-tpl ใน blocks.css) ใช้แทนการปล่อยช่องรูปว่าง */
+function newsCover(it) {
+  // วันที่ไม่อยู่บนปกแล้ว — แสดงเป็นป้ายวันที่ (.news-row-date) คร่อมขอบล่างของภาพ เหมือนการ์ดข่าวหน้าแรก
+  return `<span class="news-cover-tpl">
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+                ${it.category ? `<span class="nct-kicker">${esc(it.category)}</span>` : ''}
+              </span>`;
+}
+
 /* ---------- Block: document-list  (แม่แบบ T1 รายการเอกสาร) ---------- */
 /* รายการเอกสาร/ประกาศ พร้อมค้นหา กรองปี กรองหมวด และแสดงทีละหน้า
    ทุกรายการอยู่ใน HTML ตั้งแต่แรก (อ่านได้แม้ไม่มี JS) — components.js ผูกตัวกรองให้ภายหลัง
@@ -482,6 +668,8 @@ function documentList(b) {
 
   const years = [...new Set(items.map(it => it._year).filter(Boolean))].sort((a, z) => z - a);
   const cats = [...new Set(items.map(it => it.category).filter(Boolean))];
+  // ข่าว: เรียงชิปประเภทตามจำนวนรายการ (มากไปน้อย)
+  if (news) cats.sort((x, y) => items.filter(it => it.category === y).length - items.filter(it => it.category === x).length);
   const yearLabel = yearBy === 'fiscal' ? 'ปีงบประมาณ' : 'ปี พ.ศ.';
   const uid = esc(b.id || 'docs');
 
@@ -505,16 +693,38 @@ function documentList(b) {
       const d = parseIsoDate(it.publishedAt);
       const thumb = it.image
         ? `<img src="${esc(it.image)}" alt="" loading="lazy">`
-        : d ? `<span class="news-date-tile"><strong>${d.d}</strong><span>${TH_MONTHS[d.m - 1]}</span><span>${d.y + 543}</span></span>`
-          : `<span class="news-date-tile">${icon('i-megaphone', 'icon-lg')}</span>`;
+        : newsCover(it, d);
       return `
             <li class="doc-item news-row${it.image ? ' has-image' : ''}"${attr('data-year', it._year)}${attr('data-cat', it.category)}>
               ${url ? `<a class="news-row-thumb" href="${esc(url)}" tabindex="-1" aria-hidden="true"${newTab ? ' target="_blank" rel="noopener noreferrer"' : ''}>${thumb}</a>`
                     : `<span class="news-row-thumb" aria-hidden="true">${thumb}</span>`}
+              ${d ? `<time class="news-row-date" datetime="${esc(it.publishedAt)}" aria-label="${esc(formatThaiDate(it.publishedAt, true))}"><b>${d.d}</b><span>${TH_MONTHS[d.m - 1]} ${String(d.y + 543).slice(-2)}</span></time>` : ''}
               <div class="doc-body">
                 ${title}
-                ${meta ? `<div class="doc-meta">${meta}</div>` : ''}
                 ${it.excerpt ? `<p class="news-row-excerpt">${esc(it.excerpt)}</p>` : ''}
+              </div>
+              <div class="news-row-foot">
+                ${it.category ? `<span class="news-row-type">${esc(it.category)}</span>` : '<span></span>'}
+                ${url ? `<span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic">${icon(newTab ? 'i-external' : 'i-arrow')}</span></span>` : ''}
+              </div>
+            </li>`;
+    }
+    if (type === 'PDF' && url) {
+      // PDF: ป้าย PDF + ชนิด/ขนาด/โดเมนในบรรทัดรอง + ปุ่ม "ดูตัวอย่าง" (เปิดในหน้าต่างซ้อน) และ "เปิดเอกสาร" (แท็บใหม่)
+      // ปุ่มดูตัวอย่างทำงานผ่าน initDocPreview() ใน components.js — เบราว์เซอร์ที่แสดง PDF ในหน้าไม่ได้จะซ่อนปุ่มนี้
+      const host = isExternal(url) ? String(url).replace(/^https?:\/\//i, '').split(/[/?#]/)[0].replace(/^www\./, '') : '';
+      const fileMeta = [type, size, host ? `<span lang="en">${esc(host)}</span>` : ''].filter(Boolean).join('<span aria-hidden="true"> · </span>');
+      return `
+            <li class="doc-item is-pdf"${attr('data-year', it._year)}${attr('data-cat', it.category)}>
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true">${icon('i-file')}<b>PDF</b></span>
+              <div class="doc-body">
+                ${title}
+                <div class="doc-meta">${[meta, fileMeta].filter(Boolean).join('<span aria-hidden="true"> · </span>')}</div>
+                ${it.note ? `<p class="doc-note">${esc(it.note)}</p>` : ''}
+              </div>
+              <div class="doc-actions">
+                <button type="button" class="doc-btn is-primary" data-doc-preview="${esc(url)}" data-doc-title="${esc(it.title)}" hidden>${icon('i-eye')}<span>ดูตัวอย่าง</span><span class="sr-only"> ${esc(it.title)}</span></button>
+                <a class="doc-btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${icon('i-external')}<span>เปิดเอกสาร</span></a>
               </div>
             </li>`;
     }
@@ -530,7 +740,32 @@ function documentList(b) {
             </li>`;
   }).join('');
 
-  const toolbar = compact ? '' : `
+  const newsToolbar = `
+          <form class="doc-toolbar is-news" data-doc-toolbar hidden role="search" aria-label="ค้นหาข่าว">
+            ${cats.length > 1 ? `<div class="doc-chips" role="group" aria-label="ประเภทข่าว">
+              <button type="button" data-doc-chip="" aria-pressed="true">ทั้งหมด</button>
+              ${cats.map(c => `<button type="button" data-doc-chip="${esc(c)}" aria-pressed="false">${esc(c)}</button>`).join('')}
+            </div>` : ''}
+            <div class="doc-tools">
+              <label class="doc-search-pill">
+                ${icon('i-search')}
+                <span class="sr-only">ค้นหาข่าว</span>
+                <input type="search" data-doc-search placeholder="ค้นหาข่าว" autocomplete="off">
+              </label>
+              ${years.length > 1 ? `<label class="doc-year-pill">
+                <span class="sr-only">${yearLabel}</span>
+                <select data-doc-year>
+                  <option value="">ทุก${yearLabel}</option>
+                  ${years.map(y => `<option value="${esc(y)}">${yearLabel === 'ปีงบประมาณ' ? 'ปีงบ ' : ''}${esc(thaiNum(y))}</option>`).join('')}
+                </select>
+              </label>` : ''}
+              <div class="doc-view" role="group" aria-label="รูปแบบการแสดงผล">
+                <button type="button" data-doc-view="grid" aria-pressed="true">${icon('i-grid')}<span>ตาราง</span></button>
+                <button type="button" data-doc-view="list" aria-pressed="false">${icon('i-list')}<span>รายการ</span></button>
+              </div>
+            </div>
+          </form>`;
+  const toolbar = compact ? '' : news ? newsToolbar : `
           <form class="doc-toolbar" data-doc-toolbar hidden role="search" aria-label="${news ? 'ค้นหาข่าว' : 'ค้นหาเอกสาร'}">
             <label class="doc-field doc-field-search">
               <span>${news ? 'ค้นหาข่าว' : 'ค้นหาชื่อเอกสาร'}</span>
@@ -552,12 +787,14 @@ function documentList(b) {
             </label>` : ''}
           </form>`;
 
-  return section(b, `<div class="doc-list${compact ? ' is-compact' : ''}${news ? ' is-news' : ''}" data-doc-list data-page-size="${Number(b.pageSize) || 20}">${toolbar}
-          ${compact ? '' : `<p class="doc-count" data-doc-count aria-live="polite">ทั้งหมด ${items.length} รายการ</p>`}
+  const unit = news ? 'ข่าว' : 'รายการ';
+  const pageSize = Number(b.pageSize) || (news ? 12 : 20);
+  return section(b, `<div class="doc-list${compact ? ' is-compact' : ''}${news ? ' is-news' : ''}" data-doc-list data-page-size="${pageSize}" data-unit="${unit}"${news ? ' data-view="grid"' : ''}>${toolbar}
+          ${compact ? '' : `<p class="doc-count" data-doc-count aria-live="polite">พบ ${items.length} ${unit}</p>`}
           <ul class="doc-items" id="${uid}-items">${rows}
           </ul>
-          <p class="doc-empty" data-doc-empty hidden>ไม่พบเอกสารที่ตรงกับเงื่อนไข</p>
-          ${compact ? '' : `<div class="doc-more"><button class="block-btn is-ghost" type="button" data-doc-more aria-controls="${uid}-items" hidden>แสดงเพิ่ม</button></div>`}
+          <p class="doc-empty" data-doc-empty hidden>${news ? 'ไม่พบข่าวที่ตรงกับเงื่อนไข' : 'ไม่พบเอกสารที่ตรงกับเงื่อนไข'}</p>
+          ${compact ? '' : `<nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>`}
         </div>`, 'doc-section');
 }
 
@@ -668,10 +905,114 @@ function share(b) {
     </div>`;
 }
 
+/* ---------- Block: news-media  (ท้ายหน้าข่าว: เอกสารแนบ | ภาพประกอบข่าว — สองคอลัมน์) ---------- */
+/* { type, id?, attachments?: [{ title, file, fileType?, fileSize? }],
+     images?: [{ image, href?, alt? }] }
+   ภาพ: ภาพใหญ่ 1 + ภาพเล็ก 4 · มีมากกว่า 5 ภาพ ช่องสุดท้ายแสดง "+N" — กดภาพใดก็เปิด lightbox เลื่อนดูได้ทุกภาพ
+   เอกสาร: ป้ายชนิดไฟล์ · ชื่อ · ชนิด/ขนาด · ปุ่ม "ดูตัวอย่าง" (PDF) และ "ดาวน์โหลด" */
+function newsMedia(b) {
+  const files = b.attachments || [];
+  const imgs = b.images || [];
+  if (!files.length && !imgs.length) return '';
+  const group = esc(b.id || 'news-gallery');
+  const head = (label, n) => `<h2 class="nm-head">${esc(label)} <span class="nm-count">${n}</span></h2>`;
+
+  // เอกสาร: 1 ไฟล์ = การ์ด · ตั้งแต่ 2 ไฟล์ = รายการกะทัดรัดในกรอบเดียว (ปุ่มไอคอนชิดขวา) · เกิน 5 ไฟล์ ซ่อนที่เหลือใต้ "แสดงเอกสารอีก N ไฟล์"
+  const many = files.length > 1;
+  const fileRow = f => {
+    const url = f.file || f.href || '';
+    const type = f.fileType || fileTypeOf(url) || 'ไฟล์';
+    const meta = [type === 'PDF' ? 'เอกสาร PDF' : `ไฟล์ ${type}`, f.fileSize].filter(Boolean).map(esc).join(' · ');
+    const t = esc(f.title);
+    const preview = type === 'PDF'
+      ? `<button type="button" class="doc-btn" data-doc-preview="${esc(url)}" data-doc-title="${t}"${many ? ' title="ดูตัวอย่าง"' : ''} hidden>${icon('i-eye')}<span${many ? ' class="sr-only"' : ''}>ดูตัวอย่าง</span><span class="sr-only"> ${t}</span></button>`
+      : '';
+    return `
+              <li class="nm-file">
+                <span class="nm-file-badge is-${esc(type.toLowerCase())}" aria-hidden="true">${esc(type)}</span>
+                <span class="nm-file-text"><strong>${t}</strong><small>${meta}</small></span>
+                <span class="nm-file-actions">
+                  ${preview}
+                  <a class="doc-btn is-primary" href="${esc(url)}" target="_blank" rel="noopener noreferrer" download${many ? ' title="ดาวน์โหลด"' : ''}>${icon('i-download')}<span${many ? ' class="sr-only"' : ''}>ดาวน์โหลด</span><span class="sr-only"> ${t} (เปิดในแท็บใหม่)</span></a>
+                </span>
+              </li>`;
+  };
+  const LIMIT = 5;
+  const extra = files.slice(LIMIT);
+  const fileCol = files.length ? `
+          <div class="nm-col nm-files${many ? ' is-many' : ''}">
+            ${head('เอกสารแนบ', files.length)}
+            <ul>${files.slice(0, LIMIT).map(fileRow).join('')}</ul>
+            ${extra.length ? `<details class="nm-files-more">
+              <summary>แสดงเอกสารอีก ${extra.length} ไฟล์</summary>
+              <ul>${extra.map(fileRow).join('')}</ul>
+            </details>` : ''}
+          </div>` : '';
+
+  const shown = imgs.slice(0, 5);
+  const more = imgs.length - shown.length;
+  const tile = (it, i, extra = '') => {
+    const img = `<img src="${esc(it.image)}" alt="${esc(it.alt || `ภาพประกอบข่าว ภาพที่ ${i + 1}`)}" loading="lazy">`;
+    return it.href
+      ? `<a class="nm-tile${i === 0 ? ' is-main' : ''}" href="${esc(it.href)}" data-lightbox="${group}">${img}${extra}<span class="sr-only">ดูภาพขนาดเต็ม</span></a>`
+      : `<span class="nm-tile${i === 0 ? ' is-main' : ''}">${img}${extra}</span>`;
+  };
+  const imgCol = imgs.length ? `
+          <div class="nm-col nm-gallery">
+            ${head('ภาพประกอบข่าว', imgs.length)}
+            <div class="nm-mosaic is-${Math.min(shown.length, 5)}">
+              ${shown.map((it, i) => tile(it, i, i === shown.length - 1 && more > 0 ? `<span class="nm-more" aria-hidden="true">+${more}</span>` : '')).join('')}
+            </div>
+            ${imgs.slice(5).filter(it => it.href).map(it => `<a href="${esc(it.href)}" data-lightbox="${group}" hidden><img src="${esc(it.image)}" alt="${esc(it.alt || '')}"></a>`).join('')}
+          </div>` : '';
+
+  return section({ ...b, heading: '', lead: '' }, `<div class="news-media${fileCol && imgCol ? ' is-split' : ''}">${fileCol}${imgCol}</div>`, 'news-media-section');
+}
+
+/* ---------- Block: news-related  (ข่าวอื่น ๆ ท้ายหน้าข่าว) ---------- */
+/* { type, heading?, eyebrow?, href? (ลิงก์ "ดูทั้งหมด"), items: [{ title, href, image?, category?, publishedAt? }] }
+   การ์ดหน้าตาเดียวกับหน้ารวมข่าวและหน้าแรก (ภาพ · ป้ายวันที่ · ชื่อ · ป้ายประเภท | อ่านต่อ) */
+function newsRelated(b) {
+  const items = (b.items || []).slice(0, 4);
+  if (!items.length) return '';
+  const cards = items.map(it => {
+    const d = parseIsoDate(it.publishedAt);
+    // ข่าวเก่าส่วนใหญ่ยังอยู่บนเว็บเดิม — เปิดแท็บใหม่ + บอกผู้ใช้
+    const ext = isExternal(it.href);
+    const tgt = ext ? ' target="_blank" rel="noopener noreferrer"' : '';
+    const thumb = it.image ? `<img src="${esc(it.image)}" alt="" loading="lazy">` : newsCover(it);
+    return `
+            <li class="doc-item news-row${it.image ? ' has-image' : ''}">
+              <a class="news-row-thumb" href="${esc(it.href)}" tabindex="-1" aria-hidden="true"${tgt}>${thumb}</a>
+              ${d ? `<time class="news-row-date" datetime="${esc(it.publishedAt)}" aria-label="${esc(formatThaiDate(it.publishedAt, true))}"><b>${d.d}</b><span>${TH_MONTHS[d.m - 1]} ${String(d.y + 543).slice(-2)}</span></time>` : ''}
+              <div class="doc-body"><a class="doc-title" href="${esc(it.href)}"${tgt}>${esc(it.title)}${ext ? '<span class="sr-only"> (เปิดในแท็บใหม่)</span>' : ''}</a></div>
+              <div class="news-row-foot">
+                ${it.category ? `<span class="news-row-type">${esc(it.category)}</span>` : '<span></span>'}
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic">${icon(ext ? 'i-external' : 'i-arrow')}</span></span>
+              </div>
+            </li>`;
+  }).join('');
+  const viewAll = b.href ? `<a class="view-all" href="${esc(b.href)}">ดูทั้งหมด ${icon('i-arrow', 'icon view-all-ic')}</a>` : '';
+  return `
+    <section class="section alt news-related"${attr('id', b.id)} aria-labelledby="${esc(b.id || 'related')}-h">
+      <div class="container">
+        <div class="news-related-head">
+          <h2 id="${esc(b.id || 'related')}-h">${esc(b.heading || 'ข่าวอื่น ๆ')}</h2>
+          ${viewAll}
+        </div>
+        <div class="doc-list is-news" data-view="grid"><ul class="doc-items">${cards}
+        </ul></div>
+      </div>
+    </section>`;
+}
+
 /* ---------- ทะเบียน block ทั้งหมด ---------- */
 
 export const BLOCKS = {
   'page-hero': pageHero,
+  'news-media': newsMedia,
+  'news-related': newsRelated,
+  'anchor-nav': anchorNav,
   'rich-text': richText,
   'card-grid': cardGrid,
   'feature-list': featureList,
@@ -766,19 +1107,16 @@ function sectionNav(page, nav, slug) {
 }
 
 /**
- * แปลงทั้งหน้า = block ทั้งหมด + แถบ "ปรับปรุงข้อมูลล่าสุด" ท้ายหน้า (ถ้า JSON มี updatedAt)
- * มาตรฐานเว็บไซต์ภาครัฐ ข้อ 7.1 / 7 Pillars P4.6 ข้อ 10 — CMS ควรเขียน updatedAt ให้อัตโนมัติเมื่อบันทึก
+ * แปลงทั้งหน้า = block ทั้งหมด
  * nav + slug (ไม่บังคับ) = แสดงแถบเมนูย่อยของหมวดข้างเนื้อหา (หน้าย่อย layout แบบสองคอลัมน์)
+ * แถบ "ปรับปรุงข้อมูลล่าสุด" ท้ายหน้าถูกเอาออกตามที่ผู้ใช้สั่ง (16 พ.ย. 2569) — ฟิลด์ updatedAt ยังเก็บใน JSON
+ * (มาตรฐานเว็บไซต์ภาครัฐ ข้อ 7.1 / 7 Pillars P4.6 ข้อ 10 ให้แสดงวันที่ปรับปรุง — ถ้าจะแสดงอีกครั้ง ให้ใส่กลับที่นี่)
  */
 export function renderPage(page, nav = null, slug = '') {
-  const updated = page?.updatedAt && parseIsoDate(page.updatedAt)
-    ? `
-    <div class="page-updated">
-      <div class="container">ปรับปรุงข้อมูลล่าสุด <time datetime="${esc(page.updatedAt)}">${esc(formatThaiDate(page.updatedAt, true))}</time></div>
-    </div>`
-    : '';
+  const updated = '';
   const blocks = page?.blocks || [];
-  const aside = sectionNav(page, nav, slug);
+  // sideNav: false = หน้าเต็มความกว้าง ไม่มีแถบเมนูย่อยของหมวด (เช่น หน้ารวมข่าวที่มีการ์ดหลายคอลัมน์)
+  const aside = page?.sideNav === false ? '' : sectionNav(page, nav, slug);
   if (!aside) return renderBlocks(blocks) + updated;
   const hasHero = blocks[0]?.type === 'page-hero';
   return renderBlocks(hasHero ? blocks.slice(0, 1) : []) + `

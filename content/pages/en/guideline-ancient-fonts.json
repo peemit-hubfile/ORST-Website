@@ -1,0 +1,76 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "6 ancient script typeface or font sets",
+  "navKey": "knowledge",
+  "description": "Six ancient script typeface (font) sets — The Royal Society of Thailand and International Standards for the Thai Language · Thai Noi script · Isan Tham script, and more",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "6 ancient script typeface or font sets",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society — 6 topics",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "6 ancient script typeface or font sets"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": true,
+      "sections": [
+        {
+          "heading": "The Royal Society of Thailand and International Standards for the Thai Language",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">The Royal Society of Thailand and International Standards for the Thai Language</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004907.PDF\" data-doc-title=\"ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย\" hidden>View document<span class=\"sr-only\"> The Royal Society of Thailand and International Standards for the Thai Language</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004907.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> The Royal Society of Thailand and International Standards for the Thai Language (opens in a new tab)</span></a></span></div>"
+        },
+        {
+          "heading": "Thai Noi script (อักษรไทยน้อย)",
+          "html": "<p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Thai Noi font character chart</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Thai Noi font typing manual</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Thai Noi font download details</a></p><p><a href=\"https://drive.google.com/file/d/1Nb92ATAgCMZHQ3dxkTsXN5O5gu-q1GPV/view?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">- Font-RST-THNOI.zip Dowload</a><br></p><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Thai Noi script (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF\" data-doc-title=\"อักษรไทยน้อย (1)\" hidden>View document<span class=\"sr-only\"> Thai Noi script (1)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Thai Noi script (1) (opens in a new tab)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Thai Noi script (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF\" data-doc-title=\"อักษรไทยน้อย (2)\" hidden>View document<span class=\"sr-only\"> Thai Noi script (2)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Thai Noi script (2) (opens in a new tab)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Thai Noi script (3)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF\" data-doc-title=\"อักษรไทยน้อย (3)\" hidden>View document<span class=\"sr-only\"> Thai Noi script (3)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Thai Noi script (3) (opens in a new tab)</span></a></span></div>"
+        },
+        {
+          "heading": "Isan Tham script (อักษรธรรมอีสาน)",
+          "html": "<p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Isan Tham font character chart</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Isan Tham font typing manual</a></p><p><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Isan Tham font download details</a></p><p><a href=\"https://drive.google.com/file/d/1ytQM8zxUyk_sOCT_ozgs25O5oP9HjNJp/view?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">- Font RST-ISAN.zip Dowload</a><br></p><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Isan Tham script (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF\" data-doc-title=\"อักษรธรรมอีสาน (1)\" hidden>View document<span class=\"sr-only\"> Isan Tham script (1)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Isan Tham script (1) (opens in a new tab)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Isan Tham script (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF\" data-doc-title=\"อักษรธรรมอีสาน (2)\" hidden>View document<span class=\"sr-only\"> Isan Tham script (2)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Isan Tham script (2) (opens in a new tab)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Isan Tham script (3)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF\" data-doc-title=\"อักษรธรรมอีสาน (3)\" hidden>View document<span class=\"sr-only\"> Isan Tham script (3)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Isan Tham script (3) (opens in a new tab)</span></a></span></div>"
+        },
+        {
+          "heading": "Lanna Tham script (อักษรธรรมล้านนา)",
+          "html": "<a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Lanna Tham font character chart</a><br><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Lanna Tham font typing manual</a><br><a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Lanna Tham font download details</a><br><a href=\"https://drive.google.com/file/d/1yUvuQAXRWLpsodlLIJpjMV7ZYjTEnqdy/view?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">- Font RST-LANNA.zip Dowload</a><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Lanna Tham script (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF\" data-doc-title=\"อักษรธรรมล้านนา (1)\" hidden>View document<span class=\"sr-only\"> Lanna Tham script (1)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Lanna Tham script (1) (opens in a new tab)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Lanna Tham script (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF\" data-doc-title=\"อักษรธรรมล้านนา (2)\" hidden>View document<span class=\"sr-only\"> Lanna Tham script (2)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Lanna Tham script (2) (opens in a new tab)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Lanna Tham script (3)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF\" data-doc-title=\"อักษรธรรมล้านนา (3)\" hidden>View document<span class=\"sr-only\"> Lanna Tham script (3)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Lanna Tham script (3) (opens in a new tab)</span></a></span></div>"
+        },
+        {
+          "heading": "Thai Nithet script (อักษรไทยนิเทศ)",
+          "html": "<a href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">- Lanna Tham font typing manual</a><br><a href=\"https://drive.google.com/drive/folders/1R6pSh3J9kxir7zHOkYQ9gwFY244PAwO8\" target=\"_blank\" rel=\"noopener noreferrer\">- Font RST-NITHET.zip Dowload</a><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Thai Nithet script (อักษรไทยนิเทศ)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF\" data-doc-title=\"อักษรไทยนิเทศ\" hidden>View document<span class=\"sr-only\"> Thai Nithet script (อักษรไทยนิเทศ)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Thai Nithet script (opens in a new tab)</span></a></span></div>"
+        },
+        {
+          "heading": "Khom Thai typeface (แบบอักษรขอมไทย)",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Khom Thai typeface (แบบอักษรขอมไทย)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005336.PDF\" data-doc-title=\"แบบอักษรขอมไทย\" hidden>View document<span class=\"sr-only\"> Khom Thai typeface (แบบอักษรขอมไทย)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005336.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Khom Thai typeface (opens in a new tab)</span></a></span></div>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

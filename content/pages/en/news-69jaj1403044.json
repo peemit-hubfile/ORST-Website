@@ -1,0 +1,149 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69J%40J1403044 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+  "navKey": "news",
+  "description": "10 photos · 5 attachments",
+  "sideNav": false,
+  "updatedAt": "2026-10-31",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Announcement",
+      "date": "2026-10-31",
+      "heading": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+      "image": "assets/images/orst/news/data0005-00005446-960.jpg",
+      "imageAlt": "News image: Announcement of the Office of the Royal Society on recruiting individuals for service contracts",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005446.PNG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General Press Releases",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "Announcement of recruitment for service contracts",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005456.PDF"
+        },
+        {
+          "title": "Qualifications and scope of work: General Administration Officer",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005457.PDF"
+        },
+        {
+          "title": "Qualifications and scope of work: Procurement Officer",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005458.PDF"
+        },
+        {
+          "title": "Qualifications and scope of work: Driver",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005459.PDF"
+        },
+        {
+          "title": "Application form",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005460.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005446.PNG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005447-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005447.PNG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005448-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005448.PNG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005449-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005449.PNG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005450-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005450.PNG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005451-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005451.PNG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005452-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005452.PNG",
+          "alt": "News image 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005453-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005453.PNG",
+          "alt": "News image 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005454-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005454.PNG",
+          "alt": "News image 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005455-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005455.PNG",
+          "alt": "News image 10"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Recruitment of Contract Service Personnel at Bachelor’s–Master’s Degree Level (Graphic Designer)",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69AIT1600094",
+          "category": "Announcement",
+          "publishedAt": "2026-01-09"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Recruitment of Contract Service Personnel at Bachelor’s–Master’s Degree Level",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LDT1617088",
+          "category": "Announcement",
+          "publishedAt": "2025-12-04"
+        },
+        {
+          "title": "Recruitment of Individual Contract Service Personnel",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66BMJ2531053",
+          "category": "News",
+          "publishedAt": "2023-02-13"
+        },
+        {
+          "title": "The Office of the Royal Society invites applications for contract service staff, 2 positions",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23O5003009",
+          "category": "News",
+          "publishedAt": "2019-03-29"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

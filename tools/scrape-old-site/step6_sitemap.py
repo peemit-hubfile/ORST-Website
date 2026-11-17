@@ -13,20 +13,30 @@ def load(n):
     return json.load(open(PAGES + n + ".json", encoding="utf-8"))
 
 
-def index_groups(name, href, title):
-    """page-index ของหน้าหมวด -> กลุ่มในแผนผัง (ชื่อกลุ่มนำหน้าด้วยชื่อหมวด)"""
+def groups_of(name):
+    """กลุ่มลิงก์ของหน้าหมวด: page-index (ทุกกลุ่ม) + card-grid แบบ tiles (1 block = 1 กลุ่ม ชื่อกลุ่มจาก eyebrow/heading)"""
     out = []
     for b in load(name)["blocks"]:
         if b["type"] == "page-index":
-            for g in b["groups"]:
-                out.append({"heading": f"{title} · {g['heading']}", "href": href, "icon": g.get("icon", "i-file"),
-                            "items": [{k: v for k, v in it.items() if k in ("title", "href")} for it in g["items"]]})
+            out += b["groups"]
+        elif b["type"] == "card-grid" and b.get("layout") in ("tiles", "list"):
+            out.append({"heading": b.get("eyebrow") or b.get("heading", ""), "icon": (b["items"][0].get("icon") if b["items"] else None) or "i-file",
+                        "items": [{k: v for k, v in it.items() if k in ("title", "href")} for it in b["items"]]})
+    return out
+
+
+def index_groups(name, href, title):
+    """page-index ของหน้าหมวด -> กลุ่มในแผนผัง (ชื่อกลุ่มนำหน้าด้วยชื่อหมวด)"""
+    out = []
+    for g in groups_of(name):
+        out.append({"heading": f"{title} · {g['heading']}", "href": href, "icon": g.get("icon", "i-file"),
+                    "items": [{k: v for k, v in it.items() if k in ("title", "href")} for it in g["items"]]})
     return out
 
 
 groups = [{"heading": "หน้าหลักของเว็บไซต์", "icon": "i-home", "items": [
     {"title": "หน้าหลัก", "href": "index.html"}, {"title": "พจนานุกรมและคำศัพท์", "href": "dictionary.html"},
-    {"title": "องค์ความรู้", "href": "knowledge.html"}, {"title": "สื่อและสิ่งพิมพ์", "href": "publications.html"},
+    {"title": "องค์ความรู้", "href": "knowledge.html"}, {"title": "หนังสือและสิ่งพิมพ์", "href": "publications.html"},
     {"title": "ข่าวสารและกิจกรรม", "href": "news.html"}, {"title": "บริการวิชาการ", "href": "services.html"},
     {"title": "เกี่ยวกับเรา", "href": "about.html"}, {"title": "การปฏิบัติราชการ", "href": "operations.html"},
     {"title": "ติดต่อเรา", "href": "contact.html"}]}]
@@ -65,14 +75,11 @@ nav = {"_note": "สร้างอัตโนมัติจาก tools/scrap
        "sections": []}
 for key, title, href in SECTIONS:
     sec = {"key": key, "title": title, "href": href, "groups": []}
-    for b in load(key)["blocks"]:
-        if b["type"] != "page-index":
-            continue
-        for g in b["groups"]:
-            items = [{"title": it["title"], "href": it["href"]} for it in g["items"]
-                     if it.get("href", "").endswith(".html") and not it["href"].startswith("http")]
-            if items:
-                sec["groups"].append({"heading": g["heading"], "items": items})
+    for g in groups_of(key):
+        items = [{"title": it["title"], "href": it["href"]} for it in g["items"]
+                 if it.get("href", "").endswith(".html") and not it["href"].startswith("http")]
+        if items:
+            sec["groups"].append({"heading": g["heading"], "items": items})
     nav["sections"].append(sec)
 with open(ROOT + "/content/site-nav.json", "w", encoding="utf-8", newline="\n") as f:
     json.dump(nav, f, ensure_ascii=False, indent=2)

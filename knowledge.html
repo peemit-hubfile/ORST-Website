@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>คลังองค์ความรู้ | สำนักงานราชบัณฑิตยสภา</title>
     <meta name="description"
-        content="คลังองค์ความรู้ของสำนักงานราชบัณฑิตยสภา ค้นหาคำศัพท์ บทความ เอกสาร วารสาร และองค์ความรู้สำหรับประชาชน" />
+        content="คลังองค์ความรู้ของสำนักงานราชบัณฑิตยสภา ค้นหาอินโฟกราฟิก หนังสือ หลักเกณฑ์ภาษาไทย ข้อมูลเสียงภาษาถิ่น และเอกสารความรู้ในที่เดียว" />
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
     <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -23,20 +23,6 @@
 <body data-page="knowledge">
     <!-- ไอคอนเฉพาะหน้านี้ (ไอคอนทั่วไปอยู่ใน sprite กลางที่ assets/js/components.js) -->
     <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
-        <symbol id="i-grid" viewBox="0 0 24 24">
-            <path d="M3 3h8v8H3z"></path>
-            <path d="M13 3h8v8h-8z"></path>
-            <path d="M3 13h8v8H3z"></path>
-            <path d="M13 13h8v8h-8z"></path>
-        </symbol>
-        <symbol id="i-list" viewBox="0 0 24 24">
-            <path d="M8 6h13"></path>
-            <path d="M8 12h13"></path>
-            <path d="M8 18h13"></path>
-            <path d="M3 6h.01"></path>
-            <path d="M3 12h.01"></path>
-            <path d="M3 18h.01"></path>
-        </symbol>
     </svg>
 
 
@@ -44,230 +30,94 @@
 
 
     <main id="main-content">
-        <section class="knowledge-hero" aria-labelledby="page-title">
-            <div class="container hero-inner">
-                <div class="hero-copy reveal">
-                    
-                    <span class="eyebrow">National Knowledge Archive</span>
-                    <h1 id="page-title">คลังองค์ความรู้ของชาติ</h1>
-                    <p>ค้นหาคำศัพท์ บทความวิชาการ เอกสาร วารสาร และองค์ความรู้สำหรับประชาชนจากราชบัณฑิตยสภาในจุดเดียว
-                    </p>
-                    <form class="hero-search" id="hero-search-form" role="search" aria-label="ค้นหาในคลังองค์ความรู้">
-                        <span class="leading"><svg class="icon">
-                                <use href="#i-search"></use>
-                            </svg></span>
-                        <label for="main-search" class="sr-only">ค้นหาในคลังองค์ความรู้</label>
-                        <input id="main-search" type="search"
-                            placeholder="ค้นหา เช่น ภาษาไทย พจนานุกรม บทความ วารสาร..." autocomplete="off">
-                        <button class="btn" type="submit">ค้นหา</button>
-                    </form>
-                    <div class="quick-chips" aria-label="คำค้นยอดนิยม">
-                        <button class="chip" type="button" data-query="ภาษาไทย">ภาษาไทย</button>
-                        <button class="chip" type="button" data-query="พจนานุกรม">พจนานุกรม</button>
-                        <button class="chip" type="button" data-query="ศัพท์บัญญัติ">ศัพท์บัญญัติ</button>
-                        <button class="chip" type="button" data-query="วารสาร">วารสาร</button>
-                        <button class="chip" type="button" data-query="เอกสารราชการ">เอกสารราชการ</button>
-                    </div>
-                </div>
-                <aside class="hero-panel reveal" aria-label="ภาพรวมคลังองค์ความรู้">
-                    <h2>ภาพรวมคลังองค์ความรู้</h2>
-                    <div class="stat-list">
-                        <div class="stat-row"><span>องค์ความรู้ทั้งหมด</span><strong>185,420</strong></div>
-                        <div class="stat-row"><span>คำศัพท์</span><strong>82,156</strong></div>
-                        <div class="stat-row"><span>บทความวิชาการ</span><strong>12,847</strong></div>
-                        <div class="stat-row"><span>วารสารและสิ่งพิมพ์</span><strong>3,294</strong></div>
-                    </div>
-                    <div class="hero-note">ออกแบบเพื่อค้นพบข้อมูลได้รวดเร็ว
-                        พร้อมเชื่อมโยงไปยังเอกสารและบริการที่เกี่ยวข้อง</div>
-                </aside>
-            </div>
-        </section>
-
-        <section class="quick-path-section">
-            <div class="container quick-paths reveal">
-                <button class="path-card" type="button" data-category="thai"><span class="path-icon"><svg
-                            class="icon-lg">
-                            <use href="#i-book"></use>
-                        </svg></span>
-                    <h3>ภาษาไทย</h3>
-                    <p>คำศัพท์ การใช้ภาษา และหลักเกณฑ์</p>
-                </button>
-                <button class="path-card" type="button" data-category="articles"><span class="path-icon"><svg
-                            class="icon-lg">
-                            <use href="#i-file"></use>
-                        </svg></span>
-                    <h3>บทความวิชาการ</h3>
-                    <p>บทความ วารสาร และเอกสารอ้างอิง</p>
-                </button>
-                <button class="path-card" type="button" data-category="public"><span class="path-icon"><svg
-                            class="icon-lg">
-                            <use href="#i-access"></use>
-                        </svg></span>
-                    <h3>สำหรับประชาชน</h3>
-                    <p>องค์ความรู้เข้าใจง่าย ใช้งานได้จริง</p>
-                </button>
-            </div>
-        </section>
-
-        <section class="section alt" id="knowledge-content">
+        <!-- คลังองค์ความรู้ของชาติ — รายการทั้งหมดสร้างจากข้อมูลจริงที่ย้ายจากเว็บเดิม โดย assets/js/pages/knowledge.js
+             ตั้งค่าหน้า (ประเภทเนื้อหา ลำดับ ไอคอน วิดีโอ ระบบสืบค้น คำค้นยอดนิยม): content/knowledge-hub.json
+             รายการของแต่ละประเภท: content/pages/<page>.json ของประเภทนั้น (infographics, publications, language-guidelines,
+             academic-lectures, ethnic-language-audio, knowledge-base) — ตอนต่อ CMS ให้หลังบ้านเขียนไฟล์/endpoint โครงสร้างเดียวกัน -->
+        <section class="kb-hero" aria-labelledby="page-title">
             <div class="container">
-                <div class="section-head">
-                    <div>
-                        <span class="section-kicker" data-en="Knowledge Discovery">สำรวจองค์ความรู้</span>
-                        <h2>สำรวจองค์ความรู้</h2>
-                        <p>ใช้ช่องค้นหา หมวดหมู่ และตัวกรองเพื่อพบข้อมูลที่ตรงความต้องการได้เร็วขึ้น</p>
-                    </div>
-                    <div class="view-actions" aria-label="เปลี่ยนรูปแบบการแสดงผล">
-                        <button class="view-btn active" type="button" data-view="grid"><svg class="icon">
-                                <use href="#i-grid"></use>
-                            </svg> Card</button>
-                        <button class="view-btn" type="button" data-view="list"><svg class="icon">
-                                <use href="#i-list"></use>
-                            </svg> List</button>
-                    </div>
-                </div>
-
-                <div class="knowledge-layout">
-                    <aside class="filter-panel reveal" id="filter-panel" aria-label="ตัวกรองคลังองค์ความรู้">
-                        <div class="filter-title">
-                            <h2>ตัวกรองข้อมูล</h2><button type="button" data-reset>ล้างค่า</button>
-                        </div>
-                        <div class="filter-group">
-                            <h3>หมวดหมู่</h3>
-                            <button class="category-btn active" type="button"
-                                data-category="all"><span>ทั้งหมด</span><small>185,420</small></button>
-                            <button class="category-btn" type="button"
-                                data-category="thai"><span>ภาษาไทย</span><small>45,230</small></button>
-                            <button class="category-btn" type="button"
-                                data-category="science"><span>วิทยาศาสตร์</span><small>28,456</small></button>
-                            <button class="category-btn" type="button"
-                                data-category="arts"><span>ศิลปกรรม</span><small>15,892</small></button>
-                            <button class="category-btn" type="button"
-                                data-category="social"><span>สังคมศาสตร์</span><small>22,104</small></button>
-                            <button class="category-btn" type="button"
-                                data-category="articles"><span>บทความวิชาการ</span><small>12,847</small></button>
-                            <button class="category-btn" type="button"
-                                data-category="public"><span>องค์ความรู้สำหรับประชาชน</span><small>19,868</small></button>
-                        </div>
-                        <div class="filter-group">
-                            <h3>ประเภทเนื้อหา</h3>
-                            <label class="check-row"><input type="checkbox" data-type="term"> คำศัพท์/นิยาม</label>
-                            <label class="check-row"><input type="checkbox" data-type="article">
-                                บทความวิชาการ</label>
-                            <label class="check-row"><input type="checkbox" data-type="document"> เอกสารเผยแพร่</label>
-                        </div>
-                        <div class="filter-cta"><strong>แนะนำการค้นหา</strong>เริ่มจากคำกว้าง ๆ เช่น “ภาษาไทย”
-                            แล้วค่อยจำกัดประเภทด้วยตัวกรองด้านบน</div>
-                    </aside>
-
-                    <div class="knowledge-main">
-                        <div class="content-toolbar reveal">
-                            <div class="search-box">
-                                <svg class="icon">
-                                    <use href="#i-search"></use>
-                                </svg>
-                                <label for="content-search" class="sr-only">ค้นหาในรายการองค์ความรู้</label>
-                                <input id="content-search" type="search"
-                                    placeholder="ค้นหาในรายการ เช่น ปัญญาประดิษฐ์ ภาษาไทย เอกสารราชการ">
-                            </div>
-                            <select id="sort-select" class="sort-select" aria-label="เรียงลำดับผลลัพธ์">
-                                <option value="latest">เรียงตามล่าสุด</option>
-                                <option value="popular">เรียงตามความนิยม</option>
-                                <option value="az">เรียงตามตัวอักษร ก-ฮ</option>
-                            </select>
-                            <button class="btn secondary" type="button" data-scroll-filter>ปรับตัวกรอง</button>
-                        </div>
-
-                        <article class="featured-article reveal" data-featured>
-                            <div class="featured-media"><span class="badge">บทความแนะนำ</span></div>
-                            <div class="featured-body">
-                                <div class="meta"><span>บทความวิชาการ</span><span>ภาษาไทย</span><span>15 มกราคม
-                                        2568</span></div>
-                                <h2>พจนานุกรมฉบับราชบัณฑิตยสภา: การปรับปรุงคำศัพท์ยุคใหม่</h2>
-                                <p>บทความเกี่ยวกับการปรับปรุงพจนานุกรมให้ทันต่อเทคโนโลยี วิทยาศาสตร์ และสังคมร่วมสมัย
-                                    พร้อมแนวทางการใช้คำที่ถูกต้อง</p>
-                                <div class="article-actions"><a class="btn" href="#">อ่านบทความ</a><a
-                                        class="btn secondary" href="#">บันทึกไว้ก่อน</a></div>
-                            </div>
-                        </article>
-
-                        <div class="result-count" id="result-count">กำลังแสดงรายการองค์ความรู้</div>
-                        <div class="knowledge-grid reveal" id="knowledge-grid">
-                            <article class="knowledge-card" data-category="thai" data-type="term" data-title="ภาษาไทย"
-                                data-date="6" data-popular="92">
-                                <div class="card-top"><span class="type-tag">คำศัพท์</span><small>อัปเดตล่าสุด</small>
-                                </div>
-                                <h3>ภาษาไทย</h3>
-                                <p>ภาษาราชการและภาษาประจำชาติของประเทศไทย
-                                    มีเอกลักษณ์เฉพาะตัวและมีหลักเกณฑ์การใช้ที่สำคัญ</p>
-                                <div class="card-foot"><span>ฐานข้อมูลคำศัพท์</span><a class="read-link"
-                                        href="#">ดูรายละเอียด →</a></div>
-                            </article>
-                            <article class="knowledge-card" data-category="articles" data-type="article"
-                                data-title="การพัฒนาการใช้ภาษาไทยในยุคดิจิทัล" data-date="5" data-popular="88">
-                                <div class="card-top"><span class="type-tag">บทความ</span><small>PDF</small></div>
-                                <h3>การพัฒนาการใช้ภาษาไทยในยุคดิจิทัล</h3>
-                                <p>ศึกษาแนวโน้มการใช้ภาษาไทยในสื่อดิจิทัล
-                                    และข้อเสนอเพื่อรักษามาตรฐานภาษาในสภาพแวดล้อมใหม่</p>
-                                <div class="card-foot"><span>โดย ศ.ดร.สมศรี วิทยาการ</span><a class="read-link"
-                                        href="#">อ่านบทความ →</a></div>
-                            </article>
-                            <article class="knowledge-card" data-category="thai" data-type="document"
-                                data-title="แนวทางการใช้ภาษาไทยในเอกสารราชการ" data-date="4" data-popular="75">
-                                <div class="card-top"><span class="type-tag">เอกสาร</span><small>PDF 2.5 MB</small>
-                                </div>
-                                <h3>แนวทางการใช้ภาษาไทยในเอกสารราชการ พ.ศ. 2567</h3>
-                                <p>เอกสารแนวทางการเขียนเอกสารราชการภาษาไทย ฉบับปรับปรุงใหม่ พร้อมตัวอย่างการใช้งาน</p>
-                                <div class="card-foot"><span>เอกสารเผยแพร่</span><a class="read-link" href="#">ดาวน์โหลด
-                                        PDF →</a></div>
-                            </article>
-                            <article class="knowledge-card" data-category="science" data-type="term"
-                                data-title="ปัญญาประดิษฐ์ Artificial Intelligence" data-date="3" data-popular="96">
-                                <div class="card-top"><span
-                                        class="type-tag">ศัพท์บัญญัติ</span><small>วิทยาศาสตร์</small></div>
-                                <h3>ปัญญาประดิษฐ์ (Artificial Intelligence)</h3>
-                                <p>ความสามารถของเครื่องจักรในการเรียนรู้ คิด วิเคราะห์
-                                    และตัดสินใจโดยอาศัยข้อมูลหรือแบบจำลอง</p>
-                                <div class="card-foot"><span>ศัพท์วิทยาศาสตร์</span><a class="read-link"
-                                        href="#">ดูคำนิยาม →</a></div>
-                            </article>
-                            <article class="knowledge-card" data-category="arts" data-type="article"
-                                data-title="วรรณกรรมรัตนโกสินทร์" data-date="2" data-popular="68">
-                                <div class="card-top"><span class="type-tag">ศิลปกรรม</span><small>บทความ</small></div>
-                                <h3>วรรณกรรมรัตนโกสินทร์: มรดกทางภาษาและวัฒนธรรม</h3>
-                                <p>บทความเกี่ยวกับคุณค่าของวรรณกรรมไทยในเชิงภาษา สังคม และประวัติศาสตร์วัฒนธรรม</p>
-                                <div class="card-foot"><span>หมวดศิลปกรรม</span><a class="read-link" href="#">อ่านต่อ
-                                        →</a></div>
-                            </article>
-                            <article class="knowledge-card" data-category="public" data-type="document"
-                                data-title="ประวัติศาสตร์ภาษาไทย" data-date="1" data-popular="81">
-                                <div class="card-top"><span class="type-tag">เอกสาร</span><small>อ่านออนไลน์</small></div>
-                                <h3>ประวัติศาสตร์ภาษาไทย</h3>
-                                <p>หนังสือเรียนรู้เกี่ยวกับวิวัฒนาการของภาษาไทยตั้งแต่อดีตจนถึงปัจจุบัน
-                                    เหมาะสำหรับประชาชนทั่วไป</p>
-                                <div class="card-foot"><span>เอกสารเผยแพร่</span><a class="read-link" href="#">อ่านต่อ
-                                        →</a></div>
-                            </article>
-                        </div>
-                        <div class="empty-state" id="empty-state">
-                            <strong>ไม่พบข้อมูลที่ตรงกับการค้นหา</strong><br>ลองลดตัวกรอง หรือใช้คำค้นอื่น เช่น
-                            “ภาษาไทย”, “พจนานุกรม”, “บทความ”
-                        </div>
-
-                        <nav aria-label="การแบ่งหน้า" class="pagination reveal"><button
-                                disabled>ก่อนหน้า</button><button
-                                class="active">1</button><button>2</button><button>3</button><button>...</button><button>156</button><button>ถัดไป</button>
-                        </nav>
-                    </div>
+                <nav class="kb-crumb" aria-label="เส้นทางหน้า">
+                    <a href="index.html">หน้าหลัก</a>
+                    <span class="kb-crumb-sep" aria-hidden="true"><svg class="icon"><use href="#i-chevron"></use></svg></span>
+                    <span aria-current="page">คลังองค์ความรู้ของชาติ</span>
+                </nav>
+                <h1 id="page-title">คลังองค์ความรู้ของชาติ</h1>
+                <p>อินโฟกราฟิก หนังสือ หลักเกณฑ์ภาษาไทย และเอกสารความรู้ของสำนักงานราชบัณฑิตยสภา ค้นหาได้ในที่เดียว</p>
+                <form class="kb-search" id="hero-search-form" role="search" aria-label="ค้นหาในคลังองค์ความรู้">
+                    <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+                    <label for="main-search" class="sr-only">ค้นหาในคลังองค์ความรู้</label>
+                    <input id="main-search" type="search" placeholder="ค้นหา เช่น ราชาศัพท์ คำทับศัพท์ พจนานุกรม" autocomplete="off">
+                    <button type="submit">ค้นหา</button>
+                </form>
+                <div class="kb-chips" aria-label="คำค้นยอดนิยม">
+                    <span>ค้นหายอดนิยม</span>
+                    <button type="button" data-query="ราชาศัพท์">ราชาศัพท์</button>
+                    <button type="button" data-query="คำทับศัพท์">คำทับศัพท์</button>
+                    <button type="button" data-query="พจนานุกรม">พจนานุกรม</button>
+                    <button type="button" data-query="สะกด">การสะกดคำ</button>
+                    <button type="button" data-query="ภาษาถิ่น">ภาษาถิ่น</button>
                 </div>
             </div>
         </section>
+
+        <!-- โหมดปกติ: แยกเป็นส่วน ๆ ตามประเภทเนื้อหา (สร้างโดย knowledge.js) แต่ละส่วนมี "ดูทั้งหมด" ไปหน้าย่อยของประเภทนั้น
+             โหมดค้นหา (?q=): ซ่อนส่วนต่าง ๆ แล้วแสดงผลการค้นหารวมทุกประเภท (ตาราง/รายการ + แบ่งหน้า) -->
+        <div id="knowledge-content">
+            <div id="kb-sections"></div>
+
+            <section class="kb-section kb-results" id="kb-results" aria-labelledby="kb-title" hidden>
+                <div class="container">
+                    <div class="kb-head">
+                        <h2 id="kb-title">ผลการค้นหา</h2>
+                        <p id="kb-lead">ค้นจากสื่อความรู้ทุกประเภทของสำนักงานราชบัณฑิตยสภา</p>
+                    </div>
+
+                    <div class="kb-toolbar">
+                        <p class="kb-count" id="result-count" aria-live="polite">กำลังโหลดรายการ…</p>
+                        <div class="kb-tools">
+                            <label class="kb-filter">
+                                <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+                                <span class="sr-only">ค้นหาในรายการ</span>
+                                <input id="content-search" type="search" placeholder="ค้นหาในรายการ" autocomplete="off">
+                            </label>
+                            <label class="kb-select">
+                                <span class="sr-only">เรียงลำดับ</span>
+                                <select id="sort-select">
+                                    <option value="default">เรียงตามค่าเริ่มต้น</option>
+                                    <option value="az">เรียงตามชื่อ ก–ฮ</option>
+                                </select>
+                            </label>
+                            <div class="kb-view" role="group" aria-label="รูปแบบการแสดงผล">
+                                <button type="button" data-view="grid" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg>ตาราง</button>
+                                <button type="button" data-view="list" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg>รายการ</button>
+                            </div>
+                            <button type="button" class="kb-clear" data-reset><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>ล้างการค้นหา</button>
+                        </div>
+                    </div>
+
+                    <div class="kb-grid" id="knowledge-grid" data-view="grid"></div>
+                    <div class="kb-empty" id="empty-state" hidden>
+                        <strong>ไม่พบรายการที่ตรงกับการค้นหา</strong>
+                        <span>ลองใช้คำค้นที่สั้นลง หรือคำอื่นที่ใกล้เคียง</span>
+                        <button type="button" data-reset>ล้างการค้นหา</button>
+                    </div>
+                    <nav class="kb-pager" id="kb-pager" aria-label="การแบ่งหน้า" hidden></nav>
+                </div>
+            </section>
+
+            <noscript>
+                <div class="container">
+                    <p class="kb-noscript">เปิด JavaScript เพื่อค้นหาในคลังองค์ความรู้ หรือดูรายการที่หน้า
+                        <a href="infographics.html">อินโฟกราฟิก</a> · <a href="publications.html">หนังสือและสิ่งพิมพ์</a> ·
+                        <a href="language-guidelines.html">หลักเกณฑ์ภาษาไทย</a> · <a href="academic-lectures.html">บทบรรยายทางวิชาการ</a> · <a href="ethnic-language-audio.html">ข้อมูลเสียงภาษาถิ่น</a> · <a href="knowledge-base.html">เอกสารความรู้เผยแพร่</a></p>
+                </div>
+            </noscript>
+        </div>
     </main>
 
 
     <div id="app-footer"></div>
 
-    <div class="toast" id="toast" role="status" aria-live="polite">อัปเดตผลลัพธ์แล้ว</div>
     <script src="assets/js/components.js"></script>
 
   <script src="assets/js/pages/knowledge.js"></script>

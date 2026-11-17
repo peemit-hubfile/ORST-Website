@@ -1,0 +1,92 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "วิดีโอจากช่อง YouTube ของสำนักงานราชบัณฑิตยสภา (ชุดเดียวกับหน้าแรก) รูปย่อเก็บใน assets/images/orst/video — เพิ่มวิดีโอใหม่: ใส่ youtube (รหัสวิดีโอ) + image + title + tag",
+  "title": "วิดีโอความรู้",
+  "navKey": "knowledge",
+  "description": "การเสวนา การอบรม และวีดิทัศน์ทางวิชาการของสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "วิดีโอความรู้",
+      "image": "assets/images/orst/news/data0005-00005462-960.jpg",
+      "lead": "การเสวนา การอบรม และวีดิทัศน์ทางวิชาการของสำนักงานราชบัณฑิตยสภา กดที่วิดีโอเพื่อรับชมในหน้านี้",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "วิดีโอความรู้"
+        }
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "videos",
+      "columns": 3,
+      "ratio": "16:9",
+      "pageSize": 12,
+      "unit": "คลิป",
+      "items": [
+        {
+          "youtube": "trzQRPLZ9Xw",
+          "image": "assets/images/orst/video/trzQRPLZ9Xw.jpg",
+          "alt": "ภาพตัวอย่างวิดีโอ คำถิ่น คำกวี : คลังคำสำหรับภาษาไทย",
+          "title": "คำถิ่น คำกวี : คลังคำสำหรับภาษาไทย",
+          "tag": "การเสวนาทางวิชาการ"
+        },
+        {
+          "youtube": "eGVzoA2DxOQ",
+          "image": "assets/images/orst/video/eGVzoA2DxOQ.jpg",
+          "alt": "ภาพตัวอย่างวิดีโอ ความเป็นมาของชุดแบบอักษร (font) อักษรโบราณ และการกำหนดมาตรฐานสากลเกี่ยวกับอักษรไทย",
+          "title": "ความเป็นมาของชุดแบบอักษร (font) อักษรโบราณ และการกำหนดมาตรฐานสากลเกี่ยวกับอักษรไทย",
+          "tag": "อบรมเชิงปฏิบัติการ ตอนที่ ๑"
+        },
+        {
+          "youtube": "SylEqoN1B-c",
+          "image": "assets/images/orst/video/SylEqoN1B-c.jpg",
+          "alt": "ภาพตัวอย่างวิดีโอ การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย",
+          "title": "การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย",
+          "tag": "อบรมเชิงปฏิบัติการ"
+        },
+        {
+          "youtube": "XSkbyFZfdZk",
+          "image": "assets/images/orst/video/XSkbyFZfdZk.jpg",
+          "alt": "ภาพตัวอย่างวิดีโอ รัฐบัญญัติคนต่างด้าวชาติศัตรู : จากจอห์น แอดัมส์ ถึงโดนัลด์ ทรัมป์",
+          "title": "รัฐบัญญัติคนต่างด้าวชาติศัตรู : จากจอห์น แอดัมส์ ถึงโดนัลด์ ทรัมป์",
+          "tag": "บทความทางวิชาการ"
+        },
+        {
+          "youtube": "okhBOJLB8VI",
+          "image": "assets/images/orst/video/okhBOJLB8VI.jpg",
+          "alt": "ภาพตัวอย่างวิดีโอ การประเมินและพัฒนานโยบายสาธารณะ กรณี (ร่าง) พระราชบัญญัติการประกอบธุรกิจสถานบันเทิงครบวงจร",
+          "title": "การประเมินและพัฒนานโยบายสาธารณะ กรณี (ร่าง) พระราชบัญญัติการประกอบธุรกิจสถานบันเทิงครบวงจร",
+          "tag": "บทความทางวิชาการ"
+        },
+        {
+          "youtube": "eKjspzNSnx0",
+          "image": "assets/images/orst/video/eKjspzNSnx0.jpg",
+          "alt": "ภาพตัวอย่างวิดีโอ แนวทางการแก้ปัญหาเด็กและเยาวชนกับชุมชน",
+          "title": "แนวทางการแก้ปัญหาเด็กและเยาวชนกับชุมชน",
+          "tag": "วีดิทัศน์"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ติดตามวิดีโอใหม่",
+      "body": "วิดีโอทั้งหมดของสำนักงานราชบัณฑิตยสภาบนช่อง YouTube",
+      "actions": [
+        {
+          "label": "ไปที่ช่อง YouTube",
+          "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+        }
+      ]
+    }
+  ]
+}

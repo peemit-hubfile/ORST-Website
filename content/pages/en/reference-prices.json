@@ -1,0 +1,920 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=4 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Reference price announcements",
+  "navKey": "news",
+  "description": "Reference Price Announcements for Procurement of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Reference price announcements",
+      "lead": "Reference Price Announcements for Procurement of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Reference price announcements"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Cancellation of the invitation to bid for developing a Smart Office system for the Office of the Royal Society by electronic bidding (e-bidding)",
+          "publishedAt": "2026-01-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F69AZN1747022"
+        },
+        {
+          "title": "Reference Price Announcement: Research and Design Project for an Online Thai Language Proficiency Test System for the General Public",
+          "publishedAt": "2018-10-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EHQ2021063"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Royal Vocabulary for Various Occasions, Royal Society of Thailand Edition",
+          "publishedAt": "2018-08-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EHQ2127005"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Royal Vocabulary, Royal Society of Thailand Edition",
+          "publishedAt": "2018-08-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP0457069"
+        },
+        {
+          "title": "Reference Price Announcement: The Book \"Under the Royal Grace\"",
+          "publishedAt": "2018-08-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP0620084"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Soil Science Terms",
+          "publishedAt": "2018-07-16",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP0728019"
+        },
+        {
+          "title": "Reference Price Announcement: Computer Equipment (2 Items)",
+          "publishedAt": "2018-07-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP0848034"
+        },
+        {
+          "title": "Reference Price Announcement: Research and Development of the Office of the Royal Society Online Coined Technical Terms Database System",
+          "publishedAt": "2018-06-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP1118019"
+        },
+        {
+          "title": "Reference Price Announcement: Research and Design of an Online Thai Language Proficiency Test System for Students",
+          "publishedAt": "2018-03-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP1219084"
+        },
+        {
+          "title": "Reference Price Announcement: Research and Development of an Integrated Academic Content Creation System and Digital Archive for the Missions of the Office of the Royal Society, Fiscal Year 2018",
+          "publishedAt": "2018-02-12",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP1310031"
+        },
+        {
+          "title": "Reference Price Announcement: The Book \"How to Read and How to Write, Royal Society of Thailand Edition\" (Revised)",
+          "publishedAt": "2018-01-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP1400019"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Activities Project Holding Contests to Promote the Use of Thai, Thai Dialects and Reading, with Radio Broadcasts Simultaneously Available in All 4 Regions, 2018",
+          "publishedAt": "2018-01-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP1510081"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Gazetteer of Thai Geography, Royal Society of Thailand Edition, Volume 4 (Letters ย–ฮ), 4th Printing (Revised)",
+          "publishedAt": "2017-12-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP1645056"
+        },
+        {
+          "title": "Reference Price Announcement: The Dictionary of Petrochemical Terms, Royal Society of Thailand Edition",
+          "publishedAt": "2017-12-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP1804056"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Manual of the Kong Writing System in Thai Script",
+          "publishedAt": "2017-12-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP2004028"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Origins of Chinese Beliefs and Customs, Parts 4–5",
+          "publishedAt": "2017-12-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP2130066"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Origins of Indian Beliefs and Customs, Volume 2, Parts 5–6",
+          "publishedAt": "2017-12-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP2257091"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Thai Music Terms: Biographies of Musicians and Singers, 3rd Printing (Revised), Royal Society of Thailand Edition, Print Run of 1,000 Copies",
+          "publishedAt": "2017-12-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP2512069"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Thai Ornamental Pattern Terms, Royal Society of Thailand Edition, 2nd Printing (Revised), Print Run of 1,000 Copies",
+          "publishedAt": "2017-12-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP2714031"
+        },
+        {
+          "title": "Reference Price Announcement: Security Services, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP2815044"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Philosophy Terms, Royal Society of Thailand Edition",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP2956072"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Thai Proverbs, Sayings and Idioms, Royal Society of Thailand Edition, 16th Printing",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP3108009"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of The Use of กระ and กะ with Meanings, Royal Society of Thailand Edition",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP3211084"
+        },
+        {
+          "title": "Reference Price Announcement: Cleaning of the Buildings and Premises of the Office of the Royal Society, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP3307072"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Maintenance of Computer Systems and Servers, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP3409022"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Internet Services, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP3523034"
+        },
+        {
+          "title": "Reference Price Announcement: Warehouse Rental for Book Storage, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP3614047"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Drivers for the Office of the Royal Society, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP3736069"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Administrative Work for the Personnel Section, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4041041"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted General Service Staff, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4143078"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Library Services for the Office of the Royal Society, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4237053"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted General Administration Staff, Fiscal Year 2018",
+          "publishedAt": "2017-08-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4425006"
+        },
+        {
+          "title": "Reference Price Announcement: Research and Design of an Online Thai Language Proficiency Test System for Thai Language Teachers",
+          "publishedAt": "2017-08-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4536031"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Service Activities via the Kasetsart University Radio Station",
+          "publishedAt": "2017-08-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4638056"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Computer Printer Ink (46 Items)",
+          "publishedAt": "2017-06-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4735031"
+        },
+        {
+          "title": "Reference Price Announcement: Creation and Development of a Database of Words in the Royal Society of Thailand Dictionary of Thai Dialects of 3 Regions",
+          "publishedAt": "2017-05-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4819053"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Botanical Terms, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2017-04-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP4905003"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Insurance Terms, Royal Society of Thailand Edition, 6th Printing (Revised) (2,000 Copies)",
+          "publishedAt": "2017-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5020041"
+        },
+        {
+          "title": "Reference Price Announcement: Creation of Fonts for Thai Noi Script and Isan Tham Script",
+          "publishedAt": "2017-03-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5117028"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Thai Music Terms: Vocal and Instrumental Music, 3rd Printing (1,000 Copies)",
+          "publishedAt": "2017-02-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5205028"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Thai Music Terms: Vocal and Instrumental Music, 3rd Printing (1,000 Copies)",
+          "publishedAt": "2017-01-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5332003"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Genetics Terms, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2017-01-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5516053"
+        },
+        {
+          "title": "Reference Price Announcement: Project to Create and Develop a Database of Words in the Royal Institute Dictionary B.E. 2554, a Digital Archive System and a Meeting Support System for the Missions of the Office of the Royal Society",
+          "publishedAt": "2017-01-16",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5725003"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Thai Words Derived from Pali and Sanskrit, 2nd Printing (1,000 Copies)",
+          "publishedAt": "2017-01-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5825066"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Administrative Work, Fiscal Year 2017",
+          "publishedAt": "2017-01-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMP5927003"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Society of Thailand, Year 41, Volume 2 (April–June 2016) (1,000 Copies)",
+          "publishedAt": "2017-01-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0038028"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Vehicles and Transport Equipment (2 Items) (Round 2)",
+          "publishedAt": "2016-12-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0139066"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Cleaning of the Buildings and Premises of the Office of the Royal Society, Fiscal Year 2017 (1 January–30 September 2017), Round 2",
+          "publishedAt": "2016-11-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0227028"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Purchase of Vehicles and Transport Equipment (2 Items)",
+          "publishedAt": "2016-11-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0638003"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Advertising and Publicity Equipment (4 Items)",
+          "publishedAt": "2016-11-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0734016"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Advertising and Publicity Equipment (3 Items)",
+          "publishedAt": "2016-11-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0812016"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Office Equipment: 1 Digital Photocopier (Black-and-White), 40 Pages per Minute",
+          "publishedAt": "2016-11-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0913091"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Events to Promote the Use of Thai Dialects, Reading Promotion Activities and National Thai Language Day 2017",
+          "publishedAt": "2016-11-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ0951078"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Gazetteer of Thai Geography, Royal Society of Thailand Edition, Volume 3 (Letters น–ม), 4th Printing (Revised) (1,000 Copies)",
+          "publishedAt": "2016-11-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1036016"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Cleaning of the Office of the Royal Society Building for 9 Months (1 January 2017–30 September 2017)",
+          "publishedAt": "2016-10-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1132006"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Plant Taxonomy, Letters ฉ–ฒ, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-10-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1212094"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Event for Thai Language Day, Fiscal Year 2017",
+          "publishedAt": "2016-09-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1259006"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Drivers, Fiscal Year 2017",
+          "publishedAt": "2016-09-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1341006"
+        },
+        {
+          "title": "Reference Price Announcement: Internet Services for the Office of the Royal Society, Fiscal Year 2017",
+          "publishedAt": "2016-09-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1431006"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Maintenance of Computer Systems and Servers, 2017",
+          "publishedAt": "2016-09-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1612097"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted General Service Staff (4 Positions) by Special Method, Fiscal Year 2017",
+          "publishedAt": "2016-09-16",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ2253034"
+        },
+        {
+          "title": "Price Announcement: Contracted General Administration Staff, Fiscal Year 2017",
+          "publishedAt": "2016-09-16",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ2518088"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Library Services by Special Method, Fiscal Year 2017",
+          "publishedAt": "2016-09-16",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ2606022"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Administrative Work for the Personnel Section by Special Method",
+          "publishedAt": "2016-09-16",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ1526006"
+        },
+        {
+          "title": "Reference Price Announcement: Security Services, Fiscal Year 2017",
+          "publishedAt": "2016-09-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ2705047"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Cleaning of the Buildings and Premises of the Office of the Royal Society, Fiscal Year 2017",
+          "publishedAt": "2016-09-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ2751022"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Electrical and Radio Equipment (11 Portable Digital Voice Recorders)",
+          "publishedAt": "2016-08-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ2841072"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Service Activities via the Kasetsart University Radio Station, \"Know and Love Thai\" Project, Budget 2017",
+          "publishedAt": "2016-08-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ2928097"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Services via the Kasetsart University Radio Station, \"Know and Love Thai\" Project, Fiscal Year 2017",
+          "publishedAt": "2016-08-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63EMQ3051022"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Coined Technical Terms of Prince Wan (Special Method)",
+          "publishedAt": "2016-08-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM2914005"
+        },
+        {
+          "title": "Reference Price Announcement: Creation of a Lanna Tham Script Font for the Office of the Royal Society",
+          "publishedAt": "2016-07-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3040005"
+        },
+        {
+          "title": "Reference Price Announcement: Production and Broadcast of Radio Programs on Thai Dialects of 3 Regions under the \"Know and Love Thai\" Project",
+          "publishedAt": "2016-06-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3156063"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Society of Thailand, Year 40, Issue 2 (April–June 2015) (1,000 Copies)",
+          "publishedAt": "2016-06-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3245000"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Forum on \"The Role of Local Communities in Participating in the Production of Radio Programs on Thai Dialects of 3 Regions and the Royal Society of Thailand Dictionary of Thai Dialects of 3 Regions under the Know and Love Thai Project\"",
+          "publishedAt": "2016-05-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3344005"
+        },
+        {
+          "title": "Reference Price Announcement: Development of Applications for the Royal Institute Dictionary B.E. 2554 and How to Read and How to Write, Royal Institute Edition, Phase 2",
+          "publishedAt": "2016-05-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3448091"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Nanomaterials Terms, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-04-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3525041"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Linguistics Terms (General Linguistics) (1,000 Copies)",
+          "publishedAt": "2016-04-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3622016"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Printing of Foreign Terms Replaceable by Thai Words, Royal Society of Thailand Edition, Volume 2 (1,000 Copies)",
+          "publishedAt": "2016-04-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM4551031"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Polymer Terms, Royal Society of Thailand Edition, 2nd Printing (Revised) (1,000 Copies)",
+          "publishedAt": "2016-04-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3755078"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Society of Thailand, Year 40, Issue 4, October–December 2015 (1,000 Copies)",
+          "publishedAt": "2016-04-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM3849003"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Literary Terms, Royal Society of Thailand Edition (Revised) (1,000 Copies)",
+          "publishedAt": "2016-04-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM4435006"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Thai History, Volume 3, Letters ฉ–ต, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-03-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM4650044"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Modern World History: Asia, Volume 4, Letters H–J, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-03-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM4850069"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Western Music Terms, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-03-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM4959091"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of ASEAN Languages and Cultures, Royal Society of Thailand Edition, Volume 2 (2,000 Copies)",
+          "publishedAt": "2016-03-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5103069"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Proceedings of the Princess Maha Chakri Sirindhorn Congress (The Fifth Interdisciplinary Day Conference) (500 Copies)",
+          "publishedAt": "2016-03-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5237006"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Thai Politics and Government, Volume 1, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-03-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5321006"
+        },
+        {
+          "title": "Reference Price Announcement: Development of the Royal Society of Thailand Thai Sign Language Dictionary Website in Honor of Her Majesty Queen Sirikit on the Occasion of Her 84th Birthday Anniversary, 12 August 2016",
+          "publishedAt": "2016-03-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5408069"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Psychology, Volume 2, Letters C–F, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-02-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5520006"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Gazetteer of Thai Geography, Royal Society of Thailand Edition, Volume 2 (Letters ก–ธ), 4th Printing (Revised)",
+          "publishedAt": "2016-02-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5629056"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Society of Thailand, Year 40, Issue 3, July–September 2015 (1,000 Copies)",
+          "publishedAt": "2016-02-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5722041"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Printing of the Journal of the Royal Society of Thailand (English Edition), Volume 7",
+          "publishedAt": "2016-02-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5810003"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Printing of Plant Taxonomy, Letters ฆ–จ, Royal Society of Thailand Edition (1,000 Copies)",
+          "publishedAt": "2016-01-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENM5908041"
+        },
+        {
+          "title": "Reference Price Announcement: Production of How to Read and How to Write, Royal Society of Thailand Edition, in Braille, with Braille Files on DVD",
+          "publishedAt": "2016-01-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0031003"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Computer Printer Ink (44 Items)",
+          "publishedAt": "2015-12-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0119078"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Office Equipment: 1 Digital Photocopier (Black-and-White) (Round 2)",
+          "publishedAt": "2015-12-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0228094"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Maintenance of Computer Systems and Servers",
+          "publishedAt": "2015-11-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0331078"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Purchase of Office Equipment: 1 Digital Photocopier (Black-and-White)",
+          "publishedAt": "2015-11-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0425016"
+        },
+        {
+          "title": "Reference Price Announcement: Creation and Development of a Database of Words in the Royal Institute Dictionary B.E. 2554, a Digital Archive System and a Meeting Support System for the Missions of the Office of the Royal Society",
+          "publishedAt": "2015-10-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0532056"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Society of Thailand, Year 40, Issue 1 (January–March 2015), Round 3",
+          "publishedAt": "2015-10-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0620094"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for Internet Services for the Office of the Royal Society, Fiscal Year 2016",
+          "publishedAt": "2015-09-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN0720044"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Event for National Thai Language Day 2016",
+          "publishedAt": "2015-09-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN1209069"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Forum on ASEAN Languages and Cultures, Fiscal Year 2016",
+          "publishedAt": "2015-09-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN1317056"
+        },
+        {
+          "title": "Reference Price Announcement: Security Services, Fiscal Year 2016",
+          "publishedAt": "2015-08-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN1420094"
+        },
+        {
+          "title": "Reference Price Announcement: Continuing Academic Service Activities via the Kasetsart University Radio Station (Special Method)",
+          "publishedAt": "2015-08-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN1505056"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Society of Thailand, Year 40, Issue 1",
+          "publishedAt": "2015-07-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN1737044"
+        },
+        {
+          "title": "Reference Price: Purchase of Computer Equipment (2 Items) under the Information and Communication Technology Project Funded from Carried-Over Budget Savings of Fiscal Year 2013 for Allocation as Incentives",
+          "publishedAt": "2015-07-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN1826019"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Purchase of Advertising and Publicity Equipment (11 Items) by Electronic Bidding (e-bidding)",
+          "publishedAt": "2015-07-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN1914069"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Society of Thailand, Year 40, Issue 1 (January–March 2015) (Cancelled)",
+          "publishedAt": "2015-06-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63HDJ1400084"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Computer Equipment (2 Items) by Electronic Bidding (e-bidding)",
+          "publishedAt": "2015-06-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2135006"
+        },
+        {
+          "title": "Reference Price Announcement: Development of Applications for the Royal Institute Dictionary B.E. 2558 and How to Read and How to Write, Royal Institute Edition, for Electronic Distribution",
+          "publishedAt": "2015-05-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2219009"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Institute, Year 39, Issue 4 (October–December 2014)",
+          "publishedAt": "2015-04-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2302047"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of 2,000 Copies of the Dictionary of Contemporary Education Terms, Royal Society of Thailand Edition",
+          "publishedAt": "2015-03-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2356072"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Royal Society of Thailand Student Dictionary in Royal Commemoration",
+          "publishedAt": "2015-03-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2449034"
+        },
+        {
+          "title": "Reference Price: Academic Event for National Thai Language Day 2015 of the Office of the Royal Society",
+          "publishedAt": "2015-02-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2545019"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Purchase of Computer Equipment (5 Items)",
+          "publishedAt": "2015-01-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2703044"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Learning the Languages of ASEAN Neighbors, Royal Institute Edition, 2nd Printing",
+          "publishedAt": "2015-01-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2745044"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Manual of the Lavue Writing System, Royal Institute Edition",
+          "publishedAt": "2015-01-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN2954059"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of \"The Use of กระ and กะ with Meanings, Royal Institute Edition\"",
+          "publishedAt": "2015-01-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN3035072"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Thai Proverbs, Sayings and Idioms, Royal Institute Edition",
+          "publishedAt": "2015-01-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN3119097"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Architecture and Construction Terms, etc.",
+          "publishedAt": "2014-12-12",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN3200009"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted Improvement and Development of the Royal Institute Website",
+          "publishedAt": "2014-12-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN3550084"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Computer Equipment",
+          "publishedAt": "2014-12-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN3702022"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of San Somdet, Royal Institute Edition, Volume 1",
+          "publishedAt": "2014-12-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN3813059"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Three Seals Law: Phra Thammasat and the Principles of Inthaphat, Royal Institute Edition",
+          "publishedAt": "2014-12-01",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN3946031"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Institute, Year 39, Issue 3 (July–September 2014)",
+          "publishedAt": "2014-11-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4033019"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Psychology Terms, Volume 1, Letters A–B, Royal Institute Edition",
+          "publishedAt": "2014-11-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4330094"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted General Service Staff",
+          "publishedAt": "2014-11-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4408059"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Dictionary of Economics Terms, Royal Institute Edition, 3rd Printing",
+          "publishedAt": "2014-10-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4453009"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Forum on ASEAN Languages and Cultures",
+          "publishedAt": "2014-10-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4530072"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Forum \"Know and Love Thai on Tour: Dialects of the Northern, Northeastern and Southern Regions\"",
+          "publishedAt": "2014-09-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4609034"
+        },
+        {
+          "title": "Reference Price Announcement: Academic Service Activities via the Kasetsart University Radio Station",
+          "publishedAt": "2014-09-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4653059"
+        },
+        {
+          "title": "Reference Price Announcement: Security Services, Fiscal Year 2015",
+          "publishedAt": "2014-09-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4743059"
+        },
+        {
+          "title": "Reference Price Announcement: Internet Services for the Royal Institute, Fiscal Year 2015",
+          "publishedAt": "2014-09-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4900025"
+        },
+        {
+          "title": "Reference Price Announcement: Cleaning of the Royal Institute Building",
+          "publishedAt": "2014-09-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN4939075"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of a Book on Teaching Buddhism to Children, etc.",
+          "publishedAt": "2014-09-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN5033005"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Thai Language, Media Language, Royal Institute Edition",
+          "publishedAt": "2014-09-02",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN5117013"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of \"How to Read and How to Write, Royal Institute Edition\"",
+          "publishedAt": "2014-08-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN5200000"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of Know and Love Thai, Volume 7",
+          "publishedAt": "2014-08-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN5238088"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Institute, Year 39, Issue 2, April–June 2014",
+          "publishedAt": "2014-08-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN5312025"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Journal of the Royal Institute (English Edition), Volume 6",
+          "publishedAt": "2014-08-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN5349038"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of the History of ASEAN Neighboring Countries, Royal Institute Edition",
+          "publishedAt": "2014-08-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENN5822075"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Commemorative Book on the 80th Anniversary of the Founding of the Royal Institute",
+          "publishedAt": "2014-08-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0042013"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of \"ASEAN Languages and Cultures, Royal Institute Edition\", 2nd Printing",
+          "publishedAt": "2014-07-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0130038"
+        },
+        {
+          "title": "Reference Price Announcement: Printing of the Encyclopedia of Modern World History: Europe, Volume 2, Letters C–D",
+          "publishedAt": "2014-07-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0231088"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Dictionary of Sociology Terms, 4th Printing",
+          "publishedAt": "2014-06-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0317000"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Encyclopedia of Modern World History: Europe, Volume 6",
+          "publishedAt": "2014-06-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0402003"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of Legal Terms, Royal Institute Edition, 8th Printing",
+          "publishedAt": "2014-06-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0501041"
+        },
+        {
+          "title": "Reference Price Announcement: Production of TV Programs under the Academic Event Project for National Thai Language Day ...",
+          "publishedAt": "2014-06-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0549091"
+        },
+        {
+          "title": "Reference Price Announcement: Production of TV Programs Disseminating Knowledge on Language and Culture, etc. (Set 2)",
+          "publishedAt": "2014-06-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0634053"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Journal of the Royal Institute, Year 38, Issue 4 (October–December 2013)",
+          "publishedAt": "2014-06-04",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0739078"
+        },
+        {
+          "title": "Reference Price Announcement: Production of TV Programs Disseminating Knowledge on Language and Culture, etc. (Set 2)",
+          "publishedAt": "2014-05-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0824041"
+        },
+        {
+          "title": "Reference Price Announcement: Production of TV Programs Disseminating Knowledge on Language and Culture, etc.",
+          "publishedAt": "2014-05-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO1723028"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Thai Encyclopedia, Volume 30, Royal Institute Edition",
+          "publishedAt": "2014-03-28",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0915078"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Encyclopedia of World History: America, Volume 2, Letters C–D",
+          "publishedAt": "2014-03-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO0959066"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Journal of the Royal Institute, Year 39, Issue 1 (January–March)",
+          "publishedAt": "2014-03-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO1040028"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Dictionary of Geology Terms, Royal Institute Edition, etc.",
+          "publishedAt": "2014-03-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO1620081"
+        },
+        {
+          "title": "Reference Price Announcement: ASEAN Languages and Cultures Project (Production of TV Programs Disseminating Knowledge on Language, etc.)",
+          "publishedAt": "2014-02-12",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO1810066"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Dictionary of Demography Terms, Royal Institute Edition",
+          "publishedAt": "2014-02-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO1854028"
+        },
+        {
+          "title": "Reference Price Announcement: \"Know and Love Thai\" Project (Production of the Program \"The Kitten Tells Thai Stories\")",
+          "publishedAt": "2014-01-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO1940041"
+        },
+        {
+          "title": "Reference Price Announcement: \"Know and Love Thai\" Project (Production and Broadcast of the TV Program \"Language Patrol\")",
+          "publishedAt": "2014-01-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO2019078"
+        },
+        {
+          "title": "Reference Price Announcement: \"Know and Love Thai\" Project (Production of the Program \"The Kitten Tells Thai Stories\")",
+          "publishedAt": "2014-01-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO2612044"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Gazetteer of Thai Geography",
+          "publishedAt": "2014-01-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO2707069"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Dictionary of Linguistics Terms (Applied Linguistics), 2nd Printing",
+          "publishedAt": "2014-01-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3341031"
+        },
+        {
+          "title": "Reference Price Announcement: \"Know and Love Thai\" Project (Production and Broadcast of the TV Program \"Language Patrol\")",
+          "publishedAt": "2014-01-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3426016"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 2, Letter",
+          "publishedAt": "2014-01-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3517044"
+        },
+        {
+          "title": "Reference Price Announcement: Thai Language Knowledge Radio Broadcast Activities for National Children's Day 2014",
+          "publishedAt": "2014-01-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3610094"
+        },
+        {
+          "title": "Reference Price Announcement: Security Services Contract for the Royal Institute",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3656056"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Journal of the Royal Institute (English Edition), Volume 5",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3741069"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Design and Printing of the Book \"Kawiwat Wannana...\"",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3836044"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for Contracted Cleaning of the Buildings and Premises of the Royal Institute",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO3926006"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for Internet Services for the Royal Institute, Fiscal Year 2014",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO4022081"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Printing of the Journal of the Royal Institute, Year 38, Issue 3, July–September 2013",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO4117031"
+        },
+        {
+          "title": "Reference Price Announcement: Bidding for the Production of the Edutainment TV Program \"Wak Thong\" (Golden Verses)",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO4153006"
+        },
+        {
+          "title": "Reference Price Announcement: Price Inquiry for the Purchase of Advertising and Publicity Equipment",
+          "publishedAt": "2013-12-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63ENO4240022"
+        },
+        {
+          "title": "Reference Price Announcement: Contracted General Service Staff, Fiscal Year 2016",
+          "publishedAt": "0000-00-00",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63HDJ1928091"
+        },
+        {
+          "title": "Reference Price Announcement: Purchase of Advertising and Publicity Equipment: XGA Multimedia Projectors, 3,000 ANSI Lumens",
+          "publishedAt": "0000-00-00",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000303001003%2F63HDJ2045047"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

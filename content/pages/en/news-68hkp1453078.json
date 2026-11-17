@@ -1,0 +1,71 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HKP1453078 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "Announcement of the Office of the Royal Society on the results of the Outstanding Translated Academic Book Award under the advanced translation skills training project",
+  "navKey": "news",
+  "description": "1 image",
+  "sideNav": false,
+  "updatedAt": "2025-08-11",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Training and seminars",
+      "date": "2025-08-11",
+      "heading": "Announcement of the Office of the Royal Society: Results of the Outstanding Translated Academic Book Award, under the Advanced Translation Skills Training Project for the Outstanding Translated Academic Book Award, on the auspicious occasion of His Majesty the King's 6th Cycle Birthday Anniversary, 28 July 2024",
+      "image": "assets/images/orst/news/data0004-00004651-960.jpg",
+      "imageAlt": "News image: Announcement of the Office of the Royal Society on the results of the Outstanding Translated Academic Book Award",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0004/00004651.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General Press Releases",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Announcement of the Office of the Royal Society: Results of the Outstanding Translated Academic Book Award, under the Advanced Translation Skills Training Project for the Outstanding Translated Academic Book Award, on the auspicious occasion of His Majesty the King's 6th Cycle Birthday Anniversary, 28 July 2024"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Advanced translation skills training for the Outstanding Translation Award, on the auspicious occasion of His Majesty the King's 6th Cycle Birthday Anniversary, 28 July 2024",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68FQK1236003",
+          "category": "News",
+          "publishedAt": "2025-06-17"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Call for applicants for training and the translation selection contest under the Advanced Translation Skills Training Project for the Outstanding Translated Academic Book Award, on the auspicious occasion of His Majesty the King's 6th Cycle Birthday Anniversary, 28 July 2024",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68DYK2026053",
+          "category": "Announcement",
+          "publishedAt": "2025-04-25"
+        },
+        {
+          "title": "Results of the Outstanding Translated Academic Book Award in honor of His Majesty the King on the auspicious occasion of His Majesty's 6th Cycle Birthday Anniversary, 28 July 2024",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67HMM4319044",
+          "category": "News",
+          "publishedAt": "2024-08-13"
+        },
+        {
+          "title": "Extended deadline for submissions to the Outstanding Translated Academic Book Award: publishers, educational institutions and freelance translators are invited to submit books to the Outstanding Translated Academic Book Award in honor of His Majesty the King on the auspicious occasion of His Majesty's 6th Cycle Birthday Anniversary, 2…",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67E%21P1331047",
+          "category": "Announcement",
+          "publishedAt": "2024-05-27"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

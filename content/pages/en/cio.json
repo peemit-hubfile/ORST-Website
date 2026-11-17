@@ -1,0 +1,57 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-CIO (ถอดข้อความจากภาพ) — ข้อ 4.3 ยังขาดที่อยู่ และโทรสาร (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Chief Information Officer (CIO)",
+  "navKey": "about",
+  "description": "Information on the Chief Information Officer of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Chief Information Officer (CIO)",
+      "lead": "Information on the Chief Information Officer of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About us",
+          "href": "about.html"
+        },
+        {
+          "label": "Chief Information Officer (CIO)"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "cio",
+      "columns": 4,
+      "items": [
+        {
+          "name": "Mr. Santi Phakdikham",
+          "position": "Deputy Secretary-General of the Office of the Royal Society, Chief Information Officer (CIO)",
+          "image": "assets/images/orst/people/deputy-secretary-general.jpg",
+          "alt": "Mr. Santi Phakdikham",
+          "phone": "02-141-1718",
+          "email": "Santi.p@orst.go.th"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "related",
+      "variant": "alt",
+      "heading": "Related information",
+      "items": [
+        {
+          "title": "Information Technology Master Plan",
+          "href": "it-master-plan.html",
+          "icon": "i-file"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

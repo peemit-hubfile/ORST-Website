@@ -1,0 +1,60 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-EMB (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Official emblem",
+  "navKey": "about",
+  "description": "Meaning of the official emblem of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Official emblem",
+      "lead": "Meaning of the official emblem of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About us",
+          "href": "about.html"
+        },
+        {
+          "label": "Official emblem"
+        }
+      ]
+    },
+    {
+      "type": "two-column",
+      "id": "emblem",
+      "image": "assets/images/orst/about/emblem.png",
+      "imageAlt": "Official emblem of the Office of the Royal Society",
+      "imageSide": "left",
+      "subheading": "Official emblem of the Office of the Royal Society",
+      "paragraphs": [
+        "The emblem depicts the Great Crown of Victory, symbolizing the King, above an upright sacred sword. At the center of the sword is an open book bearing the word “ปณฺฑิโต” (pandito), signifying Fellows of the Royal Society whose wisdom is likened to a weapon. Behind the sword and the book are rays radiating all around, signifying the light of wisdom. Below is a ribbon whose two ends curve up to meet the side flaps of the Great Crown. The green of the ribbon is the color of the birthday of His Majesty King Prajadhipok, who graciously established the Royal Society of Thailand on 19 April 1926. Beneath the Great Crown emblem, the words “Office of the Royal Society” curve along the ribbon"
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "emblem-en",
+      "variant": "alt",
+      "heading": "Official Emblem of the Office of the Royal Society",
+      "html": "<p lang=\"en\">The emblem consists of the Royal Crown, symbol of kingship, placed over the upright Royal Sword with the tip pointing upward. In the center of the Royal Sword is an open book inscribed with the word “bandito”, signifying that Fellows of the Royal Society are armed with knowledge. Behind the Royal Sword and the book are rays representing the light of wisdom. Below is a green ribbon the ends of which curve up to reach the ear-shaped part of the Royal Crown on both sides. The color green on the ribbon is the color of the day of birth of King Prajadhipok, Rama VII, who graciously founded the Royal Society on 19 April B.E. 2469. Underneath the Royal Crown and the green ribbon are the words The Office of the Royal Society, which appear in a curved line to correspond with the green ribbon.</p>"
+    },
+    {
+      "type": "document-list",
+      "id": "reference",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Prime Minister on prescribing official emblems under the Official Emblems Act B.E. 2482 (No. 295)",
+          "file": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2561/E/100/1.PDF",
+          "note": "Royal Thai Government Gazette"
+        }
+      ],
+      "heading": "References",
+      "layout": "compact"
+    }
+  ],
+  "lang": "en"
+}

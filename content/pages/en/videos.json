@@ -1,0 +1,93 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "วิดีโอจากช่อง YouTube ของสำนักงานราชบัณฑิตยสภา (ชุดเดียวกับหน้าแรก) รูปย่อเก็บใน assets/images/orst/video — เพิ่มวิดีโอใหม่: ใส่ youtube (รหัสวิดีโอ) + image + title + tag",
+  "title": "Knowledge Videos",
+  "navKey": "knowledge",
+  "description": "Academic forums, training sessions and videos of the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Knowledge Videos",
+      "image": "assets/images/orst/news/data0005-00005462-960.jpg",
+      "lead": "Academic forums, training sessions and videos of the Office of the Royal Society. Click a video to watch it on this page.",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Knowledge Videos"
+        }
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "videos",
+      "columns": 3,
+      "ratio": "16:9",
+      "pageSize": 12,
+      "unit": "Clip",
+      "items": [
+        {
+          "youtube": "trzQRPLZ9Xw",
+          "image": "assets/images/orst/video/trzQRPLZ9Xw.jpg",
+          "alt": "Video thumbnail: Regional Words, Poetic Words: A Word Corpus for the Thai Language",
+          "title": "Regional Words, Poetic Words: A Word Corpus for the Thai Language",
+          "tag": "Academic forum"
+        },
+        {
+          "youtube": "eGVzoA2DxOQ",
+          "image": "assets/images/orst/video/eGVzoA2DxOQ.jpg",
+          "alt": "Video thumbnail: The Background of Ancient Script Font Sets and International Standards for Thai Script",
+          "title": "The Background of Ancient Script Font Sets and International Standards for Thai Script",
+          "tag": "Workshop, Part 1"
+        },
+        {
+          "youtube": "SylEqoN1B-c",
+          "image": "assets/images/orst/video/SylEqoN1B-c.jpg",
+          "alt": "Video thumbnail: Using Ancient Script Fonts in Thailand",
+          "title": "Using Ancient Script Fonts in Thailand",
+          "tag": "Workshop"
+        },
+        {
+          "youtube": "XSkbyFZfdZk",
+          "image": "assets/images/orst/video/XSkbyFZfdZk.jpg",
+          "alt": "Video thumbnail: The Alien Enemies Act: From John Adams to Donald Trump",
+          "title": "The Alien Enemies Act: From John Adams to Donald Trump",
+          "tag": "Academic articles"
+        },
+        {
+          "youtube": "okhBOJLB8VI",
+          "image": "assets/images/orst/video/okhBOJLB8VI.jpg",
+          "alt": "Video thumbnail: Evaluating and Developing Public Policy: The Case of the (Draft) Entertainment Complex Business Act",
+          "title": "Evaluating and Developing Public Policy: The Case of the (Draft) Entertainment Complex Business Act",
+          "tag": "Academic articles"
+        },
+        {
+          "youtube": "eKjspzNSnx0",
+          "image": "assets/images/orst/video/eKjspzNSnx0.jpg",
+          "alt": "Video thumbnail: Approaches to Solving the Problems of Children, Youth and Communities",
+          "title": "Approaches to Solving the Problems of Children, Youth and Communities",
+          "tag": "Video"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "Follow our new videos",
+      "body": "All videos of the Office of the Royal Society on YouTube",
+      "actions": [
+        {
+          "label": "Go to YouTube channel",
+          "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -2,13 +2,14 @@
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_book.asp?p=INFO-% (รูปย่อเก็บใน assets/images/orst/infographic ลิงก์ไปภาพเต็มบนเว็บเดิม) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
   "title": "อินโฟกราฟิก",
-  "navKey": "services",
+  "navKey": "knowledge",
   "description": "อินโฟกราฟิกความรู้ด้านภาษาไทยและศาสตร์ต่าง ๆ จากสำนักงานราชบัณฑิตยสภา",
-  "updatedAt": "2026-11-13",
+  "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
       "heading": "อินโฟกราฟิก",
+      "image": "assets/images/orst/news/data0005-00005374-960.jpg",
       "lead": "อินโฟกราฟิกความรู้ด้านภาษาไทยและศาสตร์ต่าง ๆ จากสำนักงานราชบัณฑิตยสภา",
       "breadcrumb": [
         {
@@ -16,8 +17,8 @@
           "href": "index.html"
         },
         {
-          "label": "บริการวิชาการ",
-          "href": "services.html"
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
         },
         {
           "label": "อินโฟกราฟิก"
@@ -847,7 +848,9 @@
         }
       ],
       "ratio": "1:1",
-      "fit": "contain"
+      "pageSize": 20,
+      "unit": "ภาพ"
     }
-  ]
+  ],
+  "updatedAt": "2026-11-13"
 }

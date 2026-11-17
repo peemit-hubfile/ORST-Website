@@ -4,13 +4,18 @@
   "title": "ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๕ รอบชิงชนะเล",
   "navKey": "news",
   "description": "ภาพประกอบ 2 ภาพ",
+  "sideNav": false,
   "updatedAt": "2022-03-17",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ข่าวกิจกรรม",
+      "variant": "article",
+      "tag": "ข่าวกิจกรรม",
+      "date": "2022-03-17",
       "heading": "ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๕ รอบชิงชนะเลิศ เพื่อเข้าร่วมแข่งขัน ในวันเสาร์ที่ ๒๖ มีนาคม พ.ศ. ๒๕๖๕ ดังแนบ",
-      "lead": "เผยแพร่เมื่อ 17 มีนาคม 2565",
+      "image": "assets/images/orst/news/data0002-00002523-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรั",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,47 +35,50 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0002-00002523-960.jpg",
-      "alt": "ภาพประกอบข่าว ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรั",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG"
-    },
-    {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (2 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
         {
           "image": "assets/images/orst/news/data0002-00002523-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
         },
         {
           "image": "assets/images/orst/news/data0002-00002524-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002524.PNG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002524.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
         }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวกิจกรรม",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "activity-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "activity-news.html"
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การจัดการประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๘",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68EGN1525066",
+          "category": "ประกาศ",
+          "publishedAt": "2025-05-07"
+        },
+        {
+          "title": "ประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๓ รอบชิงชนะเลิศ",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63JEJ2639056",
+          "category": "ข่าว",
+          "publishedAt": "2020-09-28"
+        },
+        {
+          "title": "ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศการประกวดแข่งขันคัดลายมือสำหรับเยาวชนประจำพุทธศักราช ๒๕๖๖",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66GCM0502063",
+          "category": "ประกาศ",
+          "publishedAt": "2023-07-03"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ผลการประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๘",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HAN1248053",
+          "category": "ประกาศ",
+          "publishedAt": "2025-08-01"
         }
       ]
     }

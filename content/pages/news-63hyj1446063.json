@@ -4,13 +4,18 @@
   "title": "รัฐมนตรีประจำสำนักนายกรัฐมนตรีตรวจเยี่ยมและให้นโยบายสำนักงานราชบัณฑิตยสภา",
   "navKey": "news",
   "description": "วันนี้ (๒๑ ส.ค. ๖๓) เวลา ๙.๐๐ น. นายอนุชา นาคาศัย รัฐมนตรีประจำสำนักนายกรัฐมนตรี เดินทางมายังสำนักงานราชัณฑิตยสภาเพื่อร่วมการประชุมร่วมการประชุมคณะอนุ",
+  "sideNav": false,
   "updatedAt": "2020-08-26",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ข่าวกิจกรรม",
+      "variant": "article",
+      "tag": "ข่าวกิจกรรม",
+      "date": "2020-08-26",
       "heading": "รัฐมนตรีประจำสำนักนายกรัฐมนตรีตรวจเยี่ยมและให้นโยบายสำนักงานราชบัณฑิตยสภา",
-      "lead": "เผยแพร่เมื่อ 26 สิงหาคม 2563",
+      "image": "assets/images/orst/news/data0001-00001961-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว รัฐมนตรีประจำสำนักนายกรัฐมนตรีตรวจเยี่ยมและให้นโยบายสำนักงานราชบัณฑิตยสภา",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001961.JPG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,17 +35,6 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0001-00001961-960.jpg",
-      "alt": "ภาพประกอบข่าว รัฐมนตรีประจำสำนักนายกรัฐมนตรีตรวจเยี่ยมและให้นโยบายสำนักงานราชบัณฑิตยสภา",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001961.JPG"
-    },
-    {
       "type": "rich-text",
       "id": "content",
       "paragraphs": [
@@ -50,84 +44,90 @@
       ]
     },
     {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (10 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
         {
           "image": "assets/images/orst/news/data0001-00001961-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001961.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001961.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
         },
         {
           "image": "assets/images/orst/news/data0001-00001962-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001962.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001962.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
         },
         {
           "image": "assets/images/orst/news/data0001-00001963-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 3",
-          "title": "ภาพที่ 3",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001963.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001963.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
         },
         {
           "image": "assets/images/orst/news/data0001-00001964-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 4",
-          "title": "ภาพที่ 4",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001964.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001964.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
         },
         {
           "image": "assets/images/orst/news/data0001-00001965-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 5",
-          "title": "ภาพที่ 5",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001965.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001965.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
         },
         {
           "image": "assets/images/orst/news/data0001-00001966-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 6",
-          "title": "ภาพที่ 6",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001966.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001966.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
         },
         {
           "image": "assets/images/orst/news/data0001-00001967-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 7",
-          "title": "ภาพที่ 7",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001967.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001967.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
         },
         {
           "image": "assets/images/orst/news/data0001-00001968-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 8",
-          "title": "ภาพที่ 8",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001968.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001968.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
         },
         {
           "image": "assets/images/orst/news/data0001-00001969-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 9",
-          "title": "ภาพที่ 9",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001969.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001969.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
         },
         {
           "image": "assets/images/orst/news/data0001-00001970-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 10",
-          "title": "ภาพที่ 10",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001970.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001970.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
         }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวกิจกรรม",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "activity-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "activity-news.html"
+          "title": "รัฐมนตรีประจำสำนักนายกรัฐมนตรีตรวจเยี่ยมสำนักงานราชบัณฑิตยสภา",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GVH3258097",
+          "category": "ข่าว",
+          "publishedAt": "2025-07-22"
+        },
+        {
+          "title": "รัฐมนตรีประจำสำนักนายกรัฐมนตรีและคณะ เดินทางมาตรวจเยี่ยมสำนักงานราชบัณฑิตยสภาพร้อมมอบนโยบาย",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0456091",
+          "category": "กิจกรรม",
+          "publishedAt": "2019-08-23"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาจัด “โครงการสร้างความรับรู้ความเข้าใจในเรื่องการใช้ภาษาไทยอย่างถูกต้องเหมาะสม” ณ จังหวัดอุดรธานีและหนองบัวลำภู ในโอกาสที่รัฐมนตรีประจำสำนักนายกรัฐมนตรี (นายสุวพันธุ์ ตันยุวรรธนะ) ตรวจเยี่ยมกองทุนหมู่บ้าน",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J5401016",
+          "category": "กิจกรรม",
+          "publishedAt": "2019-01-21"
+        },
+        {
+          "title": "รัฐมนตรีประจำสำนักนายกรัฐมนตรี เดินทางมายังสำนักงานราชบัณฑิตยสภาเพื่อพบและประชุมหารือเกี่ยวกับแนวทางการดำเนินงานของสำนักในราชบัณฑิิตยสภาที่จะช่วยสนับสนุนงานของรัฐบาล",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP1600013",
+          "category": "กิจกรรม",
+          "publishedAt": "2018-08-24"
         }
       ]
     }

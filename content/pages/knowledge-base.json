@@ -1,14 +1,16 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=28 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "คลังความรู้",
-  "navKey": "services",
+  "title": "เอกสารความรู้เผยแพร่",
+  "navKey": "knowledge",
   "description": "เอกสารความรู้เผยแพร่ของสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
   "updatedAt": "2026-11-13",
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "คลังความรู้",
+      "heading": "เอกสารความรู้เผยแพร่",
+      "image": "assets/images/orst/news/data0005-00005428-960.jpg",
       "lead": "เอกสารความรู้เผยแพร่ของสำนักงานราชบัณฑิตยสภา",
       "breadcrumb": [
         {
@@ -16,11 +18,11 @@
           "href": "index.html"
         },
         {
-          "label": "บริการวิชาการ",
-          "href": "services.html"
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
         },
         {
-          "label": "คลังความรู้"
+          "label": "เอกสารความรู้เผยแพร่"
         }
       ]
     },

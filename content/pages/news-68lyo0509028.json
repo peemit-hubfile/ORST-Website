@@ -4,13 +4,18 @@
   "title": "ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔\" และ",
   "navKey": "news",
   "description": "เมื่อวันที่ ๒๔ ธันวาคม ๒๕๖๘ เวลา ๙.๐๐ น. ณ ห้องราชดำเนิน โรงแรมรอยัลปริ้นเซส หลานหลวง กรุงเทพมหานคร ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นาย",
+  "sideNav": false,
   "updatedAt": "2025-12-25",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "อบรมและเสวนา",
+      "variant": "article",
+      "tag": "อบรมและเสวนา",
+      "date": "2025-12-25",
       "heading": "ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔\" และการเสวนาระดมความคิดเรื่อง ยุทธศาสตร์ราชบัณฑิตยสภา ๕ ปี ครั้งที่ ๓ เนื่องในโอกาส ๑๐๐ ปีราชบัณฑิตยสภา",
-      "lead": "เผยแพร่เมื่อ 25 ธันวาคม 2568",
+      "image": "assets/images/orst/news/data0005-00005024-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนี",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,17 +35,6 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0005-00005024-960.jpg",
-      "alt": "ภาพประกอบข่าว ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนี",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG"
-    },
-    {
       "type": "rich-text",
       "id": "content",
       "paragraphs": [
@@ -50,144 +44,141 @@
       ]
     },
     {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (20 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
         {
           "image": "assets/images/orst/news/data0005-00005024-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
         },
         {
           "image": "assets/images/orst/news/data0005-00005026-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005026.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005026.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
         },
         {
           "image": "assets/images/orst/news/data0005-00005027-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 3",
-          "title": "ภาพที่ 3",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005027.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005027.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
         },
         {
           "image": "assets/images/orst/news/data0005-00005028-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 4",
-          "title": "ภาพที่ 4",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005028.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005028.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
         },
         {
           "image": "assets/images/orst/news/data0005-00005029-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 5",
-          "title": "ภาพที่ 5",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005029.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005029.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
         },
         {
           "image": "assets/images/orst/news/data0005-00005030-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 6",
-          "title": "ภาพที่ 6",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005030.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005030.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
         },
         {
           "image": "assets/images/orst/news/data0005-00005031-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 7",
-          "title": "ภาพที่ 7",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005031.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005031.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
         },
         {
           "image": "assets/images/orst/news/data0005-00005032-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 8",
-          "title": "ภาพที่ 8",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005032.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005032.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
         },
         {
           "image": "assets/images/orst/news/data0005-00005033-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 9",
-          "title": "ภาพที่ 9",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005033.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005033.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
         },
         {
           "image": "assets/images/orst/news/data0005-00005034-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 10",
-          "title": "ภาพที่ 10",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005034.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005034.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
         },
         {
           "image": "assets/images/orst/news/data0005-00005035-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 11",
-          "title": "ภาพที่ 11",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005035.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005035.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11"
         },
         {
           "image": "assets/images/orst/news/data0005-00005036-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 12",
-          "title": "ภาพที่ 12",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005036.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005036.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12"
         },
         {
           "image": "assets/images/orst/news/data0005-00005037-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 13",
-          "title": "ภาพที่ 13",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005037.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005037.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 13"
         },
         {
           "image": "assets/images/orst/news/data0005-00005038-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 14",
-          "title": "ภาพที่ 14",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005038.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005038.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 14"
         },
         {
           "image": "assets/images/orst/news/data0005-00005039-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 15",
-          "title": "ภาพที่ 15",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005039.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005039.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 15"
         },
         {
           "image": "assets/images/orst/news/data0005-00005040-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 16",
-          "title": "ภาพที่ 16",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005040.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005040.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 16"
         },
         {
           "image": "assets/images/orst/news/data0005-00005041-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 17",
-          "title": "ภาพที่ 17",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005041.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005041.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 17"
         },
         {
           "image": "assets/images/orst/news/data0005-00005042-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 18",
-          "title": "ภาพที่ 18",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005042.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005042.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 18"
         },
         {
           "image": "assets/images/orst/news/data0005-00005043-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 19",
-          "title": "ภาพที่ 19",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005043.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005043.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 19"
         },
         {
           "image": "assets/images/orst/news/data0005-00005044-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 20",
-          "title": "ภาพที่ 20",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005044.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005044.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 20"
         }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "general-news.html"
+          "title": "การเสวนาวิชาการเรื่อง “ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๒”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66HWO2601063",
+          "category": "ข่าว",
+          "publishedAt": "2023-08-23"
+        },
+        {
+          "title": "ราชบัณฑิตยสภาจัดการเสวนาทางวิชาการเรื่อง “ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๑” เชิดชูเกียรติของราชบัณฑิตยสภาที่ทำคุณประโยชน์แก่ชาติ",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HKN5949034",
+          "category": "ข่าว",
+          "publishedAt": "2022-08-11"
+        },
+        {
+          "title": "บทความเรื่อง \"ราชบัณฑิตยสภา ราชบัณฑิตยสถาน และสำนักงานราชบัณฑิตยสภา\"",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65G%24K5800003",
+          "category": "ข่าว",
+          "publishedAt": "2022-07-29"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
+          "href": "news-69kbj5538066.html",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-11-02"
         }
       ]
     }

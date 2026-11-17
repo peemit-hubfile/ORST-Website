@@ -1,0 +1,83 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HQI2156084 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "What is the answer to treating knee osteoarthritis? Find out in a lecture under the Royal Society of Thailand Knowledge for Society project, fiscal year",
+  "navKey": "news",
+  "description": "Topic: “Facts and Beliefs in the Treatment of Knee Osteoarthritis” by Professor Dr. Kirati Charoenchonlawanit, M.D.",
+  "sideNav": false,
+  "updatedAt": "2025-08-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Training and seminars",
+      "date": "2025-08-17",
+      "heading": "What is the answer to treating knee osteoarthritis? Find out at a lecture in the Royal Society Brings Knowledge to Society Project, fiscal year 2025, No. 9",
+      "image": "assets/images/orst/news/data0004-00004677-960.jpg",
+      "imageAlt": "News image: What is the answer to treating knee osteoarthritis? Find out in a lecture under the Royal Society",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0004/00004677.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General Press Releases",
+          "href": "general-news.html"
+        },
+        {
+          "label": "What is the answer to treating knee osteoarthritis? Find out at a lecture in the Royal Society Brings Knowledge to Society Project, fiscal year 2025, No. 9"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "Topic: “Facts and Beliefs in the Treatment of Knee Osteoarthritis” by Professor Dr. Kirati Charoenchonlawanit, M.D.",
+        "Associate Fellow, Medicine and Dentistry, Orthopedic Surgery, Academy of Science",
+        "Wednesday 27 August 2025, 10:00 a.m. - 12:00 p.m.",
+        "Watch via the Zoom Cloud Meeting electronic conferencing system",
+        "Meeting ID: 288 966 3711"
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Royal Society Brings Knowledge to Society Project, fiscal year 2026, No. 3",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LDS0201075",
+          "category": "News",
+          "publishedAt": "2025-12-04"
+        },
+        {
+          "title": "Invitation to the Royal Society Brings Knowledge to Society Project, fiscal year 2026, No. 6",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69BII5557069",
+          "category": "News",
+          "publishedAt": "2026-02-09"
+        },
+        {
+          "title": "Article: “The Royal Society of Thailand, the Royal Institute and the Office of the Royal Society”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65G%24K5800003",
+          "category": "News",
+          "publishedAt": "2022-07-29"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "href": "news-69kbj5538066.html",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "Announcement",
+          "publishedAt": "2026-11-02"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

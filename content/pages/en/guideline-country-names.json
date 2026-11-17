@@ -1,0 +1,64 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Country and Capital Names",
+  "navKey": "knowledge",
+  "description": "Country and capital names — Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022) · Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022) · Link to the announcement in the Royal Gazette",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Country and Capital Names",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society — 3 topics",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Country and Capital Names"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": true,
+      "sections": [
+        {
+          "heading": "Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022)",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004928.PDF\" data-doc-title=\"ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)\" hidden>View document<span class=\"sr-only\"> Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004928.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022) (opens in a new tab)</span></a></span></div>"
+        },
+        {
+          "heading": "Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022)",
+          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004929.PDF\" data-doc-title=\"ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)\" hidden>View document<span class=\"sr-only\"> Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004929.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022) (opens in a new tab)</span></a></span></div>"
+        },
+        {
+          "heading": "Link to the announcement in the Royal Gazette",
+          "html": "<p>Following the Office of the Royal Society's announcement on the names of countries, territories, administrative areas and capitals, dated 29 June 2022, and its preparation of an announcement of the Office of the Prime Minister, General Prawit Wongsuwon, Deputy Prime Minister acting on behalf of the Prime Minister, signed the Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals, which was published in the Royal Gazette on 1 September 2022.<br></p><br><p><a href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022)</a></p><br><p><a href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022)</a><br></p><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Link to the announcement in the Royal Gazette (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF\" data-doc-title=\"ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (1)\" hidden>View document<span class=\"sr-only\"> Link to the announcement in the Royal Gazette (1)</span></button><a class=\"doc-btn\" href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Link to the announcement in the Royal Gazette (1) (opens in a new tab)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Link to the announcement in the Royal Gazette (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF\" data-doc-title=\"ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (2)\" hidden>View document<span class=\"sr-only\"> Link to the announcement in the Royal Gazette (2)</span></button><a class=\"doc-btn\" href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Link to the announcement in the Royal Gazette (2) (opens in a new tab)</span></a></span></div>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

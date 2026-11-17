@@ -1,0 +1,55 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-ORGCHART (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Organizational structure and divisions",
+  "navKey": "about",
+  "description": "Organization chart and divisions of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Organizational structure and divisions",
+      "lead": "Organization chart and divisions of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About us",
+          "href": "about.html"
+        },
+        {
+          "label": "Organizational structure and divisions"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "divisions",
+      "toc": false,
+      "sections": [
+        {
+          "heading": "Organizational divisions",
+          "list": null,
+          "paragraphs": []
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "chart",
+      "items": [
+        {
+          "title": "Organization chart, 2021",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF",
+          "fileSize": 584921
+        }
+      ],
+      "heading": "Organization chart",
+      "variant": "alt",
+      "layout": "compact"
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,358 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=23 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Academic lectures",
+  "navKey": "news",
+  "description": "Academic lectures by Fellows of the Royal Society and experts",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Academic lectures",
+      "lead": "Academic lectures by Fellows of the Royal Society and experts",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Academic lectures"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Restoring Thai Apple Snails Project",
+          "publishedAt": "2021-09-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64IIM0918072%24%400001"
+        },
+        {
+          "title": "Hydrogen Gas Production from Wastewater Using Non-Metal-Doped Titanium Dioxide Photocatalysts",
+          "publishedAt": "2021-09-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64IIM3055022%24%400001"
+        },
+        {
+          "title": "Environmental Pollution Increases the Risk of Osteoporosis",
+          "publishedAt": "2021-09-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64IIM3651034%24%400001"
+        },
+        {
+          "title": "The National Primate Research Center: An Essential Foundation for Health and Medical Research",
+          "publishedAt": "2021-09-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64IIM4353072%24%400001"
+        },
+        {
+          "title": "Protection against UV Radiation Hazards",
+          "publishedAt": "2021-09-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64IHP1822028%24%400001"
+        },
+        {
+          "title": "COVID-19 Vaccines: Experiences and Studies in Thailand",
+          "publishedAt": "2021-09-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64IHP2552028%24%400001"
+        },
+        {
+          "title": "Think Tank Project, Academy of Science, fiscal year 2021",
+          "publishedAt": "2021-08-18",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64HRO2116053%24%400001"
+        },
+        {
+          "title": "Academic Conference on Interdisciplinary Day, No. 11",
+          "publishedAt": "2021-08-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64HQN1919081%24%400001"
+        },
+        {
+          "title": "Human Happiness in Living the New Normal Way of Life",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64DWN2728005%24%400001"
+        },
+        {
+          "title": "Developing Good Mental Health in the New Normal",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GSU2826044%24%400001"
+        },
+        {
+          "title": "Happiness of Older Adults in the New Normal Era",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GSU5406006%24%400001"
+        },
+        {
+          "title": "Virtue Leads Life to Happiness",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GSV2842094%24%400001"
+        },
+        {
+          "title": "Happiness in the New Normal Era through the Sufficiency Economy Philosophy",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GSW3628013%24%400001"
+        },
+        {
+          "title": "Quality Children and Youth in the New Normal",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GSW5131044%24%400001"
+        },
+        {
+          "title": "Health Literacy for a Happy Life",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GSW5934094%24%400001"
+        },
+        {
+          "title": "Ageing with Quality of Life and Happiness",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GT00539001%24%400001"
+        },
+        {
+          "title": "Living with Quality for a Happy Life in the New Normal Era",
+          "publishedAt": "2021-04-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F64GT01119002%24%400001"
+        },
+        {
+          "title": "Welfare Economics and a Case Study of Older Persons in Thailand",
+          "publishedAt": "2019-12-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63EHM1944072%24%400001"
+        },
+        {
+          "title": "Psychology of Cognitive Dissonance",
+          "publishedAt": "2019-12-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63EHM2530034%24%400001"
+        },
+        {
+          "title": "Bright Families Free from Violence",
+          "publishedAt": "2019-11-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63EHM2805038%24%400001"
+        },
+        {
+          "title": "Behavior Modification for Family Well-being",
+          "publishedAt": "2019-11-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLN4124075%24%400001"
+        },
+        {
+          "title": "“Well-being”: The Hope of Families in Thai Society. Associate Professor Dr. Chittinan Dechakup, Member of the Committee on the Study and Development of Psychological and Social Knowledge",
+          "publishedAt": "2019-11-06",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLO0521094%24%400001"
+        },
+        {
+          "title": "Putting Thailand’s National Strategy into Action",
+          "publishedAt": "2019-08-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLO0735091%24%400001"
+        },
+        {
+          "title": "Inclusive Education for Social Justice",
+          "publishedAt": "2019-06-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLO0916066%24%400001"
+        },
+        {
+          "title": "Academic articles",
+          "publishedAt": "2019-06-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLO1049056%24%400001"
+        },
+        {
+          "title": "Academic articles",
+          "publishedAt": "2019-05-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLO5717034%24%400001"
+        },
+        {
+          "title": "Academic articles",
+          "publishedAt": "2019-05-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLO5926097%24%400001"
+        },
+        {
+          "publishedAt": "2019-05-13"
+        },
+        {
+          "title": "Academic articles",
+          "publishedAt": "2019-05-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP0559069%24%400001"
+        },
+        {
+          "title": "Academic articles",
+          "publishedAt": "2019-05-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP0843094%24%400001"
+        },
+        {
+          "title": "Stop Arguing Whether Thailand Is Number One",
+          "publishedAt": "2019-04-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP1139066%24%400001"
+        },
+        {
+          "title": "The King’s Philosophy for Reducing Inequality",
+          "publishedAt": "2019-04-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP1323091%24%400001"
+        },
+        {
+          "title": "Selected Topics of Helping Behavior and Prosocial Behavior",
+          "publishedAt": "2019-04-11",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP1540003%24%400001"
+        },
+        {
+          "title": "Passenger Transport Services by Private Cars via Applications",
+          "publishedAt": "2019-03-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP2400028%24%400001"
+        },
+        {
+          "title": "Book of the Traveling Royal Society Fellows Academic Conference 2018",
+          "publishedAt": "2018-11-14"
+        },
+        {
+          "title": "Managing the Employment of Foreign Workers — Professor Sudasiri Wasawong, Associate Fellow, Law, Social Law, Academy of Moral and Political Sciences, Royal Society of Thailand — Wednesday, 20 September 2018",
+          "publishedAt": "2018-09-21",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP3150078%24%400001"
+        },
+        {
+          "title": "Creating an Ethical Climate in Organizations: A Practical Ethics Perspective — Associate Professor Siwali Sirilai, Fellow of the Royal Society, Philosophy, Axiology; Ethics, Academy of Moral and Political Sciences, Royal Society of Thailand — Wednesday, 4 July 2018",
+          "publishedAt": "2018-08-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP3335028%24%400001"
+        },
+        {
+          "title": "Civil Liability of Importers of Pacemakers and Defibrillators",
+          "publishedAt": "2018-06-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP3643003%24%400001"
+        },
+        {
+          "title": "Summary of the academic seminar on Sukhothai Studies and Lanna Studies, held on 28 March 2018 at the Royal Princess Larn Luang Hotel, Bangkok, with about 130 participants, including Fellows, Associate Fellows, academic committee members, civil servants, academics and the media. The Office of the Royal Society organized the seminar to disseminate knowledge on Sukhothai and Lanna studies and to examine progress and changes over the past decade, and also to pay tribute to Professor Dr. Prasoet na Nakhon, Fellow of the Royal Society in History, Archaeology, a key figure in the academic fields of history, archaeology and literature, on the occasion of his 99th birthday on 21 March 2018",
+          "publishedAt": "2018-05-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP3947059%24%400001"
+        },
+        {
+          "title": "Summary of the Traveling Royal Society Fellows Academic Conference 2018",
+          "publishedAt": "2018-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP4123097%24%400001"
+        },
+        {
+          "title": "Professor Dr. Prasoet Na Nakhon and the Advancement of Sukhothai Historical Studies",
+          "publishedAt": "2018-03-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FLP4306009%24%400001"
+        },
+        {
+          "title": "On Wednesday, 21 February 2018 at 1:30 p.m., at the Raphiphat Meeting Room, Office of the President, 3rd floor, Rajamangala University of Technology Phra Nakhon (Thewet Campus), the Academy of Science held Meeting No. 4/2018, with 3 academic lectures: 1. “Factors Influencing Decision-Making” by Professor Dr. Suphachai Pathumnakun, Associate Fellow; 2. “Research in AI and NLP” by Professor Dr. Thanarak Thiramankhong, Associate Fellow; and 3. “A Thailand's Success Case in Breeding to Accelerate Domestication of Jatropha” by Professor Emeritus Dr. Phirasak Sriniwet, Associate Fellow",
+          "publishedAt": "2018-02-22"
+        },
+        {
+          "title": "On Wednesday, 21 February 2018, at the Raphiphat Meeting Room, Office of the President, 3rd floor, Rajamangala University of Technology Phra Nakhon (Thewet Campus), the Academy of Moral and Political Sciences held Meeting No. 4/2018, at which Professor Kirati Bunchuea, Fellow of the Royal Society, gave an academic lecture on The King's Philosophy",
+          "publishedAt": "2018-02-22"
+        },
+        {
+          "title": "Today (7 Feb 2018), in Meeting Rooms 401–403, the Academy of Science held Meeting No. 3/2018, chaired by Professor Emeritus Dr. Suraphon Itsarakraisin, M.D., Chair of the Academy of Science. The meeting included an Academy of Science dialogue on “How Can Scientists Help the State Reform Thai Education?” and an academic and research lecture by Professor Emeritus Prida Wibunsawat, Fellow of the Royal Society, on “Liberal Arts and Sciences: The Foundation of Higher Education”. A summary of the lecture will be published later",
+          "publishedAt": "2018-02-07"
+        },
+        {
+          "title": "Today (7 Feb 2018), in Meeting Rooms 501–503, the Academy of Moral and Political Sciences held Meeting No. 3/2018, chaired by Professor Dr. Sombun Suksamran, Chair of the Academy of Moral and Political Sciences. The meeting summarized preliminary proposals from the sub-meetings of the working group compiling knowledge for national reform of the Academy of Moral and Political Sciences held on Wednesday, 3 and 17 January 2018. It also considered the Royal Society of Thailand Regulation on Allowances for Fellows and Associate Fellows, B.E. 2561 (2018), and heard an academic and research lecture by Professor Kirati Bunchuea, Fellow of the Royal Society, on “The Philosophy of Good Governance”. A summary of the lecture will be published later",
+          "publishedAt": "2018-02-07"
+        },
+        {
+          "title": "The Way of the Netizen",
+          "publishedAt": "2018-01-16",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0020000302002001%2F63FOK1710019%24%400001"
+        },
+        {
+          "title": "Associate Professor Wanida Khamkhiao",
+          "publishedAt": "2018-01-16"
+        },
+        {
+          "title": "Professor Sanchai Suwangbut",
+          "publishedAt": "2018-01-16"
+        },
+        {
+          "title": "Strategy for Reforming the Communication System for Citizens in the Digital Age",
+          "publishedAt": "2018-01-16"
+        },
+        {
+          "title": "On Thursday, 21 December 2017, at Grand Ballroom 1, Maneechan Resort, Chanthaburi Province, at the 13th seminar on the National Memory of the World Register, Mr. Kritsada Bunyasamit, Associate Fellow, Academy of Moral and Political Sciences, and Chair of the Committee for the Revision and Study of Ancient Thai Law, Office of the Royal Society, proposed registering the Three Seals Law as national documentary heritage and Memory of the World documentary heritage in honor of His Majesty King Buddha Yodfa Chulaloke the Great, with Professor Sawaeng Bunchaloemwiphat as commentator. The Three Seals Law is a compilation of Thai laws from the Ayutthaya period, which King Rama I ordered to be categorized and revised; it has been in use for over 500 years and shows the historical evolution of Thailand in politics, government, economy, society, arts and culture. As the only existing set, it is irreplaceable and therefore important at both national and global levels",
+          "publishedAt": "2017-12-27"
+        },
+        {
+          "title": "Family Relationships and Developing the Effectiveness of Members of Society",
+          "publishedAt": "2017-12-18"
+        },
+        {
+          "title": "On Tuesday, 12 December 2017 at 1:30 p.m., in Meeting Rooms 301–303, 4th floor, Office of the Royal Society, the Academy of Arts held Meeting No. 23/2017, with 2 academic lectures by Fellows and Associate Fellows: 1. Japanese Noh Theater, by Professor Dr. Suraphon Wirunrak, Fellow of the Royal Society; and 2. Art from the Land of Execution, by Professor Wibun Lisuwan, Fellow of the Royal Society",
+          "publishedAt": "2017-12-12"
+        },
+        {
+          "title": "On Wednesday, 6 December 2017 at 1:30 p.m., in Meeting Rooms 401–403, 4th floor, Office of the Royal Society, the Academy of Science held Meeting No. 23/2017, with 3 academic lectures by Fellows and Associate Fellows: 1. Music Therapy for Slowing Memory Loss, by Professor Dr. Prida Wibunsawat, Fellow of the Royal Society, and Professor Dr. Sakkamon Thephatsadin na Ayutthaya, Associate Fellow; 2. Environmentally Friendly Cement Composites and Concrete, by Professor Dr. Parinya Chindaprasoet, Associate Fellow; and 3. Accreditation of Engineering Education Quality, by Professor Dr. Paramet Chutima, Associate Fellow",
+          "publishedAt": "2017-12-06"
+        },
+        {
+          "title": "An Ageing Society… Thailand's Challenge",
+          "publishedAt": "2017-12-06"
+        },
+        {
+          "title": "Management of Foreign Workers",
+          "publishedAt": "2017-12-06"
+        },
+        {
+          "title": "Social Psychology: Meaning, Scope and Research on Social Facilitation and Social Loafing",
+          "publishedAt": "2017-12-06"
+        },
+        {
+          "title": "On Wednesday, 6 December 2017, in Meeting Rooms 501–502, 5th floor, Office of the Royal Society, the Academy of Moral and Political Sciences held Meeting No. 23/2017, with 2 academic lectures by Fellows and Associate Fellows: Rationalism and Thai Beliefs, by Professor Dr. Sit Butin, Associate Fellow; and the Rajaprajanugroh Foundation under Royal Patronage and Social Welfare Work, by Mrs. Sunan Thaila, Associate Fellow",
+          "publishedAt": "2017-12-06"
+        },
+        {
+          "title": "๏ Tuesday, 10 January 2017",
+          "publishedAt": "2017-09-13"
+        },
+        {
+          "title": "๏ Wednesday, 4 January 2017",
+          "publishedAt": "2017-09-13"
+        },
+        {
+          "title": "๏ Wednesday, 4 January 2017",
+          "publishedAt": "2017-09-13"
+        },
+        {
+          "title": "๏ Tuesday, 6 December 2016",
+          "publishedAt": "2017-09-13"
+        },
+        {
+          "title": "๏ Wednesday, 7 December 2016",
+          "publishedAt": "2017-09-13"
+        },
+        {
+          "title": "๏ Wednesday, 7 December 2016",
+          "publishedAt": "2017-09-13"
+        },
+        {
+          "title": "๏ Tuesday, 1 November 2016",
+          "publishedAt": "2017-09-12"
+        },
+        {
+          "title": "๏ Wednesday, 2 November 2016",
+          "publishedAt": "2017-09-12"
+        },
+        {
+          "title": "๏ Wednesday, 2 November 2016",
+          "publishedAt": "2017-09-12"
+        },
+        {
+          "title": "๏ Tuesday, 4 October 2016",
+          "publishedAt": "2017-09-12"
+        },
+        {
+          "title": "๏ Wednesday, 5 October 2016",
+          "publishedAt": "2017-09-12"
+        },
+        {
+          "title": "๏ Wednesday, 5 October 2016",
+          "publishedAt": "2017-09-12"
+        },
+        {
+          "title": "Today (1 Mar 2017) at 9:30 a.m., in the 5th-floor meeting room of the Office of the Royal Society, the Academy of Moral and Political Sciences held Meeting No. 5/2017, at which Fellows and Associate Fellows presented their research to the Academy and various important matters were considered. The academic lecture on this occasion was on President Xi Jinping's new political theory under the new normal and strict rule of law, by Mr. Sa-nguan Liumanomon, Associate Fellow. The meeting also elected a new Chair and Secretary of the Academy to replace those whose terms were ending",
+          "publishedAt": "2017-03-01"
+        },
+        {
+          "title": "Academic forum: “Rising Sea Levels: Will Parts of Thailand Really Be Underwater from 2020?” Speakers: 1. Associate Professor Dr. Seri Supharathit (Governor of the Provincial Waterworks Authority) 2. Professor Dr. Thanawat Charuphongsakun (Associate Fellow, Academy of Science) 3. Associate Professor Dr. Sitanon Chetsadaphiphat (expert in climate change economics). Moderator: Professor Dr. Worasak Kanoknukunchai (Fellow of the Royal Society, Academy of Science). Meeting Rooms 401–403, 4th floor, Office of the Royal Society, Wednesday, 15 February 2017, 1:30–3:30 p.m.",
+          "publishedAt": "2017-02-22"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

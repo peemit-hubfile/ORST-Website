@@ -950,8 +950,27 @@ function initReveal() { const items = qsa('.reveal'); if (!('IntersectionObserve
 function initMediaPlaylist() {
   const img = qs('[data-mm-feature-img]');
   const title = qs('[data-mm-feature-title]');
+  const kind = qs('[data-mm-feature-kind]');
+  const play = qs('[data-mm-play]');
+  const link = qs('[data-mm-feature-link]');
   const items = qsa('.mm-item');
   if (!img || !title || !items.length) return;
+  const watch = id => `https://www.youtube.com/watch?v=${id}`;
+
+  // กดภาพวิดีโอเด่น -> เล่นในหน้า (โหลด iframe ของ YouTube เฉพาะตอนกด ไม่ถ่วงการโหลดหน้า)
+  // กด Ctrl/Cmd/Shift หรือคลิกกลาง -> ปล่อยให้เปิด YouTube ในแท็บใหม่ตามปกติ
+  play?.addEventListener('click', e => {
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    const frame = document.createElement('iframe');
+    frame.className = 'mm-frame';
+    frame.src = `https://www.youtube-nocookie.com/embed/${play.dataset.mmId}?autoplay=1&rel=0`;
+    frame.title = title.textContent;
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    frame.allowFullscreen = true;
+    play.replaceWith(frame);
+    frame.focus();
+  });
 
   items.forEach(item => item.addEventListener('click', () => {
     if (item.classList.contains('is-active')) return;
@@ -960,9 +979,19 @@ function initMediaPlaylist() {
       other.classList.toggle('is-active', active);
       other.setAttribute('aria-pressed', String(active));
     });
+    const { mmId: id, mmTitle: t, mmKind: k, mmSrc: src } = item.dataset;
+    // ถ้ากำลังเล่นวิดีโอเดิมอยู่ -> หยุดและกลับเป็นภาพปก
+    qs('.mm-frame')?.replaceWith(play);
     const swap = () => {
-      img.src = item.dataset.mmSrc;
-      title.textContent = item.dataset.mmTitle;
+      img.src = src;
+      title.textContent = t;
+      if (kind) kind.textContent = k || '';
+      if (play) {
+        play.href = watch(id);
+        play.dataset.mmId = id;
+        play.setAttribute('aria-label', `เล่นวิดีโอ: ${t}`);
+      }
+      if (link) link.href = watch(id);
       img.classList.remove('is-swapping');
     };
     // จอแคบ: เพลย์ลิสต์อยู่ใต้วิดีโอเด่น — เลื่อนให้เห็นวิดีโอที่เพิ่งเลือก
@@ -975,66 +1004,176 @@ function initMediaPlaylist() {
   }));
 }
 
-// ปฏิทินกิจกรรม
-// - รายการกิจกรรมกดเพื่อเปิด/ปิดรายละเอียด (เปิดได้ทีละรายการ, รายการแรกเปิดไว้ตั้งแต่ต้น)
-// - กดวันที่มีกิจกรรมในปฏิทิน -> เปิดรายละเอียดของกิจกรรมวันนั้น
-// - "เพิ่มลงปฏิทินของฉัน" -> ดาวน์โหลดไฟล์ .ics (เปิดได้กับ Google/Apple/Outlook Calendar)
-function initEventCalendar() {
-  const days = qsa('[data-cal-event]');
-  const rows = qsa('.cal-agenda .cal-event[aria-controls]');
-  if (!rows.length) return;
+// ปฏิทินกิจกรรม — สร้างจาก content/events.json (ข้อมูลจริงจาก Google Calendar ของหน่วยงานที่เว็บเดิมฝังไว้)
+// - ปุ่ม ‹ › เปลี่ยนเดือน: ตั้งแต่เดือนแรกที่มีกิจกรรม ถึงเดือนปัจจุบัน (หรือเดือนสุดท้ายที่มีกิจกรรมถ้าเลยไปแล้ว)
+// - เปิดหน้า: เดือนปัจจุบันถ้ามีกิจกรรม ไม่งั้นเดือนถัดไปที่มีกิจกรรม ไม่งั้นเดือนล่าสุดที่มีกิจกรรม
+// - กิจกรรมหลายวัน: ทำเครื่องหมายทุกวันในช่วง
+// - กดวันที่มีกิจกรรม -> เปิดรายละเอียดกิจกรรมของวันนั้นในรายการ
+// - "เพิ่มลงปฏิทินของฉัน" -> ดาวน์โหลดไฟล์ .ics แบบทั้งวัน (เปิดได้กับ Google/Apple/Outlook Calendar)
+// โหลดไม่สำเร็จ = คงลิงก์ไปปฏิทินของเว็บเดิมที่อยู่ใน HTML ไว้
+const TH_MONTHS = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+const TH_MONTHS_SHORT = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+const TH_DAYS = ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'];
+const TH_DAYS_SHORT = ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'];
 
+async function initEventCalendar() {
+  const card = qs('[data-cal-src]');
+  if (!card) return;
+  const grid = qs('[data-cal-grid]', card);
+  const list = qs('[data-cal-list]', card);
+  const monthEl = qs('[data-cal-month]', card);
+  const countEl = qs('[data-cal-count]', card);
+  const prev = qs('[data-cal-prev]', card);
+  const next = qs('[data-cal-next]', card);
+
+  let events = [];
+  try {
+    events = (window.orstI18n ? (await window.orstI18n.fetchJSON(card.dataset.calSrc)).data : await (await fetch(card.dataset.calSrc)).json()).events || [];   // ภาษาอังกฤษ: content/en/events.json
+  } catch { /* คงลิงก์สำรองใน HTML */ }
+  if (!events.length) { prev.hidden = true; next.hidden = true; return; }
+
+  const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const pad = n => String(n).padStart(2, '0');
+  const parse = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+  const dayKey = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const monthIdx = d => d.getFullYear() * 12 + d.getMonth();
+  const endOf = ev => parse(ev.end || ev.start);
+
+  const byDay = new Map();
+  events.forEach(ev => {
+    for (let d = parse(ev.start); d <= endOf(ev); d.setDate(d.getDate() + 1)) {
+      const k = dayKey(d);
+      if (!byDay.has(k)) byDay.set(k, []);
+      byDay.get(k).push(ev);
+    }
+  });
+
+  const today = new Date();
+  const months = [...new Set(events.map(ev => monthIdx(parse(ev.start))))].sort((a, b) => a - b);
+  const minM = months[0];
+  const maxM = Math.max(months[months.length - 1], monthIdx(today));
+  let cur = months.includes(monthIdx(today)) ? monthIdx(today)
+    : (months.find(m => m > monthIdx(today)) ?? months[months.length - 1]);
+
+  const dateText = ev => {
+    const s = parse(ev.start), e = endOf(ev), y = s.getFullYear() + 543;
+    if (+s === +e) return `วัน${TH_DAYS[s.getDay()]}ที่ ${s.getDate()} ${TH_MONTHS[s.getMonth()]} ${y}`;
+    if (s.getMonth() === e.getMonth()) return `${s.getDate()}–${e.getDate()} ${TH_MONTHS[s.getMonth()]} ${y}`;
+    return `${s.getDate()} ${TH_MONTHS_SHORT[s.getMonth()]} – ${e.getDate()} ${TH_MONTHS_SHORT[e.getMonth()]} ${e.getFullYear() + 543}`;
+  };
+  const svgCal = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>';
+  const svgPin = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>';
+  const item = ev => {
+    const s = parse(ev.start);
+    return `<li>
+      <button type="button" class="cal-event" id="${esc(ev.id)}" aria-expanded="false" aria-controls="${esc(ev.id)}-detail">
+        <span class="cal-event-date"><small>${TH_DAYS_SHORT[s.getDay()]}</small><b>${s.getDate()}</b><small>${TH_MONTHS_SHORT[s.getMonth()]}</small></span>
+        <span class="cal-event-body">
+          <strong>${esc(ev.title)}</strong>
+          <span class="cal-event-meta"><span><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg>${esc(ev.unit || 'สำนักงานราชบัณฑิตยสภา')}</span></span>
+        </span>
+        <span class="cal-event-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span>
+      </button>
+      <div class="cal-event-detail" id="${esc(ev.id)}-detail" hidden>
+        <ul class="cal-detail-meta">
+          <li>${svgCal}${dateText(ev)}</li>
+          ${ev.location ? `<li>${svgPin}${esc(ev.location)}</li>` : ''}
+        </ul>
+        <div class="cal-detail-actions">
+          <button type="button" class="cal-detail-ics" data-cal-ics="${esc(ev.id)}">เพิ่มลงปฏิทินของฉัน</button>
+        </div>
+      </div>
+    </li>`;
+  };
+
+  let rows = [];
   const setOpen = (row, open) => {
-    const detail = qs(`#${row.getAttribute('aria-controls')}`);
     row.setAttribute('aria-expanded', String(open));
     row.classList.toggle('is-selected', open);
+    const detail = qs(`#${CSS.escape(row.getAttribute('aria-controls'))}`);
     if (detail) detail.hidden = !open;
-    days.forEach(d => { if (d.dataset.calEvent === row.id) d.classList.toggle('is-selected', open); });
   };
-  const openOnly = row => rows.forEach(r => setOpen(r, r === row));
+  const markDays = ev => qsa('[data-cal-day]', grid).forEach(d => d.classList.toggle('is-selected',
+    !!ev && d.dataset.calDay >= ev.start && d.dataset.calDay <= (ev.end || ev.start)));
+  const openOnly = row => {
+    rows.forEach(r => setOpen(r, r === row));
+    markDays(row ? events.find(e => e.id === row.id) : null);
+  };
 
-  rows.forEach(row => row.addEventListener('click', () => {
-    if (row.getAttribute('aria-expanded') === 'true') setOpen(row, false);
-    else openOnly(row);
-  }));
+  const render = () => {
+    const y = Math.floor(cur / 12), m = cur % 12;
+    const first = new Date(y, m, 1), days = new Date(y, m + 1, 0).getDate();
+    const inMonth = events.filter(ev => monthIdx(parse(ev.start)) <= cur && cur <= monthIdx(endOf(ev)));
 
-  days.forEach(day => day.addEventListener('click', () => {
-    const row = qs(`#${day.dataset.calEvent}`);
-    if (!row) return;
-    openOnly(row);
-    row.focus({ preventScroll: true });
-    row.scrollIntoView({ block: 'nearest', behavior: reduce() ? 'auto' : 'smooth' });
-  }));
+    monthEl.textContent = `${TH_MONTHS[m]} ${y + 543}`;
+    countEl.textContent = inMonth.length ? `${inMonth.length} กิจกรรม` : 'ไม่มีกิจกรรม';
+    prev.disabled = cur <= minM;
+    next.disabled = cur >= maxM;
+    grid.setAttribute('aria-label', `ปฏิทินกิจกรรม เดือน${TH_MONTHS[m]} ${y + 543}`);
 
-  openOnly(rows[0]);
+    let h = ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'].map(d => `<span class="cal-dow" aria-hidden="true">${d}</span>`).join('');
+    h += '<span aria-hidden="true"></span>'.repeat(first.getDay());
+    for (let d = 1; d <= days; d++) {
+      const dt = new Date(y, m, d), k = dayKey(dt), evs = byDay.get(k);
+      const cls = `cal-day${[0, 6].includes(dt.getDay()) ? ' is-weekend' : ''}${k === dayKey(today) ? ' is-today' : ''}`;
+      h += evs
+        ? `<button type="button" class="${cls} has-event" data-cal-day="${k}" aria-label="${d} ${TH_MONTHS[m]}: ${esc(evs.map(e => e.title).join(' / '))}">${d}</button>`
+        : `<span class="${cls}">${d}</span>`;
+    }
+    grid.innerHTML = h;
 
-  // ไฟล์ปฏิทิน .ics (เวลาไทย UTC+7 แปลงเป็น UTC)
-  const toUtc = local => new Date(`${local}:00+07:00`).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
-  const icsText = v => String(v).replace(/[\\;,]/g, m => `\\${m}`).replace(/\n/g, '\\n');
-  qsa('[data-cal-ics]').forEach(btn => btn.addEventListener('click', () => {
-    const d = btn.closest('.cal-event-detail');
-    if (!d) return;
+    list.innerHTML = inMonth.length ? inMonth.map(item).join('')
+      : '<li class="cal-empty">ไม่มีกิจกรรมในเดือนนี้<small>กดปุ่มลูกศรด้านบนเพื่อดูเดือนอื่น</small></li>';
+    list.parentElement.scrollTop = 0;
+    rows = qsa('.cal-event', list);
+    rows.forEach(row => row.addEventListener('click', () => {
+      openOnly(row.getAttribute('aria-expanded') === 'true' ? null : row);
+    }));
+    qsa('[data-cal-day]', grid).forEach(day => day.addEventListener('click', () => {
+      const ev = byDay.get(day.dataset.calDay)?.[0];
+      const row = ev && qs(`#${CSS.escape(ev.id)}`, list);
+      if (!row) return;
+      openOnly(row);
+      row.focus({ preventScroll: true });
+      row.scrollIntoView({ block: 'nearest', behavior: reduce() ? 'auto' : 'smooth' });
+    }));
+    openOnly(rows[0] || null);
+  };
+
+  prev.addEventListener('click', () => { if (cur > minM) { cur--; render(); } });
+  next.addEventListener('click', () => { if (cur < maxM) { cur++; render(); } });
+  render();
+
+  // ไฟล์ปฏิทิน .ics แบบกิจกรรมทั้งวัน (DTEND = วันถัดจากวันสุดท้าย ตามมาตรฐาน iCalendar)
+  const icsText = v => String(v).replace(/[\\;,]/g, c => `\\${c}`).replace(/\n/g, '\\n');
+  const icsDate = d => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`;
+  list.addEventListener('click', e => {
+    const btn = e.target.closest('[data-cal-ics]');
+    const ev = btn && events.find(x => x.id === btn.dataset.calIcs);
+    if (!ev) return;
+    const end = endOf(ev);
+    end.setDate(end.getDate() + 1);
     const lines = [
       'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ORST//Website//TH', 'CALSCALE:GREGORIAN',
       'BEGIN:VEVENT',
-      `UID:${d.id}-${d.dataset.start}@orst-website`,
+      `UID:${ev.id}@orst-website`,
       `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')}`,
-      `DTSTART:${toUtc(d.dataset.start)}`,
-      `DTEND:${toUtc(d.dataset.end)}`,
-      `SUMMARY:${icsText(d.dataset.title)}`,
-      `LOCATION:${icsText(d.dataset.location)}`,
-      `DESCRIPTION:${icsText(d.querySelector('p')?.textContent.trim() || '')}`,
+      `DTSTART;VALUE=DATE:${icsDate(parse(ev.start))}`,
+      `DTEND;VALUE=DATE:${icsDate(end)}`,
+      `SUMMARY:${icsText(ev.title)}`,
+      ev.location ? `LOCATION:${icsText(ev.location)}` : '',
+      `DESCRIPTION:${icsText(ev.unit || '')}`,
       'END:VEVENT', 'END:VCALENDAR'
-    ];
+    ].filter(Boolean);
     const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `${d.id}.ics`;
+    a.download = `${ev.id}.ics`;
     document.body.appendChild(a);
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  }));
+  });
 }
 
 function initBackTop() {

@@ -4,13 +4,18 @@
   "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธ",
   "navKey": "news",
   "description": "เมื่อวันพุธที่ ๑๕ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๐.๐๐ น. ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นายกราชบัณฑิตยสภา เป็นประธานนำผู้บริหาร ข้าราชการและเ",
+  "sideNav": false,
   "updatedAt": "2026-07-20",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ข่าวประชาสัมพันธ์",
+      "variant": "article",
+      "tag": "ข่าวประชาสัมพันธ์",
+      "date": "2026-07-20",
       "heading": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙",
-      "lead": "เผยแพร่เมื่อ 20 กรกฎาคม 2569",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรร",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,17 +35,6 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
-      "alt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรร",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG"
-    },
-    {
       "type": "rich-text",
       "id": "content",
       "paragraphs": [
@@ -49,126 +43,125 @@
       ]
     },
     {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (17 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
         {
           "image": "assets/images/orst/news/data0005-00005306-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
         },
         {
           "image": "assets/images/orst/news/data0005-00005307-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005307.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005307.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
         },
         {
           "image": "assets/images/orst/news/data0005-00005308-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 3",
-          "title": "ภาพที่ 3",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005308.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005308.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
         },
         {
           "image": "assets/images/orst/news/data0005-00005309-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 4",
-          "title": "ภาพที่ 4",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005309.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005309.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
         },
         {
           "image": "assets/images/orst/news/data0005-00005310-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 5",
-          "title": "ภาพที่ 5",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005310.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005310.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
         },
         {
           "image": "assets/images/orst/news/data0005-00005311-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 6",
-          "title": "ภาพที่ 6",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005311.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005311.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
         },
         {
           "image": "assets/images/orst/news/data0005-00005312-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 7",
-          "title": "ภาพที่ 7",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005312.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005312.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
         },
         {
           "image": "assets/images/orst/news/data0005-00005313-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 8",
-          "title": "ภาพที่ 8",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005313.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005313.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
         },
         {
           "image": "assets/images/orst/news/data0005-00005314-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 9",
-          "title": "ภาพที่ 9",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005314.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005314.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
         },
         {
           "image": "assets/images/orst/news/data0005-00005315-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 10",
-          "title": "ภาพที่ 10",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005315.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005315.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
         },
         {
           "image": "assets/images/orst/news/data0005-00005316-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 11",
-          "title": "ภาพที่ 11",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005316.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005316.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11"
         },
         {
           "image": "assets/images/orst/news/data0005-00005317-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 12",
-          "title": "ภาพที่ 12",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005317.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005317.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12"
         },
         {
           "image": "assets/images/orst/news/data0005-00005318-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 13",
-          "title": "ภาพที่ 13",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005318.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005318.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 13"
         },
         {
           "image": "assets/images/orst/news/data0005-00005319-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 14",
-          "title": "ภาพที่ 14",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005319.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005319.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 14"
         },
         {
           "image": "assets/images/orst/news/data0005-00005320-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 15",
-          "title": "ภาพที่ 15",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005320.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005320.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 15"
         },
         {
           "image": "assets/images/orst/news/data0005-00005321-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 16",
-          "title": "ภาพที่ 16",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005321.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005321.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 16"
         },
         {
           "image": "assets/images/orst/news/data0005-00005322-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 17",
-          "title": "ภาพที่ 17",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005322.JPG"
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005322.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 17"
         }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "general-news.html"
+          "title": "กิจกรรมจิตอาสาเนื่องในโอกาสวันเฉลิมพระชนมพรรษา พระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๘",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68G%2DJ4511019",
+          "category": "ข่าว",
+          "publishedAt": "2025-07-30"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาร่วมกิจกรรมเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๒",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO2744019",
+          "category": "กิจกรรม",
+          "publishedAt": "2019-07-30"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาร่วมกิจกรรมเนื่องในวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๖",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66G%23J5825084",
+          "category": "ข่าว",
+          "publishedAt": "2023-07-28"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาร่วมบันทึกเทปถวายพระพร เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๖",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66F%21N1721000",
+          "category": "ข่าว",
+          "publishedAt": "2023-06-27"
         }
       ]
     }

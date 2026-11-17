@@ -25,7 +25,6 @@ assets/js/blocks.js             ตัวแปลง JSON -> HTML (pure functio
 │ แถบเมนูย่อย      │ block ที่เหลือตามลำดับใน JSON      │   แสดงเมื่อหน้าอยู่ในหมวดใน site-nav.json
 │ ของหมวด         │                                │   (หน้าหมวดเอง และหน้าที่ไม่อยู่ในหมวด = เต็มความกว้าง)
 └─────────────────┴────────────────────────────────┘
-[ปรับปรุงข้อมูลล่าสุด <updatedAt>]
 [footer — components.js]
 ```
 
@@ -40,7 +39,7 @@ assets/js/blocks.js             ตัวแปลง JSON -> HTML (pure functio
 | `title` | ✓ | ชื่อหน้า → `<title>` |
 | `navKey` | ✓ | เมนูหลักที่ไฮไลต์: `home` `dictionary` `knowledge` `publications` `news` `services` `about` `contact` |
 | `description` | | meta description |
-| `updatedAt` | | วันที่แก้ไขล่าสุด `YYYY-MM-DD` (ค.ศ.) — **CMS ควรเขียนให้อัตโนมัติเมื่อบันทึก** (มาตรฐานข้อ 7.1) |
+| `updatedAt` | | วันที่แก้ไขล่าสุด `YYYY-MM-DD` (ค.ศ.) — **CMS ควรเขียนให้อัตโนมัติเมื่อบันทึก** (มาตรฐานข้อ 7.1) — ตอนนี้ไม่แสดงบนหน้า (ผู้ใช้ให้เอาแถบท้ายหน้าออก) |
 | `blocks` | ✓ | ลำดับ block — block แรกควรเป็น `page-hero` ที่มี `breadcrumb` |
 | `_note` | | บันทึกภายใน (ที่มาของข้อมูล) ไม่แสดงผล |
 
@@ -60,7 +59,47 @@ Schema เต็มอยู่ที่ `content/blocks.schema.json` (JSON Sche
 - ตอนนี้ไฟล์นี้สร้างอัตโนมัติจาก `page-index` ของหน้าหมวด (`tools/scrape-old-site/step6_sitemap.py`)
   เมื่อมี CMS ให้ CMS สร้างจากโครงเมนูที่ผู้ดูแลจัดลำดับเอง
 
-### 2.3 ไฟล์และรูป
+### 2.3 กิจกรรมในปฏิทินหน้าแรก — `content/events.json`
+
+```json
+{ "events": [
+  { "id": "ev-20250717-29", "start": "2025-07-17", "end": "2025-07-18",
+    "title": "โครงการเสวนาเชิงวิชาการ สำนักวิทยาศาสตร์", "location": "สำนักงานราชบัณฑิตยสภา", "unit": "สำนักวิทยาศาสตร์" } ] }
+```
+
+- `id` `start` `title` บังคับ, `end` ใส่เมื่อจัดหลายวัน (วันสุดท้าย ค.ศ.), `location` `unit` ไม่บังคับ
+- ปฏิทินบนหน้าแรก (`initEventCalendar` ใน `assets/js/pages/home.js`) อ่านไฟล์นี้ มีปุ่มเปลี่ยนเดือน
+  เปิดหน้าที่เดือนปัจจุบันถ้ามีกิจกรรม ไม่งั้นเดือนล่าสุดที่มีกิจกรรม
+- ตอนนี้ข้อมูลมาจาก Google Calendar สาธารณะของหน่วยงานที่เว็บเดิมฝังไว้ (`tools/scrape-old-site/step7_calendar.py`)
+  กิจกรรมล่าสุดในปฏิทินเหล่านั้นคือ ส.ค. 2568 — **CMS ต้องเป็นที่ลงกิจกรรมใหม่** แล้วเขียนไฟล์/endpoint รูปแบบเดียวกัน
+
+### 2.4 หน้าคลังองค์ความรู้ของชาติ — `content/knowledge-hub.json`
+
+ตั้งค่าหน้า `knowledge.html` (อ่านโดย `assets/js/pages/knowledge.js`) — **รายการในแต่ละประเภทไม่ได้อยู่ในไฟล์นี้**
+แต่ดึงจาก `content/pages/<page>.json` ของประเภทนั้น (block แรกที่มี `items`: media-grid / document-list / card-grid)
+จำนวนรายการบนหน้านับจากข้อมูลจริงอัตโนมัติ CMS แค่เพิ่ม/ลบรายการในหน้าของประเภทนั้น
+
+```json
+{
+  "popular": ["ราชาศัพท์", "ทับศัพท์"],
+  "categories": [
+    { "cat": "infographic", "label": "อินโฟกราฟิก", "icon": "i-eye", "page": "infographics",
+      "kind": "cards", "unit": "ภาพ", "action": "ดูภาพ" },
+    { "cat": "video", "label": "วิดีโอความรู้", "icon": "i-video", "page": "videos", "kind": "video", "unit": "คลิป" }
+  ],
+  "systems": [ { "title": "ศัพท์บัญญัติ", "desc": "…", "href": "https://coined-word.orst.go.th/", "icon": "i-form" } ]
+}
+```
+
+- `categories` = ส่วนบนหน้า เรียงตามลำดับในอาร์เรย์ — `cat` (ไม่ซ้ำ ใช้เป็น id `#kb-<cat>`), `label`, `icon` (ไอคอนใน sprite),
+  `page` (slug ของหน้ารวมประเภทนั้น), `kind` = `cards` (ภาพ) / `covers` (ปกหนังสือ) / `topics` (การ์ดหัวข้อ) / `list` (รายการ) / `video`,
+  `unit` (หน่วยนับ เช่น ภาพ เล่ม เรื่อง), `action` (ข้อความปุ่ม), `description` / `href` (ไม่บังคับ — แทนค่าจากหน้าของประเภท)
+- วิดีโออยู่ในหน้ารวม `content/pages/videos.json` (block media-grid) — แต่ละรายการใส่ `youtube` (รหัสวิดีโอ) + `image` + `title` + `tag`
+  การ์ดมีปุ่มเล่น กดแล้วเล่นในป๊อปอัปของเว็บ (`initVideoPlayer` ใน components.js, youtube-nocookie) ทั้งหน้าคลังและหน้า videos.html
+- `systems` = แถบ "ระบบสืบค้นออนไลน์" ท้ายหน้า, `popular` = ชิปคำค้นยอดนิยมใน hero
+- ถ้าโหลดไฟล์นี้ไม่ได้ หน้ายังใช้ค่าเริ่มต้นใน `knowledge.js` (5 ประเภทเดิม ไม่มีวิดีโอ/ระบบสืบค้น)
+
+### 2.5 ไฟล์และรูป
 
 | ชนิด | ตอนนี้อยู่ที่ | ต้องทำตอนต่อ CMS |
 |---|---|---|
@@ -69,6 +108,23 @@ Schema เต็มอยู่ที่ `content/blocks.schema.json` (JSON Sche
 | หน้ารายละเอียดข่าวเก่า | ข่าว 28 เรื่องล่าสุดมีหน้าใหม่ ที่เหลือลิงก์เว็บเดิม | นำเข้าข่าวทั้งหมดเป็น entry ชนิดข่าว |
 
 สคริปต์ที่ดึงข้อมูลจากเว็บเดิมทั้งหมดอยู่ที่ `tools/scrape-old-site/` — ใช้เป็นต้นแบบตอนเขียนตัวนำเข้า (import) เข้า CMS ได้
+
+### 2.6 ภาษาอังกฤษ (สองภาษา TH / EN)
+
+ผู้ใช้สลับภาษาที่ปุ่ม **TH | EN** (topbar และเมนูมือถือ) หรือเปิดด้วย `?lang=en` — เว็บจำภาษาที่เลือกไว้ (localStorage `orst-lang`)
+
+| เนื้อหา | ไฟล์ภาษาไทย | ไฟล์ภาษาอังกฤษ |
+|---|---|---|
+| หน้า JSON | `content/pages/<slug>.json` | `content/pages/en/<slug>.json` — โครงเดียวกัน แปลเฉพาะข้อความ (URL รูป ไฟล์ วันที่ ISO คงเดิม) |
+| ข้อมูลประกอบ | `content/site-nav.json` `content/knowledge-hub.json` `content/events.json` | `content/en/<ไฟล์เดียวกัน>` |
+| ข้อความส่วนกลาง (header footer เมนู ปุ่ม หน้า index/knowledge/contact ข้อความที่สคริปต์สร้าง) | ในโค้ด/HTML | `content/i18n/en.json` → `strings` (ไทย→อังกฤษ) + `patterns` (ข้อความมีตัวแปร เช่น "พบ 12 ข่าว") |
+
+- **CMS:** เมื่อบันทึกเนื้อหาภาษาอังกฤษ ให้เขียนไฟล์/endpoint `en` โครงเดียวกับภาษาไทย — หน้าไหนยังไม่มีไฟล์ `en` เว็บจะแสดงภาษาไทยพร้อมแถบแจ้ง "available in Thai only"
+- วันที่ไทยในข้อความ (เช่น "2 พ.ย. 2569", "ปีงบประมาณ 2569") แปลงเป็นวันที่สากลอัตโนมัติ · ภาษาอังกฤษไม่แปลงเลขไทย
+- **เครื่องมือแปล** `tools/i18n/i18n.py`: `extract` ดึงข้อความไทยที่ยังไม่มีคำแปล → `apply` สร้างไฟล์ `en` ทั้งหมดจากหน่วยความจำคำแปล `tools/i18n/memory.json`
+  แก้คำแปลที่ `memory.json` แล้วรัน `python tools/i18n/i18n.py apply` · กฎและชื่อหน่วยงานทางการอยู่ที่ `tools/i18n/GLOSSARY.md`
+- ข้อความส่วนกลางที่ยังไม่มีคำแปล: เปิดหน้าด้วย `?lang=en` แล้วพิมพ์ `orstI18n.missing()` ในคอนโซล
+- **คำแปลชุดแรกทำด้วยเครื่อง (AI) — ต้องให้สำนักงานตรวจทานก่อนเผยแพร่จริง** โดยเฉพาะชื่อเฉพาะ ชื่อบุคคล ชื่อกฎหมาย และเอกสารราชการ
 
 ## 3. แม่แบบหน้าย่อย → block → ฟิลด์ที่ CMS ต้องมี
 
@@ -110,5 +166,6 @@ Schema เต็มอยู่ที่ `content/blocks.schema.json` (JSON Sche
 - ลำดับ CSS: `typography.css` → `base.css` → `blocks.css` → `pages/*.css` → `components.css`
 - header / footer / เมนูหลัก สร้างจาก `assets/js/components.js` ที่เดียว — ไฟล์ HTML มีแค่ `<div id="app-header">` / `<div id="app-footer">`
 - ขนาดตัวอักษร มุมโค้ง ระยะห่าง ใช้ token จาก `typography.css` (`--text-*` `--radius-*` `--space-*`) — ห้ามใส่ px เอง
+- ความกว้างเนื้อหาใช้ `.container` จาก `typography.css` กรอบเดียว (สูงสุด 1680px) — แถบพื้นหลังเต็มจอได้ แต่เนื้อหาต้องอยู่ใน `.container`
 - สีใช้ตัวแปรจาก `base.css` เท่านั้น — ไม่งั้นโหมดสีตัดกันสูง/โหมดอ่านง่ายจะพัง
 - `index.html` `knowledge.html` `contact.html` เขียน HTML เอง (ไม่ใช่ block) — ถ้าจะให้ CMS จัดการต้องแตกเป็น block ก่อน

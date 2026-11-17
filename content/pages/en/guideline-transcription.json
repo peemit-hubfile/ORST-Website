@@ -1,0 +1,55 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Transliteration guidelines",
+  "navKey": "knowledge",
+  "description": "Guidelines on Transliteration according to the guidelines set by the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Transliteration guidelines",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Transliteration guidelines"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": false,
+      "sections": [
+        {
+          "html": "<p>1. Transliteration should render the letters of the source language closely enough to show the origin of the word, and should be written in a form that is easy to read in Thai.</p><p>2. Separate transliteration guidelines have been set for each language.</p><p>3. Transliterated words that have long been in use, are regarded as Thai and already appear in the Royal Institute Dictionary, continue to be used as before, e.g. ช็อกโกเลต, ช็อกโกแลต (chocolate), เชิ้ต (shirt), ก๊าซ, แก๊ส (gas)</p><p>4. Proper nouns that have long been in use may continue to be used as before, for example:</p><blockquote><p>Victoria = วิกตอเรีย<br>Louis = หลุยส์<br>Cologne = โคโลญ</p></blockquote><p>5. For technical terms used only by specialist groups, rather than general vocabulary, additional guidelines may be set as necessary.</p>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

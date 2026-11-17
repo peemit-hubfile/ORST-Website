@@ -36,9 +36,207 @@ const ROYAL_SOCIETY_URL = 'https://royalsociety.go.th/';
 // ใช้ page id เพราะเว็บเดิมไม่ได้ระบุชื่อผู้ใช้ของเพจ — ถ้าหน่วยงานมีชื่อผู้ใช้ เปลี่ยนเป็น https://m.me/<ชื่อผู้ใช้> ได้
 const MESSENGER_URL = 'https://m.me/206167399441363';
 
+/* =============================================================================
+   สองภาษา TH / EN
+   -----------------------------------------------------------------------------
+   ภาษาที่เลือก: ?lang=en|th ใน URL (แล้วจำไว้ใน localStorage "orst-lang") — ค่าเริ่มต้น th
+   ภาษาอังกฤษมี 2 แหล่ง
+     1) หน้า JSON  -> content/pages/en/<slug>.json (โครงเดียวกับไฟล์ไทย) โหลดโดย page-runtime.js / orstI18n.fetchJSON()
+                     ไม่มีไฟล์แปล = แสดงภาษาไทย + แถบแจ้ง "This page is available in Thai only"
+     2) ข้อความอื่นทั้งหมด (header footer เมนู ปุ่ม หน้า index/knowledge/contact ข้อความที่สคริปต์สร้าง)
+                  -> content/i18n/en.json  { "strings": { "ข้อความไทย": "English" }, "patterns": [{ "re", "en" }] }
+                     แปลข้อความบนหน้า + attribute (placeholder, aria-label, title, alt) อัตโนมัติ รวมเนื้อหาที่ใส่ทีหลัง (MutationObserver)
+   วันที่ไทย (เช่น "2 พ.ย. 2569", "๑๗ สิงหาคม ๒๕๖๓") แปลงเป็นวันที่สากลอัตโนมัติ · ภาษาอังกฤษไม่แปลงเลขไทย
+   ข้อความที่ยังไม่มีคำแปล: ดูได้จาก window.orstI18n.missing() ในคอนโซล (ใช้เติม en.json)
+   ============================================================================= */
+const ORST_LANG = (() => {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (q === 'en' || q === 'th') {
+    try { localStorage.setItem('orst-lang', q); } catch { /* โหมดส่วนตัว */ }
+    return q;
+  }
+  try { return localStorage.getItem('orst-lang') === 'en' ? 'en' : 'th'; } catch { return 'th'; }
+})();
+document.documentElement.lang = ORST_LANG;
+globalThis.ORST_LANG = ORST_LANG;
+// ซ่อนหน้าชั่วคราวระหว่างโหลดคำแปล (กันข้อความไทยกะพริบ) — ปลดเองภายใน 2.5 วินาทีเสมอ
+if (ORST_LANG === 'en') {
+  document.documentElement.classList.add('i18n-pending');
+  setTimeout(() => document.documentElement.classList.remove('i18n-pending'), 2500);
+}
+
+const I18N = (() => {
+  const TH_MON = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+  const TH_MON_S = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+  const EN_MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const EN_MON_S = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const THAI = /[฀-๿]/;
+  const toArabic = s => s.replace(/[๐-๙]/g, d => '๐๑๒๓๔๕๖๗๘๙'.indexOf(d));
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const monRe = `(${[...TH_MON, ...TH_MON_S].map(esc).join('|')})`;
+  const monIdx = m => { const i = TH_MON.indexOf(m); return i >= 0 ? [i, false] : [TH_MON_S.indexOf(m), true]; };
+  const ce = y => { const n = Number(y); return n >= 2400 ? n - 543 : n < 100 ? (n + 2500 - 543) % 100 : n; };
+  const yStr = (y, src) => String(ce(y)).padStart(src.length === 2 ? 2 : 0, '0');
+  const pad = n => String(n);
+  // วันที่ไทย -> สากล: "2 พ.ย. 2569" -> "2 Nov 2026" · "17 สิงหาคม 2563" -> "17 August 2020" · "พ.ย. 69" -> "Nov 26"
+  const DATE_RULES = [
+    [new RegExp(`(\\d{1,2})\\s*${monRe}\\s*(?:พ\\.ศ\\.\\s*)?(\\d{4}|\\d{2})(?!\\d)`, 'g'),
+      (_, d, m, y) => { const [i, s] = monIdx(m); return `${pad(d)} ${(s ? EN_MON_S : EN_MON)[i]} ${yStr(y, y)}`; }],
+    [new RegExp(`(\\d{1,2})\\s*${monRe}`, 'g'),
+      (_, d, m) => { const [i, s] = monIdx(m); return `${pad(d)} ${(s ? EN_MON_S : EN_MON)[i]}`; }],
+    // เดือน + ปี (ไม่มีวัน): ห้ามติดอักษรไทยหรือจุดด้านหน้า — กันคำย่ออื่น เช่น "อ.ก.พ." "ก.ค.ศ." ถูกแปลงเป็นเดือน
+    [new RegExp(`(?<![\\u0E00-\\u0E7F.])${monRe}\\s*(?:พ\\.ศ\\.\\s*)?(\\d{4}|\\d{2})(?!\\d)`, 'g'),
+      (_, m, y) => { const [i, s] = monIdx(m); return `${(s ? EN_MON_S : EN_MON)[i]} ${yStr(y, y)}`; }],
+    // ชื่อเดือนเดี่ยว ๆ: เฉพาะชื่อเต็ม (ชื่อย่อ เช่น ก.พ. ซ้ำกับคำย่อหน่วยงาน)
+    [new RegExp(`(?<![\\u0E00-\\u0E7F.])(${TH_MON.map(esc).join('|')})`, 'g'), (_, m) => EN_MON[TH_MON.indexOf(m)]],
+    [/พ\.ศ\.\s*(\d{4})/g, (_, y) => String(ce(y))],
+    [/(?:ปีงบประมาณ|ปีงบ)\s*(?:พ\.ศ\.\s*)?(\d{4})/g, (_, y) => `Fiscal year ${ce(y)}`],
+    [/วัน(อาทิตย์|จันทร์|อังคาร|พุธ|พฤหัสบดี|พฤหัสฯ|ศุกร์|เสาร์)(?:ที่)?\s*/g, (_, d) => `${{ อาทิตย์: 'Sunday', จันทร์: 'Monday', อังคาร: 'Tuesday', พุธ: 'Wednesday', พฤหัสบดี: 'Thursday', 'พฤหัสฯ': 'Thursday', ศุกร์: 'Friday', เสาร์: 'Saturday' }[d]}, `],
+  ];
+
+  let dict = { strings: {}, patterns: [] };
+  let compiled = [];
+  const missing = new Set();
+
+  function translate(raw) {
+    if (!raw || !THAI.test(raw)) return raw;
+    const lead = raw.match(/^\s*/)[0];
+    const tail = raw.match(/\s*$/)[0];
+    const core = raw.trim();
+    const norm = core.replace(/\s+/g, ' ');
+    let out = dict.strings[core] ?? dict.strings[norm] ?? dict.strings[toArabic(norm)];
+    if (out == null) {
+      let s = toArabic(norm);
+      // กฎข้อความที่มีตัวแปร (content/i18n/en.json -> patterns) — ส่วนที่จับได้ (\$1 \$2 …) แปลซ้ำได้อีกชั้น
+      for (const [re, en] of compiled) {
+        const m = s.match(re);
+        if (m) {
+          s = en.replace(/\$(\d)/g, (_, i) => { const g = m[+i] ?? ''; return THAI.test(g) ? translate(g) : g; });
+          break;
+        }
+      }
+      for (const [re, fn] of DATE_RULES) s = s.replace(re, fn);
+      // คำไทยที่เหลือในประโยคยาว: แทนคำ/วลีที่รู้จัก (เรียงยาวไปสั้น) — ใช้กับข้อความผสม เช่น "พบ 12 ข่าว"
+      if (THAI.test(s)) {
+        out = null;
+        missing.add(norm);
+        // ถ้าแปลได้บางส่วน (เช่น เฉพาะวันที่) ก็ใช้ส่วนนั้น
+        if (s !== toArabic(norm)) out = s;
+      } else {
+        out = s;
+      }
+    }
+    return out == null ? raw : lead + out + tail;
+  }
+
+  const ATTRS = ['placeholder', 'aria-label', 'title', 'alt', 'data-doc-title', 'data-yt-title', 'data-mm-title', 'content'];
+  // ไม่แปล: โค้ด ช่องกรอก ส่วนที่ระบุ data-i18n-skip / lang="th" และคำไทยตัวใหญ่บนการ์ดอินโฟกราฟิกหน้าแรก (เป็นตัวคำที่สอน)
+  const SKIP = 'script,style,code,pre,textarea,[data-i18n-skip],[lang="th"],.ig-cover';
+  // attribute (placeholder / aria-label) แปลได้แม้เป็นช่องกรอก — ข้ามเฉพาะส่วนที่ระบุว่าไม่แปล
+  const ATTR_SKIP = 'script,style,[data-i18n-skip],[lang="th"],.ig-cover';
+
+  function translateTree(root) {
+    if (!root || ORST_LANG !== 'en') return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!THAI.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+        const el = node.parentElement;
+        return !el || el.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      },
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => { const t = translate(n.nodeValue); if (t !== n.nodeValue) n.nodeValue = t; });
+    const els = root.nodeType === 1 ? [root, ...root.querySelectorAll('*')] : [...root.querySelectorAll?.('*') || []];
+    els.forEach(el => {
+      if (el.closest(ATTR_SKIP)) return;
+      ATTRS.forEach(a => {
+        const v = el.getAttribute(a);
+        if (v && THAI.test(v)) { const t = translate(v); if (t !== v) el.setAttribute(a, t); }
+      });
+      // ตัวเลือกใน <select> (ข้อความใน option)
+      if (el.tagName === 'OPTION' && THAI.test(el.textContent)) {
+        const t = translate(el.textContent);
+        if (t !== el.textContent) el.textContent = t;   // เขียนเฉพาะเมื่อเปลี่ยน — กัน MutationObserver วนไม่จบ
+      }
+    });
+  }
+
+  async function load() {
+    if (ORST_LANG !== 'en') return;
+    try {
+      const r = await fetch(`${basePath}content/i18n/en.json`, { cache: 'no-cache' });
+      if (r.ok) dict = await r.json();
+    } catch { /* ไม่มีไฟล์คำแปล — ใช้เฉพาะการแปลงวันที่ */ }
+    dict.strings = dict.strings || {};
+    compiled = (dict.patterns || []).map(p => [new RegExp(p.re), p.en]);
+  }
+
+  function start() {
+    if (ORST_LANG !== 'en') return;
+    translateTree(document.body);
+    document.title = translate(document.title);
+    document.querySelectorAll('meta[name="description"]').forEach(m => m.setAttribute('content', translate(m.getAttribute('content') || '')));
+    new MutationObserver(records => {
+      const targets = new Set();
+      records.forEach(r => {
+        if (r.type === 'characterData') targets.add(r.target.parentElement);
+        else if (r.type === 'attributes') targets.add(r.target);
+        else r.addedNodes.forEach(n => targets.add(n.nodeType === 3 ? n.parentElement : n));
+      });
+      targets.forEach(el => el && el.isConnected && translateTree(el));
+    }).observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ATTRS });
+    document.documentElement.classList.remove('i18n-pending');
+  }
+
+  /** โหลด JSON ตามภาษา: ภาษาอังกฤษลอง content/.../en/<file> ก่อน ไม่มีค่อยใช้ไฟล์ไทย — คืน { data, translated } */
+  async function fetchJSON(path, opts = { cache: 'no-cache' }) {
+    if (ORST_LANG === 'en') {
+      const enPath = path.replace(/(^|\/)(content\/pages|content)\/(?!en\/)([^/]+\.json)$/, '$1$2/en/$3');
+      if (enPath !== path) {
+        try {
+          const r = await fetch(enPath, opts);
+          if (r.ok) return { data: await r.json(), translated: true };
+        } catch { /* ใช้ไฟล์ไทย */ }
+      }
+    }
+    const r = await fetch(path, opts);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return { data: await r.json(), translated: ORST_LANG !== 'en' };
+  }
+
+  /** ลิงก์สลับภาษา: ตั้งค่าแล้วโหลดหน้าเดิมใหม่ */
+  function switchTo(lang) {
+    try { localStorage.setItem('orst-lang', lang); } catch { /* ข้าม */ }
+    const u = new URL(location.href);
+    u.searchParams.delete('lang');
+    if (lang === 'en') u.searchParams.set('lang', 'en');
+    location.href = u.toString();
+  }
+
+  return { lang: ORST_LANG, translate, translateTree, load, start, fetchJSON, switchTo, missing: () => [...missing].sort() };
+})();
+window.orstI18n = I18N;
+
+/* ปุ่มสลับภาษา TH | EN (topbar + เมนูมือถือ) */
+function langSwitch(cls = '') {
+  const a = (code, label, name) => `<a href="?lang=${code}" data-lang-switch="${code}" lang="${code}" hreflang="${code}"${ORST_LANG === code ? ' aria-current="true"' : ''} aria-label="${name}">${label}</a>`;
+  return `<span class="lang-switch ${cls}" role="group" aria-label="Language / ภาษา" data-i18n-skip>${a('th', 'TH', 'ภาษาไทย')}<span aria-hidden="true">|</span>${a('en', 'EN', 'English')}</span>`;
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-lang-switch]');
+  if (!a) return;
+  e.preventDefault();
+  if (a.dataset.langSwitch !== ORST_LANG) I18N.switchTo(a.dataset.langSwitch);
+});
+
+
 const icons = `
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"></path></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="2"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="2"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="2"></rect></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="3" y="4" width="5" height="5" rx="1.5"></rect><rect x="3" y="15" width="5" height="5" rx="1.5"></rect><path d="M11.5 5.5h9.5M11.5 8.5h6M11.5 16.5h9.5M11.5 19.5h6"></path></symbol>
   <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></symbol>
@@ -65,6 +263,11 @@ const icons = `
   <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></symbol>
   <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.7 2.6a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6.2 6.2l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2z"></path></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path><path d="m22 6-10 7L2 6"></path></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="18" cy="19" r="2.5"></circle><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"></path></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"></rect><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"></path></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8.5V3.5h10v5"></path><rect x="3.5" y="8.5" width="17" height="8" rx="2"></rect><path d="M7 14h10v6.5H7z"></path></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"></path></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"></rect><path d="M8 3v4M16 3v4M3.5 10h17"></path></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></symbol>
   <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6"></path><path d="M10 14 20 4"></path><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></symbol>
   <symbol id="i-service" viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"></path><path d="M9 12l2 2 4-5"></path></symbol>
@@ -83,6 +286,11 @@ const navItems = [
   ['about', 'เกี่ยวกับเรา', `${basePath}about.html`],
   ['contact', 'ติดต่อเรา', `${basePath}contact.html`],
 ];
+
+// ลิงก์ออกนอกเว็บในเมนู: เปิดแท็บใหม่ + บอกผู้ใช้ (ไอคอนเล็ก + ข้อความสำหรับโปรแกรมอ่านหน้าจอ)
+const isExtUrl = url => /^https?:\/\//i.test(url);
+const extAttrs = url => isExtUrl(url) ? ' target="_blank" rel="noopener noreferrer"' : '';
+const extMark = url => isExtUrl(url) ? `<svg class="icon mega-ext" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span>` : '';
 
 const megaMenuData = {
   dictionary: {
@@ -104,7 +312,7 @@ const megaMenuData = {
         heading: 'ฐานข้อมูลที่เกี่ยวข้อง',
         links: [
           ['สารานุกรมและอนุกรมวิธาน', 'https://lst.nectec.or.th/encyclopedia/', 'คลังความรู้และหมวดคำ', 'i-book'],
-          ['หลักเกณฑ์การใช้ภาษา', `${basePath}language-guidelines.html`, 'แนวทางการเขียนและการใช้ภาษา', 'i-shield'],
+          ['หลักเกณฑ์ภาษาไทย', `${basePath}language-guidelines.html`, 'แนวทางการเขียนและการใช้ภาษา', 'i-shield'],
           ['คำถามที่พบบ่อยด้านภาษา', `${basePath}qa.html`, 'คำตอบสั้นสำหรับประชาชน', 'i-eye'],
         ]
       }
@@ -121,23 +329,23 @@ const megaMenuData = {
         heading: 'ค้นหาและฐานข้อมูล',
         links: [
           ['คลังองค์ความรู้', `${basePath}knowledge.html`, 'ค้นจากทุกฐานข้อมูล', 'i-database'],
-          ['บทความวิชาการ', `${basePath}knowledge.html?cat=articles#knowledge-content`, 'บทความเผยแพร่และเอกสารอ้างอิง', 'i-file'],
-          ['องค์ความรู้สำหรับประชาชน', `${basePath}knowledge.html?cat=public#knowledge-content`, 'เนื้อหาเข้าใจง่ายสำหรับทุกกลุ่ม', 'i-people'],
+          ['เอกสารความรู้เผยแพร่', `${basePath}knowledge-base.html`, 'เอกสารความรู้ของสำนักงาน', 'i-file'],
         ]
       },
       {
-        heading: 'หมวดความรู้',
+        // ประเภทเนื้อหาในคลังองค์ความรู้ — แต่ละประเภทมีหน้ารวมของตัวเอง (ตรงกับ SOURCES ใน assets/js/pages/knowledge.js)
+        heading: 'ประเภทความรู้',
         links: [
-          ['ภาษาไทย', `${basePath}knowledge.html?cat=thai#knowledge-content`, 'คำศัพท์ การใช้ภาษา และหลักเกณฑ์', 'i-dictionary'],
-          ['วิทยาศาสตร์', `${basePath}knowledge.html?cat=science#knowledge-content`, 'ศัพท์วิชาการและองค์ความรู้ร่วมสมัย', 'i-puzzle'],
-          ['ศิลปกรรม', `${basePath}knowledge.html?cat=arts#knowledge-content`, 'ศิลปะ วัฒนธรรม และวรรณคดี', 'i-pen'],
-          ['สังคมศาสตร์', `${basePath}knowledge.html?cat=social#knowledge-content`, 'ชุมชน เศรษฐกิจ สังคม และนโยบาย', 'i-people'],
+          ['อินโฟกราฟิก', `${basePath}infographics.html`, 'ความรู้ภาษาไทยแบบภาพ', 'i-eye'],
+          ['หนังสือและสิ่งพิมพ์', `${basePath}publications.html`, 'หนังสือของสำนักงาน', 'i-book'],
+          ['หลักเกณฑ์ภาษาไทย', `${basePath}language-guidelines.html`, 'การทับศัพท์ การถอดอักษร', 'i-dictionary'],
+          ['ข้อมูลเสียงภาษาถิ่น', `${basePath}ethnic-language-audio.html`, 'ภาษาของกลุ่มชาติพันธุ์', 'i-megaphone'],
         ]
       },
       {
         heading: 'สื่อดิจิทัล',
         links: [
-          ['วิดีโอและสื่อมัลติมีเดีย', `${basePath}academic-lectures.html`, 'การบรรยายทางวิชาการและวิดีโอ', 'i-video'],
+          ['วิดีโอและสื่อมัลติมีเดีย', `${basePath}videos.html`, 'การเสวนา การอบรม และวีดิทัศน์', 'i-video'],
           ['Infographic', `${basePath}infographics.html`, 'สรุปความรู้เข้าใจง่าย', 'i-journal'],
         ]
       }
@@ -178,7 +386,7 @@ const megaMenuData = {
       {
         heading: 'บริการออนไลน์',
         links: [
-          ['สอบถามข้อมูลทางวิชาการ', `${basePath}services.html`, 'ส่งคำถามและรับเลขติดตาม', 'i-search'],
+          ['สอบถามข้อมูลทางวิชาการ', `${basePath}contact.html#contact-form`, 'ส่งคำถามและรับเลขติดตาม', 'i-search'],
           ['ขออนุญาตใช้เนื้อหา', `${basePath}services.html#forms`, 'ยื่นคำขอและแนบเอกสาร', 'i-file'],
           ['ร้องเรียน / เสนอแนะ', `${basePath}services.html#channels`, 'ส่งเรื่องและติดตามผล', 'i-mail'],
         ]
@@ -231,10 +439,10 @@ function renderMegaMenu(key) {
   return `
     <div class="mega-inner" role="region" aria-label="เมนูย่อย ${data.title}">
       <div class="mega-feature">
-        <span class="mega-feature-icon">${icon(data.icon || 'i-book', 'icon-lg')}</span>
+        <img class="mega-feature-bg" src="${basePath}assets/images/menu/${key}.jpg" alt="" decoding="async">
         <h3>${data.title}</h3>
         <p>${data.description}</p>
-        <a href="${data.featured[1]}">${data.featured[0]} <span aria-hidden="true">→</span></a>
+        <a class="mega-feature-cta" href="${data.featured[1]}">${data.featured[0]} ${icon('i-arrow')}</a>
       </div>
       <div class="mega-groups">
         ${data.groups.map(group => `
@@ -242,9 +450,9 @@ function renderMegaMenu(key) {
             <h4>${group.heading}</h4>
             <div class="mega-group-links">
             ${group.links.map(([text, url, desc, ic]) => `
-              <a class="mega-link" href="${url}">
-                <span class="mega-link-ic">${icon(ic || 'i-file', 'icon')}</span>
-                <span class="mega-link-tx"><strong>${text}</strong><small>${desc || ''}</small></span>
+              <a class="mega-link" href="${url}"${extAttrs(url)}>
+                <span class="mega-link-tx"><strong>${text}${extMark(url)}</strong>${desc ? `<small>${desc}</small>` : ''}</span>
+                <span class="mega-link-go" aria-hidden="true">${icon(isExtUrl(url) ? 'i-external' : 'i-arrow')}</span>
                 <em aria-hidden="true">→</em>
               </a>
             `).join('')}
@@ -292,6 +500,9 @@ const navIcons = {
    ไม่ใส่ไว้ใน .site-header เพราะ backdrop-filter ของ header ทำให้ position:fixed
    ข้างในไม่อิงกับหน้าจอ */
 function renderDrawer(active) {
+  // ลิงก์ของหน้าที่เปิดอยู่ — ไฮไลต์ในเมนูย่อย (ผู้ใช้รู้ว่าอยู่ตรงไหน)
+  const here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isHere = url => !isExtUrl(url) && String(url).split(/[?#]/)[0].split('/').pop().toLowerCase() === here;
   const items = navItems.map(([key, label, href]) => {
     const data = megaMenuData[key];
     const isActive = active === key;
@@ -320,7 +531,10 @@ function renderDrawer(active) {
               ${data.groups.map(group => `
                 <div class="drawer-sub-group">
                   <span class="drawer-sub-title">${group.heading}</span>
-                  ${group.links.map(([text, url]) => `<a href="${url}">${text}</a>`).join('')}
+                  ${group.links.map(([text, url]) => {
+                    const cur = isHere(url);
+                    return `<a class="drawer-sub-link${cur ? ' is-current' : ''}" href="${url}"${extAttrs(url)}${cur ? ' aria-current="page"' : ''}><span>${text}${extMark(url)}</span>${isExtUrl(url) ? '' : icon('i-chevron', 'icon drawer-sub-go')}</a>`;
+                  }).join('')}
                 </div>`).join('')}
             </div>
           </div>
@@ -346,8 +560,12 @@ function renderDrawer(active) {
           <ul class="drawer-list">${items}</ul>
         </nav>
         <div class="drawer-foot">
-          <a class="drawer-cta" href="${basePath}services.html">บริการออนไลน์ ${icon('i-arrow')}</a>
+          <div class="drawer-contact" aria-label="ติดต่อสำนักงาน">
+            <a class="drawer-contact-btn" href="tel:021411718">${icon('i-phone-call')}<span>โทร 0 2141 1718</span></a>
+            <a class="drawer-contact-btn" href="mailto:saraban@orst.go.th">${icon('i-mail')}<span>ส่งอีเมล</span></a>
+          </div>
           <div class="drawer-links">
+            ${langSwitch('is-drawer')}
             <a class="drawer-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer">ราชบัณฑิตยสภา ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>
           </div>
         </div>
@@ -367,7 +585,7 @@ function renderHeader() {
         <div class="topbar-group topbar-right">
           <a class="topbar-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer">ราชบัณฑิตยสภา ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>
           <a href="${basePath}contact.html">ติดต่อเรา</a>
-          <span>ภาษา TH | EN</span>
+          ${langSwitch()}
         </div>
       </div>
     </div>
@@ -385,12 +603,11 @@ function renderHeader() {
         </nav>
         <div class="header-actions">
           <button class="round-btn" type="button" data-open-search aria-label="ค้นหา">${icon('i-search')} <span>ค้นหา</span></button>
-          <a class="round-btn primary" href="${basePath}services.html">บริการออนไลน์</a>
           <button class="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="site-drawer" aria-haspopup="dialog" data-drawer-open>
             <span></span><span></span><span></span><span class="sr-only">เปิดเมนู</span>
           </button>
         </div>
-        <div class="mega-menu" id="mega-menu" hidden></div>
+        <div class="mega-menu mega-a" id="mega-menu" hidden></div>
       </div>
     </header>
   `;
@@ -761,11 +978,18 @@ function initDrawer() {
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
 
-  drawer.querySelectorAll('[data-drawer-sub]').forEach(toggle => {
+  // เปิดได้ทีละหมวด (เปิดหมวดใหม่ = ปิดหมวดเดิม) — เมนูไม่ยาวจนต้องเลื่อนหา
+  const subToggles = [...drawer.querySelectorAll('[data-drawer-sub]')];
+  subToggles.forEach(toggle => {
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      document.getElementById(toggle.getAttribute('aria-controls'))?.classList.toggle('is-open', !expanded);
+      subToggles.forEach(t => {
+        const open = t === toggle ? !expanded : false;
+        t.setAttribute('aria-expanded', String(open));
+        document.getElementById(t.getAttribute('aria-controls'))?.classList.toggle('is-open', open);
+      });
+      // หมวดที่เพิ่งเปิดอยู่ล่างจอ -> เลื่อนให้เห็นหัวหมวด
+      if (!expanded) setTimeout(() => toggle.scrollIntoView({ block: 'nearest', behavior: noMotion() ? 'auto' : 'smooth' }), 200);
     });
   });
 
@@ -861,6 +1085,17 @@ function initSharedAccessibility() {
   });
 }
 
+
+/* ปุ่ม "ดูทั้งหมด" (.view-all) — ข้อความบนปุ่มสั้นเหมือนกันทุกที่ ชื่อเต็มของปลายทางอยู่ใน aria-label */
+function setViewAll(link, href, label) {
+  if (!link) return;
+  link.href = href;
+  const ext = /^https?:/.test(href) && !href.includes(location.host);
+  if (ext) { link.target = '_blank'; link.rel = 'noopener'; } else { link.removeAttribute('target'); link.removeAttribute('rel'); }
+  link.setAttribute('aria-label', label.replace(/\s*→\s*$/, ''));
+  link.innerHTML = `ดูทั้งหมด ${icon('i-arrow', 'icon view-all-ic')}`;
+}
+
 function initNewsEventsTabs() {
   const tabs = document.querySelectorAll('[data-news-tab]');
   const panels = document.querySelectorAll('[data-news-panel]');
@@ -900,10 +1135,7 @@ function initNewsEventsTabs() {
         panel.hidden = !active;
       });
 
-      if (viewAllLink) {
-        viewAllLink.href = links[target] || 'news.html?type=news';
-        viewAllLink.textContent = labels[target] || 'ดูข่าวเพิ่มเติม →';
-      }
+      setViewAll(viewAllLink, links[target] || `${basePath}general-news.html`, labels[target] || 'ดูข่าวเพิ่มเติม');
     });
   });
 }
@@ -921,13 +1153,13 @@ function initMediaTabs() {
   const mediaLinks = {
     encyclopedia: `${basePath}knowledge.html`,
     research: 'research.html',
-    multimedia: `${basePath}knowledge.html`
+    multimedia: 'https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g'
   };
 
   const mediaLabels = {
     encyclopedia: 'ดูอินโฟกราฟิกทั้งหมด →',
     research: 'ดู Research ทั้งหมด →',
-    multimedia: 'ดูสื่อมัลติมีเดียทั้งหมด →'
+    multimedia: 'ดูวิดีโอทั้งหมดบนช่อง YouTube ของราชบัณฑิตยสภา (เปิดในแท็บใหม่)'
   };
 
   mediaTabs.forEach(tab => {
@@ -949,10 +1181,7 @@ function initMediaTabs() {
         panel.hidden = !isActive;
       });
 
-      if (mediaViewAllLink) {
-        mediaViewAllLink.href = mediaLinks[target] || mediaViewAllLink.getAttribute('href');
-        mediaViewAllLink.textContent = mediaLabels[target] || 'ดูทั้งหมด →';
-      }
+      setViewAll(mediaViewAllLink, mediaLinks[target] || mediaViewAllLink?.getAttribute('href'), mediaLabels[target] || 'ดูทั้งหมด');
 
       const activePanel = document.querySelector(`[data-media-panel="${target}"]`);
       const scrollRow = activePanel?.querySelector('.publication-row, .media-row');
@@ -989,62 +1218,134 @@ function initCompactFAQ() {
 function initDocLists() {
   const norm = s => String(s || '').replace(/[๐-๙]/g, d => String(THAI_DIGITS.indexOf(d)))
     .toLowerCase().replace(/\s+/g, ' ').trim();
+  const reduceMotion = () => document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch { /* โหมดส่วนตัว */ } },
+  };
+  // เลขหน้าแบบย่อ: 1 … 4 5 6 … 20
+  const pageList = (total, cur) => {
+    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+    const arr = [...new Set([1, total, cur - 1, cur, cur + 1])].filter(n => n >= 1 && n <= total).sort((x, y) => x - y);
+    const out = [];
+    arr.forEach((n, i) => { if (i && n - arr[i - 1] > 1) out.push('…'); out.push(n); });
+    return out;
+  };
 
   document.querySelectorAll('[data-doc-list]').forEach(list => {
     if (list.dataset.docBound === '1') return;
     list.dataset.docBound = '1';
 
     const items = [...list.querySelectorAll('.doc-item')];
-    const pageSize = Number(list.dataset.pageSize) || 20;
+    const baseSize = Number(list.dataset.pageSize) || 20;
+    const sizes = [baseSize, baseSize * 2, baseSize * 4];
+    let pageSize = baseSize;
+    const chips = [...list.querySelectorAll('[data-doc-chip]')];
+    let chipCat = '';
+    const unit = list.dataset.unit || 'รายการ';
     const toolbar = list.querySelector('[data-doc-toolbar]');
     const search = list.querySelector('[data-doc-search]');
     const year = list.querySelector('[data-doc-year]');
     const cat = list.querySelector('[data-doc-cat]');
     const count = list.querySelector('[data-doc-count]');
     const empty = list.querySelector('[data-doc-empty]');
-    const more = list.querySelector('[data-doc-more]');
+    const pager = list.querySelector('[data-doc-pager]');
+    const views = [...list.querySelectorAll('[data-doc-view]')];
     const text = new Map(items.map(it => [it, norm(it.querySelector('.doc-title')?.textContent)]));
-    let limit = pageSize;
+    let page = 1;
 
-    // แถบค้นหามีประโยชน์เมื่อรายการยาวพอ
-    if (toolbar && items.length > 5) toolbar.hidden = false;
+    // แถบค้นหามีประโยชน์เมื่อรายการยาวพอ (รายการข่าวแสดงเสมอ เพราะมีปุ่มสลับมุมมอง)
+    if (toolbar && (items.length > 5 || views.length)) toolbar.hidden = false;
 
-    function apply() {
+    // มุมมองตาราง/รายการ (เฉพาะ layout news) — จำค่าที่เลือกไว้ในเบราว์เซอร์
+    const setView = v => {
+      list.dataset.view = v;
+      views.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.docView === v)));
+    };
+    const viewKey = list.dataset.viewKey || 'doc-view';   // แยกค่าที่จำไว้ของแต่ละชนิดรายการ (ข่าว / ภาพ)
+    if (views.length) setView(store.get(viewKey) === 'list' ? 'list' : 'grid');
+    views.forEach(b => b.addEventListener('click', () => { setView(b.dataset.docView); store.set(viewKey, b.dataset.docView); }));
+
+    function renderPager(total) {
+      if (!pager) return;
+      const pages = Math.max(1, Math.ceil(total / pageSize));
+      // แสดงเมื่อมีมากกว่า 1 หน้า หรือผู้ใช้เปลี่ยนจำนวนต่อหน้าไว้ (ให้เปลี่ยนกลับได้)
+      pager.hidden = total <= baseSize && pageSize === baseSize;
+      if (pager.hidden) { pager.innerHTML = ''; return; }
+      const from = total ? (page - 1) * pageSize + 1 : 0;
+      const to = Math.min(total, page * pageSize);
+      const btn = (label, p, attrs = '') => `<button type="button" data-doc-page="${p}"${attrs}>${label}</button>`;
+      const nums = pageList(pages, page).map(n => n === '…'
+        ? '<span class="doc-pager-gap" aria-hidden="true">…</span>'
+        : btn(n, n, n === page ? ' class="is-current" aria-current="page"' : ` aria-label="หน้า ${n}"`)).join('');
+      const first = page === 1, last = page === pages;
+      pager.innerHTML = `
+        <p class="doc-pager-range">แสดง ${from}–${to} จาก ${total} ${unit}</p>
+        <div class="doc-pager-pages">
+          ${btn(`${icon('i-chevron', 'icon doc-pager-prev')}${icon('i-chevron', 'icon doc-pager-prev doc-pager-dbl')}<span>หน้าแรก</span>`, 1, `${first ? ' disabled' : ''} class="doc-pager-edge" aria-label="หน้าแรก"`)}
+          ${btn(`${icon('i-chevron', 'icon doc-pager-prev')}<span>ก่อนหน้า</span>`, page - 1, `${first ? ' disabled' : ''} aria-label="หน้าก่อนหน้า"`)}
+          ${nums}
+          ${btn(`<span>ถัดไป</span>${icon('i-chevron')}`, page + 1, `${last ? ' disabled' : ''} aria-label="หน้าถัดไป"`)}
+          ${btn(`<span>สุดท้าย</span>${icon('i-chevron')}${icon('i-chevron', 'icon doc-pager-dbl')}`, pages, `${last ? ' disabled' : ''} class="doc-pager-edge" aria-label="หน้าสุดท้าย"`)}
+        </div>
+        <label class="doc-pager-size">แสดงต่อหน้า
+          <select data-doc-size>${sizes.map(n => `<option value="${n}"${n === pageSize ? ' selected' : ''}>${String(n).replace(/[0-9]/g, d => THAI_DIGITS[d])}</option>`).join('')}</select>
+        </label>`;
+      enhanceSelects(pager);
+    }
+
+    function apply({ focus = false } = {}) {
       const q = norm(search?.value);
       const y = year?.value || '';
-      const c = cat?.value || '';
+      const c = chipCat || cat?.value || '';
       const matched = items.filter(it =>
         (!q || text.get(it).includes(q)) &&
         (!y || it.dataset.year === y) &&
         (!c || it.dataset.cat === c));
-      items.forEach(it => { it.hidden = true; });
-      matched.slice(0, limit).forEach(it => { it.hidden = false; });
+      const pages = Math.max(1, Math.ceil(matched.length / pageSize));
+      page = Math.min(page, pages);
+      const shownItems = matched.slice((page - 1) * pageSize, page * pageSize);
+      items.forEach(it => { it.hidden = true; it.classList.remove('is-entering'); });
+      shownItems.forEach((it, i) => {
+        it.hidden = false;
+        if (!reduceMotion()) { it.style.setProperty('--i', Math.min(i, 11)); it.classList.add('is-entering'); }
+      });
 
-      const shown = Math.min(limit, matched.length);
       const filtered = q || y || c;
       if (count) {
-        count.textContent = matched.length === items.length && shown === matched.length
-          ? `ทั้งหมด ${items.length} รายการ`
-          : `แสดง ${shown} จาก ${matched.length} รายการ${filtered ? ` (ทั้งหมด ${items.length})` : ''}`;
+        count.textContent = filtered
+          ? `พบ ${matched.length} ${unit} (จากทั้งหมด ${items.length})`
+          : `พบ ${items.length} ${unit}`;
       }
       if (empty) empty.hidden = matched.length > 0;
-      if (more) {
-        more.hidden = matched.length <= limit;
-        more.textContent = `แสดงเพิ่ม (${Math.min(pageSize, matched.length - shown)} รายการ)`;
+      renderPager(matched.length);
+      if (focus) {
+        list.scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'start' });
+        shownItems[0]?.querySelector('a')?.focus({ preventScroll: true });
       }
     }
 
-    const reset = () => { limit = pageSize; apply(); };
+    const reset = () => { page = 1; apply(); };
     search?.addEventListener('input', reset);
     year?.addEventListener('change', reset);
     cat?.addEventListener('change', reset);
     toolbar?.addEventListener('submit', e => e.preventDefault());
-    more?.addEventListener('click', () => {
-      const firstNew = items.filter(it => !it.hidden).length;
-      limit += pageSize;
-      apply();
-      // ย้ายโฟกัสไปรายการแรกที่เพิ่งแสดง ให้ผู้ใช้คีย์บอร์ด/screen reader อ่านต่อได้ทันที
-      items.filter(it => !it.hidden)[firstNew]?.querySelector('a')?.focus();
+    chips.forEach(b => b.addEventListener('click', () => {
+      chipCat = b.dataset.docChip;
+      chips.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      reset();
+    }));
+    pager?.addEventListener('change', e => {
+      if (!e.target.matches('[data-doc-size]')) return;
+      pageSize = Number(e.target.value) || baseSize;
+      page = 1;
+      apply({ focus: true });
+    });
+    pager?.addEventListener('click', e => {
+      const b = e.target.closest('[data-doc-page]');
+      if (!b || b.disabled) return;
+      page = Number(b.dataset.docPage);
+      apply({ focus: true });
     });
     apply();
   });
@@ -1118,6 +1419,233 @@ function initLightbox() {
   });
 }
 
+/* ดูตัวอย่างเอกสาร PDF (ปุ่ม "ดูตัวอย่าง" ใน block document-list)
+   - เปิดหน้าต่างซ้อน ฝัง PDF ด้วย iframe (ตัวแสดง PDF ของเบราว์เซอร์) โหลดไฟล์เฉพาะตอนกด
+   - เบราว์เซอร์ที่แสดง PDF ในหน้าไม่ได้ (navigator.pdfViewerEnabled === false เช่น Chrome บน Android)
+     ซ่อนปุ่มนี้ไว้ เหลือ "เปิดเอกสาร" (แท็บใหม่) อย่างเดียว
+   - ปิดด้วยปุ่มปิด / Esc / คลิกพื้นหลัง แล้วโฟกัสกลับไปที่ปุ่มเดิม */
+function initDocPreview() {
+  const btns = [...document.querySelectorAll('[data-doc-preview]')].filter(b => b.dataset.dpBound !== '1');
+  if (!btns.length) return;
+  if (navigator.pdfViewerEnabled === false) return;   // ปุ่มซ่อนอยู่แล้ว (hidden) — คงไว้แบบนั้น
+
+  let box = document.getElementById('doc-preview');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'doc-preview';
+    box.className = 'doc-preview';
+    box.hidden = true;
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-labelledby', 'doc-preview-title');
+    box.innerHTML = `
+      <div class="doc-preview-panel">
+        <div class="doc-preview-bar">
+          <span class="doc-preview-badge" aria-hidden="true">PDF</span>
+          <strong id="doc-preview-title"></strong>
+          <a class="doc-btn" data-dp-open href="#" target="_blank" rel="noopener noreferrer">${icon('i-external')}<span>เปิดในแท็บใหม่</span></a>
+          <button type="button" class="doc-preview-close" data-dp-close aria-label="ปิดตัวอย่างเอกสาร">${icon('i-x')}</button>
+        </div>
+        <div class="doc-preview-stage">
+          <p class="doc-preview-loading" aria-hidden="true">กำลังโหลดเอกสาร…</p>
+          <iframe title="ตัวอย่างเอกสาร" src="about:blank"></iframe>
+        </div>
+      </div>`;
+    document.body.appendChild(box);
+    const frame = box.querySelector('iframe');
+    let opener = null;
+    box.show = btn => {
+      opener = btn;
+      box.querySelector('#doc-preview-title').textContent = btn.dataset.docTitle || 'เอกสาร';
+      box.querySelector('[data-dp-open]').href = btn.dataset.docPreview;
+      frame.title = `ตัวอย่างเอกสาร: ${btn.dataset.docTitle || ''}`;
+      frame.src = `${btn.dataset.docPreview}#view=FitH`;
+      box.hidden = false;
+      document.documentElement.classList.add('drawer-lock');
+      box.querySelector('[data-dp-close]').focus();
+    };
+    box.close = () => {
+      box.hidden = true;
+      frame.src = 'about:blank';
+      document.documentElement.classList.remove('drawer-lock');
+      opener?.focus();
+    };
+    box.addEventListener('click', e => { if (e.target === box) box.close(); });
+    box.querySelector('[data-dp-close]').addEventListener('click', () => box.close());
+    box.addEventListener('keydown', e => {
+      if (e.key === 'Escape') box.close();
+      if (e.key === 'Tab') {   // วนโฟกัสอยู่ในหน้าต่าง
+        const f = [...box.querySelectorAll('a[href], button, iframe')];
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+  btns.forEach(b => {
+    b.dataset.dpBound = '1';
+    b.hidden = false;
+    b.addEventListener('click', () => box.show(b));
+  });
+}
+
+/* -----------------------------------------------------------------------------
+   Dropdown แบบกำหนดหน้าตาเอง — ครอบ <select> ในแถบเครื่องมือ (ปี / เรียงลำดับ / จำนวนต่อหน้า)
+   รายการตัวเลือกของ <select> ปกติแต่งหน้าตาไม่ได้ (เบราว์เซอร์วาดเอง พื้นฟ้า) จึงสร้างปุ่ม + listbox แทน
+   - <select> เดิมยังอยู่ (ซ่อน) เป็นตัวเก็บค่า เปลี่ยนค่าแล้วส่ง event "change" เหมือนเดิม — โค้ดที่ฟังอยู่ไม่ต้องแก้
+   - คีย์บอร์ด: Enter/Space/↓ เปิด, ↑↓ Home End เลื่อน, Enter เลือก, Esc/Tab ปิด, พิมพ์อักษรแรกเพื่อกระโดด
+   - เรียกซ้ำได้ (ข้าม select ที่ครอบแล้ว) — ใช้หลังสร้างเนื้อหาใหม่ เช่น ตัวแบ่งหน้า
+   -------------------------------------------------------------------------- */
+const UI_SELECT_TARGETS = '.doc-year-pill select, .doc-field select, .doc-pager-size select, .kb-select select, .kb-per select, select.ui-select';
+let uiSelectSeq = 0;
+
+function enhanceSelects(root = document) {
+  root.querySelectorAll(UI_SELECT_TARGETS).forEach(sel => {
+    if (sel.dataset.uiSelect === '1' || sel.multiple) return;
+    sel.dataset.uiSelect = '1';
+    const id = `ui-select-${++uiSelectSeq}`;
+    const wrap = document.createElement('span');
+    wrap.className = 'ui-select';
+    sel.parentNode.insertBefore(wrap, sel);
+    wrap.appendChild(sel);
+    sel.classList.add('ui-select-native');
+    sel.tabIndex = -1;
+    sel.setAttribute('aria-hidden', 'true');
+
+    const label = sel.getAttribute('aria-label')
+      || sel.closest('label')?.querySelector('.sr-only, span')?.textContent?.trim()
+      || sel.closest('label')?.childNodes[0]?.textContent?.trim() || '';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ui-select-btn';
+    btn.setAttribute('aria-haspopup', 'listbox');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', `${id}-list`);
+    btn.innerHTML = `<span class="ui-select-value"></span>${icon('i-chevron', 'icon ui-select-caret')}`;
+    const list = document.createElement('ul');
+    list.className = 'ui-select-list';
+    list.id = `${id}-list`;
+    list.setAttribute('role', 'listbox');
+    list.tabIndex = -1;
+    list.hidden = true;
+    if (label) { btn.setAttribute('aria-label', `${label}: ${sel.selectedOptions[0]?.text || ''}`); list.setAttribute('aria-label', label); }
+    wrap.append(btn, list);
+
+    let active = sel.selectedIndex;
+    const opts = () => [...list.querySelectorAll('[role="option"]')];
+    const render = () => {
+      list.innerHTML = [...sel.options].map((o, i) => `
+        <li role="option" id="${id}-o${i}" data-index="${i}" aria-selected="${i === sel.selectedIndex}"${o.disabled ? ' aria-disabled="true"' : ''}>
+          <span>${o.text.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]))}</span>${icon('i-check', 'icon ui-select-check')}
+        </li>`).join('');
+      btn.querySelector('.ui-select-value').textContent = sel.selectedOptions[0]?.text || '';
+      if (label) btn.setAttribute('aria-label', `${label}: ${sel.selectedOptions[0]?.text || ''}`);
+    };
+    const setActive = i => {
+      const all = opts();
+      if (!all.length) return;
+      active = Math.max(0, Math.min(all.length - 1, i));
+      all.forEach((li, k) => li.classList.toggle('is-active', k === active));
+      list.setAttribute('aria-activedescendant', all[active].id);
+      all[active].scrollIntoView({ block: 'nearest' });
+    };
+    const open = () => {
+      if (!list.hidden) return;
+      render();
+      list.hidden = false;
+      wrap.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+      // ชิดขวาถ้าล้นจอ
+      wrap.classList.toggle('is-right', wrap.getBoundingClientRect().left + list.offsetWidth > window.innerWidth - 8);
+      setActive(sel.selectedIndex);
+      list.focus({ preventScroll: true });
+    };
+    const close = (focusBtn = true) => {
+      if (list.hidden) return;
+      list.hidden = true;
+      wrap.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+      if (focusBtn) btn.focus({ preventScroll: true });
+    };
+    const choose = i => {
+      const o = sel.options[i];
+      if (!o || o.disabled) return;
+      const changed = sel.selectedIndex !== i;
+      sel.selectedIndex = i;
+      render();
+      close();
+      if (changed) sel.dispatchEvent(new Event('change', { bubbles: true }));
+    };
+
+    btn.addEventListener('click', () => (list.hidden ? open() : close()));
+    btn.addEventListener('keydown', e => {
+      if (['ArrowDown', 'ArrowUp', 'Enter', ' '].includes(e.key)) { e.preventDefault(); open(); }
+    });
+    list.addEventListener('click', e => {
+      const li = e.target.closest('[role="option"]');
+      if (li) choose(Number(li.dataset.index));
+    });
+    list.addEventListener('mousemove', e => {
+      const li = e.target.closest('[role="option"]');
+      if (li && Number(li.dataset.index) !== active) setActive(Number(li.dataset.index));
+    });
+    list.addEventListener('keydown', e => {
+      const n = opts().length;
+      if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
+      else if (e.key === 'Home') { e.preventDefault(); setActive(0); }
+      else if (e.key === 'End') { e.preventDefault(); setActive(n - 1); }
+      else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(active); }
+      else if (e.key === 'Escape') { e.preventDefault(); close(); }
+      else if (e.key === 'Tab') close(false);
+      else if (e.key.length === 1) {
+        const k = e.key.toLowerCase();
+        const start = (active + 1) % n;
+        for (let j = 0; j < n; j++) {
+          const idx = (start + j) % n;
+          if (sel.options[idx].text.trim().toLowerCase().startsWith(k)) { setActive(idx); break; }
+        }
+      }
+    });
+    document.addEventListener('pointerdown', e => { if (!wrap.contains(e.target)) close(false); });
+    // ค่าเปลี่ยนจากโค้ดอื่น (เช่น ปุ่มล้างค่า) — อัปเดตข้อความบนปุ่ม
+    sel.addEventListener('change', render);
+    render();
+  });
+}
+
+/* เมนูลัดในหน้า (block "anchor-nav") — ไฮไลต์หัวข้อที่กำลังอ่าน (aria-current) ขณะเลื่อน
+   จอแคบ: เมนูเลื่อนแนวนอนได้ เลื่อนลิงก์ที่ไฮไลต์ให้อยู่ในมุมมองอัตโนมัติ */
+function initAnchorNav() {
+  document.querySelectorAll('[data-anchor-nav]').forEach(nav => {
+    if (nav.dataset.anBound === '1') return;
+    nav.dataset.anBound = '1';
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const targets = links.map(a => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter(Boolean);
+    if (!targets.length || !('IntersectionObserver' in window)) return;
+    const list = nav.querySelector('ul');
+    const setActive = id => links.forEach(a => {
+      const on = a.hash.slice(1) === id;
+      if (on) {
+        a.setAttribute('aria-current', 'true');
+        // เลื่อนเมนูแนวนอนเฉพาะในแถบเมนูเอง (ไม่ใช้ scrollIntoView เพื่อไม่ให้ทั้งหน้าเลื่อนตาม)
+        if (list && list.scrollWidth > list.clientWidth) {
+          list.scrollTo({ left: a.offsetLeft - list.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' });
+        }
+      } else a.removeAttribute('aria-current');
+    });
+    const visible = new Map();
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => visible.set(e.target.id, e.isIntersecting));
+      const current = targets.find(t => visible.get(t.id));
+      if (current) setActive(current.id);
+      // ยังเลื่อนไม่ถึงหัวข้อแรก (อยู่ที่ hero) — ไม่ไฮไลต์อะไร
+      else if (targets[0].getBoundingClientRect().top > window.innerHeight * 0.45) setActive('');
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    targets.forEach(t => io.observe(t));
+  });
+}
+
 /* แถบเมนูย่อยของหมวด — จอใหญ่เปิดค้าง จอเล็ก (< 1024px) พับไว้ แตะเพื่อเปิด */
 function initSectionNav() {
   const wide = window.matchMedia('(min-width: 1024px)').matches;
@@ -1135,6 +1663,10 @@ function initShare() {
     if (kind === 'facebook') el.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
     if (kind === 'line') el.href = `https://social-plugins.line.me/lineit/share?url=${url}`;
     if (kind === 'x') el.href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+    if (kind === 'print') {   // ปุ่ม "พิมพ์" ในหัวหน้าเพจข่าว
+      el.addEventListener('click', () => window.print());
+      return;
+    }
     if (kind === 'copy') {
       el.addEventListener('click', async () => {
         const status = el.parentElement.querySelector('[data-share-status]');
@@ -1248,7 +1780,9 @@ function initComponents() {
   initFixedHeader();
   initScrollTop();
   initChat();
-  initThaiDigits();
+  // ภาษาไทย: แปลงเลขเป็นเลขไทย · ภาษาอังกฤษ: โหลดคำแปลแล้วแปลข้อความทั้งหน้า (ไม่แปลงเลขไทย)
+  if (ORST_LANG === 'en') I18N.load().then(I18N.start);
+  else initThaiDigits();
 }
 
 /* =============================================================================
@@ -1298,6 +1832,73 @@ if (document.readyState === 'loading') {
   initComponents();
 }
 
+/* ---------- เครื่องเล่นวิดีโอ YouTube (ป๊อปอัป) ใช้ได้ทุกหน้า ----------
+   ลิงก์ที่มี data-yt="<รหัส YouTube>" (+ data-yt-title) กดแล้วเล่นในป๊อปอัป — ใช้ youtube-nocookie (ไม่ตั้งคุกกี้จนกว่าจะกดเล่น)
+   ลิงก์ยังชี้ไป YouTube จริง: เปิด JavaScript ไม่ได้ / กด Ctrl/⌘ = เปิดแท็บใหม่ตามปกติ
+   ผูก event ครั้งเดียวที่ document — วิดีโอที่วาดทีหลัง (หน้า JSON / แบ่งหน้า) ใช้ได้ทันที */
+function initVideoPlayer() {
+  if (document.documentElement.dataset.ytBound === '1') return;
+  document.documentElement.dataset.ytBound = '1';
+  let box = null;
+  let last = null;
+
+  const close = () => {
+    if (!box || box.hidden) return;
+    box.hidden = true;
+    box.querySelector('iframe').src = 'about:blank';
+    document.documentElement.classList.remove('yt-player-open');
+    last?.focus();
+  };
+
+  const open = (id, title, trigger) => {
+    if (!box) {
+      box = document.createElement('div');
+      box.className = 'yt-player';
+      box.hidden = true;
+      box.setAttribute('role', 'dialog');
+      box.setAttribute('aria-modal', 'true');
+      box.setAttribute('aria-labelledby', 'yt-player-title');
+      box.innerHTML = `
+        <div class="yt-player-backdrop" data-yt-close></div>
+        <div class="yt-player-box">
+          <div class="yt-player-bar">
+            <strong id="yt-player-title"></strong>
+            <a class="yt-player-ext" href="#" target="_blank" rel="noopener noreferrer">ดูบน YouTube<span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
+            <button type="button" class="yt-player-x" data-yt-close aria-label="ปิดวิดีโอ">${icon('i-x')}</button>
+          </div>
+          <div class="yt-player-frame"><iframe title="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src="about:blank"></iframe></div>
+        </div>`;
+      document.body.append(box);
+      box.addEventListener('click', e => { if (e.target.closest('[data-yt-close]')) close(); });
+      box.addEventListener('keydown', e => {
+        if (e.key === 'Escape') close();
+        if (e.key === 'Tab') {   // กักโฟกัสไว้ในป๊อปอัป
+          const f = [...box.querySelectorAll('a[href], button, iframe')];
+          const i = f.indexOf(document.activeElement);
+          if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+          else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+        }
+      });
+    }
+    last = trigger;
+    box.querySelector('#yt-player-title').textContent = title;
+    box.querySelector('.yt-player-ext').href = `https://www.youtube.com/watch?v=${encodeURIComponent(id)}`;
+    const frame = box.querySelector('iframe');
+    frame.title = `วิดีโอ: ${title}`;
+    frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0`;
+    box.hidden = false;
+    document.documentElement.classList.add('yt-player-open');
+    box.querySelector('.yt-player-x').focus();
+  };
+
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-yt]');
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    open(a.dataset.yt, a.dataset.ytTitle || '', a);
+  });
+}
+
 window.orstHeader = {
   basePath,
   navItems,
@@ -1310,7 +1911,11 @@ window.orstHeader = {
   bindDynamicContent() {
     initCompactFAQ();
     initDocLists();
+    enhanceSelects();
     initLightbox();
+    initDocPreview();
+    initVideoPlayer();
+    initAnchorNav();
     initShare();
     initSectionNav();
     initMediaTabs();

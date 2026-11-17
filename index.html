@@ -256,7 +256,7 @@
             <h2 id="svc1-title">บริการวิชาการของสำนักงาน</h2>
             <p>ระบบและช่องทางต่าง ๆ ที่ให้บริการประชาชน</p>
           </div>
-          <a class="view-all" href="services.html">ดูบริการทั้งหมด →</a>
+          <a class="view-all" href="services.html" aria-label="ดูบริการทั้งหมด">ดูทั้งหมด <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         </div>
 
         <div class="svc-card-grid reveal">
@@ -303,9 +303,7 @@
             <p>รวมสารานุกรม อินโฟกราฟิก และสื่อมัลติมีเดีย เพื่อการเรียนรู้อย่างต่อเนื่อง</p>
           </div>
 
-          <a class="view-all media-view-all-link" id="media-view-all-link" href="knowledge.html">
-            ดูอินโฟกราฟิกทั้งหมด →
-          </a>
+          <a class="view-all media-view-all-link" id="media-view-all-link" href="knowledge.html" aria-label="ดูอินโฟกราฟิกทั้งหมด">ดูทั้งหมด <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         </div>
 
         <div class="media-tabs knowledge-hub-tabs reveal">
@@ -571,66 +569,95 @@
             data-media-panel="multimedia" hidden>
 
 
-            <!-- วิดีโอเด่น + เพลย์ลิสต์: กดรายการด้านขวาเพื่อสลับวิดีโอเด่น (initMediaPlaylist ใน home.js) -->
+            <!-- วิดีโอจากช่อง YouTube ทางการ "Ratchabandit Thai Channel" (ลิงก์จากเว็บเดิม orst.go.th)
+                 กดภาพ = เล่นในหน้า (youtube-nocookie) · กดรายการขวา = สลับวิดีโอ (initMediaPlaylist ใน home.js)
+                 ไม่มี JS / กด Ctrl = เปิด YouTube ในแท็บใหม่ -->
             <div class="mm-stage">
-              <a class="mm-feature" href="#" data-mm-feature>
-                <span class="mm-feature-media">
-                  <img src="assets/images/Mult-01.png" alt="" width="1672" height="941" loading="lazy" data-mm-feature-img>
-                </span>
+              <div class="mm-feature" data-mm-feature>
+                <a class="mm-feature-media" href="https://www.youtube.com/watch?v=trzQRPLZ9Xw" target="_blank" rel="noopener" data-mm-play data-mm-id="trzQRPLZ9Xw"
+                  aria-label="เล่นวิดีโอ: คำถิ่น คำกวี : คลังคำสำหรับภาษาไทย">
+                  <img src="assets/images/orst/video/trzQRPLZ9Xw.jpg" alt="" width="960" height="540" loading="lazy" data-mm-feature-img>
+                  <span class="mm-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                </a>
                 <span class="mm-feature-body">
-                  <span class="mm-kicker">สื่อมัลติมีเดียแนะนำ</span>
-                  <strong class="mm-feature-title" data-mm-feature-title>ภาษาไทย: มรดกและการถ่ายทอดจากรุ่นสู่รุ่น</strong>
-                  <span class="mm-cta">รับชมวิดีโอ <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+                  <span class="mm-kicker" data-mm-feature-kind>การเสวนาทางวิชาการ</span>
+                  <strong class="mm-feature-title" data-mm-feature-title>คำถิ่น คำกวี : คลังคำสำหรับภาษาไทย</strong>
+                  <a class="mm-cta" href="https://www.youtube.com/watch?v=trzQRPLZ9Xw" target="_blank" rel="noopener" data-mm-feature-link>รับชมบน YouTube <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
                 </span>
-              </a>
+              </div>
 
               <div class="mm-playlist">
                 <div class="mm-playlist-head">
                   <strong>รายการวิดีโอ</strong>
-                  <span>4 เรื่อง</span>
+                  <span>๖ เรื่อง</span>
                 </div>
                 <ol class="mm-list">
                   <li>
                     <button class="mm-item is-active" type="button" aria-pressed="true"
-                      data-mm-src="assets/images/Mult-01.png" data-mm-title="ภาษาไทย: มรดกและการถ่ายทอดจากรุ่นสู่รุ่น">
-                      <span class="mm-thumb"><img src="assets/images/Mult-01.png" alt="" width="1672" height="941" loading="lazy"></span>
+                      data-mm-id="trzQRPLZ9Xw" data-mm-src="assets/images/orst/video/trzQRPLZ9Xw.jpg" data-mm-title="คำถิ่น คำกวี : คลังคำสำหรับภาษาไทย" data-mm-kind="การเสวนาทางวิชาการ">
+                      <span class="mm-thumb"><img src="assets/images/orst/video/trzQRPLZ9Xw.jpg" alt="" width="960" height="540" loading="lazy"></span>
                       <span class="mm-item-text">
-                        <span class="mm-no">01</span>
-                        <span class="mm-item-title">ภาษาไทย: มรดกและการถ่ายทอดจากรุ่นสู่รุ่น</span>
+                        <span class="mm-no">01 · การเสวนาทางวิชาการ</span>
+                        <span class="mm-item-title">คำถิ่น คำกวี : คลังคำสำหรับภาษาไทย</span>
                       </span>
                     </button>
                   </li>
                   <li>
                     <button class="mm-item" type="button" aria-pressed="false"
-                      data-mm-src="assets/images/Mult-02.png" data-mm-title="บทบาทของราชบัณฑิตยสภากับสังคมไทย">
-                      <span class="mm-thumb"><img src="assets/images/Mult-02.png" alt="" width="1672" height="941" loading="lazy"></span>
+                      data-mm-id="XSkbyFZfdZk" data-mm-src="assets/images/orst/video/XSkbyFZfdZk.jpg" data-mm-title="รัฐบัญญัติคนต่างด้าวชาติศัตรู : จากจอห์น แอดัมส์ ถึงโดนัลด์ ทรัมป์" data-mm-kind="บทความทางวิชาการ">
+                      <span class="mm-thumb"><img src="assets/images/orst/video/XSkbyFZfdZk.jpg" alt="" width="960" height="540" loading="lazy"></span>
                       <span class="mm-item-text">
-                        <span class="mm-no">02</span>
-                        <span class="mm-item-title">บทบาทของราชบัณฑิตยสภากับสังคมไทย</span>
+                        <span class="mm-no">02 · บทความทางวิชาการ</span>
+                        <span class="mm-item-title">รัฐบัญญัติคนต่างด้าวชาติศัตรู : จากจอห์น แอดัมส์ ถึงโดนัลด์ ทรัมป์</span>
                       </span>
                     </button>
                   </li>
                   <li>
                     <button class="mm-item" type="button" aria-pressed="false"
-                      data-mm-src="assets/images/Mult-03.png" data-mm-title="พาทีเที่ยว: ศิลปวัฒนธรรมไทยที่ควรรู้">
-                      <span class="mm-thumb"><img src="assets/images/Mult-03.png" alt="" width="1672" height="941" loading="lazy"></span>
+                      data-mm-id="eGVzoA2DxOQ" data-mm-src="assets/images/orst/video/eGVzoA2DxOQ.jpg" data-mm-title="ความเป็นมาของชุดแบบอักษร (font) อักษรโบราณ และการกำหนดมาตรฐานสากลเกี่ยวกับอักษรไทย" data-mm-kind="อบรมเชิงปฏิบัติการ ตอนที่ ๑">
+                      <span class="mm-thumb"><img src="assets/images/orst/video/eGVzoA2DxOQ.jpg" alt="" width="960" height="540" loading="lazy"></span>
                       <span class="mm-item-text">
-                        <span class="mm-no">03</span>
-                        <span class="mm-item-title">พาทีเที่ยว: ศิลปวัฒนธรรมไทยที่ควรรู้</span>
+                        <span class="mm-no">03 · อบรมเชิงปฏิบัติการ ตอนที่ ๑</span>
+                        <span class="mm-item-title">ความเป็นมาของชุดแบบอักษร (font) อักษรโบราณ และการกำหนดมาตรฐานสากลเกี่ยวกับอักษรไทย</span>
                       </span>
                     </button>
                   </li>
                   <li>
                     <button class="mm-item" type="button" aria-pressed="false"
-                      data-mm-src="assets/images/Mult-04.png" data-mm-title="การใช้ภาษาไทยในยุคดิจิทัลอย่างถูกต้อง">
-                      <span class="mm-thumb"><img src="assets/images/Mult-04.png" alt="" width="1672" height="941" loading="lazy"></span>
+                      data-mm-id="SylEqoN1B-c" data-mm-src="assets/images/orst/video/SylEqoN1B-c.jpg" data-mm-title="การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย" data-mm-kind="อบรมเชิงปฏิบัติการ">
+                      <span class="mm-thumb"><img src="assets/images/orst/video/SylEqoN1B-c.jpg" alt="" width="960" height="540" loading="lazy"></span>
                       <span class="mm-item-text">
-                        <span class="mm-no">04</span>
-                        <span class="mm-item-title">การใช้ภาษาไทยในยุคดิจิทัลอย่างถูกต้อง</span>
+                        <span class="mm-no">04 · อบรมเชิงปฏิบัติการ</span>
+                        <span class="mm-item-title">การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="mm-item" type="button" aria-pressed="false"
+                      data-mm-id="eKjspzNSnx0" data-mm-src="assets/images/orst/video/eKjspzNSnx0.jpg" data-mm-title="แนวทางการแก้ปัญหาเด็กและเยาวชนกับชุมชน" data-mm-kind="วีดิทัศน์">
+                      <span class="mm-thumb"><img src="assets/images/orst/video/eKjspzNSnx0.jpg" alt="" width="960" height="540" loading="lazy"></span>
+                      <span class="mm-item-text">
+                        <span class="mm-no">05 · วีดิทัศน์</span>
+                        <span class="mm-item-title">แนวทางการแก้ปัญหาเด็กและเยาวชนกับชุมชน</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="mm-item" type="button" aria-pressed="false"
+                      data-mm-id="okhBOJLB8VI" data-mm-src="assets/images/orst/video/okhBOJLB8VI.jpg" data-mm-title="การประเมินและพัฒนานโยบายสาธารณะ กรณี (ร่าง) พระราชบัญญัติการประกอบธุรกิจสถานบันเทิงครบวงจร" data-mm-kind="บทความทางวิชาการ">
+                      <span class="mm-thumb"><img src="assets/images/orst/video/okhBOJLB8VI.jpg" alt="" width="960" height="540" loading="lazy"></span>
+                      <span class="mm-item-text">
+                        <span class="mm-no">06 · บทความทางวิชาการ</span>
+                        <span class="mm-item-title">การประเมินและพัฒนานโยบายสาธารณะ กรณี (ร่าง) พระราชบัญญัติการประกอบธุรกิจสถานบันเทิงครบวงจร</span>
                       </span>
                     </button>
                   </li>
                 </ol>
+                <a class="mm-more" href="https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>
+                  <span>ดูวิดีโอทั้งหมดบนช่อง YouTube<span class="sr-only"> (เปิดในแท็บใหม่)</span></span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                </a>
               </div>
             </div>
           </div>
@@ -676,9 +703,7 @@
           </button>
         </div>
 
-      <a href="general-news.html" class="view-all" id="news-view-all-link">
-        ดูข่าวเพิ่มเติม →
-      </a>
+      <a href="general-news.html" class="view-all" id="news-view-all-link" aria-label="ดูข่าวเพิ่มเติม">ดูทั้งหมด <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
     </div>
 
     <div class="news-events-layout reveal">
@@ -693,7 +718,7 @@
                 <article class="news-mosaic-feature">
                   <a href="news-69hep1411031.html" class="news-mosaic-feature-img" aria-label="อ่านข่าวพิธีบำเพ็ญกุศลปัญญาสมวาร เพื่ออุทิศถวายแด่ สมเด็จพระเจ้าลูกเธอ…">
                     <img src="assets/images/orst/news/data0005-00005374-960.jpg" alt="พิธีบำเพ็ญกุศลปัญญาสมวาร เพื่ออุทิศถวายแด่ สมเด็จพระเจ้าลูกเธอ เจ้าฟ้าพัชรกิติยาภา นเรนทิราเทพยวดี…" loading="lazy">
-                    <span class="news-type-badge">ข่าวประชาสัมพันธ์</span>
+                    <span class="news-type-badge">ข่าวเด่น</span>
                   </a>
 
                   <div class="news-mosaic-feature-body">
@@ -705,7 +730,7 @@
                     <p>
                       ภาพประกอบ 11 ภาพ
                     </p>
-                    <a class="news-primary-action" href="news-69hep1411031.html">อ่านต่อ →</a>
+                    <a class="news-primary-action" href="news-69hep1411031.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a>
                   </div>
                 </article>
 
@@ -714,66 +739,66 @@
                     <a href="news-69gxi2522022.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005324-960.jpg" alt="สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-07-24" aria-label="24 กรกฎาคม 2569"><b>24</b><span>ก.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวประชาสัมพันธ์</span>
                       <h4>สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว</h4>
                       <p>เมื่อวันที่ ๒๒ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๓.๐๐ น. ณ โถงชั้น</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-07-24">24 กรกฎาคม 2569</time><a href="news-69gxi2522022.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวประชาสัมพันธ์</span><a href="news-69gxi2522022.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69gti3132000.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005306-960.jpg" alt="สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-07-20" aria-label="20 กรกฎาคม 2569"><b>20</b><span>ก.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวประชาสัมพันธ์</span>
                       <h4>สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙</h4>
                       <p>เมื่อวันพุธที่ ๑๕ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๐.๐๐ น. ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นายกราชบัณฑิตยสภา…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-07-20">20 กรกฎาคม 2569</time><a href="news-69gti3132000.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวประชาสัมพันธ์</span><a href="news-69gti3132000.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69fdn3044019.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005292-960.jpg" alt="ช่องทางแจ้งเรื่องร้องเรียนการทุจริตของสำนักงาน ป.ป.ช. และสำนักงาน ป.ป.ท." loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-07-20" aria-label="20 กรกฎาคม 2569"><b>20</b><span>ก.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวประชาสัมพันธ์</span>
                       <h4>ช่องทางแจ้งเรื่องร้องเรียนการทุจริตของสำนักงาน ป.ป.ช. และสำนักงาน ป.ป.ท.</h4>
                       <p>ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-07-20">20 กรกฎาคม 2569</time><a href="news-69fdn3044019.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวประชาสัมพันธ์</span><a href="news-69fdn3044019.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69fdi2503034.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005277-960.jpg" alt="การประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒/๒๕๖๙" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-06-30" aria-label="30 มิถุนายน 2569"><b>30</b><span>มิ.ย. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวประชาสัมพันธ์</span>
                       <h4>การประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒/๒๕๖๙</h4>
                       <p>สำนักงานราชบัณฑิตยสภาจัดการประชุมระดับกรม (Town Hall Meeting) ครั้งที่ ๒ มุ่งถ่ายทอดนโยบายองค์กร…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-06-30">30 มิถุนายน 2569</time><a href="news-69fdi2503034.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวประชาสัมพันธ์</span><a href="news-69fdi2503034.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69fem4020063.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005229-960.jpg" alt="สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-06-05" aria-label="5 มิถุนายน 2569"><b>5</b><span>มิ.ย. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวประชาสัมพันธ์</span>
                       <h4>สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙</h4>
                       <p>เมื่อวันที่ ๔ มิถุนายน พ.ศ. ๒๕๖๙ เวลา ๑๕.๐๐ น. ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-06-05">5 มิถุนายน 2569</time><a href="news-69fem4020063.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวประชาสัมพันธ์</span><a href="news-69fem4020063.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69fcl0048005.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005221-960.jpg" alt="สำนักงานราชบัณฑิตยสภาร่วงลงนามถวายพระพร" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-06-03" aria-label="3 มิถุนายน 2569"><b>3</b><span>มิ.ย. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวประชาสัมพันธ์</span>
                       <h4>สำนักงานราชบัณฑิตยสภาร่วงลงนามถวายพระพร</h4>
                       <p>วันนี้ (๓ มิถุนายน ๒๕๖๙) เป็นผู้แทนนำข้าราชการและเจ้าหน้านางสาวอารี พลดี เลขานุการกรม…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-06-03">3 มิถุนายน 2569</time><a href="news-69fcl0048005.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวประชาสัมพันธ์</span><a href="news-69fcl0048005.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                 </div>
@@ -788,7 +813,7 @@
                 <article class="news-mosaic-feature">
                   <a href="news-69hsi4542053.html" class="news-mosaic-feature-img" aria-label="อ่านข่าวประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font)…">
                     <img src="assets/images/orst/news/data0005-00005399-960.jpg" alt="ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย" loading="lazy">
-                    <span class="news-type-badge">อบรมและเสวนา</span>
+                    <span class="news-type-badge">ข่าวเด่น</span>
                   </a>
 
                   <div class="news-mosaic-feature-body">
@@ -800,7 +825,7 @@
                     <p>
                       ภาพประกอบ 2 ภาพ · เอกสารแนบ 1 ไฟล์
                     </p>
-                    <a class="news-primary-action" href="news-69hsi4542053.html">อ่านต่อ →</a>
+                    <a class="news-primary-action" href="news-69hsi4542053.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a>
                   </div>
                 </article>
 
@@ -809,66 +834,66 @@
                     <a href="news-69hni1055034.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005386-960.jpg" alt="โครงการราชบัณฑิตยสภานำความรู้สู่สังคม การเสวนาวิชาการ เรื่อง “ความหลากหลายทางชีวภาพ: สินทรัพย์เพื่อการพัฒนาเศรษฐกิจและ…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-08-14" aria-label="14 สิงหาคม 2569"><b>14</b><span>ส.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">อบรมและเสวนา</span>
                       <h4>โครงการราชบัณฑิตยสภานำความรู้สู่สังคม การเสวนาวิชาการ เรื่อง “ความหลากหลายทางชีวภาพ: สินทรัพย์เพื่อการพัฒนาเศรษฐกิจและ สังคมแห่งอนาคต”</h4>
                       <p>ภาพประกอบ 7 ภาพ</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-08-14">14 สิงหาคม 2569</time><a href="news-69hni1055034.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">อบรมและเสวนา</span><a href="news-69hni1055034.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69hep0842063.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005370-960.jpg" alt="ประกาศรายชื่อผู้สมัครเข้าร่วมโครงการค่ายเยาวชนสร้างสรรค์วรรณกรรม ประจำปีงบประมาณ พ.ศ. 2569" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-08-05" aria-label="5 สิงหาคม 2569"><b>5</b><span>ส.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">อบรมและเสวนา</span>
                       <h4>ประกาศรายชื่อผู้สมัครเข้าร่วมโครงการค่ายเยาวชนสร้างสรรค์วรรณกรรม ประจำปีงบประมาณ พ.ศ. 2569</h4>
                       <p>ภาพประกอบ 2 ภาพ · เอกสารแนบ 1 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-08-05">5 สิงหาคม 2569</time><a href="news-69hep0842063.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">อบรมและเสวนา</span><a href="news-69hep0842063.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69gjk0206009.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005295-960.jpg" alt="รายงานสรุปการจัดกิจกรรมโครงการ ๑๐๐ ปี ราชบัณฑิตยสภา สำนักวิทยาศาสตร์ ปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักวิทยาศาสตร์…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-07-10" aria-label="10 กรกฎาคม 2569"><b>10</b><span>ก.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">อบรมและเสวนา</span>
                       <h4>รายงานสรุปการจัดกิจกรรมโครงการ ๑๐๐ ปี ราชบัณฑิตยสภา สำนักวิทยาศาสตร์ ปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักวิทยาศาสตร์ ร่วมกับมหาวิทยาลัยเทคโนโลยีราชมงคลศรีวิชัย การสัมมนาทางวิชาการเรื่อง ปัญหาการกัดเซาะชายฝั่งของอ่าวไทยและแนวทางแก้ไขอย่างยั่งยืน</h4>
                       <p>ภาพประกอบ 9 ภาพ · เอกสารแนบ 1 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-07-10">10 กรกฎาคม 2569</time><a href="news-69gjk0206009.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">อบรมและเสวนา</span><a href="news-69gjk0206009.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-68lyo0509028.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005024-960.jpg" alt="ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง &quot;ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔&quot;…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2025-12-25" aria-label="25 ธันวาคม 2568"><b>25</b><span>ธ.ค. 68</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">อบรมและเสวนา</span>
                       <h4>ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง &quot;ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔&quot; และการเสวนาระดมความคิดเรื่อง ยุทธศาสตร์ราชบัณฑิตยสภา ๕ ปี ครั้งที่ ๓ เนื่องในโอกาส ๑๐๐ ปีราชบัณฑิตยสภา</h4>
                       <p>เมื่อวันที่ ๒๔ ธันวาคม ๒๕๖๘ เวลา ๙.๐๐ น. ณ ห้องราชดำเนิน โรงแรมรอยัลปริ้นเซส หลานหลวง กรุงเทพมหานคร…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2025-12-25">25 ธันวาคม 2568</time><a href="news-68lyo0509028.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">อบรมและเสวนา</span><a href="news-68lyo0509028.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-68hqi2156084.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0004-00004677-960.jpg" alt="คำตอบในการรักษาข้อเข่าเสื่อมคืออะไร ค้นหาคำตอบได้กับการบรรยายในโครงการราชบัณฑิตยสภานำความรู้สู่สังคม ประจำปีงบประมาณ…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2025-08-17" aria-label="17 สิงหาคม 2568"><b>17</b><span>ส.ค. 68</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">อบรมและเสวนา</span>
                       <h4>คำตอบในการรักษาข้อเข่าเสื่อมคืออะไร ค้นหาคำตอบได้กับการบรรยายในโครงการราชบัณฑิตยสภานำความรู้สู่สังคม ประจำปีงบประมาณ พ.ศ. ๒๕๖๘ ครั้งที่ ๙</h4>
                       <p>เรื่อง “ความจริงและความเชื่อในการรักษาข้อเข่าเสื่อม” โดย ศาสตราจารย์ นายแพทย์กีรติ เจริญชลวานิช</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2025-08-17">17 สิงหาคม 2568</time><a href="news-68hqi2156084.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">อบรมและเสวนา</span><a href="news-68hqi2156084.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-68hkp1453078.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0004-00004651-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกาศผลการประกวดรางวัลหนังสือวิชาการแปลดีเด่น…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2025-08-11" aria-label="11 สิงหาคม 2568"><b>11</b><span>ส.ค. 68</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">อบรมและเสวนา</span>
                       <h4>ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกาศผลการประกวดรางวัลหนังสือวิชาการแปลดีเด่น ตามโครงการอบรมทักษะการแปลขั้นสูงเพื่อการประกวดรางวัลหนังสือวิชาการแปลดีเด่น เนื่องในโอกาสมหามงคลเฉลิมพระชนมพรรษา ๖ รอบ ๒๘ กรกฎาคม ๒๕๖๗</h4>
                       <p>ภาพประกอบ 1 ภาพ</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2025-08-11">11 สิงหาคม 2568</time><a href="news-68hkp1453078.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">อบรมและเสวนา</span><a href="news-68hkp1453078.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                 </div>
@@ -883,7 +908,7 @@
                 <article class="news-mosaic-feature">
                   <a href="news-67lwp3919091.html" class="news-mosaic-feature-img" aria-label="อ่านข่าวสำนักงานราชบัณฑิตยสภาจัดกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศล…">
                     <img src="assets/images/orst/news/data0004-00004279-960.jpg" alt="สำนักงานราชบัณฑิตยสภาจัดกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศล เนื่องในวันคล้ายวันพระบรมราชสมภพ…" loading="lazy">
-                    <span class="news-type-badge">ข่าวกิจกรรม</span>
+                    <span class="news-type-badge">ข่าวเด่น</span>
                   </a>
 
                   <div class="news-mosaic-feature-body">
@@ -895,7 +920,7 @@
                     <p>
                       ภาพประกอบ 5 ภาพ
                     </p>
-                    <a class="news-primary-action" href="news-67lwp3919091.html">อ่านต่อ →</a>
+                    <a class="news-primary-action" href="news-67lwp3919091.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a>
                   </div>
                 </article>
 
@@ -904,66 +929,66 @@
                     <a href="news-65cqj0810081.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0002-00002523-960.jpg" alt="ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๕…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2022-03-17" aria-label="17 มีนาคม 2565"><b>17</b><span>มี.ค. 65</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวกิจกรรม</span>
                       <h4>ประกาศรายชื่อนักเรียนที่ผ่านเข้ารอบชิงชนะเลิศ กิจกรรมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๕ รอบชิงชนะเลิศ เพื่อเข้าร่วมแข่งขัน ในวันเสาร์ที่ ๒๖ มีนาคม พ.ศ. ๒๕๖๕ ดังแนบ</h4>
                       <p>ภาพประกอบ 2 ภาพ</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2022-03-17">17 มีนาคม 2565</time><a href="news-65cqj0810081.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวกิจกรรม</span><a href="news-65cqj0810081.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-65aln3717005.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0002-00002439-960.jpg" alt="ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2022-01-12" aria-label="12 มกราคม 2565"><b>12</b><span>ม.ค. 65</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวกิจกรรม</span>
                       <h4>ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕</h4>
                       <p>ขอเชิญโรงเรียนทั่วประเทศ ส่งนักเรียนระดับประถมศึกษาปีที่ ๕-๖ สมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2022-01-12">12 มกราคม 2565</time><a href="news-65aln3717005.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวกิจกรรม</span><a href="news-65aln3717005.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-64cyo5521081.html" class="news-mosaic-thumb">
                       <img src="assets/images/New-01.png" alt="ประกาศรายชื่อนักเรียนที่มีสิทธิ์เข้าร่วมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๔ รอบชิงชนะเลิศ" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2021-03-25" aria-label="25 มีนาคม 2564"><b>25</b><span>มี.ค. 64</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวกิจกรรม</span>
                       <h4>ประกาศรายชื่อนักเรียนที่มีสิทธิ์เข้าร่วมประกวดแข่งขันคัดลายมือสำหรับเยาวชน ประจำพุทธศักราช ๒๕๖๔ รอบชิงชนะเลิศ</h4>
                       <p></p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2021-03-25">25 มีนาคม 2564</time><a href="news-64cyo5521081.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวกิจกรรม</span><a href="news-64cyo5521081.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-63hyj1446063.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0001-00001961-960.jpg" alt="รัฐมนตรีประจำสำนักนายกรัฐมนตรีตรวจเยี่ยมและให้นโยบายสำนักงานราชบัณฑิตยสภา" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2020-08-26" aria-label="26 สิงหาคม 2563"><b>26</b><span>ส.ค. 63</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวกิจกรรม</span>
                       <h4>รัฐมนตรีประจำสำนักนายกรัฐมนตรีตรวจเยี่ยมและให้นโยบายสำนักงานราชบัณฑิตยสภา</h4>
                       <p>วันนี้ (๒๑ ส.ค. ๖๓) เวลา ๙.๐๐ น. นายอนุชา นาคาศัย รัฐมนตรีประจำสำนักนายกรัฐมนตรี…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2020-08-26">26 สิงหาคม 2563</time><a href="news-63hyj1446063.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวกิจกรรม</span><a href="news-63hyj1446063.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-63hqn2359047.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0001-00001939-960.jpg" alt="ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2020-08-17" aria-label="17 สิงหาคม 2563"><b>17</b><span>ส.ค. 63</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวกิจกรรม</span>
                       <h4>ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๔ ภาคใต้</h4>
                       <p>เมื่อวันที่ ๑๕ สิงหาคม พ.ศ. ๒๕๖๓ ที่ห้องแก้วสมุย ๑ โรงแรมแก้วสมุย จังหวัดสุราษฎร์ธานี นางสาวบุญธรรม กรานทอง…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2020-08-17">17 สิงหาคม 2563</time><a href="news-63hqn2359047.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวกิจกรรม</span><a href="news-63hqn2359047.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-63hqn2824081.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0001-00001953-960.jpg" alt="ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาคเหนือ" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2020-08-17" aria-label="17 สิงหาคม 2563"><b>17</b><span>ส.ค. 63</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ข่าวกิจกรรม</span>
                       <h4>ผลการประกวดเล่าเรื่อง “ภูมิปัญญาท้องถิ่น : ของกิน ของเล่น ของใช้” กลุ่มที่ ๒ ภาคเหนือ</h4>
                       <p>เมื่อวันที่ ๑๕ สิงหาคม พ.ศ. ๒๕๖๓ ที่ห้องเบญจรงค์ โรงแรมเวียงลคอร จังหวัดลำปาง ดร.ดวงตา ตันโช เลขาธิการราชบัณฑิตยสภา…</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2020-08-17">17 สิงหาคม 2563</time><a href="news-63hqn2824081.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ข่าวกิจกรรม</span><a href="news-63hqn2824081.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                 </div>
@@ -978,7 +1003,7 @@
                 <article class="news-mosaic-feature">
                   <a href="news-69kbj5538066.html" class="news-mosaic-feature-img" aria-label="อ่านข่าวประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก…">
                     <img src="assets/images/orst/news/data0005-00005462-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง…" loading="lazy">
-                    <span class="news-type-badge">ประกาศ</span>
+                    <span class="news-type-badge">ข่าวเด่น</span>
                   </a>
 
                   <div class="news-mosaic-feature-body">
@@ -990,7 +1015,7 @@
                     <p>
                       ภาพประกอบ 3 ภาพ
                     </p>
-                    <a class="news-primary-action" href="news-69kbj5538066.html">อ่านต่อ →</a>
+                    <a class="news-primary-action" href="news-69kbj5538066.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a>
                   </div>
                 </article>
 
@@ -999,66 +1024,66 @@
                     <a href="news-69jaj1403044.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005446-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-10-31" aria-label="31 ตุลาคม 2569"><b>31</b><span>ต.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ประกาศ</span>
                       <h4>ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ</h4>
                       <p>ภาพประกอบ 10 ภาพ · เอกสารแนบ 5 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-10-31">31 ตุลาคม 2569</time><a href="news-69jaj1403044.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ประกาศ</span><a href="news-69jaj1403044.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69jsh5647044.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005428-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง…" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-10-29" aria-label="29 ตุลาคม 2569"><b>29</b><span>ต.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ประกาศ</span>
                       <h4>ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”</h4>
                       <p>ภาพประกอบ 3 ภาพ · เอกสารแนบ 1 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-10-29">29 ตุลาคม 2569</time><a href="news-69jsh5647044.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ประกาศ</span><a href="news-69jsh5647044.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69jsn0030075.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005433-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-10-29" aria-label="29 ตุลาคม 2569"><b>29</b><span>ต.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ประกาศ</span>
                       <h4>ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง</h4>
                       <p>ภาพประกอบ 3 ภาพ · เอกสารแนบ 4 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-10-29">29 ตุลาคม 2569</time><a href="news-69jsn0030075.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ประกาศ</span><a href="news-69jsn0030075.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69jsm4847075.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005420-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-10-19" aria-label="19 ตุลาคม 2569"><b>19</b><span>ต.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ประกาศ</span>
                       <h4>ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์</h4>
                       <p>ภาพประกอบ 3 ภาพ · เอกสารแนบ 4 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-10-19">19 ตุลาคม 2569</time><a href="news-69jsm4847075.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ประกาศ</span><a href="news-69jsm4847075.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69jgi2510013.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005414-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-10-07" aria-label="7 ตุลาคม 2569"><b>7</b><span>ต.ค. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ประกาศ</span>
                       <h4>ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์</h4>
                       <p>ภาพประกอบ 3 ภาพ · เอกสารแนบ 1 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-10-07">7 ตุลาคม 2569</time><a href="news-69jgi2510013.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ประกาศ</span><a href="news-69jgi2510013.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                   <article class="news-mosaic-card">
                     <a href="news-69iwo1639084.html" class="news-mosaic-thumb">
                       <img src="assets/images/orst/news/data0005-00005407-960.jpg" alt="ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง" loading="lazy">
                     </a>
+                    <time class="news-date-badge" datetime="2026-09-23" aria-label="23 กันยายน 2569"><b>23</b><span>ก.ย. 69</span></time>
                     <div class="news-mosaic-card-body">
-                      <span class="news-mini-type">ประกาศ</span>
                       <h4>ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง</h4>
                       <p>ภาพประกอบ 3 ภาพ · เอกสารแนบ 2 ไฟล์</p>
-                      <div class="news-mini-foot"><time class="news-mini-date" datetime="2026-09-23">23 กันยายน 2569</time><a href="news-69iwo1639084.html">อ่านต่อ →</a></div>
+                      <div class="news-mini-foot"><span class="news-mini-type">ประกาศ</span><a href="news-69iwo1639084.html">อ่านต่อ <span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span></a></div>
                     </div>
                   </article>
                 </div>
@@ -1098,7 +1123,7 @@
 ">เลือกบริการที่ต้องการ ยื่นคำขอ และติดตามสถานะได้อย่างชัดเจน</p>
           </div>
 
-          <a class="view-all" href="services.html">ดูคู่มือบริการทั้งหมด →</a>
+          <a class="view-all" href="services.html" aria-label="ดูคู่มือบริการทั้งหมด">ดูทั้งหมด <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         </div>
 
         <div class="service-directory reveal">
@@ -1252,9 +1277,7 @@
             <p>เชื่อมโยงแหล่งข้อมูลและระบบสารสนเทศที่สนับสนุนองค์ความรู้ของชาติ</p>
           </div>
 
-          <a class="view-all" href="#" aria-label="ดูหน่วยงานและระบบที่เกี่ยวข้องทั้งหมด">
-            ดูทั้งหมด →
-          </a>
+          <a class="view-all" href="#" aria-label="ดูหน่วยงานและระบบที่เกี่ยวข้องทั้งหมด">ดูทั้งหมด <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         </div>
 
         <div class="network-marquee reveal" aria-label="โลโก้หน่วยงานและระบบที่เกี่ยวข้อง">
@@ -1371,7 +1394,7 @@
           <h2>คำถามที่พบบ่อย</h2>
           <p>คำตอบสั้น ๆ สำหรับการเริ่มใช้งานเว็บไซต์และบริการสำคัญ พร้อมกำหนดการกิจกรรมที่กำลังจะมาถึง</p>
         </div>
-        <a class="view-all" href="contact.html#contact-form">ส่งคำถามถึงเจ้าหน้าที่ →</a>
+        <a class="view-all" href="contact.html#contact-form">ส่งคำถามถึงเจ้าหน้าที่ <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       </div>
 
       <div class="qa-list">
@@ -1430,180 +1453,32 @@
           <h2 id="cal-section-title">ปฏิทินกิจกรรม</h2>
           <p>กิจกรรม อบรม และสัมมนาที่กำลังจะมาถึง กดวันที่ในปฏิทินเพื่อดูรายละเอียด</p>
         </div>
-        <a class="view-all" href="news.html">ดูกิจกรรมทั้งหมด →</a>
+        <a class="view-all" href="event-calendar.html" aria-label="ดูปฏิทินกิจกรรมทั้งหมด">ดูทั้งหมด <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       </div>
 
-      <aside class="events-calendar-card cal" aria-labelledby="cal-section-title">
+      <aside class="events-calendar-card cal" aria-labelledby="cal-section-title" data-cal-src="content/events.json">
         <div class="cal-head">
           <h3 id="cal-title">กำหนดการกิจกรรม</h3>
           <a href="news.html">ดูทั้งหมด <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         </div>
 
+        <!-- ปฏิทินกิจกรรม: สร้างจาก content/events.json (initEventCalendar ใน home.js)
+             ข้อมูลจริงจาก Google Calendar ของหน่วยงานที่เว็บเดิมฝังไว้ (tools/scrape-old-site/step7_calendar.py)
+             ตอนต่อ CMS ให้ CMS เขียนไฟล์/endpoint รูปแบบเดียวกัน -->
         <div class="cal-month">
-          <strong>มิถุนายน</strong>
-          <small>5 กิจกรรม</small>
+          <button type="button" class="cal-nav cal-nav-prev" data-cal-prev aria-label="เดือนก่อนหน้า"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
+          <div class="cal-month-label" aria-live="polite">
+            <strong data-cal-month>ปฏิทินกิจกรรม</strong>
+            <small data-cal-count></small>
+          </div>
+          <button type="button" class="cal-nav" data-cal-next aria-label="เดือนถัดไป"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
         </div>
-        <div class="cal-grid" aria-label="ปฏิทินกิจกรรม เดือนมิถุนายน">
-          <span class="cal-dow" aria-hidden="true">อา</span>
-          <span class="cal-dow" aria-hidden="true">จ</span>
-          <span class="cal-dow" aria-hidden="true">อ</span>
-          <span class="cal-dow" aria-hidden="true">พ</span>
-          <span class="cal-dow" aria-hidden="true">พฤ</span>
-          <span class="cal-dow" aria-hidden="true">ศ</span>
-          <span class="cal-dow" aria-hidden="true">ส</span>
-          <span aria-hidden="true"></span>
-          <span class="cal-day">1</span>
-          <span class="cal-day">2</span>
-          <span class="cal-day">3</span>
-          <span class="cal-day">4</span>
-          <button type="button" class="cal-day has-event" data-cal-event="ev-5" aria-label="5 มิถุนายน: สัมมนาภาษาไทยในยุคดิจิทัล">5</button>
-          <span class="cal-day is-weekend">6</span>
-          <span class="cal-day is-weekend">7</span>
-          <span class="cal-day">8</span>
-          <span class="cal-day">9</span>
-          <span class="cal-day">10</span>
-          <button type="button" class="cal-day has-event" data-cal-event="ev-11" aria-label="11 มิถุนายน: หลักสูตรการใช้พจนานุกรมอย่างถูกวิธี">11</button>
-          <span class="cal-day">12</span>
-          <span class="cal-day is-weekend">13</span>
-          <span class="cal-day is-weekend">14</span>
-          <span class="cal-day">15</span>
-          <span class="cal-day">16</span>
-          <span class="cal-day">17</span>
-          <button type="button" class="cal-day has-event" data-cal-event="ev-18" aria-label="18 มิถุนายน: อบรมการใช้ภาษาไทยในงานราชการ">18</button>
-          <span class="cal-day">19</span>
-          <span class="cal-day is-weekend">20</span>
-          <span class="cal-day is-weekend">21</span>
-          <span class="cal-day">22</span>
-          <span class="cal-day">23</span>
-          <span class="cal-day">24</span>
-          <button type="button" class="cal-day has-event" data-cal-event="ev-25" aria-label="25 มิถุนายน: อบรมการเขียนเอกสารราชการ">25</button>
-          <span class="cal-day">26</span>
-          <span class="cal-day is-weekend">27</span>
-          <span class="cal-day is-weekend">28</span>
-          <span class="cal-day">29</span>
-          <button type="button" class="cal-day has-event" data-cal-event="ev-30" aria-label="30 มิถุนายน: นิทรรศการองค์ความรู้ของชาติ">30</button>
-        </div>
+        <div class="cal-grid" data-cal-grid aria-label="ปฏิทินกิจกรรม"></div>
         <p class="cal-legend"><span><i class="is-event" aria-hidden="true"></i>มีกิจกรรม (กดเพื่อดูรายการ)</span><span><i class="is-selected" aria-hidden="true"></i>วันที่เลือก</span></p>
 
         <div class="cal-agenda">
-          <!-- ข้อมูลตัวอย่าง: ชื่อกิจกรรมนำมาจากส่วนข่าว วันที่/เวลา/สถานที่/คำอธิบายเป็นค่าสมมติ
-               ต้องแทนด้วยกำหนดการจริงก่อนขึ้นเว็บ (data-start/data-end ใช้สร้างไฟล์ .ics ปุ่ม "เพิ่มลงปฏิทินของฉัน") -->
-          <ol>
-            <li>
-              <button type="button" class="cal-event" id="ev-5" aria-expanded="false" aria-controls="ev-5-detail">
-                <span class="cal-event-date"><small>ศ.</small><b>5</b><small>มิ.ย.</small></span>
-                <span class="cal-event-body">
-                  <strong>สัมมนาภาษาไทยในยุคดิจิทัล</strong>
-                  <span class="cal-event-meta"><span><svg class="icon" aria-hidden="true"><use href="#i-megaphone"></use></svg>สัมมนา</span></span>
-                </span>
-                <span class="cal-event-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span>
-              </button>
-              <div class="cal-event-detail" id="ev-5-detail" hidden
-                data-title="สัมมนาภาษาไทยในยุคดิจิทัล" data-start="2026-06-05T09:00" data-end="2026-06-05T16:00" data-location="สำนักงานราชบัณฑิตยสภา">
-                <ul class="cal-detail-meta">
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>วันศุกร์ที่ 5 มิถุนายน</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>09.00–16.00 น.</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>สำนักงานราชบัณฑิตยสภา</li>
-                </ul>
-                <p>แลกเปลี่ยนแนวทางการใช้ภาษาไทยบนสื่อดิจิทัลและสื่อสังคมออนไลน์ ร่วมกับนักวิชาการและผู้ใช้ภาษาจากหลายวงการ</p>
-                <div class="cal-detail-actions">
-                  <a class="cal-detail-more" href="news.html">รายละเอียด <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                  <button type="button" class="cal-detail-ics" data-cal-ics>เพิ่มลงปฏิทินของฉัน</button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="cal-event" id="ev-11" aria-expanded="false" aria-controls="ev-11-detail">
-                <span class="cal-event-date"><small>พฤ.</small><b>11</b><small>มิ.ย.</small></span>
-                <span class="cal-event-body">
-                  <strong>หลักสูตรการใช้พจนานุกรมอย่างถูกวิธี</strong>
-                  <span class="cal-event-meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"></rect><path d="M9 20h6M12 16.5V20"></path></svg>ออนไลน์</span><span><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg>อบรม</span></span>
-                </span>
-                <span class="cal-event-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span>
-              </button>
-              <div class="cal-event-detail" id="ev-11-detail" hidden
-                data-title="หลักสูตรการใช้พจนานุกรมอย่างถูกวิธี" data-start="2026-06-11T13:30" data-end="2026-06-11T15:30" data-location="ออนไลน์ (แจ้งลิงก์เข้าร่วมหลังลงทะเบียน)">
-                <ul class="cal-detail-meta">
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>วันพฤหัสบดีที่ 11 มิถุนายน</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>13.30–15.30 น.</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"></rect><path d="M9 20h6M12 16.5V20"></path></svg>ออนไลน์ (แจ้งลิงก์เข้าร่วมหลังลงทะเบียน)</li>
-                </ul>
-                <p>เรียนรู้วิธีค้นคำ อ่านบทนิยาม และใช้พจนานุกรมฉบับราชบัณฑิตยสภาให้ได้ประโยชน์เต็มที่</p>
-                <div class="cal-detail-actions">
-                  <a class="cal-detail-more" href="news.html">รายละเอียด <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                  <button type="button" class="cal-detail-ics" data-cal-ics>เพิ่มลงปฏิทินของฉัน</button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="cal-event" id="ev-18" aria-expanded="false" aria-controls="ev-18-detail">
-                <span class="cal-event-date"><small>พฤ.</small><b>18</b><small>มิ.ย.</small></span>
-                <span class="cal-event-body">
-                  <strong>อบรมการใช้ภาษาไทยในงานราชการ</strong>
-                  <span class="cal-event-meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>09.00–12.00 น.</span><span><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg>อบรม</span></span>
-                </span>
-                <span class="cal-event-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span>
-              </button>
-              <div class="cal-event-detail" id="ev-18-detail" hidden
-                data-title="อบรมการใช้ภาษาไทยในงานราชการ" data-start="2026-06-18T09:00" data-end="2026-06-18T12:00" data-location="สำนักงานราชบัณฑิตยสภา">
-                <ul class="cal-detail-meta">
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>วันพฤหัสบดีที่ 18 มิถุนายน</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>09.00–12.00 น.</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>สำนักงานราชบัณฑิตยสภา</li>
-                </ul>
-                <p>แนวทางการใช้ภาษาไทยที่ถูกต้อง ชัดเจน และเหมาะสมกับหนังสือราชการ พร้อมฝึกปฏิบัติจากตัวอย่างจริง</p>
-                <div class="cal-detail-actions">
-                  <a class="cal-detail-more" href="news.html">รายละเอียด <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                  <button type="button" class="cal-detail-ics" data-cal-ics>เพิ่มลงปฏิทินของฉัน</button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="cal-event" id="ev-25" aria-expanded="false" aria-controls="ev-25-detail">
-                <span class="cal-event-date"><small>พฤ.</small><b>25</b><small>มิ.ย.</small></span>
-                <span class="cal-event-body">
-                  <strong>อบรมการเขียนเอกสารราชการ</strong>
-                  <span class="cal-event-meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"></rect><path d="M9 20h6M12 16.5V20"></path></svg>ออนไลน์</span><span><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg>อบรม</span></span>
-                </span>
-                <span class="cal-event-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span>
-              </button>
-              <div class="cal-event-detail" id="ev-25-detail" hidden
-                data-title="อบรมการเขียนเอกสารราชการ" data-start="2026-06-25T09:00" data-end="2026-06-25T16:00" data-location="ออนไลน์ (แจ้งลิงก์เข้าร่วมหลังลงทะเบียน)">
-                <ul class="cal-detail-meta">
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>วันพฤหัสบดีที่ 25 มิถุนายน</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>09.00–16.00 น.</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"></rect><path d="M9 20h6M12 16.5V20"></path></svg>ออนไลน์ (แจ้งลิงก์เข้าร่วมหลังลงทะเบียน)</li>
-                </ul>
-                <p>หลักการเขียนหนังสือราชการตามระเบียบงานสารบรรณ พร้อมตัวอย่างและแบบฝึกหัด</p>
-                <div class="cal-detail-actions">
-                  <a class="cal-detail-more" href="news.html">รายละเอียด <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                  <button type="button" class="cal-detail-ics" data-cal-ics>เพิ่มลงปฏิทินของฉัน</button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="cal-event" id="ev-30" aria-expanded="false" aria-controls="ev-30-detail">
-                <span class="cal-event-date"><small>อ.</small><b>30</b><small>มิ.ย.</small></span>
-                <span class="cal-event-body">
-                  <strong>นิทรรศการองค์ความรู้ของชาติ</strong>
-                  <span class="cal-event-meta"><span><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg>นิทรรศการ</span></span>
-                </span>
-                <span class="cal-event-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span>
-              </button>
-              <div class="cal-event-detail" id="ev-30-detail" hidden
-                data-title="นิทรรศการองค์ความรู้ของชาติ" data-start="2026-06-30T09:00" data-end="2026-06-30T16:30" data-location="สำนักงานราชบัณฑิตยสภา">
-                <ul class="cal-detail-meta">
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>วันอังคารที่ 30 มิถุนายน</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>09.00–16.30 น.</li>
-                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>สำนักงานราชบัณฑิตยสภา</li>
-                </ul>
-                <p>นิทรรศการเผยแพร่ผลงานวิชาการและองค์ความรู้ของราชบัณฑิตยสภา สำหรับประชาชนทั่วไป</p>
-                <div class="cal-detail-actions">
-                  <a class="cal-detail-more" href="news.html">รายละเอียด <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                  <button type="button" class="cal-detail-ics" data-cal-ics>เพิ่มลงปฏิทินของฉัน</button>
-                </div>
-              </div>
-            </li>
+          <ol data-cal-list>
+            <li class="cal-empty">ดูกำหนดการทั้งหมดได้ที่ <a href="https://www.orst.go.th/iwfm_calendar.asp" target="_blank" rel="noopener">ปฏิทินกิจกรรมของสำนักงาน</a></li>
           </ol>
         </div>
       </aside>

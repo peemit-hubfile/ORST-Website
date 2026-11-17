@@ -4,13 +4,18 @@
   "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสี",
   "navKey": "news",
   "description": "ภาพประกอบ 3 ภาพ · เอกสารแนบ 1 ไฟล์",
+  "sideNav": false,
   "updatedAt": "2026-10-29",
   "blocks": [
     {
       "type": "page-hero",
-      "eyebrow": "ประกาศ",
+      "variant": "article",
+      "tag": "ประกาศ",
+      "date": "2026-10-29",
       "heading": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
-      "lead": "เผยแพร่เมื่อ 29 ตุลาคม 2569",
+      "image": "assets/images/orst/news/data0005-00005428-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ปร",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005428.JPG",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
@@ -30,65 +35,61 @@
       ]
     },
     {
-      "type": "share",
-      "id": "share"
-    },
-    {
-      "type": "figure",
-      "id": "cover",
-      "image": "assets/images/orst/news/data0005-00005428-960.jpg",
-      "alt": "ภาพประกอบข่าว ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ปร",
-      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005428.JPG"
-    },
-    {
-      "type": "media-grid",
-      "id": "gallery",
-      "variant": "alt",
-      "heading": "ภาพประกอบ (3 ภาพ)",
-      "columns": 4,
-      "ratio": "4:3",
-      "fit": "contain",
-      "items": [
-        {
-          "image": "assets/images/orst/news/data0005-00005428-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 1",
-          "title": "ภาพที่ 1",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005428.JPG"
-        },
-        {
-          "image": "assets/images/orst/news/data0005-00005429-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 2",
-          "title": "ภาพที่ 2",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005429.JPG"
-        },
-        {
-          "image": "assets/images/orst/news/data0005-00005430-640.jpg",
-          "alt": "ภาพประกอบข่าว ภาพที่ 3",
-          "title": "ภาพที่ 3",
-          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005430.JPG"
-        }
-      ]
-    },
-    {
-      "type": "document-list",
-      "id": "attachments",
-      "heading": "เอกสารที่เกี่ยวข้อง",
-      "layout": "compact",
-      "items": [
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
         {
           "title": "การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐",
           "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005431.PDF"
         }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005428-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005428.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005429-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005429.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005430-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005430.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        }
       ]
     },
     {
-      "type": "cta-band",
-      "heading": "ข่าวประชาสัมพันธ์ทั่วไป",
-      "body": "อ่านข่าวอื่นของสำนักงานราชบัณฑิตยสภา",
-      "actions": [
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
         {
-          "label": "ดูข่าวทั้งหมด",
-          "href": "general-news.html"
+          "title": "ผลการประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๖๕",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65D%23N5844072",
+          "category": "ข่าว",
+          "publishedAt": "2022-04-28"
+        },
+        {
+          "title": "ประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๖๗ หัวข้อเรื่อง \"การปรับตัว\"",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66G%21P2034056",
+          "category": "ข่าว",
+          "publishedAt": "2023-07-27"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ผลการประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๖๗ หัวข้อเรื่อง \"การปรับตัว\"",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67ECR1056094",
+          "category": "ประกาศ",
+          "publishedAt": "2024-05-03"
+        },
+        {
+          "title": "ประกาศรับสมัครเข้าประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๖๓",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0106091",
+          "category": "ประกาศ",
+          "publishedAt": "2019-08-27"
         }
       ]
     }

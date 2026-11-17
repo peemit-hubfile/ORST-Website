@@ -20,6 +20,7 @@
    `typography.css` (ฟอนต์ ขนาดตัวอักษร ระยะห่าง มุมโค้ง — ชุดเดียวกับเว็บไซต์ราชบัณฑิตยสภา) ต้องเป็นไฟล์แรก
    **ขนาดตัวอักษรใช้ `var(--text-xs|sm|base|md|lg|xl|2xl|3xl)` เท่านั้น ห้ามใส่ rem/px เอง** ระยะบรรทัดใช้ `var(--leading-tight|normal|reading)`
    มุมโค้งใช้ `var(--radius-sm|md|lg|xl|pill)` (สูงสุด 16px ยกเว้นวงกลม `50%` และ pill)
+   **ความกว้างเนื้อหาใช้ `.container` จาก `typography.css` เท่านั้น** (สูงสุด 1680px ขอบ 16/24/32/48px ตามจอ) ห้ามตั้ง width/max-width ของ `.container` ซ้ำในไฟล์อื่น
    `components.css` ต้องเป็นไฟล์สุดท้ายเสมอ (เดิมมันถูก inject ผ่าน JS จึงชนะทุกไฟล์)
 3. **ลำดับ JS ห้ามสลับ** — `components.js` (classic script) ต้องมาก่อน `page-runtime.js` (module)
 4. **ห้ามเขียน `<header>` / `<footer>` ในไฟล์หน้า** — สร้างจาก `assets/js/components.js` ที่เดียว
@@ -77,6 +78,17 @@ node tools/validate.mjs
 ---
 
 ## งานอื่น ๆ
+
+### สองภาษา (TH / EN)
+
+- ไฟล์ภาษาอังกฤษสร้างอัตโนมัติ — **ห้ามแก้ `content/pages/en/*`, `content/en/*`, `content/i18n/en.json` ด้วยมือ**
+  แก้คำแปลที่ `tools/i18n/memory.json` (หรือ `overrides.json` สำหรับคำ UI) แล้วรัน `python tools/i18n/i18n.py apply`
+- แก้/เพิ่มเนื้อหาไทยใน JSON แล้ว ให้รัน `python tools/i18n/i18n.py extract` → แปลไฟล์ `tools/i18n/work/pack-*.json`
+  ลง `work/out-*.json` (ตาม `tools/i18n/GLOSSARY.md`) → `apply`
+- เพิ่มข้อความ UI ใหม่ในโค้ด/HTML: เปิดหน้าด้วย `?lang=en` แล้วรัน `orstI18n.missing()` ในคอนโซล
+  เอาข้อความที่ได้ใส่ `tools/i18n/ui-strings.json` + คำแปล แล้ว `apply` · ข้อความมีตัวแปรใส่ที่ `tools/i18n/patterns.json`
+- ส่วนที่ไม่ต้องการให้แปล ใส่ `data-i18n-skip`
+
 
 ### เพิ่ม block ชนิดใหม่
 

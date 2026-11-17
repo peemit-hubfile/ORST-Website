@@ -1,0 +1,103 @@
+{
+  "_note": "ตั้งค่าหน้าคลังองค์ความรู้ของชาติ (knowledge.html) — อ่านโดย assets/js/pages/knowledge.js ตอนต่อ CMS ให้หลังบ้านแก้ไฟล์นี้ (หรือ endpoint ที่คืนโครงสร้างเดียวกัน): ลำดับ/ชื่อ/ไอคอนของแต่ละประเภท, ระบบสืบค้น และคำค้นยอดนิยม — รายการในแต่ละประเภทดึงจาก content/pages/<page>.json ของประเภทนั้น จำนวนรายการนับจากข้อมูลจริงอัตโนมัติ",
+  "popular": [
+    "ราชาศัพท์",
+    "ทับศัพท์",
+    "ลักษณนาม",
+    "ชื่อประเทศ",
+    "อักษรโบราณ",
+    "พจนานุกรม"
+  ],
+  "categories": [
+    {
+      "cat": "infographic",
+      "label": "อินโฟกราฟิก",
+      "icon": "i-eye",
+      "page": "infographics",
+      "kind": "cards",
+      "unit": "ภาพ",
+      "action": "ดูภาพ"
+    },
+    {
+      "cat": "publications",
+      "label": "หนังสือและสิ่งพิมพ์",
+      "icon": "i-book",
+      "page": "publications",
+      "kind": "covers",
+      "unit": "เล่ม",
+      "action": "รายละเอียด"
+    },
+    {
+      "cat": "video",
+      "label": "วิดีโอความรู้",
+      "icon": "i-video",
+      "kind": "video",
+      "unit": "คลิป",
+      "action": "ดูวิดีโอ",
+      "description": "การเสวนา การอบรม และวีดิทัศน์ทางวิชาการของสำนักงานราชบัณฑิตยสภา",
+      "page": "videos"
+    },
+    {
+      "cat": "guidelines",
+      "label": "หลักเกณฑ์ภาษาไทย",
+      "icon": "i-dictionary",
+      "page": "language-guidelines",
+      "kind": "topics",
+      "unit": "เรื่อง",
+      "action": "อ่านต่อ"
+    },
+    {
+      "cat": "lectures",
+      "label": "บทบรรยายทางวิชาการ",
+      "icon": "i-journal",
+      "page": "academic-lectures",
+      "kind": "list",
+      "unit": "เรื่อง",
+      "action": "อ่านต่อ"
+    },
+    {
+      "cat": "audio",
+      "label": "ข้อมูลเสียงภาษาถิ่น",
+      "icon": "i-megaphone",
+      "page": "ethnic-language-audio",
+      "kind": "list",
+      "unit": "ภาษา",
+      "action": "รายละเอียด"
+    },
+    {
+      "cat": "documents",
+      "label": "เอกสารความรู้เผยแพร่",
+      "icon": "i-database",
+      "page": "knowledge-base",
+      "kind": "list",
+      "unit": "เรื่อง",
+      "action": "อ่านต่อ"
+    }
+  ],
+  "systems": [
+    {
+      "title": "พจนานุกรมออนไลน์",
+      "desc": "ค้นความหมายและการใช้คำ",
+      "href": "dictionary.html",
+      "icon": "i-dictionary"
+    },
+    {
+      "title": "ศัพท์บัญญัติ",
+      "desc": "ศัพท์เฉพาะทางและคำมาตรฐาน",
+      "href": "https://coined-word.orst.go.th/",
+      "icon": "i-form"
+    },
+    {
+      "title": "ค้นคำศัพท์ภาษาไทย",
+      "desc": "ค้นหาคำตามหมวดและคำใกล้เคียง",
+      "href": "https://dictionary.orst.go.th/",
+      "icon": "i-search"
+    },
+    {
+      "title": "สารานุกรมและอนุกรมวิธาน",
+      "desc": "คลังความรู้และหมวดคำ",
+      "href": "https://lst.nectec.or.th/encyclopedia/",
+      "icon": "i-book"
+    }
+  ]
+}

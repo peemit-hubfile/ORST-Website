@@ -1,0 +1,136 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63HYJ1446063 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "Minister Attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society",
+  "navKey": "news",
+  "description": "Today (21 Aug 2020) at 9:00 a.m., Mr. Anucha Nakasai, Minister attached to the Prime Minister's Office, visited the Office of the Royal Society to attend a meeting of the sub-committee",
+  "sideNav": false,
+  "updatedAt": "2020-08-26",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Activity news",
+      "date": "2020-08-26",
+      "heading": "Minister Attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society",
+      "image": "assets/images/orst/news/data0001-00001961-960.jpg",
+      "imageAlt": "News image: Minister attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001961.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Activity news",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "Minister Attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "Today (21 August 2020) at 09:00, Mr. Anucha Nakhasai, Minister Attached to the Prime Minister's Office, visited the Office of the Royal Society to attend a meeting of the Office of the Royal Society's Civil Service Sub-Committee acting as the Ministerial Civil Service Sub-Committee, welcomed by Dr. Duangta Tancho, Secretary-General of the Office of the Royal Society, together with executives, civil servants and staff. At 10:00 he went to survey the Residence of Chao Chom Manda Luean, a historic building for which the Office of the Royal Society has received budget approval for renovation into an office and history hall of the Royal Society of Thailand, separate from the offices of the Office of the Royal Society, which are expected to move from Sanam Suea Pa to the Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5th December B.E. 2550, Zone C, around early 2024. He then returned to visit and give policy guidance to the Office of the Royal Society in the 4th-floor meeting room from 11:00 to 12:00",
+        "Mr. Anucha Nakasai, Minister attached to the Prime Minister's Office, said that the Office of the Royal Society is an important agency that contributes greatly to the nation. Its academic work is not limited to language alone; many of its academic works serve as references for current research and can be used for work, study and academic citation. It preserves the Thai language sustainably, coins new terms, develops the language and passes this heritage on to future generations, transferring knowledge from the present generation to the next, including training in Thai and local dialects in each region. To ensure smooth operations, he asked the executives to plan for an adequate workforce structure and to set up information technology database systems so that both Office of the Royal Society premises can work together in a coordinated and unified manner. This is a good opportunity for the Royal Society of Thailand to transform its image into a modern digital government agency, moving into the Government 4.0 era with a focus on convenience for the public. For example, an application could let the public find the locations of both Royal Society service points, navigate to them, access a service guide and rate their satisfaction after receiving services. This responds to government policy: on 16 June 2020 the Cabinet approved, in line with the opinion of the Bureau of the Budget, funding to renovate the Chao Chom Manda Luean building into the Royal Society of Thailand History Hall, and the contract is expected to be signed before the end of September 2020.",
+        "The Minister attached to the Prime Minister's Office added that the Office of the Royal Society has always served as the principal organization for preserving and promoting the use of the Thai language. Its activities, such as Thai language skills competitions for young people and awards for outstanding users of Thai, are good projects that build competitiveness and strengthen human potential. Today is a highly competitive digital age; if the Office of the Royal Society adds online sales channels for its academic works or produces e-books, it will reduce paper use, offer greater convenience and speed, meet public needs and adapt to Government 4.0, or a digital-era government focused on public convenience. It should develop into a modern service organization, honor the Fellows of the Royal Society as revered persons of the nation to inspire young people with good role models, become a source of accurate knowledge and understanding about the monarchy and royal duties, and add more channels for academic services so the public can access them more easily."
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0001-00001961-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001961.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001962-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001962.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001963-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001963.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001964-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001964.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001965-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001965.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001966-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001966.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001967-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001967.JPG",
+          "alt": "News image 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001968-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001968.JPG",
+          "alt": "News image 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001969-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001969.JPG",
+          "alt": "News image 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001970-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0001/00001970.JPG",
+          "alt": "News image 10"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "activity-news.html",
+      "items": [
+        {
+          "title": "Minister Attached to the Prime Minister’s Office Visits the Office of the Royal Society",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68GVH3258097",
+          "category": "News",
+          "publishedAt": "2025-07-22"
+        },
+        {
+          "title": "Minister Attached to the Prime Minister's Office and delegation visit the Office of the Royal Society and give policy guidance",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0456091",
+          "category": "Activities",
+          "publishedAt": "2019-08-23"
+        },
+        {
+          "title": "The Office of the Royal Society holds the “Project to Build Awareness and Understanding of Correct and Appropriate Use of the Thai Language” in Udon Thani and Nong Bua Lam Phu Provinces, on the occasion of the visit by the Minister Attached to the Prime Minister's Office (Mr. Suwaphan Tanyuwattana) to the village funds",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63E%24J5401016",
+          "category": "Activities",
+          "publishedAt": "2019-01-21"
+        },
+        {
+          "title": "Minister Attached to the Prime Minister's Office visits the Office of the Royal Society to meet and discuss how the academies of the Royal Society of Thailand can support the government's work",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP1600013",
+          "category": "Activities",
+          "publishedAt": "2018-08-24"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

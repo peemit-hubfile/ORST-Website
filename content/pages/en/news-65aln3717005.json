@@ -1,0 +1,125 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F65ALN3717005 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "Invitation to apply for the Youth Thai Language Skills Competition 2022",
+  "navKey": "news",
+  "description": "Schools nationwide are invited to send Prathom 5-6 (Grade 5-6) students to apply for the Youth Thai Language Skills Competition 2022 (reading skills",
+  "sideNav": false,
+  "updatedAt": "2022-01-12",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Activity news",
+      "date": "2022-01-12",
+      "heading": "Invitation to apply for the Youth Thai Language Skills Competition 2022",
+      "image": "assets/images/orst/news/data0002-00002439-960.jpg",
+      "imageAlt": "News image: Invitation to apply for the Youth Thai Language Skills Competition 202",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002439.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "Activity news",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "Invitation to apply for the Youth Thai Language Skills Competition 2022"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "Schools nationwide are invited to enter Prathom 5-6 (Grade 5-6) students in the Youth Thai Language Skills Competition 2022 (reading aloud skills) via Zoom Cloud Meetings",
+        "Compete for scholarships and Royal Society of Thailand honorary awards",
+        "100 places available; applications open now until Monday 31 January 2022 (applications will close as soon as 100 applicants are reached, even before the closing date)",
+        "Application link",
+        "https://forms.gle/9EjEXa1rDAHUUNFd9",
+        "The qualifying round will be held on Saturday 12 February 2022 and the final round on Saturday 26 February 2022",
+        "Details are in the attached announcement"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0002-00002439-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002439.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002440-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002440.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002441-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002441.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002442-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002442.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002443-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002443.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002444-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002444.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002445-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002445.JPG",
+          "alt": "News image 7"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "activity-news.html",
+      "items": [
+        {
+          "title": "Youth Thai Language Skills Competition 2019",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON2706025",
+          "category": "Activities",
+          "publishedAt": "2019-11-06"
+        },
+        {
+          "title": "Schools nationwide are invited to send Grade 5–6 primary students to apply for the Youth Thai Language Skills Competition 2023",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66E%40J4312063",
+          "category": "News",
+          "publishedAt": "2023-05-31"
+        },
+        {
+          "title": "Join the Youth Thai Language Skills Competition 2020",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64CSK2602044",
+          "category": "News",
+          "publishedAt": "2021-03-19"
+        },
+        {
+          "title": "Results of the Youth Thai Language Skills Competition 2023",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66GDN5451069",
+          "category": "News",
+          "publishedAt": "2023-07-04"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

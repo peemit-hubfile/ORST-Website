@@ -25,7 +25,7 @@ bb = text(main_wrapper(get('iwfm_list.asp?p=ABOUT-BUY-BOOK')))
 for i, b in enumerate(p['blocks']):
     if b.get('id') in ('journals', 'catalog'):
         p['blocks'][i] = {'type': 'media-grid', 'id': 'catalog', 'heading': 'สิ่งพิมพ์ของสำนักงานราชบัณฑิตยสภา',
-            'lead': f'หนังสือ พจนานุกรม และสารานุกรมที่สำนักงานจัดพิมพ์ ทั้งหมด {len(items)} รายการ', 'columns': 4, 'ratio': '3:4', 'fit': 'contain',
+            'lead': f'หนังสือ พจนานุกรม และสารานุกรมที่สำนักงานจัดพิมพ์ ทั้งหมด {len(items)} รายการ', 'columns': 4, 'ratio': '3:4', 'fit': 'contain', 'pageSize': 24, 'unit': 'เล่ม',
             'items': [dict({'image': pth, 'alt': 'ปกหนังสือ ' + it['title'], 'title': it['title']}, **({'href': it['href']} if it['href'] else {}))
                       for pth, it in zip(paths, items)]}
     if b.get('id') == 'media':
@@ -38,5 +38,12 @@ for i, b in enumerate(p['blocks']):
             if it['title'] == 'รับหนังสือ': it['body'] = 'เจ้าหน้าที่จัดส่งหนังสือหลังได้รับชำระค่าหนังสือพร้อมค่าจัดส่งแล้ว'
 p['_note'] = 'รายการสิ่งพิมพ์จาก orst.go.th/iwfm_book.asp?p=PUB-% (ดึงเมื่อ 13 พ.ย. 2569) รูปปกย่อเก็บใน assets/images/orst/publications ลิงก์รายละเอียดยังชี้ไปเว็บไซต์เดิม'
 p['updatedAt'] = '2026-11-13'
+# หน้ารวมของประเภท "หนังสือและสิ่งพิมพ์" ในเมนูคลังองค์ความรู้ — เต็มความกว้าง มีภาพ hero
+p['title'] = 'หนังสือและสิ่งพิมพ์'
+p['blocks'][0]['heading'] = p['title']
+p['navKey'] = 'knowledge'
+p['sideNav'] = False
+p['blocks'][0]['image'] = 'assets/images/orst/news/data0004-00004279-960.jpg'
+p['blocks'][0]['breadcrumb'] = [{'label': 'หน้าหลัก', 'href': 'index.html'}, {'label': 'คลังองค์ความรู้', 'href': 'knowledge.html'}, {'label': p['title']}]
 with open(P, 'w', encoding='utf-8', newline='\n') as f: json.dump(p, f, ensure_ascii=False, indent=2); f.write('\n')
 print(len(items))

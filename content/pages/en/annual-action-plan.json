@@ -1,0 +1,101 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบ T1 (รายการเอกสาร) — เมนู 4.1.4 ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-AAP ไฟล์ยังชี้ไปเว็บเดิม รอย้ายเข้า CMS",
+  "title": "Annual action plan",
+  "navKey": "about",
+  "description": "Annual action plans and budget expenditure plans of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Annual action plan",
+      "lead": "Annual action plans and budget expenditure plans of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Government operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Annual action plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Action Plan for Fiscal Year 2020",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000175.PDF",
+          "fiscalYear": 2563,
+          "fileSize": 289145
+        },
+        {
+          "title": "Operational Plan of the Office of the Royal Society for Fiscal Year 2019",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000176.PDF",
+          "fiscalYear": 2562,
+          "fileSize": 161672
+        },
+        {
+          "title": "Annual Action Plan 2018",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000178.PDF",
+          "fiscalYear": 2561,
+          "fileSize": 14739428
+        },
+        {
+          "title": "Action Plan and Budget Expenditure Plan for Fiscal Year 2021",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000771.PDF",
+          "fiscalYear": 2564,
+          "fileSize": 5316877
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2021",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF",
+          "fiscalYear": 2564,
+          "fileSize": 505108
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2022, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF",
+          "fiscalYear": 2565,
+          "fileSize": 683368
+        },
+        {
+          "title": "Budget Expenditure Plan for Fiscal Year 2023, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 20243363
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2023, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 320585
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2024, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF",
+          "fiscalYear": 2567,
+          "fileSize": 333458
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2025, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF",
+          "fiscalYear": 2568,
+          "fileSize": 296823
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2026, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF",
+          "fiscalYear": 2569,
+          "fileSize": 1839934
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

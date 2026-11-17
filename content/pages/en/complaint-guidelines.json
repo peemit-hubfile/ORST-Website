@@ -1,0 +1,44 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=13 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Guidelines for handling complaints of corruption and misconduct",
+  "navKey": "about",
+  "description": "Manual and guidelines for handling complaints of corruption and misconduct",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Guidelines for handling complaints of corruption and misconduct",
+      "lead": "Manual and guidelines for handling complaints of corruption and misconduct",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About us",
+          "href": "about.html"
+        },
+        {
+          "label": "Anti-Corruption Operation Center",
+          "href": "anti-corruption-center.html"
+        },
+        {
+          "label": "Guidelines for handling complaints of corruption and misconduct"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Guidelines for handling complaints of corruption and misconduct",
+          "publishedAt": "2024-02-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050002405005005%2F67B%24J4000047"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

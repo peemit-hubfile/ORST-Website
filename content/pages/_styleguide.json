@@ -32,6 +32,31 @@
       ]
     },
     {
+      "type": "anchor-nav",
+      "items": [
+        {
+          "label": "การ์ด",
+          "href": "#b-card-grid"
+        },
+        {
+          "label": "ขั้นตอน (dark)",
+          "href": "#b-steps-timeline"
+        },
+        {
+          "label": "เอกสาร",
+          "href": "#b-document-list"
+        },
+        {
+          "label": "ตาราง",
+          "href": "#b-table"
+        },
+        {
+          "label": "คำถาม",
+          "href": "#b-faq"
+        }
+      ]
+    },
+    {
       "type": "notice",
       "tone": "info",
       "id": "b-notice",
@@ -109,6 +134,103 @@
           "icon": "i-database",
           "title": "หัวข้อรายการที่ 4",
           "body": "คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "b-card-grid-service",
+      "heading": "card-grid (layout: service)",
+      "layout": "service",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-form",
+          "tags": [
+            "ออนไลน์",
+            "ตอบกลับทางอีเมล"
+          ],
+          "title": "ชื่อบริการ",
+          "body": "คำอธิบายบริการ 1-2 บรรทัด",
+          "href": "#",
+          "action": "เริ่มใช้บริการ"
+        },
+        {
+          "icon": "i-file",
+          "tags": [
+            "แนบเอกสารได้"
+          ],
+          "title": "ชื่อบริการ",
+          "body": "คำอธิบายบริการ",
+          "href": "#",
+          "action": "ยื่นคำขอ"
+        },
+        {
+          "icon": "i-people",
+          "tags": [
+            "หน่วยงาน"
+          ],
+          "title": "ชื่อบริการ",
+          "body": "คำอธิบายบริการ",
+          "href": "#",
+          "action": "ยื่นคำขอ"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "b-card-grid-tiles",
+      "heading": "card-grid (layout: tiles)",
+      "layout": "tiles",
+      "columns": 4,
+      "variant": "alt",
+      "items": [
+        {
+          "icon": "i-dictionary",
+          "title": "พจนานุกรม",
+          "body": "ลิงก์ภายนอก เปิดแท็บใหม่",
+          "href": "https://dictionary.orst.go.th/"
+        },
+        {
+          "icon": "i-journal",
+          "title": "ศัพท์บัญญัติ",
+          "body": "ลิงก์ภายนอก",
+          "href": "https://coined-word.orst.go.th/"
+        },
+        {
+          "icon": "i-book",
+          "title": "หน้าภายใน",
+          "body": "ลิงก์ภายในเว็บ",
+          "href": "knowledge-base.html"
+        },
+        {
+          "icon": "i-form",
+          "title": "ยังไม่มีลิงก์",
+          "body": "อยู่ระหว่างจัดทำเนื้อหา"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "b-feature-cards",
+      "heading": "feature-list (layout: cards)",
+      "layout": "cards",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-megaphone",
+          "title": "หัวข้อ",
+          "body": "คำอธิบาย"
+        },
+        {
+          "icon": "i-shield",
+          "title": "หัวข้อ",
+          "body": "คำอธิบาย"
+        },
+        {
+          "icon": "i-pen",
+          "title": "หัวข้อ",
+          "body": "คำอธิบาย"
         }
       ]
     },
@@ -350,6 +472,13 @@
           "image": "assets/images/orst/publications/00000355.jpg",
           "alt": "ปกหนังสือตัวอย่าง",
           "title": "ตัวอย่างปกหนังสือ"
+        },
+        {
+          "youtube": "trzQRPLZ9Xw",
+          "image": "assets/images/orst/video/trzQRPLZ9Xw.jpg",
+          "alt": "ภาพตัวอย่างวิดีโอ คำถิ่น คำกวี",
+          "title": "วิดีโอ YouTube (ใส่ youtube = รหัสวิดีโอ) กดแล้วเล่นในป๊อปอัป",
+          "tag": "การเสวนาทางวิชาการ"
         }
       ]
     },
@@ -484,6 +613,31 @@
       ]
     },
     {
+      "type": "steps",
+      "id": "b-steps-timeline",
+      "heading": "steps (layout: timeline, variant: dark)",
+      "layout": "timeline",
+      "items": [
+        {
+          "title": "ขั้นที่หนึ่ง",
+          "body": "คำอธิบายสั้น"
+        },
+        {
+          "title": "ขั้นที่สอง",
+          "body": "คำอธิบายสั้น"
+        },
+        {
+          "title": "ขั้นที่สาม",
+          "body": "คำอธิบายสั้น"
+        },
+        {
+          "title": "ขั้นที่สี่",
+          "body": "คำอธิบายสั้น"
+        }
+      ],
+      "variant": "dark"
+    },
+    {
       "type": "two-column",
       "id": "b-two-column",
       "variant": "alt",
@@ -554,6 +708,63 @@
           "label": "ปุ่มรอง",
           "href": "#",
           "variant": "ghost"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "b-news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005462.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005463-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005463.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005464-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005464.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "b-news-related",
+      "heading": "news-related — ข่าวอื่น ๆ ท้ายหน้าข่าว",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+          "href": "news-69jaj1403044.html",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-31"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
+          "href": "news-69jsh5647044.html",
+          "image": "assets/images/orst/news/data0005-00005428-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+          "href": "news-69jsn0030075.html",
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์",
+          "href": "news-69jsm4847075.html",
+          "image": "assets/images/orst/news/data0005-00005420-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-19"
         }
       ]
     }

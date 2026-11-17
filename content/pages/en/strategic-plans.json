@@ -1,0 +1,55 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-SGP (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Strategic Plan and 5-Year Action Plan",
+  "navKey": "about",
+  "description": "Strategic Plan and 5-Year Action Plan of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Strategic Plan and 5-Year Action Plan",
+      "lead": "Strategic Plan and 5-Year Action Plan of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Government operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Strategic Plan and 5-Year Action Plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "5-Year Action Plan, Initial 3-Year Phase (2020-2022), Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000855.PDF",
+          "fileSize": 467326
+        },
+        {
+          "title": "5-Year Action Plan, Phase 2 (2023-2027), Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000886.PDF",
+          "fileSize": 222381
+        },
+        {
+          "title": "20-Year Strategic Plan of the Office of the Royal Society (2018-2037)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000892.PDF",
+          "fileSize": 1550932
+        },
+        {
+          "title": "5-Year Action Plan (2023-2027) of the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000987.PDF",
+          "fileSize": 108265
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

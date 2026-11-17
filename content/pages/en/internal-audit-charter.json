@@ -1,0 +1,60 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=16 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Internal Audit Charter",
+  "navKey": "about",
+  "description": "Internal Audit Charter of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Internal Audit Charter",
+      "lead": "Internal Audit Charter of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Government operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Internal Audit Charter"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society, fiscal year 2026",
+          "publishedAt": "2025-10-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001501001015%2F68JHO2919038"
+        },
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society, fiscal year 2023",
+          "publishedAt": "2022-10-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001501001015%2F65J%21I4847066"
+        },
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society, fiscal year 2022",
+          "publishedAt": "2021-11-23",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001501001015%2F64KWK2037022"
+        },
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society",
+          "publishedAt": "2020-04-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001501001015%2F63DNM1915094"
+        },
+        {
+          "title": "Code of Ethics of the Internal Audit Group, Office of the Royal Society",
+          "publishedAt": "2020-04-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001501001015%2F63DNM2033069"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

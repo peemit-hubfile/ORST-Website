@@ -126,42 +126,24 @@ p["blocks"] = [hero,
 dump("news", p)
 
 # ---------- services (หมวด 6) ----------
+# โครงหน้า (hero รูป, การ์ดบริการ, ไทล์ระบบสืบค้น ฯลฯ) จัดด้วยมือแล้ว — ที่นี่อัปเดตเฉพาะข้อมูลจากเว็บเดิม:
+# แบบฟอร์มดาวน์โหลด (จากหน้ากฎหมาย/ระเบียบ) และช่องทางร้องเรียน
 p = load("services")
 for b in p["blocks"]:
-    if b.get("id") == "online-services":
-        for it in b["items"]:
-            it.pop("meta", None)  # ระยะเวลาให้บริการยังไม่มีข้อมูล (เว็บเดิมไม่มีมาตรฐานระยะเวลา)
     if b.get("id") == "forms":
         laws = load("laws-regulations")["blocks"][1]["items"]
-        forms = [it for it in laws if it["title"].startswith("แบบ")]
-        b.clear()
-        b.update({"type": "document-list", "id": "forms", "heading": "แบบฟอร์มดาวน์โหลด", "layout": "compact",
-                  "emptyText": "แบบฟอร์มคำขอรับบริการ อยู่ระหว่างรอข้อมูลจากสำนักงาน", "items": forms})
+        b["items"] = [it for it in laws if it["title"].startswith("แบบ")]
     if b.get("id") == "channels":
+        # ช่องทางร้องเรียน — เบอร์/อีเมล/Google Form จากเว็บเดิม (Google Form อยู่ในหน้าการปฏิบัติราชการ)
         b["items"] = [
-            {"icon": "i-megaphone", "title": "ร้องเรียนการให้บริการ",
-             "body": "โทรศัพท์ 0 2141 1718 หรืออีเมล saraban@orst.go.th"},
-            {"icon": "i-shield", "title": "แจ้งเบาะแสการทุจริต",
-             "body": "อีเมล anti.corruption@orst.go.th หรือกล่องรับเรื่องร้องเรียนบริเวณชั้น 1 สำนักงานราชบัณฑิตยสภา"},
-            {"icon": "i-pen", "title": "เสนอแนะต่อการดำเนินงาน",
-             "body": "แบบรับฟังความคิดเห็น/ข้อเสนอแนะออนไลน์ (Google Form) ในหน้าการปฏิบัติราชการ"}]
-p["blocks"] = [b for b in p["blocks"] if b.get("id") != "academic-services"]
-p["blocks"].insert(len(p["blocks"]) - 1, {
-    "type": "page-index", "id": "academic-services", "heading": "บริการวิชาการทั้งหมด", "columns": 2, "groups": [
-        {"heading": "ระบบออนไลน์", "icon": "i-database", "items": [
-            I("พจนานุกรม", "https://dictionary.orst.go.th/"), I("ศัพท์บัญญัติ", "https://coined-word.orst.go.th/"),
-            I("สารานุกรมและอนุกรมวิธาน", "https://lst.nectec.or.th/encyclopedia/"), I("คลังเอกสารเก่า", "https://da3.thaidlt.org/"),
-            I("ระบบฐานข้อมูลคำทับศัพท์", "https://transliteration.orst.go.th/search"),
-            I("อักขรานุกรมภูมิศาสตร์ไทย", "https://gazetteer.orst.go.th/"),
-            I("ระบบทดสอบความรู้ด้านภาษาไทย", "https://etest.orst.go.th/"),
-            I("พจนานุกรมภาษามือไทย", "http://164.115.33.116/", "ใช้ HTTP")]},
-        {"heading": "ความรู้และสิ่งพิมพ์", "icon": "i-book", "items": [
-            I("คลังความรู้", "knowledge-base.html"), I("หลักเกณฑ์ต่าง ๆ", "language-guidelines.html"),
-            I("อินโฟกราฟิก", "infographics.html"),
-            I("ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย", "ethnic-language-audio.html"),
-            I("ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน", "book-ordering.html"),
-            I("คู่มือสำหรับประชาชน"), I("ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ")]}]})
-p["_note"] = "หน้าหมวด 6 บริการวิชาการ — ช่องทางร้องเรียนและแบบฟอร์มจาก orst.go.th ระยะเวลาให้บริการยังรอข้อมูลจาก ORST"
+            {"icon": "i-megaphone", "title": "ร้องเรียนการให้บริการ", "body": "แจ้งปัญหาหรือข้อขัดข้องในการรับบริการของสำนักงาน",
+             "links": [{"label": "0 2141 1718", "href": "tel:021411718"},
+                       {"label": "saraban@orst.go.th", "href": "mailto:saraban@orst.go.th"}]},
+            {"icon": "i-shield", "title": "แจ้งเบาะแสการทุจริต", "body": "หรือใช้กล่องรับเรื่องร้องเรียนบริเวณชั้น 1 สำนักงานราชบัณฑิตยสภา",
+             "links": [{"label": "anti.corruption@orst.go.th", "href": "mailto:anti.corruption@orst.go.th"},
+                       {"label": "ช่องทางร้องเรียนการทุจริต", "href": "corruption-complaints.html"}]},
+            {"icon": "i-pen", "title": "เสนอแนะต่อการดำเนินงาน", "body": "แบบรับฟังความคิดเห็น/ข้อเสนอแนะที่มีต่อการดำเนินงานของสำนักงาน",
+             "links": [{"label": "แบบรับฟังความคิดเห็น (Google Form)", "href": "https://forms.gle/mc1qF9RCDQbvLnho6"}]}]
 p["updatedAt"] = TODAY
 dump("services", p)
 

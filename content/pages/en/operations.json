@@ -1,0 +1,147 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบ T3 (หน้าหมวด) — เมนู 4 การปฏิบัติราชการ ลิงก์ไปหน้าที่สร้างจากข้อมูลจริงของ orst.go.th รายการที่ไม่มี href = รอเนื้อหาจาก ORST",
+  "title": "Government operations",
+  "navKey": "about",
+  "description": "Action plans, performance results and open government data of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Government operations",
+      "lead": "Action plans, performance results and open government data of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Government operations"
+        }
+      ]
+    },
+    {
+      "type": "page-index",
+      "columns": 3,
+      "groups": [
+        {
+          "heading": "Action plan",
+          "icon": "i-journal",
+          "items": [
+            {
+              "title": "Related laws",
+              "href": "related-laws.html"
+            },
+            {
+              "title": "Operation manuals and standards",
+              "href": "operation-manuals.html"
+            },
+            {
+              "title": "5-year strategic plan and action plan",
+              "href": "strategic-plans.html"
+            },
+            {
+              "title": "Annual action plan",
+              "href": "annual-action-plan.html"
+            },
+            {
+              "title": "Business continuity plan",
+              "href": "continuity-plan.html"
+            },
+            {
+              "title": "Information Technology Master Plan",
+              "href": "it-master-plan.html"
+            },
+            {
+              "title": "Risk management plan",
+              "href": "risk-management-plan.html"
+            },
+            {
+              "title": "Energy Conservation at the Office of the Royal Society",
+              "href": "energy-saving.html"
+            },
+            {
+              "title": "Internal Audit Charter",
+              "href": "internal-audit-charter.html"
+            },
+            {
+              "title": "Annual operational plan and expenditure budget"
+            }
+          ]
+        },
+        {
+          "heading": "Performance results",
+          "icon": "i-file",
+          "items": [
+            {
+              "title": "Service manuals and standards",
+              "href": "service-manuals.html"
+            },
+            {
+              "title": "Monthly performance results by output and activity",
+              "href": "monthly-performance.html"
+            },
+            {
+              "title": "Service time standards"
+            },
+            {
+              "title": "Summary of performance under the performance agreement",
+              "href": "performance-agreement.html"
+            },
+            {
+              "title": "Summary report on unit cost per output analysis / trial balance",
+              "href": "unit-cost.html"
+            },
+            {
+              "title": "Feedback and suggestions form on operations",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+              "tag": "Google Form"
+            },
+            {
+              "title": "6-month report on monitoring of operations and budget use"
+            },
+            {
+              "title": "Annual operational results report"
+            },
+            {
+              "title": "Annual budget expenditure report"
+            },
+            {
+              "title": "Service statistics"
+            },
+            {
+              "title": "Service satisfaction survey report"
+            }
+          ]
+        },
+        {
+          "heading": "Open government data and information disclosure",
+          "icon": "i-database",
+          "items": [
+            {
+              "title": "Information under the Official Information Act B.E. 2540 (1997)"
+            },
+            {
+              "title": "Open government datasets (Open Data)"
+            },
+            {
+              "title": "Open dataset request form"
+            },
+            {
+              "title": "Personal Data Protection Policy",
+              "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038",
+              "tag": "Former website"
+            },
+            {
+              "title": "Public information disclosure (ITA / OIT)"
+            },
+            {
+              "title": "Channels for data subjects to exercise their rights"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

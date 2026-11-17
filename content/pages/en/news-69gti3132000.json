@@ -1,0 +1,170 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69GTI3132000 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม",
+  "title": "The Office of the Royal Society holds a ceremony offering blessings to His Majesty the King and volunteer public service and charitable activities",
+  "navKey": "news",
+  "description": "On Wednesday 15 July 2026 at 10:00 a.m., Professor Emeritus Dr. Suraphon Itsarakraisin, M.D., President of the Royal Society of Thailand, led executives, civil servants and staff",
+  "sideNav": false,
+  "updatedAt": "2026-07-20",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Press releases",
+      "date": "2026-07-20",
+      "heading": "The Office of the Royal Society holds a ceremony to offer blessings to His Majesty the King, together with volunteer public service and charitable activities in honor of His Majesty the King, on the occasion of His Majesty's Birthday, 28 July 2026",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "imageAlt": "News image: The Office of the Royal Society holds a ceremony offering blessings to His Majesty the King and activities",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General Press Releases",
+          "href": "general-news.html"
+        },
+        {
+          "label": "The Office of the Royal Society holds a ceremony to offer blessings to His Majesty the King, together with volunteer public service and charitable activities in honor of His Majesty the King, on the occasion of His Majesty's Birthday, 28 July 2026"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "On Wednesday, 15 July 2026 at 10:00 a.m., Professor Emeritus Dr. Suraphon Itsarakraisin, M.D., President of the Royal Society of Thailand, led executives, civil servants and staff of the Office of the Royal Society in a ceremony to offer blessings to His Majesty the King on the occasion of His Majesty's Birthday, 28 July 2026, unveiling the floral, incense and candle offerings, delivering words of blessing and signing birthday blessings before the portrait of His Majesty the King at the 2nd-floor hall of the Office of the Royal Society, The Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5th December B.E. 2550",
+        "Then, at 1:50 p.m., Dr. Supharoek Phuphongsak, Secretary-General of the Royal Society, led executives and staff to carry out volunteer public service and charitable activities in honor of His Majesty the King on the occasion of His Majesty's Birthday, 28 July 2026, donating books to the “Chaloem Ratchakumari” Public Library, Khlong Sam Wa District, Bangkok. They were welcomed by Mr. Pricha Phonchomphu, Director of the Don Mueang District Learning Promotion Center, Acting Director of the Khlong Sam Wa District Learning Promotion Center, and his team."
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005306-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005307-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005307.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005308-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005308.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005309-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005309.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005310-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005310.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005311-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005311.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005312-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005312.JPG",
+          "alt": "News image 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005313-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005313.JPG",
+          "alt": "News image 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005314-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005314.JPG",
+          "alt": "News image 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005315-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005315.JPG",
+          "alt": "News image 10"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005316-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005316.JPG",
+          "alt": "News image 11"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005317-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005317.JPG",
+          "alt": "News image 12"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005318-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005318.JPG",
+          "alt": "News image 13"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005319-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005319.JPG",
+          "alt": "News image 14"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005320-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005320.JPG",
+          "alt": "News image 15"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005321-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005321.JPG",
+          "alt": "News image 16"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005322-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005322.JPG",
+          "alt": "News image 17"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Volunteer activities on the occasion of His Majesty the King's Birthday, 28 July 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68G%2DJ4511019",
+          "category": "News",
+          "publishedAt": "2025-07-30"
+        },
+        {
+          "title": "The Office of the Royal Society takes part in activities honoring His Majesty the King on the occasion of His Majesty's Birthday, 28 July 2019",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO2744019",
+          "category": "Activities",
+          "publishedAt": "2019-07-30"
+        },
+        {
+          "title": "The Office of the Royal Society joins activities on the occasion of His Majesty the King's Birthday, 28 July 2023",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66G%23J5825084",
+          "category": "News",
+          "publishedAt": "2023-07-28"
+        },
+        {
+          "title": "The Office of the Royal Society records birthday blessings on the occasion of His Majesty the King's Birthday, 28 July 2023",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66F%21N1721000",
+          "category": "News",
+          "publishedAt": "2023-06-27"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

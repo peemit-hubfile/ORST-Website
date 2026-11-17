@@ -1,0 +1,215 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=19 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Monthly performance results by output and activity",
+  "navKey": "about",
+  "description": "Monthly performance report by output and activity",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Monthly performance results by output and activity",
+      "lead": "Monthly performance report by output and activity",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Government operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Monthly performance results by output and activity"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Mission-based operational plan and progress of the Office of the Royal Society, fiscal year 2026 (6-month period)",
+          "publishedAt": "2026-05-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F69ENM3126084"
+        },
+        {
+          "title": "Report on operational plan results, fiscal year 2025, Office of the Royal Society",
+          "publishedAt": "2026-05-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F69ENM5802078"
+        },
+        {
+          "title": "Statistics on online services (E-Service), fiscal year 2025, 12-month period",
+          "publishedAt": "2026-05-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F69ENN1205063"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2024, 12-month period (1 October 2023 - 30 September 2024)",
+          "publishedAt": "2025-04-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F68DJP0408097"
+        },
+        {
+          "title": "Mission-based operational plan and progress of the Office of the Royal Society, fiscal year 2025 (6-month period)",
+          "publishedAt": "2025-04-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F68DIK5114016"
+        },
+        {
+          "title": "Summary of project/activity results under the action plan and budget expenditure plan, fiscal year 2024, 12-month period",
+          "publishedAt": "2025-03-14",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F68CNM2500025"
+        },
+        {
+          "title": "Operational plan and progress on the missions of the Office of the Royal Society, fiscal year 2024, 6-month period (1 October 2023 - 31 March 2024)",
+          "publishedAt": "2024-04-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F67DVM3627075"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2023, 12-month period (1 October 2022 - 30 September 2023)",
+          "publishedAt": "2024-02-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F67B%24J5835025"
+        },
+        {
+          "title": "Report on operational results and budget expenditure of the Office of the Royal Society, fiscal year 2023, 12-month period (1 October 2022 - 30 September 2023)",
+          "publishedAt": "2024-02-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F67BIN0428009"
+        },
+        {
+          "title": "Performance report, fiscal year 2023, 6-month period (1 October 2022 - 31 March 2023)",
+          "publishedAt": "2023-04-25",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F66DTM5500088"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2023, 6-month period (1 October 2022 - 31 March 2023)",
+          "publishedAt": "2023-04-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F66DTM5613028"
+        },
+        {
+          "title": "Operational results report, fiscal year 2022, Office of the Royal Society, 12-month period (1 October 2021 - 30 September 2022)",
+          "publishedAt": "2023-04-24",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F66DTM5034056"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2022, 6-month period (1 October 2021 - 31 March 2022)",
+          "publishedAt": "2022-04-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F65DVK2606081"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2022, 6-month period (1 October 2021 - 31 March 2022)",
+          "publishedAt": "2022-04-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F65DVM3901031"
+        },
+        {
+          "title": "Operational results report, fiscal year 2021, Office of the Royal Society, 12-month period (1 October 2020 - 30 September 2021)",
+          "publishedAt": "2022-04-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F65DVN3810009"
+        },
+        {
+          "title": "Budget disbursement results, fiscal year 2021, 12-month period (1 October 2020 - 30 September 2021)",
+          "publishedAt": "2022-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F65DTN3906038"
+        },
+        {
+          "title": "Budget disbursement results, fiscal year 2021, 6-month period (1 October 2020 - 31 March 2021)",
+          "publishedAt": "2021-04-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F64D%21I2442038"
+        },
+        {
+          "title": "Number of public services provided in 2021, 6-month period (1 October 2020 - 31 March 2021)",
+          "publishedAt": "2021-04-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F64D%21R4531075"
+        },
+        {
+          "title": "Results under the measures to improve government operational efficiency, fiscal year 2020, 12-month period",
+          "publishedAt": "2021-04-27",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F64D%21R5952019"
+        },
+        {
+          "title": "Achievements of the academic committees in 2021, 6-month period (1 October 2020 - 31 March 2021)",
+          "publishedAt": "2021-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F64DUM1525078"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2020, 12-month period",
+          "publishedAt": "2021-04-20",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F64D%21R5337094"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2020, as of 29 June 2020",
+          "publishedAt": "2020-06-29",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63HCO1258063"
+        },
+        {
+          "title": "Number of public services provided, October 2019 - May 2020",
+          "publishedAt": "2020-05-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63HCO1945053"
+        },
+        {
+          "title": "Performance of the Office of the Royal Society, fiscal year 2019, 6-month period (1 October 2018 - 31 March 2019)",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP1349038"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2019, from 1 October 2018 to 31 March 2019",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP1525091"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2018, from 1 October 2017 to 30 September 2018",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP1632025"
+        },
+        {
+          "title": "Agency evaluation report under the measures to improve government operational efficiency, fiscal year 2018",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP1812063"
+        },
+        {
+          "title": "Performance of the Office of the Royal Society, fiscal year 2018",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP1915005"
+        },
+        {
+          "title": "Fiscal year 2008",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP2026088"
+        },
+        {
+          "title": "Fiscal year 2009",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP2113000"
+        },
+        {
+          "title": "Fiscal year 2010",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP2243025"
+        },
+        {
+          "title": "Fiscal year 2011",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP2344088"
+        },
+        {
+          "title": "Report on the audit of financial statements by the Office of the Auditor General under the State Fiscal and Financial Discipline Act, B.E. 2561",
+          "publishedAt": "2020-05-07",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63EGP2501005"
+        },
+        {
+          "title": "Operational results report of the Office of the Royal Society, fiscal year 2020, 6-month period (1 October 2019 - 31 March 2020)",
+          "publishedAt": "2020-03-31",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63HCO2737056"
+        },
+        {
+          "title": "Operational results report of the Office of the Royal Society, fiscal year 2019, 12-month period (1 October 2018 - 30 September 2019)",
+          "publishedAt": "2019-09-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63HCO3039009"
+        },
+        {
+          "title": "Budget expenditure report, fiscal year 2019, from 1 October 2018 to 30 September 2019",
+          "publishedAt": "2019-09-30",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001705004003%2F63HCO2507019"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

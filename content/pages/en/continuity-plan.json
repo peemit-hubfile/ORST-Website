@@ -1,0 +1,45 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=CTMP-63 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Business continuity plan",
+  "navKey": "about",
+  "description": "Business continuity plan of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Business continuity plan",
+      "lead": "Business continuity plan of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Government operations",
+          "href": "operations.html"
+        },
+        {
+          "label": "Business continuity plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Business Continuity Plan of the Royal Institute",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000007.PDF",
+          "fileSize": 1032580
+        },
+        {
+          "title": "Business Continuity Plan for Crisis Preparedness Management (BCP)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000152.PDF",
+          "fileSize": 1792370
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}
