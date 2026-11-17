@@ -18,6 +18,9 @@
   step12_services.py      หมวด 6 รายการ 6.1-6.20 + หน้าที่ยังขาด 7 หน้า — รันก่อน step6
   step13_contact.py       หมวด 7 ติดต่อเรา: ร้องเรียน / แบบสำรวจเว็บไซต์ / Social Media — รันก่อน step6
   step14_footer.py        FOOTER: เว็บลิงก์ / Privacy / Cookies / Accessibility — รันก่อน step6
+  step15_news_cms.py      ข่าวสารพร้อมเชื่อม CMS: content/news/index.json + content/news/<id>.json + news-detail.html — รันหลัง step5
+  step16_news_files.py    ข่าวที่ลิงก์หน้าเอกสารเว็บเดิม -> ไฟล์ PDF จริง (ฟิลด์ file) สำหรับปุ่มดูตัวอย่าง
+  step17_news_pdf_details.py  อ่าน PDF ของข่าว: จำนวนหน้า ขนาด ผู้บรรยาย คำโปรย (ต้องมี pymupdf)
   step8_guidelines.py     หลักเกณฑ์ภาษาไทย ๑๕ หัวข้อ -> หน้า guideline-*.html (ย้ายเนื้อหามาแสดงในเว็บใหม่) + หน้ารวม
 
 หน้าที่โหลดแล้วเก็บใน cache/ — ลบ cache/ ถ้าต้องการข้อมูลล่าสุด
@@ -27,7 +30,7 @@
 import os, runpy, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-for step in ["step0_images", "step1_examples", "step2_pages", "step3_hubs", "step4_publications", "step5_news", "step9_about", "step10_operations", "step11_news", "step12_services", "step13_contact", "step14_footer", "step6_sitemap", "step7_calendar", "step8_guidelines"]:
+for step in ["step0_images", "step1_examples", "step2_pages", "step3_hubs", "step4_publications", "step5_news", "step15_news_cms", "step16_news_files", "step17_news_pdf_details", "step9_about", "step10_operations", "step11_news", "step12_services", "step13_contact", "step14_footer", "step6_sitemap", "step7_calendar", "step8_guidelines"]:
     print(f"== {step}")
     runpy.run_path(os.path.join(HERE, step + ".py"), run_name="__main__")
 print("\nเสร็จ — รัน node tools/validate.mjs เพื่อตรวจ")

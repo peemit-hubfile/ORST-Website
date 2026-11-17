@@ -1,0 +1,109 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69J%24N0030075 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69jsn0030075",
+  "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+  "navKey": "news",
+  "description": "ภาพประกอบ 3 ภาพ · เอกสารแนบ 4 ไฟล์",
+  "sideNav": false,
+  "updatedAt": "2026-10-29",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "ประกาศ",
+      "date": "2026-10-29",
+      "heading": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+      "image": "assets/images/orst/news/data0005-00005433-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมา",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005433.JPG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "ข้อบังคับ ภาคีสมาชิก_63",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005436.PDF"
+        },
+        {
+          "title": "แบบเสนอผลงานเพื่อสมัครเข้าเป็นภาคีสมาชิก",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005442.DOC"
+        },
+        {
+          "title": "ใบสมัครเป็นภาคีสมาชิก",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005443.DOC"
+        },
+        {
+          "title": "ข้อบังคับประเภทวิชา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005444.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005433.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005434-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005434.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005435-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005435.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ยกเลิกประกาศการรับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66EYJ0634075",
+          "category": "ประกาศ",
+          "publishedAt": "2023-05-25"
+        },
+        {
+          "title": "รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก ประเภทวิชาปรัชญา ทุกสาขาวิชา สำนักธรรมศาสตร์และการเมือง จำนวน ๑ อัตรา",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67CMP0204075",
+          "category": "ข่าว",
+          "publishedAt": "2024-03-13"
+        },
+        {
+          "title": "ประกาศรับสมัครคัดเลือกเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68FTT3628019",
+          "category": "ประกาศ",
+          "publishedAt": "2025-06-20"
+        },
+        {
+          "title": "ประกาศรับสมัครคัดเลือกเพิ่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง จำนวน ๑ อัตรา",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64AYN2731075",
+          "category": "ประกาศ",
+          "publishedAt": "2021-01-25"
+        }
+      ]
+    }
+  ]
+}

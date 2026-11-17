@@ -1,0 +1,169 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69GTI3132000 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69gti3132000",
+  "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธ",
+  "navKey": "news",
+  "description": "เมื่อวันพุธที่ ๑๕ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๐.๐๐ น. ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นายกราชบัณฑิตยสภา เป็นประธานนำผู้บริหาร ข้าราชการและเ",
+  "sideNav": false,
+  "updatedAt": "2026-07-20",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "ข่าวประชาสัมพันธ์",
+      "date": "2026-07-20",
+      "heading": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรร",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว และกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "เมื่อวันพุธที่ ๑๕ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๐.๐๐ น. ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นายกราชบัณฑิตยสภา เป็นประธานนำผู้บริหาร ข้าราชการและเจ้าหน้าที่สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙ โดยเปิดกรวยกระทงดอกไม้ธูปเทียนแพ และกล่าวคำถวายพระพรชัยมงคล พร้อมลงนามถวายพระพรหน้าพระบรมฉายาลักษณ์พระบาทสมเด็จพระเจ้าอยู่หัว ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐",
+        "จากนั้น เวลา ๑๓.๕๐ น. ดร.ศุภฤกษ์ ภู่พงศ์ศักดิ์ เลขาธิการราชบัณฑิตยสภา นำผู้บริหารและคณะ เดินทางไปจัดกิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์และบำเพ็ญสาธารณกุศลเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๙ มอบหนังสือให้กับห้องสมุดประชาชน “เฉลิมราชกุมารี” เขตคลองสามวา กรุงเทพมหานคร โดยมี นายปรีชา ผลชมภู่ ผู้อำนวยการ สกร.ระดับเขตดอนเมือง รักษาการในตำแหน่งผู้อำนวยการ สกร.ระดับเขตคลองสามวา และคณะให้การต้อนรับ"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005306-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005306.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005307-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005307.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005308-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005308.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005309-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005309.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005310-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005310.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005311-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005311.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005312-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005312.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005313-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005313.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005314-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005314.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005315-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005315.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005316-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005316.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005317-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005317.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005318-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005318.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 13"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005319-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005319.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 14"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005320-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005320.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 15"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005321-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005321.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 16"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005322-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005322.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 17"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "กิจกรรมจิตอาสาเนื่องในโอกาสวันเฉลิมพระชนมพรรษา พระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๘",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68G%2DJ4511019",
+          "category": "ข่าว",
+          "publishedAt": "2025-07-30"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาร่วมกิจกรรมเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๒",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO2744019",
+          "category": "กิจกรรม",
+          "publishedAt": "2019-07-30"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาร่วมกิจกรรมเนื่องในวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๖",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66G%23J5825084",
+          "category": "ข่าว",
+          "publishedAt": "2023-07-28"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาร่วมบันทึกเทปถวายพระพร เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๖",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66F%21N1721000",
+          "category": "ข่าว",
+          "publishedAt": "2023-06-27"
+        }
+      ]
+    }
+  ]
+}

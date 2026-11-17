@@ -67,25 +67,26 @@ def pick(current, pool, n=4):
 
 
 def apply(root):
-    """เขียนส่วน "ข่าวที่เกี่ยวข้อง" ของทุกหน้า content/pages/news-*.json ใหม่ จากรายการในหน้ารวมข่าว
+    """เขียนส่วน "ข่าวที่เกี่ยวข้อง" ของทุกหน้าข่าว content/news/<id>.json ใหม่ จากรายการข่าวกลาง content/news/index.json
     (เรียกท้าย step5_news.py หลังเขียนหน้ารวมแล้ว — หรือรันไฟล์นี้ตรง ๆ: python related.py)"""
     import glob
     import json
     import os
-    pages = os.path.join(root, "content", "pages")
-    pool = []
-    for name in ("general-news", "activity-news"):
-        d = json.load(open(os.path.join(pages, f"{name}.json"), encoding="utf-8"))
-        pool += next(b for b in d["blocks"] if b["type"] == "document-list")["items"]
+    news = os.path.join(root, "content", "news")
+    index = json.load(open(os.path.join(news, "index.json"), encoding="utf-8"))["items"]
+    pool = [dict(it, href=f"news-detail.html?id={it['id']}" if it.get("id") else it.get("href", ""))
+            for it in index if set(it.get("channels", [])) & {"general", "activity"}]
     keep = ("title", "href", "image", "category", "publishedAt")
-    for p in sorted(glob.glob(os.path.join(pages, "news-*.json"))):
+    for p in sorted(glob.glob(os.path.join(news, "*.json"))):
+        if p.endswith("index.json"):
+            continue
         raw = open(p, encoding="utf-8", newline="").read()
         d = json.loads(raw)
         hero = d["blocks"][0]
         slug = os.path.basename(p)[:-5]
         crumbs = hero.get("breadcrumb", [])
         list_href = crumbs[2]["href"] if len(crumbs) > 3 else "news.html"
-        cur = {"title": hero.get("heading", d.get("title", "")), "href": f"{slug}.html",
+        cur = {"title": hero.get("heading", d.get("title", "")), "href": f"news-detail.html?id={slug}",
                "publishedAt": hero.get("date") or d.get("updatedAt", ""), "category": hero.get("tag")}
         items, related = pick(cur, pool)
         block = {"type": "news-related", "id": "related", "heading": "ข่าวที่เกี่ยวข้อง" if related else "ข่าวอื่น ๆ",

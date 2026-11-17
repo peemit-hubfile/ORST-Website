@@ -23,6 +23,7 @@
    ============================================================================= */
 
 import { renderPage, validatePage } from './blocks.js';
+import { resolveSources } from './content-sources.js';
 
 const MOUNT_ID = 'app-content';
 
@@ -47,6 +48,22 @@ function showError(mount, title, details = []) {
             <strong>${title}</strong>
             ${details.length ? `<ul>${details.map(d => `<li>${d}</li>`).join('')}</ul>` : ''}
             <p>ดูวิธีเขียนไฟล์เนื้อหาได้ที่ <code>CONTENT-MODEL.md</code></p>
+          </div>
+        </div>
+      </div>
+    </section>`;
+}
+
+/** ไม่พบเนื้อหา (เช่น ข่าวที่ถูกลบหรือ id ผิด) — บอกผู้ใช้และพาไปหน้ารวมข่าว */
+function showNotFound(mount) {
+  document.title = 'ไม่พบหน้าที่ต้องการ | สำนักงานราชบัณฑิตยสภา';
+  mount.innerHTML = `
+    <section class="section">
+      <div class="container">
+        <div class="block-notice is-info" role="alert">
+          <div>
+            <strong>ไม่พบข่าวที่ต้องการ</strong>
+            <p>ข่าวนี้อาจถูกย้ายหรือลบแล้ว <a href="news.html">ดูข่าวสารและกิจกรรมทั้งหมด</a></p>
           </div>
         </div>
       </div>
@@ -87,7 +104,16 @@ async function main() {
     return;
   }
 
-  const path = mount.dataset.content || guessContentPath();
+  let path = mount.dataset.content || guessContentPath();
+  // แม่แบบหน้าเดียวหลายเนื้อหา (เช่น news-detail.html?id=<id> -> content/news/<id>.json)
+  if (path.includes('{id}')) {
+    const id = new URLSearchParams(location.search).get('id') || '';
+    if (!/^[a-z0-9-]{1,64}$/i.test(id)) {
+      showNotFound(mount);
+      return;
+    }
+    path = path.replace('{id}', id);
+  }
 
   let page;
   let translated = true;
@@ -101,12 +127,22 @@ async function main() {
       page = await response.json();
     }
   } catch (error) {
+    if (mount.dataset.content?.includes('{id}')) { showNotFound(mount); return; }
     showError(mount, `โหลดไฟล์เนื้อหาไม่สำเร็จ: ${path}`, [
       error.message,
       'ตรวจว่าไฟล์มีอยู่จริงและ JSON ถูกต้อง (ไม่มี comma เกิน)',
       'ต้องเปิดผ่าน Live Server ไม่ใช่เปิดไฟล์ตรง ๆ ด้วย file://',
     ]);
     return;
+  }
+
+  // block ที่ดึงรายการจากแหล่งกลาง (source) — เช่น รายการข่าวจาก content/news/index.json
+  try {
+    await resolveSources(page, async p => (window.orstI18n
+      ? (await window.orstI18n.fetchJSON(p)).data
+      : await fetch(p, { cache: 'no-cache' }).then(r => r.json())));
+  } catch (error) {
+    console.warn('[ORST] โหลดรายการจากแหล่งกลางไม่สำเร็จ', error);
   }
 
   const problems = validatePage(page);

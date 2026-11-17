@@ -192,7 +192,11 @@ const I18N = (() => {
   /** โหลด JSON ตามภาษา: ภาษาอังกฤษลอง content/.../en/<file> ก่อน ไม่มีค่อยใช้ไฟล์ไทย — คืน { data, translated } */
   async function fetchJSON(path, opts = { cache: 'no-cache' }) {
     if (ORST_LANG === 'en') {
-      const enPath = path.replace(/(^|\/)(content\/pages|content)\/(?!en\/)([^/]+\.json)$/, '$1$2/en/$3');
+      // content/pages/<slug>.json -> content/pages/en/<slug>.json · content/news/<f>.json -> content/en/news/<f>.json
+      // content/<file>.json -> content/en/<file>.json
+      const enPath = path
+        .replace(/(^|\/)content\/news\/([^/]+\.json)$/, '$1content/en/news/$2')
+        .replace(/(^|\/)(content\/pages|content)\/(?!en\/)([^/]+\.json)$/, '$1$2/en/$3');
       if (enPath !== path) {
         try {
           const r = await fetch(enPath, opts);
@@ -1959,6 +1963,87 @@ function initComponents() {
   else initThaiDigits();
 }
 
+/* faq ที่เปิด "search": true — ค้นหาคำถาม/คำตอบ (เลขไทย = เลขอารบิก) · จำนวนที่พบ · ขยาย/ย่อทั้งหมด */
+function initFaqTools() {
+  const norm = t => String(t || '').replace(/[๐-๙]/g, d => String(THAI_DIGITS.indexOf(d))).toLowerCase().replace(/\s+/g, ' ').trim();
+  document.querySelectorAll('[data-faq-tools]').forEach(tools => {
+    if (tools.dataset.bound === '1') return;
+    tools.dataset.bound = '1';
+    tools.hidden = false;
+    const list = tools.parentElement.querySelector('.faq-compact-list');
+    const empty = tools.parentElement.querySelector('[data-faq-empty]');
+    const input = tools.querySelector('[data-faq-search]');
+    const n = tools.querySelector('[data-faq-n]');
+    const all = tools.querySelector('[data-faq-all]');
+    const items = [...list.querySelectorAll('.faq-item')];
+    const setOpen = (item, open) => {
+      const q = item.querySelector('.faq-q');
+      q.setAttribute('aria-expanded', String(open));
+      item.querySelector('.faq-a').hidden = !open;
+    };
+    const syncAll = () => {
+      const shown = items.filter(i => !i.hidden);
+      const allOpen = shown.length > 0 && shown.every(i => i.querySelector('.faq-q').getAttribute('aria-expanded') === 'true');
+      all.setAttribute('aria-pressed', String(allOpen));
+      all.children[0].hidden = allOpen;
+      all.children[1].hidden = !allOpen;
+    };
+    input.addEventListener('input', () => {
+      const q = norm(input.value);
+      let count = 0;
+      items.forEach(item => {
+        const ok = !q || norm(item.textContent).includes(q);
+        item.hidden = !ok;
+        if (ok) count++;
+      });
+      n.textContent = String(count);
+      if (empty) empty.hidden = count > 0;
+      syncAll();
+    });
+    all.addEventListener('click', () => {
+      const open = all.getAttribute('aria-pressed') !== 'true';
+      items.filter(i => !i.hidden).forEach(i => setOpen(i, open));
+      syncAll();
+    });
+    list.addEventListener('click', e => { if (e.target.closest('.faq-q')) setTimeout(syncAll); });
+  });
+}
+
+/* ปฏิทินกิจกรรม (block event-calendar): ปุ่มกรองตามหน่วยงาน — ซ่อนกิจกรรม/หัวเดือนที่ไม่ตรง */
+function initEventFilters() {
+  document.querySelectorAll('[data-evcal-filter]').forEach(bar => {
+    if (bar.dataset.bound === '1') return;
+    bar.dataset.bound = '1';
+    bar.hidden = false;
+    const side = bar.closest('.evcal-side');
+    const list = side.querySelector('[data-evcal-list]');
+    const empty = side.querySelector('[data-evcal-empty]');
+    const edge = () => bar.classList.toggle('is-end', bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 4);
+    bar.addEventListener('scroll', edge, { passive: true });
+    edge();
+    bar.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-unit]');
+      if (!btn) return;
+      const unit = btn.dataset.unit;
+      bar.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      btn.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      let shown = 0;
+      list.querySelectorAll('.evcal-month').forEach(m => {
+        let n = 0;
+        m.querySelectorAll('.evcal-item').forEach(it => {
+          const ok = !unit || it.dataset.unit === unit;
+          it.hidden = !ok;
+          if (ok) n++;
+        });
+        m.hidden = n === 0;
+        shown += n;
+      });
+      if (empty) empty.hidden = shown > 0;
+      list.scrollTop = 0;
+    });
+  });
+}
+
 /* =============================================================================
    แถบขอความยินยอมคุกกี้ (ผังเว็บไซต์ ORST: นโยบายคุกกี้และแถบขอความยินยอม)
    เว็บนี้ไม่มีคุกกี้ติดตาม/วิเคราะห์ — ใช้ localStorage เท่าที่จำเป็น (ภาษา มุมมองรายการ ค่าความยินยอม)
@@ -2129,6 +2214,8 @@ window.orstHeader = {
     initSectionNav();
     initMediaTabs();
     initNewsEventsTabs();
+    initEventFilters();
+    initFaqTools();
     syncFixedHeaderHeight();
   },
 };

@@ -1,0 +1,96 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HSI4542053 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69hsi4542053",
+  "title": "List of Participants: Workshop on “Using Ancient Script Font Sets in Thailand",
+  "navKey": "news",
+  "description": "2 images · 1 attachment",
+  "sideNav": false,
+  "updatedAt": "2026-08-19",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Training and seminars",
+      "date": "2026-08-19",
+      "heading": "List of Participants: Workshop on “Using Ancient Script Font Sets in Thailand",
+      "image": "assets/images/orst/news/data0005-00005399-960.jpg",
+      "imageAlt": "News image: Announcement of participants in the workshop “Using Font Sets",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005399.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "List of Participants: Workshop on “Using Ancient Script Font Sets in Thailand"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "Announcement of participants in the workshop “Using FONT Sets for Ancient Scripts in Thailand",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005401.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005399-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005399.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005400-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005400.JPG",
+          "alt": "News photo 2"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "List of Applicants for the Office of the Royal Society’s Transliteration Guidelines Training",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67IDK1656059",
+          "category": "Announcements",
+          "publishedAt": "2024-09-04"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "href": "news-detail.html?id=69kbj5538066",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-11-02"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+          "href": "news-detail.html?id=69jaj1403044",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-10-31"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+          "href": "news-detail.html?id=69jsn0030075",
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-10-29"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

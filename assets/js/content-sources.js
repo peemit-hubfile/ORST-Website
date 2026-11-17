@@ -1,0 +1,59 @@
+/* =============================================================================
+   content-sources.js — เติมรายการให้ block ที่ดึงข้อมูลจากแหล่งกลาง (เชื่อม CMS)
+   -----------------------------------------------------------------------------
+   pure module: ไม่แตะ document / window — ใช้ทั้งในเบราว์เซอร์ (page-runtime.js) และ Node (tools/build.mjs)
+
+   block document-list ที่มีฟิลด์ "source" จะไม่เก็บรายการเอง แต่ดึงจาก content/news/index.json
+
+     { "type": "document-list", "layout": "news",
+       "source": { "type": "news", "channel": "activity", "limit": 6 } }
+
+     channel   general = ข่าวประชาสัมพันธ์ทั่วไป · activity = ข่าวกิจกรรม · lecture = การบรรยายทางวิชาการ
+               ไม่ใส่ = ทุกข่าว
+     limit     จำนวนรายการสูงสุด (ใหม่สุดก่อน) ไม่ใส่ = ทั้งหมด
+
+   รูปแบบ content/news/index.json (CMS เขียนไฟล์นี้ / endpoint ที่คืน JSON แบบเดียวกัน)
+     { "items": [ { "id", "title", "publishedAt", "channels": [...], "category", "image", "imageLarge", "excerpt", "href", "file" } ] }
+     id    = มีหน้ารายละเอียดในเว็บนี้ (content/news/<id>.json) → ลิงก์ news-detail.html?id=<id>
+     href  = ไม่มีหน้ารายละเอียด (ข่าวเก่าบนเว็บไซต์เดิม) → ลิงก์ไปที่ href
+     file  = ไฟล์ PDF ของข่าว/การบรรยาย → การ์ดมีปุ่ม "ดูตัวอย่าง" (หน้าต่างซ้อน) และ "เปิดเอกสาร"
+   ============================================================================= */
+
+export const NEWS_INDEX = 'content/news/index.json';
+
+/** ลิงก์หน้ารายละเอียดข่าว */
+export const newsUrl = id => `news-detail.html?id=${encodeURIComponent(id)}`;
+
+/** รายการข่าวจาก index -> รายการของ document-list */
+export function newsItems(index, { channel, limit } = {}) {
+  const all = Array.isArray(index?.items) ? index.items : [];
+  const picked = all
+    .filter(it => !channel || (it.channels || []).includes(channel))
+    .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+  return (limit ? picked.slice(0, limit) : picked).map(it => {
+    const doc = { title: it.title };
+    const href = it.id ? newsUrl(it.id) : it.href;
+    if (href) doc.href = href;
+    for (const k of ['publishedAt', 'image', 'excerpt', 'category', 'file', 'fileSize', 'pages', 'byline']) if (it[k]) doc[k] = it[k];
+    return doc;
+  });
+}
+
+/** เติม items ให้ทุก block ที่มี source — load(path) คืน JSON (เบราว์เซอร์ใช้ fetch, Node ใช้ readFile) */
+export const EVENTS = 'content/events.json';
+
+export async function resolveSources(page, load) {
+  const blocks = (page?.blocks || []).filter(b => b && b.source);
+  const news = blocks.filter(b => b.source.type === 'news');
+  if (news.length) {
+    const index = await load(NEWS_INDEX);
+    for (const b of news) b.items = newsItems(index, b.source);
+  }
+  // ปฏิทินกิจกรรม: content/events.json (ไฟล์เดียวกับปฏิทินหน้าแรก) — { "events": [{ id, title, start, end?, location?, unit? }] }
+  const events = blocks.filter(b => b.source.type === 'events');
+  if (events.length) {
+    const data = await load(EVENTS);
+    for (const b of events) b.items = Array.isArray(data?.events) ? data.events : [];
+  }
+  return page;
+}

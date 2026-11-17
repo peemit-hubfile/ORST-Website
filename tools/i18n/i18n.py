@@ -29,7 +29,7 @@ MEMORY = os.path.join(HERE, "memory.json")
 UI = os.path.join(HERE, "ui-strings.json")
 THAI = re.compile("[฀-๿]")
 SKIP_KEYS = {"_note", "$schema"}
-DATA_FILES = ["site-nav.json", "knowledge-hub.json", "events.json"]
+DATA_FILES = ["site-nav.json", "knowledge-hub.json", "events.json", "news/index.json"]
 
 
 def norm(s):
@@ -38,6 +38,11 @@ def norm(s):
 
 def page_files():
     return sorted(glob.glob(os.path.join(ROOT, "content", "pages", "*.json")))
+
+
+def news_files():
+    """หน้ารายละเอียดข่าว content/news/<id>.json (ไม่รวม index.json ซึ่งเป็นข้อมูลประกอบ)"""
+    return sorted(f for f in glob.glob(os.path.join(ROOT, "content", "news", "*.json")) if not f.endswith("index.json"))
 
 
 def data_files():
@@ -79,7 +84,7 @@ def extract(n_packs=10):
     mem = load_memory()
     groups = []   # [(ชื่อแหล่ง, [ข้อความ])] เรียงตามไฟล์ — ให้ผู้แปลเห็นบริบทเดียวกัน
     seen = set(mem)
-    for f in page_files() + data_files():
+    for f in page_files() + news_files() + data_files():
         out = []
         collect(json.load(open(f, encoding="utf-8")), out)
         uniq = [s for s in dict.fromkeys(out) if s not in seen]
@@ -167,10 +172,17 @@ def apply():
             json.dump(out, fh, ensure_ascii=False, indent=2)
             fh.write("\n")
     en_data = os.path.join(ROOT, "content", "en")
-    os.makedirs(en_data, exist_ok=True)
+    os.makedirs(os.path.join(en_data, "news"), exist_ok=True)
+    for f in news_files():
+        out = translate_value(json.load(open(f, encoding="utf-8")), plain, miss)
+        out["lang"] = "en"
+        with open(os.path.join(en_data, "news", os.path.basename(f)), "w", encoding="utf-8", newline="\n") as fh:
+            json.dump(out, fh, ensure_ascii=False, indent=2)
+            fh.write("\n")
     for f in data_files():
         out = translate_value(json.load(open(f, encoding="utf-8")), plain, miss)
-        with open(os.path.join(en_data, os.path.basename(f)), "w", encoding="utf-8", newline="\n") as fh:
+        rel = os.path.relpath(f, os.path.join(ROOT, "content"))
+        with open(os.path.join(en_data, rel), "w", encoding="utf-8", newline="\n") as fh:
             json.dump(out, fh, ensure_ascii=False, indent=2)
             fh.write("\n")
     # พจนานุกรมส่วนกลาง: ข้อความ UI ทั้งหมด + ข้อความเนื้อหา (สำรอง — ใช้แปลข้อความที่สคริปต์สร้างจากข้อมูล)

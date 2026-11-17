@@ -79,6 +79,11 @@ node tools/validate.mjs
 
 ## งานอื่น ๆ
 
+### ข่าวสาร (เชื่อม CMS)
+
+- เพิ่ม/แก้ข่าว = แก้ `content/news/index.json` (+ `content/news/<id>.json` ถ้ามีหน้ารายละเอียด) **ห้ามสร้าง news-*.html ใหม่**
+  หน้ารายการข่าว หน้าแรก RSS อ่านจาก index ให้เอง · ฟิลด์ทั้งหมดอยู่ใน CMS-HANDOFF.md หัวข้อ 2.4.1
+
 ### สองภาษา (TH / EN)
 
 - ไฟล์ภาษาอังกฤษสร้างอัตโนมัติ — **ห้ามแก้ `content/pages/en/*`, `content/en/*`, `content/i18n/en.json` ด้วยมือ**
@@ -153,6 +158,8 @@ netlify.toml  robots.txt  _headers       ไฟล์สำหรับ deploy �
 content/
   blocks.schema.json                     JSON Schema ของไฟล์เนื้อหา
   pages/<slug>.json                      เนื้อหา 1 หน้า = 1 ไฟล์
+  news/index.json                        รายการข่าวทั้งหมด (แหล่งเดียว — หน้ารายการข่าว หน้าแรก RSS)
+  news/<id>.json                         เนื้อหาข่าว 1 เรื่อง แสดงที่ news-detail.html?id=<id>
 
 assets/
   css/base.css                           ตัวแปรสี + reset + คลาสพื้นฐาน
@@ -162,6 +169,7 @@ assets/
   js/components.js                        header/footer/เมนู/ไอคอน sprite
   js/blocks.js                            block renderer (pure, รันใน Node ได้)
   js/page-runtime.js                      ตัวโหลด JSON -> render (ES module)
+  js/content-sources.js                   เติมรายการจากแหล่งกลาง (document-list ที่มี source) — pure ใช้ทั้งเบราว์เซอร์และ build
   js/pages/<หน้า>.js                       เฉพาะ 3 หน้าที่เขียน HTML เอง
 
 tools/validate.mjs  tools/build.mjs

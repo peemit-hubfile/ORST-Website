@@ -3381,3 +3381,450 @@ body.high-contrast .nm-file-badge { --file-c: var(--gold); color: var(--surface)
 .nm-files-more[open] > summary::after { transform: rotate(180deg); }
 .nm-files-more[open] > summary { margin-bottom: var(--space-3); }
 .nm-files-more > summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: var(--radius-sm); }
+
+/* =============================================================================
+   ปกแม่แบบข่าวที่ไม่มีรูป — แบบโปสเตอร์ (newsCover ใน blocks.js)
+   ป้ายประเภทบนซ้าย · ปี พ.ศ. ตัวใหญ่ชิดซ้ายล่าง · ตราสำนักงานจางใหญ่มุมขวาล่าง
+   4 โทนสลับตามปี (เขียวเข้ม / เขียวหม่น / ทองเข้ม / น้ำเงินเขียว) จากตัวแปรสีของเว็บเท่านั้น
+   ============================================================================= */
+.news-cover-tpl {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+  padding: 18px 20px 30px;
+  text-align: left;
+}
+.news-cover-tpl.nct-t0 { background: radial-gradient(90% 120% at 100% 0%, color-mix(in srgb, var(--gold) 30%, transparent), transparent 60%), linear-gradient(150deg, var(--deep-2), var(--deep)); }
+.news-cover-tpl.nct-t1 { background: radial-gradient(90% 120% at 0% 0%, color-mix(in srgb, var(--surface) 16%, transparent), transparent 60%), linear-gradient(150deg, color-mix(in srgb, var(--deep) 78%, var(--ink)), color-mix(in srgb, var(--deep) 60%, var(--surface) 8%)); }
+.news-cover-tpl.nct-t2 { background: radial-gradient(90% 120% at 100% 100%, color-mix(in srgb, var(--deep) 40%, transparent), transparent 60%), linear-gradient(150deg, color-mix(in srgb, var(--gold) 82%, var(--ink)), color-mix(in srgb, var(--gold) 58%, var(--ink))); }
+.news-cover-tpl.nct-t3 { background: radial-gradient(90% 120% at 100% 0%, color-mix(in srgb, var(--gold) 22%, transparent), transparent 60%), linear-gradient(150deg, color-mix(in srgb, var(--ink) 70%, var(--deep)), color-mix(in srgb, var(--ink) 85%, var(--deep))); }
+.news-cover-tpl .nct-kicker {
+  margin: 0;
+  padding: 3px 10px;
+  border: 1px solid color-mix(in srgb, var(--surface) 35%, transparent);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--surface) 10%, transparent);
+  color: var(--surface);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+}
+.nct-year {
+  display: grid;
+  color: var(--surface);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .01em;
+}
+.nct-year small { margin-bottom: 4px; font-size: var(--text-xs); font-weight: 500; letter-spacing: .04em; opacity: .75; }
+.news-cover-tpl img {
+  position: absolute;
+  right: -6%;
+  bottom: -14%;
+  z-index: -1;
+  height: 92% !important;
+  max-height: none;
+  opacity: .14;
+  filter: grayscale(1) brightness(2.2);
+}
+.news-row:hover .news-cover-tpl img { transform: scale(1.04) rotate(-2deg); }
+/* มุมมองรายการ (ภาพย่อเล็ก): เหลือปีอย่างเดียว */
+.doc-list.is-news[data-view="list"] .news-cover-tpl { justify-content: center; padding: 8px 10px; }
+.doc-list.is-news[data-view="list"] .news-cover-tpl .nct-kicker { display: none; }
+.doc-list.is-news[data-view="list"] .nct-year { font-size: var(--text-lg); }
+body.high-contrast .news-cover-tpl[class*="nct-t"] { background: var(--surface); color: var(--ink); }
+body.high-contrast .nct-year, body.high-contrast .news-cover-tpl .nct-kicker { color: var(--ink); }
+/* ปีอยู่ใต้ป้ายประเภท (มุมซ้ายล่างเว้นให้ป้ายวันที่ที่คร่อมขอบภาพ) */
+.news-cover-tpl { justify-content: flex-start; gap: 12px; }
+
+/* การ์ดข่าวที่เป็นเอกสาร PDF (เช่น การบรรยายทางวิชาการ): ปุ่ม ดูตัวอย่าง / เปิดเอกสาร ท้ายการ์ด + ป้าย PDF บนปก */
+.news-row-thumb { position: relative; }
+.news-row-pdf {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--file-pdf, var(--deep));
+  color: var(--surface);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: var(--leading-tight);
+}
+.news-row-foot--doc { justify-content: flex-start; gap: 8px; flex-wrap: wrap; }
+.news-row-foot--doc .doc-btn { position: relative; z-index: 2; }
+.doc-list.is-news[data-view="list"] .news-row-pdf { top: 6px; right: 6px; padding: 0 5px; }
+
+/* การ์ด/แถวข่าว: ผู้บรรยาย + บรรทัดรายละเอียด (วันที่เต็ม · PDF จำนวนหน้า ขนาด) */
+.news-row-byline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  color: var(--deep);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+}
+.news-row-byline .icon { flex: none; width: 14px; height: 14px; }
+.news-row-byline span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.news-row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+}
+.news-row-meta .nrm-file { font-weight: 600; }
+/* มุมมองตาราง: วันที่อยู่บนป้ายวันที่ของภาพแล้ว ไม่ซ้ำในบรรทัดนี้ */
+.doc-list.is-news:not([data-view="list"]) .news-row-meta .nrm-date { display: none; }
+.doc-list.is-news:not([data-view="list"]) .news-row-meta:not(:has(.nrm-file)) { display: none; }
+/* มุมมองรายการ: วันที่อยู่ในบรรทัดรายละเอียดแล้ว — ซ่อนป้ายวันที่ที่คร่อมภาพย่อ */
+.doc-list.is-news[data-view="list"] .news-row-date { display: none; }
+
+/* =============================================================================
+   event-calendar — ปฏิทินกิจกรรม (eventCalendar ใน blocks.js)
+   ซ้าย: รายการกิจกรรม (ป้ายวันที่ · ชื่อ · ช่วงวัน · สถานที่ · หน่วยงาน) เลื่อนในกรอบ
+   ขวา: การ์ดปฏิทินออนไลน์ · จอ < 1024px วางซ้อนกัน และใช้มุมมองกำหนดการ (agenda)
+   ============================================================================= */
+.evcal {
+  display: grid;
+  grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+.evcal-side,
+.evcal-board {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 10px 30px -18px rgba(16, 42, 34, .35);
+  overflow: hidden;
+}
+.evcal-side { display: flex; flex-direction: column; max-height: 760px; }
+.evcal-side-head,
+.evcal-board-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-soft);
+}
+.evcal-side-head h2 { margin: 0; color: var(--deep); font-size: var(--text-md); line-height: var(--leading-tight); }
+.evcal-count { color: var(--muted); font-size: var(--text-xs); white-space: nowrap; }
+.evcal-list { list-style: none; margin: 0; padding: 6px 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.evcal-item { display: flex; gap: 14px; padding: 12px 20px; }
+.evcal-item + .evcal-item { border-top: 1px solid var(--line); }
+.evcal-date {
+  flex: none;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 56px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  background: var(--deep);
+  color: var(--surface);
+  line-height: 1;
+}
+.evcal-date b { font-size: var(--text-xl); font-weight: 700; }
+.evcal-date span { margin-top: 4px; font-size: var(--text-xs); opacity: .85; }
+.evcal-body { display: grid; gap: 4px; min-width: 0; }
+.evcal-title { color: var(--ink); font-size: var(--text-sm); font-weight: 600; line-height: var(--leading-tight); }
+.evcal-when,
+.evcal-where { display: flex; align-items: flex-start; gap: 6px; color: var(--muted); font-size: var(--text-xs); line-height: var(--leading-normal); }
+.evcal-when .icon,
+.evcal-where .icon { flex: none; width: 14px; height: 14px; margin-top: 3px; color: var(--deep); }
+.evcal-unit {
+  justify-self: start;
+  margin-top: 2px;
+  padding: 1px 10px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--gold) 16%, var(--surface));
+  color: var(--deep);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+.evcal-empty { margin: 0; padding: 20px; color: var(--muted); }
+.evcal-board-title { display: inline-flex; align-items: center; gap: 8px; color: var(--deep); font-size: var(--text-md); font-weight: 700; }
+.evcal-board-title .icon { width: 20px; height: 20px; }
+.evcal-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--deep);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-decoration: none;
+}
+.evcal-open .icon { width: 14px; height: 14px; }
+.evcal-open:hover { border-color: var(--deep); }
+.evcal-open:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.evcal-frame { display: block; width: 100%; height: 700px; border: 0; background: var(--surface); }
+.evcal-frame.is-agenda { display: none; }
+@media (max-width: 1023.98px) {
+  .evcal { grid-template-columns: minmax(0, 1fr); }
+  .evcal-board { order: -1; }
+  .evcal-side { max-height: none; }
+  .evcal-list { max-height: 520px; }
+  .evcal-frame.is-month { display: none; }
+  .evcal-frame.is-agenda { display: block; height: 520px; }
+}
+@media (max-width: 479.98px) {
+  .evcal-side-head, .evcal-board-head { padding: 12px 14px; }
+  .evcal-item { padding: 12px 14px; }
+  .evcal-open span:first-of-type { display: none; }
+}
+body.high-contrast .evcal-date { background: var(--ink); }
+
+/* event-calendar รายการกิจกรรม (ปรับใหม่): หัวเดือนติดบน · แถวกะทัดรัด · ปุ่มกรองหน่วยงาน */
+.evcal-filter { display: flex; gap: 6px; padding: 12px 20px 4px; overflow-x: auto; scrollbar-width: none; }
+.evcal-filter::-webkit-scrollbar { display: none; }
+.evcal-filter button {
+  flex: none;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.evcal-filter button:hover { border-color: var(--deep); color: var(--deep); }
+.evcal-filter button[aria-pressed="true"] { border-color: var(--deep); background: var(--deep); color: var(--surface); }
+.evcal-filter button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.evcal-list { padding: 0 0 8px; }
+.evcal-month { list-style: none; }
+.evcal-month-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 10px 20px 8px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+  color: var(--deep);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+.evcal-month-list { list-style: none; margin: 0; padding: 0; }
+.evcal-item { gap: 14px; padding: 12px 20px; align-items: flex-start; }
+.evcal-item + .evcal-item { border-top: 1px dashed var(--line); }
+.evcal-item[hidden], .evcal-month[hidden] { display: none; }
+.evcal-date {
+  width: 48px;
+  height: auto;
+  min-height: 52px;
+  padding: 6px 0;
+  border: 1px solid color-mix(in srgb, var(--deep) 18%, var(--line));
+  background: color-mix(in srgb, var(--deep) 6%, var(--surface));
+  color: var(--deep);
+}
+.evcal-date small { font-size: var(--text-xs); font-weight: 600; opacity: .8; }
+.evcal-date b { margin-top: 2px; font-size: var(--text-lg); }
+.evcal-body { gap: 3px; }
+.evcal-title { font-size: var(--text-sm); }
+.evcal-meta { display: flex; flex-wrap: wrap; gap: 2px 12px; }
+.evcal-meta:empty { display: none; }
+.evcal-meta span { display: inline-flex; align-items: flex-start; gap: 5px; color: var(--muted); font-size: var(--text-xs); line-height: var(--leading-normal); }
+.evcal-meta .icon { flex: none; width: 13px; height: 13px; margin-top: 3px; color: var(--deep); }
+.evcal-unit { margin-top: 2px; padding: 0; background: none; border-radius: 0; color: var(--gold); font-weight: 600; }
+.evcal-empty[hidden] { display: none; }
+.evcal-side-head { padding: 14px 20px; }
+/* แถบกรองหน่วยงาน: ห้ามหดในคอลัมน์ flex (เดิมปุ่มถูกตัดครึ่ง) · มีเส้นคั่นจากรายการ · ขอบขวาจางบอกว่าเลื่อนได้ */
+.evcal-filter {
+  flex: none;
+  align-items: center;
+  padding: 2px 20px 12px;
+  border-bottom: 1px solid var(--line);
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+}
+.evcal-filter.is-end { -webkit-mask-image: none; mask-image: none; }
+.evcal-filter button { min-height: 32px; line-height: var(--leading-tight); }
+.evcal-side-head { flex: none; }
+.evcal-list { flex: 1 1 auto; min-height: 0; }
+@media (max-width: 479.98px) { .evcal-filter { padding: 2px 14px 12px; } }
+/* เกลาให้เนียน: หัวรายการ + แถบกรองเป็นก้อนเดียว · ชิปเบาลง · หัวเดือนเรียบ · เส้นคั่นบาง */
+.evcal-side .evcal-side-head { padding: 16px 20px 10px; border-bottom: 0; }
+.evcal-side .evcal-side-head h2 { font-size: var(--text-md); }
+.evcal-filter { gap: 6px; padding: 0 20px 14px; background: var(--surface-soft); }
+.evcal-filter button {
+  min-height: 30px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  background: color-mix(in srgb, var(--deep) 7%, var(--surface));
+  color: var(--ink-soft, var(--ink));
+  font-weight: 500;
+  transition: background-color .15s, color .15s;
+}
+.evcal-filter button:hover { border-color: transparent; background: color-mix(in srgb, var(--deep) 13%, var(--surface)); color: var(--deep); }
+.evcal-filter button[aria-pressed="true"] { background: var(--deep); color: var(--surface); font-weight: 600; }
+.evcal-month-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 6px;
+  border-bottom: 0;
+  background: var(--surface);
+  backdrop-filter: none;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+.evcal-month-head::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.evcal-month:first-child .evcal-month-head { padding-top: 12px; }
+.evcal-item { padding: 10px 20px; }
+.evcal-item + .evcal-item { border-top: 0; }
+.evcal-item + .evcal-item .evcal-body { position: relative; }
+.evcal-month-list .evcal-item { position: relative; }
+.evcal-month-list .evcal-item + .evcal-item::before {
+  content: ""; position: absolute; top: 0; left: 82px; right: 20px; height: 1px; background: var(--line);
+}
+.evcal-item:hover { background: color-mix(in srgb, var(--deep) 4%, var(--surface)); }
+.evcal-date { border-color: transparent; background: color-mix(in srgb, var(--deep) 8%, var(--surface)); }
+.evcal-list { scrollbar-color: color-mix(in srgb, var(--deep) 25%, transparent) transparent; }
+@media (max-width: 479.98px) {
+  .evcal-side .evcal-side-head { padding: 12px 14px 8px; }
+  .evcal-filter { padding: 0 14px 12px; }
+  .evcal-month-head { padding: 12px 14px 6px; }
+  .evcal-item { padding: 10px 14px; }
+  .evcal-month-list .evcal-item + .evcal-item::before { left: 76px; right: 14px; }
+}
+
+/* faq แบบคำถาม-คำตอบ (Q/A) + แถบค้นหา — ขนาดตัวอักษรเท่าเนื้อหาทั่วไป อ่านง่าย */
+.faq-compact-list .faq-q { padding: 16px 20px; font-size: var(--text-base); font-weight: 600; line-height: var(--leading-normal); color: var(--ink); }
+.faq-compact-list .faq-q:hover { color: var(--deep); }
+.faq-compact-list .faq-q:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+.faq-compact-list .faq-q > svg { color: var(--muted); }
+.faq-compact-list .faq-a { padding: 0 20px 18px; color: var(--ink); font-size: var(--text-base); line-height: var(--leading-reading); }
+.faq-compact-list .faq-a-body > * + * { margin-top: 8px; }
+.faq-compact-list .faq-a ul { margin: 6px 0 0; padding-inline-start: 1.25em; }
+.faq-compact-list .faq-a li + li { margin-top: 2px; }
+.faq-compact-list .faq-item[hidden] { display: none; }
+.faq-mark { display: none; }
+.faq-q-text { flex: 1; min-width: 0; }
+
+.is-qa { gap: 12px; }
+.is-qa .faq-item { border-radius: var(--radius-lg); transition: border-color .15s, box-shadow .15s; }
+.is-qa .faq-item:hover { border-color: color-mix(in srgb, var(--deep) 30%, var(--line)); }
+.is-qa .faq-item:has(.faq-q[aria-expanded="true"]) { border-color: color-mix(in srgb, var(--deep) 35%, var(--line)); box-shadow: 0 10px 28px -20px rgba(16, 42, 34, .45); }
+.is-qa .faq-q { justify-content: flex-start; align-items: flex-start; gap: 14px; padding: 16px 20px; }
+.is-qa .faq-q > svg { margin-top: 6px; }
+.is-qa .faq-mark {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--deep) 10%, var(--surface));
+  color: var(--deep);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1;
+}
+.is-qa .faq-q[aria-expanded="true"] .faq-mark { background: var(--deep); color: var(--surface); }
+.is-qa .faq-mark.is-a { background: color-mix(in srgb, var(--gold) 18%, var(--surface)); color: var(--gold-deep, var(--deep)); }
+.is-qa .faq-a { display: flex; gap: 14px; margin: 0 20px; padding: 16px 0 20px; border-top: 1px dashed var(--line); }
+.is-qa .faq-a[hidden] { display: none; }
+.is-qa .faq-a-body { flex: 1; min-width: 0; padding-top: 3px; }
+
+.faq-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 18px; }
+.faq-tools[hidden] { display: none; }
+.faq-search {
+  position: relative;
+  flex: 1 1 320px;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+}
+.faq-search .icon { position: absolute; left: 16px; width: 18px; height: 18px; color: var(--muted); pointer-events: none; }
+.faq-search input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px 0 46px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-base);
+}
+.faq-search input:focus { outline: none; border-color: var(--deep); box-shadow: 0 0 0 3px color-mix(in srgb, var(--deep) 18%, transparent); }
+.faq-count { color: var(--muted); font-size: var(--text-sm); }
+.faq-count b { color: var(--deep); font-weight: 700; }
+.faq-all {
+  margin-inline-start: auto;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--deep);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+.faq-all:hover { border-color: var(--deep); }
+.faq-all:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.faq-empty { margin: 8px 0 0; padding: 28px 20px; border: 1px dashed var(--line); border-radius: var(--radius-lg); color: var(--muted); text-align: center; font-size: var(--text-base); }
+.faq-empty[hidden] { display: none; }
+@media (max-width: 599.98px) {
+  .faq-search { flex-basis: 100%; max-width: none; }
+  .is-qa .faq-q { gap: 12px; padding: 14px 16px; }
+  .is-qa .faq-a { gap: 12px; margin: 0 16px; }
+  .is-qa .faq-mark { width: 28px; height: 28px; }
+}
+/* จัดแนวป้าย Q/A ให้ตรงกลางบรรทัดข้อความ (อักษรไทยมีเส้นบรรทัดสูง ป้ายเลยดูลอยขึ้น) */
+.is-qa .faq-q { align-items: center; }
+.is-qa .faq-q > svg { margin-top: 0; }
+.is-qa .faq-a-body { padding-top: 0; }
+.is-qa .faq-a > .faq-mark { margin-top: calc((1em * 1.7 - 32px) / 2 + 2px); }
+@media (max-width: 599.98px) {
+  .is-qa .faq-a > .faq-mark { display: none; }
+  .is-qa .faq-a { padding-top: 14px; }
+}
+/* ปรับสัดส่วน: ตัวอักษรคำถาม/คำตอบเล็กลงหนึ่งขั้น · ป้าย Q/A ใหญ่ขึ้น · ลูกศรอยู่ในวงกลมขนาดเท่าป้าย */
+.is-qa .faq-q { gap: 16px; padding: 14px 18px; font-size: var(--text-sm); font-weight: 600; }
+.is-qa .faq-a { gap: 16px; margin: 0 18px; font-size: var(--text-sm); }
+.is-qa .faq-mark { width: 36px; height: 36px; font-size: var(--text-sm); }
+.is-qa .faq-a > .faq-mark { margin-top: calc((1em * 1.7 - 36px) / 2 + 2px); }
+.is-qa .faq-q > svg {
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  padding: 9px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--deep) 6%, var(--surface));
+  color: var(--deep);
+  transition: transform .18s ease, background-color .15s, color .15s;
+}
+.is-qa .faq-q:hover > svg { background: color-mix(in srgb, var(--deep) 12%, var(--surface)); }
+.is-qa .faq-q[aria-expanded="true"] > svg { background: var(--deep); color: var(--surface); }
+.faq-search .icon { width: 20px; height: 20px; }
+.faq-search input { font-size: var(--text-sm); }
+@media (max-width: 599.98px) {
+  .is-qa .faq-q { gap: 12px; padding: 12px 14px; }
+  .is-qa .faq-mark, .is-qa .faq-q > svg { width: 32px; height: 32px; }
+  .is-qa .faq-q > svg { padding: 8px; }
+  .is-qa .faq-a { margin: 0 14px; }
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69GJK0206009 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69gjk0206009",
+  "title": "Summary report on the Royal Society of Thailand 100th anniversary project activities, Academy of Science, fiscal year 2026. The Academy of Science, in collaboration with the university",
+  "navKey": "news",
+  "description": "9 images · 1 attachment",
+  "sideNav": false,
+  "updatedAt": "2026-07-10",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Training and seminars",
+      "date": "2026-07-10",
+      "heading": "Summary report of the Royal Society of Thailand 100th Anniversary Project activities, Academy of Science, fiscal year 2026: the Academy of Science, together with Rajamangala University of Technology Srivijaya, held an academic seminar on coastal erosion in the Gulf of Thailand and sustainable solutions",
+      "image": "assets/images/orst/news/data0005-00005295-960.jpg",
+      "imageAlt": "News image: Summary report on the Royal Society of Thailand 100th anniversary project activities, Academy of Science, fiscal year",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005295.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Summary report of the Royal Society of Thailand 100th Anniversary Project activities, Academy of Science, fiscal year 2026: the Academy of Science, together with Rajamangala University of Technology Srivijaya, held an academic seminar on coastal erosion in the Gulf of Thailand and sustainable solutions"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "Summary of the academic seminar: 100 years of coastal erosion",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005302.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005295-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005295.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005296-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005296.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005297-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005297.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005298-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005298.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005299-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005299.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005300-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005300.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005301-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005301.JPG",
+          "alt": "News image 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005303-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005303.JPG",
+          "alt": "News image 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005304-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005304.JPG",
+          "alt": "News image 9"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Other news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "href": "news-detail.html?id=69kbj5538066",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-11-02"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+          "href": "news-detail.html?id=69jaj1403044",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-10-31"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+          "href": "news-detail.html?id=69jsn0030075",
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
+          "href": "news-detail.html?id=69jsm4847075",
+          "image": "assets/images/orst/news/data0005-00005420-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-10-19"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

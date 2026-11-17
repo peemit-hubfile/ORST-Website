@@ -22,7 +22,9 @@
         {
           "label": "Questions and answers (Q&A)"
         }
-      ]
+      ],
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "imageAlt": ""
     },
     {
       "type": "faq",
@@ -52,8 +54,22 @@
           "q": "Why can words pronounced \"ban\" be spelled in several ways, such as บรร, บัน and บรรณ? For words like บรรณ spelled with รร, how can one tell whether they come from Khmer or Sanskrit?",
           "a": "1. Thai words pronounced \"ban\" can be written in several ways, such as บรร, บัน and บรรณ, because each word has a different origin and is formed differently. 2. Words with บรร may come from Khmer, e.g. บรรทม (banthom) from ผทํ; from Sanskrit and Pali, e.g. บรรถร (banthon) from Pali ปตฺถร and Sanskrit ปฺรสฺตร; or may be derived from Thai words, e.g. บรรสาน (bansan) derived from ประสาน (prasan). Learners should consult dictionaries and academic texts on the Thai language and remember the origin or derivation of each word"
         }
+      ],
+      "search": true
+    },
+    {
+      "type": "cta-band",
+      "id": "qa-ask",
+      "heading": "Can't find the answer you need?",
+      "body": "Send further questions about Thai language usage to the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "Contact us",
+          "href": "contact.html"
+        }
       ]
     }
   ],
+  "sideNav": false,
   "lang": "en"
 }

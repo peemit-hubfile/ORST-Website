@@ -492,14 +492,14 @@
         {
           "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
           "publishedAt": "2026-11-02",
-          "href": "news-69kbj5538066.html",
+          "href": "news-detail.html?id=69kbj5538066",
           "image": "assets/images/orst/news/data0005-00005462-640.jpg",
           "excerpt": "ภาพประกอบ 3 ภาพ"
         },
         {
           "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
           "publishedAt": "2026-10-31",
-          "href": "news-69jaj1403044.html",
+          "href": "news-detail.html?id=69jaj1403044",
           "image": "assets/images/orst/news/data0005-00005446-640.jpg",
           "excerpt": "ภาพประกอบ 10 ภาพ · เอกสารแนบ 5 ไฟล์"
         },
@@ -740,31 +740,51 @@
       "items": [
         {
           "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
-          "href": "news-69jaj1403044.html",
+          "href": "news-detail.html?id=69jaj1403044",
           "image": "assets/images/orst/news/data0005-00005446-640.jpg",
           "category": "ประกาศ",
           "publishedAt": "2026-10-31"
         },
         {
           "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
-          "href": "news-69jsh5647044.html",
+          "href": "news-detail.html?id=69jsh5647044",
           "image": "assets/images/orst/news/data0005-00005428-640.jpg",
           "category": "ประกาศ",
           "publishedAt": "2026-10-29"
         },
         {
           "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
-          "href": "news-69jsn0030075.html",
+          "href": "news-detail.html?id=69jsn0030075",
           "image": "assets/images/orst/news/data0005-00005433-640.jpg",
           "category": "ประกาศ",
           "publishedAt": "2026-10-29"
         },
         {
           "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์",
-          "href": "news-69jsm4847075.html",
+          "href": "news-detail.html?id=69jsm4847075",
           "image": "assets/images/orst/news/data0005-00005420-640.jpg",
           "category": "ประกาศ",
           "publishedAt": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "type": "event-calendar",
+      "id": "sg-event-calendar",
+      "heading": "event-calendar — ปฏิทินกิจกรรม",
+      "listHeading": "กิจกรรมล่าสุด",
+      "items": [
+        {
+          "title": "[ชื่อกิจกรรม]",
+          "start": "2026-01-15",
+          "location": "[สถานที่]",
+          "unit": "[หน่วยงาน]"
+        },
+        {
+          "title": "[ชื่อกิจกรรมหลายวัน]",
+          "start": "2026-02-02",
+          "end": "2026-02-04",
+          "location": "[สถานที่]"
         }
       ]
     }

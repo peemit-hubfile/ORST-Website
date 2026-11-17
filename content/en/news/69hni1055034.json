@@ -1,0 +1,114 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HNI1055034 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69hni1055034",
+  "title": "Royal Society of Thailand Knowledge for Society project, academic seminar on “Biodiversity: Assets for Economic Development and",
+  "navKey": "news",
+  "description": "7 images",
+  "sideNav": false,
+  "updatedAt": "2026-08-14",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Training and seminars",
+      "date": "2026-08-14",
+      "heading": "Royal Society Brings Knowledge to Society Project: Academic Forum on “Biodiversity: Assets for Future Economic and Social Development”",
+      "image": "assets/images/orst/news/data0005-00005386-960.jpg",
+      "imageAlt": "News image: Royal Society of Thailand Knowledge for Society project, academic seminar on “Biodiversity",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005386.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Royal Society Brings Knowledge to Society Project: Academic Forum on “Biodiversity: Assets for Future Economic and Social Development”"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005386-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005386.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005387-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005387.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005388-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005388.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005389-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005389.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005390-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005390.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005391-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005391.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005392-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005392.JPG",
+          "alt": "News image 7"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Royal Society Brings Knowledge to Society Project, fiscal year 2026, No. 3",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LDS0201075",
+          "category": "News",
+          "publishedAt": "2025-12-04"
+        },
+        {
+          "title": "Article: “The Royal Society of Thailand, the Royal Institute and the Office of the Royal Society”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65G%24K5800003",
+          "category": "News",
+          "publishedAt": "2022-07-29"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "href": "news-detail.html?id=69kbj5538066",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-11-02"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+          "href": "news-detail.html?id=69jaj1403044",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-10-31"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

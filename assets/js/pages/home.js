@@ -743,6 +743,7 @@ function init() {
   initMediaPlaylist();
   initEventCalendar();
   initServiceHub();
+  initHomeNews();
 }
 function initHeader() {
   const h = qs('#site-header');
@@ -1429,3 +1430,73 @@ function initServiceHub() {
 
 
 init();
+
+/* =============================================================================
+   ข่าวสารและกิจกรรมบนหน้าแรก — ดึงจาก content/news/index.json (แหล่งเดียวกับหน้ารายการข่าว / CMS)
+   แต่ละแท็บ 7 เรื่องใหม่สุด (1 ข่าวเด่น + 6 การ์ด) แยกตาม "type" ของข่าว
+     news = ข่าวประชาสัมพันธ์ · training = อบรมและเสวนา · activity = ข่าวกิจกรรม · announcement = ประกาศ
+   HTML การ์ดเดิมใน index.html เป็นค่าสำรอง (ถ้าโหลดไม่ได้ยังเห็นข่าวชุดเดิม)
+   ============================================================================= */
+const HOME_NEWS_TABS = { news: 'news', training: 'training', event: 'activity', announcement: 'announcement' };
+const HOME_NEWS_LABEL = { news: 'ข่าวประชาสัมพันธ์', training: 'อบรมและเสวนา', activity: 'ข่าวกิจกรรม', announcement: 'ประกาศ' };
+const HOME_NEWS_PER_TAB = 7;
+const HN_MONTHS = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+const HN_MONTHS_SHORT = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+const escHtml = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const shortText = (t, n) => (t = String(t || '')).length <= n ? t : `${t.slice(0, n).replace(/\s+\S*$/, '')}…`;
+
+async function initHomeNews() {
+  const panels = qsa('[data-news-panel]');
+  if (!panels.length) return;
+  let index;
+  try {
+    index = window.orstI18n
+      ? (await window.orstI18n.fetchJSON('content/news/index.json')).data
+      : await fetch('content/news/index.json', { cache: 'no-cache' }).then(r => r.json());
+  } catch { return; }   // ใช้การ์ดเดิมใน HTML
+  const items = (index.items || []).filter(it => it.id || it.href)
+    .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+  const url = it => (it.id ? `news-detail.html?id=${encodeURIComponent(it.id)}` : it.href);
+  const ic = '<span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span>';
+  const fullDate = iso => { const [y, m, d] = String(iso).split('-').map(Number); return y ? `${d} ${HN_MONTHS[m - 1]} ${y + 543}` : ''; };
+  const badge = iso => {
+    const [y, m, d] = String(iso).split('-').map(Number);
+    return y ? `<time class="news-date-badge" datetime="${escHtml(iso)}" aria-label="${fullDate(iso)}"><b>${d}</b><span>${HN_MONTHS_SHORT[m - 1]} ${String(y + 543).slice(-2)}</span></time>` : '';
+  };
+  const img = it => escHtml(it.imageLarge || it.image || 'assets/images/New-01.png');
+
+  panels.forEach(panel => {
+    const type = HOME_NEWS_TABS[panel.dataset.newsPanel];
+    const layout = panel.querySelector('.news-mosaic-layout');
+    // ข่าวที่มีหน้ารายละเอียดก่อน (มีรูป/เนื้อหาครบ) แล้วค่อยข่าวลิงก์ภายนอก
+    const picked = items.filter(it => it.type === type).sort((a, b) => (b.id ? 1 : 0) - (a.id ? 1 : 0)).slice(0, HOME_NEWS_PER_TAB)
+      .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+    if (!type || !layout || !picked.length) return;
+    const label = HOME_NEWS_LABEL[type];
+    const [lead, ...rest] = picked;
+    layout.innerHTML = `
+                <article class="news-mosaic-feature">
+                  <a href="${escHtml(url(lead))}" class="news-mosaic-feature-img" aria-label="อ่านข่าว${escHtml(shortText(lead.title, 80))}">
+                    <img src="${img(lead)}" alt="${escHtml(shortText(lead.title, 120))}" loading="lazy">
+                    <span class="news-type-badge">ข่าวเด่น</span>
+                  </a>
+                  <div class="news-mosaic-feature-body">
+                    <div class="news-meta"><span>${fullDate(lead.publishedAt)}</span><span>${label}</span></div>
+                    <h3>${escHtml(lead.title)}</h3>
+                    <p>${escHtml(shortText(lead.excerpt, 220))}</p>
+                    <a class="news-primary-action" href="${escHtml(url(lead))}">อ่านต่อ ${ic}</a>
+                  </div>
+                </article>
+                <div class="news-mosaic-side">${rest.map(it => `
+                  <article class="news-mosaic-card">
+                    <a href="${escHtml(url(it))}" class="news-mosaic-thumb"><img src="${img(it)}" alt="${escHtml(shortText(it.title, 120))}" loading="lazy"></a>
+                    ${badge(it.publishedAt)}
+                    <div class="news-mosaic-card-body">
+                      <h4>${escHtml(it.title)}</h4>
+                      <p>${escHtml(shortText(it.excerpt, 120))}</p>
+                      <div class="news-mini-foot"><span class="news-mini-type">${label}</span><a href="${escHtml(url(it))}">อ่านต่อ ${ic}</a></div>
+                    </div>
+                  </article>`).join('')}
+                </div>`;
+  });
+}

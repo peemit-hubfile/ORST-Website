@@ -1,0 +1,186 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LYO0509028 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=68lyo0509028",
+  "title": "ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔\" และ",
+  "navKey": "news",
+  "description": "เมื่อวันที่ ๒๔ ธันวาคม ๒๕๖๘ เวลา ๙.๐๐ น. ณ ห้องราชดำเนิน โรงแรมรอยัลปริ้นเซส หลานหลวง กรุงเทพมหานคร ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นาย",
+  "sideNav": false,
+  "updatedAt": "2025-12-25",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "อบรมและเสวนา",
+      "date": "2025-12-25",
+      "heading": "ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔\" และการเสวนาระดมความคิดเรื่อง ยุทธศาสตร์ราชบัณฑิตยสภา ๕ ปี ครั้งที่ ๓ เนื่องในโอกาส ๑๐๐ ปีราชบัณฑิตยสภา",
+      "image": "assets/images/orst/news/data0005-00005024-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนี",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "ราชบัณฑิตยสภาจัดโครงการราชบัณฑิตยสภาสดุดี การเสวนาวิชาการ เรื่อง \"ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔\" และการเสวนาระดมความคิดเรื่อง ยุทธศาสตร์ราชบัณฑิตยสภา ๕ ปี ครั้งที่ ๓ เนื่องในโอกาส ๑๐๐ ปีราชบัณฑิตยสภา"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "เมื่อวันที่ ๒๔ ธันวาคม ๒๕๖๘ เวลา ๙.๐๐ น. ณ ห้องราชดำเนิน โรงแรมรอยัลปริ้นเซส หลานหลวง กรุงเทพมหานคร ศาสตราจารย์เกียรติคุณ นายแพทย์สุรพล อิสรไกรศีล นายกราชบัณฑิตยสภา เป็นประธานเปิดการเสวนาวิชาการเรื่อง \"ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔\" และการเสวนาระดมความคิดเรื่อง ยุทธศาสตร์ราชบัณฑิตยสภา ๕ ปี ครั้งที่ ๓ เนื่องในโอกาส ๑๐๐ ปีราชบัณฑิตยสภา โดยมี ดร.ศุภฤกษ์ ภู่พงศ์ศักดิ์ เลขาธิการราชบัณฑิตยสภา เป็นผู้กล่าวรายงาน และมีราชบัณฑิต ภาคีสมาชิก ผู้บริหารและเจ้าหน้าที่สำนักงานราชบัณฑิตยสภา และวิทยากรซึ่งเป็นทายาทและศิษย์ของราชบัณฑิตปูชนียบุคคลเข้าร่วมงานรวม ๑๔๗ คน",
+        "โครงการดังกล่าวจัดขึ้นในวันพุธที่ ๒๔ และวันพฤหัสบดีที่ ๒๕ ธันวาคม พ.ศ. ๒๕๖๘ โดยช่วงเช้าของวันที่ ๒๔ ธันวาคม มีการกล่าวรำลึกและกล่าวอาลัยถึงราชบัณฑิตและภาคีสมาชิกที่วายชนน์ในช่วงปี ๒๕๖๖-๒๕๖๘ และมีการเสวนาวิชาการเรื่อง \"ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๔\" เพื่อยกย่องและเชิดชูเกียรติ เผยแพร่เกียรติคุณและผลงานของราชบัณฑิตผู้เป็นปูชนียบุคคล จำนวน ๓ คน ได้แก่ ๑. ศาสตราจารย์ ดร.วิทย์ ศิวะศริยานนท์ ราชบัณฑิต สำนักธรรมศาสตร์และการเมือง ๒. ศาสตราจารย์ ดร.สง่า สรรพศรี ราชบัณฑิต สำนักวิทยาศาสตร์ และ ๓. พระพรหมพิจิตร (อู๋ ลาภานนท์) ราชบัณฑิต สำนักศิลปกรรม ซึ่งทุกท่านล้วนเป็นผู้มีความรู้ น่ายกย่อง และเป็นแบบอย่างของผู้ทำคุณประโยชน์ต่อประเทศชาติ ส่วนช่วงบ่ายมีการประชุมราชบัณฑิตยสภา ครั้งที่ ๔/๒๕๖๘ โดยมีวาระสำคัญคือการเลือกอุปนายกราชบัณฑิตยสภา คนที่ ๑ และพิจารณารับรองภาคีสมาชิกเป็นราชบัณฑิต จำนวน ๑๕ ตำแหน่ง",
+        "กิจกรรมในวันที่ ๒๕ ธันวาคม มีการมอบเข็มเครื่องหมายราชบัณฑิต และเข็มเครื่องหมายภาคีสมาชิกให้แก่ราชบัณฑิตและภาคีสมาชิกที่ได้รับแต่งตั้งใหม่ และการเสวนาและระดมความคิดเรื่อง ยุทธศาสตร์ราชบัณฑิตยสภา ๕ ปี ครั้งที่ ๓ เพื่อร่วมกันกำหนดยุทธศาสตร์และทิศทางการดำเนินงานของราชบัณฑิตยสภาให้มีความครอบคลุมในภารกิจทุกด้าน และนำไปใช้ในการขับเคลื่อนราชบัณฑิตยสภาไปสู่วิสัยทัศน์ตามที่ได้กำหนดไว้ รวมถึงจัดทำเป็นแผนแม่บท เพื่อกำหนดกรอบแนวทางในการจัดทำแผนปฏิบัติการและกรอบแนวทางในการจัดทำคำของบประมาณ (ระยะ ๕ ปี)"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005024-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005024.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005026-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005026.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005027-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005027.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005028-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005028.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005029-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005029.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005030-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005030.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005031-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005031.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005032-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005032.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005033-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005033.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005034-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005034.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005035-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005035.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005036-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005036.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005037-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005037.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 13"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005038-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005038.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 14"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005039-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005039.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 15"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005040-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005040.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 16"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005041-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005041.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 17"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005042-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005042.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 18"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005043-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005043.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 19"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005044-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005044.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 20"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "การเสวนาวิชาการเรื่อง “ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๒”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66HWO2601063",
+          "category": "ข่าว",
+          "publishedAt": "2023-08-23"
+        },
+        {
+          "title": "ราชบัณฑิตยสภาจัดการเสวนาทางวิชาการเรื่อง “ราชบัณฑิตปูชนียบุคคล ปราชญ์ของแผ่นดิน ครั้งที่ ๑๑” เชิดชูเกียรติของราชบัณฑิตยสภาที่ทำคุณประโยชน์แก่ชาติ",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HKN5949034",
+          "category": "ข่าว",
+          "publishedAt": "2022-08-11"
+        },
+        {
+          "title": "บทความเรื่อง \"ราชบัณฑิตยสภา ราชบัณฑิตยสถาน และสำนักงานราชบัณฑิตยสภา\"",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65G%24K5800003",
+          "category": "ข่าว",
+          "publishedAt": "2022-07-29"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
+          "href": "news-detail.html?id=69kbj5538066",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-11-02"
+        }
+      ]
+    }
+  ]
+}

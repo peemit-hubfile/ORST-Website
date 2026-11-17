@@ -99,13 +99,56 @@ Schema เต็มอยู่ที่ `content/blocks.schema.json` (JSON Sche
 - `systems` = แถบ "ระบบสืบค้นออนไลน์" ท้ายหน้า, `popular` = ชิปคำค้นยอดนิยมใน hero
 - ถ้าโหลดไฟล์นี้ไม่ได้ หน้ายังใช้ค่าเริ่มต้นใน `knowledge.js` (5 ประเภทเดิม ไม่มีวิดีโอ/ระบบสืบค้น)
 
+### 2.4.1 ข่าวสารและกิจกรรม — `content/news/` (พร้อมเชื่อม CMS)
+
+ข่าวทุกเรื่องอยู่ที่เดียว CMS เขียนแค่ 2 อย่าง ไม่ต้องสร้างไฟล์ HTML
+
+| ไฟล์ | ใช้ทำอะไร |
+|---|---|
+| `content/news/index.json` | รายการข่าวทั้งหมด — แหล่งเดียวของหน้ารายการข่าว (ทั่วไป / กิจกรรม / การบรรยาย) ข่าวล่าสุดหน้าหมวด การ์ดหน้าแรก 4 แท็บ RSS และแผนผัง `sitemap.xml` |
+| `content/news/<id>.json` | เนื้อหาข่าว 1 เรื่อง (โครงหน้า JSON แบบเดียวกับ `content/pages/`) แสดงที่ `news-detail.html?id=<id>` |
+
+`index.json`
+
+```json
+{ "items": [
+  { "id": "69kbj5538066",
+    "title": "ชื่อข่าว", "publishedAt": "2026-11-02",
+    "channels": ["general"], "type": "announcement", "category": "ประกาศ",
+    "image": "รูปปก 640px", "imageLarge": "รูปใหญ่ 960px (ข่าวเด่นหน้าแรก)", "excerpt": "คำโปรย" },
+  { "title": "ข่าวเก่าที่ยังไม่มีหน้ารายละเอียด", "publishedAt": "2019-05-13",
+    "channels": ["lecture"], "type": "training", "href": "https://www.orst.go.th/iwfm_view.asp?..." }
+] }
+```
+
+| ฟิลด์ | บังคับ | ความหมาย |
+|---|---|---|
+| `id` | — | ตัวอักษร a-z ตัวเลข และ `-` · มี `id` = มีไฟล์ `content/news/<id>.json` และลิงก์ `news-detail.html?id=<id>` |
+| `href` | — | ไม่มีหน้ารายละเอียด → ลิงก์ไปที่นี่ (ไม่มีทั้ง `id` และ `href` = แสดงเป็นข้อความ) |
+| `title` | ✓ | ชื่อข่าว |
+| `publishedAt` | ✓ | วันที่ ค.ศ. `YYYY-MM-DD` (แสดงเป็น พ.ศ.) — เรียงใหม่ไปเก่าให้อัตโนมัติ |
+| `channels` | ✓ | หน้ารายการที่ข่าวนี้ปรากฏ: `general` ข่าวประชาสัมพันธ์ทั่วไป · `activity` ข่าวกิจกรรม · `lecture` การบรรยายทางวิชาการ (หลายค่าได้) |
+| `type` | ✓ | แท็บบนหน้าแรก: `news` ข่าวประชาสัมพันธ์ · `training` อบรมและเสวนา · `activity` ข่าวกิจกรรม · `announcement` ประกาศ |
+| `category` | — | ป้าย/ชิปกรองในหน้ารายการ (ข้อความ เช่น ข่าว / ประกาศ / กิจกรรม) |
+| `image` `imageLarge` `excerpt` | — | รูปปก 640px · รูปใหญ่ 960px · คำโปรย |
+| `file` | — | ไฟล์ PDF ของข่าว/การบรรยาย → การ์ดมีป้าย PDF และปุ่ม **ดูตัวอย่าง** (หน้าต่างซ้อนในเว็บ) + **เปิดเอกสาร** แทน "อ่านต่อ" |
+| `byline` `pages` `fileSize` | — | ผู้บรรยาย/ผู้เขียน · จำนวนหน้า PDF · ขนาดไฟล์ (ไบต์) — แสดงใต้ชื่อเรื่องและในบรรทัดรายละเอียด |
+
+- หน้ารายการไม่เก็บรายการเอง — `document-list` มี `"source": { "type": "news", "channel": "general", "limit": 6 }` (ดู `assets/js/content-sources.js`)
+- `<id>.json` ไม่อยู่ใน `index.json` = มีหน้า แต่ไม่ปรากฏในรายการ (validate เตือน)
+- ข่าวไม่มีรูป (`image`) จะได้ปกแม่แบบอัตโนมัติ: ป้ายประเภท (`category`) + ปี พ.ศ. + ตราสำนักงาน
+- ภาษาอังกฤษ: `content/en/news/index.json` และ `content/en/news/<id>.json` โครงเดียวกัน (`channels` `type` `id` ห้ามแปล)
+- ลิงก์เดิม `news-<id>.html` เป็นไฟล์ส่งต่อไป `news-detail.html?id=<id>` — ข่าวใหม่จาก CMS ไม่ต้องมีไฟล์นี้
+- id ผิด/ข่าวถูกลบ: หน้าแสดง "ไม่พบข่าวที่ต้องการ" พร้อมลิงก์ไปหน้ารวมข่าว
+- `node tools/validate.mjs` ตรวจ index (ฟิลด์บังคับ, id ซ้ำ, id ที่ไม่มีไฟล์) และหน้าข่าวทุกไฟล์
+
 ### 2.5 ไฟล์และรูป
 
 | ชนิด | ตอนนี้อยู่ที่ | ต้องทำตอนต่อ CMS |
 |---|---|---|
 | PDF / เอกสารแนบ | ลิงก์ไปเว็บเดิม `www.orst.go.th/FILEROOM/...` | ย้ายเข้า media library ของ CMS แล้วแทน URL ใน `file` |
 | รูปข่าว ผู้บริหาร ปกหนังสือ อินโฟกราฟิก | รูปย่อใน `assets/images/orst/` ภาพเต็มยังลิงก์เว็บเดิม | CMS สร้างรูปย่อเอง (ขนาดแนะนำในข้อ 3) |
-| หน้ารายละเอียดข่าวเก่า | ข่าว 28 เรื่องล่าสุดมีหน้าใหม่ ที่เหลือลิงก์เว็บเดิม | นำเข้าข่าวทั้งหมดเป็น entry ชนิดข่าว |
+| หน้ารายละเอียดข่าวเก่า | ข่าว 28 เรื่องล่าสุดมีหน้าใหม่ (`content/news/<id>.json`) ที่เหลือ `href` ลิงก์เว็บเดิม | นำเข้าข่าวทั้งหมดเป็น `content/news/<id>.json` แล้วใส่ `id` ใน `index.json` แทน `href` |
 
 สคริปต์ที่ดึงข้อมูลจากเว็บเดิมทั้งหมดอยู่ที่ `tools/scrape-old-site/` — ใช้เป็นต้นแบบตอนเขียนตัวนำเข้า (import) เข้า CMS ได้
 
@@ -117,6 +160,7 @@ Schema เต็มอยู่ที่ `content/blocks.schema.json` (JSON Sche
 |---|---|---|
 | หน้า JSON | `content/pages/<slug>.json` | `content/pages/en/<slug>.json` — โครงเดียวกัน แปลเฉพาะข้อความ (URL รูป ไฟล์ วันที่ ISO คงเดิม) |
 | ข้อมูลประกอบ | `content/site-nav.json` `content/knowledge-hub.json` `content/events.json` | `content/en/<ไฟล์เดียวกัน>` |
+| ข่าวสาร | `content/news/index.json` `content/news/<id>.json` | `content/en/news/<ไฟล์เดียวกัน>` |
 | ข้อความส่วนกลาง (header footer เมนู ปุ่ม หน้า index/knowledge/contact ข้อความที่สคริปต์สร้าง) | ในโค้ด/HTML | `content/i18n/en.json` → `strings` (ไทย→อังกฤษ) + `patterns` (ข้อความมีตัวแปร เช่น "พบ 12 ข่าว") |
 
 - **CMS:** เมื่อบันทึกเนื้อหาภาษาอังกฤษ ให้เขียนไฟล์/endpoint `en` โครงเดียวกับภาษาไทย — หน้าไหนยังไม่มีไฟล์ `en` เว็บจะแสดงภาษาไทยพร้อมแถบแจ้ง "available in Thai only"
@@ -134,7 +178,7 @@ Schema เต็มอยู่ที่ `content/blocks.schema.json` (JSON Sche
 | **T2 หน้าเนื้อหา** | `page-hero` + `article` (+ `document-list` layout `compact` เป็นเอกสารแนบ) | `history.html`, `vision-mission.html`, `corruption-complaints.html` | `sections[]` = `heading` `paragraphs[]` `list[]` `html` |
 | **T3 หน้าหมวด** | `page-hero` + `page-index` | `about.html`, `operations.html`, `news.html` | `groups[]` = `heading` `icon` `items[]` (`title` `href` `tag`) — รายการไม่มี `href` = "รอเนื้อหา" |
 | **T4 รายการข่าว** | `page-hero` + `document-list` layout `news` | `general-news.html`, `activity-news.html` | + `image` (รูปปก 640px) `excerpt` — ไม่มีรูปจะแสดงป้ายวันที่ |
-| **T4 รายละเอียดข่าว** | `page-hero` + `share` + `figure` + `rich-text` + `media-grid` (gallery) + `document-list` (เอกสารแนบ) + `cta-band` | `news-69gxi2522022.html` | ภาพเด่น 960px + ภาพเต็ม, แกลเลอรี 640px + ภาพเต็ม (เปิด lightbox), เอกสารแนบ |
+| **T4 รายละเอียดข่าว** | `page-hero` (variant article) + `news-media` + `rich-text` + `news-related` | `news-detail.html?id=69gxi2522022` (`content/news/69gxi2522022.json`) | ภาพเด่น 960px + ภาพเต็ม, แกลเลอรี 640px + ภาพเต็ม (เปิด lightbox), เอกสารแนบ |
 | **T5 บุคคล** | `page-hero` + `person-grid` | `executives.html`, `cio.html` | `name` `position` `image` (แนวตั้ง ≥ 480px) `phone` `fax` `email` |
 | **T6 คำถาม-คำตอบ** | `page-hero` + `faq` | `qa.html` | `q` `a` |
 | **T7 คลังสื่อ** | `page-hero` + `media-grid` (`ratio` / `fit`) | `infographics.html` (1:1 contain), `publications.html` (3:4 contain) | `image` `title` `alt` `href` (ลิงก์ไปไฟล์รูป = เปิด lightbox) |

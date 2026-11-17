@@ -456,20 +456,59 @@ function table(b) {
 
 /* ---------- Block: faq ---------- */
 /* คำถามที่พบบ่อย — ใช้คลาส .faq-compact-list ที่ components.js ผูก event ให้อยู่แล้ว
-   { type, heading?, lead?, items: [{ q, a }] } */
+   { type, heading?, lead?, search?: true (ช่องค้นหา + จำนวน + ปุ่มขยายทั้งหมด), items: [{ q, a }] }
+   คำตอบที่เขียนเป็นข้อ "๑. … ๒. …" (หรือ 1. 2.) จะแยกเป็นย่อหน้าให้อัตโนมัติ และ " - " ในข้อเป็นรายการย่อย */
+function faqAnswer(a) {
+  const text = String(a || '').trim();
+  const NUM = /\s+(?=(?:[๑-๙]{1,2}|\d{1,2})\.\s)/;
+  const parts = /^(?:๑|1)\.\s/.test(text) ? text.split(NUM) : [text];
+  return parts.map(part => {
+    const sub = parts.length > 1 ? part.split(/\s+-\s+/) : [part];
+    if (sub.length < 3) return `<p>${esc(part)}</p>`;
+    const [lead, ...rest] = sub;
+    const last = rest[rest.length - 1];
+    // ข้อย่อยสุดท้ายอาจมีประโยคสรุปต่อท้าย ("… แปลว่า แสงสว่าง ดังนั้น …") — แยกออกเป็นย่อหน้า
+    const m = last.match(/^(.*?)\s+((?:ดังนั้น|ด้วยเหตุ|Therefore|Thus|Since)[\s,].*)$/);
+    if (m) rest[rest.length - 1] = m[1];
+    return `<p>${esc(lead)}</p>
+                  <ul>${rest.map(x => `<li>${esc(x)}</li>`).join('')}</ul>${m ? `
+                  <p>${esc(m[2])}</p>` : ''}`;
+  }).join('\n                  ');
+}
+
 function faq(b) {
-  const items = (b.items || []).map((it, i) => `
+  const id = esc(b.id || 'x');
+  const all = b.items || [];
+  const items = all.map((it, i) => `
             <div class="faq-item">
-              <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-${esc(b.id || 'x')}-${i}">
-                <span>${esc(it.q)}</span>
+              <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-${id}-${i}">
+                <span class="faq-mark" aria-hidden="true">Q</span>
+                <span class="faq-q-text">${esc(it.q)}</span>
                 ${icon('i-chevron')}
               </button>
-              <div class="faq-a" id="faq-a-${esc(b.id || 'x')}-${i}" hidden>
-                <p>${esc(it.a)}</p>
+              <div class="faq-a" id="faq-a-${id}-${i}" hidden>
+                <span class="faq-mark is-a" aria-hidden="true">A</span>
+                <div class="faq-a-body">
+                  ${faqAnswer(it.a)}
+                </div>
               </div>
             </div>`).join('');
-  return section(b, `<div class="faq-compact-list">${items}
-        </div>`);
+  const tools = b.search ? `
+        <div class="faq-tools" data-faq-tools hidden>
+          <label class="faq-search">
+            ${icon('i-search')}
+            <span class="sr-only">ค้นหาคำถาม</span>
+            <input type="search" placeholder="ค้นหาคำถาม" autocomplete="off" data-faq-search>
+          </label>
+          <span class="faq-count" aria-live="polite"><b data-faq-n>${all.length}</b> <span>คำถาม</span></span>
+          <button type="button" class="faq-all" data-faq-all aria-pressed="false">
+            <span>ขยายทั้งหมด</span><span hidden>ย่อทั้งหมด</span>
+          </button>
+        </div>` : '';
+  return section(b, `${tools}
+        <div class="faq-compact-list${b.search ? ' is-qa' : ''}">${items}
+        </div>${b.search ? `
+        <p class="faq-empty" data-faq-empty hidden>ไม่พบคำถามที่ตรงกับคำค้น</p>` : ''}`);
 }
 
 /* ---------- Block: steps ---------- */
@@ -622,12 +661,102 @@ const isExternal = href => /^https?:\/\//i.test(String(href || ''));
 
 /* ปกแม่แบบสำหรับข่าวที่ไม่มีรูป — พื้นเขียวเข้มไล่ทอง + ตราสัญลักษณ์กลางภาพ + ประเภท + วันที่
    (CSS: .news-cover-tpl ใน blocks.css) ใช้แทนการปล่อยช่องรูปว่าง */
-function newsCover(it) {
-  // วันที่ไม่อยู่บนปกแล้ว — แสดงเป็นป้ายวันที่ (.news-row-date) คร่อมขอบล่างของภาพ เหมือนการ์ดข่าวหน้าแรก
-  return `<span class="news-cover-tpl">
-                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+function newsCover(it, d) {
+  // ปกแม่แบบ (ข่าวที่ไม่มีรูป): ป้ายประเภทบนซ้าย · ปี พ.ศ. ตัวใหญ่ · ตราสำนักงานจางมุมขวาล่าง
+  // โทนเขียวเข้มแบบเดียวทุกใบ (ผู้ใช้เลือก) · วันเต็มอยู่ที่ป้ายวันที่ (.news-row-date)
+  return `<span class="news-cover-tpl nct-t0">
                 ${it.category ? `<span class="nct-kicker">${esc(it.category)}</span>` : ''}
+                ${d ? `<span class="nct-year"><small>พ.ศ.</small>${d.y + 543}</span>` : ''}
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
               </span>`;
+}
+
+/* ---------- Block: event-calendar  (ปฏิทินกิจกรรม) ---------- */
+/* ซ้าย: รายการกิจกรรม (จาก content/events.json ผ่าน "source": { "type": "events" } หรือ items เอง)
+   ขวา: ปฏิทินออนไลน์ฝัง (Google Calendar) — จอแคบใช้มุมมองกำหนดการ (agenda) ที่อ่านบนมือถือได้
+   { type, id?, heading?, listHeading?, embed (URL ปฏิทินฝัง), calendarUrl? (ลิงก์เปิดปฏิทินเต็ม),
+     limit?, items: [{ id?, title, start (YYYY-MM-DD), end?, location?, unit? }] }                  */
+function eventCalendar(b) {
+  const all = [...(b.items || [])].filter(it => it && it.title && it.start)
+    .sort((x, y) => String(y.start).localeCompare(String(x.start)));
+  const items = b.limit ? all.slice(0, b.limit) : all;
+  const range = it => {
+    const s = parseIsoDate(it.start);
+    const e = it.end && it.end !== it.start ? parseIsoDate(it.end) : null;
+    if (!s) return '';
+    if (!e) return formatThaiDate(it.start, true);
+    return s.m === e.m && s.y === e.y
+      ? `${s.d}–${e.d} ${TH_MONTHS_FULL[s.m - 1]} ${s.y + 543}`
+      : `${formatThaiDate(it.start, true)} – ${formatThaiDate(it.end, true)}`;
+  };
+  // จัดกลุ่มตามเดือน (หัวเดือนติดบนเมื่อเลื่อน) · แถวกะทัดรัด: วันที่ | ชื่อ + ช่วงวัน · สถานที่ · หน่วยงาน
+  const WEEKDAYS = ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'];
+  const groups = [];
+  for (const it of items) {
+    const d = parseIsoDate(it.start);
+    const key = d ? `${d.y}-${d.m}` : '';
+    let g = groups[groups.length - 1];
+    if (!g || g.key !== key) groups.push(g = { key, d, items: [] });
+    g.items.push(it);
+  }
+  const units = [...new Set(all.map(it => it.unit).filter(Boolean))];
+  const row = it => {
+    const d = parseIsoDate(it.start);
+    const wd = d ? WEEKDAYS[new Date(Date.UTC(d.y, d.m - 1, d.d)).getUTCDay()] : '';
+    const multi = it.end && it.end !== it.start;
+    return `
+              <li class="evcal-item"${attr('data-unit', it.unit)}>
+                ${d ? `<time class="evcal-date" datetime="${esc(it.start)}"><small>${wd}</small><b>${d.d}</b></time>` : '<span class="evcal-date"></span>'}
+                <div class="evcal-body">
+                  <strong class="evcal-title">${esc(it.title)}</strong>
+                  <span class="evcal-meta">
+                    ${multi ? `<span>${icon('i-calendar')}${esc(range(it))}</span>` : ''}
+                    ${it.location ? `<span>${icon('i-pin')}${esc(it.location)}</span>` : ''}
+                  </span>
+                  ${it.unit ? `<span class="evcal-unit">${esc(it.unit)}</span>` : ''}
+                </div>
+              </li>`;
+  };
+  const list = groups.map(g => `
+            <li class="evcal-month">
+              <h3 class="evcal-month-head">${g.d ? `${TH_MONTHS_FULL[g.d.m - 1]} ${g.d.y + 543}` : ''}</h3>
+              <ol class="evcal-month-list">${g.items.map(row).join('')}
+              </ol>
+            </li>`).join('');
+  const filters = units.length > 1 ? `
+            <div class="evcal-filter" role="group" aria-label="กรองตามหน่วยงาน" data-evcal-filter hidden>
+              <button type="button" aria-pressed="true" data-unit="">ทั้งหมด</button>
+              ${units.map(u => `<button type="button" aria-pressed="false" data-unit="${esc(u)}">${esc(u)}</button>`).join('')}
+            </div>` : '';
+  const embed = b.embed ? String(b.embed) : '';
+  const agenda = embed ? embed.replace(/([?&])mode=[A-Z]+/i, '$1').replace(/&+$/, '') + `${embed.includes('?') ? '&' : '?'}mode=AGENDA` : '';
+  const open = b.calendarUrl || embed;
+  return `
+    <section class="section evcal-section"${attr('id', b.id)}>
+      <div class="container">${sectionHead(b)}
+        <div class="evcal">
+          <aside class="evcal-side" aria-labelledby="${esc(b.id || 'evcal')}-list">
+            <div class="evcal-side-head">
+              <h2 id="${esc(b.id || 'evcal')}-list">${esc(b.listHeading || 'กิจกรรมล่าสุด')}</h2>
+              <span class="evcal-count">${all.length} กิจกรรม</span>
+            </div>
+            ${filters}
+            ${items.length ? `<ol class="evcal-list" data-evcal-list>${list}
+            </ol>
+            <p class="evcal-empty" data-evcal-empty hidden>ไม่มีกิจกรรมของหน่วยงานนี้</p>` : `<p class="evcal-empty">${esc(b.emptyText || 'ยังไม่มีกิจกรรม')}</p>`}
+          </aside>
+          ${embed ? `
+          <div class="evcal-board">
+            <div class="evcal-board-head">
+              <span class="evcal-board-title">${icon('i-calendar')}${esc(b.boardHeading || 'ปฏิทินออนไลน์')}</span>
+              <a class="evcal-open" href="${esc(open)}" target="_blank" rel="noopener noreferrer">${icon('i-external')}<span>เปิดปฏิทินเต็ม</span><span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
+            </div>
+            <iframe class="evcal-frame is-month" src="${esc(embed)}" title="${esc(b.boardHeading || 'ปฏิทินออนไลน์')}" loading="lazy"></iframe>
+            <iframe class="evcal-frame is-agenda" src="${esc(agenda)}" title="${esc(b.boardHeading || 'ปฏิทินออนไลน์')} (กำหนดการ)" loading="lazy"></iframe>
+          </div>` : ''}
+        </div>
+      </div>
+    </section>`;
 }
 
 /* ---------- Block: document-list  (แม่แบบ T1 รายการเอกสาร) ---------- */
@@ -691,9 +820,15 @@ function documentList(b) {
     if (news) {
       // แถวข่าว: รูปปก (หรือป้ายวันที่ถ้าไม่มีรูป) + ชื่อข่าว + วันที่ + คำโปรย
       const d = parseIsoDate(it.publishedAt);
-      const thumb = it.image
+      // บรรทัดรายละเอียด: วันที่เต็ม (มุมมองรายการ — มุมมองตารางมีป้ายวันที่บนภาพแล้ว) · PDF จำนวนหน้า ขนาดไฟล์
+      const fileBits = type === 'PDF' ? ['PDF', it.pages ? `${it.pages} หน้า` : '', size].filter(Boolean) : [];
+      const newsMeta = (it.publishedAt || fileBits.length) ? `<p class="news-row-meta">${[
+        it.publishedAt ? `<time class="nrm-date" datetime="${esc(it.publishedAt)}">${esc(formatThaiDate(it.publishedAt, true))}</time>` : '',
+        fileBits.length ? `<span class="nrm-file">${fileBits.map(esc).join(' · ')}</span>` : '',
+      ].filter(Boolean).join('')}</p>` : '';
+      const thumb = (it.image
         ? `<img src="${esc(it.image)}" alt="" loading="lazy">`
-        : newsCover(it, d);
+        : newsCover(it, d)) + (type === 'PDF' ? '<span class="news-row-pdf">PDF</span>' : '');
       return `
             <li class="doc-item news-row${it.image ? ' has-image' : ''}"${attr('data-year', it._year)}${attr('data-cat', it.category)}>
               ${url ? `<a class="news-row-thumb" href="${esc(url)}" tabindex="-1" aria-hidden="true"${newTab ? ' target="_blank" rel="noopener noreferrer"' : ''}>${thumb}</a>`
@@ -701,12 +836,19 @@ function documentList(b) {
               ${d ? `<time class="news-row-date" datetime="${esc(it.publishedAt)}" aria-label="${esc(formatThaiDate(it.publishedAt, true))}"><b>${d.d}</b><span>${TH_MONTHS[d.m - 1]} ${String(d.y + 543).slice(-2)}</span></time>` : ''}
               <div class="doc-body">
                 ${title}
+                ${it.byline ? `<p class="news-row-byline">${icon('i-user')}<span>${esc(it.byline)}</span></p>` : ''}
                 ${it.excerpt ? `<p class="news-row-excerpt">${esc(it.excerpt)}</p>` : ''}
+                ${newsMeta}
               </div>
+              ${type === 'PDF' && url ? `
+              <div class="news-row-foot news-row-foot--doc">
+                <button type="button" class="doc-btn is-primary" data-doc-preview="${esc(url)}" data-doc-title="${esc(it.title)}" hidden>${icon('i-eye')}<span>ดูตัวอย่าง</span><span class="sr-only"> ${esc(it.title)}</span></button>
+                <a class="doc-btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${icon('i-external')}<span>เปิดเอกสาร</span></a>
+              </div>` : `
               <div class="news-row-foot">
                 ${it.category ? `<span class="news-row-type">${esc(it.category)}</span>` : '<span></span>'}
                 ${url ? `<span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic">${icon(newTab ? 'i-external' : 'i-arrow')}</span></span>` : ''}
-              </div>
+              </div>`}
             </li>`;
     }
     if (type === 'PDF' && url) {
@@ -1032,6 +1174,7 @@ export const BLOCKS = {
   'person-grid': personGrid,
   'figure': figure,
   'share': share,
+  'event-calendar': eventCalendar,
 };
 
 export const BLOCK_TYPES = Object.keys(BLOCKS);

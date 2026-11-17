@@ -98,7 +98,8 @@
             { "$ref": "#/definitions/figure" },
             { "$ref": "#/definitions/share" },
             { "$ref": "#/definitions/newsMedia" },
-            { "$ref": "#/definitions/newsRelated" }
+            { "$ref": "#/definitions/newsRelated" },
+            { "$ref": "#/definitions/eventCalendar" }
           ]
         }
       ]
@@ -275,6 +276,16 @@
         "sort": { "enum": ["newest", "none"], "description": "newest = เรียงวันที่/ปีใหม่ไปเก่า (ค่าเริ่มต้น), none = ตามลำดับในไฟล์" },
         "pageSize": { "type": "integer", "minimum": 5, "description": "จำนวนรายการต่อการแสดงหนึ่งครั้ง (ค่าเริ่มต้น 20)" },
         "emptyText": { "type": "string", "description": "ข้อความเมื่อยังไม่มีเอกสาร" },
+        "source": {
+          "type": "object",
+          "description": "ดึงรายการจากแหล่งกลางแทน items (ข่าว: content/news/index.json)",
+          "required": ["type"],
+          "properties": {
+            "type": { "const": "news" },
+            "channel": { "enum": ["general", "activity", "lecture"] },
+            "limit": { "type": "integer", "minimum": 1 }
+          }
+        },
         "items": {
           "type": "array",
           "items": {
@@ -293,12 +304,15 @@
               "fileSize": { "type": ["integer", "string"], "description": "ขนาดไฟล์เป็นไบต์ หรือข้อความเช่น \"1.8 MB\"" },
               "note": { "type": "string" },
               "image": { "type": "string", "description": "รูปปกข่าว (layout: news)" },
-              "excerpt": { "type": "string", "description": "คำโปรยข่าว (layout: news)" }
+              "excerpt": { "type": "string", "description": "คำโปรยข่าว (layout: news)" },
+              "byline": { "type": "string", "description": "ผู้บรรยาย/ผู้เขียน (layout: news)" },
+              "pages": { "type": "integer", "minimum": 1, "description": "จำนวนหน้าของไฟล์ PDF" }
             }
           }
         }
       },
-      "required": ["type", "items"]
+      "required": ["type"],
+      "anyOf": [{ "required": ["items"] }, { "required": ["source"] }]
     },
 
     "figure": {
@@ -356,6 +370,36 @@
         }
       },
       "required": ["type", "items"]
+    },
+
+    "eventCalendar": {
+      "description": "ปฏิทินกิจกรรม — รายการกิจกรรม (ซ้าย) + ปฏิทินออนไลน์ฝัง (ขวา) จอแคบใช้มุมมองกำหนดการ",
+      "properties": {
+        "type": { "const": "event-calendar" },
+        "heading": { "type": "string" },
+        "listHeading": { "type": "string", "description": "หัวรายการกิจกรรม (ค่าเริ่มต้น \"กิจกรรมล่าสุด\")" },
+        "boardHeading": { "type": "string", "description": "หัวกรอบปฏิทิน (ค่าเริ่มต้น \"ปฏิทินออนไลน์\")" },
+        "embed": { "type": "string", "description": "URL ปฏิทินฝัง เช่น https://calendar.google.com/calendar/embed?..." },
+        "calendarUrl": { "type": "string", "description": "ลิงก์เปิดปฏิทินเต็ม (ไม่ใส่ = ใช้ embed)" },
+        "limit": { "type": "integer", "minimum": 1 },
+        "emptyText": { "type": "string" },
+        "source": { "type": "object", "properties": { "type": { "const": "events" } }, "description": "ดึงกิจกรรมจาก content/events.json แทน items" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "start"],
+            "properties": {
+              "id": { "type": "string" }, "title": { "type": "string" },
+              "start": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+              "end": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+              "location": { "type": "string" }, "unit": { "type": "string" }
+            }
+          }
+        }
+      },
+      "required": ["type"],
+      "anyOf": [{ "required": ["items"] }, { "required": ["source"] }]
     },
 
     "share": {
@@ -524,6 +568,7 @@
       "description": "คำถามที่พบบ่อย เปิด/ปิดได้",
       "properties": {
         "type": { "const": "faq" },
+        "search": { "type": "boolean", "description": "แสดงช่องค้นหา จำนวนคำถาม และปุ่มขยาย/ย่อทั้งหมด (เหมาะกับหน้าคำถาม-คำตอบ)" },
         "items": {
           "type": "array",
           "minItems": 1,

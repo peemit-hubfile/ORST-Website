@@ -1,0 +1,109 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FCL0048005 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69fcl0048005",
+  "title": "Office of the Royal Society Signs Book of Good Wishes",
+  "navKey": "news",
+  "description": "Today (3 June 2026), Ms. Ari Phondi, Secretary of the Office, assigned by the Secretary-General of the Royal Society, led civil servants and staff of the Office of the Royal Society to",
+  "sideNav": false,
+  "updatedAt": "2026-06-03",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Press Releases",
+      "date": "2026-06-03",
+      "heading": "Office of the Royal Society Signs Book of Good Wishes",
+      "image": "assets/images/orst/news/data0005-00005221-960.jpg",
+      "imageAlt": "News image: The Office of the Royal Society joins in signing royal well-wishes",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005221.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Office of the Royal Society Signs Book of Good Wishes"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "Today (3 June 2026), Ms. Ari Phondi, Secretary of the Office, as representative assigned by the Secretary-General of the Royal Society, led civil servants and staff of the Office of the Royal Society in signing birthday blessings and presenting a flower vase on the auspicious occasion of the 4th Cycle Birthday Anniversary of Her Majesty the Queen, 3 June 2026, at Sala Sahathai Samakhom in the Grand Palace"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005221-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005221.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005222-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005222.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005223-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005223.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005224-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005224.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005225-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005225.JPG",
+          "alt": "News image 5"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Civil servants and staff of the Office of the Royal Society sign birthday wishes and hold a blessing ceremony on the auspicious occasion of the 90th Birthday Anniversary, 12 August 2022",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HKO1020056",
+          "category": "News",
+          "publishedAt": "2022-08-11"
+        },
+        {
+          "title": "Executives and staff of the Office of the Royal Society join a merit-making ceremony offering alms and sign the book of well-wishes on the occasion of the Birthday of Her Majesty the Queen, 2019",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO5005016",
+          "category": "Activities",
+          "publishedAt": "2019-06-04"
+        },
+        {
+          "title": "The Office of the Royal Society presents a flower vase and signs birthday blessings on the occasion of the Birthday of Her Majesty Queen Sirikit The Queen Mother, 12 August 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HNI1857031",
+          "category": "News",
+          "publishedAt": "2025-08-14"
+        },
+        {
+          "title": "The Office of the Royal Society presents a flower vase and signs birthday blessings on the occasion of His Majesty the King's Birthday, 28 July 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68G%23S0337069",
+          "category": "News",
+          "publishedAt": "2025-07-28"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

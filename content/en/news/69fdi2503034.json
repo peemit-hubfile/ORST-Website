@@ -1,0 +1,170 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69F%2DI2503034 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69fdi2503034",
+  "title": "Department-level Meeting (Town Hall Meeting) No. 2/2026",
+  "navKey": "news",
+  "description": "The Office of the Royal Society holds its 2nd department-level Town Hall Meeting to communicate organizational policy and promote staff mental well-being, on",
+  "sideNav": false,
+  "updatedAt": "2026-06-30",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Press Releases",
+      "date": "2026-06-30",
+      "heading": "Department-level Meeting (Town Hall Meeting) No. 2/2026",
+      "image": "assets/images/orst/news/data0005-00005277-960.jpg",
+      "imageAlt": "News image: Department-level Town Hall Meeting No. 2/2026",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005277.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities",
+          "href": "news.html"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Department-level Meeting (Town Hall Meeting) No. 2/2026"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "The Office of the Royal Society holds a department-level meeting (Town Hall Meeting) No. 2 to communicate organizational policy and promote the mental well-being of personnel, on 26",
+        "June 2026, 9:00 a.m. - 4:30 p.m., at Novotel Bangkok on Siam Square",
+        "In the morning, Associate Professor Dr. Santi Phakdikham, Deputy Secretary-General of the Royal Society,",
+        "presided over the opening of the meeting, which also included ethics promotion activities and a lecture on the criteria for state officials receiving property or other benefits in accordance with ethical norms",
+        "under Section 128, so that Office of the Royal Society personnel comply with the Office of the Royal Society Code of Ethics",
+        "and the Civil Service Code of Ethics, and do not accept any property or other benefits with monetary value",
+        "that may affect the performance of their duties; any acceptance exceeding 3,000 baht",
+        "must be reported to the head of the agency within 30 days using the form prescribed by the Office of the Public Sector Anti-Corruption Commission (PACC)",
+        "Then Dr. Supharoek",
+        "Phuphongsak, Secretary-General of the Royal Society,",
+        "communicated the policies and direction of the Office of the Royal Society",
+        "The afternoon session was a workshop",
+        "on \"(Mental) Health Close to Home: Recognizing Burnout in Working Life\"",
+        "led by speakers from To Grow Training, held to promote knowledge and understanding of good mental health,",
+        "prevent Burnout Syndrome, and strengthen good relationships between executives and staff in the organization"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005277-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005277.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005278-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005278.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005279-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005279.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005280-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005280.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005281-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005281.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005282-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005282.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005283-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005283.JPG",
+          "alt": "News image 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005284-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005284.JPG",
+          "alt": "News image 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005285-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005285.JPG",
+          "alt": "News image 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005286-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005286.JPG",
+          "alt": "News image 10"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005287-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005287.JPG",
+          "alt": "News image 11"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005288-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005288.JPG",
+          "alt": "News image 12"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005289-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005289.JPG",
+          "alt": "News image 13"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005290-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005290.JPG",
+          "alt": "News image 14"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Thai language teachers at primary, secondary and vocational certificate levels are invited to apply for the Training on Language in Literature and Local Literature via Zoom Cloud Meetings",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HAJ5144088",
+          "category": "News",
+          "publishedAt": "2022-08-01"
+        },
+        {
+          "title": "Thai language teachers at primary, secondary and vocational certificate levels are invited to apply for the Training on Thai Language and Thai Dialects via Zoom Cloud Meetings",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65HAJ5318059",
+          "category": "News",
+          "publishedAt": "2022-08-01"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "href": "news-detail.html?id=69kbj5538066",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-11-02"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+          "href": "news-detail.html?id=69jaj1403044",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "Announcements",
+          "publishedAt": "2026-10-31"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

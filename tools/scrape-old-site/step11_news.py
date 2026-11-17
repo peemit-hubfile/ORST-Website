@@ -1,6 +1,6 @@
 """ขั้นที่ 11: หมวด 5 ข่าวสารและกิจกรรม — หน้าที่ยังขาดตามผังเว็บไซต์ ORST
 
-  5.1.6 คลังภาพและวิดีโอ -> media-gallery.html  (ภาพจากหน้าข่าว news-*.json + วิดีโอจาก videos.json)
+  5.1.6 คลังภาพและวิดีโอ -> media-gallery.html  (ภาพจากหน้าข่าว content/news/<id>.json + วิดีโอจาก videos.json)
   5.1.7 RSS ข่าวสาร      -> rss.html            (ไฟล์ rss.xml สร้างโดย tools/build.mjs ตอนตั้ง SITE_URL)
 
 ลำดับกลุ่มในหน้า news.json กำหนดที่ step3_hubs.py (5.1 ข่าวประชาสัมพันธ์ · 5.2 ประกาศ)
@@ -43,8 +43,10 @@ def th_date(iso):
 
 # ---------- 5.1.6 คลังภาพและวิดีโอ ----------
 albums = []
-for f in glob.glob(PAGES + "news-*.json"):
-    slug = os.path.basename(f)[:-5]
+for f in glob.glob(ROOT + "/content/news/*.json"):
+    if f.endswith("index.json"):
+        continue
+    nid = os.path.basename(f)[:-5]
     p = json.load(open(f, encoding="utf-8"))
     hero = p["blocks"][0]
     media = next((b for b in p["blocks"] if b["type"] == "news-media"), {})
@@ -55,7 +57,7 @@ for f in glob.glob(PAGES + "news-*.json"):
     albums.append({"date": hero.get("date", ""), "item": {
         "image": images[0]["image"], "alt": hero["heading"], "tag": f"{len(images)} ภาพ",
         "title": hero["heading"], "desc": th_date(hero["date"]) if hero.get("date") else "",
-        "href": slug + ".html"}})
+        "href": f"news-detail.html?id={nid}"}})
 albums.sort(key=lambda a: a["date"], reverse=True)
 videos = next(b for b in load("videos")["blocks"] if b["type"] == "media-grid")["items"]
 
@@ -66,7 +68,7 @@ write_page("media-gallery", title, lead, [
      "columns": 3, "ratio": "4:3", "pageSize": 12, "unit": "อัลบั้ม", "items": [a["item"] for a in albums]},
     {"type": "media-grid", "id": "videos", "variant": "alt", "heading": "วิดีโอ", "columns": 3, "ratio": "16:9",
      "action": {"label": "ดูวิดีโอทั้งหมด", "href": "videos.html"}, "items": videos},
-], "รวมภาพจากหน้าข่าว (news-*.json) และวิดีโอจาก videos.json — สร้างโดย step11_news.py รันใหม่หลังเพิ่มข่าว")
+], "รวมภาพจากหน้าข่าว (content/news/<id>.json) และวิดีโอจาก videos.json — สร้างโดย step11_news.py รันใหม่หลังเพิ่มข่าว")
 print(f"  media-gallery.html  {len(albums)} อัลบั้ม · {len(videos)} วิดีโอ")
 
 # ---------- 5.1.7 RSS ข่าวสาร ----------

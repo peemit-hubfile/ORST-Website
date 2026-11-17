@@ -31,56 +31,11 @@
         "label": "View all news",
         "href": "general-news.html"
       },
-      "items": [
-        {
-          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
-          "publishedAt": "2026-11-02",
-          "href": "news-69kbj5538066.html",
-          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
-          "excerpt": "3 photos",
-          "category": "Announcements"
-        },
-        {
-          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
-          "publishedAt": "2026-10-31",
-          "href": "news-69jaj1403044.html",
-          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
-          "excerpt": "10 photos · 5 attachments",
-          "category": "Announcements"
-        },
-        {
-          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
-          "publishedAt": "2026-10-29",
-          "href": "news-69jsh5647044.html",
-          "image": "assets/images/orst/news/data0005-00005428-640.jpg",
-          "excerpt": "3 images · 1 attachment",
-          "category": "Announcements"
-        },
-        {
-          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
-          "publishedAt": "2026-10-29",
-          "href": "news-69jsn0030075.html",
-          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
-          "excerpt": "3 images · 4 attachments",
-          "category": "Announcements"
-        },
-        {
-          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
-          "publishedAt": "2026-10-19",
-          "href": "news-69jsm4847075.html",
-          "image": "assets/images/orst/news/data0005-00005420-640.jpg",
-          "excerpt": "3 images · 4 attachments",
-          "category": "Announcements"
-        },
-        {
-          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
-          "publishedAt": "2026-10-07",
-          "href": "news-69jgi2510013.html",
-          "image": "assets/images/orst/news/data0005-00005414-640.jpg",
-          "excerpt": "3 images · 1 attachment",
-          "category": "Announcements"
-        }
-      ]
+      "source": {
+        "type": "news",
+        "channel": "general",
+        "limit": 6
+      }
     },
     {
       "type": "page-index",

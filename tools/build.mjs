@@ -27,6 +27,7 @@ import { createHash } from 'node:crypto';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderPage, validatePage } from '../assets/js/blocks.js';
+import { resolveSources, newsUrl } from '../assets/js/content-sources.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -109,6 +110,8 @@ async function main() {
     }
 
     const page = JSON.parse(await readFile(join(PAGES_DIR, file), 'utf8'));
+    // รายการจากแหล่งกลาง (เช่น ข่าวจาก content/news/index.json) — ใช้ตัวเดียวกับเบราว์เซอร์
+    await resolveSources(page, async p => JSON.parse(await readFile(join(ROOT, p), 'utf8')));
     const invalid = validatePage(page);
     if (invalid.length) {
       problems.push(`${file} ไม่ผ่านการตรวจ: ${invalid.join(' / ')}`);
@@ -129,6 +132,12 @@ async function main() {
     pages.push(htmlName);
     built++;
     console.log(`  สร้าง dist/${htmlName}  (${page.blocks.length} block)`);
+  }
+
+  // แม่แบบหน้าเดียวหลายเนื้อหา (news-detail.html?id=) และไฟล์ส่งต่อจากลิงก์ข่าวเดิม (news-<id>.html) — คัดลอกตามเดิม
+  for (const name of (await readdir(ROOT)).filter(f => /^news-detail\.html$|^news-[a-z0-9]{12}\.html$/.test(f))) {
+    await writeFile(join(DIST, name), bustAssets(await readFile(join(ROOT, name), 'utf8')), 'utf8');
+    if (name === 'news-detail.html') pages.push(name);
   }
 
   for (const name of STATIC_PAGES) {
@@ -162,8 +171,11 @@ async function main() {
 
   // ---- sitemap.xml ----
   // หน้าแรกมาก่อนเสมอ ที่เหลือเรียงตามชื่อ
-  const indexed = pages.filter(name => !NO_INDEX.has(name))
-    .sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.localeCompare(b)));
+  const newsIndex = JSON.parse(await readFile(join(ROOT, 'content', 'news', 'index.json'), 'utf8').catch(() => '{"items":[]}'));
+  const indexed = pages.filter(name => !NO_INDEX.has(name) && name !== 'news-detail.html')
+    .sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.localeCompare(b)))
+    // หน้ารายละเอียดข่าวทุกเรื่อง (แม่แบบเดียว ต่าง id)
+    .concat((newsIndex.items || []).filter(it => it.id).map(it => newsUrl(it.id)));
   if (SITE_URL) {
     const now = new Date();   // วันที่ตามเครื่อง ไม่ใช่ UTC จะได้ไม่คลาดกันหนึ่งวัน
     const today = [now.getFullYear(),
@@ -171,7 +183,7 @@ async function main() {
       String(now.getDate()).padStart(2, '0')].join('-');
     const body = indexed.map(name => [
       '  <url>',
-      `    <loc>${SITE_URL}/${name === 'index.html' ? '' : name}</loc>`,
+      `    <loc>${SITE_URL}/${name === 'index.html' ? '' : name.replace(/&/g, '&amp;')}</loc>`,
       `    <lastmod>${today}</lastmod>`,
       '  </url>',
     ].join('\n')).join('\n');
@@ -186,19 +198,11 @@ async function main() {
   // ---- rss.xml (หน้า rss.html: เมนู 5.1.7 RSS ข่าวสาร) — ข่าว 30 รายการล่าสุดจากข่าวประชาสัมพันธ์ทั่วไป + ข่าวกิจกรรม ----
   if (SITE_URL) {
     const xml = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    const seen = new Set();
-    const news = [];
-    for (const slug of ['general-news', 'activity-news']) {
-      const page = JSON.parse(await readFile(join(ROOT, 'content', 'pages', `${slug}.json`), 'utf8').catch(() => '{}'));
-      for (const b of page.blocks || []) {
-        if (b.type !== 'document-list') continue;
-        for (const it of b.items || []) {
-          if (!it.href || seen.has(it.href)) continue;
-          seen.add(it.href);
-          news.push(it);
-        }
-      }
-    }
+    // ข่าวประชาสัมพันธ์ทั่วไป + ข่าวกิจกรรม จาก content/news/index.json (แหล่งเดียวกับหน้ารายการข่าว)
+    const news = (newsIndex.items || [])
+      .filter(it => (it.channels || []).some(c => c === 'general' || c === 'activity'))
+      .map(it => ({ title: it.title, publishedAt: it.publishedAt, href: it.id ? newsUrl(it.id) : it.href }))
+      .filter(it => it.href);
     news.sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
     const abs = href => /^https?:/.test(href) ? href : `${SITE_URL}/${href}`;
     const items = news.slice(0, 30).map(it => [

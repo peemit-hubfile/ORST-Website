@@ -1,0 +1,148 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69J%40J1403044 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69jaj1403044",
+  "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+  "navKey": "news",
+  "description": "ภาพประกอบ 10 ภาพ · เอกสารแนบ 5 ไฟล์",
+  "sideNav": false,
+  "updatedAt": "2026-10-31",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "ประกาศ",
+      "date": "2026-10-31",
+      "heading": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+      "image": "assets/images/orst/news/data0005-00005446-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005446.PNG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "ประกาศรับสมัครจ้างเหมาบริการ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005456.PDF"
+        },
+        {
+          "title": "คุณสมบัติและขอบเขตงานจ้าง จนท บริหารทั่วไป",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005457.PDF"
+        },
+        {
+          "title": "คุณสมบัติและขอบเขตงาน จนท พัสดุ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005458.PDF"
+        },
+        {
+          "title": "คุณสมบัติและขอบเขตงานจ้าง พนง ขับรถ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005459.PDF"
+        },
+        {
+          "title": "ใบสมัคร",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005460.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005446.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005447-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005447.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005448-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005448.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005449-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005449.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005450-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005450.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005451-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005451.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005452-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005452.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005453-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005453.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005454-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005454.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005455-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005455.PNG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครบุคคลเพื่อจ้างเหมาบริการระดับปริญญาตรี-โท (กราฟิกดิไซเนอร์)",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69AIT1600094",
+          "category": "ประกาศ",
+          "publishedAt": "2026-01-09"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครบุคคลเพื่อจ้างเหมาบริการระดับปริญญาตรี-โท",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68LDT1617088",
+          "category": "ประกาศ",
+          "publishedAt": "2025-12-04"
+        },
+        {
+          "title": "การรับสมัครพนักงานจ้างเหมาบริการรายบุคคล",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66BMJ2531053",
+          "category": "ข่าว",
+          "publishedAt": "2023-02-13"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภา ประกาศรับสมัครพนักงานจ้างเหมาบริการ จำนวน ๒ ตำแหน่ง",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23O5003009",
+          "category": "ข่าว",
+          "publishedAt": "2019-03-29"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HSI4542053 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69hsi4542053",
+  "title": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย",
+  "navKey": "news",
+  "description": "ภาพประกอบ 2 ภาพ · เอกสารแนบ 1 ไฟล์",
+  "sideNav": false,
+  "updatedAt": "2026-08-19",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "อบรมและเสวนา",
+      "date": "2026-08-19",
+      "heading": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย",
+      "image": "assets/images/orst/news/data0005-00005399-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) ",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005399.JPG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม",
+          "href": "news.html"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (font) อักษรโบราณในประเทศไทย"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "ประกาศรายชื่อผู้เข้าร่วม โครงการอบรมเชิงปฏิบัติการ “การใช้งานชุดแบบอักษร (FONT) อักษรโบราณในประเทศไทย",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005401.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005399-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005399.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005400-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005400.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "ประกาศรายชื่อผู้สมัครเข้าร่วมโครงการอบรมหลักเกณฑ์การทับศัพท์ของสำนักงานราชบัณฑิตยสภา",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67IDK1656059",
+          "category": "ประกาศ",
+          "publishedAt": "2024-09-04"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”",
+          "href": "news-detail.html?id=69kbj5538066",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-11-02"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ",
+          "href": "news-detail.html?id=69jaj1403044",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-31"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง",
+          "href": "news-detail.html?id=69jsn0030075",
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "category": "ประกาศ",
+          "publishedAt": "2026-10-29"
+        }
+      ]
+    }
+  ]
+}

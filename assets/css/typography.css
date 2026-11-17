@@ -11,6 +11,10 @@
 @font-face { font-family: "TH Sarabun New"; src: url("../fonts/THSarabunNew-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "TH Sarabun New"; src: url("../fonts/THSarabunNew-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "TH Sarabun New"; src: url("../fonts/THSarabunNew-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+/* คำไทยที่ปนในหน้าภาษาอังกฤษ (เช่น คำถาม-คำตอบเรื่องภาษาไทย) — TH Sarabun New ตัวเล็กกว่า Geist ราว 1.38 เท่า
+   จึงขยายเฉพาะอักษรไทย (unicode-range) ให้ความสูงตัวอักษรใกล้เคียงกัน ใช้ในโหมด EN เท่านั้น */
+@font-face { font-family: "ORST Thai Mixed"; src: url("../fonts/THSarabunNew-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; size-adjust: 138%; unicode-range: U+0E00-0E7F; }
+@font-face { font-family: "ORST Thai Mixed"; src: url("../fonts/THSarabunNew-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; size-adjust: 138%; unicode-range: U+0E00-0E7F; }
 /* English: Geist + Newsreader โหลดด้วย <link> ใน <head> ของทุกหน้า (ดู _template.html) */
 
 :root {
@@ -73,8 +77,9 @@ html[lang="en"] {
   --text-xl: 1.625rem;
   --text-2xl: 2rem;
   --text-3xl: 2.375rem;
-  --font-display: "Newsreader", Georgia, serif;
-  --font-body: "Geist", system-ui, sans-serif;
+  --font-display: "Newsreader", "ORST Thai Mixed", Georgia, serif;
+  --font-body: "Geist", "ORST Thai Mixed", system-ui, sans-serif;
+  --font-latin: "Geist", "ORST Thai Mixed", system-ui, sans-serif;
 }
 html[lang="en"] :is(h1, h2, h3, h4) { font-family: var(--font-display); letter-spacing: -0.01em; }
 
