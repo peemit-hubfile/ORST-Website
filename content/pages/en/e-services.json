@@ -4,6 +4,7 @@
   "title": "e-Services",
   "navKey": "services",
   "description": "Online permit request services of the Office of the Royal Society: read the regulations, download the forms and submit documents by email",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -26,78 +27,82 @@
     {
       "type": "feature-list",
       "id": "services",
-      "layout": "cards",
+      "layout": "directory",
       "heading": "Available services",
+      "lead": "Read the regulation for the service you need, download the request form, then send your documents by email.",
       "items": [
         {
-          "icon": "i-form",
-          "title": "Request for permission to print and publish publications, electronic media, electronic data and other media of the Office of the Royal Society",
-          "body": "Under the Office of the Royal Society Regulation on Permission to Print and Publish Publications, Electronic Media, Electronic Data and Other Media, B.E. 2561 (2018)",
+          "title": "Printing and publishing",
+          "body": "Request for permission to print and publish publications, electronic media, electronic data and other media of the Office of the Royal Society",
           "links": [
             {
               "label": "Regulation (PDF)",
-              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF"
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF",
+              "kind": "Read the regulations"
             },
             {
               "label": "Form (PDF)",
-              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF"
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF",
+              "kind": "Download the request form"
             },
             {
-              "label": "Submit documents: saraban@orst.go.th",
-              "href": "mailto:saraban@orst.go.th"
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th",
+              "kind": "Submit documents"
             }
           ]
         },
         {
-          "icon": "i-form",
-          "title": "Request for the right to print and sell books produced by the Office of the Royal Society for publication and sale",
-          "body": "Under the Office of the Royal Society Regulation on Granting the Right to Print and Sell Books Produced by the Office for Publication and Sale, B.E. 2561 (2018)",
+          "title": "Licence to print and sell",
+          "body": "Request for the right to print and sell books produced by the Office of the Royal Society for publication and sale",
           "links": [
             {
               "label": "Regulation (PDF)",
-              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF"
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF",
+              "kind": "Read the regulations"
             },
             {
               "label": "Form (PDF)",
-              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF"
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF",
+              "kind": "Download the request form"
             },
             {
-              "label": "Submit documents: saraban@orst.go.th",
-              "href": "mailto:saraban@orst.go.th"
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th",
+              "kind": "Submit documents"
             }
           ]
         }
       ]
     },
     {
-      "type": "notice",
-      "id": "files",
-      "tone": "info",
-      "title": "Submitting documents",
-      "body": "Email the completed form and supporting documents to saraban@orst.go.th. Accepted files: .pdf .doc .docx, up to 10MB"
-    },
-    {
-      "type": "link-list",
-      "id": "related",
+      "type": "steps",
+      "id": "how",
+      "layout": "timeline",
       "variant": "alt",
-      "heading": "Related services",
+      "heading": "How to submit a request",
       "items": [
         {
-          "title": "Download Forms",
-          "href": "download-forms.html",
-          "icon": "i-download"
+          "title": "Read the regulations",
+          "body": "Check the criteria and conditions set out in the regulation for the service you need."
         },
         {
-          "title": "How to Use e-Services",
-          "href": "e-service-guide.html",
-          "icon": "i-file"
+          "title": "Fill in the request form",
+          "body": "Download the form (PDF) and complete all the required details."
         },
         {
-          "title": "Contact the Office",
-          "href": "contact.html",
-          "icon": "i-phone-call"
+          "title": "Send documents by email",
+          "body": "Send the form with supporting documents to saraban@orst.go.th. Accepted files: .pdf, .doc and .docx, up to 10MB."
+        },
+        {
+          "title": "Follow up on progress",
+          "body": "Ask about the status of your request by email or telephone. Contact details are on the Track Request page."
         }
-      ]
+      ],
+      "action": {
+        "label": "Track request",
+        "href": "track-request.html"
+      }
     }
   ],
   "lang": "en"

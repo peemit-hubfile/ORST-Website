@@ -4,6 +4,7 @@
   "title": "How to Order Books and Payment",
   "navKey": "services",
   "description": "Procedure for ordering books from the Office of the Royal Society and payment methods",
+  "sideNav": false,
   "updatedAt": "2026-11-13",
   "blocks": [
     {
@@ -24,31 +25,111 @@
       ]
     },
     {
-      "type": "article",
+      "type": "steps",
       "id": "order",
-      "toc": false,
-      "intro": [
-        "Buyers must pay for the books and shipping to the Office of the Royal Society before staff can send the books. Please provide the list of books ordered so that staff can calculate the shipping cost before payment. There are 2 payment methods"
-      ],
-      "sections": [
+      "layout": "timeline",
+      "heading": "How to order",
+      "lead": "Buyers must pay for the books and shipping in advance before staff can send the books.",
+      "items": [
         {
-          "heading": "Payment methods",
-          "list": [
-            "Pay by postal money order made payable to the Secretary of the Office of the Royal Society, Sanam Suea Pa, Dusit, Bangkok 10300 (Dusit Post Office), enclosing the order details and delivery address with the money order",
-            "Pay via Siam Commercial Bank Public Company Limited, account name: Office of the Royal Society (Bookshop), Royal Household Bureau (Sanam Suea Pa) Branch, savings account number 406-347071-9. Fax the proof of transfer with the order details and delivery address to the Bookshop at 0 2356 0492"
-          ]
+          "title": "List the books you want",
+          "body": "Send the list of books you are ordering so staff can calculate the shipping cost."
         },
         {
-          "heading": "Further inquiries",
-          "html": "<p>For further inquiries, contact the Bookshop at 0 2356 0466-70 ext. 1020 or by email <a href=\"mailto:ribook@orst.go.th\">ribook@orst.go.th</a></p>"
+          "title": "Make payment",
+          "body": "Pay for the books and shipping using one of the two methods below."
+        },
+        {
+          "title": "Send your order details",
+          "body": "Send your order details and delivery address with proof of payment."
+        },
+        {
+          "title": "Receive your books",
+          "body": "Staff send the books to the address you provided."
         }
       ]
     },
     {
-      "type": "notice",
-      "tone": "warn",
-      "title": "Information from the former website",
-      "body": "The money order address, fax number and telephone numbers on this page are from the previous data set (before the move to the Government Complex, Chaeng Watthana) and are awaiting confirmation by the Office"
+      "type": "feature-list",
+      "id": "payment",
+      "layout": "directory",
+      "variant": "alt",
+      "heading": "Payment methods",
+      "lead": "There are two ways to pay.",
+      "items": [
+        {
+          "title": "Postal money order",
+          "body": "Enclose your order details and delivery address with the money order.",
+          "details": [
+            {
+              "label": "Payable to",
+              "value": "Secretary of the Department, Office of the Royal Society",
+              "wide": true
+            },
+            {
+              "label": "Address",
+              "value": "Sanam Suea Pa, Dusit, Bangkok 10300"
+            },
+            {
+              "label": "Post office",
+              "value": "Dusit Post Office"
+            }
+          ]
+        },
+        {
+          "title": "Bank transfer",
+          "body": "Fax the transfer slip with your order details and delivery address to the Book Shop.",
+          "details": [
+            {
+              "label": "Account number",
+              "value": "406-347071-9",
+              "copy": true
+            },
+            {
+              "label": "Bank and branch",
+              "value": "Siam Commercial Bank PCL, Bureau of the Royal Household (Sanam Suea Pa) branch",
+              "wide": true
+            },
+            {
+              "label": "Account name",
+              "value": "Office of the Royal Society (Book Shop)",
+              "wide": true
+            },
+            {
+              "label": "Account type",
+              "value": "Savings account"
+            },
+            {
+              "label": "Fax",
+              "value": "0 2356 0492"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "contact",
+      "layout": "directory",
+      "heading": "Further inquiries",
+      "items": [
+        {
+          "title": "Bookshop",
+          "body": "Ask about available books, shipping costs and ordering.",
+          "links": [
+            {
+              "kind": "Telephone (ext. 1020)",
+              "label": "0 2356 0466-70",
+              "href": "tel:023560466"
+            },
+            {
+              "kind": "Email",
+              "label": "ribook@orst.go.th",
+              "href": "mailto:ribook@orst.go.th"
+            }
+          ]
+        }
+      ]
     }
   ],
   "lang": "en"

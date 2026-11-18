@@ -93,7 +93,7 @@ ORST Website/
 
 `components.js` ทำงานเหล่านี้ให้อัตโนมัติทุกหน้า:
 `initMegaMenu` · `initMobileMenu` · `initSharedModals` · `initSharedSearch` ·
-`initMediaTabs` · `initCompactFAQ` · `initNewsEventsTabs` · `initSharedAccessibility` ·
+`initMediaTabs` · `initCompactFAQ` · `initNewsEventsTabs` · `initA11y` (ปุ่ม/แผงช่วยการเข้าถึง + ขึ้นด้านบน ทุกหน้า) ·
 `initFixedHeader` (คำนวณความสูง header ที่เป็น `position: fixed` แล้วดัน `<body>` ลงมา)
 
 ### ลำดับการโหลด CSS — สำคัญมาก ห้ามสลับ

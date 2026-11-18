@@ -1,6 +1,6 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "ปฏิทิน Google Calendar จากเว็บเดิม (iwfm_calendar.asp) + รายการกิจกรรมจาก content/events.json (ไฟล์เดียวกับปฏิทินหน้าแรก — CMS เขียนไฟล์นี้)",
+  "_note": "ปฏิทินของเว็บเอง (แบบ Google Calendar: เดือน/สัปดาห์/วัน/กำหนดการ) จาก content/events.json (ไฟล์เดียวกับปฏิทินหน้าแรก — CMS เขียนไฟล์นี้) ไม่ฝัง Google Calendar แล้ว · เพิ่มเวลาได้ด้วย start \"YYYY-MM-DDTHH:MM\" และ url = หน้ารายละเอียด",
   "title": "ปฏิทินกิจกรรม",
   "navKey": "news",
   "description": "กิจกรรม การเสวนา และการบรรยายของสำนักงานราชบัณฑิตยสภา ติดตามกำหนดการได้จากปฏิทินออนไลน์",
@@ -29,8 +29,7 @@
       "type": "event-calendar",
       "id": "calendar",
       "listHeading": "กิจกรรมล่าสุด",
-      "boardHeading": "ปฏิทินกิจกรรมออนไลน์",
-      "embed": "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FBangkok&showTz=0&title=%E0%B8%9B%E0%B8%8F%E0%B8%B4%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%93%E0%B8%91%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B8%AA%E0%B8%A0%E0%B8%B2&showPrint=0&src=em9vbW9yc3RAZ21haWwuY29t&src=MWVmYmJhYzYxN2Q3NGMzYjY2MzE5ZGFhNzVhYzczMGQ5NmI4ZWJjMzEzOTdiY2QyYTk2YTU0YjFkNzg3MzdmOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OGEwZmM0ZTZjYTA3ZmIwZGE5Y2M5MjMzNjhmNTYzZDIzMWRlMzYxODY5ZTFhOTFjODQzZDlmNTI0ZDhhNzc2MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NTU4MGM2Yjg4MzVkNjMzMDBmYmE5ZmMzYjFkNDE0MmEyNWQ1OWY0ZTEwMzA5MmU1YTZiODRkYjczNDQyNzFhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YTY0MmM4ZTIzYzExMjBlZDE5ZTJlYzJlZTYwMmQyOWViNjViYjUxNjQyYmJjMGUwNmQyOGNlOTY0Y2E2MmI0M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MTIwZWViZDhjYzcwZDIxMDYxODg0OWExM2IwMWE3YmEyMjdmZGUyODYwNTVjNzkwMzUyMDM4ZjM0MWM2YTYwZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23F6BF26&color=%233F51B5&color=%23E67C73&color=%23EF6C00&color=%23795548&color=%230B8043",
+      "boardHeading": "ปฏิทินกิจกรรม",
       "limit": 12,
       "source": {
         "type": "events"

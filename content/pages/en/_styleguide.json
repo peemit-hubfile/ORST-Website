@@ -108,6 +108,35 @@
       ]
     },
     {
+      "type": "card-grid",
+      "id": "b-cards-numbered",
+      "variant": "alt",
+      "heading": "card-grid (numbered)",
+      "columns": 3,
+      "numbered": true,
+      "lead": "numbered: true = เลข 01 02 03 จาง ๆ มุมการ์ด การ์ดกะทัดรัด",
+      "items": [
+        {
+          "icon": "i-book",
+          "tag": "Strategy 1",
+          "title": "Developing and applying digital technology to disseminate knowledge and provide knowledge services",
+          "meta": "2 แผนงาน"
+        },
+        {
+          "icon": "i-database",
+          "tag": "Strategy 2",
+          "title": "Managing the use of digital technology within the organization",
+          "meta": "2 แผนงาน"
+        },
+        {
+          "icon": "i-people",
+          "tag": "Strategy 3",
+          "title": "Developing personnel's digital technology knowledge and skills",
+          "meta": "1 แผนงาน"
+        }
+      ]
+    },
+    {
       "type": "feature-list",
       "id": "b-feature-list",
       "variant": "alt",
@@ -255,6 +284,58 @@
           "label": "JSON file per page",
           "note": "Edit in one place"
         }
+      ]
+    },
+    {
+      "type": "stat-row",
+      "id": "b-stat-progress",
+      "variant": "alt",
+      "heading": "stat-row (progress)",
+      "lead": "ใส่ progress 0-100 = วงแหวนความคืบหน้าแทนตัวเลขใหญ่ — ตัวอย่างจากเป้าหมายแผนปฏิบัติการดิจิทัล พ.ศ. 2563–2565",
+      "items": [
+        {
+          "value": "80%",
+          "label": "Public services",
+          "note": "of government services can be accessed by the public through digital technology",
+          "progress": 80
+        },
+        {
+          "value": "80%",
+          "label": "Personnel",
+          "note": "of personnel have developed their digital technology knowledge and skills",
+          "progress": 80
+        }
+      ]
+    },
+    {
+      "type": "stat-row",
+      "id": "b-stat-dark",
+      "variant": "dark",
+      "heading": "stat-row (variant dark)",
+      "lead": "การ์ดโปร่งบนแถบเขียวเข้ม ตัวเลขสีทอง",
+      "items": [
+        {
+          "value": "3",
+          "label": "Strategic issues"
+        },
+        {
+          "value": "5",
+          "label": "Work plans"
+        },
+        {
+          "value": "12",
+          "label": "โครงการ (project)"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "b-quote",
+      "eyebrow": "headingStyle: quote",
+      "headingStyle": "quote",
+      "heading": "“An agency that serves through digital technology, giving users easy and fast access to knowledge”",
+      "paragraphs": [
+        "ใส่ headingStyle: \"quote\" ให้ block ใดก็ได้ หัวข้อจะเป็นกล่องคำคม — ใช้กับวิสัยทัศน์หรือข้อความสำคัญ 1 ประโยค"
       ]
     },
     {
@@ -458,6 +539,34 @@
           "note": "Example without a photo"
         }
       ]
+    },
+    {
+      "type": "person-grid",
+      "id": "b-person-feature",
+      "heading": "person-grid (layout feature)",
+      "layout": "feature",
+      "lead": "ผู้บริหารสูงสุด 1 คน — รูปมีกรอบ ตารางข้อมูลติดต่อ ปุ่มดูประวัติ · ดึงจาก content/people/index.json ด้วย source people กดได้ทั้งการ์ดไป person.html?id=",
+      "source": {
+        "type": "people",
+        "ids": [
+          "secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "person-grid",
+      "id": "b-person-row",
+      "variant": "alt",
+      "heading": "person-grid (layout row)",
+      "layout": "row",
+      "lead": "รองผู้บริหาร / ผู้อำนวยการ — รูปมีกรอบ ข้อมูลด้านข้าง 2 คอลัมน์ (จอแคบเหลือ 1 คอลัมน์)",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general",
+          "director-1"
+        ]
+      }
     },
     {
       "type": "media-grid",
@@ -795,6 +904,229 @@
         "type": "album",
         "id": "69hni1055034"
       }
+    },
+    {
+      "type": "timeline",
+      "id": "b-timeline",
+      "variant": "alt",
+      "heading": "timeline",
+      "lead": "เส้นเวลา — จอกว้างสลับซ้าย/ขวาตามเส้นกลาง จอแคบเรียงแถวเดียว · image ไม่บังคับ (ตัวอย่างจากหน้าประวัติความเป็นมา)",
+      "items": [
+        {
+          "year": "2469",
+          "title": "Founding of the “Royal Society”",
+          "body": "[ข้อความสั้น ๆ ของเหตุการณ์]"
+        },
+        {
+          "year": "2558",
+          "title": "Royal Society of Thailand Act, B.E. 2558",
+          "body": "[ข้อความสั้น ๆ ของเหตุการณ์]",
+          "image": "assets/images/orst/news/data0005-00005374-640.jpg",
+          "alt": "ภาพตัวอย่าง"
+        }
+      ]
+    },
+    {
+      "type": "pillars",
+      "id": "b-pillars",
+      "heading": "pillars",
+      "lead": "แผงเทียบส่วนงานเคียงกัน — หัวสีเข้ม/สีทอง ตารางตำแหน่ง รายการหน้าที่ ป้ายคำ ข้อความฉบับเต็มพับเก็บ (ตัวอย่างจากหน้าประวัติความเป็นมา)",
+      "items": [
+        {
+          "icon": "i-people",
+          "eyebrow": "ส่วนที่ ๑",
+          "title": "[ชื่อส่วนงาน]",
+          "lead": "[บทบาทโดยย่อ]",
+          "facts": [
+            {
+              "label": "[Position]",
+              "value": "[ผู้ดำรงตำแหน่ง]"
+            }
+          ],
+          "listHeading": "Powers and duties",
+          "list": [
+            "[หน้าที่ข้อ ๑]",
+            "[หน้าที่ข้อ ๒]"
+          ]
+        },
+        {
+          "icon": "i-service",
+          "eyebrow": "ส่วนที่ ๒",
+          "title": "[ชื่อส่วนงาน]",
+          "lead": "[บทบาทโดยย่อ]",
+          "tagsHeading": "Internal units",
+          "tags": [
+            "[หน่วยงาน ๑]",
+            "[หน่วยงาน ๒]"
+          ],
+          "more": [
+            "[ข้อความฉบับเต็ม]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org-chart",
+      "id": "b-org-chart",
+      "variant": "alt",
+      "heading": "org-chart",
+      "lead": "แผนผังโครงสร้าง — ชั้นบนลงล่าง เชื่อมเส้น หน่วยย่อยแยกกิ่ง (ตัวอย่างจากหน้าประวัติความเป็นมา)",
+      "tiers": [
+        {
+          "tone": "deep",
+          "eyebrow": "[บทบาท]",
+          "title": "[ส่วนบน]",
+          "roles": [
+            {
+              "role": "[Position]",
+              "holder": "[ผู้ดำรงตำแหน่ง]"
+            }
+          ],
+          "childrenLabel": "[กลุ่มย่อย]",
+          "children": [
+            "[หน่วย ๑]",
+            "[หน่วย ๒]",
+            "[หน่วย ๓]"
+          ]
+        },
+        {
+          "tone": "gold",
+          "title": "[ตำแหน่งเชื่อม]",
+          "note": "[คำอธิบาย]"
+        },
+        {
+          "tone": "plain",
+          "title": "[ส่วนล่าง]",
+          "childrenLabel": "[หน่วยงานภายใน]",
+          "children": [
+            "[หน่วย ๑]",
+            "[หน่วย ๒]"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "title": "[อำนาจหน้าที่]",
+          "items": [
+            "[ข้อ ๑]",
+            "[ข้อ ๒]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org-tree",
+      "id": "b-org-tree",
+      "variant": "alt",
+      "heading": "org-tree",
+      "lead": "แผนผังการบริหารงาน 2 สาย + เอกสารฉบับเผยแพร่ (ตัวอย่างจริง: หน้าโครงสร้างหน่วยงาน)",
+      "top": {
+        "title": "[ผู้บังคับบัญชาสูงสุด]",
+        "aside": "[หน่วยที่เชื่อมโยง]"
+      },
+      "branches": [
+        {
+          "title": "[สายที่ ๑]",
+          "tone": "deep",
+          "nodes": [
+            {
+              "title": "[Position]",
+              "side": [
+                {
+                  "title": "[คณะที่ปรึกษา]"
+                }
+              ]
+            }
+          ],
+          "unitsLabel": "[กลุ่มย่อย]",
+          "units": [
+            {
+              "title": "[หน่วย ๑]",
+              "roles": [
+                "[ประธาน]",
+                "[เลขานุการ]"
+              ]
+            },
+            {
+              "title": "[หน่วย ๒]"
+            }
+          ]
+        },
+        {
+          "title": "[สายที่ ๒]",
+          "tone": "gold",
+          "nodes": [
+            {
+              "title": "[Position]",
+              "rolesLabel": "Also serves as",
+              "roles": [
+                "[บทบาท]"
+              ]
+            }
+          ],
+          "unitsLabel": "[หน่วยงานภายใน]",
+          "units": [
+            {
+              "title": "[หน่วย ๑]"
+            },
+            {
+              "title": "[หน่วย ๒]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "annotated-figure",
+      "id": "b-annotated-figure",
+      "heading": "annotated-figure",
+      "lead": "ภาพพร้อมหมุดชี้ส่วนต่าง ๆ + ความหมาย (ตัวอย่างจริง: หน้าเครื่องหมายราชการ)",
+      "image": "assets/images/orst/about/emblem.png",
+      "imageAlt": "",
+      "parts": [
+        {
+          "title": "[ส่วนที่ ๑]",
+          "text": "[ความหมาย]",
+          "x": 50,
+          "y": 22
+        },
+        {
+          "title": "[ส่วนที่ ๒]",
+          "text": "[ความหมาย]",
+          "x": 50,
+          "y": 57
+        }
+      ]
+    },
+    {
+      "type": "image-band",
+      "id": "b-image-band",
+      "eyebrow": "image-band · tone light · imageSide right",
+      "heading": "Vision",
+      "statement": "[ข้อความวิสัยทัศน์]",
+      "highlights": [
+        "ข้อความวิสัยทัศน์"
+      ],
+      "image": "assets/images/orst-bg.jpg",
+      "imageAlt": "Office building"
+    },
+    {
+      "type": "image-band",
+      "id": "b-image-band-dark",
+      "eyebrow": "image-band · tone dark · imageSide cover",
+      "heading": "Mission",
+      "paragraphs": [
+        "[ข้อความนำ]"
+      ],
+      "list": [
+        "(๑) [รายการที่ ๑]",
+        "(๒) [รายการที่ ๒]",
+        "(๓) [รายการที่ ๓]"
+      ],
+      "image": "assets/images/orst/services-hero.jpg",
+      "imageAlt": "",
+      "imageSide": "cover",
+      "tone": "dark"
     }
   ],
   "updatedAt": "2026-11-13",

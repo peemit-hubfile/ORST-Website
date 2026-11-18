@@ -4,6 +4,7 @@
   "title": "How to Use e-Services",
   "navKey": "services",
   "description": "Steps for submitting online service requests to the Office of the Royal Society",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -24,49 +25,81 @@
       ]
     },
     {
-      "type": "steps",
+      "type": "feature-list",
       "id": "steps",
-      "layout": "timeline",
+      "layout": "directory",
       "heading": "How to submit a request",
+      "lead": "Follow the steps below. Each step links to the documents and channels you need.",
       "items": [
         {
           "title": "Choose a service",
-          "body": "Choose the service you need on the e-Services page"
+          "body": "Choose the service you need on the e-Services page",
+          "links": [
+            {
+              "kind": "Available services",
+              "label": "e-Services",
+              "href": "e-services.html"
+            }
+          ]
         },
         {
           "title": "Read the regulations",
-          "body": "Read the regulations and conditions of the service in full"
+          "body": "Read the regulations and conditions of the service in full",
+          "links": [
+            {
+              "kind": "Permission to print and publish",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF"
+            },
+            {
+              "kind": "Licence to print and sell",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF"
+            }
+          ]
         },
         {
           "title": "Download and complete the form",
-          "body": "Download the request form, fill it in and prepare supporting documents"
+          "body": "Download the request form, fill it in and prepare supporting documents",
+          "links": [
+            {
+              "kind": "Permission to print and publish",
+              "label": "Form (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF"
+            },
+            {
+              "kind": "Licence to print and sell",
+              "label": "Form (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF"
+            },
+            {
+              "kind": "Other forms",
+              "label": "Download Forms",
+              "href": "download-forms.html"
+            }
+          ]
         },
         {
           "title": "Submit documents",
-          "body": "Email the form and supporting documents to saraban@orst.go.th (.pdf .doc .docx files, up to 10MB)"
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Related services",
-      "items": [
-        {
-          "title": "e-Services",
-          "href": "e-services.html",
-          "icon": "i-form"
+          "body": "Send the form and supporting documents by email. Accepted files: .pdf, .doc and .docx, up to 10MB.",
+          "links": [
+            {
+              "kind": "Send documents by email",
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
         },
         {
-          "title": "Download Forms",
-          "href": "download-forms.html",
-          "icon": "i-download"
-        },
-        {
-          "title": "Contact the Office",
-          "href": "contact.html",
-          "icon": "i-phone-call"
+          "title": "Track request",
+          "body": "Ask about the progress of your request by email or telephone.",
+          "links": [
+            {
+              "kind": "How to ask",
+              "label": "Track Request",
+              "href": "track-request.html"
+            }
+          ]
         }
       ]
     }

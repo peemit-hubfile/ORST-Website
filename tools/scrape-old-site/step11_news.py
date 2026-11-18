@@ -58,7 +58,8 @@ for f in glob.glob(ROOT + "/content/news/*.json"):
     if not images or hero.get("tag") == "ประกาศ" or re.match(r"(ประกาศ|ขอเชิญ)", hero["heading"]):
         continue
     albums.append({"date": hero.get("date", ""), "n": len(images), "item": {
-        "image": images[0]["image"], "alt": hero["heading"], "tag": f"{len(images)} ภาพ",
+        "image": images[0]["image"], "alt": hero["heading"], **({"category": hero["tag"]} if hero.get("tag") else {}),
+        "tag": f"{len(images)} ภาพ",
         "title": hero["heading"], "desc": th_date(hero["date"]) if hero.get("date") else "",
         "href": f"album.html?id={nid}"}})
 albums.sort(key=lambda a: a["date"], reverse=True)
@@ -66,8 +67,8 @@ albums.sort(key=lambda a: a["date"], reverse=True)
 title = "คลังภาพ"
 lead = "ภาพกิจกรรมของสำนักงานราชบัณฑิตยสภา จัดเป็นอัลบั้มตามข่าว เลือกอัลบั้มเพื่อดูภาพทั้งหมด"
 write_page("media-gallery", title, lead, [
-    {"type": "media-grid", "id": "photos", "heading": "อัลบั้มภาพกิจกรรม",
-     "columns": 3, "ratio": "4:3", "pageSize": 12, "unit": "อัลบั้ม", "items": [a["item"] for a in albums]},
+    {"type": "media-grid", "id": "photos", "layout": "album",
+     "columns": 4, "ratio": "4:3", "pageSize": 12, "unit": "อัลบั้ม", "items": [a["item"] for a in albums]},
 ], "อัลบั้มจากหน้าข่าว (content/news/<id>.json) แต่ละอัลบั้มเปิดที่ album.html?id=<id> — สร้างโดย step11_news.py รันใหม่หลังเพิ่มข่าว",
    image="assets/images/orst/news/data0005-00005374-960.jpg", sideNav=False)
 print(f"  media-gallery.html  {len(albums)} อัลบั้ม")

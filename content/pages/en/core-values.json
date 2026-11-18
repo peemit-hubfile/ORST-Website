@@ -5,6 +5,7 @@
   "navKey": "about",
   "description": "Core values of the Royal Society of Thailand",
   "updatedAt": "2026-11-13",
+  "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
@@ -24,22 +25,19 @@
       ]
     },
     {
-      "type": "article",
+      "type": "image-band",
       "id": "values",
-      "toc": false,
-      "sections": [
-        {
-          "heading": "Royal Society of Thailand core values",
-          "paragraphs": [
-            "Working on the principles of"
-          ],
-          "list": [
-            "accuracy,",
-            "standards,",
-            "and a service mind"
-          ]
-        }
-      ]
+      "eyebrow": "Core Values",
+      "heading": "Royal Society of Thailand core values",
+      "paragraphs": [
+        "Working on the principles of"
+      ],
+      "list": [
+        "accuracy,",
+        "standards,",
+        "and a service mind"
+      ],
+      "tone": "light"
     }
   ],
   "lang": "en"

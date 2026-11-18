@@ -4,6 +4,7 @@
   "title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
   "navKey": "contact",
   "description": "ช่องทางร้องเรียน ร้องทุกข์ แจ้งเบาะแสการทุจริต และเสนอแนะต่อการดำเนินงานของสำนักงานราชบัณฑิตยสภา พร้อมการติดตามสถานะเรื่อง",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -28,7 +29,15 @@
       "type": "feature-list",
       "id": "channels",
       "layout": "cards",
+      "eyebrow": "Complaints & Suggestions",
       "heading": "ช่องทางรับเรื่อง",
+      "lead": "เลือกช่องทางที่สะดวกในการแจ้งเรื่องร้องเรียน ร้องทุกข์ แจ้งเบาะแส หรือเสนอแนะต่อการดำเนินงานของสำนักงานราชบัณฑิตยสภา",
+      "action": {
+        "label": "ติดตามสถานะเรื่อง",
+        "href": "track-request.html"
+      },
+      "image": "assets/images/hero-4.jpg",
+      "imagePosition": "center 60%",
       "items": [
         {
           "icon": "i-megaphone",
@@ -66,75 +75,11 @@
           "body": "แบบรับฟังความคิดเห็น/ข้อเสนอแนะที่มีต่อการดำเนินงานของสำนักงาน",
           "links": [
             {
-              "label": "แบบรับฟังความคิดเห็น (Google Form)",
-              "href": "https://forms.gle/mc1qF9RCDQbvLnho6"
+              "label": "แบบรับฟังความคิดเห็น",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+              "kind": "Google Form"
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "feature-list",
-      "id": "follow",
-      "layout": "cards",
-      "variant": "alt",
-      "heading": "ติดตามสถานะและข้อมูลที่เกี่ยวข้อง",
-      "items": [
-        {
-          "icon": "i-search",
-          "title": "ติดตามสถานะเรื่อง",
-          "body": "สอบถามความคืบหน้าของเรื่องที่ยื่นไว้",
-          "links": [
-            {
-              "label": "ติดตามสถานะคำขอรับบริการ",
-              "href": "track-request.html"
-            }
-          ]
-        },
-        {
-          "icon": "i-file",
-          "title": "แนวปฏิบัติการจัดการเรื่องร้องเรียน",
-          "body": "ขั้นตอนการรับและจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
-          "links": [
-            {
-              "label": "อ่านแนวปฏิบัติ",
-              "href": "complaint-guidelines.html"
-            }
-          ]
-        },
-        {
-          "icon": "i-journal",
-          "title": "สถิติเรื่องร้องเรียน",
-          "body": "ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
-          "links": [
-            {
-              "label": "ดูสถิติ",
-              "href": "complaint-statistics.html"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "ช่องทางติดต่ออื่น",
-      "items": [
-        {
-          "title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)",
-          "href": "contact.html#message-form",
-          "icon": "i-form"
-        },
-        {
-          "title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
-          "href": "website-survey.html",
-          "icon": "i-check"
-        },
-        {
-          "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
-          "href": "social-media.html",
-          "icon": "i-share"
         }
       ]
     }

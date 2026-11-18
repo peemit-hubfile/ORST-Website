@@ -52,6 +52,14 @@ export function albumFromNews(id, news) {
   return { id, title: hero.heading || news.title || '', date: hero.date || '', tag: hero.tag || '', images, newsHref: newsUrl(id) };
 }
 
+/* บุคคล/ผู้บริหาร: content/people/index.json — แหล่งเดียวของชื่อ ตำแหน่ง รูป ช่องทางติดต่อ และประวัติ
+     { "items": [ { id, name, nameEn?, position, roles?: [string], image, alt, phone?, fax?, email?,
+                    bio?, education?: [{ period?, title }], career?: [{ period?, title }], duties?: [string] } ] }
+   person-grid  "source": { "type": "people", "ids": ["secretary-general", ...] }  (เรียงตาม ids)
+   หน้าประวัติ  person.html?id=<id> → block person-profile "source": { "type": "person" } */
+export const PEOPLE_INDEX = 'content/people/index.json';
+export const personUrl = id => `person.html?id=${encodeURIComponent(id)}`;
+
 export async function resolveSources(page, load, params = {}) {
   const blocks = (page?.blocks || []).filter(b => b && b.source);
   const news = blocks.filter(b => b.source.type === 'news');
@@ -64,6 +72,25 @@ export async function resolveSources(page, load, params = {}) {
   if (events.length) {
     const data = await load(EVENTS);
     for (const b of events) b.items = Array.isArray(data?.events) ? data.events : [];
+  }
+  // บุคคล — รายชื่อ (person-grid) และหน้าประวัติ (person-profile)
+  const people = blocks.filter(b => b.source.type === 'people' || b.source.type === 'person');
+  if (people.length) {
+    const all = (await load(PEOPLE_INDEX))?.items || [];
+    const byId = new Map(all.map(p => [p.id, p]));
+    for (const b of people) {
+      if (b.source.type === 'people') {
+        const ids = b.source.ids || all.map(p => p.id);
+        b.items = ids.map(id => byId.get(id)).filter(Boolean).map(p => ({ ...p, href: personUrl(p.id) }));
+        continue;
+      }
+      const id = String(b.source.id || params.id || '');
+      b.person = byId.get(id) || null;
+      if (b.person && !b.source.id) {
+        page.title = b.person.name;
+        page.description = [b.person.name, b.person.position].filter(Boolean).join(' — ');
+      }
+    }
   }
   // อัลบั้มภาพ (album.html?id=<id>) — "source": { "type": "album" } ใช้ id จาก URL หรือ "id" ใน source
   for (const b of blocks.filter(x => x.source.type === 'album')) {

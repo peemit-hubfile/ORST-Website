@@ -4,6 +4,7 @@
   "title": "ติดตามสถานะคำขอรับบริการ",
   "navKey": "services",
   "description": "ตรวจสอบความคืบหน้าของคำขอรับบริการที่ยื่นต่อสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -24,37 +25,48 @@
       ]
     },
     {
-      "type": "notice",
-      "id": "pending",
-      "tone": "info",
-      "title": "ระบบติดตามสถานะออนไลน์อยู่ระหว่างพัฒนา",
-      "body": "ระหว่างนี้สอบถามความคืบหน้าของคำขอได้ทางอีเมล saraban@orst.go.th หรือโทรศัพท์ 02 141 1717 (สำนักงานเลขานุการกรม)"
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "บริการที่เกี่ยวข้อง",
+      "type": "feature-list",
+      "id": "ask",
+      "layout": "cards",
+      "heading": "สอบถามความคืบหน้าของคำขอ",
+      "lead": "ระบบติดตามสถานะออนไลน์อยู่ระหว่างพัฒนา ระหว่างนี้สอบถามได้ทางอีเมล โทรศัพท์ หรือติดต่อสำนักงานด้วยตนเอง",
+      "image": "assets/images/orst/services-hero.jpg",
+      "imagePosition": "center 40%",
       "items": [
         {
-          "title": "งานบริการ (E-Service)",
-          "href": "e-services.html",
-          "icon": "i-form"
+          "icon": "i-mail",
+          "title": "สอบถามทางอีเมล",
+          "body": "ระบุชื่อผู้ยื่นคำขอ ประเภทบริการ และวันที่ยื่นคำขอ เพื่อให้ตรวจสอบได้รวดเร็ว",
+          "links": [
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
         },
         {
-          "title": "ดาวน์โหลดแบบฟอร์ม",
-          "href": "download-forms.html",
-          "icon": "i-download"
+          "icon": "i-phone-call",
+          "title": "สอบถามทางโทรศัพท์",
+          "body": "สำนักงานเลขานุการกรม สำนักงานราชบัณฑิตยสภา",
+          "links": [
+            {
+              "label": "0 2141 1717",
+              "href": "tel:021411717"
+            }
+          ]
         },
         {
-          "title": "คำแนะนำการใช้บริการออนไลน์",
-          "href": "e-service-guide.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "ติดต่อสำนักงาน",
-          "href": "contact.html",
-          "icon": "i-phone-call"
+          "icon": "i-pin",
+          "title": "ติดต่อด้วยตนเอง",
+          "body": "ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ (อาคารซี) ถนนแจ้งวัฒนะ กรุงเทพมหานคร",
+          "links": [
+            {
+              "label": "แผนที่และการเดินทาง",
+              "href": "contact.html#map",
+              "kind": "ที่ตั้งสำนักงาน",
+              "icon": "i-map"
+            }
+          ]
         }
       ]
     }

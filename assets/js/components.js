@@ -192,10 +192,10 @@ const I18N = (() => {
   /** โหลด JSON ตามภาษา: ภาษาอังกฤษลอง content/.../en/<file> ก่อน ไม่มีค่อยใช้ไฟล์ไทย — คืน { data, translated } */
   async function fetchJSON(path, opts = { cache: 'no-cache' }) {
     if (ORST_LANG === 'en') {
-      // content/pages/<slug>.json -> content/pages/en/<slug>.json · content/news/<f>.json -> content/en/news/<f>.json
+      // content/pages/<slug>.json -> content/pages/en/<slug>.json · content/{news,people}/<f>.json -> content/en/{news,people}/<f>.json
       // content/<file>.json -> content/en/<file>.json
       const enPath = path
-        .replace(/(^|\/)content\/news\/([^/]+\.json)$/, '$1content/en/news/$2')
+        .replace(/(^|\/)content\/(news|people)\/([^/]+\.json)$/, '$1content/en/$2/$3')
         .replace(/(^|\/)(content\/pages|content)\/(?!en\/)([^/]+\.json)$/, '$1$2/en/$3');
       if (enPath !== path) {
         try {
@@ -742,6 +742,8 @@ function renderHeader() {
 }
 
 // function renderFooter() {
+  // หัวคอลัมน์: เส้นทองสั้น + ชื่อไทย + ชื่ออังกฤษ
+  const colHead = (th, en) => `<h3 class="orst-footer-head"><span>${th}</span><small lang="en">${en}</small></h3>`;
 //   return `
 //     <footer class="footer" id="footer">
 //       <div class="container footer-grid">
@@ -904,12 +906,25 @@ document.addEventListener('orst:content-rendered', e => {
 });
 
 function renderFooter() {
-  // หัวคอลัมน์: เส้นทองสั้น + ชื่อไทย + ชื่ออังกฤษ
-  const colHead = (th, en) => `<h3 class="orst-footer-head"><span>${th}</span><small lang="en">${en}</small></h3>`;
-  const links = items => items.map(([text, url]) => `<li><a href="${url}"${extAttrs(url)}>${text}${extMark(url)}</a></li>`).join('');
+  // footer แสดงเฉพาะลิงก์ภายในเว็บไซต์ (ลิงก์ออกนอกเว็บตัดออก — ผู้ใช้สั่ง)
+  const links = items => items.filter(([, url]) => url && !isExtUrl(url)).map(([text, url]) => `<li><a href="${url}">${text}</a></li>`).join('');
+  // เมนูหลัก: หมวดที่ไม่มีหน้าของตัวเอง ใช้หน้าภายในหน้าแรกของเมนูย่อย
+  const firstInternal = key => (megaMenuData[key]?.groups || []).flatMap(g => g.links || []).map(l => l[1]).find(u => u && !isExtUrl(u));
   const webmaster = WEBMASTER_EMAIL
-    ? [`อีเมลผู้ดูแลเว็บไซต์ (Webmaster)`, `mailto:${WEBMASTER_EMAIL}`]
-    : ['อีเมลผู้ดูแลเว็บไซต์ (Webmaster)', `${basePath}contact.html#message-form`];
+    ? ['อีเมลผู้ดูแลเว็บไซต์', `mailto:${WEBMASTER_EMAIL}`]
+    : ['อีเมลผู้ดูแลเว็บไซต์', `${basePath}contact.html#message-form`];
+  // ข้อมูลเว็บไซต์และนโยบาย: คอลัมน์ที่ 4 ของแถวบน (ผู้ใช้: เอากลับขึ้นไปไว้ที่เดิม)
+  const policies = [
+    webmaster,
+    ['ผังเว็บไซต์', `${basePath}sitemap.html`],
+    ['เว็บลิงก์หน่วยงานที่เกี่ยวข้อง', `${basePath}related-links.html`],
+    ['การปฏิเสธความรับผิด', `${basePath}disclaimer.html`],
+    ['นโยบายเว็บไซต์', `${basePath}website-policy.html`],
+    ['นโยบายคุ้มครองข้อมูลส่วนบุคคล', `${basePath}privacy-policy.html`],
+    ['นโยบายคุกกี้', `${basePath}cookie-policy.html`],
+    ['นโยบายความมั่นคงปลอดภัยเว็บไซต์', `${basePath}security-policy.html`],
+    ['การเข้าถึงเว็บไซต์', `${basePath}accessibility.html`],
+  ];
 
   return `
     <footer class="footer orst-footer" id="footer">
@@ -947,38 +962,29 @@ function renderFooter() {
 
           <nav class="orst-footer-col orst-footer-col--menu" aria-label="เมนูหลักในรูปแบบข้อความ">
             ${colHead('เมนูหลัก', 'Text Menu')}
-            <ul>${links(navItems.map(([key, label, href]) => [label, href || megaMenuData[key]?.groups[0]?.links[0]?.[1]]).filter(([, href]) => href))}</ul>
+            <ul>${links(navItems.map(([key, label, href]) => [label, href || firstInternal(key)]))}</ul>
           </nav>
 
-          <nav class="orst-footer-col" aria-label="ข้อมูลเว็บไซต์และนโยบาย">
-            ${colHead('ข้อมูลเว็บไซต์และนโยบาย', 'Website &amp; Policies')}
-            <ul>${links([
-              webmaster,
-              ['ผังเว็บไซต์ (Sitemap)', `${basePath}sitemap.html`],
-              ['เว็บลิงก์หน่วยงานที่เกี่ยวข้อง', `${basePath}related-links.html`],
-              ['การปฏิเสธความรับผิด (Disclaimer)', `${basePath}disclaimer.html`],
-              ['นโยบายเว็บไซต์ (Website Policy)', `${basePath}website-policy.html`],
-              ['นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)', `${basePath}privacy-policy.html`],
-              ['นโยบายคุกกี้ (Cookies Policy)', `${basePath}cookie-policy.html`],
-              ['นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์ (Website Security Policy)', `${basePath}security-policy.html`],
-              ['การเข้าถึงเว็บไซต์ (Web Accessibility)', `${basePath}accessibility.html`],
-            ])}</ul>
+          <nav class="orst-footer-col orst-footer-col--policies" aria-label="ข้อมูลเว็บไซต์และนโยบาย">
+            ${colHead('ข้อมูลเว็บไซต์และนโยบาย', 'Website Info')}
+            <ul>${links(policies)}</ul>
           </nav>
         </div>
 
         <div class="orst-footer-bottom">
+          <div class="orst-footer-legal">
           <span class="orst-footer-copy">${ORST_LANG === 'en' ? '© 2026' : 'สงวนลิขสิทธิ์ © พ.ศ. 2569'} สำนักงานราชบัณฑิตยสภา${ORST_LANG === 'en' ? ' · สงวนลิขสิทธิ์' : ''}</span>
           <span class="orst-footer-meta">
             <span>วันที่ปรับปรุงข้อมูลล่าสุด <time data-footer-updated>${footerDate(SITE_UPDATED)}</time></span>
             <span class="orst-footer-visitors" aria-label="จำนวนผู้เข้าชมเว็บไซต์">จำนวนผู้เข้าชมเว็บไซต์ · วันนี้ <b data-visitor-today>–</b> · สถิติรวม <b data-visitor-total>–</b></span>
           </span>
-          <button class="orst-footer-totop" type="button" data-scroll-top>ขึ้นบนสุด ${icon('i-arrow')}</button>
+          </div>
         </div>
 
       </div>
     </footer>
 
-    <button class="access-float" type="button" data-open-access>${icon('i-access')} ช่วยการเข้าถึง</button>
+    ${renderA11y()}
 
     ${renderChat()}
 
@@ -999,24 +1005,78 @@ function renderFooter() {
       </div>
     </div>
 
-    <div class="modal" id="access-modal" hidden role="dialog" aria-modal="true" aria-labelledby="access-title">
-      <div class="modal-backdrop" data-close-modal></div>
-      <div class="modal-card">
-        <div class="modal-header">
-          <h2 id="access-title">เครื่องมือช่วยการเข้าถึง</h2>
-          <button class="modal-close" type="button" data-close-modal aria-label="ปิด">×</button>
-        </div>
-        <div class="modal-body">
-          <div class="tool-grid">
-            <button type="button" data-font="plus">ก+ เพิ่มตัวอักษร</button>
-            <button type="button" data-font="minus">ก- ลดตัวอักษร</button>
-            <button type="button" data-font="reset">ก ขนาดปกติ</button>
-            <button type="button" data-contrast>สีตัดกันสูง</button>
-            <button type="button" data-readable>โหมดอ่านง่าย</button>
-            <button type="button" data-motion>หยุดเคลื่อนไหว</button>
+  `;
+}
+
+// ---------------------------------------------------------------------------
+// ช่วยการเข้าถึง (ทุกหน้า) — ปุ่มกลมมุมขวาล่าง + แผงตั้งค่าแบบป๊อปโอเวอร์ (มือถือ = แผ่นเลื่อนขึ้นจากล่าง)
+//   ค่าที่ตั้งจำไว้ใน localStorage ของเครื่องผู้ใช้ · ปุ่ม "ขึ้นด้านบน" มีวงแหวนบอกระยะที่อ่านไปแล้ว
+//   เปิดแผงจากที่อื่นได้ด้วยปุ่มที่มี data-open-access
+// ---------------------------------------------------------------------------
+const A11Y_GLYPH = `<svg class="a11y-glyph" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.4" r="2.2"></circle><path d="M4.5 8.4c2.5.7 5 1 7.5 1s5-.3 7.5-1M12 9.4v5m0 0-3.2 6.4M12 14.4l3.2 6.4"></path></svg>`;
+const A11Y_TOOLS = [
+  // [key, คลาสบน body, ชื่อ, ไอคอน]
+  ['contrast', 'high-contrast', 'คอนทราสต์สูง', '<circle cx="12" cy="12" r="8.5"></circle><path class="is-fill" d="M12 3.5a8.5 8.5 0 0 1 0 17Z"></path>'],
+  ['readable', 'readable-mode', 'โหมดอ่านง่าย', '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path>'],
+  ['links', 'access-link-mode', 'เน้นลิงก์', '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path>'],
+  ['headings', 'access-heading-mode', 'เน้นหัวข้อ', '<path d="M6 5v14M16 5v14M6 12h10"></path><path d="M19 10l2-1v10"></path>'],
+  ['spacing', 'access-spacing-mode', 'ระยะบรรทัดกว้าง', '<path d="M11 6h10M11 12h10M11 18h10"></path><path d="M5 4v16M3 6.5 5 4l2 2.5M3 17.5 5 20l2-2.5"></path>'],
+  ['motion', 'no-motion', 'ลดการเคลื่อนไหว', '<circle cx="12" cy="12" r="8.5"></circle><path d="M10 9v6M14 9v6"></path>'],
+  ['cursor', 'access-cursor-mode', 'เคอร์เซอร์ใหญ่', '<path d="M6 3.5 19 10l-5.8 1.7L11 18Z"></path><path d="m13.5 12 4.5 4.5"></path>'],
+  ['reader', '', 'อ่านออกเสียง', '<path d="M4 9.5v5h3.5L13 19V5L7.5 9.5Z"></path><path d="M16.5 9a4.5 4.5 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"></path>'],
+];
+const A11Y_FONT = { min: -1, max: 3, step: 0.1 };   // ระดับ -1..3 = 90% .. 130%
+
+function renderA11y() {
+  const tiles = A11Y_TOOLS.map(([key, , label, svg], i) => `
+          <button class="a11y-tile" type="button" aria-pressed="false" data-a11y-tool="${key}" style="--i:${i}">
+            <span class="a11y-tile-ic"><svg viewBox="0 0 24 24" aria-hidden="true">${svg}</svg>${key === 'reader' ? '<span class="a11y-eq" aria-hidden="true"><i></i><i></i><i></i></span>' : ''}</span>
+            <span class="a11y-tile-label">${label}</span>
+            <span class="a11y-tile-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span>
+          </button>`).join('');
+  const dots = Array.from({ length: A11Y_FONT.max - A11Y_FONT.min + 1 }, () => '<i></i>').join('');
+  return `
+    <div class="a11y" data-a11y>
+      <div class="a11y-scrim" data-a11y-close aria-hidden="true"></div>
+      <section class="a11y-panel" id="a11y-panel" role="dialog" aria-labelledby="a11y-title" inert>
+        <header class="a11y-head">
+          <span class="a11y-head-ic">${A11Y_GLYPH}</span>
+          <span class="a11y-head-text">
+            <strong id="a11y-title">ช่วยการเข้าถึง</strong>
+            <small>ปรับการแสดงผลให้อ่านสบายตา</small>
+          </span>
+          <button class="a11y-x" type="button" data-a11y-close aria-label="ปิดเครื่องมือช่วยการเข้าถึง">${icon('i-x')}</button>
+        </header>
+        <div class="a11y-body">
+          <div class="a11y-font" style="--i:0">
+            <span class="a11y-font-label">ขนาดตัวอักษร</span>
+            <div class="a11y-stepper">
+              <button type="button" data-a11y-font="-1" aria-label="ลดขนาดตัวอักษร"><span aria-hidden="true">ก</span><svg class="a11y-step-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"></path></svg></button>
+              <span class="a11y-font-meter">
+                <output data-a11y-font-val aria-live="polite">100%</output>
+                <span class="a11y-dots" aria-hidden="true">${dots}</span>
+              </span>
+              <button type="button" data-a11y-font="1" aria-label="เพิ่มขนาดตัวอักษร"><span aria-hidden="true">ก</span><svg class="a11y-step-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12M12 6v12"></path></svg></button>
+            </div>
+          </div>
+          <div class="a11y-grid">${tiles}
           </div>
         </div>
-      </div>
+        <footer class="a11y-foot">
+          <button class="a11y-reset" type="button" data-a11y-reset><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"></path><path d="M3.5 4v5h5"></path></svg>คืนค่าเริ่มต้น</button>
+          <button class="a11y-done" type="button" data-a11y-close>เสร็จสิ้น</button>
+        </footer>
+      </section>
+      <button class="a11y-top" type="button" data-a11y-top aria-label="กลับขึ้นด้านบน" tabindex="-1">
+        <svg class="a11y-top-ring" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" pathLength="100"></circle></svg>
+        <svg class="a11y-top-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg>
+      </button>
+      <button class="a11y-fab" type="button" aria-expanded="false" aria-controls="a11y-panel" aria-label="ช่วยการเข้าถึง" data-a11y-toggle>
+        <span class="a11y-fab-ic">${A11Y_GLYPH}</span>
+        <span class="a11y-fab-x">${icon('i-x')}</span>
+        <span class="a11y-badge" data-a11y-badge aria-hidden="true"></span>
+        <span class="a11y-fab-label" aria-hidden="true">ช่วยการเข้าถึง</span>
+      </button>
     </div>
   `;
 }
@@ -1177,20 +1237,12 @@ function initDrawer() {
 
 function initSharedModals() {
   const searchModal = document.querySelector('#search-modal');
-  const accessModal = document.querySelector('#access-modal');
 
   document.querySelectorAll('[data-open-search]').forEach(btn => {
     btn.addEventListener('click', () => {
       if (!searchModal) return;
       searchModal.hidden = false;
       setTimeout(() => document.querySelector('#shared-search-input')?.focus(), 40);
-    });
-  });
-
-  document.querySelectorAll('[data-open-access]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (!accessModal) return;
-      accessModal.hidden = false;
     });
   });
 
@@ -1232,31 +1284,160 @@ function initSharedSearch() {
   });
 }
 
-let componentFontStep = 0;
-function initSharedAccessibility() {
-  // ขนาดฐานอ่านจาก CSS ตอนเริ่ม (ตอนนี้ 17px) — ถ้าเปลี่ยนฐานใน CSS ปุ่ม ก-/ก/ก+ จะตามเอง
-  const baseFontPx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 17;
-  document.querySelectorAll('[data-font]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const mode = btn.dataset.font;
-      if (mode === 'plus') componentFontStep = Math.min(componentFontStep + 1, 3);
-      if (mode === 'minus') componentFontStep = Math.max(componentFontStep - 1, -2);
-      if (mode === 'reset') componentFontStep = 0;
-      if (componentFontStep === 0) document.documentElement.style.removeProperty('font-size');
-      else document.documentElement.style.fontSize = `${baseFontPx + componentFontStep}px`;
+/* ช่วยการเข้าถึง — ผูกกับ renderA11y()
+   - คลาสบน body เหมือนเดิม (high-contrast, readable-mode, no-motion, access-*-mode) CSS เดิมใช้ต่อได้
+   - ขนาดตัวอักษร: คูณขนาดฐานของ <html> (ซึ่งโตตามจอ) ด้วย 90–130% แล้วคำนวณใหม่เมื่อย่อ/ขยายหน้าต่าง
+   - จำค่าไว้ใน localStorage (อ่าน/เขียนไม่ได้ก็ใช้งานได้ตามปกติ แค่ไม่จำ) — ยกเว้นอ่านออกเสียง */
+const A11Y_KEY = 'orst-a11y';
+function initA11y() {
+  const root = document.querySelector('[data-a11y]');
+  if (!root) return;
+  const panel = root.querySelector('.a11y-panel');
+  const fab = root.querySelector('[data-a11y-toggle]');
+  const badge = root.querySelector('[data-a11y-badge]');
+  const fontVal = root.querySelector('[data-a11y-font-val]');
+  const dots = [...root.querySelectorAll('.a11y-dots i')];
+  const tiles = new Map([...root.querySelectorAll('[data-a11y-tool]')].map(t => [t.dataset.a11yTool, t]));
+  const html = document.documentElement;
+  const reduced = () => document.body.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const replay = (el, cls) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); };
+
+  const state = { font: 0, on: [] };
+  try { Object.assign(state, JSON.parse(localStorage.getItem(A11Y_KEY) || '{}')); } catch { /* ใช้ค่าเริ่มต้น */ }
+  state.on = (Array.isArray(state.on) ? state.on : []).filter(k => tiles.has(k) && k !== 'reader');
+  state.font = Math.min(A11Y_FONT.max, Math.max(A11Y_FONT.min, Math.round(Number(state.font) || 0)));
+  const save = () => { try { localStorage.setItem(A11Y_KEY, JSON.stringify({ font: state.font, on: state.on })); } catch { /* ไม่จำก็ได้ */ } };
+
+  // ---- ขนาดตัวอักษร ----
+  const applyFont = () => {
+    html.style.removeProperty('font-size');
+    const scale = 1 + state.font * A11Y_FONT.step;
+    if (state.font) html.style.fontSize = `${(parseFloat(getComputedStyle(html).fontSize) * scale).toFixed(2)}px`;
+    fontVal.textContent = `${Math.round(scale * 100)}%`;
+    dots.forEach((d, i) => d.classList.toggle('is-on', i <= state.font - A11Y_FONT.min));
+    root.querySelector('[data-a11y-font="-1"]').disabled = state.font <= A11Y_FONT.min;
+    root.querySelector('[data-a11y-font="1"]').disabled = state.font >= A11Y_FONT.max;
+  };
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    if (!state.font) return;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(applyFont, 150);
+  });
+
+  // ---- อ่านออกเสียง: ข้อความที่เลือกไว้ หรือเนื้อหาหลักของหน้า แบ่งเป็นช่วงสั้น ๆ (Chrome ตัดเสียงที่ยาวเกินทิ้ง) ----
+  let speaking = false;
+  const stopSpeak = () => { speaking = false; if ('speechSynthesis' in window) speechSynthesis.cancel(); };
+  const speak = () => {
+    if (!('speechSynthesis' in window)) return false;
+    const picked = String(window.getSelection?.() || '').trim();
+    const main = document.querySelector('#main-content, main') || document.body;
+    const text = (picked || main.innerText || '').replace(/\s+/g, ' ').trim();
+    if (!text) return false;
+    const chunks = text.match(/.{1,220}(?:\s|$)/g) || [text];
+    speechSynthesis.cancel();
+    speaking = true;
+    chunks.forEach((c, i) => {
+      const u = new SpeechSynthesisUtterance(c);
+      u.lang = ORST_LANG === 'en' ? 'en-US' : 'th-TH';
+      if (i === chunks.length - 1) u.onend = () => { if (speaking) setTool('reader', false); };
+      speechSynthesis.speak(u);
     });
+    return true;
+  };
+
+  // ---- เปิด/ปิดเครื่องมือ ----
+  const bodyClass = Object.fromEntries(A11Y_TOOLS.map(([k, c]) => [k, c]));
+  const syncBadge = () => {
+    const n = state.on.length + (state.font ? 1 : 0) + (speaking ? 1 : 0);
+    const was = badge.textContent;
+    badge.textContent = n ? String(n) : '';
+    root.classList.toggle('has-active', n > 0);
+    if (n && badge.textContent !== was && !reduced()) replay(badge, 'is-pop');
+  };
+  function setTool(key, on, { animate = false } = {}) {
+    const tile = tiles.get(key);
+    if (key === 'reader') {
+      if (on) on = speak(); else stopSpeak();
+    } else {
+      document.body.classList.toggle(bodyClass[key], on);
+      state.on = on ? [...new Set([...state.on, key])] : state.on.filter(k => k !== key);
+    }
+    tile.setAttribute('aria-pressed', String(on));
+    if (animate && !reduced()) replay(tile, 'is-pop');
+    syncBadge();
+  }
+
+  // ค่าที่จำไว้จากครั้งก่อน
+  state.on.forEach(k => setTool(k, true));
+  applyFont();
+  syncBadge();
+
+  tiles.forEach((tile, key) => tile.addEventListener('click', () => {
+    setTool(key, tile.getAttribute('aria-pressed') !== 'true', { animate: true });
+    save();
+  }));
+  root.querySelectorAll('[data-a11y-font]').forEach(btn => btn.addEventListener('click', () => {
+    state.font = Math.min(A11Y_FONT.max, Math.max(A11Y_FONT.min, state.font + Number(btn.dataset.a11yFont)));
+    applyFont();
+    syncBadge();
+    save();
+    if (!reduced()) replay(fontVal, 'is-bump');
+  }));
+  root.querySelector('[data-a11y-reset]').addEventListener('click', e => {
+    tiles.forEach((_, k) => setTool(k, false));
+    state.font = 0;
+    applyFont();
+    syncBadge();
+    save();
+    if (!reduced()) replay(e.currentTarget, 'is-spin');
   });
 
-  document.querySelectorAll('[data-contrast]').forEach(btn => {
-    btn.addEventListener('click', () => document.body.classList.toggle('high-contrast'));
+  // ---- แผง ----
+  const isOpen = () => root.classList.contains('is-open');
+  const setOpen = (open, { focus = true } = {}) => {
+    if (open === isOpen()) return;
+    root.classList.toggle('is-open', open);
+    panel.inert = !open;
+    fab.setAttribute('aria-expanded', String(open));
+    if (open) {
+      // ปิดการ์ดแชทถ้าเปิดอยู่ — ไม่ให้แผงซ้อนกัน
+      document.querySelector('.chat-widget.is-open [data-chat-close]')?.click();
+      if (focus) setTimeout(() => root.querySelector('[data-a11y-font="1"]:not(:disabled), [data-a11y-font]:not(:disabled)')?.focus(), 60);
+    } else if (focus) fab.focus();
+  };
+  fab.addEventListener('click', () => setOpen(!isOpen()));
+  root.querySelectorAll('[data-a11y-close]').forEach(b => b.addEventListener('click', () => setOpen(false)));
+  document.querySelectorAll('[data-open-access]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); setOpen(true); }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen()) setOpen(false); });
+  document.addEventListener('click', e => {
+    if (isOpen() && !root.contains(e.target) && !e.target.closest('[data-open-access]')) setOpen(false, { focus: false });
   });
 
-  document.querySelectorAll('[data-readable]').forEach(btn => {
-    btn.addEventListener('click', () => document.body.classList.toggle('readable-mode'));
-  });
+  // แนะนำปุ่มครั้งแรกที่เข้าเว็บ (ครั้งเดียวต่อแท็บ): ป้ายชื่อเลื่อนออกมา + คลื่นวงกลม
+  try {
+    if (!sessionStorage.getItem('orst-a11y-hello')) {
+      sessionStorage.setItem('orst-a11y-hello', '1');
+      root.classList.add('is-hello');
+      setTimeout(() => root.classList.remove('is-hello'), 4200);
+    }
+  } catch { /* ไม่แนะนำก็ได้ */ }
 
-  document.querySelectorAll('[data-motion]').forEach(btn => {
-    btn.addEventListener('click', () => document.body.classList.toggle('no-motion'));
+  // ---- ปุ่มขึ้นด้านบน + วงแหวนบอกระยะที่อ่านไปแล้ว ----
+  const top = root.querySelector('[data-a11y-top]');
+  let ticking = false;
+  const onScroll = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const show = scrollY > Math.min(600, innerHeight * 0.8);
+    top.classList.toggle('is-shown', show);
+    top.tabIndex = show ? 0 : -1;
+    top.style.setProperty('--progress', max > 0 ? Math.min(1, scrollY / max).toFixed(3) : '0');
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  top.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: reduced() ? 'auto' : 'smooth' });
   });
 }
 
@@ -1411,7 +1592,8 @@ function initDocLists() {
     if (list.dataset.docBound === '1') return;
     list.dataset.docBound = '1';
 
-    const items = [...list.querySelectorAll('.doc-item')];
+    // รายการของแต่ละชนิด: document-list = .doc-item · link-list ใส่ data-doc-item=".block-link-item"
+    const items = [...list.querySelectorAll(list.dataset.docItem || '.doc-item')];
     const baseSize = Number(list.dataset.pageSize) || 20;
     const sizes = [baseSize, baseSize * 2, baseSize * 4];
     let pageSize = baseSize;
@@ -1426,7 +1608,7 @@ function initDocLists() {
     const empty = list.querySelector('[data-doc-empty]');
     const pager = list.querySelector('[data-doc-pager]');
     const views = [...list.querySelectorAll('[data-doc-view]')];
-    const text = new Map(items.map(it => [it, norm(it.querySelector('.doc-title')?.textContent)]));
+    const text = new Map(items.map(it => [it, norm((it.querySelector('.doc-title') || it).textContent)]));
     let page = 1;
 
     // แถบค้นหามีประโยชน์เมื่อรายการยาวพอ (รายการข่าวแสดงเสมอ เพราะมีปุ่มสลับมุมมอง)
@@ -1612,6 +1794,567 @@ function initLightbox() {
       box.show(a);
     });
   });
+}
+
+/* เส้นเวลา (block timeline) — ภาพเคลื่อนไหวตอนเลื่อน
+   - รายการค่อย ๆ ปรากฏเมื่อเลื่อนมาถึง (.is-in) การ์ดเข้าจากฝั่งตัวเอง ภาพเข้าจากอีกฝั่ง จุดบนเส้นเปลี่ยนเป็นสีทอง
+   - เส้นกลางเติมสีตามตำแหน่งที่อ่าน (--tl-fill 0–1)
+   - ลดการเคลื่อนไหว (prefers-reduced-motion / ปุ่มหยุดภาพเคลื่อนไหว) หรือไม่มี IntersectionObserver = แสดงครบทันที */
+function initTimeline() {
+  const lists = [...document.querySelectorAll('[data-tl]')].filter(l => l.dataset.tlBound !== '1');
+  if (!lists.length) return;
+  const still = document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  lists.forEach(list => {
+    list.dataset.tlBound = '1';
+    const items = [...list.querySelectorAll('[data-tl-item]')];
+    if (still || !('IntersectionObserver' in window)) { items.forEach(it => it.classList.add('is-in')); return; }
+    list.classList.add('tl-anim');
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -18% 0px', threshold: 0.12 });
+    items.forEach(it => io.observe(it));
+    // เส้นเติมสี: จากหัวรายการแรกจนถึงจุดกึ่งกลางจอ
+    let ticking = false;
+    const fill = () => {
+      ticking = false;
+      const r = list.getBoundingClientRect();
+      const p = (window.innerHeight * 0.55 - r.top) / Math.max(r.height, 1);
+      list.style.setProperty('--tl-fill', Math.min(Math.max(p, 0), 1).toFixed(3));
+    };
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(fill); } };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    fill();
+  });
+}
+
+/* [data-reveal] — ปรากฏเมื่อเลื่อนมาถึง (เช่น แผนผัง org-chart ทีละชั้น)
+   ใส่ .reveal-ready ก่อน (CSS ซ่อนเฉพาะเมื่อมีคลาสนี้ — ไม่มี JS ก็เห็นครบ) แล้วใส่ .is-in เมื่อเข้าจอ */
+/* image-band แบบ cover (blocks.js imageBand):
+   - ภาพเลื่อนช้ากว่าหน้า (parallax) — ตั้ง --py ที่ .ib-media
+   - ข้อความเด่น [data-fill] ค่อย ๆ เติมสีตามการเลื่อน (--fill 0..1) เต็มแล้ววลีสำคัญสว่างเป็นสีทอง (.is-lit)
+   ผู้ใช้ตั้งลดการเคลื่อนไหว: ไม่ตั้งค่า = CSS แสดงข้อความครบ (--fill ค่าเริ่มต้น 1) และไม่มี parallax */
+function initImageBands() {
+  const bands = [...document.querySelectorAll('.block-image-band.is-img-cover')].filter(b => b.dataset.ibBound !== '1');
+  const fills = [...document.querySelectorAll('[data-fill]')].filter(f => f.dataset.ibBound !== '1');
+  if (!bands.length && !fills.length) return;
+  [...bands, ...fills].forEach(el => { el.dataset.ibBound = '1'; });
+  const still = () => document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const vh = window.innerHeight;
+    const off = still();
+    bands.forEach(b => {
+      const media = b.querySelector('.ib-media');
+      if (!media) return;
+      if (off) { media.style.removeProperty('--py'); return; }
+      const r = b.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const p = (vh - r.top) / (vh + r.height);          // 0 = เพิ่งโผล่ขอบล่างจอ · 1 = พ้นขอบบนจอ
+      media.style.setProperty('--py', `${((p - 0.5) * r.height * 0.18).toFixed(1)}px`);
+    });
+    fills.forEach(f => {
+      const st = f.closest('.ib-statement');
+      if (off) { f.style.removeProperty('--fill'); st?.classList.add('is-lit'); return; }
+      const r = f.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, (vh * 0.92 - r.top) / (vh * 0.42)));
+      f.style.setProperty('--fill', p.toFixed(3));
+      st?.classList.toggle('is-lit', p >= 0.97);
+    });
+  };
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+}
+
+/* annotated-figure (blocks.js annotatedFigure): ชี้/โฟกัสที่หมุดหรือรายการ → ไฮไลต์คู่กัน
+   กดหมุดบนจอแคบ (ภาพอยู่เหนือรายการ) → เลื่อนไปที่รายการนั้น */
+function initAnnotated() {
+  document.querySelectorAll('[data-af-root]').forEach(root => {
+    if (root.dataset.afBound === '1') return;
+    root.dataset.afBound = '1';
+    const items = [...root.querySelectorAll('[data-af]')];
+    const set = idx => items.forEach(el => el.classList.toggle('is-active', idx !== null && el.dataset.af === idx));
+    items.forEach(el => {
+      el.addEventListener('pointerenter', () => set(el.dataset.af));
+      el.addEventListener('focus', () => set(el.dataset.af));
+    });
+    root.addEventListener('pointerleave', () => set(null));
+    root.addEventListener('focusout', e => { if (!root.contains(e.relatedTarget)) set(null); });
+    root.querySelectorAll('.af-pin').forEach(pin => pin.addEventListener('click', () => {
+      set(pin.dataset.af);
+      const part = root.querySelector(`.af-part[data-af="${pin.dataset.af}"]`);
+      if (!part || !window.matchMedia('(max-width: 899px)').matches) return;
+      const still = document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      part.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'center' });
+    }));
+  });
+}
+
+/* stat-row countUp: ตัวเลข [data-count] นับขึ้นจาก 0 เมื่อเลื่อนถึง (ทศนิยมคงจำนวนหลักเดิม)
+   ลดการเคลื่อนไหว / ไม่มี IntersectionObserver = แสดงค่าจริงทันที */
+/* card-grid layout "guide": ปุ่มสลับมุมมอง ตาราง/รายการ — จำค่าที่เลือกไว้ (localStorage 'orst-guide-view') */
+function initGuideViews() {
+  document.querySelectorAll('[data-guide]').forEach(root => {
+    if (root.dataset.guideBound === '1') return;
+    root.dataset.guideBound = '1';
+    const btns = [...root.querySelectorAll('[data-guide-view]')];
+    const set = v => {
+      root.dataset.view = v;
+      btns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.guideView === v)));
+    };
+    let saved = null;
+    try { saved = localStorage.getItem('orst-guide-view'); } catch { /* ไม่มีพื้นที่จัดเก็บ */ }
+    if (saved === 'list' || saved === 'grid') set(saved);
+    btns.forEach(b => b.addEventListener('click', () => {
+      set(b.dataset.guideView);
+      try { localStorage.setItem('orst-guide-view', b.dataset.guideView); } catch { /* ไม่เป็นไร */ }
+    }));
+  });
+}
+
+/* page-index (แผนผังเว็บไซต์): ค้นหาหน้า (กรองทันทีที่พิมพ์ รองรับเลขไทย/อารบิก) + ปุ่มทางลัดไปหมวด */
+function initPageIndex() {
+  const norm = s => String(s || '').replace(/[๐-๙]/g, d => String(THAI_DIGITS.indexOf(d))).toLowerCase().replace(/\s+/g, ' ').trim();
+  document.querySelectorAll('[data-page-index]').forEach(root => {
+    if (root.dataset.pidxBound === '1') return;
+    root.dataset.pidxBound = '1';
+    const input = root.querySelector('[data-index-search]');
+    const empty = root.querySelector('[data-index-empty]');
+    const groups = [...root.querySelectorAll('.index-group')];
+    const secs = [...root.querySelectorAll('[data-index-sec]')].filter(el => !el.classList.contains('index-group'));
+    const items = groups.map(g => [...g.querySelectorAll('.index-item')].map(li => [li, norm(li.textContent)]));
+    // ชื่อกลุ่มย่อย + ชื่อหมวดใหญ่ ใช้ค้นหาได้ด้วย (พิมพ์ "ผู้บริหาร" แล้วเห็นทั้งกลุ่ม)
+    const heads = groups.map(g => norm([g.querySelector('.index-group-head, h4')?.textContent, g.closest('[data-index-sec]')?.dataset.indexSec].join(' ')));
+    input?.addEventListener('input', () => {
+      const q = norm(input.value);
+      let shown = 0;
+      groups.forEach((g, i) => {
+        const headHit = q && heads[i].includes(q);
+        let n = 0;
+        items[i].forEach(([li, t]) => { const ok = !q || headHit || t.includes(q); li.hidden = !ok; if (ok) n++; });
+        g.hidden = n === 0;
+        shown += n;
+      });
+      secs.forEach(sec => { sec.hidden = ![...sec.querySelectorAll('.index-group')].some(g => !g.hidden); });
+      if (empty) empty.hidden = shown > 0;
+    });
+    root.querySelectorAll('[data-index-jump]').forEach(btn => btn.addEventListener('click', () => {
+      if (input && input.value) { input.value = ''; input.dispatchEvent(new Event('input')); }
+      const target = [...secs, ...groups].find(g => g.dataset.indexSec === btn.dataset.indexJump);
+      if (!target) return;
+      const still = document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const top = target.getBoundingClientRect().top + window.scrollY - 120;
+      window.scrollTo({ top, behavior: still ? 'auto' : 'smooth' });
+      target.classList.remove('is-flash'); void target.offsetWidth; target.classList.add('is-flash');
+      target.querySelector('a')?.focus({ preventScroll: true });
+    }));
+  });
+}
+
+function initCopy() {
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    if (btn.dataset.copyBound === '1') return;
+    btn.dataset.copyBound = '1';
+    btn.addEventListener('click', async () => {
+      const label = btn.querySelector('[data-copy-label]');
+      const en = document.documentElement.lang === 'en';
+      // Clipboard API ก่อน · ถ้าไม่อนุญาต (บางเบราว์เซอร์/iframe) ใช้วิธีเลือกข้อความชั่วคราวแล้ว execCommand('copy')
+      const copyText = async text => {
+        try { await navigator.clipboard.writeText(text); return true; } catch { /* ใช้วิธีสำรอง */ }
+        const ta = document.createElement('textarea');
+        ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+        document.body.appendChild(ta); ta.select();
+        let ok = false; try { ok = document.execCommand('copy'); } catch { ok = false; }
+        ta.remove(); btn.focus({ preventScroll: true });
+        return ok;
+      };
+      try {
+        if (!(await copyText(btn.dataset.copy))) return;
+        btn.classList.add('is-copied');
+        if (label) label.textContent = en ? 'Copied' : 'คัดลอกแล้ว';
+        clearTimeout(btn._copyT);
+        btn._copyT = setTimeout(() => { btn.classList.remove('is-copied'); if (label) label.textContent = en ? 'Copy' : 'คัดลอก'; }, 2000);
+      } catch { /* เบราว์เซอร์ไม่อนุญาต — ผู้ใช้เลือกข้อความเองได้ */ }
+    });
+  });
+}
+
+function initCountUp() {
+  const els = [...document.querySelectorAll('[data-count]')].filter(el => el.dataset.countBound !== '1');
+  if (!els.length) return;
+  const still = document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still || !('IntersectionObserver' in window)) return;
+  const fmt = (n, dec) => n.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+  const run = el => {
+    const target = parseFloat(el.dataset.count);
+    const dec = (el.dataset.count.split('.')[1] || '').length;
+    const t0 = performance.now(), dur = 1600 + Math.min(target, 200) * 3;
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(target * e, dec);
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = fmt(target, dec);
+    };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { io.unobserve(e.target); run(e.target); }
+  }), { threshold: 0.6 });
+  els.forEach(el => {
+    el.dataset.countBound = '1';
+    el.textContent = fmt(0, (el.dataset.count.split('.')[1] || '').length);
+    io.observe(el);
+  });
+}
+
+/* =============================================================================
+   ปฏิทินกิจกรรมแบบ Google Calendar (blocks.js eventCalendar) — ข้อมูลจาก CMS ไม่ใช้ Google
+   มุมมอง: วัน · สัปดาห์ · เดือน · กำหนดการ — ปุ่มวันนี้ / ก่อนหน้า / ถัดไป · เลือกหน่วยงานที่แสดง
+   เดือน: กิจกรรมหลายวันเป็นแถบยาวต่อกัน เกิน 3 รายการ = "อีก N รายการ" · กดวันที่ = ไปมุมมองวัน
+   สัปดาห์/วัน: แถว "ทั้งวัน" + ตารางชั่วโมง (กิจกรรมที่มีเวลา start "YYYY-MM-DDTHH:MM") + เส้นเวลาปัจจุบัน
+   กดกิจกรรม = การ์ดรายละเอียด (Esc / คลิกนอก / ปุ่มปิด) · แป้นลัดแบบ Google: t d w m a, j/n ถัดไป, k/p ก่อนหน้า
+   จอแคบ: เริ่มที่มุมมองกำหนดการ · เดือนแสดงเป็นจุดสี กดวันเพื่อดูรายการ
+   ============================================================================= */
+function initCalendars() {
+  document.querySelectorAll('[data-gcal]').forEach(root => {
+    if (root.dataset.gcalBound === '1') return;
+    root.dataset.gcalBound = '1';
+    let data;
+    try { data = JSON.parse(root.querySelector('[data-gcal-data]')?.textContent || '{}'); } catch { return; }
+    calendarApp(root, data);
+  });
+}
+
+function calendarApp(root, data) {
+  const EN = ORST_LANG === 'en';
+  const LOCALE = EN ? 'en-GB' : 'th-TH';
+  const T = EN
+    ? { allDay: 'All day', more: n => `${n} more`, none: 'No events in this period', close: 'Close', unit: 'Unit', place: 'Location', details: 'Details', today: 'Today' }
+    : { allDay: 'ทั้งวัน', more: n => `อีก ${n} รายการ`, none: 'ไม่มีกิจกรรมในช่วงนี้', close: 'ปิด', unit: 'หน่วยงาน', place: 'สถานที่', details: 'ดูรายละเอียด', today: 'วันนี้' };
+  const body = root.querySelector('[data-gcal-body]');
+  const title = root.querySelector('[data-gcal-title]');
+  const pop = root.querySelector('[data-gcal-pop]');
+  const viewBtns = [...root.querySelectorAll('[data-gcal-view]')];
+  const narrow = () => window.matchMedia('(max-width: 719px)').matches;
+  const still = () => document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const escH = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  // ---- วันที่ ----
+  const DAY = 86400000;
+  const atMidnight = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+  const sameDay = (a, b) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  const weekStart = d => addDays(atMidnight(d), -((d.getDay() + 6) % 7));            // สัปดาห์เริ่มวันจันทร์
+  const parse = v => {
+    const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/);
+    return m ? { date: new Date(+m[1], +m[2] - 1, +m[3], m[4] ? +m[4] : 0, m[5] ? +m[5] : 0), timed: Boolean(m[4]) } : null;
+  };
+  const key = d => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+  const fmt = (d, o) => new Intl.DateTimeFormat(LOCALE, o).format(d);
+  const fmtTime = d => fmt(d, { hour: '2-digit', minute: '2-digit', hour12: false });
+
+  // ---- ข้อมูล ----
+  const events = (data.events || []).map((e, i) => {
+    const s = parse(e.start);
+    if (!s) return null;
+    const en = parse(e.end);
+    const allDay = !s.timed;
+    let end = en ? en.date : s.date;
+    if (allDay) end = atMidnight(end);
+    else if (!en) end = new Date(s.date.getTime() + 60 * 60000);                   // ไม่มีเวลาจบ = 1 ชั่วโมง
+    if (end < s.date) end = s.date;
+    return { ...e, i, s: s.date, e: end, allDay, d0: atMidnight(s.date), d1: atMidnight(end) };
+  }).filter(Boolean).sort((a, b) => a.s - b.s || (b.d1 - b.d0) - (a.d1 - a.d0));
+  const hidden = new Set();
+  const visible = () => events.filter(e => !hidden.has(e.unit));
+  const onDay = (list, d) => list.filter(e => e.d0 <= d && e.d1 >= d);
+
+  // ---- สถานะเริ่มต้น: วันนี้ — ถ้าเดือนนี้ไม่มีกิจกรรม ไปเดือนของกิจกรรมที่ใกล้วันนี้ที่สุด ----
+  const today = atMidnight(new Date());
+  let cursor = today;
+  if (events.length && !events.some(e => e.d0.getMonth() === today.getMonth() && e.d0.getFullYear() === today.getFullYear())) {
+    const next = events.find(e => e.d1 >= today);
+    cursor = atMidnight((next || events[events.length - 1]).s);
+  }
+  let view = narrow() ? 'schedule' : 'month';
+
+  // ---- ชิ้นส่วน HTML ----
+  const chip = (e, extra = '') => `<button type="button" class="gcal-ev${e.allDay ? ' is-allday' : ' is-timed'}${extra}" data-ev="${e.i}" style="--c:var(--cal-${e.color || 1})" title="${escH(e.title)}">${e.allDay ? '' : `<span class="gcal-ev-dot" aria-hidden="true"></span><span class="gcal-ev-time">${fmtTime(e.s)}</span>`}<span class="gcal-ev-title">${escH(e.title)}</span></button>`;
+  const weekdayNames = Array.from({ length: 7 }, (_, i) => fmt(addDays(new Date(2024, 0, 1), i), { weekday: 'short' }));   // 1 ม.ค. 2024 = วันจันทร์
+
+  // เรียงแถบกิจกรรมในช่วงวัน [from, from+n) เป็นชั้น (lane) ไม่ทับกัน
+  function lanes(list, from, n) {
+    const to = addDays(from, n - 1);
+    const segs = list.filter(e => e.allDay || e.d1 > e.d0 ? e.d0 <= to && e.d1 >= from : false)
+      .map(e => ({ e, c0: Math.max(0, Math.round((e.d0 - from) / DAY)), c1: Math.min(n - 1, Math.round((e.d1 - from) / DAY)) }));
+    const rows = [];
+    segs.forEach(sg => {
+      let r = rows.findIndex(row => row.every(o => sg.c1 < o.c0 || sg.c0 > o.c1));
+      if (r < 0) { rows.push([]); r = rows.length - 1; }
+      rows[r].push(sg); sg.lane = r;
+    });
+    return segs;
+  }
+
+  // ---- มุมมองเดือน ----
+  function renderMonth() {
+    const first = new Date(cursor.getFullYear(), cursor.getMonth(), 1);
+    const start = weekStart(first);
+    const last = new Date(cursor.getFullYear(), cursor.getMonth() + 1, 0);
+    const weeks = Math.ceil((Math.round((last - start) / DAY) + 1) / 7);
+    const list = visible();
+    const MAX = narrow() ? 0 : 3;
+    let html = `<div class="gcal-month" style="--weeks:${weeks}"><div class="gcal-dow">${weekdayNames.map(n => `<span>${n}</span>`).join('')}</div>`;
+    for (let w = 0; w < weeks; w++) {
+      const ws = addDays(start, w * 7);
+      const segs = lanes(list, ws, 7);
+      // กิจกรรมที่มีเวลา (วันเดียว) ต่อท้ายชั้นของวันนั้น
+      const timed = list.filter(e => !e.allDay && e.d0.getTime() === e.d1.getTime() && e.d0 >= ws && e.d0 <= addDays(ws, 6));
+      const used = Array.from({ length: 7 }, () => new Set());
+      segs.forEach(sg => { for (let c = sg.c0; c <= sg.c1; c++) used[c].add(sg.lane); });
+      timed.forEach(e => {
+        const c = Math.round((e.d0 - ws) / DAY);
+        let l = 0; while (used[c].has(l)) l++;
+        used[c].add(l);
+        segs.push({ e, c0: c, c1: c, lane: l });
+      });
+      const hiddenCount = Array(7).fill(0);
+      segs.forEach(sg => { if (sg.lane >= MAX) for (let c = sg.c0; c <= sg.c1; c++) hiddenCount[c]++; });
+      html += `<div class="gcal-week"><div class="gcal-cells">`;
+      for (let c = 0; c < 7; c++) {
+        const d = addDays(ws, c);
+        const out = d.getMonth() !== cursor.getMonth();
+        const n = onDay(list, d).length;
+        html += `<div class="gcal-cell${out ? ' is-out' : ''}${sameDay(d, today) ? ' is-today' : ''}${n ? ' has-ev' : ''}">
+          <button type="button" class="gcal-date" data-goto="${key(d)}" aria-label="${escH(fmt(d, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }))}${n ? ` · ${n}` : ''}">${d.getDate() === 1 && !narrow() ? escH(fmt(d, { day: 'numeric', month: 'short' })) : d.getDate()}</button>
+          ${narrow() && n ? `<span class="gcal-dots" aria-hidden="true">${onDay(list, d).slice(0, 3).map(e => `<i style="--c:var(--cal-${e.color})"></i>`).join('')}</span>` : ''}
+        </div>`;
+      }
+      html += `</div><div class="gcal-bars" style="--lanes:${Math.max(MAX, 1) + 1}">`;
+      segs.filter(sg => sg.lane < MAX).forEach(sg => {
+        const contL = sg.e.d0 < addDays(ws, sg.c0), contR = sg.e.d1 > addDays(ws, sg.c1);
+        html += `<div class="gcal-bar" style="grid-column:${sg.c0 + 1} / ${sg.c1 + 2};grid-row:${sg.lane + 1}">${chip(sg.e, `${contL ? ' cont-l' : ''}${contR ? ' cont-r' : ''}`)}</div>`;
+      });
+      hiddenCount.forEach((n, c) => { if (n) html += `<div class="gcal-bar" style="grid-column:${c + 1};grid-row:${MAX + 1}"><button type="button" class="gcal-more" data-more="${key(addDays(ws, c))}">${escH(T.more(n))}</button></div>`; });
+      html += `</div></div>`;
+    }
+    html += `</div>`;
+    if (narrow()) html += `<div class="gcal-daylist" data-daylist></div>`;
+    return html;
+  }
+
+  // ---- มุมมองสัปดาห์ / วัน ----
+  const HOUR = 48;   // px ต่อชั่วโมง
+  function renderTimeGrid(n) {
+    const start = n === 7 ? weekStart(cursor) : atMidnight(cursor);
+    const list = visible();
+    const days = Array.from({ length: n }, (_, i) => addDays(start, i));
+    const segs = lanes(list, start, n);
+    const laneCount = segs.reduce((m, s) => Math.max(m, s.lane + 1), 0);
+    let html = `<div class="gcal-tg" style="--cols:${n}">
+      <div class="gcal-tg-head"><span class="gcal-tg-gutter"></span>${days.map(d => `<button type="button" class="gcal-tg-day${sameDay(d, today) ? ' is-today' : ''}" data-goto="${key(d)}"><small>${escH(fmt(d, { weekday: 'short' }))}</small><b>${d.getDate()}</b></button>`).join('')}</div>
+      <div class="gcal-tg-allday"><span class="gcal-tg-gutter">${escH(T.allDay)}</span><div class="gcal-bars" style="--lanes:${Math.max(laneCount, 1)};--cols:${n}">${segs.map(sg => {
+        const contL = sg.e.d0 < addDays(start, sg.c0), contR = sg.e.d1 > addDays(start, sg.c1);
+        return `<div class="gcal-bar" style="grid-column:${sg.c0 + 1} / ${sg.c1 + 2};grid-row:${sg.lane + 1}">${chip(sg.e, `${contL ? ' cont-l' : ''}${contR ? ' cont-r' : ''}`)}</div>`;
+      }).join('')}</div></div>
+      <div class="gcal-tg-scroll" data-tg-scroll><div class="gcal-tg-grid" style="--hour:${HOUR}px">
+        <div class="gcal-tg-hours">${Array.from({ length: 24 }, (_, h) => `<span>${h ? fmtTime(new Date(2024, 0, 1, h)) : ''}</span>`).join('')}</div>`;
+    days.forEach(d => {
+      const timed = list.filter(e => !e.allDay && e.d0 <= d && e.d1 >= d && !(e.d1 > e.d0));
+      // กิจกรรมเวลาทับกัน: แบ่งความกว้างตามจำนวนที่ทับ
+      const cols = [];
+      timed.forEach(e => { let c = cols.findIndex(end => end <= e.s); if (c < 0) { cols.push(e.e); c = cols.length - 1; } else cols[c] = e.e; e._col = c; });
+      html += `<div class="gcal-tg-col${sameDay(d, today) ? ' is-today' : ''}">${timed.map(e => {
+        const top = (e.s.getHours() * 60 + e.s.getMinutes()) / 60 * HOUR;
+        const h = Math.max(22, (e.e - e.s) / 3600000 * HOUR);
+        return `<div class="gcal-tg-ev" style="top:${top}px;height:${h}px;left:calc(${e._col} * 100% / ${cols.length});width:calc(100% / ${cols.length} - 4px)">${chip(e)}</div>`;
+      }).join('')}${sameDay(d, today) ? `<span class="gcal-now" style="top:${(new Date().getHours() * 60 + new Date().getMinutes()) / 60 * HOUR}px" aria-hidden="true"></span>` : ''}</div>`;
+    });
+    html += `</div></div></div>`;
+    return html;
+  }
+
+  // ---- มุมมองกำหนดการ ----
+  function renderSchedule() {
+    const from = new Date(cursor.getFullYear(), cursor.getMonth(), 1);
+    const to = new Date(cursor.getFullYear(), cursor.getMonth() + 1, 0);
+    const list = visible().filter(e => e.d1 >= from && e.d0 <= to);
+    if (!list.length) return `<p class="gcal-empty">${escH(T.none)}</p>`;
+    const byDay = new Map();
+    list.forEach(e => {
+      const d = e.d0 < from ? from : e.d0;
+      const k = key(d);
+      if (!byDay.has(k)) byDay.set(k, { d, items: [] });
+      byDay.get(k).items.push(e);
+    });
+    return `<ol class="gcal-sched">${[...byDay.values()].sort((a, b) => a.d - b.d).map(g => `
+      <li class="gcal-sched-day${sameDay(g.d, today) ? ' is-today' : ''}">
+        <button type="button" class="gcal-sched-date" data-goto="${key(g.d)}"><b>${g.d.getDate()}</b><small>${escH(fmt(g.d, { month: 'short', weekday: 'short' }))}</small></button>
+        <ul>${g.items.map(e => `<li><button type="button" class="gcal-sched-ev" data-ev="${e.i}" style="--c:var(--cal-${e.color || 1})">
+          <span class="gcal-sched-dot" aria-hidden="true"></span>
+          <span class="gcal-sched-time">${e.allDay ? (e.d1 > e.d0 ? escH(rangeText(e)) : escH(T.allDay)) : `${fmtTime(e.s)} – ${fmtTime(e.e)}`}</span>
+          <span class="gcal-sched-title">${escH(e.title)}${e.location ? `<small>${escH(e.location)}</small>` : ''}</span>
+        </button></li>`).join('')}</ul>
+      </li>`).join('')}</ol>`;
+  }
+
+  function rangeText(e) {
+    const o = { day: 'numeric', month: 'long', year: 'numeric' };
+    if (e.allDay) {
+      if (e.d1 > e.d0) {
+        const f = new Intl.DateTimeFormat(LOCALE, o);
+        return f.formatRange ? f.formatRange(e.d0, e.d1) : `${f.format(e.d0)} – ${f.format(e.d1)}`;
+      }
+      return fmt(e.d0, { weekday: 'long', ...o });
+    }
+    return `${fmt(e.s, { weekday: 'long', ...o })} · ${fmtTime(e.s)} – ${fmtTime(e.e)}`;
+  }
+
+  // ---- วาดใหม่ ----
+  function titleText() {
+    if (view === 'day') return fmt(cursor, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    if (view === 'week') {
+      const a = weekStart(cursor), b = addDays(a, 6);
+      const f = new Intl.DateTimeFormat(LOCALE, { day: 'numeric', month: 'short', year: 'numeric' });
+      return f.formatRange ? f.formatRange(a, b) : `${f.format(a)} – ${f.format(b)}`;
+    }
+    return fmt(cursor, { month: 'long', year: 'numeric' });
+  }
+  function render({ focusTitle = false } = {}) {
+    closePop();
+    viewBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.gcalView === view)));
+    title.textContent = titleText();
+    root.dataset.view = view;
+    body.innerHTML = view === 'month' ? renderMonth() : view === 'week' ? renderTimeGrid(7) : view === 'day' ? renderTimeGrid(1) : renderSchedule();
+    const sc = body.querySelector('[data-tg-scroll]');
+    if (sc) sc.scrollTop = 7 * HOUR;                                                    // เริ่มที่ 07:00 แบบ Google
+    if (!still()) { body.classList.remove('is-anim'); void body.offsetWidth; body.classList.add('is-anim'); }
+    if (focusTitle) title.focus?.();
+  }
+  const step = dir => {
+    if (view === 'day') cursor = addDays(cursor, dir);
+    else if (view === 'week') cursor = addDays(cursor, dir * 7);
+    else cursor = new Date(cursor.getFullYear(), cursor.getMonth() + dir, 1);
+    render();
+  };
+  const setView = v => { view = v; render(); };
+  const fromKey = k => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m, d); };
+
+  // ---- การ์ดรายละเอียด / รายการของวัน ----
+  let popFrom = null;
+  function placePop(anchor) {
+    pop.hidden = false;
+    const r = root.getBoundingClientRect(), a = anchor.getBoundingClientRect();
+    const w = pop.offsetWidth, h = pop.offsetHeight;
+    let left = a.left - r.left + a.width / 2 - w / 2;
+    left = Math.max(8, Math.min(left, r.width - w - 8));
+    let top = a.bottom - r.top + 8;
+    if (a.bottom + h + 16 > window.innerHeight && a.top - h - 8 > 0) top = a.top - r.top - h - 8;
+    pop.style.left = `${left}px`;
+    pop.style.top = `${top}px`;
+    if (!still()) { pop.classList.remove('is-in'); void pop.offsetWidth; pop.classList.add('is-in'); }
+  }
+  function openEvent(i, anchor) {
+    const e = events.find(x => x.i === i);
+    if (!e) return;
+    popFrom = anchor;
+    const uid = pop.getAttribute('aria-labelledby');
+    pop.innerHTML = `
+      <div class="gcal-pop-bar"><button type="button" class="gcal-icon-btn" data-pop-close aria-label="${escH(T.close)}">${icon('i-x')}</button></div>
+      <div class="gcal-pop-main" style="--c:var(--cal-${e.color || 1})">
+        <span class="gcal-pop-sw" aria-hidden="true"></span>
+        <div><h3 id="${escH(uid)}">${escH(e.title)}</h3><p>${escH(rangeText(e))}</p></div>
+      </div>
+      ${e.location ? `<p class="gcal-pop-row">${icon('i-pin')}<span><span class="sr-only">${escH(T.place)}: </span>${escH(e.location)}</span></p>` : ''}
+      ${e.unit ? `<p class="gcal-pop-row">${icon('i-calendar')}<span><span class="sr-only">${escH(T.unit)}: </span>${escH(e.unit)}</span></p>` : ''}
+      ${e.url ? `<a class="gcal-pop-link" href="${escH(e.url)}">${escH(T.details)} ${icon('i-arrow')}</a>` : ''}`;
+    placePop(anchor);
+    pop.querySelector('[data-pop-close]').focus({ preventScroll: true });
+  }
+  function openDay(d, anchor) {
+    const list = onDay(visible(), d);
+    popFrom = anchor;
+    const uid = pop.getAttribute('aria-labelledby');
+    pop.innerHTML = `
+      <div class="gcal-pop-bar"><button type="button" class="gcal-icon-btn" data-pop-close aria-label="${escH(T.close)}">${icon('i-x')}</button></div>
+      <div class="gcal-pop-day"><small>${escH(fmt(d, { weekday: 'short' }))}</small><button type="button" data-goto="${key(d)}" id="${escH(uid)}">${d.getDate()}</button></div>
+      <div class="gcal-pop-list">${list.map(e => chip(e)).join('')}</div>`;
+    placePop(anchor);
+    pop.querySelector('[data-pop-close]').focus({ preventScroll: true });
+  }
+  function closePop() {
+    if (pop.hidden) return;
+    pop.hidden = true;
+    pop.innerHTML = '';
+    const back = popFrom; popFrom = null;
+    if (back && document.contains(back)) back.focus({ preventScroll: true });
+  }
+
+  // ---- เหตุการณ์ ----
+  root.querySelector('[data-gcal-today]').addEventListener('click', () => { cursor = today; render(); });
+  root.querySelector('[data-gcal-prev]').addEventListener('click', () => step(-1));
+  root.querySelector('[data-gcal-next]').addEventListener('click', () => step(1));
+  viewBtns.forEach(b => b.addEventListener('click', () => setView(b.dataset.gcalView)));
+  root.querySelectorAll('[data-gcal-unit]').forEach(b => b.addEventListener('click', () => {
+    const u = b.dataset.gcalUnit;
+    const on = b.getAttribute('aria-pressed') !== 'true';
+    b.setAttribute('aria-pressed', String(on));
+    if (on) hidden.delete(u); else hidden.add(u);
+    render();
+  }));
+  root.addEventListener('click', e => {
+    const ev = e.target.closest('[data-ev]');
+    if (ev) { openEvent(Number(ev.dataset.ev), ev); return; }
+    const more = e.target.closest('[data-more]');
+    if (more) { openDay(fromKey(more.dataset.more), more); return; }
+    const go = e.target.closest('[data-goto]');
+    if (go) {
+      const d = fromKey(go.dataset.goto);
+      if (view === 'month' && narrow()) {                                               // จอแคบ: แสดงรายการของวันใต้ปฏิทิน
+        body.querySelectorAll('.gcal-cell.is-picked').forEach(c => c.classList.remove('is-picked'));
+        go.closest('.gcal-cell')?.classList.add('is-picked');
+        const box = body.querySelector('[data-daylist]');
+        const list = onDay(visible(), d);
+        box.innerHTML = `<p class="gcal-daylist-head">${escH(fmt(d, { weekday: 'long', day: 'numeric', month: 'long' }))}</p>${list.length ? list.map(x => chip(x)).join('') : `<p class="gcal-empty">${escH(T.none)}</p>`}`;
+        return;
+      }
+      cursor = d; view = 'day'; render();
+      return;
+    }
+    if (e.target.closest('[data-pop-close]')) closePop();
+  });
+  document.addEventListener('click', e => { if (!pop.hidden && !pop.contains(e.target) && !e.target.closest('[data-ev],[data-more]')) closePop(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !pop.hidden) { closePop(); return; }
+    // แป้นลัดแบบ Google Calendar — ทำงานเมื่อปฏิทินอยู่บนจอ และไม่ได้พิมพ์ในช่องกรอก
+    if (e.ctrlKey || e.metaKey || e.altKey || e.target.closest?.('input, textarea, select, [contenteditable]')) return;
+    const r = root.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > window.innerHeight) return;
+    const k = e.key.toLowerCase();
+    const map = { t: () => { cursor = today; render(); }, d: () => setView('day'), w: () => setView('week'), m: () => setView('month'), a: () => setView('schedule'), j: () => step(1), n: () => step(1), k: () => step(-1), p: () => step(-1) };
+    if (map[k]) { e.preventDefault(); map[k](); }
+  });
+  let lastNarrow = narrow();
+  window.addEventListener('resize', () => {
+    const n = narrow();
+    if (n !== lastNarrow) { lastNarrow = n; if (view === 'month') render(); }
+  });
+  render();
+}
+
+function initReveal() {
+  const els = [...document.querySelectorAll('[data-reveal]')].filter(e => e.dataset.revealBound !== '1');
+  if (!els.length) return;
+  const still = document.body.classList.contains('no-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -15% 0px', threshold: 0.1 });
+  els.forEach(el => { el.dataset.revealBound = '1'; el.classList.add('reveal-ready'); io.observe(el); });
 }
 
 /* ดูตัวอย่างเอกสาร PDF (ปุ่ม "ดูตัวอย่าง" ใน block document-list)
@@ -1969,9 +2712,6 @@ function initComponents() {
   }
   if (footerMount) {
     footerMount.innerHTML = renderFooter();
-    // หน้าที่มีปุ่มลอย "ช่วยการเข้าถึง" ของตัวเอง (index.html) ไม่ต้องมีปุ่มกลางซ้อนซ้ำ
-    const ownFloat = [...document.querySelectorAll('.access-float')].some(b => !footerMount.contains(b));
-    if (ownFloat) footerMount.querySelector('.access-float')?.remove();
   }
 
   initMegaMenu();
@@ -1983,7 +2723,7 @@ function initComponents() {
   initNewsEventsTabs();
   initPageTransitions();
   initImageSkeletons();
-  initSharedAccessibility();
+  initA11y();
   initFixedHeader();
   initScrollTop();
   initChat();
@@ -2123,27 +2863,71 @@ window.orstConsent = () => { try { return localStorage.getItem(CONSENT_KEY) || '
 
 function initCookieBar() {
   if (window.orstConsent()) return;
+  // ข้อความอ้างอิงจากหน้านโยบายคุกกี้ (content/pages/cookie-policy.json) และสิ่งที่โค้ดจัดเก็บจริง — แก้คู่กันเสมอ
+  const stored = [
+    ['การเลือกภาษา', 'จดจำภาษาที่เลือก (ไทย / อังกฤษ)'],
+    ['การแสดงผล', 'จดจำขนาดตัวอักษรและเครื่องมือช่วยการเข้าถึงที่เลือก'],
+    ['มุมมองรายการ', 'จดจำรูปแบบการแสดงผลแบบตารางหรือรายการ'],
+    ['ค่าความยินยอม', 'จดจำการตอบแถบขอความยินยอมคุกกี้'],
+  ];
   document.body.insertAdjacentHTML('beforeend', `
-    <div class="cookie-bar" role="region" aria-label="การใช้คุกกี้" data-cookie-bar>
+    <section class="cookie-bar" aria-labelledby="cookie-title" data-cookie-bar>
       <div class="container cookie-bar-inner">
-        <p>เว็บไซต์นี้ใช้คุกกี้และพื้นที่จัดเก็บข้อมูลในเบราว์เซอร์เท่าที่จำเป็นต่อการใช้งาน เช่น จดจำภาษาและรูปแบบการแสดงผล
-          <a href="${basePath}cookie-policy.html">อ่านนโยบายคุกกี้</a></p>
-        <div class="cookie-bar-actions">
-          <button type="button" class="cookie-bar-btn is-ghost" data-consent="necessary">เฉพาะที่จำเป็น</button>
+        <span class="cookie-ic" aria-hidden="true">${icon('i-shield')}</span>
+        <div class="cookie-text">
+          <h2 class="cookie-title" id="cookie-title">การใช้คุกกี้และพื้นที่จัดเก็บข้อมูลในเบราว์เซอร์</h2>
+          <p>เว็บไซต์สำนักงานราชบัณฑิตยสภาใช้คุกกี้และพื้นที่จัดเก็บข้อมูลในเบราว์เซอร์ (Local Storage) เท่าที่จำเป็นต่อการให้บริการ เพื่อจดจำการตั้งค่าของท่าน เช่น ภาษา ขนาดตัวอักษร และรูปแบบการแสดงผล โดยไม่ใช้คุกกี้เพื่อติดตามพฤติกรรมหรือโฆษณา</p>
+          <p>ท่านสามารถเลือก “ยอมรับทั้งหมด” หรือ “เฉพาะที่จำเป็น” และลบข้อมูลที่จัดเก็บได้ทุกเมื่อจากการตั้งค่าของเบราว์เซอร์ ศึกษารายละเอียดเพิ่มเติมได้ที่
+            <a href="${basePath}cookie-policy.html">นโยบายคุกกี้ (Cookies Policy)</a> และ
+            <a href="${basePath}privacy-policy.html">นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)</a></p>
+          <div class="cookie-more" id="cookie-more" inert>
+            <div class="cookie-more-inner">
+              <p class="cookie-more-head"><strong>คุกกี้ที่จำเป็น</strong><span class="cookie-always">เปิดใช้งานตลอดเวลา</span></p>
+              <dl class="cookie-list">
+                ${stored.map(([t, d]) => `<div><dt>${t}</dt><dd>${d}</dd></div>`).join('')}
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="cookie-actions">
           <button type="button" class="cookie-bar-btn" data-consent="all">ยอมรับทั้งหมด</button>
+          <button type="button" class="cookie-bar-btn is-ghost" data-consent="necessary">เฉพาะที่จำเป็น</button>
+          <button type="button" class="cookie-toggle" aria-expanded="false" aria-controls="cookie-more" data-cookie-more>
+            <span>รายละเอียดคุกกี้</span>${icon('i-chevron', 'icon cookie-toggle-ic')}
+          </button>
         </div>
       </div>
-    </div>`);
+    </section>`);
   const bar = document.querySelector('[data-cookie-bar]');
+  const more = bar.querySelector('#cookie-more');
+  const toggle = bar.querySelector('[data-cookie-more]');
+  const reduced = () => document.body.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // แถบเต็มความกว้าง: ปุ่มลอย (ช่วยการเข้าถึง / แชท) ต้องยกขึ้นเหนือแถบ — ส่งความสูงให้ CSS
   const fit = () => document.body.style.setProperty('--cookie-h', `${bar.offsetHeight}px`);
+  const ro = 'ResizeObserver' in window ? new ResizeObserver(fit) : null;
+  ro ? ro.observe(bar) : window.addEventListener('resize', fit);
   fit();
-  window.addEventListener('resize', fit);
+  requestAnimationFrame(() => requestAnimationFrame(() => bar.classList.add('is-in')));
+
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    bar.classList.toggle('is-more', open);
+    more.inert = !open;
+  });
   bar.addEventListener('click', e => {
     const btn = e.target.closest('[data-consent]');
-    if (!btn) return;
+    if (!btn || bar.classList.contains('is-out')) return;
     try { localStorage.setItem(CONSENT_KEY, btn.dataset.consent); } catch { /* โหมดส่วนตัว — แค่ปิดแถบ */ }
-    window.removeEventListener('resize', fit);
-    bar.remove();
+    const close = () => {
+      ro?.disconnect();
+      window.removeEventListener('resize', fit);
+      document.body.style.removeProperty('--cookie-h');
+      bar.remove();
+    };
+    if (reduced()) { close(); return; }
+    bar.classList.add('is-out');
+    setTimeout(close, 350);
   });
 }
 
@@ -2276,6 +3060,14 @@ window.orstHeader = {
     enhanceSelects();
     initLightbox();
     initDocPreview();
+    initTimeline();
+    initReveal();
+    initImageBands();
+    initAnnotated();
+    initCountUp();
+    initCopy();
+    initPageIndex();
+    initGuideViews();
     initVideoPlayer();
     initAnchorNav();
     initShare();
@@ -2283,6 +3075,7 @@ window.orstHeader = {
     initMediaTabs();
     initNewsEventsTabs();
     initEventFilters();
+    initCalendars();
     initFaqTools();
     initImageSkeletons();
     syncFixedHeaderHeight();

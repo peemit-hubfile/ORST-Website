@@ -4,6 +4,7 @@
   "title": "Download Forms",
   "navKey": "services",
   "description": "Service request forms of the Office of the Royal Society. Download, complete and submit them through the specified channels",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -40,29 +41,6 @@
         {
           "title": "Form: request for the right to print and sell books produced by the Office of the Royal Society",
           "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF"
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Related services",
-      "items": [
-        {
-          "title": "e-Services",
-          "href": "e-services.html",
-          "icon": "i-form"
-        },
-        {
-          "title": "How to Use e-Services",
-          "href": "e-service-guide.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "Contact the Office",
-          "href": "contact.html",
-          "icon": "i-phone-call"
         }
       ]
     }

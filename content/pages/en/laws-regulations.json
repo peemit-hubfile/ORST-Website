@@ -5,6 +5,7 @@
   "navKey": "about",
   "description": "Acts, regulations, rules and announcements relating to the Royal Society of Thailand and the Office of the Royal Society",
   "updatedAt": "2026-11-13",
+  "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",

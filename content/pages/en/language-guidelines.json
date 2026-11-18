@@ -29,8 +29,7 @@
     {
       "type": "card-grid",
       "id": "topics",
-      "layout": "tiles",
-      "columns": 3,
+      "layout": "guide",
       "items": [
         {
           "icon": "i-book",

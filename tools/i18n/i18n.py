@@ -29,7 +29,7 @@ MEMORY = os.path.join(HERE, "memory.json")
 UI = os.path.join(HERE, "ui-strings.json")
 THAI = re.compile("[฀-๿]")
 SKIP_KEYS = {"_note", "$schema"}
-DATA_FILES = ["site-nav.json", "knowledge-hub.json", "events.json", "news/index.json"]
+DATA_FILES = ["site-nav.json", "knowledge-hub.json", "events.json", "news/index.json", "people/index.json"]
 
 
 def norm(s):
@@ -182,6 +182,7 @@ def apply():
     for f in data_files():
         out = translate_value(json.load(open(f, encoding="utf-8")), plain, miss)
         rel = os.path.relpath(f, os.path.join(ROOT, "content"))
+        os.makedirs(os.path.dirname(os.path.join(en_data, rel)), exist_ok=True)
         with open(os.path.join(en_data, rel), "w", encoding="utf-8", newline="\n") as fh:
             json.dump(out, fh, ensure_ascii=False, indent=2)
             fh.write("\n")

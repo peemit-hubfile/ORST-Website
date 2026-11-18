@@ -32,6 +32,7 @@
     {
       "type": "document-list",
       "id": "documents",
+      "pageSize": 8,
       "items": [
         {
           "title": "ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย",

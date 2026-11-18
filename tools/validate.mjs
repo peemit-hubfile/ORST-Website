@@ -61,6 +61,13 @@ const REQUIRED = {
   'news-related': ['items'],
   'event-calendar': ['items'],
   'photo-album': ['source'],
+  'person-profile': ['source'],
+  'timeline': ['items'],
+  'pillars': ['items'],
+  'org-chart': ['tiers'],
+  'image-band': ['heading'],
+  'org-tree': ['branches'],
+  'annotated-figure': ['image', 'parts'],
 };
 
 async function spriteIcons() {
@@ -73,6 +80,7 @@ function collect(node, out) {
   if (Array.isArray(node)) { node.forEach(n => collect(n, out)); return; }
   if (!node || typeof node !== 'object') return;
   for (const [key, value] of Object.entries(node)) {
+    if (key === 'icons' && Array.isArray(value)) value.forEach(v => typeof v === 'string' && out.icons.add(v));
     if (typeof value === 'string') {
       if (key === 'icon') out.icons.add(value);
       if (key === 'image') out.images.add(value);
@@ -87,6 +95,28 @@ function collect(node, out) {
 async function main() {
   const icons = await spriteIcons();
   const files = (await readdir(PAGES_DIR)).filter(f => f.endsWith('.json')).sort();
+
+  /* --- บุคคล (เชื่อม CMS): content/people/index.json — รายชื่อ (person-grid source people) + หน้าประวัติ person.html?id= --- */
+  const PEOPLE = 'content/people/index.json';
+  const peopleIds = new Set();
+  let people = null;
+  try { people = JSON.parse(await readFile(join(ROOT, PEOPLE), 'utf8')); } catch (e) { if (e.code !== 'ENOENT') err(PEOPLE, `อ่าน JSON ไม่ได้ — ${e.message}`); }
+  if (people) {
+    const found = { icons: new Set(), images: new Set(), hrefs: new Set(), placeholders: 0 };
+    (people.items || []).forEach((p, k) => {
+      const at = `items[${k}]`;
+      if (!p.id || !/^[a-z0-9-]{1,64}$/.test(p.id)) err(PEOPLE, `${at} "id" ต้องเป็น a-z 0-9 - (ใช้ใน person.html?id=)`);
+      else if (peopleIds.has(p.id)) err(PEOPLE, `${at} id "${p.id}" ซ้ำ`);
+      else peopleIds.add(p.id);
+      if (!p.name) err(PEOPLE, `${at} ขาด "name"`);
+      for (const key of ['education', 'career']) {
+        (p[key] || []).forEach((x, j) => { if (!(typeof x === 'string' || x?.title)) err(PEOPLE, `${at} ${key}[${j}] ต้องเป็นข้อความ หรือ { period, title }`); });
+      }
+    });
+    collect(people.items, found);
+    for (const img of found.images) if (!/^https?:/.test(img) && !(await exists(img))) err(PEOPLE, `ไม่พบไฟล์รูป "${img}"`);
+    if (found.placeholders) warn(PEOPLE, `ยังมี placeholder แบบ [...] ค้างอยู่ ${found.placeholders} จุด`);
+  }
 
   if (!files.length) {
     console.log('ไม่พบไฟล์เนื้อหาใน content/pages/');
@@ -128,7 +158,11 @@ async function main() {
         if (field === 'items' && b.source) continue;
         if (b[field] === undefined) err(rel, `${at} (${b.type}) ขาดฟิลด์บังคับ "${field}"`);
       }
-      if (b.source && !['news', 'events', 'album'].includes(b.source.type)) err(rel, `${at} source.type ต้องเป็น "news" "events" หรือ "album"`);
+      if (b.source && !['news', 'events', 'album', 'people', 'person'].includes(b.source.type)) err(rel, `${at} source.type ต้องเป็น "news" "events" "album" "people" หรือ "person"`);
+      // รายชื่อบุคคลจากแหล่งกลาง — รหัสต้องมีใน content/people/index.json
+      if (b.source?.type === 'people') {
+        for (const id of b.source.ids || []) if (!peopleIds.has(id)) err(rel, `${at} ไม่พบรหัสบุคคล "${id}" ใน content/people/index.json`);
+      }
       // page-hero มี variant ของตัวเอง: article = หัวหน้าเพจรายละเอียดข่าว
       if (b.variant && !(b.type === 'page-hero' && b.variant === 'article') && !['default', 'alt', 'dark'].includes(b.variant)) {
         err(rel, `${at} variant ต้องเป็น "default" "alt" หรือ "dark" เท่านั้น`);
@@ -156,7 +190,8 @@ async function main() {
         });
       }
     });
-    if (page.blocks[0]?.type !== 'page-hero') {
+    // หน้าประวัติบุคคล (person-profile) มีหัวหน้าเพจของตัวเอง
+    if (!['page-hero', 'person-profile'].includes(page.blocks[0]?.type)) {
       warn(rel, 'block แรกไม่ใช่ "page-hero" — ปกติทุกหน้าควรเริ่มด้วย page-hero');
     }
 

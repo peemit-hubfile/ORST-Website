@@ -4,6 +4,7 @@
   "title": "Track Request",
   "navKey": "services",
   "description": "Check the progress of service requests submitted to the Office of the Royal Society",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -24,37 +25,48 @@
       ]
     },
     {
-      "type": "notice",
-      "id": "pending",
-      "tone": "info",
-      "title": "The online tracking system is under development",
-      "body": "In the meantime, ask about the progress of your request by email at saraban@orst.go.th or by phone at 02 141 1717 (Office of the Secretary)"
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Related services",
+      "type": "feature-list",
+      "id": "ask",
+      "layout": "cards",
+      "heading": "Ask about your request",
+      "lead": "The online tracking system is under development. In the meantime, ask by email, by telephone or in person at the Office.",
+      "image": "assets/images/orst/services-hero.jpg",
+      "imagePosition": "center 40%",
       "items": [
         {
-          "title": "e-Services",
-          "href": "e-services.html",
-          "icon": "i-form"
+          "icon": "i-mail",
+          "title": "By email",
+          "body": "Include the applicant’s name, the type of service and the date the request was submitted so it can be checked quickly.",
+          "links": [
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
         },
         {
-          "title": "Download Forms",
-          "href": "download-forms.html",
-          "icon": "i-download"
+          "icon": "i-phone-call",
+          "title": "By telephone",
+          "body": "Office of the Secretary, Office of the Royal Society",
+          "links": [
+            {
+              "label": "0 2141 1717",
+              "href": "tel:021411717"
+            }
+          ]
         },
         {
-          "title": "How to Use e-Services",
-          "href": "e-service-guide.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "Contact the Office",
-          "href": "contact.html",
-          "icon": "i-phone-call"
+          "icon": "i-pin",
+          "title": "In person",
+          "body": "Government Complex Commemorating His Majesty the King’s 80th Birthday Anniversary (Building C), Chaeng Watthana Road, Bangkok",
+          "links": [
+            {
+              "label": "Map and directions",
+              "href": "contact.html#map",
+              "kind": "Office location",
+              "icon": "i-map"
+            }
+          ]
         }
       ]
     }

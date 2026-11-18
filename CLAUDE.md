@@ -161,6 +161,7 @@ content/
   news/index.json                        รายการข่าวทั้งหมด (แหล่งเดียว — หน้ารายการข่าว หน้าแรก RSS)
   news/<id>.json                         เนื้อหาข่าว 1 เรื่อง แสดงที่ news-detail.html?id=<id>
   (อัลบั้มภาพ = album.html?id=<id> ใช้ภาพจากไฟล์เดียวกันนี้ ผ่าน block photo-album — ไม่ต้องสร้างไฟล์ต่ออัลบั้ม)
+  people/index.json                      ข้อมูลบุคคล/ผู้บริหารทั้งหมด (แหล่งเดียว — person-grid source people + หน้าประวัติ person.html?id=<id>)
 
 assets/
   css/base.css                           ตัวแปรสี + reset + คลาสพื้นฐาน

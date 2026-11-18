@@ -68,29 +68,6 @@
           "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001024.PDF"
         }
       ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Related information",
-      "items": [
-        {
-          "title": "HR Criteria",
-          "href": "hr-criteria.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "HR Annual Report",
-          "href": "hr-annual-report.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "Job Vacancies & HR Notices",
-          "href": "job-announcements.html",
-          "icon": "i-file"
-        }
-      ]
     }
   ],
   "lang": "en"

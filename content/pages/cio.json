@@ -1,10 +1,11 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-CIO (ถอดข้อความจากภาพ) — ข้อ 4.3 ยังขาดที่อยู่ และโทรสาร (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-CIO (ถอดข้อความจากภาพ) — ข้อ 4.3 ยังขาดที่อยู่ และโทรสาร (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS · รายชื่อดึงจาก content/people/index.json",
   "title": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
   "navKey": "about",
   "description": "ข้อมูลผู้บริหารเทคโนโลยีสารสนเทศระดับสูงของสำนักงานราชบัณฑิตยสภา",
   "updatedAt": "2026-11-13",
+  "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
@@ -26,30 +27,13 @@
     {
       "type": "person-grid",
       "id": "cio",
-      "columns": 4,
-      "items": [
-        {
-          "name": "นายศานติ ภักดีคำ",
-          "position": "รองเลขาธิการราชบัณฑิตยสภา ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
-          "image": "assets/images/orst/people/deputy-secretary-general.jpg",
-          "alt": "นายศานติ ภักดีคำ",
-          "phone": "02-141-1718",
-          "email": "Santi.p@orst.go.th"
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "ข้อมูลที่เกี่ยวข้อง",
-      "items": [
-        {
-          "title": "แผนแม่บทเทคโนโลยีสารสนเทศ",
-          "href": "it-master-plan.html",
-          "icon": "i-file"
-        }
-      ]
+      "layout": "feature",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general"
+        ]
+      }
     }
   ]
 }

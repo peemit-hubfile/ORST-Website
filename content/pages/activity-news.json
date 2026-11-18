@@ -32,7 +32,8 @@
       "source": {
         "type": "news",
         "channel": "activity"
-      }
+      },
+      "keepImages": true
     }
   ],
   "updatedAt": "2026-11-13"

@@ -4,6 +4,7 @@
   "title": "e-Channels Notice",
   "navKey": "services",
   "description": "Electronic channels for contacting the Office of the Royal Society, B.E. 2568 (2025)",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -24,90 +25,47 @@
       ]
     },
     {
-      "type": "table",
+      "type": "feature-list",
       "id": "channels",
-      "heading": "Electronic channels for contacting the Office of the Royal Society, B.E. 2568 (2025)",
-      "columns": [
-        "Channel",
-        "Address / number",
-        "Contact for"
-      ],
-      "rows": [
-        [
-          "Email",
-          "saraban@orst.go.th",
-          "General enquiries, terminology and official correspondence"
-        ],
-        [
-          "Email",
-          "ribook@orst.go.th",
-          "Book enquiries and orders"
-        ],
-        [
-          "Website",
-          "www.orst.go.th",
-          "Office news, information and services"
-        ],
-        [
-          "Telephone",
-          "02 141 1717",
-          "Office of the Secretary · General enquiries"
-        ],
-        [
-          "Telephone",
-          "02 141 1718",
-          "Bookshop"
-        ],
-        [
-          "Telephone",
-          "02 141 1733",
-          "Arts Division"
-        ],
-        [
-          "Telephone",
-          "02 141 1730",
-          "Science Division"
-        ],
-        [
-          "Telephone",
-          "02 141 1732",
-          "Moral and Political Sciences Division"
-        ]
-      ]
-    },
-    {
-      "type": "rich-text",
-      "id": "address",
-      "heading": "Office address",
-      "paragraphs": [
-        "Office of the Royal Society, 120 Moo 3, The Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5 December B.E. 2550 (2007) (Building C), Bangkok 10210"
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Related services",
+      "layout": "directory",
+      "heading": "Ways to contact the Office",
+      "lead": "Tap an email address or link to contact the Office right away.",
       "items": [
         {
-          "title": "e-Services",
-          "href": "e-services.html",
-          "icon": "i-form"
+          "title": "Email",
+          "links": [
+            {
+              "kind": "General enquiries, terminology and official correspondence",
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            },
+            {
+              "kind": "Book enquiries and orders",
+              "label": "ribook@orst.go.th",
+              "href": "mailto:ribook@orst.go.th"
+            }
+          ]
         },
         {
-          "title": "Download Forms",
-          "href": "download-forms.html",
-          "icon": "i-download"
+          "title": "Website",
+          "links": [
+            {
+              "kind": "Official website",
+              "label": "www.orst.go.th",
+              "href": "https://www.orst.go.th"
+            }
+          ]
         },
         {
-          "title": "How to Use e-Services",
-          "href": "e-service-guide.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "Contact the Office",
-          "href": "contact.html",
-          "icon": "i-phone-call"
+          "title": "Office address",
+          "body": "Office of the Royal Society, 120 Moo 3, The Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5 December B.E. 2550 (2007) (Building C), Bangkok 10210",
+          "links": [
+            {
+              "kind": "Office location",
+              "label": "Map and directions",
+              "href": "contact.html#map"
+            }
+          ]
         }
       ]
     }

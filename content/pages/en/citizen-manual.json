@@ -4,12 +4,13 @@
   "title": "Citizen's Manual",
   "navKey": "services",
   "description": "Citizen's manuals for requesting services from the Office of the Royal Society under the Licensing Facilitation Act",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
       "type": "page-hero",
       "heading": "Citizen's Manual",
-      "lead": "Citizen's manuals for requesting services from the Office of the Royal Society under the Licensing Facilitation Act",
+      "lead": "Service manuals under the Licensing Facilitation Act B.E. 2558 (2015)",
       "breadcrumb": [
         {
           "label": "Home",
@@ -24,37 +25,74 @@
       ]
     },
     {
-      "type": "notice",
-      "id": "pending",
-      "tone": "info",
-      "title": "Information is being compiled",
-      "body": "[Citizen's Manual — awaiting information from the Office]"
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Related services",
+      "type": "feature-list",
+      "id": "manuals",
+      "layout": "directory",
+      "heading": "Manuals by service",
+      "lead": "Services that require a permit application to the Office of the Royal Society, with the relevant regulations and where to apply.",
       "items": [
         {
-          "title": "e-Services",
-          "href": "e-services.html",
-          "icon": "i-form"
+          "title": "Printing and publishing",
+          "body": "Request for permission to print and publish publications, electronic media, electronic data and other media of the Office of the Royal Society",
+          "links": [
+            {
+              "kind": "Related regulation",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF"
+            },
+            {
+              "kind": "Submit a request",
+              "label": "e-Services",
+              "href": "e-services.html"
+            }
+          ]
         },
         {
-          "title": "Download Forms",
-          "href": "download-forms.html",
-          "icon": "i-download"
+          "title": "Licence to print and sell",
+          "body": "Request for the right to print and sell books produced by the Office of the Royal Society for publication and sale",
+          "links": [
+            {
+              "kind": "Related regulation",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF"
+            },
+            {
+              "kind": "Submit a request",
+              "label": "e-Services",
+              "href": "e-services.html"
+            }
+          ]
+        }
+      ],
+      "footnote": {
+        "title": "Manuals being compiled",
+        "body": "[Citizen’s manual for each service (PDF) — awaiting documents from the Office]"
+      }
+    },
+    {
+      "type": "image-band",
+      "id": "contents",
+      "tone": "light",
+      "heading": "What a citizen’s manual covers",
+      "paragraphs": [
+        "Under the Licensing Facilitation Act B.E. 2558 (2015), each manual must state the following information."
+      ],
+      "list": [
+        {
+          "title": "Criteria, methods and conditions",
+          "text": "The criteria, methods and conditions for submitting a request."
         },
         {
-          "title": "How to Use e-Services",
-          "href": "e-service-guide.html",
-          "icon": "i-file"
+          "title": "Review procedure",
+          "text": "Each step from submitting the request to notification of the permit decision."
         },
         {
-          "title": "Contact the Office",
-          "href": "contact.html",
-          "icon": "i-phone-call"
+          "title": "Processing time",
+          "text": "The time taken to consider the permit at each step."
+        },
+        {
+          "title": "Required documents",
+          "text": "The documents or evidence to be submitted with the request."
         }
       ]
     }

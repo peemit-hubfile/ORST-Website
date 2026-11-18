@@ -47,12 +47,12 @@
         [
           "orst-cookie-consent",
           "Necessary",
-          "Remembers your answer to the cookie consent bar"
+          "Remembers your answer to the cookie notice"
         ],
         [
           "List view (e.g. kb-view)",
           "Necessary",
-          "Remembers whether you chose grid or list view"
+          "Remembers grid or list layout"
         ]
       ]
     },

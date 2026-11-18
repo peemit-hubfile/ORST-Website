@@ -35,6 +35,7 @@
         "heading": { "type": "string" },
         "lead": { "type": "string" },
         "eyebrow": { "type": "string", "description": "ข้อความตัวเล็กสีทองเหนือหัวข้อ" },
+        "headingStyle": { "enum": ["quote"], "description": "quote = หัวข้อเป็นกล่องคำคมพื้นทองอ่อน (วิสัยทัศน์/ข้อความสำคัญ 1 ประโยค)" },
         "action": {
           "type": "object",
           "description": "ปุ่มมุมขวาบนของ section",
@@ -95,6 +96,13 @@
             { "$ref": "#/definitions/article" },
             { "$ref": "#/definitions/pageIndex" },
             { "$ref": "#/definitions/personGrid" },
+            { "$ref": "#/definitions/personProfile" },
+            { "$ref": "#/definitions/timeline" },
+            { "$ref": "#/definitions/pillars" },
+            { "$ref": "#/definitions/orgChart" },
+            { "$ref": "#/definitions/imageBand" },
+            { "$ref": "#/definitions/orgTree" },
+            { "$ref": "#/definitions/annotatedFigure" },
             { "$ref": "#/definitions/figure" },
             { "$ref": "#/definitions/share" },
             { "$ref": "#/definitions/newsMedia" },
@@ -186,7 +194,8 @@
       "properties": {
         "type": { "const": "card-grid" },
         "columns": { "$ref": "#/definitions/columns" },
-        "layout": { "enum": ["default", "service", "tiles", "list"], "description": "service = การ์ดบริการขนาดใหญ่ (ป้าย tags + ปุ่มชิดล่าง), tiles = การ์ดลิงก์แนวตั้ง (ไอคอน | ชื่อ | คำอธิบาย | โดเมน), list = รายการแถวในกรอบเดียว 2 คอลัมน์" },
+        "numbered": { "type": "boolean", "description": "true = เลขลำดับ 01 02 03 จาง ๆ มุมการ์ด การ์ดกะทัดรัด (ยุทธศาสตร์/ประเด็นที่เรียงลำดับ)" },
+        "layout": { "enum": ["default", "service", "tiles", "list", "guide"], "description": "service = การ์ดบริการขนาดใหญ่ (ป้าย tags + ปุ่มชิดล่าง), tiles = การ์ดลิงก์แนวตั้ง (ไอคอน | ชื่อ | คำอธิบาย | โดเมน), list = รายการแถวในกรอบเดียว 2 คอลัมน์" },
         "items": {
           "type": "array",
           "minItems": 1,
@@ -214,7 +223,11 @@
       "properties": {
         "type": { "const": "feature-list" },
         "columns": { "$ref": "#/definitions/columns" },
-        "layout": { "enum": ["list", "cards"], "description": "cards = แต่ละรายการเป็นการ์ดมีกรอบ" },
+        "layout": { "enum": ["list", "cards", "rows", "directory"], "description": "cards = แต่ละรายการเป็นการ์ดมีกรอบ · rows = การ์ดกว้างเต็มแถว ลำดับ 01 02 + ชื่อ/คำอธิบายซ้าย ลิงก์เป็นแถวรายการด้านขวา (เหมาะกับบริการที่มีขั้นตอน/เอกสารหลายรายการ)" },
+        "cardStyle": { "enum": ["plain", "panel"], "description": "panel = การ์ดมีหัวพื้นสีทองอ่อน (รายการที่ highlight: true = หัวเขียวเข้ม) ไอคอนจางมุมขวา ลิงก์เป็นแถวด้านล่าง" },
+        "linkStyle": { "enum": ["pills", "rows"], "description": "rows = ลิงก์ในการ์ดเป็นแถวรายการ (ป้ายชนิด kind + ค่า + ลูกศร) แทนปุ่มแคปซูล" },
+        "image": { "type": "string", "description": "ภาพพื้นหลังเต็มแถบ (ภาพประดับ) — แถบกลายเป็นสีเขียวเข้ม การ์ดโปร่งแสง" },
+        "imagePosition": { "type": "string", "description": "ตำแหน่งภาพ (CSS object-position) เช่น \"center 30%\"" },
         "footnote": {
           "type": "object",
           "required": ["body"],
@@ -226,7 +239,8 @@
                 "items": {
                   "type": "object",
                   "required": ["label", "href"],
-                  "properties": { "label": { "type": "string" }, "href": { "type": "string" }, "icon": { "$ref": "#/definitions/iconId" } }
+                  "properties": { "label": { "type": "string" }, "href": { "type": "string" }, "icon": { "$ref": "#/definitions/iconId" },
+                    "kind": { "type": "string", "description": "ป้ายชนิดช่องทางเหนือค่า (เฉพาะแบบมีภาพพื้นหลัง) — ค่าเริ่มต้นเลือกตามลิงก์: โทรศัพท์ / อีเมล / ออนไลน์ / ข้อมูลเพิ่มเติม" } }
                 }
               } }
         },
@@ -239,7 +253,14 @@
             "properties": {
               "icon": { "$ref": "#/definitions/iconId" },
               "title": { "type": "string" },
-              "body": { "type": "string" }
+              "body": { "type": "string" },
+              "details": {
+                "type": "array",
+                "description": "รายละเอียดแบบ ป้าย : ค่า ใต้คำอธิบาย (เช่น ธนาคาร / ชื่อบัญชี / เลขที่บัญชี) — copy: true = มีปุ่มคัดลอกค่า",
+                "items": { "type": "object", "required": ["label", "value"],
+                  "properties": { "label": { "type": "string" }, "value": { "type": "string" }, "copy": { "type": "boolean" }, "wide": { "type": "boolean", "description": "เต็มความกว้างการ์ด (ค่ายาว)" } } }
+              },
+              "highlight": { "type": "boolean", "description": "การ์ดที่มี details: หัวการ์ดสีเขียวเข้ม ตัวขาว (เน้นทางเลือกหลัก)" }
             }
           }
         }
@@ -251,6 +272,9 @@
       "description": "ตัวเลขสถิติ",
       "properties": {
         "type": { "const": "stat-row" },
+        "countUp": { "type": "boolean", "description": "ตัวเลขนับขึ้นจาก 0 เมื่อเลื่อนถึง" },
+        "image": { "type": "string", "description": "ภาพพื้นหลังเต็มแถบ (ใช้คู่ variant dark) ตัวเลขใหญ่ไม่มีกรอบ" },
+        "imageCredit": { "type": "object", "properties": { "text": { "type": "string" }, "href": { "type": "string" } } },
         "items": {
           "type": "array",
           "minItems": 1,
@@ -260,7 +284,8 @@
             "properties": {
               "value": { "type": "string" },
               "label": { "type": "string" },
-              "note": { "type": "string" }
+              "note": { "type": "string" },
+              "progress": { "type": "number", "minimum": 0, "maximum": 100, "description": "0-100 = แสดงวงแหวนความคืบหน้า (ตัวเลข % ในวง) แทนตัวเลขใหญ่" }
             }
           }
         }
@@ -271,11 +296,12 @@
     "documentList": {
       "description": "T1 รายการเอกสาร/ประกาศ — ค้นหา กรองปี กรองหมวด และแสดงทีละหน้า (ใช้ layout: compact เป็นเอกสารแนบท้ายหน้า)",
       "properties": {
+        "keepImages": { "type": "boolean", "description": "layout news: ข่าวที่มีรูปใช้รูปจริงเป็นปก (ค่าเริ่มต้นใช้ปกแม่แบบสีเขียวทุกใบ)" },
         "type": { "const": "document-list" },
         "layout": { "enum": ["full", "compact", "news"], "description": "compact = ไม่มีแถบค้นหา/ปุ่มแสดงเพิ่ม, news = แม่แบบ T4 รายการข่าว (แถวมีรูปปก/ป้ายวันที่ + คำโปรย)" },
         "yearBy": { "enum": ["fiscal", "calendar"], "description": "ตัวกรองปี: fiscal = ปีงบประมาณ (เริ่ม 1 ต.ค.), calendar = ปี พ.ศ." },
         "sort": { "enum": ["newest", "none"], "description": "newest = เรียงวันที่/ปีใหม่ไปเก่า (ค่าเริ่มต้น), none = ตามลำดับในไฟล์" },
-        "pageSize": { "type": "integer", "minimum": 5, "description": "จำนวนรายการต่อการแสดงหนึ่งครั้ง (ค่าเริ่มต้น 20)" },
+        "pageSize": { "type": "integer", "minimum": 5, "description": "จำนวนรายการต่อหน้า (ค่าเริ่มต้น 20 · news 12 · compact 10) — ตัวแบ่งหน้าแสดงเมื่อรายการเกินหนึ่งหน้า" },
         "emptyText": { "type": "string", "description": "ข้อความเมื่อยังไม่มีเอกสาร" },
         "source": {
           "type": "object",
@@ -428,6 +454,7 @@
       "description": "T2 บทความยาวแบ่งหัวข้อ พร้อมสารบัญ \"หัวข้อในหน้านี้\"",
       "properties": {
         "type": { "const": "article" },
+        "layout": { "enum": ["default", "cards"], "description": "cards = แต่ละหัวข้อเป็นการ์ด กริด 2 คอลัมน์เต็มความกว้าง (หัวข้อใส่ icon / wide ได้)" },
         "toc": { "type": "boolean", "description": "แสดงสารบัญ (ค่าเริ่มต้น: แสดงเมื่อมีหัวข้อ >= 3)" },
         "intro": { "type": "array", "items": { "type": "string" }, "description": "ย่อหน้านำ ตัวใหญ่กว่าเนื้อหา" },
         "sections": {
@@ -441,7 +468,9 @@
               "id": { "type": "string", "description": "anchor ของหัวข้อ (ถ้าไม่ใส่ สร้างให้อัตโนมัติ)" },
               "paragraphs": { "type": "array", "items": { "type": "string" } },
               "list": { "type": "array", "items": { "type": "string" } },
-              "html": { "type": "string", "description": "HTML ดิบ — ใช้เฉพาะเนื้อหาที่เชื่อถือได้" }
+              "html": { "type": "string", "description": "HTML ดิบ — ใช้เฉพาะเนื้อหาที่เชื่อถือได้" },
+              "icon": { "$ref": "#/definitions/icon" },
+              "wide": { "type": "boolean", "description": "layout cards — การ์ดเต็มแถว เนื้อความแบ่ง 2 คอลัมน์บนจอกว้าง" }
             }
           }
         }
@@ -488,10 +517,23 @@
     },
 
     "personGrid": {
-      "description": "T5 บุคคล/ผู้บริหาร — รูปแนวตั้ง 3:4 (ครอปจากด้านล่าง ศีรษะไม่ขาด) ชื่อ ตำแหน่ง ช่องทางติดต่อ",
+      "description": "T5 บุคคล/ผู้บริหาร — รูปแนวตั้ง 3:4 (ครอปจากด้านล่าง ศีรษะไม่ขาด) ชื่อ ตำแหน่ง ช่องทางติดต่อ · มี href (หรือใช้ source) = กดการ์ดไปหน้าประวัติ",
       "properties": {
         "type": { "const": "person-grid" },
         "columns": { "$ref": "#/definitions/columns" },
+        "layout": {
+          "enum": ["card", "row", "feature"],
+          "description": "card = การ์ดแนวตั้ง (ค่าเริ่มต้น) · row = รูปมีกรอบ + ข้อมูลด้านข้าง 2 คอลัมน์ · feature = คนเดียวขนาดใหญ่ + ตารางข้อมูลติดต่อ"
+        },
+        "source": {
+          "type": "object",
+          "description": "ดึงรายชื่อจาก content/people/index.json แทน items (แนะนำ) — การ์ดลิงก์ไป person.html?id=<id> ให้เอง",
+          "properties": {
+            "type": { "const": "people" },
+            "ids": { "type": "array", "items": { "type": "string" }, "description": "รหัสบุคคลตามลำดับที่จะแสดง ไม่ใส่ = ทุกคน" }
+          },
+          "required": ["type"]
+        },
         "items": {
           "type": "array",
           "minItems": 1,
@@ -502,12 +544,131 @@
             "properties": {
               "name": { "type": "string" },
               "position": { "type": "string" },
+              "roles": { "type": "array", "items": { "type": "string" }, "description": "ตำแหน่งอื่น (แสดงใต้ชื่อ มีเส้นนำ)" },
               "image": { "type": "string", "description": "รูปแนวตั้ง (กว้างอย่างน้อย 480px)" },
               "alt": { "type": "string" },
               "phone": { "type": "string" },
               "fax": { "type": "string" },
               "email": { "type": "string" },
-              "note": { "type": "string" }
+              "note": { "type": "string" },
+              "href": { "type": "string", "description": "หน้าประวัติ — กดได้ทั้งการ์ด" }
+            }
+          }
+        }
+      },
+      "required": ["type"],
+      "anyOf": [{ "required": ["items"] }, { "required": ["source"] }]
+    },
+
+    "annotatedFigure": {
+      "description": "ภาพพร้อมหมุดตัวเลขชี้ส่วนต่าง ๆ + รายการความหมาย (ชี้แล้วไฮไลต์คู่กัน) + คำอธิบายฉบับเต็ม 2 ภาษาเคียงกัน",
+      "properties": {
+        "type": { "const": "annotated-figure" },
+        "image": { "type": "string" },
+        "imageAlt": { "type": "string" },
+        "parts": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["title", "x", "y"], "additionalProperties": false, "properties": {
+          "title": { "type": "string" }, "text": { "type": "string" },
+          "x": { "type": "number", "minimum": 0, "maximum": 100, "description": "ตำแหน่งหมุดแนวนอน % ของภาพ" },
+          "y": { "type": "number", "minimum": 0, "maximum": 100, "description": "ตำแหน่งหมุดแนวตั้ง % ของภาพ" } } } },
+        "full": { "type": "object", "properties": { "heading": { "type": "string" }, "th": { "type": "string" }, "en": { "type": "string", "description": "ฉบับภาษาอังกฤษทางการ — ไม่ถูกแปลซ้ำ โหมดภาษาอังกฤษแสดงเฉพาะฉบับนี้" }, "enLabel": { "type": "string" } } }
+      },
+      "required": ["type", "image", "parts"]
+    },
+
+    "orgTree": {
+      "description": "แผนผังการบริหารงานแบบ 2 สายใต้ผู้บังคับบัญชาสูงสุด + เอกสารแผนผังฉบับเผยแพร่ (ภาพย่อ ดูตัวอย่าง เปิดเอกสาร)",
+      "properties": {
+        "type": { "const": "org-tree" },
+        "top": { "type": "object", "required": ["title"], "properties": { "title": { "type": "string" }, "note": { "type": "string" }, "aside": { "type": "string" } } },
+        "branches": {
+          "type": "array", "minItems": 1,
+          "items": { "type": "object", "required": ["title"], "properties": {
+            "title": { "type": "string" }, "note": { "type": "string" }, "tone": { "enum": ["deep", "gold"] },
+            "nodes": { "type": "array", "items": { "type": "object", "required": ["title"], "properties": {
+              "title": { "type": "string" }, "note": { "type": "string" },
+              "chips": { "type": "array", "items": { "type": "string" } },
+              "rolesLabel": { "type": "string" }, "roles": { "type": "array", "items": { "type": "string" } },
+              "side": { "type": "array", "items": { "type": "object", "required": ["title"], "properties": { "title": { "type": "string" }, "note": { "type": "string" } } } } } } },
+            "unitsLabel": { "type": "string" },
+            "units": { "type": "array", "items": { "type": "object", "required": ["title"], "properties": { "title": { "type": "string" }, "note": { "type": "string" }, "roles": { "type": "array", "items": { "type": "string" } } } } },
+            "extrasLabel": { "type": "string" },
+            "extras": { "type": "array", "items": { "type": "object", "required": ["title"], "properties": { "title": { "type": "string" }, "note": { "type": "string" } } } } } }
+        },
+        "legend": { "type": "string" },
+        "document": { "type": "object", "required": ["title", "file"], "properties": {
+          "heading": { "type": "string" }, "title": { "type": "string" }, "lead": { "type": "string" },
+          "file": { "type": "string" }, "fileSize": { "type": ["number", "string"] }, "thumb": { "type": "string" } } }
+      },
+      "required": ["type", "branches"]
+    },
+
+    "imageBand": {
+      "description": "แถบภาพเต็มความกว้าง — ภาพครึ่งแถบไล่สีกลืนเข้าพื้น ข้อความอีกด้าน (วิสัยทัศน์ / พันธกิจ)",
+      "properties": {
+        "type": { "const": "image-band" },
+        "eyebrow": { "type": "string" },
+        "heading": { "type": "string" },
+        "statement": { "type": "string", "description": "ข้อความเด่น" },
+        "highlights": { "type": "array", "items": { "type": "string" }, "description": "วลีในข้อความเด่นที่ระบายสีทอง — ต้องตรงกับข้อความทุกตัวอักษร" },
+        "paragraphs": { "type": "array", "items": { "type": "string" } },
+        "list": { "type": "array", "items": { "oneOf": [ { "type": "string" }, { "type": "object", "required": ["title"], "additionalProperties": false, "properties": { "title": { "type": "string" }, "text": { "type": "string" } } } ] }, "description": "รายการลำดับเลข — ข้อความ หรือ { title, text } (หัวข้อสั้น + ข้อความเต็ม) · ขึ้นต้น \"(๑)\" จะใช้เลขนั้นเป็นหมายเลข" },
+        "icons": { "type": "array", "items": { "$ref": "#/definitions/iconId" }, "description": "ไอคอนคู่กับ list ทีละข้อ — รายการ ≤ 3 ข้อจะแสดงเป็น 3 เสาเรียงแนวนอน" },
+        "image": { "type": "string" },
+        "imageAlt": { "type": "string" },
+        "imagePosition": { "type": "string", "pattern": "^[0-9.%a-z ]+$", "description": "ส่วนของภาพที่ให้แสดง (object-position) เช่น \"80% 30%\" = ค่อนขวา ค่อนบน" },
+        "imageSide": { "enum": ["left", "right", "cover"], "default": "right", "description": "cover = ภาพเต็มแถบใต้สีพื้นโปร่ง เหมาะกับเนื้อหายาว" },
+        "tone": { "enum": ["light", "dark"], "default": "light" }
+      },
+      "required": ["type", "heading"]
+    },
+
+    "orgChart": {
+      "description": "แผนผังโครงสร้างองค์กร — ชั้นเรียงบนลงล่าง เชื่อมเส้น หน่วยย่อยแยกกิ่ง + อำนาจหน้าที่เป็นรายการลำดับเลขใต้ผัง",
+      "properties": {
+        "type": { "const": "org-chart" },
+        "tiers": {
+          "type": "array", "minItems": 1,
+          "items": { "type": "object", "required": ["title"], "additionalProperties": false, "properties": {
+            "eyebrow": { "type": "string" }, "title": { "type": "string" },
+            "tone": { "enum": ["deep", "gold", "plain"] },
+            "roles": { "type": "array", "items": { "type": "object", "required": ["role"], "properties": { "role": { "type": "string" }, "holder": { "type": "string" } } } },
+            "note": { "type": "string" },
+            "childrenLabel": { "type": "string" },
+            "children": { "type": "array", "items": { "type": "string" } } } }
+        },
+        "columns": {
+          "type": "array",
+          "items": { "type": "object", "required": ["title", "items"], "properties": {
+            "title": { "type": "string" }, "items": { "type": "array", "items": { "type": "string" } },
+            "more": { "type": "array", "items": { "type": "string" } } } }
+        }
+      },
+      "required": ["type", "tiers"]
+    },
+
+    "pillars": {
+      "description": "แผงเทียบส่วนงานเคียงกัน 2-3 แผง — หัวสีเข้ม ตาราง ตำแหน่ง|ผู้ดำรงตำแหน่ง รายการหน้าที่ ป้ายคำ ข้อความฉบับเต็มพับเก็บ",
+      "properties": {
+        "type": { "const": "pillars" },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["title"],
+            "additionalProperties": false,
+            "properties": {
+              "icon": { "$ref": "#/definitions/icon" },
+              "eyebrow": { "type": "string" },
+              "title": { "type": "string" },
+              "lead": { "type": "string" },
+              "facts": { "type": "array", "items": { "type": "object", "required": ["label"], "properties": { "label": { "type": "string" }, "value": { "type": "string" } } } },
+              "listHeading": { "type": "string" },
+              "list": { "type": "array", "items": { "type": "string" } },
+              "tagsHeading": { "type": "string" },
+              "tags": { "type": "array", "items": { "type": "string" } },
+              "more": { "type": "array", "items": { "type": "string" }, "description": "ข้อความฉบับเต็ม — พับใน \"อ่านข้อความฉบับเต็ม\"" },
+              "action": { "type": "object", "properties": { "label": { "type": "string" }, "href": { "type": "string" } }, "required": ["href"] }
             }
           }
         }
@@ -515,10 +676,60 @@
       "required": ["type", "items"]
     },
 
+    "timeline": {
+      "description": "เส้นเวลา (ประวัติความเป็นมา) — จอกว้างสลับซ้าย/ขวาตามเส้นกลาง ปีตัวใหญ่สีจาง หัวข้อ เนื้อความ · ภาพประกอบไม่บังคับ",
+      "properties": {
+        "type": { "const": "timeline" },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["title"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "description": "ไม่ใส่ = <block id>-<ลำดับ> (ใช้กับ anchor-nav)" },
+              "year": { "type": "string", "description": "ปี/ช่วงปี เช่น 2469 หรือ 2531–2549 (แสดงเลขไทยอัตโนมัติ)" },
+              "date": { "type": "string", "description": "วันที่ของเหตุการณ์ (ป้ายเล็กข้างปี)" },
+              "title": { "type": "string" },
+              "lead": { "type": "string", "description": "ประโยคสรุปเด่น แสดงเสมอ — มี lead แล้ว paragraphs จะพับใน \"อ่านรายละเอียด\"" },
+              "body": { "type": "string" },
+              "paragraphs": { "type": "array", "items": { "type": "string" } },
+              "image": { "type": "string", "description": "ภาพประกอบ แนวนอน 4:3 (อยู่ฝั่งตรงข้ามการ์ด)" },
+              "alt": { "type": "string" },
+              "caption": { "type": "string" },
+              "credit": { "type": "object", "properties": { "text": { "type": "string" }, "href": { "type": "string" } }, "description": "ที่มาของภาพ (ตัวเล็กใต้ภาพ) — จำเป็นสำหรับภาพ CC BY / CC BY-SA" },
+              "portrait": { "type": "boolean", "description": "ภาพแนวตั้ง เช่น พระบรมฉายาลักษณ์ — แสดง 4:5" },
+              "images": { "type": "array", "items": { "type": "object", "required": ["image"], "properties": { "image": { "type": "string" }, "alt": { "type": "string" }, "caption": { "type": "string" }, "credit": { "type": "object" } } }, "description": "ภาพชุด 2-3 ภาพ" },
+              "stat": { "type": "object", "required": ["value"], "properties": { "value": { "type": "string" }, "label": { "type": "string" } }, "description": "ตัวเลขเด่นแทนภาพ" }
+            }
+          }
+        }
+      },
+      "required": ["type", "items"]
+    },
+
+    "personProfile": {
+      "description": "หน้าประวัติบุคคล (person.html?id=<id>) — รูป ชื่อ ตำแหน่ง ตารางข้อมูลติดต่อ ปุ่มแชร์/พิมพ์ + การ์ดประวัติการทำงาน/การศึกษา จาก content/people/index.json",
+      "properties": {
+        "type": { "const": "person-profile" },
+        "breadcrumb": { "type": "array", "items": { "type": "object", "properties": { "label": { "type": "string" }, "href": { "type": "string" } }, "required": ["label"] }, "description": "เส้นทางหน้า (ชื่อบุคคลต่อท้ายให้เอง)" },
+        "backHref": { "type": "string", "description": "ปุ่มย้อนกลับ (ค่าเริ่มต้น executives.html)" },
+        "backLabel": { "type": "string" },
+        "source": {
+          "type": "object",
+          "properties": { "type": { "const": "person" }, "id": { "type": "string", "description": "รหัสบุคคล ไม่ใส่ = ใช้ ?id= จาก URL" } },
+          "required": ["type"]
+        }
+      },
+      "required": ["type", "source"]
+    },
+
     "linkList": {
       "description": "รายการเอกสาร/ลิงก์ พร้อมชนิดไฟล์และวันที่",
       "properties": {
         "type": { "const": "link-list" },
+        "pageSize": { "type": "integer", "minimum": 5, "description": "จำนวนรายการต่อหน้า (ค่าเริ่มต้น 10) — ตัวแบ่งหน้าแสดงเมื่อรายการเกินหนึ่งหน้า" },
         "items": {
           "type": "array",
           "minItems": 1,
@@ -542,9 +753,10 @@
     "mediaGrid": {
       "description": "การ์ดที่มีรูปภาพ อัตราส่วน 4:3",
       "properties": {
-        "pageSize": { "type": "integer", "minimum": 4, "description": "แบ่งหน้า + ช่องค้นหา (เมื่อรายการมากกว่าค่านี้) เช่น 20" },
+        "pageSize": { "type": "integer", "minimum": 4, "description": "แบ่งหน้า + ช่องค้นหา เมื่อรายการมากกว่าค่านี้ (ไม่ใส่ = 24)" },
         "unit": { "type": "string", "description": "คำเรียกรายการในข้อความ เช่น \"ภาพ\" (พบ 136 ภาพ)" },
         "type": { "const": "media-grid" },
+        "layout": { "enum": ["default", "album"], "description": "album = การ์ดอัลบั้มภาพ: ภาพ | หมวด | ชื่อ | วันที่ (desc) · จำนวนภาพ (tag) ไม่มีปุ่มเปิดดู" },
         "columns": { "$ref": "#/definitions/columns" },
         "ratio": { "enum": ["4:3", "3:4", "1:1", "16:9"], "description": "สัดส่วนกรอบรูป: 4:3 (ค่าเริ่มต้น), 3:4 ปกหนังสือ/รูปแนวตั้ง, 1:1, 16:9" },
         "fit": { "enum": ["cover", "contain"], "description": "cover = เต็มกรอบ (อาจครอป), contain = เห็นทั้งภาพ เช่น ภาพสแกน อินโฟกราฟิก" },
@@ -561,7 +773,8 @@
               "desc": { "type": "string" },
               "href": { "type": "string" },
               "youtube": { "type": "string", "description": "รหัสวิดีโอ YouTube (เช่น trzQRPLZ9Xw) — การ์ดมีปุ่มเล่น กดแล้วเล่นในป๊อปอัป ไม่ต้องใส่ href" },
-              "tag": { "type": "string" }
+              "tag": { "type": "string", "description": "ป้ายบนภาพ (layout album = จำนวนภาพ เช่น \"7 ภาพ\" แสดงท้ายการ์ดคู่ไอคอนตา)" },
+              "category": { "type": "string", "description": "layout album — หมวดเหนือชื่อ เช่น ข่าวกิจกรรม" }
             }
           }
         }

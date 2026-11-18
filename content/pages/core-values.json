@@ -5,6 +5,7 @@
   "navKey": "about",
   "description": "ค่านิยมของราชบัณฑิตยสภา",
   "updatedAt": "2026-11-13",
+  "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
@@ -24,22 +25,19 @@
       ]
     },
     {
-      "type": "article",
+      "type": "image-band",
       "id": "values",
-      "toc": false,
-      "sections": [
-        {
-          "heading": "ค่านิยมราชบัณฑิตยสภา",
-          "paragraphs": [
-            "ปฏิบัติงานโดยยึดหลัก"
-          ],
-          "list": [
-            "ความถูกต้อง",
-            "เป็นมาตรฐาน",
-            "และมีจิตบริการ"
-          ]
-        }
-      ]
+      "eyebrow": "Core Values",
+      "heading": "ค่านิยมราชบัณฑิตยสภา",
+      "paragraphs": [
+        "ปฏิบัติงานโดยยึดหลัก"
+      ],
+      "list": [
+        "ความถูกต้อง",
+        "เป็นมาตรฐาน",
+        "และมีจิตบริการ"
+      ],
+      "tone": "light"
     }
   ]
 }

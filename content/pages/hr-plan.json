@@ -68,29 +68,6 @@
           "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001024.PDF"
         }
       ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "ข้อมูลที่เกี่ยวข้อง",
-      "items": [
-        {
-          "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล",
-          "href": "hr-criteria.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี",
-          "href": "hr-annual-report.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "ประกาศรับสมัครงานและประกาศด้านการบริหารงานบุคคล",
-          "href": "job-announcements.html",
-          "icon": "i-file"
-        }
-      ]
     }
   ]
 }

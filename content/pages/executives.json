@@ -1,10 +1,11 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-EXC (ชื่อ ตำแหน่ง เบอร์โทร ถอดจากภาพบนเว็บเดิม) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "_note": "รายชื่อดึงจาก content/people/index.json (source people) — แก้ชื่อ ตำแหน่ง รูป เบอร์โทร ประวัติ ที่ไฟล์นั้นที่เดียว · หน้าประวัติแต่ละคน person.html?id=<id>",
   "title": "ผู้บริหารสำนักงานราชบัณฑิตยสภา",
   "navKey": "about",
   "description": "รายชื่อผู้บริหารสำนักงานราชบัณฑิตยสภาและหมายเลขโทรศัพท์ติดต่อ",
   "updatedAt": "2026-11-13",
+  "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
@@ -25,62 +26,46 @@
     },
     {
       "type": "person-grid",
-      "id": "executives",
-      "columns": 4,
-      "items": [
-        {
-          "name": "นายศุภฤกษ์ ภู่พงศ์ศักดิ์",
-          "position": "เลขาธิการราชบัณฑิตยสภา",
-          "image": "assets/images/orst/people/secretary-general.jpg",
-          "alt": "นายศุภฤกษ์ ภู่พงศ์ศักดิ์",
-          "phone": "02-141-1725"
-        },
-        {
-          "name": "นายศานติ ภักดีคำ",
-          "position": "รองเลขาธิการราชบัณฑิตยสภา",
-          "image": "assets/images/orst/people/deputy-secretary-general.jpg",
-          "alt": "นายศานติ ภักดีคำ",
-          "phone": "02-141-1718",
-          "email": "Santi.p@orst.go.th"
-        }
-      ]
+      "id": "secretary-general",
+      "eyebrow": "ผู้บริหารสูงสุด",
+      "heading": "เลขาธิการราชบัณฑิตยสภา",
+      "layout": "feature",
+      "source": {
+        "type": "people",
+        "ids": [
+          "secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "person-grid",
+      "id": "deputy",
+      "eyebrow": "ผู้บริหารระดับสูง",
+      "heading": "รองเลขาธิการราชบัณฑิตยสภา",
+      "layout": "row",
+      "variant": "alt",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general"
+        ]
+      }
     },
     {
       "type": "person-grid",
       "id": "directors",
-      "columns": 4,
-      "items": [
-        {
-          "name": "นางสาวอารี พลดี",
-          "position": "เลขานุการกรม",
-          "image": "assets/images/orst/people/director-1.jpg",
-          "alt": "นางสาวอารี พลดี",
-          "phone": "02-141-1723"
-        },
-        {
-          "name": "นางกนกวรรณ ทองตะโก",
-          "position": "ผู้อำนวยการกองธรรมศาสตร์และการเมือง",
-          "image": "assets/images/orst/people/director-2.jpg",
-          "alt": "นางกนกวรรณ ทองตะโก",
-          "phone": "02-141-1732"
-        },
-        {
-          "name": "นางสาวกุลศิรินทร์ นาคไพจิตร",
-          "position": "ผู้อำนวยการกองวิทยาศาสตร์",
-          "image": "assets/images/orst/people/director-3.jpg",
-          "alt": "นางสาวกุลศิรินทร์ นาคไพจิตร",
-          "phone": "02-141-1730"
-        },
-        {
-          "name": "นางสาวปิยรัตน์ อินทร์อ่อน",
-          "position": "ผู้อำนวยการกองศิลปกรรม",
-          "image": "assets/images/orst/people/director-4.jpg",
-          "alt": "นางสาวปิยรัตน์ อินทร์อ่อน",
-          "phone": "02-141-1733"
-        }
-      ],
+      "eyebrow": "หน่วยงานภายใน",
       "heading": "ผู้อำนวยการหน่วยงานภายใน",
-      "variant": "alt"
+      "layout": "row",
+      "source": {
+        "type": "people",
+        "ids": [
+          "director-1",
+          "director-2",
+          "director-3",
+          "director-4"
+        ]
+      }
     }
   ]
 }
