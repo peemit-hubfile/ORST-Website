@@ -123,22 +123,6 @@
           "a": "Printing or commercial distribution requires prior permission. See the procedure on the Academic Services page"
         }
       ]
-    },
-    {
-      "type": "cta-band",
-      "heading": "Can't find the word you need?",
-      "body": "Send your language questions directly to the Office",
-      "actions": [
-        {
-          "label": "Academic information inquiry",
-          "href": "services.html"
-        },
-        {
-          "label": "Contact Us",
-          "href": "contact.html",
-          "variant": "ghost"
-        }
-      ]
     }
   ],
   "lang": "en"

@@ -1442,16 +1442,16 @@ a.index-link:focus-visible {
     linear-gradient(90deg, color-mix(in srgb, var(--deep) 94%, transparent) 0%, color-mix(in srgb, var(--deep) 82%, transparent) 34%, color-mix(in srgb, var(--deep) 18%, transparent) 72%, transparent 100%),
     linear-gradient(0deg, color-mix(in srgb, var(--deep) 55%, transparent) 0%, transparent 45%);
 }
-.page-hero.has-image h1 { max-width: 22ch; color: var(--surface); text-wrap: balance; }
-.page-hero.has-image p { max-width: 46ch; color: color-mix(in srgb, var(--surface) 86%, transparent); }
-.page-hero.has-image .block-eyebrow { color: color-mix(in srgb, var(--gold) 45%, var(--surface)); }
-.page-hero.has-image .block-breadcrumb,
-.page-hero.has-image .block-breadcrumb a { color: color-mix(in srgb, var(--surface) 80%, transparent); }
-.page-hero.has-image .block-breadcrumb a:hover,
-.page-hero.has-image .block-breadcrumb [aria-current="page"] { color: var(--surface); }
-.page-hero.has-image .block-btn { background: var(--surface); border-color: var(--surface); color: var(--deep); }
-.page-hero.has-image .block-btn.is-ghost { background: transparent; border-color: color-mix(in srgb, var(--surface) 55%, transparent); color: var(--surface); }
-.page-hero.has-image .block-btn.is-ghost:hover { background: color-mix(in srgb, var(--surface) 12%, transparent); border-color: var(--surface); }
+:is(.page-hero.has-image, .page-hero.is-plain) h1 { max-width: 22ch; color: var(--surface); text-wrap: balance; }
+:is(.page-hero.has-image, .page-hero.is-plain) p { max-width: 46ch; color: color-mix(in srgb, var(--surface) 86%, transparent); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-eyebrow { color: color-mix(in srgb, var(--gold) 45%, var(--surface)); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb,
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb a { color: color-mix(in srgb, var(--surface) 80%, transparent); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb a:hover,
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb [aria-current="page"] { color: var(--surface); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-btn { background: var(--surface); border-color: var(--surface); color: var(--deep); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-btn.is-ghost { background: transparent; border-color: color-mix(in srgb, var(--surface) 55%, transparent); color: var(--surface); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-btn.is-ghost:hover { background: color-mix(in srgb, var(--surface) 12%, transparent); border-color: var(--surface); }
 .page-hero-highlights {
   display: flex;
   flex-wrap: wrap;
@@ -1473,8 +1473,8 @@ a.index-link:focus-visible {
 body.high-contrast .page-hero.has-image { background: var(--paper); color: var(--ink); }
 body.high-contrast .page-hero-bg,
 body.high-contrast .page-hero.has-image::before { display: none; }
-body.high-contrast .page-hero.has-image h1,
-body.high-contrast .page-hero.has-image p,
+body.high-contrast :is(.page-hero.has-image, .page-hero.is-plain) h1,
+body.high-contrast :is(.page-hero.has-image, .page-hero.is-plain) p,
 body.high-contrast .page-hero-highlights li { color: var(--ink); }
 
 /* =============================================================================
@@ -1640,17 +1640,17 @@ body.no-motion .block-card.is-link:hover .block-card-arrow { transform: none; }
 .section-head p { font-size: var(--text-sm); }
 /* page-hero แบบมีรูป — ตัวอักษรกระชับขึ้น (ผู้ใช้: "ปรับ text ใหม่")
    หัวข้อ = --text-2xl บรรทัดเดียวบนจอกว้าง (เลิก text-wrap: balance — ตัดคำไทยไม่สวย), คำโปรย = --text-base, ปุ่มเล็กลง */
-.page-hero.has-image .block-eyebrow { margin-bottom: var(--space-2); font-size: var(--text-sm); }
-.page-hero.has-image h1 { max-width: none; margin-bottom: var(--space-3); font-size: var(--text-2xl); line-height: var(--leading-tight); text-wrap: wrap; }
-.page-hero.has-image p { max-width: 40em; font-size: var(--text-base); line-height: var(--leading-normal); }
-.page-hero.has-image .block-actions { gap: var(--space-3); margin-top: var(--space-6); }
-.page-hero.has-image .block-btn { min-height: 48px; padding: 8px 24px; font-size: var(--text-sm); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-eyebrow { margin-bottom: var(--space-2); font-size: var(--text-sm); }
+:is(.page-hero.has-image, .page-hero.is-plain) h1 { max-width: none; margin-bottom: var(--space-3); font-size: var(--text-2xl); line-height: var(--leading-tight); text-wrap: wrap; }
+:is(.page-hero.has-image, .page-hero.is-plain) p { max-width: 40em; font-size: var(--text-base); line-height: var(--leading-normal); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-actions { gap: var(--space-3); margin-top: var(--space-6); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-btn { min-height: 48px; padding: 8px 24px; font-size: var(--text-sm); }
 .page-hero-highlights { margin-top: var(--space-6); }
 .page-hero-highlights li { font-size: var(--text-xs); }
 @media (max-width: 760px) {
-  .page-hero.has-image h1 { font-size: var(--text-xl); }
-  .page-hero.has-image p { font-size: var(--text-sm); }
-  .page-hero.has-image .block-btn { min-height: 44px; padding: 6px 18px; }
+  :is(.page-hero.has-image, .page-hero.is-plain) h1 { font-size: var(--text-xl); }
+  :is(.page-hero.has-image, .page-hero.is-plain) p { font-size: var(--text-sm); }
+  :is(.page-hero.has-image, .page-hero.is-plain) .block-btn { min-height: 44px; padding: 6px 18px; }
 }
 /* การ์ดบริการ (layout service) — กระชับขึ้น: ไอคอน 48px ไอคอนกับป้ายอยู่แถวเดียวกัน */
 .block-cards-service .block-card { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-auto-rows: auto; align-content: start; column-gap: var(--space-3); row-gap: var(--space-2); padding: var(--space-6); }
@@ -1676,7 +1676,7 @@ body.no-motion .block-card.is-link:hover .block-card-arrow { transform: none; }
 .block-cards-tiles .block-card.is-link:hover .block-card-text strong { color: var(--deep); }
 .block-cards-service .block-card.is-link:focus-visible,
 .block-cards-tiles .block-card.is-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-.page-hero.has-image .block-breadcrumb { margin-bottom: var(--space-4); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb { margin-bottom: var(--space-4); }
 
 /* card-grid layout "tiles" — รอบ 2 (ผู้ใช้: "ปรับใหม่")
    การ์ดแนวตั้ง: แถวบน = ไอคอน (ซ้าย) + ลูกศรเล็ก (ขวา) | ชื่อ | คำอธิบาย 2 บรรทัด | โดเมนของระบบ (ลิงก์ภายนอก) ชิดล่าง
@@ -2083,7 +2083,7 @@ body.high-contrast .section.is-dark .block-step p { color: var(--ink); }
 .block-breadcrumb .crumb-sep .icon { width: 14px; height: 14px; stroke-width: 2.4; }
 .block-breadcrumb a { color: var(--ink); font-weight: 700; }
 .block-breadcrumb [aria-current="page"] { color: var(--muted); font-weight: 400; }
-.page-hero.has-image .block-breadcrumb {
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb {
   display: inline-flex;
   max-width: 100%;
   padding: 6px var(--space-4);
@@ -2092,13 +2092,13 @@ body.high-contrast .section.is-dark .block-step p { color: var(--ink); }
   background: color-mix(in srgb, var(--surface) 12%, transparent);
   backdrop-filter: blur(6px);
 }
-.page-hero.has-image .block-breadcrumb a { color: var(--surface); font-weight: 700; text-decoration: none; }
-.page-hero.has-image .block-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.page-hero.has-image .block-breadcrumb [aria-current="page"] { color: color-mix(in srgb, var(--surface) 78%, transparent); font-weight: 400; }
-.page-hero.has-image .block-breadcrumb .crumb-sep { color: color-mix(in srgb, var(--gold) 55%, var(--surface)); }
-body.high-contrast .page-hero.has-image .block-breadcrumb { background: var(--surface); border-color: var(--line); }
-body.high-contrast .page-hero.has-image .block-breadcrumb a,
-body.high-contrast .page-hero.has-image .block-breadcrumb [aria-current="page"] { color: var(--ink); }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb a { color: var(--surface); font-weight: 700; text-decoration: none; }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 3px; }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb [aria-current="page"] { color: color-mix(in srgb, var(--surface) 78%, transparent); font-weight: 400; }
+:is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb .crumb-sep { color: color-mix(in srgb, var(--gold) 55%, var(--surface)); }
+body.high-contrast :is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb { background: var(--surface); border-color: var(--line); }
+body.high-contrast :is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb a,
+body.high-contrast :is(.page-hero.has-image, .page-hero.is-plain) .block-breadcrumb [aria-current="page"] { color: var(--ink); }
 
 /* =============================================================================
    document-list: แถบเครื่องมือ + ตัวแบ่งหน้าแบบตัวเลข (แทนปุ่ม "แสดงเพิ่ม")
@@ -3828,3 +3828,229 @@ body.high-contrast .evcal-date { background: var(--ink); }
   .is-qa .faq-q > svg { padding: 8px; }
   .is-qa .faq-a { margin: 0 14px; }
 }
+
+/* ---------- photo-album (หน้าอัลบั้มภาพ album.html?id=) ---------- */
+.album-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.album-head-text { flex: 1 1 520px; min-width: 0; }
+.album-title { margin: 0 0 10px; color: var(--ink); font-size: var(--text-xl); line-height: var(--leading-tight); }
+.album-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; margin: 0; color: var(--muted); font-size: var(--text-sm); }
+.album-meta > span { display: inline-flex; align-items: center; gap: 6px; }
+.album-meta .icon { width: 16px; height: 16px; color: var(--deep); }
+.album-tag { padding: 2px 12px; border-radius: var(--radius-pill); background: color-mix(in srgb, var(--deep) 9%, var(--surface)); color: var(--deep); font-weight: 600; }
+.album-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.album-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--deep);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .15s, background-color .15s;
+}
+.album-btn:hover { border-color: var(--deep); }
+.album-btn.is-primary { border-color: var(--deep); background: var(--deep); color: var(--surface); }
+.album-btn.is-primary:hover { background: color-mix(in srgb, var(--deep) 85%, var(--ink)); }
+.album-btn .icon { width: 16px; height: 16px; }
+.album-btn .is-back { transform: scaleX(-1); }
+.album-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.album-photo {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface-soft);
+}
+.album-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s ease; }
+.album-photo::after { content: ""; position: absolute; inset: 0; background: color-mix(in srgb, var(--ink) 0%, transparent); transition: background-color .2s; }
+.album-photo:hover img { transform: scale(1.04); }
+.album-photo:hover::after { background: color-mix(in srgb, var(--ink) 12%, transparent); }
+.album-photo:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.album-missing { display: grid; justify-items: center; gap: 10px; padding: 56px 20px; border: 1px dashed var(--line); border-radius: var(--radius-lg); text-align: center; color: var(--muted); }
+.album-missing h2 { margin: 0; color: var(--ink); font-size: var(--text-lg); }
+.album-missing p { margin: 0 0 8px; }
+@media (max-width: 1023.98px) { .album-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 767.98px) {
+  .album-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .album-photo { border-radius: var(--radius-md); }
+  .album-title { font-size: var(--text-lg); }
+  .album-actions { width: 100%; }
+  .album-btn { flex: 1; justify-content: center; }
+}
+.album-missing-icon { width: 40px; height: 40px; color: var(--deep); opacity: .6; }
+/* รายการเอกสาร (ไม่ใช่การ์ดข่าว): ชื่อเอกสารเล็กลงหนึ่งขั้น อ่านเป็นรายการได้ง่าย ไม่ดูเป็นหัวข้อใหญ่ */
+.doc-list:not(.is-news) .doc-item .doc-title { font-size: var(--text-sm); font-weight: 600; line-height: var(--leading-normal); }
+
+/* =============================================================================
+   page-hero ไม่มีรูป (is-plain) — พื้นเขียวเข้มไล่เฉด + แสงทองมุมขวา + ตราสัญลักษณ์จาง ๆ
+   ตัวอักษร/เส้นทางหน้า/ปุ่ม ใช้ชุดเดียวกับ hero แบบมีรูป (:is(.has-image, .is-plain) ด้านบน)
+   ============================================================================= */
+.page-hero.is-plain {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--space-12) 0 var(--space-12);
+  border-bottom: 0;
+  background:
+    radial-gradient(55% 120% at 100% 0%, color-mix(in srgb, var(--gold) 24%, transparent), transparent 62%),
+    radial-gradient(40% 90% at 0% 100%, color-mix(in srgb, var(--surface) 7%, transparent), transparent 70%),
+    linear-gradient(120deg, var(--deep) 0%, color-mix(in srgb, var(--deep) 78%, var(--ink)) 100%);
+  color: var(--surface);
+}
+.page-hero.is-plain > .container { position: relative; z-index: 1; }
+.page-hero.is-plain .page-hero-mark { z-index: 0; opacity: .1; }
+.page-hero.is-plain::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), color-mix(in srgb, var(--gold) 0%, transparent) 70%);
+  opacity: .7;
+}
+@media (max-width: 767.98px) {
+  .page-hero.is-plain { padding: var(--space-8) 0 var(--space-10); }
+}
+body.high-contrast .page-hero.is-plain { background: var(--paper); color: var(--ink); }
+body.high-contrast .page-hero.is-plain::after { display: none; }
+body.high-contrast .page-hero.is-plain h1,
+body.high-contrast .page-hero.is-plain p { color: var(--ink); }
+body.high-contrast .page-hero.is-plain .block-breadcrumb { background: var(--surface); border-color: var(--line); }
+body.high-contrast .page-hero.is-plain .block-breadcrumb a,
+body.high-contrast .page-hero.is-plain .block-breadcrumb [aria-current="page"] { color: var(--ink); }
+
+/* =============================================================================
+   document-list (รายการเอกสาร): สลับมุมมอง รายการ / ตาราง (การ์ด)
+   ============================================================================= */
+.doc-toolbar.is-docs .doc-tools { width: 100%; }
+.doc-toolbar.is-docs .doc-search-pill { flex: 1 1 260px; max-width: 420px; }
+.doc-toolbar.is-docs .doc-search-pill input { width: 100%; }
+.doc-toolbar.is-docs .doc-view { margin-left: auto; }
+.doc-list:not(.is-news) .doc-count { margin: var(--space-3) 0 var(--space-3); font-size: var(--text-sm); }
+.doc-list[data-view="grid"]:not(.is-news) .doc-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+}
+.doc-list[data-view="grid"]:not(.is-news) .doc-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+.doc-list[data-view="grid"]:not(.is-news) .doc-item[hidden] { display: none; }
+.doc-list[data-view="grid"]:not(.is-news) .doc-item:hover {
+  border-color: color-mix(in srgb, var(--deep) 35%, var(--line));
+  box-shadow: 0 14px 30px -22px rgba(16, 42, 34, .5);
+  transform: translateY(-2px);
+}
+.doc-list[data-view="grid"]:not(.is-news) .doc-icon,
+.doc-list[data-view="grid"]:not(.is-news) .doc-icon-pdf { margin: 0; }
+.doc-list[data-view="grid"]:not(.is-news) .doc-body { flex: 1; }
+.doc-list[data-view="grid"]:not(.is-news) .doc-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.doc-list[data-view="grid"]:not(.is-news) .doc-meta { margin-top: 6px; }
+.doc-list[data-view="grid"]:not(.is-news) .doc-actions {
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+.doc-list[data-view="grid"]:not(.is-news) .doc-actions .doc-btn { flex: 1; justify-content: center; padding-inline: 10px; }
+@media (max-width: 479.98px) {
+  .doc-list[data-view="grid"]:not(.is-news) .doc-items { grid-template-columns: 1fr; }
+}
+
+/* ---------- โครงร่างหน้าระหว่างโหลด (page-runtime.js skeletonHTML) ---------- */
+#app-content:empty { min-height: 70vh; }
+.skel-hero {
+  padding: var(--space-12) 0;
+  background:
+    radial-gradient(55% 120% at 100% 0%, color-mix(in srgb, var(--gold) 20%, transparent), transparent 62%),
+    linear-gradient(120deg, var(--deep) 0%, color-mix(in srgb, var(--deep) 78%, var(--ink)) 100%);
+}
+.skel-hero .skel {
+  background: linear-gradient(100deg,
+    color-mix(in srgb, var(--surface) 12%, transparent) 30%,
+    color-mix(in srgb, var(--surface) 24%, transparent) 50%,
+    color-mix(in srgb, var(--surface) 12%, transparent) 70%);
+  background-size: 200% 100%;
+}
+.skel-crumb { width: 260px; max-width: 70%; height: 34px; border-radius: var(--radius-pill); }
+.skel-h1 { width: 520px; max-width: 85%; height: 2.4em; margin-top: 22px; border-radius: var(--radius-md); }
+.skel-lead { width: 640px; max-width: 95%; height: 1em; margin-top: 16px; }
+.skel-lead.is-short { width: 380px; max-width: 60%; margin-top: 10px; }
+.skel-body { padding-block: var(--space-10) var(--space-16); }
+.skel-toolbar { display: flex; flex-wrap: wrap; gap: 10px; padding-bottom: 18px; margin-bottom: 22px; border-bottom: 1px solid var(--line); }
+.skel-search { flex: 1 1 260px; max-width: 420px; height: 40px; border-radius: var(--radius-md); }
+.skel-pill { width: 96px; height: 40px; border-radius: var(--radius-md); }
+.skel-toolbar .skel-search + .skel-pill { margin-left: auto; }
+.skel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.skel-card { padding: 0 0 18px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); overflow: hidden; }
+.skel-card .skel-line { margin-inline: 18px; }
+.skel-thumb { aspect-ratio: 16 / 10; border-radius: 0; margin-bottom: 8px; }
+.is-loaded > :first-child { animation: content-in .35s ease both; }
+@keyframes content-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .is-loaded > :first-child { animation: none; } }
+
+/* ตัวอย่าง PDF ระหว่างโหลด: หน้ากระดาษจำลอง */
+.doc-preview-loading { gap: 14px; align-content: center; }
+.doc-preview-loading p { margin: 0; color: var(--muted); font-size: var(--text-sm); }
+.doc-preview-stage:not(.is-loading) .doc-preview-loading { display: none; }
+.doc-skel-page { width: min(520px, 80%); padding: 36px 40px; border-radius: var(--radius-sm); background: var(--surface); box-shadow: 0 10px 30px -18px rgba(16, 42, 34, .35); }
+.doc-skel-page .skel-line:first-child { margin: 0 auto 18px; }
+.doc-skel-page .skel-block { height: 120px; margin: 18px 0 8px; border-radius: var(--radius-sm); }
+.doc-preview-stage.is-loading iframe { opacity: 0; }
+.doc-preview-stage iframe { transition: opacity .25s ease; }
+/* รายการเอกสารที่ไม่ใช่ PDF — ใช้โครงเดียวกับแถว PDF ป้ายสีเขียวแทนแดง */
+.doc-item.is-file { grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; }
+.doc-icon-file b { background: var(--deep); }
+.doc-item.is-file.is-empty .doc-icon-file { opacity: .55; }
+@media (max-width: 760px) {
+  .doc-item.is-file { grid-template-columns: auto minmax(0, 1fr); }
+  .doc-item.is-file .doc-actions { grid-column: 2; justify-content: flex-start; }
+}
+/* notice: ตัวอักษรเท่ารายการเอกสาร (ไม่ใหญ่เกินเนื้อหาหลัก) · ไอคอนอยู่ในวงกลมพื้นอ่อน */
+.block-notice { align-items: center; gap: 16px; padding: 16px 20px; border-radius: var(--radius-lg); }
+.block-notice strong { margin-bottom: 2px; color: var(--ink); font-size: var(--text-sm); font-weight: 600; line-height: var(--leading-normal); }
+.block-notice p, .block-notice ul { font-size: var(--text-xs); line-height: var(--leading-normal); }
+.block-notice-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--deep) 9%, var(--surface));
+}
+.block-notice-icon .icon { width: 22px; height: 22px; }

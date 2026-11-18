@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "การปฏิบัติราชการ",
-          "href": "operations.html"
+          "label": "การปฏิบัติราชการ"
         },
         {
           "label": "การลดใช้พลังงานของสำนักงานราชบัณฑิตยสภา"
@@ -31,12 +30,12 @@
         {
           "title": "แผนปฏิบัติการลดการใช้พลังงาน ประจำปีงบประมาณ พ.ศ. ๒๕๕๕",
           "publishedAt": "2020-04-15",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001401001014%2F63DOM3514034"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000013.PDF"
         },
         {
           "title": "การลดใช้พลังงานของราชบัณฑิตยสถาน",
           "publishedAt": "2020-04-15",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001401001014%2F63DOM3559009"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000014.PDF"
         }
       ]
     }

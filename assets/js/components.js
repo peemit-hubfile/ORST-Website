@@ -284,10 +284,10 @@ function icon(id, className = 'icon') {
 
 const navItems = [
   ['home', 'หน้าหลัก', `${basePath}index.html`],
-  ['about', 'เกี่ยวกับเรา', `${basePath}about.html`],
-  ['operations', 'การปฏิบัติราชการ', `${basePath}operations.html`],
-  ['news', 'ข่าวสารและกิจกรรม', `${basePath}news.html`],
-  ['services', 'บริการวิชาการ', `${basePath}services.html`],
+  ['about', 'เกี่ยวกับเรา', ''],
+  ['operations', 'การปฏิบัติราชการ', ''],   // ไม่มีหน้าหมวด — เปิดได้จากเมนูใหญ่/เมนูมือถือเท่านั้น
+  ['news', 'ข่าวสารและกิจกรรม', ''],
+  ['services', 'บริการวิชาการ', ''],
   ['contact', 'ติดต่อเรา', `${basePath}contact.html`],
 ];
 
@@ -303,7 +303,6 @@ const megaMenuData = {
     title: 'เกี่ยวกับเรา',
     image: 'about',
     description: 'ผู้บริหาร ศูนย์ปฏิบัติการต่อต้านการทุจริต ข้อมูลองค์กร และการบริหารทรัพยากรบุคคลของสำนักงาน',
-    featured: ['ดูทั้งหมดในหมวด', `${basePath}about.html`],
     groups: [
       {
         heading: 'ผู้บริหาร',
@@ -352,7 +351,6 @@ const megaMenuData = {
     title: 'การปฏิบัติราชการ',
     image: 'dictionary',
     description: 'แผนปฏิบัติราชการ ผลการปฏิบัติราชการ และข้อมูลเปิดภาครัฐของสำนักงาน',
-    featured: ['ดูทั้งหมดในหมวด', `${basePath}operations.html`],
     groups: [
       {
         heading: 'แผนปฏิบัติราชการ',
@@ -402,7 +400,6 @@ const megaMenuData = {
     title: 'ข่าวสารและกิจกรรม',
     image: 'news',
     description: 'ข่าวประชาสัมพันธ์ กิจกรรม การบรรยายทางวิชาการ และประกาศต่าง ๆ ของสำนักงาน',
-    featured: ['ดูทั้งหมดในหมวด', `${basePath}news.html`],
     groups: [
       {
         heading: 'ข่าวประชาสัมพันธ์',
@@ -412,7 +409,8 @@ const megaMenuData = {
           ['การบรรยายทางวิชาการ', `${basePath}academic-lectures.html`],
           ['ปฏิทินกิจกรรม', `${basePath}event-calendar.html`],
           ['คำถาม-คำตอบ (Q&A)', `${basePath}qa.html`],
-          ['คลังภาพและวิดีโอ', `${basePath}media-gallery.html`],
+          ['คลังภาพ', `${basePath}media-gallery.html`],
+          ['คลังวิดีโอ', `${basePath}videos.html`],
           ['RSS ข่าวสาร', `${basePath}rss.html`],
         ]
       },
@@ -437,12 +435,11 @@ const megaMenuData = {
     title: 'บริการวิชาการ',
     image: 'knowledge',
     description: 'พจนานุกรม ฐานข้อมูลภาษาไทย คลังความรู้ และงานบริการออนไลน์ของสำนักงาน',
-    featured: ['ดูทั้งหมดในหมวด', `${basePath}services.html`],
     groups: [
       {
         heading: 'ฐานข้อมูลและคลังความรู้',
         links: [
-          ['พจนานุกรม', `${basePath}dictionary.html`],
+          ['พจนานุกรม', 'https://dictionary.orst.go.th/'],
           ['ศัพท์บัญญัติ', 'https://coined-word.orst.go.th/'],
           ['สารานุกรมและอนุกรมวิธาน', 'https://lst.nectec.or.th/encyclopedia/'],
           ['คลังเอกสารเก่า', 'https://da3.thaidlt.org/'],
@@ -597,7 +594,7 @@ function renderDesktopNav(active) {
 
     if (hasMega) {
       return `
-        <a class="${classes}" href="${href}" data-mega="${key}" aria-haspopup="true" aria-expanded="false">
+        <a class="${classes}" href="${href || '#'}" data-mega="${key}"${href ? '' : ' data-no-hub role="button"'} aria-haspopup="true" aria-expanded="false">
           ${label}<span class="nav-caret" aria-hidden="true">
   <svg viewBox="0 0 20 20">
     <path d="M5.5 7.5 10 12l4.5-4.5"></path>
@@ -950,7 +947,7 @@ function renderFooter() {
 
           <nav class="orst-footer-col orst-footer-col--menu" aria-label="เมนูหลักในรูปแบบข้อความ">
             ${colHead('เมนูหลัก', 'Text Menu')}
-            <ul>${links(navItems.map(([, label, href]) => [label, href]))}</ul>
+            <ul>${links(navItems.map(([key, label, href]) => [label, href || megaMenuData[key]?.groups[0]?.links[0]?.[1]]).filter(([, href]) => href))}</ul>
           </nav>
 
           <nav class="orst-footer-col" aria-label="ข้อมูลเว็บไซต์และนโยบาย">
@@ -1077,7 +1074,8 @@ function initMegaMenu() {
       // อุปกรณ์ที่มีเมาส์: เมนูใหญ่เปิดเองตอนชี้อยู่แล้ว การคลิกชื่อหมวดจึงพาไปหน้าหมวดนั้นตามปกติ
       // จอสัมผัส (ไม่มี hover): แตะครั้งแรกเปิดเมนูใหญ่ แตะชื่อหมวดซ้ำขณะเมนูเปิดอยู่จึงไปหน้าหมวด
       const canHover = window.matchMedia('(hover: hover)').matches;
-      if (canHover || (!mega.hidden && currentKey === key)) return;
+      // หมวดที่ไม่มีหน้าหมวด (data-no-hub): คลิกแล้วเปิด/ปิดเมนูใหญ่เสมอ ไม่พาไปไหน
+      if (!('noHub' in link.dataset) && (canHover || (!mega.hidden && currentKey === key))) return;
 
       event.preventDefault();
       clearTimeout(closeTimer);
@@ -1218,7 +1216,7 @@ function initSharedSearch() {
   const sampleResults = [
     ['พจนานุกรมออนไลน์', 'ค้นความหมายและการใช้คำภาษาไทย', `${basePath}dictionary.html`],
     ['คลังองค์ความรู้', 'บทความ วารสาร เอกสาร และองค์ความรู้สำหรับประชาชน', `${basePath}knowledge.html`],
-    ['บริการวิชาการ', 'สอบถามข้อมูลทางวิชาการและติดตามสถานะ', `${basePath}services.html`]
+    ['บริการวิชาการ', 'สอบถามข้อมูลทางวิชาการและติดตามสถานะ', `${basePath}e-services.html`]
   ];
 
   form.addEventListener('submit', event => {
@@ -1283,7 +1281,7 @@ function initNewsEventsTabs() {
   // หน้ารายการข่าวของแต่ละแท็บ (ข่าวในแท็บ "อบรม" มาจากทั้งข่าวประชาสัมพันธ์และข่าวกิจกรรม จึงชี้ไปหน้ารวมข่าว)
   const links = {
     news: `${basePath}general-news.html`,
-    training: `${basePath}news.html`,
+    training: `${basePath}academic-lectures.html`,
     event: `${basePath}activity-news.html`,
     announcement: `${basePath}general-news.html`
   };
@@ -1440,7 +1438,8 @@ function initDocLists() {
       views.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.docView === v)));
     };
     const viewKey = list.dataset.viewKey || 'doc-view';   // แยกค่าที่จำไว้ของแต่ละชนิดรายการ (ข่าว / ภาพ)
-    if (views.length) setView(store.get(viewKey) === 'list' ? 'list' : 'grid');
+    const saved = store.get(viewKey);
+    if (views.length) setView(saved === 'list' || saved === 'grid' ? saved : (list.dataset.viewDefault || 'grid'));
     views.forEach(b => b.addEventListener('click', () => { setView(b.dataset.docView); store.set(viewKey, b.dataset.docView); }));
 
     function renderPager(total) {
@@ -1554,6 +1553,10 @@ function initLightbox() {
         </span>
       </div>
       <div class="lightbox-stage"><img alt=""></div>
+      <div class="lightbox-foot">
+        <p class="lightbox-caption" data-lb-caption hidden></p>
+        <div class="lightbox-thumbs" data-lb-thumbs hidden></div>
+      </div>
       <button type="button" class="lightbox-prev" data-lb-step="-1" aria-label="ภาพก่อนหน้า">‹</button>
       <button type="button" class="lightbox-next" data-lb-step="1" aria-label="ภาพถัดไป">›</button>`;
     document.body.appendChild(box);
@@ -1569,6 +1572,11 @@ function initLightbox() {
     box.show = (a) => {
       group = [...document.querySelectorAll(`a[data-lightbox="${CSS.escape(a.dataset.lightbox)}"]`)];
       index = group.indexOf(a); opener = a;
+      // แถบภาพย่อ (เมื่อมีตั้งแต่ 2 ภาพ) — ใช้รูปย่อในหน้าเดิม ไม่โหลดภาพเต็มทั้งหมด
+      const strip = box.querySelector('[data-lb-thumbs]');
+      strip.innerHTML = group.length > 1 ? group.map((g, i) => `<button type="button" data-lb-go="${i}" aria-label="ภาพที่ ${i + 1}"><img src="${g.querySelector('img')?.currentSrc || g.querySelector('img')?.src || g.href}" alt=""></button>`).join('') : '';
+      strip.hidden = group.length < 2;
+      strip.querySelectorAll('[data-lb-go]').forEach(t => t.addEventListener('click', () => { index = Number(t.dataset.lbGo); box.render(); }));
       box.hidden = false;
       document.documentElement.classList.add('drawer-lock');
       box.render();
@@ -1577,11 +1585,21 @@ function initLightbox() {
     box.render = () => {
       const a = group[index];
       const img = box.querySelector('img');
+      const stage = box.querySelector('.lightbox-stage');
+      stage.classList.add('is-loading');
+      img.onload = img.onerror = () => stage.classList.remove('is-loading');
       img.src = a.href;
       img.alt = a.querySelector('img')?.alt || '';
       box.querySelector('[data-lb-open]').href = a.href;
       box.querySelector('[data-lb-count]').textContent = group.length > 1 ? `ภาพที่ ${index + 1} จาก ${group.length}` : '';
       box.querySelectorAll('[data-lb-step]').forEach(b => { b.hidden = group.length < 2; });
+      const cap = box.querySelector('[data-lb-caption]');
+      cap.textContent = a.dataset.lbCaption || '';
+      cap.hidden = !cap.textContent;
+      box.querySelectorAll('[data-lb-go]').forEach((t, i) => {
+        t.setAttribute('aria-current', String(i === index));
+        if (i === index) t.scrollIntoView({ block: 'nearest', inline: 'center' });
+      });
     };
     box.step = d => { if (group.length < 2) return; index = (index + d + group.length) % group.length; box.render(); };
     box.close = () => { box.hidden = true; document.documentElement.classList.remove('drawer-lock'); opener?.focus(); };
@@ -1604,7 +1622,7 @@ function initLightbox() {
 function initDocPreview() {
   const btns = [...document.querySelectorAll('[data-doc-preview]')].filter(b => b.dataset.dpBound !== '1');
   if (!btns.length) return;
-  if (navigator.pdfViewerEnabled === false) return;   // ปุ่มซ่อนอยู่แล้ว (hidden) — คงไว้แบบนั้น
+  if (navigator.pdfViewerEnabled === false) return;   // ปุ่มแบบ <button> ซ่อนอยู่แล้ว · แบบลิงก์ <a> เปิดแท็บใหม่ตามปกติ
 
   let box = document.getElementById('doc-preview');
   if (!box) {
@@ -1624,7 +1642,10 @@ function initDocPreview() {
           <button type="button" class="doc-preview-close" data-dp-close aria-label="ปิดตัวอย่างเอกสาร">${icon('i-x')}</button>
         </div>
         <div class="doc-preview-stage">
-          <p class="doc-preview-loading" aria-hidden="true">กำลังโหลดเอกสาร…</p>
+          <div class="doc-preview-loading" aria-hidden="true">
+            <div class="doc-skel-page"><span class="skel skel-line is-40"></span><span class="skel skel-line is-90"></span><span class="skel skel-line is-90"></span><span class="skel skel-line is-70"></span><span class="skel skel-block"></span><span class="skel skel-line is-90"></span><span class="skel skel-line is-90"></span><span class="skel skel-line is-50"></span></div>
+            <p>กำลังโหลดเอกสาร…</p>
+          </div>
           <iframe title="ตัวอย่างเอกสาร" src="about:blank"></iframe>
         </div>
       </div>`;
@@ -1636,6 +1657,9 @@ function initDocPreview() {
       box.querySelector('#doc-preview-title').textContent = btn.dataset.docTitle || 'เอกสาร';
       box.querySelector('[data-dp-open]').href = btn.dataset.docPreview;
       frame.title = `ตัวอย่างเอกสาร: ${btn.dataset.docTitle || ''}`;
+      const stage = box.querySelector('.doc-preview-stage');
+      stage.classList.add('is-loading');
+      frame.onload = () => { if (frame.src !== 'about:blank') stage.classList.remove('is-loading'); };
       frame.src = `${btn.dataset.docPreview}#view=FitH`;
       box.hidden = false;
       document.documentElement.classList.add('drawer-lock');
@@ -1662,7 +1686,11 @@ function initDocPreview() {
   btns.forEach(b => {
     b.dataset.dpBound = '1';
     b.hidden = false;
-    b.addEventListener('click', () => box.show(b));
+    b.addEventListener('click', e => {
+      if (b.tagName === 'A' && (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1)) return;   // เปิดแท็บใหม่ตามปกติ
+      e.preventDefault();
+      box.show(b);
+    });
   });
 }
 
@@ -1953,6 +1981,8 @@ function initComponents() {
   initMediaTabs();
   initCompactFAQ();
   initNewsEventsTabs();
+  initPageTransitions();
+  initImageSkeletons();
   initSharedAccessibility();
   initFixedHeader();
   initScrollTop();
@@ -2010,6 +2040,44 @@ function initFaqTools() {
 }
 
 /* ปฏิทินกิจกรรม (block event-calendar): ปุ่มกรองตามหน่วยงาน — ซ่อนกิจกรรม/หัวเดือนที่ไม่ตรง */
+/* รูปย่อในการ์ด/อัลบั้ม: แสดงพื้นวิบวับ (skeleton) จนกว่ารูปโหลดเสร็จ แล้วค่อย ๆ แสดงรูป */
+const IMG_SKEL = '.block-media-thumb, .news-row-thumb, .album-photo, .block-card-media, .person-photo, .article-hero-media';
+function initImageSkeletons(root = document) {
+  root.querySelectorAll(IMG_SKEL).forEach(box => {
+    const img = box.querySelector('img');
+    if (!img || box.dataset.skel) return;
+    box.dataset.skel = '1';
+    const done = () => box.classList.add('img-ready');
+    if (img.complete && img.naturalWidth) { done(); return; }
+    box.classList.add('img-skel');
+    img.addEventListener('load', done, { once: true });
+    img.addEventListener('error', done, { once: true });
+  });
+}
+
+/* เปลี่ยนหน้า: กดลิงก์ภายในเว็บ → แถบความคืบหน้าด้านบน + เนื้อหาจางลง (เว็บเป็นหลายหน้า โหลดใหม่ทุกครั้ง)
+   ไม่ทำกับลิงก์ที่ตัวอื่นจัดการแล้ว (preventDefault) แท็บใหม่ ดาวน์โหลด หรือ #anchor ในหน้าเดียวกัน */
+function initPageTransitions() {
+  if (document.documentElement.dataset.navBound) return;
+  document.documentElement.dataset.navBound = '1';
+  const bar = document.createElement('div');
+  bar.className = 'nav-progress';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  const reset = () => document.documentElement.classList.remove('is-leaving');
+  document.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    const a = e.target.closest('a[href]');
+    if (!a || a.target === '_blank' || a.hasAttribute('download')) return;
+    const url = new URL(a.href, location.href);
+    if (url.origin !== location.origin || !/^https?:$/.test(url.protocol)) return;
+    if (url.pathname === location.pathname && url.search === location.search) return;   // #anchor ในหน้าเดิม
+    document.documentElement.classList.add('is-leaving');
+  });
+  window.addEventListener('pageshow', reset);   // กลับมาด้วยปุ่มย้อนกลับ (bfcache)
+  window.addEventListener('pagehide', () => setTimeout(reset, 0));
+}
+
 function initEventFilters() {
   document.querySelectorAll('[data-evcal-filter]').forEach(bar => {
     if (bar.dataset.bound === '1') return;
@@ -2216,6 +2284,7 @@ window.orstHeader = {
     initNewsEventsTabs();
     initEventFilters();
     initFaqTools();
+    initImageSkeletons();
     syncFixedHeaderHeight();
   },
 };

@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "การปฏิบัติราชการ",
-          "href": "operations.html"
+          "label": "การปฏิบัติราชการ"
         },
         {
           "label": "นโยบายและแผนด้านข้อมูล (ธรรมาภิบาลข้อมูล การเปิดเผยข้อมูล และการคุ้มครองข้อมูลส่วนบุคคล)"
@@ -31,7 +30,7 @@
         {
           "title": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล สำนักงานราชบัณฑิตยสภา",
           "publishedAt": "2022-10-18",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001420.PDF"
         }
       ]
     }

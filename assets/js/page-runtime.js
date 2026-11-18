@@ -63,7 +63,7 @@ function showNotFound(mount) {
         <div class="block-notice is-info" role="alert">
           <div>
             <strong>ไม่พบข่าวที่ต้องการ</strong>
-            <p>ข่าวนี้อาจถูกย้ายหรือลบแล้ว <a href="news.html">ดูข่าวสารและกิจกรรมทั้งหมด</a></p>
+            <p>ข่าวนี้อาจถูกย้ายหรือลบแล้ว <a href="general-news.html">ดูข่าวสารและกิจกรรมทั้งหมด</a></p>
           </div>
         </div>
       </div>
@@ -90,6 +90,35 @@ function applyMeta(page) {
   }
 }
 
+/* โครงร่างหน้า (loading skeleton) ระหว่างโหลด JSON — hero + แถบเครื่องมือ + การ์ด 6 ใบ
+   แทนที่ด้วยเนื้อหาจริง (หรือข้อความผิดพลาด) ทันทีที่โหลดเสร็จ */
+function skeletonHTML() {
+  const card = `
+        <div class="skel-card">
+          <span class="skel skel-thumb"></span>
+          <span class="skel skel-line is-90"></span>
+          <span class="skel skel-line is-70"></span>
+          <span class="skel skel-line is-40 is-thin"></span>
+        </div>`;
+  return `
+    <div class="skel-page" role="status" aria-live="polite">
+      <span class="sr-only">กำลังโหลดเนื้อหา…</span>
+      <section class="skel-hero" aria-hidden="true">
+        <div class="container">
+          <span class="skel skel-crumb"></span>
+          <span class="skel skel-h1"></span>
+          <span class="skel skel-lead"></span>
+          <span class="skel skel-lead is-short"></span>
+        </div>
+      </section>
+      <div class="container skel-body" aria-hidden="true">
+        <div class="skel-toolbar"><span class="skel skel-search"></span><span class="skel skel-pill"></span><span class="skel skel-pill"></span></div>
+        <div class="skel-grid">${card.repeat(6)}
+        </div>
+      </div>
+    </div>`;
+}
+
 async function main() {
   await ready();
 
@@ -97,9 +126,15 @@ async function main() {
   if (!mount) return;
 
   const en = window.orstI18n?.lang === 'en';
+  // จะโหลดเนื้อหาใหม่ (ยังไม่มีเนื้อหา หรือโหมดภาษาอังกฤษ) — แสดงโครงร่างไว้ก่อน ไม่ให้หน้าว่าง/กระพริบเป็นภาษาไทย
+  const prerendered = mount.children.length > 0;
+  if (!(prerendered && !en)) {
+    mount.setAttribute('aria-busy', 'true');
+    mount.innerHTML = skeletonHTML();
+  }
   // ถ้าเนื้อหาถูกใส่มาแล้วตั้งแต่ฝั่งเซิร์ฟเวอร์ (ผลจาก node tools/build.mjs = ภาษาไทย)
   // ภาษาไทย: ไม่ต้อง fetch ซ้ำ แค่ผูก event ให้ block ที่ต้องใช้ JS ก็พอ · ภาษาอังกฤษ: โหลดเนื้อหาอังกฤษมาแทน
-  if (mount.children.length > 0 && !en) {
+  if (prerendered && !en) {
     window.orstHeader?.bindDynamicContent?.();
     return;
   }
@@ -140,7 +175,7 @@ async function main() {
   try {
     await resolveSources(page, async p => (window.orstI18n
       ? (await window.orstI18n.fetchJSON(p)).data
-      : await fetch(p, { cache: 'no-cache' }).then(r => r.json())));
+      : await fetch(p, { cache: 'no-cache' }).then(r => r.json())), { id: new URLSearchParams(location.search).get('id') || '' });
   } catch (error) {
     console.warn('[ORST] โหลดรายการจากแหล่งกลางไม่สำเร็จ', error);
   }
@@ -156,6 +191,8 @@ async function main() {
   const nav = await (window.orstI18n ? window.orstI18n.fetchJSON('content/site-nav.json').then(r => r.data) : fetch('content/site-nav.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null)).catch(() => null);
   const slug = path.split('/').pop().replace(/\.json$/, '');
   mount.innerHTML = renderPage(page, nav, slug);
+  mount.removeAttribute('aria-busy');
+  mount.classList.add('is-loaded');
   if (!translated) {
     mount.insertAdjacentHTML('afterbegin', `
     <div class="lang-notice" role="note" lang="en" data-i18n-skip><div class="container">

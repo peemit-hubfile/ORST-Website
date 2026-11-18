@@ -4,7 +4,6 @@
     {
       "key": "about",
       "title": "About Us",
-      "href": "about.html",
       "groups": [
         {
           "heading": "Executives",
@@ -115,7 +114,6 @@
     {
       "key": "operations",
       "title": "Operations",
-      "href": "operations.html",
       "groups": [
         {
           "heading": "Plans",
@@ -241,7 +239,6 @@
     {
       "key": "news",
       "title": "News and Activities",
-      "href": "news.html",
       "groups": [
         {
           "heading": "Press Releases",
@@ -267,8 +264,12 @@
               "href": "qa.html"
             },
             {
-              "title": "Photos & Videos",
+              "title": "Photo Gallery",
               "href": "media-gallery.html"
+            },
+            {
+              "title": "Video Gallery",
+              "href": "videos.html"
             },
             {
               "title": "RSS Feed",
@@ -326,7 +327,6 @@
     {
       "key": "services",
       "title": "Academic Services",
-      "href": "services.html",
       "groups": [
         {
           "heading": "Academic Services",

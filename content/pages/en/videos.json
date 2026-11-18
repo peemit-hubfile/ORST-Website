@@ -1,27 +1,26 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "วิดีโอจากช่อง YouTube ของสำนักงานราชบัณฑิตยสภา (ชุดเดียวกับหน้าแรก) รูปย่อเก็บใน assets/images/orst/video — เพิ่มวิดีโอใหม่: ใส่ youtube (รหัสวิดีโอ) + image + title + tag",
-  "title": "Knowledge Videos",
-  "navKey": "knowledge",
-  "description": "Academic forums, training sessions and videos of the Office of the Royal Society",
+  "title": "Video Gallery",
+  "navKey": "news",
+  "description": "Lectures, forums and activities of the Office of the Royal Society on video. Select a video to watch it on this page",
   "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Knowledge Videos",
-      "image": "assets/images/orst/news/data0005-00005462-960.jpg",
-      "lead": "Academic forums, training sessions and videos of the Office of the Royal Society. Click a video to watch it on this page.",
+      "heading": "Video Gallery",
+      "image": "assets/images/orst/news/data0005-00005024-960.jpg",
+      "lead": "Lectures, forums and activities of the Office of the Royal Society on video. Select a video to watch it on this page",
       "breadcrumb": [
         {
           "label": "Home",
           "href": "index.html"
         },
         {
-          "label": "Knowledge Repository",
-          "href": "knowledge.html"
+          "label": "News and Activities"
         },
         {
-          "label": "Knowledge Videos"
+          "label": "Video Gallery"
         }
       ]
     },
@@ -75,7 +74,12 @@
           "title": "Approaches to Solving the Problems of Children, Youth and Communities",
           "tag": "Video"
         }
-      ]
+      ],
+      "heading": "All videos",
+      "action": {
+        "label": "YouTube channel",
+        "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+      }
     },
     {
       "type": "cta-band",

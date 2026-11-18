@@ -14,7 +14,7 @@
   step7_calendar.py       กิจกรรมจริงจาก Google Calendar ของหน่วยงาน -> content/events.json (ปฏิทินหน้าแรก)
   step9_about.py          หน้าที่ยังขาดในหมวด 3 (CIO / บุคลากร 3 หน้า) — รันก่อน step6
   step10_operations.py    หมวด 4 เรียงตามผังเว็บไซต์ + หน้าที่ยังขาด 13 หน้า — รันก่อน step6
-  step11_news.py          หมวด 5 คลังภาพและวิดีโอ + RSS ข่าวสาร — รันก่อน step6
+  step11_news.py          หมวด 5 คลังภาพ + RSS ข่าวสาร — รันก่อน step6
   step12_services.py      หมวด 6 รายการ 6.1-6.20 + หน้าที่ยังขาด 7 หน้า — รันก่อน step6
   step13_contact.py       หมวด 7 ติดต่อเรา: ร้องเรียน / แบบสำรวจเว็บไซต์ / Social Media — รันก่อน step6
   step14_footer.py        FOOTER: เว็บลิงก์ / Privacy / Cookies / Accessibility — รันก่อน step6

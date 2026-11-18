@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About Us",
-          "href": "about.html"
+          "label": "About Us"
         },
         {
           "label": "HR Annual Report"
@@ -31,22 +30,22 @@
         {
           "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2025",
           "publishedAt": "2026-03-25",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F69FXN5828003"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002053.PDF"
         },
         {
           "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2024",
           "publishedAt": "2025-04-02",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F68DBK3237075"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001837.PDF"
         },
         {
           "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2023",
           "publishedAt": "2024-03-21",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67CUP0140056"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000221.PDF"
         },
         {
           "title": "Human Resource Management and Development Report, fiscal year 2021 (revised)",
           "publishedAt": "2022-04-28",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000603001006%2F65D%23G2526008"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001332.PDF"
         }
       ]
     },

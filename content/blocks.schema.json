@@ -99,7 +99,8 @@
             { "$ref": "#/definitions/share" },
             { "$ref": "#/definitions/newsMedia" },
             { "$ref": "#/definitions/newsRelated" },
-            { "$ref": "#/definitions/eventCalendar" }
+            { "$ref": "#/definitions/eventCalendar" },
+            { "$ref": "#/definitions/photoAlbum" }
           ]
         }
       ]
@@ -370,6 +371,21 @@
         }
       },
       "required": ["type", "items"]
+    },
+
+    "photoAlbum": {
+      "description": "หน้าอัลบั้มภาพ (album.html?id=<id>) — ภาพทั้งหมดของข่าวหนึ่งเรื่อง + lightbox มีแถบภาพย่อ",
+      "properties": {
+        "type": { "const": "photo-album" },
+        "backHref": { "type": "string", "description": "ปุ่มย้อนกลับ (ค่าเริ่มต้น media-gallery.html)" },
+        "backLabel": { "type": "string" },
+        "source": {
+          "type": "object",
+          "properties": { "type": { "const": "album" }, "id": { "type": "string", "description": "รหัสข่าว ไม่ใส่ = ใช้ ?id= จาก URL" } },
+          "required": ["type"]
+        }
+      },
+      "required": ["type", "source"]
     },
 
     "eventCalendar": {

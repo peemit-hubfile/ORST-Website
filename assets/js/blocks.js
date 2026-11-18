@@ -118,7 +118,7 @@ function pageHero(b) {
     ? `<nav class="block-breadcrumb" aria-label="เส้นทางหน้า">${b.breadcrumb.map((c, i, arr) =>
         i === arr.length - 1
           ? `<span aria-current="page">${esc(c.label)}</span>`
-          : `<a href="${esc(c.href || '#')}">${esc(c.label)}</a>`
+          : c.href ? `<a href="${esc(c.href)}">${esc(c.label)}</a>` : `<span>${esc(c.label)}</span>`
       ).join(`<span class="crumb-sep" aria-hidden="true">${icon('i-chevron')}</span>`)}</nav>`
     : '';
   const media = b.image
@@ -175,8 +175,8 @@ function pageHero(b) {
     </section>`;
   }
   return `
-    <section class="page-hero${b.image ? ' has-image' : ''}"${attr('id', b.id)}>
-      ${media}
+    <section class="page-hero${b.image ? ' has-image' : ' is-plain'}"${attr('id', b.id)}>
+      ${media || '<span class="page-hero-mark" aria-hidden="true"></span>'}
       <div class="container">
         ${crumbs}
         ${b.eyebrow ? `<span class="block-eyebrow"${langAttr(b.eyebrow)}>${esc(b.eyebrow)}</span>` : ''}
@@ -671,6 +671,59 @@ function newsCover(it, d) {
               </span>`;
 }
 
+/* ---------- Block: photo-album  (หน้าอัลบั้มภาพ album.html?id=<id>) ---------- */
+/* ภาพทั้งหมดของข่าวหนึ่งเรื่อง กดแล้วเปิดดูภาพเต็มพร้อมแถบภาพย่อ (lightbox)
+   { type, id?, source: { type: "album", id? }, backHref?, backLabel? }
+   source.id ไม่ใส่ = ใช้ ?id= จาก URL · ข้อมูลเติมให้ใน b.album โดย content-sources.js            */
+function photoAlbum(b) {
+  const back = b.backHref || 'media-gallery.html';
+  const backLabel = b.backLabel || 'อัลบั้มทั้งหมด';
+  const al = b.album;
+  if (!al) {
+    return `
+    <section class="section album-section"${attr('id', b.id)}>
+      <div class="container">
+        <div class="album-missing">
+          ${icon('i-grid', 'icon album-missing-icon')}
+          <h2>ไม่พบอัลบั้มภาพนี้</h2>
+          <p>อัลบั้มอาจถูกย้ายหรือลบไปแล้ว เลือกดูอัลบั้มอื่นได้จากคลังภาพ</p>
+          <a class="album-btn is-primary" href="${esc(back)}">${esc(backLabel)}</a>
+        </div>
+      </div>
+    </section>`;
+  }
+  const group = `album-${esc(al.id)}`;
+  const photos = al.images.map((im, i) => {
+    const full = im.href || im.image;
+    const cap = im.caption || '';
+    return `
+          <a class="album-photo" href="${esc(full)}" data-lightbox="${group}"${cap ? ` data-lb-caption="${esc(cap)}"` : ''}>
+            <img src="${esc(im.image)}" alt="${esc(im.alt || `${al.title} ภาพที่ ${i + 1}`)}" loading="${i < 8 ? 'eager' : 'lazy'}">
+          </a>`;
+  }).join('');
+  return `
+    <section class="section album-section"${attr('id', b.id)}>
+      <div class="container">
+        <header class="album-head">
+          <div class="album-head-text">
+            <h2 class="album-title">${esc(al.title)}</h2>
+            <p class="album-meta">
+              ${al.tag ? `<span class="album-tag">${esc(al.tag)}</span>` : ''}
+              ${al.date ? `<span>${icon('i-calendar')}<time datetime="${esc(al.date)}">${esc(formatThaiDate(al.date, true))}</time></span>` : ''}
+              <span>${icon('i-grid')}${al.images.length} ภาพ</span>
+            </p>
+          </div>
+          <div class="album-actions">
+            <a class="album-btn" href="${esc(back)}">${icon('i-arrow', 'icon is-back')}<span>${esc(backLabel)}</span></a>
+            <a class="album-btn is-primary" href="${esc(al.newsHref)}"><span>อ่านข่าว</span>${icon('i-arrow')}</a>
+          </div>
+        </header>
+        <div class="album-grid">${photos}
+        </div>
+      </div>
+    </section>`;
+}
+
 /* ---------- Block: event-calendar  (ปฏิทินกิจกรรม) ---------- */
 /* ซ้าย: รายการกิจกรรม (จาก content/events.json ผ่าน "source": { "type": "events" } หรือ items เอง)
    ขวา: ปฏิทินออนไลน์ฝัง (Google Calendar) — จอแคบใช้มุมมองกำหนดการ (agenda) ที่อ่านบนมือถือได้
@@ -842,8 +895,8 @@ function documentList(b) {
               </div>
               ${type === 'PDF' && url ? `
               <div class="news-row-foot news-row-foot--doc">
-                <button type="button" class="doc-btn is-primary" data-doc-preview="${esc(url)}" data-doc-title="${esc(it.title)}" hidden>${icon('i-eye')}<span>ดูตัวอย่าง</span><span class="sr-only"> ${esc(it.title)}</span></button>
-                <a class="doc-btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${icon('i-external')}<span>เปิดเอกสาร</span></a>
+                <a class="doc-btn is-primary" href="${esc(url)}" target="_blank" rel="noopener noreferrer" data-doc-preview="${esc(url)}" data-doc-title="${esc(it.title)}">${icon('i-eye')}<span>เปิดเอกสาร</span><span class="sr-only"> ${esc(it.title)}</span></a>
+                <a class="doc-btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" download>${icon('i-download')}<span>ดาวน์โหลด</span><span class="sr-only"> ${esc(it.title)}</span></a>
               </div>` : `
               <div class="news-row-foot">
                 ${it.category ? `<span class="news-row-type">${esc(it.category)}</span>` : '<span></span>'}
@@ -852,10 +905,9 @@ function documentList(b) {
             </li>`;
     }
     if (type === 'PDF' && url) {
-      // PDF: ป้าย PDF + ชนิด/ขนาด/โดเมนในบรรทัดรอง + ปุ่ม "ดูตัวอย่าง" (เปิดในหน้าต่างซ้อน) และ "เปิดเอกสาร" (แท็บใหม่)
-      // ปุ่มดูตัวอย่างทำงานผ่าน initDocPreview() ใน components.js — เบราว์เซอร์ที่แสดง PDF ในหน้าไม่ได้จะซ่อนปุ่มนี้
-      const host = isExternal(url) ? String(url).replace(/^https?:\/\//i, '').split(/[/?#]/)[0].replace(/^www\./, '') : '';
-      const fileMeta = [type, size, host ? `<span lang="en">${esc(host)}</span>` : ''].filter(Boolean).join('<span aria-hidden="true"> · </span>');
+      // PDF: ป้าย PDF + ชนิด/ขนาดไฟล์ในบรรทัดรอง + ปุ่ม "เปิดเอกสาร" (หน้าต่างซ้อน) และ "ดาวน์โหลด"
+      // "เปิดเอกสาร" เป็นลิงก์ — initDocPreview() ใน components.js เปิดในหน้าต่างซ้อน เบราว์เซอร์ที่แสดง PDF ในหน้าไม่ได้จะเปิดแท็บใหม่ตามลิงก์
+      const fileMeta = [type, size].filter(Boolean).join('<span aria-hidden="true"> · </span>');
       return `
             <li class="doc-item is-pdf"${attr('data-year', it._year)}${attr('data-cat', it.category)}>
               <span class="doc-icon doc-icon-pdf" aria-hidden="true">${icon('i-file')}<b>PDF</b></span>
@@ -865,20 +917,26 @@ function documentList(b) {
                 ${it.note ? `<p class="doc-note">${esc(it.note)}</p>` : ''}
               </div>
               <div class="doc-actions">
-                <button type="button" class="doc-btn is-primary" data-doc-preview="${esc(url)}" data-doc-title="${esc(it.title)}" hidden>${icon('i-eye')}<span>ดูตัวอย่าง</span><span class="sr-only"> ${esc(it.title)}</span></button>
-                <a class="doc-btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${icon('i-external')}<span>เปิดเอกสาร</span></a>
+                <a class="doc-btn is-primary" href="${esc(url)}" target="_blank" rel="noopener noreferrer" data-doc-preview="${esc(url)}" data-doc-title="${esc(it.title)}">${icon('i-eye')}<span>เปิดเอกสาร</span><span class="sr-only"> ${esc(it.title)}</span></a>
+                <a class="doc-btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" download>${icon('i-download')}<span>ดาวน์โหลด</span><span class="sr-only"> ${esc(it.title)}</span></a>
               </div>
             </li>`;
     }
+    // ไม่ใช่ PDF: โครงเดียวกับแถว PDF (ป้ายชนิด + ปุ่มด้านขวา) — ลิงก์ไปหน้าอื่น = "เปิดลิงก์" · ไฟล์ชนิดอื่น = "เปิดไฟล์" · ไม่มีไฟล์ = ไม่มีปุ่ม
+    const badge = type || (url ? 'ลิงก์' : '');
+    const fileMeta = [type, size].filter(Boolean).map(esc).join('<span aria-hidden="true"> · </span>');
+    const go = url ? (type ? 'เปิดไฟล์' : 'เปิดลิงก์') : '';
     return `
-            <li class="doc-item"${attr('data-year', it._year)}${attr('data-cat', it.category)}>
-              <span class="doc-icon" aria-hidden="true">${icon('i-file')}</span>
+            <li class="doc-item is-file${url ? '' : ' is-empty'}"${attr('data-year', it._year)}${attr('data-cat', it.category)}>
+              <span class="doc-icon doc-icon-pdf doc-icon-file" aria-hidden="true">${icon('i-file')}${badge ? `<b>${esc(badge)}</b>` : ''}</span>
               <div class="doc-body">
                 ${title}
-                ${meta ? `<div class="doc-meta">${meta}</div>` : ''}
+                ${meta || fileMeta ? `<div class="doc-meta">${[meta, fileMeta].filter(Boolean).join('<span aria-hidden="true"> · </span>')}</div>` : ''}
                 ${it.note ? `<p class="doc-note">${esc(it.note)}</p>` : ''}
               </div>
-              ${type || size ? `<span class="doc-file" aria-hidden="true">${[type, size].filter(Boolean).map(esc).join(' · ')}</span>` : ''}
+              ${url ? `<div class="doc-actions">
+                <a class="doc-btn is-primary" href="${esc(url)}"${newTab ? ' target="_blank" rel="noopener noreferrer"' : ''} tabindex="-1" aria-hidden="true">${icon(newTab ? 'i-external' : 'i-arrow')}<span>${go}</span></a>
+              </div>` : ''}
             </li>`;
   }).join('');
 
@@ -907,31 +965,40 @@ function documentList(b) {
               </div>
             </div>
           </form>`;
-  const toolbar = compact ? '' : news ? newsToolbar : `
-          <form class="doc-toolbar" data-doc-toolbar hidden role="search" aria-label="${news ? 'ค้นหาข่าว' : 'ค้นหาเอกสาร'}">
-            <label class="doc-field doc-field-search">
-              <span>${news ? 'ค้นหาข่าว' : 'ค้นหาชื่อเอกสาร'}</span>
-              <input type="search" data-doc-search placeholder="พิมพ์คำค้น" autocomplete="off">
-            </label>
-            ${years.length > 1 ? `<label class="doc-field">
-              <span>${yearLabel}</span>
-              <select data-doc-year>
-                <option value="">ทุกปี</option>
-                ${years.map(y => `<option value="${esc(y)}">${esc(thaiNum(y))}</option>`).join('')}
-              </select>
-            </label>` : ''}
-            ${cats.length > 1 ? `<label class="doc-field">
-              <span>หมวด</span>
-              <select data-doc-cat>
-                <option value="">ทุกหมวด</option>
-                ${cats.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('')}
-              </select>
-            </label>` : ''}
+  // รายการเอกสาร: แถบค้นหาแบบเดียวกับหน้าข่าว + สลับมุมมอง รายการ (ค่าเริ่มต้น) / ตาราง
+  const docsToolbar = `
+          <form class="doc-toolbar is-news is-docs" data-doc-toolbar hidden role="search" aria-label="ค้นหาเอกสาร">
+            <div class="doc-tools">
+              <label class="doc-search-pill">
+                ${icon('i-search')}
+                <span class="sr-only">ค้นหาชื่อเอกสาร</span>
+                <input type="search" data-doc-search placeholder="ค้นหาชื่อเอกสาร" autocomplete="off">
+              </label>
+              ${years.length > 1 ? `<label class="doc-year-pill">
+                <span class="sr-only">${yearLabel}</span>
+                <select data-doc-year>
+                  <option value="">ทุก${yearLabel}</option>
+                  ${years.map(y => `<option value="${esc(y)}">${yearLabel === 'ปีงบประมาณ' ? 'ปีงบ ' : ''}${esc(thaiNum(y))}</option>`).join('')}
+                </select>
+              </label>` : ''}
+              ${cats.length > 1 ? `<label class="doc-year-pill">
+                <span class="sr-only">หมวด</span>
+                <select data-doc-cat>
+                  <option value="">ทุกหมวด</option>
+                  ${cats.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('')}
+                </select>
+              </label>` : ''}
+              <div class="doc-view" role="group" aria-label="รูปแบบการแสดงผล">
+                <button type="button" data-doc-view="list" aria-pressed="true">${icon('i-list')}<span>รายการ</span></button>
+                <button type="button" data-doc-view="grid" aria-pressed="false">${icon('i-grid')}<span>ตาราง</span></button>
+              </div>
+            </div>
           </form>`;
+  const toolbar = compact ? '' : news ? newsToolbar : docsToolbar;
 
   const unit = news ? 'ข่าว' : 'รายการ';
   const pageSize = Number(b.pageSize) || (news ? 12 : 20);
-  return section(b, `<div class="doc-list${compact ? ' is-compact' : ''}${news ? ' is-news' : ''}" data-doc-list data-page-size="${pageSize}" data-unit="${unit}"${news ? ' data-view="grid"' : ''}>${toolbar}
+  return section(b, `<div class="doc-list${compact ? ' is-compact' : ''}${news ? ' is-news' : ''}" data-doc-list data-page-size="${pageSize}" data-unit="${unit}"${news ? ' data-view="grid"' : compact ? '' : ' data-view="list" data-view-default="list" data-view-key="doc-file-view"'}>${toolbar}
           ${compact ? '' : `<p class="doc-count" data-doc-count aria-live="polite">พบ ${items.length} ${unit}</p>`}
           <ul class="doc-items" id="${uid}-items">${rows}
           </ul>
@@ -1175,6 +1242,7 @@ export const BLOCKS = {
   'figure': figure,
   'share': share,
   'event-calendar': eventCalendar,
+  'photo-album': photoAlbum,
 };
 
 export const BLOCK_TYPES = Object.keys(BLOCKS);
@@ -1243,7 +1311,7 @@ function sectionNav(page, nav, slug) {
           <summary>${esc(group.heading)}</summary>
           <nav>
             <ul>${links}</ul>
-            <a class="section-nav-up" href="${esc(sec.href)}">${icon('i-arrow')} ทั้งหมดในหมวด${esc(sec.title)}</a>
+            ${sec.href ? `<a class="section-nav-up" href="${esc(sec.href)}">${icon('i-arrow')} ทั้งหมดในหมวด${esc(sec.title)}</a>` : ''}
           </nav>
         </details>
       </aside>`;

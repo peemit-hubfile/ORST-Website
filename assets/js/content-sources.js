@@ -42,7 +42,17 @@ export function newsItems(index, { channel, limit } = {}) {
 /** เติม items ให้ทุก block ที่มี source — load(path) คืน JSON (เบราว์เซอร์ใช้ fetch, Node ใช้ readFile) */
 export const EVENTS = 'content/events.json';
 
-export async function resolveSources(page, load) {
+/** อัลบั้มภาพจากหน้าข่าว (content/news/<id>.json) — ภาพจาก block news-media */
+export function albumFromNews(id, news) {
+  const blocks = news?.blocks || [];
+  const hero = blocks.find(b => b.type === 'page-hero') || {};
+  const media = blocks.find(b => b.type === 'news-media') || {};
+  const images = (media.images || []).filter(im => im && im.image);
+  if (!images.length) return null;
+  return { id, title: hero.heading || news.title || '', date: hero.date || '', tag: hero.tag || '', images, newsHref: newsUrl(id) };
+}
+
+export async function resolveSources(page, load, params = {}) {
   const blocks = (page?.blocks || []).filter(b => b && b.source);
   const news = blocks.filter(b => b.source.type === 'news');
   if (news.length) {
@@ -54,6 +64,18 @@ export async function resolveSources(page, load) {
   if (events.length) {
     const data = await load(EVENTS);
     for (const b of events) b.items = Array.isArray(data?.events) ? data.events : [];
+  }
+  // อัลบั้มภาพ (album.html?id=<id>) — "source": { "type": "album" } ใช้ id จาก URL หรือ "id" ใน source
+  for (const b of blocks.filter(x => x.source.type === 'album')) {
+    const id = String(b.source.id || params.id || '');
+    b.album = null;
+    if (!/^[a-z0-9-]{1,64}$/i.test(id)) continue;
+    try { b.album = albumFromNews(id, await load(`content/news/${id}.json`)); } catch { b.album = null; }
+    if (b.album && !b.source.id) {
+      page.title = b.album.title;
+      const hero = page.blocks.find(x => x.type === 'page-hero');
+      if (hero) hero.breadcrumb = [...(hero.breadcrumb || []), { label: b.album.title }];
+    }
   }
   return page;
 }

@@ -42,7 +42,7 @@ groups = [{"heading": "หน้าหลักของเว็บไซต์
     {"title": "หน้าหลัก", "href": "index.html"}, {"title": "พจนานุกรมและคำศัพท์", "href": "dictionary.html"},
     {"title": "องค์ความรู้", "href": "knowledge.html"}, {"title": "หนังสือและสิ่งพิมพ์", "href": "publications.html"},
     {"title": "ข่าวสารและกิจกรรม", "href": "news.html"}, {"title": "บริการวิชาการ", "href": "services.html"},
-    {"title": "เกี่ยวกับเรา", "href": "about.html"}, {"title": "การปฏิบัติราชการ", "href": "operations.html"},
+    {"title": "เกี่ยวกับเรา", "href": "about.html"}, {"title": "การปฏิบัติราชการ"},
     {"title": "ติดต่อเรา", "href": "contact.html"}]}]
 groups += index_groups("about", "about.html", "เกี่ยวกับเรา")
 groups += index_groups("operations", "operations.html", "การปฏิบัติราชการ")

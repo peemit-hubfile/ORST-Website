@@ -30,12 +30,12 @@
       ]
     },
     {
-      "type": "article",
-      "id": "content",
-      "toc": false,
-      "sections": [
+      "type": "document-list",
+      "id": "documents",
+      "items": [
         {
-          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">Guidelines for the Romanization of Thai by Transcription</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000763.PDF\" data-doc-title=\"หลักเกณฑ์การถอดอักษรไทยเป็นอักษรโรมันแบบถ่ายเสียง\" hidden>View document<span class=\"sr-only\"> Guidelines for the Romanization of Thai by Transcription</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000763.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">Open file<span class=\"sr-only\"> Guidelines for the Romanization of Thai by Transcription (opens in a new tab)</span></a></span></div>"
+          "title": "Guidelines for the Romanization of Thai by Transcription",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000763.PDF"
         }
       ]
     },

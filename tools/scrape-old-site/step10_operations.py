@@ -10,6 +10,7 @@
 หน้าที่เว็บเดิมไม่มีเอกสาร = ข้อความ [รอข้อมูลจากสำนักงาน]
 รันหลัง step2/step3 และก่อน step6 (แผนผังเว็บไซต์ + site-nav)
 """
+# หมายเหตุ (17 พ.ย. 2569): หน้าหมวด operations ถูกเอาออกแล้ว — ส่วนที่อ่าน/เขียน operations.json ในไฟล์นี้ใช้ไม่ได้อีก
 import json, os, re, sys
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -82,7 +83,7 @@ SLUG = {t: s for s, t, _, _ in NEW}
 
 for slug, title, lead, items in NEW:
     blocks = [{"type": "page-hero", "heading": title, "lead": lead,
-               "breadcrumb": [{"label": "หน้าหลัก", "href": "index.html"}, {"label": "การปฏิบัติราชการ", "href": "operations.html"}, {"label": title}]}]
+               "breadcrumb": [{"label": "หน้าหลัก", "href": "index.html"}, {"label": "การปฏิบัติราชการ"}, {"label": title}]}]
     if items:
         blocks.append({"type": "document-list", "id": "documents", "items": items})
         note = "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS"

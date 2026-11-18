@@ -381,3 +381,14 @@ i-chevron i-arrow     i-plus       i-map     i-phone    i-pen      i-puzzle
 2. `index.html`, `knowledge.html`, `contact.html` ยังเป็น HTML ที่เขียนเอง
    ถ้าต้องการให้ CMS จัดการด้วย ต้องแตกเป็น block ก่อน (งานใหญ่ ควรทำหลังเนื้อหาหน้าอื่นนิ่งแล้ว)
 3. ฟอร์มติดต่อยังไม่ส่งข้อมูลไปที่ไหน ต้องต่อ endpoint จริง
+
+### photo-album — หน้าอัลบั้มภาพ (album.html?id=<id>)
+
+ภาพทั้งหมดของข่าวหนึ่งเรื่อง (จาก block `news-media` ใน `content/news/<id>.json`) กดแล้วเปิดดูภาพเต็มพร้อมแถบภาพย่อ
+
+| ฟิลด์ | ใช้ทำอะไร |
+|---|---|
+| `source` | `{ "type": "album" }` = ใช้ `?id=` จาก URL · `{ "type": "album", "id": "<รหัสข่าว>" }` = ระบุอัลบั้มตายตัว |
+| `backHref` / `backLabel` | ปุ่มย้อนกลับ (ค่าเริ่มต้น `media-gallery.html` / "อัลบั้มทั้งหมด") |
+
+หน้า `content/pages/album.json` ตั้ง `"prerender": false` — build ไม่สร้าง HTML นิ่ง (เนื้อหาขึ้นกับ `?id=`) และไม่ใส่ใน sitemap

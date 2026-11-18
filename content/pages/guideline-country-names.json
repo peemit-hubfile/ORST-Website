@@ -30,21 +30,35 @@
       ]
     },
     {
-      "type": "article",
-      "id": "content",
-      "toc": true,
-      "sections": [
+      "type": "rich-text",
+      "id": "intro",
+      "html": "<p>ตามที่สำนักงานราชบัณฑิตยสภาได้จัดทำประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง ลงวันที่ ๒๙ มิถุนายน พ.ศ. ๒๕๖๕ และดำเนินการจัดทำประกาศสำนักนายกรัฐมนตรี ในการนี้ พลเอก ประวิตร วงษ์สุวรรณ รองนายกรัฐมนตรี รักษาราชการแทนนายกรัฐมนตรี ได้ลงนามในประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง แล้ว และราชกิจจานุเบกษาเผยแพร่ประกาศดังกล่าว เมื่อวันที่ ๑ กันยายน พ.ศ. ๒๕๖๕</p>"
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
         {
-          "heading": "ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)",
-          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004928.PDF\" data-doc-title=\"ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)\" hidden>ดูเอกสาร<span class=\"sr-only\"> ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004928.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕) (เปิดในแท็บใหม่)</span></a></span></div>"
+          "title": "ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004928.PDF",
+          "category": "ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)"
         },
         {
-          "heading": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)",
-          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004929.PDF\" data-doc-title=\"ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)\" hidden>ดูเอกสาร<span class=\"sr-only\"> ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004929.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕) (เปิดในแท็บใหม่)</span></a></span></div>"
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004929.PDF",
+          "category": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)"
         },
         {
-          "heading": "ลิงก์ไปยังประกาศในราชกิจจานุเบกษา",
-          "html": "<p>ตามที่สำนักงานราชบัณฑิตยสภาได้จัดทำประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง ลงวันที่ ๒๙ มิถุนายน พ.ศ. ๒๕๖๕ และดำเนินการจัดทำประกาศสำนักนายกรัฐมนตรี ในการนี้ พลเอก ประวิตร วงษ์สุวรรณ รองนายกรัฐมนตรี รักษาราชการแทนนายกรัฐมนตรี ได้ลงนามในประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง แล้ว และราชกิจจานุเบกษาเผยแพร่ประกาศดังกล่าว เมื่อวันที่ ๑ กันยายน พ.ศ. ๒๕๖๕<br></p><br><p><a href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)</a></p><br><p><a href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)</a><br></p><br><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (1)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF\" data-doc-title=\"ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (1)\" hidden>ดูเอกสาร<span class=\"sr-only\"> ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (1)</span></button><a class=\"doc-btn\" href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (1) (เปิดในแท็บใหม่)</span></a></span></div><div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (2)</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF\" data-doc-title=\"ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (2)\" hidden>ดูเอกสาร<span class=\"sr-only\"> ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (2)</span></button><a class=\"doc-btn\" href=\"http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ลิงก์ไปยังประกาศในราชกิจจานุเบกษา (2) (เปิดในแท็บใหม่)</span></a></span></div>"
+          "title": "ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕)",
+          "file": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF",
+          "category": "ประกาศในราชกิจจานุเบกษา",
+          "note": "ราชกิจจานุเบกษา"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕)",
+          "file": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF",
+          "category": "ประกาศในราชกิจจานุเบกษา",
+          "note": "ราชกิจจานุเบกษา"
         }
       ]
     },

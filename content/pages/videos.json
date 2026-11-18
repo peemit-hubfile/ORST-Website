@@ -1,27 +1,26 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "วิดีโอจากช่อง YouTube ของสำนักงานราชบัณฑิตยสภา (ชุดเดียวกับหน้าแรก) รูปย่อเก็บใน assets/images/orst/video — เพิ่มวิดีโอใหม่: ใส่ youtube (รหัสวิดีโอ) + image + title + tag",
-  "title": "วิดีโอความรู้",
-  "navKey": "knowledge",
-  "description": "การเสวนา การอบรม และวีดิทัศน์ทางวิชาการของสำนักงานราชบัณฑิตยสภา",
+  "title": "คลังวิดีโอ",
+  "navKey": "news",
+  "description": "วิดีโอการบรรยาย การเสวนา และกิจกรรมของสำนักงานราชบัณฑิตยสภา กดที่วิดีโอเพื่อรับชมในหน้านี้",
   "sideNav": false,
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "วิดีโอความรู้",
-      "image": "assets/images/orst/news/data0005-00005462-960.jpg",
-      "lead": "การเสวนา การอบรม และวีดิทัศน์ทางวิชาการของสำนักงานราชบัณฑิตยสภา กดที่วิดีโอเพื่อรับชมในหน้านี้",
+      "heading": "คลังวิดีโอ",
+      "image": "assets/images/orst/news/data0005-00005024-960.jpg",
+      "lead": "วิดีโอการบรรยาย การเสวนา และกิจกรรมของสำนักงานราชบัณฑิตยสภา กดที่วิดีโอเพื่อรับชมในหน้านี้",
       "breadcrumb": [
         {
           "label": "หน้าหลัก",
           "href": "index.html"
         },
         {
-          "label": "คลังองค์ความรู้",
-          "href": "knowledge.html"
+          "label": "ข่าวสารและกิจกรรม"
         },
         {
-          "label": "วิดีโอความรู้"
+          "label": "คลังวิดีโอ"
         }
       ]
     },
@@ -75,7 +74,12 @@
           "title": "แนวทางการแก้ปัญหาเด็กและเยาวชนกับชุมชน",
           "tag": "วีดิทัศน์"
         }
-      ]
+      ],
+      "heading": "วิดีโอทั้งหมด",
+      "action": {
+        "label": "ช่อง YouTube",
+        "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+      }
     },
     {
       "type": "cta-band",

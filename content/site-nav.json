@@ -4,7 +4,6 @@
     {
       "key": "about",
       "title": "เกี่ยวกับเรา",
-      "href": "about.html",
       "groups": [
         {
           "heading": "ผู้บริหาร",
@@ -115,7 +114,6 @@
     {
       "key": "operations",
       "title": "การปฏิบัติราชการ",
-      "href": "operations.html",
       "groups": [
         {
           "heading": "แผนปฏิบัติราชการ",
@@ -241,7 +239,6 @@
     {
       "key": "news",
       "title": "ข่าวสารและกิจกรรม",
-      "href": "news.html",
       "groups": [
         {
           "heading": "ข่าวประชาสัมพันธ์",
@@ -267,8 +264,12 @@
               "href": "qa.html"
             },
             {
-              "title": "คลังภาพและวิดีโอ",
+              "title": "คลังภาพ",
               "href": "media-gallery.html"
+            },
+            {
+              "title": "คลังวิดีโอ",
+              "href": "videos.html"
             },
             {
               "title": "RSS ข่าวสาร",
@@ -326,7 +327,6 @@
     {
       "key": "services",
       "title": "บริการวิชาการ",
-      "href": "services.html",
       "groups": [
         {
           "heading": "บริการวิชาการ",

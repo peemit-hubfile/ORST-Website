@@ -1,7 +1,8 @@
 """ขั้นที่ 11: หมวด 5 ข่าวสารและกิจกรรม — หน้าที่ยังขาดตามผังเว็บไซต์ ORST
 
-  5.1.6 คลังภาพและวิดีโอ -> media-gallery.html  (ภาพจากหน้าข่าว content/news/<id>.json + วิดีโอจาก videos.json)
-  5.1.7 RSS ข่าวสาร      -> rss.html            (ไฟล์ rss.xml สร้างโดย tools/build.mjs ตอนตั้ง SITE_URL)
+  5.1.6 คลังภาพ          -> media-gallery.html  (อัลบั้มจากหน้าข่าว content/news/<id>.json → ลิงก์ album.html?id=<id>)
+  5.1.7 คลังวิดีโอ        -> videos.html         (แก้รายการวิดีโอที่ content/pages/videos.json โดยตรง)
+  5.1.8 RSS ข่าวสาร      -> rss.html            (ไฟล์ rss.xml สร้างโดย tools/build.mjs ตอนตั้ง SITE_URL)
 
 ลำดับกลุ่มในหน้า news.json กำหนดที่ step3_hubs.py (5.1 ข่าวประชาสัมพันธ์ · 5.2 ประกาศ)
 รันหลัง step5 (หน้าข่าว) และก่อน step6 (แผนผังเว็บไซต์ + site-nav)
@@ -26,11 +27,13 @@ def dump(n, p):
         f.write("\n")
 
 
-def write_page(slug, title, lead, blocks, note):
-    blocks = [{"type": "page-hero", "heading": title, "lead": lead,
-               "breadcrumb": [{"label": "หน้าหลัก", "href": "index.html"}, {"label": "ข่าวสารและกิจกรรม", "href": "news.html"}, {"label": title}]}] + blocks
+def write_page(slug, title, lead, blocks, note, image=None, **extra):
+    hero = {"type": "page-hero", "heading": title, "lead": lead,
+            "breadcrumb": [{"label": "หน้าหลัก", "href": "index.html"}, {"label": "ข่าวสารและกิจกรรม", "href": "news.html"}, {"label": title}]}
+    if image:
+        hero.update({"image": image, "imageAlt": ""})
     dump(slug, {"$schema": "../blocks.schema.json", "_note": note, "title": title, "navKey": "news",
-                "description": lead, "updatedAt": TODAY, "blocks": blocks})
+                "description": lead, "updatedAt": TODAY, **extra, "blocks": [hero] + blocks})
     html = (TPL.replace("[แก้ไข] คำอธิบายหน้านี้ 1-2 ประโยค สำหรับ SEO", lead)
                .replace("[แก้ไข] ชื่อหน้า", title).replace("[แก้ไข-navKey]", "news").replace("[แก้ไข-slug]", slug))
     open(ROOT + "/" + slug + ".html", "w", encoding="utf-8", newline="\n").write(html)
@@ -41,7 +44,7 @@ def th_date(iso):
     return f"{d} {TH_MONTH[m - 1]} {y + 543}"
 
 
-# ---------- 5.1.6 คลังภาพและวิดีโอ ----------
+# ---------- 5.1.6 คลังภาพ (อัลบั้ม = ข่าวที่มีภาพกิจกรรม) ----------
 albums = []
 for f in glob.glob(ROOT + "/content/news/*.json"):
     if f.endswith("index.json"):
@@ -54,22 +57,20 @@ for f in glob.glob(ROOT + "/content/news/*.json"):
     # เฉพาะข่าวที่มีภาพกิจกรรม — ข้ามประกาศ/หนังสือเชิญ (ภาพเป็นสแกนเอกสาร ไม่ใช่ภาพกิจกรรม)
     if not images or hero.get("tag") == "ประกาศ" or re.match(r"(ประกาศ|ขอเชิญ)", hero["heading"]):
         continue
-    albums.append({"date": hero.get("date", ""), "item": {
+    albums.append({"date": hero.get("date", ""), "n": len(images), "item": {
         "image": images[0]["image"], "alt": hero["heading"], "tag": f"{len(images)} ภาพ",
         "title": hero["heading"], "desc": th_date(hero["date"]) if hero.get("date") else "",
-        "href": f"news-detail.html?id={nid}"}})
+        "href": f"album.html?id={nid}"}})
 albums.sort(key=lambda a: a["date"], reverse=True)
-videos = next(b for b in load("videos")["blocks"] if b["type"] == "media-grid")["items"]
 
-title = "คลังภาพและวิดีโอ"
-lead = "ภาพกิจกรรมจากข่าวของสำนักงานราชบัณฑิตยสภา และวิดีโอความรู้จากช่อง YouTube ของสำนักงาน"
+title = "คลังภาพ"
+lead = "ภาพกิจกรรมของสำนักงานราชบัณฑิตยสภา จัดเป็นอัลบั้มตามข่าว เลือกอัลบั้มเพื่อดูภาพทั้งหมด"
 write_page("media-gallery", title, lead, [
-    {"type": "media-grid", "id": "photos", "heading": "ภาพกิจกรรม", "intro": "กดที่ภาพเพื่อเปิดข่าวและดูภาพทั้งหมดของกิจกรรมนั้น",
+    {"type": "media-grid", "id": "photos", "heading": "อัลบั้มภาพกิจกรรม",
      "columns": 3, "ratio": "4:3", "pageSize": 12, "unit": "อัลบั้ม", "items": [a["item"] for a in albums]},
-    {"type": "media-grid", "id": "videos", "variant": "alt", "heading": "วิดีโอ", "columns": 3, "ratio": "16:9",
-     "action": {"label": "ดูวิดีโอทั้งหมด", "href": "videos.html"}, "items": videos},
-], "รวมภาพจากหน้าข่าว (content/news/<id>.json) และวิดีโอจาก videos.json — สร้างโดย step11_news.py รันใหม่หลังเพิ่มข่าว")
-print(f"  media-gallery.html  {len(albums)} อัลบั้ม · {len(videos)} วิดีโอ")
+], "อัลบั้มจากหน้าข่าว (content/news/<id>.json) แต่ละอัลบั้มเปิดที่ album.html?id=<id> — สร้างโดย step11_news.py รันใหม่หลังเพิ่มข่าว",
+   image="assets/images/orst/news/data0005-00005374-960.jpg", sideNav=False)
+print(f"  media-gallery.html  {len(albums)} อัลบั้ม")
 
 # ---------- 5.1.7 RSS ข่าวสาร ----------
 title = "RSS ข่าวสาร"
@@ -92,7 +93,7 @@ print("  rss.html")
 p = load("news")
 for g in next(b for b in p["blocks"] if b["type"] == "page-index")["groups"]:
     for it in g["items"]:
-        if it["title"] == "คลังภาพและวิดีโอ":
+        if it["title"] == "คลังภาพ":
             it["href"] = "media-gallery.html"
         if it["title"] == "RSS ข่าวสาร":
             it["href"] = "rss.html"

@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultPage = {
     dictionary: 'dictionary.html', term: 'dictionary.html',
     article: 'knowledge.html', journal: 'knowledge.html', document: 'knowledge.html',
-    news: 'news.html', service: 'services.html'
+    news: 'general-news.html', service: 'e-services.html'
   };
   const resultUrl = item => item.url || resultPage[item.type] || 'knowledge.html';
 

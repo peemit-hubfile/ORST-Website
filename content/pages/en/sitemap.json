@@ -45,20 +45,16 @@
               "href": "publications.html"
             },
             {
-              "title": "News and Activities",
-              "href": "news.html"
+              "title": "News and Activities"
             },
             {
-              "title": "Academic Services",
-              "href": "services.html"
+              "title": "Academic Services"
             },
             {
-              "title": "About Us",
-              "href": "about.html"
+              "title": "About Us"
             },
             {
-              "title": "Operations",
-              "href": "operations.html"
+              "title": "Operations"
             },
             {
               "title": "Contact Us",
@@ -68,7 +64,6 @@
         },
         {
           "heading": "About Us · Executives",
-          "href": "about.html",
           "icon": "i-user",
           "items": [
             {
@@ -87,7 +82,6 @@
         },
         {
           "heading": "About Us · Anti-Corruption Center",
-          "href": "about.html",
           "icon": "i-shield",
           "items": [
             {
@@ -122,7 +116,6 @@
         },
         {
           "heading": "About Us · Organization",
-          "href": "about.html",
           "icon": "i-book",
           "items": [
             {
@@ -157,7 +150,6 @@
         },
         {
           "heading": "About Us · Personnel & HR Management",
-          "href": "about.html",
           "icon": "i-people",
           "items": [
             {
@@ -180,7 +172,6 @@
         },
         {
           "heading": "Operations · Plans",
-          "href": "operations.html",
           "icon": "i-journal",
           "items": [
             {
@@ -227,7 +218,6 @@
         },
         {
           "heading": "Operations · Performance",
-          "href": "operations.html",
           "icon": "i-file",
           "items": [
             {
@@ -278,7 +268,6 @@
         },
         {
           "heading": "Operations · Open Government Data",
-          "href": "operations.html",
           "icon": "i-database",
           "items": [
             {
@@ -309,7 +298,6 @@
         },
         {
           "heading": "News · Press Releases",
-          "href": "news.html",
           "icon": "i-megaphone",
           "items": [
             {
@@ -333,8 +321,12 @@
               "href": "qa.html"
             },
             {
-              "title": "Photos & Videos",
+              "title": "Photo Gallery",
               "href": "media-gallery.html"
+            },
+            {
+              "title": "Video Gallery",
+              "href": "videos.html"
             },
             {
               "title": "RSS Feed",
@@ -344,7 +336,6 @@
         },
         {
           "heading": "News · Announcements",
-          "href": "news.html",
           "icon": "i-file",
           "items": [
             {
@@ -391,7 +382,6 @@
         },
         {
           "heading": "Academic Services",
-          "href": "services.html",
           "icon": "i-service",
           "items": [
             {

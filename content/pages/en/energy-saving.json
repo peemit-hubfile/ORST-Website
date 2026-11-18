@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "Operations",
-          "href": "operations.html"
+          "label": "Operations"
         },
         {
           "label": "Energy Saving"
@@ -31,12 +30,12 @@
         {
           "title": "Energy Conservation Action Plan for Fiscal Year 2012",
           "publishedAt": "2020-04-15",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001401001014%2F63DOM3514034"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000013.PDF"
         },
         {
           "title": "Energy Conservation at the Royal Institute",
           "publishedAt": "2020-04-15",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010001401001014%2F63DOM3559009"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000014.PDF"
         }
       ]
     }

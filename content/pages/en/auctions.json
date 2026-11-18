@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "News and Activities",
-          "href": "news.html"
+          "label": "News and Activities"
         },
         {
           "label": "Auction Notices"
@@ -31,12 +30,12 @@
         {
           "title": "Announcement of the Auction of Damaged, Deteriorated or Unnecessary Government Supplies, Fiscal Year 2024",
           "publishedAt": "2024-05-07",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001003001010%2F67EGG3806075"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001729.PDF"
         },
         {
           "title": "Announcement of the Auction of Damaged, Deteriorated or Unnecessary Supplies, Fiscal Year 2020",
           "publishedAt": "2021-02-23",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030001003001010%2F64BWO3200025"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001145.PDF"
         }
       ]
     }

@@ -30,17 +30,18 @@
       ]
     },
     {
-      "type": "article",
-      "id": "content",
-      "toc": false,
-      "sections": [
+      "type": "document-list",
+      "id": "documents",
+      "items": [
         {
-          "heading": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
-          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000804.PDF\" data-doc-title=\"ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง\" hidden>ดูเอกสาร<span class=\"sr-only\"> ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000804.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง (เปิดในแท็บใหม่)</span></a></span></div>"
+          "title": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000804.PDF",
+          "category": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง"
         },
         {
-          "heading": "ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา",
-          "html": "<div class=\"doc-inline\"><span class=\"doc-inline-badge\" aria-hidden=\"true\">PDF</span><span class=\"doc-inline-title\">ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา</span><span class=\"doc-inline-actions\"><button type=\"button\" class=\"doc-btn is-primary\" data-doc-preview=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000805.PDF\" data-doc-title=\"ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา\" hidden>ดูเอกสาร<span class=\"sr-only\"> ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา</span></button><a class=\"doc-btn\" href=\"https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000805.PDF\" target=\"_blank\" rel=\"noopener noreferrer\">เปิดไฟล์<span class=\"sr-only\"> ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา (เปิดในแท็บใหม่)</span></a></span></div>"
+          "title": "ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000805.PDF",
+          "category": "ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา"
         }
       ]
     },

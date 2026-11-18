@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "About Us",
-          "href": "about.html"
+          "label": "About Us"
         },
         {
           "label": "Anti-Corruption Operation Center",
@@ -35,14 +34,14 @@
         {
           "title": "Announcement of the Office of the Royal Society: Declaration of Intent to Administer with Honesty and Integrity",
           "publishedAt": "2023-12-07",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050002105005002%2F63EHJ3643063",
-          "category": "Commitment to Management with Honesty and Integrity"
+          "category": "Commitment to Management with Honesty and Integrity",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000190.PDF"
         },
         {
           "title": "The Declaration of the Office of the Royal Society Subject: Statement of Intent: Administration with Integrity and Morality",
           "publishedAt": "2023-12-07",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050002105005002%2F63EHJ3735005",
-          "category": "Commitment to Management with Honesty and Integrity"
+          "category": "Commitment to Management with Honesty and Integrity",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000191.PDF"
         },
         {
           "title": "Code of Ethics",

@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "Operations",
-          "href": "operations.html"
+          "label": "Operations"
         },
         {
           "label": "Service Manuals & Standards"
@@ -31,17 +30,17 @@
         {
           "title": "PMQA Indicator Descriptions",
           "publishedAt": "2020-05-07",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001605004002%2F63EGP0041097"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000120.PDF"
         },
         {
           "title": "Indicator Details Supporting the Performance Agreement, Royal Institute",
           "publishedAt": "2020-05-07",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001605004002%2F63EGP0833025"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000121.PDF"
         },
         {
           "title": "PMQA Score Calculator",
           "publishedAt": "2020-05-07",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001605004002%2F63EGP0952038"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000122.XLS"
         }
       ]
     }

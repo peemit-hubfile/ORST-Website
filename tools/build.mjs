@@ -97,6 +97,7 @@ async function main() {
   const problems = [];
   const pages = [];   // ชื่อไฟล์ HTML ทุกหน้าที่ลง dist จริง ใช้ทำ sitemap
 
+  const dynamicPages = new Set();
   for (const file of files) {
     const slug = file.replace(/\.json$/, '');
     const htmlName = slug.startsWith('_') ? 'styleguide.html' : `${slug}.html`;
@@ -110,6 +111,13 @@ async function main() {
     }
 
     const page = JSON.parse(await readFile(join(PAGES_DIR, file), 'utf8'));
+    // หน้าแม่แบบที่เนื้อหาขึ้นกับ ?id= (เช่น album.html) — สร้างฝั่งเบราว์เซอร์ คัดลอกไฟล์เปล่าไป ไม่ใส่ใน sitemap
+    if (page.prerender === false) {
+      await writeFile(join(DIST, htmlName), bustAssets(shell), 'utf8');
+      dynamicPages.add(htmlName);
+      pages.push(htmlName);
+      continue;
+    }
     // รายการจากแหล่งกลาง (เช่น ข่าวจาก content/news/index.json) — ใช้ตัวเดียวกับเบราว์เซอร์
     await resolveSources(page, async p => JSON.parse(await readFile(join(ROOT, p), 'utf8')));
     const invalid = validatePage(page);
@@ -172,7 +180,7 @@ async function main() {
   // ---- sitemap.xml ----
   // หน้าแรกมาก่อนเสมอ ที่เหลือเรียงตามชื่อ
   const newsIndex = JSON.parse(await readFile(join(ROOT, 'content', 'news', 'index.json'), 'utf8').catch(() => '{"items":[]}'));
-  const indexed = pages.filter(name => !NO_INDEX.has(name) && name !== 'news-detail.html')
+  const indexed = pages.filter(name => !NO_INDEX.has(name) && name !== 'news-detail.html' && !dynamicPages.has(name))
     .sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.localeCompare(b)))
     // หน้ารายละเอียดข่าวทุกเรื่อง (แม่แบบเดียว ต่าง id)
     .concat((newsIndex.items || []).filter(it => it.id).map(it => newsUrl(it.id)));
@@ -216,7 +224,7 @@ async function main() {
     await writeFile(join(DIST, 'rss.xml'),
       `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n` +
       `    <title>ข่าวสารและกิจกรรม | สำนักงานราชบัณฑิตยสภา</title>\n` +
-      `    <link>${SITE_URL}/news.html</link>\n` +
+      `    <link>${SITE_URL}/general-news.html</link>\n` +
       `    <description>ข่าวประชาสัมพันธ์และข่าวกิจกรรมของสำนักงานราชบัณฑิตยสภา</description>\n` +
       `    <language>th</language>\n${items}\n  </channel>\n</rss>\n`, 'utf8');
     console.log(`  สร้าง dist/rss.xml  (${Math.min(news.length, 30)} ข่าว)`);

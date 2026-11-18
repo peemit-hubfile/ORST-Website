@@ -1,4 +1,5 @@
 """ขั้นที่ 3: อัปเดตหน้าหมวด (about / operations / news / services / dictionary) ให้ลิงก์ไปหน้าที่สร้างจากข้อมูลจริง"""
+# หมายเหตุ (17 พ.ย. 2569): หน้าหมวด operations ถูกเอาออกแล้ว — ส่วนที่อ่าน/เขียน operations.json ในไฟล์นี้ใช้ไม่ได้อีก
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from scrape import CACHE, get, main_wrapper, text  # noqa
@@ -117,7 +118,7 @@ p["blocks"] = [hero,
         {"heading": "ข่าวประชาสัมพันธ์", "icon": "i-megaphone", "items": [
             I("ข่าวประชาสัมพันธ์ทั่วไป", "general-news.html"), I("ข่าวกิจกรรม", "activity-news.html"),
             I("การบรรยายทางวิชาการ", "academic-lectures.html"), I("ปฏิทินกิจกรรม", "event-calendar.html"),
-            I("คำถาม-คำตอบ (Q&A)", "qa.html"), I("คลังภาพและวิดีโอ", "media-gallery.html"), I("RSS ข่าวสาร", "rss.html")]},
+            I("คำถาม-คำตอบ (Q&A)", "qa.html"), I("คลังภาพ", "media-gallery.html"), I("คลังวิดีโอ", "videos.html"), I("RSS ข่าวสาร", "rss.html")]},
         {"heading": "ประกาศ", "icon": "i-file", "items": [
             I("ประกาศการจัดซื้อจัดจ้าง", "procurement-notices.html"), I("ประกาศผลจัดซื้อจัดจ้าง", "procurement-results.html"),
             I("ประกาศราคากลาง", "reference-prices.html"), I("สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)", "procurement-summary.html"),

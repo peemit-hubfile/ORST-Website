@@ -60,6 +60,7 @@ const REQUIRED = {
   'news-media': [],
   'news-related': ['items'],
   'event-calendar': ['items'],
+  'photo-album': ['source'],
 };
 
 async function spriteIcons() {
@@ -127,7 +128,7 @@ async function main() {
         if (field === 'items' && b.source) continue;
         if (b[field] === undefined) err(rel, `${at} (${b.type}) ขาดฟิลด์บังคับ "${field}"`);
       }
-      if (b.source && !['news', 'events'].includes(b.source.type)) err(rel, `${at} source.type ต้องเป็น "news" หรือ "events"`);
+      if (b.source && !['news', 'events', 'album'].includes(b.source.type)) err(rel, `${at} source.type ต้องเป็น "news" "events" หรือ "album"`);
       // page-hero มี variant ของตัวเอง: article = หัวหน้าเพจรายละเอียดข่าว
       if (b.variant && !(b.type === 'page-hero' && b.variant === 'article') && !['default', 'alt', 'dark'].includes(b.variant)) {
         err(rel, `${at} variant ต้องเป็น "default" "alt" หรือ "dark" เท่านั้น`);

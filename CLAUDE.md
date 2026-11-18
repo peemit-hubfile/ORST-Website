@@ -146,8 +146,8 @@ $env:SITE_URL = "https://ชื่อเว็บ.netlify.app"; node tools/build
 
 ```
 index.html knowledge.html contact.html   เขียน HTML เอง — อย่ายกเครื่อง
-about.html dictionary.html news.html
-publications.html services.html          shell บาง ๆ ดึงเนื้อหาจาก JSON
+dictionary.html publications.html       shell บาง ๆ ดึงเนื้อหาจาก JSON
+(ไม่มีหน้าหมวด about / operations / news / services แล้ว — ชื่อหมวดในเมนูเปิดเมนูย่อยอย่างเดียว)
 styleguide.html                          คลังบล็อก ดูตัวอย่างทุก block
 _template.html                           แม่แบบหน้าใหม่ (JSON-driven)
 _template-static.html                    แม่แบบหน้าที่เขียน HTML เอง
@@ -160,6 +160,7 @@ content/
   pages/<slug>.json                      เนื้อหา 1 หน้า = 1 ไฟล์
   news/index.json                        รายการข่าวทั้งหมด (แหล่งเดียว — หน้ารายการข่าว หน้าแรก RSS)
   news/<id>.json                         เนื้อหาข่าว 1 เรื่อง แสดงที่ news-detail.html?id=<id>
+  (อัลบั้มภาพ = album.html?id=<id> ใช้ภาพจากไฟล์เดียวกันนี้ ผ่าน block photo-album — ไม่ต้องสร้างไฟล์ต่ออัลบั้ม)
 
 assets/
   css/base.css                           ตัวแปรสี + reset + คลาสพื้นฐาน

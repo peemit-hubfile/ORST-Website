@@ -16,8 +16,7 @@
           "href": "index.html"
         },
         {
-          "label": "การปฏิบัติราชการ",
-          "href": "operations.html"
+          "label": "การปฏิบัติราชการ"
         },
         {
           "label": "รายงานผลการสำรวจความพึงพอใจการให้บริการ"
@@ -31,32 +30,32 @@
         {
           "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2565",
           "publishedAt": "2023-02-09",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F66BII0858053"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000888.PDF"
         },
         {
           "title": "ผลการสำรวจความพึงพอใจการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2564",
           "publishedAt": "2022-02-02",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F65BBI1930005"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000841.PDF"
         },
         {
           "title": "ผลการสำรวจความพึงพอใจของผู้รับบริการและผู้มีส่วนได้ส่วนเสีย สำนักงานราชบัณฑิตยสภา ปี 2563",
           "publishedAt": "2021-04-20",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F64DTT3321025"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000777.PDF"
         },
         {
           "title": "รายงานผลการสำรวจความพึงพอใจของผู้รับฟัง จำนวน ๕ รายการ ทางสถานีวิทยุ ม.ก. ปีงบประมาณ ๒๕๖๒",
           "publishedAt": "2020-08-03",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F63HCO4100044"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000447.PDF"
         },
         {
           "title": "รายงานผลการสำรวจความนิยมของผู้รับฟัง จำนวน ๔ รายการ ทางสถานีวิทยุกระจายเสียงแห่งประเทศไทย ประจำปีงบประมาณ ๒๕๖๒",
           "publishedAt": "2020-08-03",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F63HCO4454044"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000448.PDF"
         },
         {
           "title": "ผลการสำรวจความพึงพอใจปี พ.ศ. ๒๕๖๑",
           "publishedAt": "2020-05-07",
-          "href": "https://www.orst.go.th/iwfm_view.asp?i=0050001905004005%2F63EGP3648097"
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000134.PNG"
         }
       ]
     }

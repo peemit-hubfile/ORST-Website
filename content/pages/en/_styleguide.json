@@ -787,6 +787,14 @@
           "location": "[Venue]"
         }
       ]
+    },
+    {
+      "type": "photo-album",
+      "id": "sg-photo-album",
+      "source": {
+        "type": "album",
+        "id": "69hni1055034"
+      }
     }
   ],
   "updatedAt": "2026-11-13",
