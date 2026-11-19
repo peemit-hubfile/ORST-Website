@@ -244,6 +244,8 @@ const icons = `
   <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v4h4"></path><path d="M12 7v5l3 2"></path></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></symbol>
   <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 1 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></symbol>
   <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"></circle><path d="M4 8h16"></path><path d="M12 6v16"></path><path d="m8 22 4-10 4 10"></path></symbol>
@@ -888,7 +890,7 @@ const FOOTER_SERVICES = [
   ['ระบบทดสอบความรู้ด้านภาษาไทย', 'https://etest.orst.go.th/'],
   ['พจนานุกรมภาษามือไทย ฉบับราชบัณฑิตยสภา', 'http://164.115.33.116/'],
   ['คลังความรู้', `${basePath}knowledge-base.html`],
-  ['ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน', `${basePath}book-ordering.html`],
+  ['สั่งซื้อหนังสือและวิธีชำระเงิน', `${basePath}book-ordering.html`],   // ชื่อย่อให้อยู่บรรทัดเดียวในคอลัมน์ footer (ชื่อเต็มในเมนูและหน้า)
   ['คำถามที่พบบ่อย (FAQ)', `${basePath}qa.html`],
 ];
 
@@ -988,21 +990,26 @@ function renderFooter() {
 
     ${renderChat()}
 
-    <div class="modal" id="search-modal" hidden role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <div class="modal ss-modal" id="search-modal" hidden role="dialog" aria-modal="true" aria-labelledby="search-title">
       <div class="modal-backdrop" data-close-modal></div>
-      <div class="modal-card">
-        <div class="modal-header">
-          <h2 id="search-title">ค้นหาองค์ความรู้</h2>
-          <button class="modal-close" type="button" data-close-modal aria-label="ปิด">×</button>
-        </div>
-        <div class="modal-body">
-          <form class="shared-search-form" id="shared-search-form">
-            <input id="shared-search-input" type="search" placeholder="ค้นหาคำศัพท์ บทความ หนังสือ หรือบริการ...">
-            <button type="submit" aria-label="ค้นหา">${icon('i-search')}</button>
-          </form>
-          <div class="search-results" id="shared-search-results" aria-live="polite"></div>
+      <div class="ss-sheet">
+        <div class="ss-inner">
+          <h2 id="search-title" class="sr-only">ค้นหาในเว็บไซต์</h2>
+          <div class="ss-top">
+            <form class="ss-bar" id="shared-search-form" role="search">
+              ${icon('i-search', 'icon ss-bar-ic')}
+              <label class="sr-only" for="shared-search-input">ค้นหาในเว็บไซต์</label>
+              <input id="shared-search-input" type="search" placeholder="ค้นหาชื่อหน้า บริการ หลักเกณฑ์ หรือองค์ความรู้..." autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="shared-search-results" aria-autocomplete="list">
+              <button class="ss-submit" type="submit">${icon('i-arrow')}<span>ค้นหา</span></button>
+            </form>
+            <button class="ss-close" type="button" data-close-modal aria-label="ปิด">${icon('i-x')}</button>
+          </div>
+          <p class="sr-only" id="shared-search-status" aria-live="polite"></p>
+          <div class="ss-results" id="shared-search-results" role="listbox" aria-labelledby="search-title"></div>
+          <p class="ss-hint" aria-hidden="true">กด / เพื่อเปิดการค้นหา · Esc เพื่อปิด</p>
         </div>
       </div>
+    </div>
     </div>
 
   `;
@@ -1242,6 +1249,7 @@ function initSharedModals() {
     btn.addEventListener('click', () => {
       if (!searchModal) return;
       searchModal.hidden = false;
+      document.dispatchEvent(new CustomEvent('orst:search-open'));
       setTimeout(() => document.querySelector('#shared-search-input')?.focus(), 40);
     });
   });
@@ -1259,29 +1267,147 @@ function initSharedModals() {
   });
 }
 
+/* ค้นหาในเว็บไซต์ (ปุ่มค้นหาบน header) — ค้นจากรายการหน้าทั้งหมดในเมนู (navItems + megaMenuData) ทันทีที่พิมพ์
+   ว่าง = ทางลัดบริการยอดนิยม · มีคำค้น = หน้าที่ตรง (ชื่อตรงต้นคำมาก่อน) + ตัวเลือก "ค้นหาในคลังองค์ความรู้"
+   แป้นพิมพ์: ↑ ↓ เลือก · Enter เปิด · Esc ปิด (combobox + listbox ตาม ARIA) · โหมดอังกฤษค้นได้ทั้งชื่อไทยและชื่อแปล */
 function initSharedSearch() {
   const form = document.querySelector('#shared-search-form');
   const input = document.querySelector('#shared-search-input');
   const results = document.querySelector('#shared-search-results');
+  const status = document.querySelector('#shared-search-status');
   if (!form || !input || !results) return;
 
-  const sampleResults = [
-    ['พจนานุกรมออนไลน์', 'ค้นความหมายและการใช้คำภาษาไทย', `${basePath}dictionary.html`],
-    ['คลังองค์ความรู้', 'บทความ วารสาร เอกสาร และองค์ความรู้สำหรับประชาชน', `${basePath}knowledge.html`],
-    ['บริการวิชาการ', 'สอบถามข้อมูลทางวิชาการและติดตามสถานะ', `${basePath}e-services.html`]
+  const en = I18N.lang === 'en';
+  const T = str => (en ? I18N.translate(str) : str);
+  const escH = str => String(str).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const norm = str => String(str || '').replace(/[๐-๙]/g, d => String(THAI_DIGITS.indexOf(d))).toLowerCase().replace(/\s+/g, ' ').trim();
+
+  // ดัชนีหน้า: [ชื่อ, ลิงก์, หมวด › กลุ่ม] — สร้างตอนเปิดโมดัล (โหมดอังกฤษต้องรอคำแปลโหลดเสร็จก่อน)
+  let index = [];
+  const buildIndex = () => {
+    index = [];
+    const seen = new Set();
+    const add = (title, href, path) => {
+      if (!title || !href || seen.has(href)) return;
+      seen.add(href);
+      const shown = T(title);
+      const shownPath = path ? path.split(' › ').map(T).join(' › ') : '';
+      index.push({ title: shown, href, path: shownPath, key: norm(`${title} ${shown}`), pathKey: norm(`${path} ${shownPath}`) });
+    };
+    navItems.forEach(([, label, href]) => add(label, href, ''));
+    Object.values(megaMenuData).forEach(cat => (cat.groups || []).forEach(g => (g.links || []).forEach(link => {
+      if (Array.isArray(link)) add(link[0], link[1], [cat.title, g.heading].filter(Boolean).join(' › '));
+    })));
+  };
+
+  // คำค้นแนะนำ (กดแล้วเติมลงช่องค้นหา) · บริการที่เกี่ยวข้อง (ลิงก์ตรง) · คำค้นล่าสุด (จำในเบราว์เซอร์ 5 คำ)
+  const SUGGEST = ['หลักเกณฑ์', 'พจนานุกรม', 'หนังสือ', 'ข่าว', 'ร้องเรียน', 'ติดต่อ'];
+  const SERVICES = [
+    ['i-dictionary', 'พจนานุกรมออนไลน์', 'dictionary.html'],
+    ['i-book', 'คลังองค์ความรู้', 'knowledge.html'],
+    ['i-pen', 'หลักเกณฑ์ภาษาไทย', 'language-guidelines.html'],
+    ['i-ebook', 'หนังสือและสิ่งพิมพ์', 'publications.html'],
   ];
+  const RECENT_KEY = 'orst-recent-search';
+  const getRecent = () => { try { return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]').filter(x => typeof x === 'string').slice(0, 5); } catch { return []; } };
+  const saveRecent = term => {
+    const t = String(term || '').trim();
+    if (!t || window.orstConsent?.() === 'necessary') return;
+    try { localStorage.setItem(RECENT_KEY, JSON.stringify([t, ...getRecent().filter(x => x !== t)].slice(0, 5))); } catch { /* ไม่จำก็ได้ */ }
+  };
 
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    const keyword = input.value.trim();
+  let active = -1;
+  const options = () => [...results.querySelectorAll('[role="option"]')];
+  const setActive = i => {
+    const opts = options();
+    if (!opts.length) { active = -1; input.removeAttribute('aria-activedescendant'); return; }
+    active = (i + opts.length) % opts.length;
+    opts.forEach((o, k) => o.setAttribute('aria-selected', String(k === active)));
+    input.setAttribute('aria-activedescendant', opts[active].id);
+    opts[active].scrollIntoView({ block: 'nearest' });
+  };
+  const optAttrs = (href, n) => `id="ss-opt-${n}" role="option" aria-selected="false" href="${escH(href)}"${extAttrs(href)}`;
+  const mark = (title, q) => {
+    const at = q ? title.toLowerCase().indexOf(q) : -1;
+    if (at < 0) return escH(title);
+    return `${escH(title.slice(0, at))}<b>${escH(title.slice(at, at + q.length))}</b>${escH(title.slice(at + q.length))}`;
+  };
 
-    results.innerHTML = sampleResults.map(([title, desc, url]) => `
-      <a class="search-result-item" href="${url}">
-        <strong>${title}</strong><br>
-        <small>${desc}${keyword ? ` · คำค้น: ${keyword}` : ''}</small>
-      </a>
-    `).join('');
+  const renderQuick = () => {
+    if (status) status.textContent = '';
+    const recent = getRecent();
+    let n = 0;
+    results.className = 'ss-results is-quick';
+    results.innerHTML = `
+      <section class="ss-col">
+        <h3>${icon('i-clock')}${escH(T('คำค้นล่าสุด'))}</h3>
+        ${recent.length ? `<ul class="ss-recent">${recent.map(t => `<li><button type="button" class="ss-term" data-term="${escH(t)}">${icon('i-clock')}<span>${escH(t)}</span></button></li>`).join('')}</ul>`
+          : `<p class="ss-empty">${escH(T('ยังไม่มีคำค้นล่าสุด'))}</p>`}
+      </section>
+      <section class="ss-col">
+        <h3>${icon('i-trend')}${escH(T('คำค้นแนะนำ'))}</h3>
+        <div class="ss-chips">${SUGGEST.map(t => `<button type="button" class="ss-chip" data-term="${escH(T(t))}">${escH(T(t))}</button>`).join('')}</div>
+      </section>
+      <section class="ss-col">
+        <h3>${icon('i-grid')}${escH(T('บริการที่เกี่ยวข้อง'))}</h3>
+        <ul class="ss-links">${SERVICES.map(([ic, title, href]) => `<li><a class="ss-link" ${optAttrs(`${basePath}${href}`, n++)}>${icon(ic, 'icon ss-link-ic')}<span>${escH(T(title))}</span>${icon('i-arrow', 'icon ss-link-go')}</a></li>`).join('')}</ul>
+      </section>`;
+    active = -1; input.removeAttribute('aria-activedescendant');
+  };
+
+  const render = () => {
+    const raw = input.value.trim();
+    const q = norm(raw);
+    if (!q) { renderQuick(); return; }
+    const hits = index
+      .map(it => ({ it, score: it.key.startsWith(q) ? 0 : it.key.includes(` ${q}`) ? 1 : it.key.includes(q) ? 2 : it.pathKey.includes(q) ? 3 : 9 }))
+      .filter(h => h.score < 9)
+      .sort((a, b) => a.score - b.score || a.it.title.length - b.it.title.length)
+      .slice(0, 8);
+    const kbHref = `${basePath}knowledge.html?q=${encodeURIComponent(raw)}`;
+    const kbText = en ? `Search “${raw}” in the Knowledge Hub` : `ค้นหา “${raw}” ในคลังองค์ความรู้`;
+    if (status) status.textContent = hits.length ? (en ? `${hits.length} matching page${hits.length > 1 ? 's' : ''}` : `พบ ${hits.length} หน้า`) : T('ไม่พบหน้าที่ตรงกับคำค้น');
+    results.className = 'ss-results is-hits';
+    results.innerHTML = `<p class="ss-count">${escH(status ? status.textContent : '')}</p>` + hits.map(({ it }, n) => `
+      <a class="ss-item" ${optAttrs(it.href, n)}>
+        <span class="ss-item-title">${mark(it.title, raw.toLowerCase())}${isExtUrl(it.href) ? icon('i-external', 'icon ss-ext') : ''}</span>
+        ${it.path ? `<small>${escH(it.path)}</small>` : ''}
+      </a>`).join('') + `
+      <a class="ss-more" ${optAttrs(kbHref, hits.length)}>${escH(kbText)} ${icon('i-arrow')}</a>`;
+    setActive(0);
+  };
+
+  input.addEventListener('input', render);
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
   });
+  results.addEventListener('mousemove', e => {
+    const opt = e.target.closest('[role="option"]');
+    if (opt) { const k = options().indexOf(opt); if (k !== active) setActive(k); }
+  });
+  results.addEventListener('click', e => {
+    const term = e.target.closest('[data-term]');
+    if (term) { input.value = term.dataset.term; render(); input.focus(); return; }
+    if (e.target.closest('[role="option"]') && input.value.trim()) saveRecent(input.value);
+  });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const opts = options();
+    if (input.value.trim()) saveRecent(input.value);
+    (opts[active] || opts[0])?.click();
+  });
+  // กด / ที่ใดก็ได้ (ที่ไม่ใช่ช่องพิมพ์) เพื่อเปิดการค้นหา
+  document.addEventListener('keydown', e => {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(input|textarea|select)$/i.test(t.tagName))) return;
+    const btn = document.querySelector('[data-open-search]');
+    if (btn) { e.preventDefault(); btn.click(); }
+  });
+  document.addEventListener('orst:search-open', () => { buildIndex(); input.value = ''; renderQuick(); });
+  buildIndex();
+  renderQuick();
 }
 
 /* ช่วยการเข้าถึง — ผูกกับ renderA11y()
@@ -1408,7 +1534,7 @@ function initA11y() {
   };
   fab.addEventListener('click', () => setOpen(!isOpen()));
   root.querySelectorAll('[data-a11y-close]').forEach(b => b.addEventListener('click', () => setOpen(false)));
-  document.querySelectorAll('[data-open-access]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); setOpen(true); }));
+  document.addEventListener('click', e => { const b = e.target.closest('[data-open-access]'); if (!b) return; e.preventDefault(); setOpen(true); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen()) setOpen(false); });
   document.addEventListener('click', e => {
     if (isOpen() && !root.contains(e.target) && !e.target.closest('[data-open-access]')) setOpen(false, { focus: false });
@@ -1507,7 +1633,7 @@ function initMediaTabs() {
   if (!mediaTabs.length || !mediaPanels.length) return;
 
   const mediaLinks = {
-    encyclopedia: `${basePath}knowledge.html`,
+    encyclopedia: `${basePath}infographics.html`,
     research: 'research.html',
     multimedia: 'https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g'
   };
@@ -1958,9 +2084,19 @@ function initCopy() {
   document.querySelectorAll('[data-copy]').forEach(btn => {
     if (btn.dataset.copyBound === '1') return;
     btn.dataset.copyBound = '1';
+    // ค่าที่เป็นลิงก์ภายในเว็บ (เช่น rss.xml) แปลงเป็น URL เต็มตามโดเมนที่เปิดอยู่ ทั้งค่าที่คัดลอกและข้อความที่แสดง
+    if (btn.hasAttribute('data-copy-url')) {
+      try {
+        const abs = new URL(btn.dataset.copy, location.href).href;
+        const shown = btn.parentElement?.querySelector(':scope > span');
+        if (shown && shown.textContent.trim() === btn.dataset.copy) shown.textContent = abs;
+        btn.dataset.copy = abs;
+      } catch { /* คงค่าเดิม */ }
+    }
     btn.addEventListener('click', async () => {
       const label = btn.querySelector('[data-copy-label]');
       const en = document.documentElement.lang === 'en';
+      if (label && btn._origLabel == null) btn._origLabel = label.textContent;
       // Clipboard API ก่อน · ถ้าไม่อนุญาต (บางเบราว์เซอร์/iframe) ใช้วิธีเลือกข้อความชั่วคราวแล้ว execCommand('copy')
       const copyText = async text => {
         try { await navigator.clipboard.writeText(text); return true; } catch { /* ใช้วิธีสำรอง */ }
@@ -1976,7 +2112,7 @@ function initCopy() {
         btn.classList.add('is-copied');
         if (label) label.textContent = en ? 'Copied' : 'คัดลอกแล้ว';
         clearTimeout(btn._copyT);
-        btn._copyT = setTimeout(() => { btn.classList.remove('is-copied'); if (label) label.textContent = en ? 'Copy' : 'คัดลอก'; }, 2000);
+        btn._copyT = setTimeout(() => { btn.classList.remove('is-copied'); if (label) label.textContent = btn._origLabel ?? (en ? 'Copy' : 'คัดลอก'); }, 2000);
       } catch { /* เบราว์เซอร์ไม่อนุญาต — ผู้ใช้เลือกข้อความเองได้ */ }
     });
   });
@@ -2719,6 +2855,7 @@ function initComponents() {
   initSharedModals();
   initSharedSearch();
   initMediaTabs();
+  initLightbox();   // หน้าแรก: อินโฟกราฟิกเปิดดูภาพเต็มในหน้าเดิม (หน้า JSON เรียกซ้ำผ่าน bindDynamicContent ได้ ไม่ผูกซ้ำ)
   initCompactFAQ();
   initNewsEventsTabs();
   initPageTransitions();
@@ -2860,6 +2997,140 @@ function initEventFilters() {
    ============================================================================= */
 const CONSENT_KEY = 'orst-cookie-consent';
 window.orstConsent = () => { try { return localStorage.getItem(CONSENT_KEY) || ''; } catch { return ''; } };
+
+/* หน้านโยบายคุกกี้: แผง "การตั้งค่าคุกกี้ของท่าน" ใน [data-cookie-prefs]
+   แสดงสถานะปัจจุบัน + เปลี่ยนได้ทันที (ยอมรับทั้งหมด / เฉพาะที่จำเป็น) + ล้างข้อมูลที่เว็บไซต์นี้จัดเก็บในเบราว์เซอร์
+   เลือก "เฉพาะที่จำเป็น" = ลบคำค้นล่าสุดด้วย · เลือกแล้วปิดแถบขอความยินยอม (ถ้ายังแสดงอยู่) */
+function initCookiePrefs() {
+  document.querySelectorAll('[data-cookie-prefs]').forEach(root => {
+    if (root.dataset.bound === '1') return;
+    root.dataset.bound = '1';
+    const T = s => (I18N.lang === 'en' ? I18N.translate(s) : s);
+    const STATUS = { all: 'ยอมรับทั้งหมด', necessary: 'เฉพาะที่จำเป็น', '': 'ยังไม่ได้เลือก' };
+    root.innerHTML = `
+      <div class="cookie-prefs-status">
+        <span class="cookie-prefs-ic" aria-hidden="true">${icon('i-shield')}</span>
+        <div>
+          <p class="cookie-prefs-label">${T('สถานะปัจจุบัน')}</p>
+          <p class="cookie-prefs-value" data-consent-status aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="cookie-prefs-options" role="group" aria-label="${T('เลือกการใช้คุกกี้')}">
+        <button type="button" class="cookie-pref" data-set-consent="all" aria-pressed="false">
+          <strong>${T('ยอมรับทั้งหมด')}</strong>
+          <small>${T('จดจำการตั้งค่าและคำค้นล่าสุด เพื่อความสะดวกในการใช้งาน')}</small>
+        </button>
+        <button type="button" class="cookie-pref" data-set-consent="necessary" aria-pressed="false">
+          <strong>${T('เฉพาะที่จำเป็น')}</strong>
+          <small>${T('จดจำเฉพาะภาษา การช่วยการเข้าถึง และมุมมองที่เลือก')}</small>
+        </button>
+      </div>
+      <div class="cookie-prefs-clear">
+        <p>${T('ต้องการเริ่มใหม่? ล้างข้อมูลทั้งหมดที่เว็บไซต์นี้จัดเก็บในเบราว์เซอร์ของท่าน การตั้งค่าจะกลับเป็นค่าเริ่มต้น')}</p>
+        <button type="button" class="cookie-clear" data-clear-storage>${icon('i-x')}<span>${T('ล้างข้อมูลที่จัดเก็บ')}</span></button>
+      </div>
+      <p class="cookie-prefs-done" data-cookie-done hidden role="status"></p>`;
+    const status = root.querySelector('[data-consent-status]');
+    const done = root.querySelector('[data-cookie-done]');
+    const flash = msg => { done.textContent = msg; done.hidden = false; clearTimeout(root._t); root._t = setTimeout(() => { done.hidden = true; }, 3000); };
+    const paint = () => {
+      const v = window.orstConsent();
+      status.textContent = T(STATUS[v] ?? STATUS['']);
+      root.querySelectorAll('[data-set-consent]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setConsent === v)));
+    };
+    const hideBar = () => document.querySelector('[data-cookie-bar]')?.remove();
+    root.querySelectorAll('[data-set-consent]').forEach(b => b.addEventListener('click', () => {
+      try {
+        localStorage.setItem(CONSENT_KEY, b.dataset.setConsent);
+        if (b.dataset.setConsent === 'necessary') localStorage.removeItem('orst-recent-search');
+      } catch { /* โหมดส่วนตัว */ }
+      hideBar(); paint();
+      flash(T('บันทึกการตั้งค่าแล้ว'));
+    }));
+    root.querySelector('[data-clear-storage]').addEventListener('click', () => {
+      try {
+        const keys = [];
+        for (let i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
+        keys.filter(k => /^(orst-|kb-view|doc-view)/.test(k || '')).forEach(k => localStorage.removeItem(k));
+        sessionStorage.removeItem('orst-a11y-hello');
+      } catch { /* โหมดส่วนตัว */ }
+      paint();
+      flash(T('ล้างข้อมูลแล้ว แถบขอความยินยอมจะแสดงอีกครั้งเมื่อเปิดหน้าถัดไป'));
+    });
+    paint();
+  });
+}
+
+/* หน้า "การเข้าถึงเว็บไซต์": แผงทดลองเครื่องมือ [data-a11y-showcase]
+   การ์ดละเครื่องมือ (ไอคอนชุดเดียวกับแผงช่วยการเข้าถึง) กดเพื่อเปิด/ปิดได้ทันที — สั่งงานผ่านปุ่มในแผงจริง สถานะจึงตรงกันเสมอ
+   ขนาดตัวอักษร: ปุ่ม − / + และค่าปัจจุบัน */
+function initA11yShowcase() {
+  document.querySelectorAll('[data-a11y-showcase]').forEach(root => {
+    if (root.dataset.bound === '1') return;
+    const panel = document.querySelector('[data-a11y]');
+    if (!panel) return;
+    root.dataset.bound = '1';
+    const T = s => (I18N.lang === 'en' ? I18N.translate(s) : s);
+    const DESC = {
+      contrast: 'เปลี่ยนสีพื้นและตัวอักษรให้ตัดกันชัดเจน',
+      readable: 'พื้นหลังสีนวล ตัวอักษรใหญ่และเข้มขึ้น อ่านสบายตา',
+      links: 'ขีดเส้นใต้และเน้นลิงก์ทุกจุดให้เห็นชัด',
+      headings: 'เน้นหัวข้อให้เห็นโครงสร้างของหน้าได้ง่าย',
+      spacing: 'เพิ่มระยะห่างระหว่างบรรทัดและตัวอักษร',
+      motion: 'หยุดภาพเคลื่อนไหวและเอฟเฟกต์ต่าง ๆ',
+      cursor: 'ขยายตัวชี้เมาส์ให้มองเห็นง่าย',
+      reader: 'อ่านเนื้อหาของหน้า หรือข้อความที่เลือกไว้ออกเสียง',
+    };
+    const G = I18N.lang === 'en' ? 'A' : 'ก';   // ตัวอย่างตัวอักษรบนปุ่มขนาด
+    const svg = paths => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+    root.innerHTML = `
+      <div class="a11y-sc-font">
+        <div>
+          <strong>${T('ขนาดตัวอักษร')}</strong>
+          <small>${T('ปรับได้ตั้งแต่ 90% ถึง 130%')}</small>
+        </div>
+        <div class="a11y-sc-font-ctrl">
+          <button type="button" data-sc-font="-1" aria-label="${T('ลดขนาดตัวอักษร')}">${G}−</button>
+          <output data-sc-font-val aria-live="polite">100%</output>
+          <button type="button" data-sc-font="1" aria-label="${T('เพิ่มขนาดตัวอักษร')}">${G}+</button>
+        </div>
+      </div>
+      <ul class="a11y-sc-grid">
+        ${A11Y_TOOLS.map(([key, , name, icon]) => `
+        <li><button type="button" class="a11y-sc-tile" data-sc-tool="${key}" aria-pressed="false">
+          <span class="a11y-sc-ic">${svg(icon)}</span>
+          <span class="a11y-sc-text"><strong>${T(name)}</strong><small>${T(DESC[key] || '')}</small></span>
+          <span class="a11y-sc-state" aria-hidden="true"><i></i></span>
+        </button></li>`).join('')}
+      </ul>
+      <div class="a11y-sc-foot">
+        <button type="button" class="a11y-sc-reset" data-sc-reset>${T('คืนค่าเริ่มต้นทั้งหมด')}</button>
+      </div>`;
+    const sync = () => {
+      root.querySelectorAll('[data-sc-tool]').forEach(b => {
+        const tile = panel.querySelector(`[data-a11y-tool="${b.dataset.scTool}"]`);
+        b.setAttribute('aria-pressed', tile?.getAttribute('aria-pressed') === 'true' ? 'true' : 'false');
+      });
+      const val = panel.querySelector('[data-a11y-font-val]')?.textContent || '100%';
+      root.querySelector('[data-sc-font-val]').textContent = val;
+      root.querySelector('[data-sc-font="-1"]').disabled = !!panel.querySelector('[data-a11y-font="-1"]')?.disabled;
+      root.querySelector('[data-sc-font="1"]').disabled = !!panel.querySelector('[data-a11y-font="1"]')?.disabled;
+    };
+    root.addEventListener('click', e => {
+      const tool = e.target.closest('[data-sc-tool]');
+      const font = e.target.closest('[data-sc-font]');
+      if (tool) panel.querySelector(`[data-a11y-tool="${tool.dataset.scTool}"]`)?.click();
+      else if (font) panel.querySelector(`[data-a11y-font="${font.dataset.scFont}"]`)?.click();
+      else if (e.target.closest('[data-sc-reset]')) panel.querySelector('[data-a11y-reset]')?.click();
+      else return;
+      e.stopPropagation();
+      sync();
+    });
+    // เปลี่ยนจากแผงจริง (หรือหยุดอ่านออกเสียงเอง) → อัปเดตการ์ด
+    new MutationObserver(sync).observe(panel, { subtree: true, attributes: true, attributeFilter: ['aria-pressed', 'disabled'], childList: true, characterData: true });
+    sync();
+  });
+}
 
 function initCookieBar() {
   if (window.orstConsent()) return;
@@ -3066,6 +3337,8 @@ window.orstHeader = {
     initAnnotated();
     initCountUp();
     initCopy();
+    initCookiePrefs();
+    initA11yShowcase();
     initPageIndex();
     initGuideViews();
     initVideoPlayer();

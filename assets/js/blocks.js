@@ -332,7 +332,7 @@ function featureDetails(list = []) {
   if (!list.length) return '';
   return `<dl class="feature-details">${list.filter(d => d && d.label).map(d => {
     const isEn = /^[0-9A-Za-z@._+()\s-]+$/.test(d.value || '');
-    return `<div class="feature-detail${d.copy ? ' has-copy' : ''}${d.wide ? ' is-wide' : ''}"><dt>${esc(d.label)}</dt><dd><span${isEn ? ' lang="en" data-keep-digits' : ''}>${esc(d.value || '')}</span>${d.copy ? `<button type="button" class="feature-copy" data-copy="${esc(d.value || '')}">${icon('i-copy')}<span data-copy-label>คัดลอก</span></button>` : ''}</dd></div>`;
+    return `<div class="feature-detail${d.copy ? ' has-copy' : ''}${d.wide ? ' is-wide' : ''}"><dt>${esc(d.label)}</dt><dd><span${isEn ? ' lang="en" data-keep-digits' : ''}>${esc(d.value || '')}</span>${d.copy ? `<button type="button" class="feature-copy" data-copy="${esc(d.value || '')}"${d.copy === 'url' ? ' data-copy-url' : ''}>${icon('i-copy')}<span data-copy-label>คัดลอก</span></button>` : ''}</dd></div>`;
   }).join('')}</dl>`;
 }
 
@@ -390,6 +390,22 @@ function featureList(b) {
               ${links ? `<div class="feature-rows">${links}</div>` : ''}
             </li>`;
     }
+    if (b.cardStyle === 'compact') {
+      // การ์ดแถวเดียวแบบกระชับ: ไอคอน | ชื่อ + คำอธิบาย | ช่องค่า (ปุ่มคัดลอก) + ลิงก์ตัวอักษร — ยุบเป็นแนวตั้งบนจอเล็ก
+      const plain = (it.links || []).filter(l => l && l.href).map(l => {
+        const ext = isExternal(l.href);
+        return `<a class="feature-compact-link" href="${esc(l.href)}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ''}>${icon(l.icon || 'i-file')}<span>${esc(l.kind || l.label || l.href)}</span>${ext ? '<span class="sr-only"> (เปิดในแท็บใหม่)</span>' : ''}</a>`;
+      }).join('');
+      return `
+            <li class="block-feature feature-compact${it.highlight ? ' is-highlight' : ''}">
+              <span class="feature-compact-icon" aria-hidden="true">${icon(it.icon || 'i-shield')}</span>
+              <div class="feature-compact-text">
+                <strong>${esc(it.title)}</strong>
+                ${it.body ? `<p>${esc(it.body)}</p>` : ''}
+              </div>
+              ${it.details?.length || plain ? `<div class="feature-compact-act">${featureDetails(it.details)}${plain}</div>` : ''}
+            </li>`;
+    }
     if (it.details?.length || b.cardStyle === 'panel') {
       // การ์ดแบบแผง: หัวการ์ดมีพื้นสี (highlight = เขียวเข้ม) + รายละเอียด ป้ายบน/ค่าล่าง 2 คอลัมน์ + ลิงก์
       return `
@@ -408,11 +424,11 @@ function featureList(b) {
             </li>`;
     }
     return `
-            <li class="block-feature"${b.image ? ` style="--i:${i}"` : ''}>
+            <li class="block-feature${it.highlight ? ' is-highlight' : ''}"${b.image ? ` style="--i:${i}"` : ''}>
               <span class="block-feature-icon">${icon(it.icon || 'i-shield', 'icon-lg')}</span>
               <div>
                 <strong>${esc(it.title)}</strong>
-                ${it.body ? `<p>${esc(it.body)}</p>` : ''}
+                ${it.body ? `<p${/\[[^\]]+\]/.test(it.body) ? ' class="is-pending"' : ''}>${esc(it.body)}</p>` : ''}
                 ${featureDetails(it.details)}
                 ${links ? `<div class="block-feature-links${asRows ? ' feature-rows' : ''}">${links}</div>` : ''}
               </div>
@@ -525,15 +541,24 @@ function mediaGrid(b) {
       // ใช้ได้ทั้งอัลบั้มภาพ (href) และวิดีโอ (youtube = เล่นในป๊อปอัป) · ท้ายการ์ดซ่อนเมื่อไม่มีทั้งวันที่และจำนวน
       const ayt = it.youtube ? String(it.youtube) : '';
       const ahref = ayt ? `https://www.youtube.com/watch?v=${encodeURIComponent(ayt)}` : it.href;
-      const foot = it.desc || it.tag ? `
+      // วิดีโอ: ท้ายการ์ดเสมอ — ซ้าย วันที่ (ถ้ามี) หรือแหล่ง YouTube · ขวา ปุ่ม "ดูวิดีโอ" (แบบเดียวกับ "อ่านต่อ" ของการ์ดข่าว)
+      const vfoot = ayt ? `
+              <span class="media-foot is-video-foot">
+                ${it.desc ? `<span class="media-date">${icon('i-calendar')}${esc(it.desc)}</span>` : `<span class="media-source">${icon('i-video')}<span lang="en">YouTube</span></span>`}
+                <span class="media-watch"><span>ดูวิดีโอ</span>${icon('i-arrow', 'icon media-watch-ic')}</span>
+              </span>` : '';
+      const foot = ayt ? vfoot : it.desc || it.tag ? `
               <span class="media-foot">
-                <span>${esc(it.desc || '')}</span>
+                ${/(ม\.ค\.|ก\.พ\.|มี\.ค\.|เม\.ย\.|พ\.ค\.|มิ\.ย\.|ก\.ค\.|ส\.ค\.|ก\.ย\.|ต\.ค\.|พ\.ย\.|ธ\.ค\.)/.test(it.desc || '')
+                  ? `<span class="media-date">${icon('i-calendar')}${esc(it.desc)}</span>`
+                  : `<span>${esc(it.desc || '')}</span>`}
                 ${it.tag ? `<span class="media-count">${esc(it.tag)}</span>` : ''}
               </span>` : '';
       const albumInner = `
             <span class="block-media-thumb">
               <img src="${esc(it.image)}" alt="${esc(it.alt || it.title || '')}" loading="lazy">
               ${ayt ? '<span class="media-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></span>' : ''}
+              ${!ayt && ahref ? `<span class="media-open" aria-hidden="true">${icon('i-eye')}</span>` : ''}
             </span>
             <span class="block-media-body">
               ${it.category ? `<small class="media-kicker">${esc(it.category)}</small>` : ''}
@@ -565,7 +590,10 @@ function mediaGrid(b) {
               ${it.tag && yt ? `<small class="media-kicker">${esc(it.tag)}</small>` : ''}
               <strong${paged ? ' class="doc-title"' : ''}>${esc(it.title)}</strong>
               ${it.desc ? `<span>${esc(it.desc)}</span>` : ''}
-              ${(paged || yt) && href ? `<span class="media-go" aria-hidden="true">${goLabel} ${icon('i-arrow')}</span>` : ''}
+              ${it.date ? `<span class="media-foot is-date-foot">
+                <time class="media-date" datetime="${esc(it.date)}">${icon('i-calendar')}${esc(formatThaiDate(it.date))}</time>
+                ${(paged || yt) && href ? `<span class="media-go" aria-hidden="true">${goLabel} ${icon('i-arrow')}</span>` : ''}
+              </span>` : (paged || yt) && href ? `<span class="media-go" aria-hidden="true">${goLabel} ${icon('i-arrow')}</span>` : ''}
             </span>`;
     if (!href) return `<div class="block-media-card${pg}">${inner}
           </div>`;
@@ -589,6 +617,7 @@ function mediaGrid(b) {
                 <span class="sr-only">ค้นหา${esc(unit)}</span>
                 <input type="search" data-doc-search placeholder="ค้นหาชื่อ${esc(unit)}" autocomplete="off">
               </label>
+              ${b.channel?.href ? `<a class="doc-channel" href="${esc(b.channel.href)}" target="_blank" rel="noopener noreferrer">${icon('i-video')}<span>${esc(b.channel.label || 'ช่อง YouTube')}</span>${icon('i-external', 'icon doc-channel-ext')}<span class="sr-only"> (เปิดในแท็บใหม่)</span></a>` : ''}
               <div class="doc-view" role="group" aria-label="รูปแบบการแสดงผล">
                 <button type="button" data-doc-view="grid" aria-pressed="true">${icon('i-grid')}<span>ตาราง</span></button>
                 <button type="button" data-doc-view="list" aria-pressed="false">${icon('i-list')}<span>รายการ</span></button>
@@ -888,6 +917,22 @@ function faq(b) {
    { type, heading?, lead?, layout?: "list"|"timeline", items: [{ title, body? }] }
    layout "timeline" = เรียงแนวนอนต่อกันด้วยเส้น (จอเล็กกลับเป็นแนวตั้ง) — เหมาะกับ 3-5 ขั้น */
 function steps(b) {
+  if (b.layout === 'cards') {
+    // layout "cards": การ์ดขั้นตอนเรียงแนวนอน — ไอคอนวงกลมเขียว + เลขขั้นตัวใหญ่สีทองจาง · ป้าย "ขั้นที่ n" · ชื่อ + คำอธิบาย
+    // ระหว่างการ์ดมีลูกศรเล็กชี้ไปขั้นถัดไป (จอเล็กเรียงแนวตั้ง ลูกศรชี้ลง)
+    const items = (b.items || []).map((it, i) => `
+            <li class="step-card" style="--i:${i}">
+              <div class="step-card-top">
+                <span class="step-card-icon" aria-hidden="true">${icon(it.icon || 'i-check')}</span>
+                <span class="step-card-no" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <small class="step-card-kicker">ขั้นที่ ${i + 1}</small>
+              <strong>${esc(it.title)}</strong>
+              ${it.body ? `<p>${esc(it.body)}</p>` : ''}
+            </li>`).join('');
+    return section(b, `<ol class="step-cards" data-reveal>${items}
+        </ol>`);
+  }
   if (b.layout === 'timeline') {
     const items = (b.items || []).map((it, i) => `
             <li class="block-step">
@@ -1588,7 +1633,7 @@ function imageBand(b) {
     return `<li style="--i:${i}">${ic ? `<span class="ib-ico" aria-hidden="true">${icon(ic)}</span>` : ''}<span class="ib-num" aria-hidden="true">${esc(m ? m[1] : String(i + 1))}</span>${textHtml}</li>`;
   }).join('');
   return `
-    <section class="block-image-band is-${tone} is-img-${side}${b.image ? '' : ' no-media'}${(b.list || []).length && b.list.length <= 3 ? ' is-short' : ''}"${attr('id', b.id)} data-reveal>
+    <section class="block-image-band is-${tone} is-img-${side}${b.image ? '' : ' no-media'}${(b.list || []).length && b.list.length <= 3 ? ' is-short' : ''}${b.listStyle === 'tiles' ? ' is-tiles' : ''}${b.tint ? ' is-tint' : ''}"${attr('id', b.id)} data-reveal>
       ${b.image ? `<div class="ib-media"><img src="${esc(b.image)}" alt="${esc(b.imageAlt || '')}" loading="lazy"${b.imagePosition ? ` style="object-position:${esc(b.imagePosition)}"` : ''}></div>` : ''}
       <div class="container ib-inner">
         <div class="ib-content">
@@ -1625,8 +1670,9 @@ function orgTree(b) {
             </div>`;
   const side = list => (list || []).length ? `
             <ul class="ot-side">${list.map(s => `<li><strong>${esc(s.title)}</strong>${s.note ? `<small>${esc(s.note)}</small>` : ''}</li>`).join('')}</ul>` : '';
-  const unit = u => `
+  const unit = (u, i) => `
               <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
                 <strong>${esc(u.title)}</strong>
                 ${u.note ? `<small>${esc(u.note)}</small>` : ''}
                 ${(u.roles || []).length ? `<p class="ot-unit-roles">${u.roles.map(r => `<span>${esc(r)}</span>`).join(`<span class="ot-arrow" aria-hidden="true">${icon('i-arrow')}</span>`)}</p>` : ''}
@@ -1634,6 +1680,7 @@ function orgTree(b) {
   const branches = (b.branches || []).map((br, i) => `
         <div class="ot-branch is-${br.tone === 'gold' ? 'gold' : 'deep'}" style="--i:${i}">
           <div class="ot-node is-head">
+            ${br.icon ? `<span class="ot-head-icon" aria-hidden="true">${icon(br.icon)}</span>` : ''}
             <h3 class="ot-title">${esc(br.title)}</h3>
             ${br.note ? `<p class="ot-note">${esc(br.note)}</p>` : ''}
           </div>
@@ -1655,6 +1702,7 @@ function orgTree(b) {
   const top = t ? `
         <div class="ot-top">
           <div class="ot-node is-top">
+            ${t.icon ? `<span class="ot-head-icon" aria-hidden="true">${icon(t.icon)}</span>` : ''}
             <h3 class="ot-title">${esc(t.title)}</h3>
             ${t.note ? `<p class="ot-note">${esc(t.note)}</p>` : ''}
           </div>
@@ -1715,12 +1763,17 @@ function annotatedFigure(b) {
               </div>
             </li>`).join('');
   const f = b.full;
+  // th / en เป็นข้อความเดียว หรืออาร์เรย์ย่อหน้าก็ได้ (แบ่งย่อหน้าให้อ่านง่าย)
+  // ย่อหน้าเป็นข้อความ หรือ { title, text } = แถวหัวข้อย่อย (ซ้าย) + ข้อความ (ขวา)
+  const paras = v => (Array.isArray(v) ? v : [v]).filter(Boolean).map(p => typeof p === 'object'
+    ? `<div class="af-row"><h4 class="af-row-title">${esc(p.title || '')}</h4><p class="af-col-text">${esc(p.text || '')}</p></div>`
+    : `<p class="af-col-text">${esc(p)}</p>`).join('');
   const full = f && (f.th || f.en) ? `
       <div class="af-full">
         ${f.heading ? `<h3 class="af-full-heading">${esc(f.heading)}</h3>` : ''}
         <div class="af-full-cols">
-          ${f.th ? `<div class="af-col is-th"><p class="af-col-label">ภาษาไทย</p><p class="af-col-text">${esc(f.th)}</p></div>` : ''}
-          ${f.en ? `<div class="af-col is-en" lang="en" data-i18n-skip><p class="af-col-label">${esc(f.enLabel || 'English')}</p><p class="af-col-text">${esc(f.en)}</p></div>` : ''}
+          ${f.th ? `<div class="af-col is-th"><p class="af-col-label">ภาษาไทย</p>${paras(f.th)}</div>` : ''}
+          ${f.en ? `<div class="af-col is-en" lang="en" data-i18n-skip><p class="af-col-label">${esc(f.enLabel || 'English')}</p>${paras(f.en)}</div>` : ''}
         </div>
       </div>` : '';
   return section(b, `
@@ -1867,7 +1920,8 @@ function pageIndex(b) {
             <input type="search" placeholder="ค้นหาหน้าในเว็บไซต์" data-index-search autocomplete="off">
           </label>
           <nav class="index-jump" aria-label="ไปยังหมวด">
-            ${secs.map(S => `<button type="button" data-index-jump="${esc(S.name)}">${esc(S.name)}</button>`).join('')}
+            <span class="index-jump-label" aria-hidden="true">ไปยังหมวด</span>
+            ${secs.map((S, i) => `<button type="button" data-index-jump="${esc(S.name)}"><b aria-hidden="true">${String(i + 1).padStart(2, '0')}</b>${esc(S.name)}</button>`).join('')}
           </nav>
         </div>`;
   return section(b, `<div class="page-index-wrap smap" data-page-index>${tools}

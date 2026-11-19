@@ -1,6 +1,6 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "แม่แบบ T2 + เส้นเวลา — เมนู 3.3.1 ข้อความจาก orst.go.th/iwfm_list.asp?p=ABOUT-HISTORY-ORS คงถ้อยคำเดิม (อยู่ใน paragraphs ของแต่ละช่วง) หัวข้อ/lead/สถิติ สรุปจากข้อความเดิม ให้ ORST ตรวจ · ภาพประวัติจาก Wikimedia Commons (assets/images/orst/history/CREDITS.json) แสดงที่มาใต้ภาพแต่ละภาพ (credit) และมุม hero (จำเป็นตามสัญญาอนุญาต CC BY / CC BY-SA) · ภาพปัจจุบันจากข่าวของสำนักงาน",
+  "_note": "แม่แบบ T2 + เส้นเวลา — เมนู 3.3.1 ข้อความจาก orst.go.th/iwfm_list.asp?p=ABOUT-HISTORY-ORS คงถ้อยคำเดิม (อยู่ใน paragraphs ของแต่ละช่วง) หัวข้อ/lead/สถิติ สรุปจากข้อความเดิม ให้ ORST ตรวจ · ภาพประวัติจาก Wikimedia Commons (assets/images/orst/history/CREDITS.json) แสดงที่มาใต้ภาพแต่ละภาพ (credit) และมุม hero (จำเป็นตามสัญญาอนุญาต CC BY / CC BY-SA) · ภาพปัจจุบันจากข่าวของสำนักงาน · ภาพปกเป็นอาคารสำนักงานปัจจุบัน (hero-1.jpg) · ข้อมูลเครดิตภาพเก็บไว้ในฟิลด์ _credit/_imageCredit (ไม่แสดง) — ภาพ CC BY/CC BY-SA ต้องให้เครดิตเมื่อเผยแพร่",
   "title": "History",
   "navKey": "about",
   "description": "History of the Royal Society of Thailand and the Office of the Royal Society, from 1926 to the present",
@@ -11,7 +11,7 @@
       "type": "page-hero",
       "heading": "History",
       "lead": "The Office of the Royal Society is a department-level government agency that is not part of the Office of the Prime Minister, any ministry or sub-ministry, and reports directly to the Prime Minister",
-      "image": "assets/images/orst/history/bang-khun-phrom.jpg",
+      "image": "assets/images/hero-1.jpg",
       "imageAlt": "",
       "breadcrumb": [
         {
@@ -39,10 +39,11 @@
           "label": "Fellows in 3 academies"
         }
       ],
-      "imageCredit": {
+      "_imageCredit": {
         "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
         "href": "https://commons.wikimedia.org/wiki/File:Bang_Khun_Phrom_Palace_from_Rama_VIII_Bridge.jpg"
-      }
+      },
+      "_imageOld": "assets/images/orst/history/bang-khun-phrom.jpg"
     },
     {
       "type": "anchor-nav",
@@ -91,10 +92,6 @@
       "lead": "Founded by His Majesty King Prajadhipok to research, disseminate, promote and exchange knowledge, and to develop, conserve and provide academic services for the benefit of the nation and its people (Section 6, Royal Society Act B.E. 2558).",
       "countUp": true,
       "image": "assets/images/orst/history/royal-institute-grand-palace.jpg",
-      "imageCredit": {
-        "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
-        "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
-      },
       "items": [
         {
           "value": "100 years",
@@ -116,7 +113,11 @@
           "label": "core language and academic programmes",
           "note": "Dictionary · Encyclopedia · Coined terms · Geographical gazetteer · Romanization"
         }
-      ]
+      ],
+      "_imageCredit": {
+        "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
+        "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
+      }
     },
     {
       "type": "timeline",
@@ -137,7 +138,7 @@
           "portrait": true,
           "alt": "Portrait of His Majesty King Prajadhipok",
           "caption": "His Majesty King Prajadhipok",
-          "credit": {
+          "_credit": {
             "text": "Unknown author / Wikimedia Commons (Public domain)",
             "href": "https://commons.wikimedia.org/wiki/File:King_Prajadhipok_portrait_photograph.jpg"
           }
@@ -162,7 +163,7 @@
           "image": "assets/images/orst/history/chakri-maha-prasat.jpg",
           "alt": "Chakri Maha Prasat Throne Hall, Grand Palace",
           "caption": "The Grand Palace",
-          "credit": {
+          "_credit": {
             "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
             "href": "https://commons.wikimedia.org/wiki/File:Phra_Thinang_Chakri_Maha_Prasat_(II)_BKK.jpg"
           }
@@ -192,7 +193,7 @@
               "image": "assets/images/orst/history/thawon-watthu.jpg",
               "alt": "Thawon Watthu Building (Vajiravudh Library), Na Phra That Road",
               "caption": "Thawon Watthu Building, Na Phra That Road",
-              "credit": {
+              "_credit": {
                 "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
                 "href": "https://commons.wikimedia.org/wiki/File:Thawon_Watthu_Building_20231209.jpg"
               }
@@ -201,7 +202,7 @@
               "image": "assets/images/orst/history/royal-institute-grand-palace.jpg",
               "alt": "The former Royal Institute building in the Grand Palace",
               "caption": "Former offices in the Grand Palace",
-              "credit": {
+              "_credit": {
                 "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
                 "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
               }
@@ -361,6 +362,12 @@
           "body": "Use it to make services more effective"
         }
       ]
+    },
+    {
+      "type": "rich-text",
+      "id": "photo-credits",
+      "width": "full",
+      "html": "<p class=\"photo-credits\"><strong>Photo credits</strong> Chakri Maha Prasat Throne Hall and Thawon Watthu Building: <a href=\"https://commons.wikimedia.org/wiki/File:Phra_Thinang_Chakri_Maha_Prasat_(II)_BKK.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Supanut Arunoprayote</a> / Wikimedia Commons (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY 4.0</a>) · Former office in the Grand Palace: <a href=\"https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG\" target=\"_blank\" rel=\"noopener noreferrer\">Rikker Dockum</a> / Wikimedia Commons (<a href=\"https://creativecommons.org/licenses/by-sa/2.5/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 2.5</a>) · Royal portrait: <a href=\"https://commons.wikimedia.org/wiki/File:King_Prajadhipok_portrait_photograph.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Wikimedia Commons</a> (public domain)</p>"
     }
   ],
   "lang": "en"

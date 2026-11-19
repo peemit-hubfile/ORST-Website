@@ -10,7 +10,7 @@
     {
       "type": "page-hero",
       "heading": "Knowledge publications",
-      "image": "assets/images/orst/news/data0005-00005428-960.jpg",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
       "lead": "Knowledge publications of the Office of the Royal Society",
       "breadcrumb": [
         {
@@ -18,7 +18,7 @@
           "href": "index.html"
         },
         {
-          "label": "Knowledge Repository",
+          "label": "Knowledge Hub",
           "href": "knowledge.html"
         },
         {

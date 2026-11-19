@@ -224,7 +224,7 @@
         "type": { "const": "feature-list" },
         "columns": { "$ref": "#/definitions/columns" },
         "layout": { "enum": ["list", "cards", "rows", "directory"], "description": "cards = แต่ละรายการเป็นการ์ดมีกรอบ · rows = การ์ดกว้างเต็มแถว ลำดับ 01 02 + ชื่อ/คำอธิบายซ้าย ลิงก์เป็นแถวรายการด้านขวา (เหมาะกับบริการที่มีขั้นตอน/เอกสารหลายรายการ)" },
-        "cardStyle": { "enum": ["plain", "panel"], "description": "panel = การ์ดมีหัวพื้นสีทองอ่อน (รายการที่ highlight: true = หัวเขียวเข้ม) ไอคอนจางมุมขวา ลิงก์เป็นแถวด้านล่าง" },
+        "cardStyle": { "enum": ["plain", "panel", "compact"], "description": "panel = การ์ดมีหัวพื้นสีทองอ่อน (รายการที่ highlight: true = หัวเขียวเข้ม) ไอคอนจางมุมขวา ลิงก์เป็นแถวด้านล่าง · compact = การ์ดแถวเดียวกระชับ ไอคอน | ชื่อ+คำอธิบาย | ช่องค่า (คัดลอกได้) + ลิงก์ตัวอักษร" },
         "linkStyle": { "enum": ["pills", "rows"], "description": "rows = ลิงก์ในการ์ดเป็นแถวรายการ (ป้ายชนิด kind + ค่า + ลูกศร) แทนปุ่มแคปซูล" },
         "image": { "type": "string", "description": "ภาพพื้นหลังเต็มแถบ (ภาพประดับ) — แถบกลายเป็นสีเขียวเข้ม การ์ดโปร่งแสง" },
         "imagePosition": { "type": "string", "description": "ตำแหน่งภาพ (CSS object-position) เช่น \"center 30%\"" },
@@ -258,7 +258,7 @@
                 "type": "array",
                 "description": "รายละเอียดแบบ ป้าย : ค่า ใต้คำอธิบาย (เช่น ธนาคาร / ชื่อบัญชี / เลขที่บัญชี) — copy: true = มีปุ่มคัดลอกค่า",
                 "items": { "type": "object", "required": ["label", "value"],
-                  "properties": { "label": { "type": "string" }, "value": { "type": "string" }, "copy": { "type": "boolean" }, "wide": { "type": "boolean", "description": "เต็มความกว้างการ์ด (ค่ายาว)" } } }
+                  "properties": { "label": { "type": "string" }, "value": { "type": "string" }, "copy": { "enum": [true, false, "url"], "description": "true = ปุ่มคัดลอกค่า · \"url\" = คัดลอกเป็น URL เต็มของเว็บที่เปิดอยู่ (เช่น rss.xml)" }, "wide": { "type": "boolean", "description": "เต็มความกว้างการ์ด (ค่ายาว)" } } }
               },
               "highlight": { "type": "boolean", "description": "การ์ดที่มี details: หัวการ์ดสีเขียวเข้ม ตัวขาว (เน้นทางเลือกหลัก)" }
             }
@@ -570,7 +570,7 @@
           "title": { "type": "string" }, "text": { "type": "string" },
           "x": { "type": "number", "minimum": 0, "maximum": 100, "description": "ตำแหน่งหมุดแนวนอน % ของภาพ" },
           "y": { "type": "number", "minimum": 0, "maximum": 100, "description": "ตำแหน่งหมุดแนวตั้ง % ของภาพ" } } } },
-        "full": { "type": "object", "properties": { "heading": { "type": "string" }, "th": { "type": "string" }, "en": { "type": "string", "description": "ฉบับภาษาอังกฤษทางการ — ไม่ถูกแปลซ้ำ โหมดภาษาอังกฤษแสดงเฉพาะฉบับนี้" }, "enLabel": { "type": "string" } } }
+        "full": { "type": "object", "properties": { "heading": { "type": "string" }, "th": { "type": ["string", "array"], "items": { "type": ["string", "object"], "properties": { "title": { "type": "string" }, "text": { "type": "string" } } }, "description": "ข้อความเดียว หรืออาร์เรย์ย่อหน้า (ข้อความ หรือ { title, text } = แถวมีหัวข้อย่อย)" }, "en": { "type": ["string", "array"], "items": { "type": ["string", "object"], "properties": { "title": { "type": "string" }, "text": { "type": "string" } } }, "description": "ฉบับภาษาอังกฤษทางการ — ไม่ถูกแปลซ้ำ โหมดภาษาอังกฤษแสดงเฉพาะฉบับนี้ (ข้อความเดียว หรืออาร์เรย์ย่อหน้า)" }, "enLabel": { "type": "string" } } }
       },
       "required": ["type", "image", "parts"]
     },
@@ -579,11 +579,11 @@
       "description": "แผนผังการบริหารงานแบบ 2 สายใต้ผู้บังคับบัญชาสูงสุด + เอกสารแผนผังฉบับเผยแพร่ (ภาพย่อ ดูตัวอย่าง เปิดเอกสาร)",
       "properties": {
         "type": { "const": "org-tree" },
-        "top": { "type": "object", "required": ["title"], "properties": { "title": { "type": "string" }, "note": { "type": "string" }, "aside": { "type": "string" } } },
+        "top": { "type": "object", "required": ["title"], "properties": { "title": { "type": "string" }, "note": { "type": "string" }, "aside": { "type": "string" }, "icon": { "type": "string", "description": "ไอคอนในวงกลมเหนือชื่อ" } } },
         "branches": {
           "type": "array", "minItems": 1,
           "items": { "type": "object", "required": ["title"], "properties": {
-            "title": { "type": "string" }, "note": { "type": "string" }, "tone": { "enum": ["deep", "gold"] },
+            "title": { "type": "string" }, "note": { "type": "string" }, "tone": { "enum": ["deep", "gold"] }, "icon": { "type": "string", "description": "ไอคอนในวงกลมเหนือชื่อหัวสาย" },
             "nodes": { "type": "array", "items": { "type": "object", "required": ["title"], "properties": {
               "title": { "type": "string" }, "note": { "type": "string" },
               "chips": { "type": "array", "items": { "type": "string" } },
@@ -605,6 +605,8 @@
     "imageBand": {
       "description": "แถบภาพเต็มความกว้าง — ภาพครึ่งแถบไล่สีกลืนเข้าพื้น ข้อความอีกด้าน (วิสัยทัศน์ / พันธกิจ)",
       "properties": {
+        "listStyle": { "enum": ["plain", "tiles"], "description": "tiles = รายการเป็นการ์ด 2 คอลัมน์ เลขในกล่องทอง ชื่อตัวหนา คำอธิบายตัวเล็ก (แบบไม่มีภาพ)" },
+        "tint": { "type": "boolean", "description": "พื้นหลังสีอ่อน (คั่นจังหวะเมื่อมีหลายแถบติดกัน)" },
         "type": { "const": "image-band" },
         "eyebrow": { "type": "string" },
         "heading": { "type": "string" },
@@ -753,6 +755,7 @@
     "mediaGrid": {
       "description": "การ์ดที่มีรูปภาพ อัตราส่วน 4:3",
       "properties": {
+        "channel": { "type": "object", "description": "ปุ่มลิงก์ช่อง (เช่น YouTube) ในแถบเครื่องมือ", "properties": { "label": { "type": "string" }, "href": { "type": "string" } } },
         "pageSize": { "type": "integer", "minimum": 4, "description": "แบ่งหน้า + ช่องค้นหา เมื่อรายการมากกว่าค่านี้ (ไม่ใส่ = 24)" },
         "unit": { "type": "string", "description": "คำเรียกรายการในข้อความ เช่น \"ภาพ\" (พบ 136 ภาพ)" },
         "type": { "const": "media-grid" },
@@ -767,6 +770,7 @@
             "type": "object",
             "required": ["image", "title"],
             "properties": {
+              "date": { "type": "string", "description": "วันที่เผยแพร่ YYYY-MM-DD — แสดงท้ายการ์ดคู่กับปุ่มดูภาพ (แบบเดียวกับการ์ดข่าว)" },
               "image": { "type": "string", "description": "path รูป เช่น assets/images/e-Book01.png" },
               "alt": { "type": "string", "description": "คำอธิบายรูปสำหรับ screen reader" },
               "title": { "type": "string" },
@@ -815,14 +819,14 @@
       "description": "ขั้นตอนการทำงาน ใส่เลขลำดับให้อัตโนมัติ",
       "properties": {
         "type": { "const": "steps" },
-        "layout": { "enum": ["list", "timeline"], "description": "timeline = เรียงแนวนอนต่อกันด้วยเส้น (เหมาะกับ 3-5 ขั้น)" },
+        "layout": { "enum": ["list", "timeline", "cards"], "description": "timeline = เรียงแนวนอนต่อกันด้วยเส้น (เหมาะกับ 3-5 ขั้น) · cards = การ์ดขั้นตอนมีไอคอน + เลขขั้นตัวใหญ่ ลูกศรคั่นระหว่างการ์ด (เหมาะกับ 3-4 ขั้น)" },
         "items": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
             "required": ["title"],
-            "properties": { "title": { "type": "string" }, "body": { "type": "string" } }
+            "properties": { "title": { "type": "string" }, "body": { "type": "string" }, "icon": { "type": "string", "description": "ไอคอนของขั้น (ใช้กับ layout cards)" } }
           }
         }
       },

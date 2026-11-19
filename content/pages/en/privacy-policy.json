@@ -30,50 +30,72 @@
           "publishedAt": "2022-10-18",
           "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001420.PDF"
         }
-      ]
+      ],
+      "lead": "Read or download the full personal data protection policy of the Office of the Royal Society.",
+      "layout": "compact"
     },
     {
-      "type": "link-list",
+      "type": "feature-list",
       "id": "rights",
-      "heading": "Rights of data subjects",
-      "items": [
-        {
-          "title": "Data Subject Request",
-          "href": "data-subject-request.html",
-          "icon": "i-form"
-        },
-        {
-          "title": "Data Policy & Plan",
-          "href": "data-policy.html",
-          "icon": "i-file"
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "policies",
+      "layout": "cards",
+      "columns": 4,
+      "linkStyle": "rows",
       "variant": "alt",
-      "heading": "Other website policies",
+      "heading": "Rights of data subjects",
+      "lead": "Under the Personal Data Protection Act B.E. 2562 (2019), as the data subject you have the following rights over your personal data.",
       "items": [
         {
-          "title": "Website Policy",
-          "href": "website-policy.html",
-          "icon": "i-file"
+          "icon": "i-eye",
+          "title": "Access and obtain a copy",
+          "body": "Request access to and a copy of the personal data the Office holds about you."
         },
         {
-          "title": "Cookie Policy",
-          "href": "cookie-policy.html",
-          "icon": "i-file"
+          "icon": "i-pen",
+          "title": "Rectification",
+          "body": "Ask for your personal data to be corrected so it is accurate, up to date, complete and not misleading."
         },
         {
-          "title": "Security Policy",
-          "href": "security-policy.html",
-          "icon": "i-shield"
+          "icon": "i-x",
+          "title": "Erasure",
+          "body": "Ask for your data to be deleted, destroyed or anonymised."
         },
         {
-          "title": "Disclaimer",
-          "href": "disclaimer.html",
-          "icon": "i-file"
+          "icon": "i-shield",
+          "title": "Restriction",
+          "body": "Ask for the use of your personal data to be temporarily restricted."
+        },
+        {
+          "icon": "i-megaphone",
+          "title": "Objection",
+          "body": "Object to the collection, use or disclosure of your personal data."
+        },
+        {
+          "icon": "i-share",
+          "title": "Data portability",
+          "body": "Receive your data in a commonly readable format, or have it sent to another data controller."
+        },
+        {
+          "icon": "i-check",
+          "title": "Withdraw consent",
+          "body": "Withdraw consent you have given at any time, unless restricted by law."
+        },
+        {
+          "icon": "i-form",
+          "title": "Want to exercise your rights?",
+          "body": "Submit a data subject request to the Office online.",
+          "links": [
+            {
+              "label": "Submit a request",
+              "href": "data-subject-request.html",
+              "kind": "Form"
+            },
+            {
+              "label": "Data Policy & Plan",
+              "href": "data-policy.html",
+              "kind": "More information"
+            }
+          ],
+          "highlight": true
         }
       ]
     }

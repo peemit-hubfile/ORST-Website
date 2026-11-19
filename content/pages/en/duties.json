@@ -27,7 +27,6 @@
     {
       "type": "image-band",
       "id": "duties",
-      "eyebrow": "Powers & Duties",
       "heading": "Powers and duties of the Office of the Royal Society",
       "paragraphs": [
         "The Office of the Royal Society has the following powers and duties"
@@ -74,12 +73,12 @@
           "text": "(10) To perform other acts prescribed by law as the powers and duties of the Office of the Royal Society"
         }
       ],
-      "tone": "light"
+      "tone": "light",
+      "listStyle": "tiles"
     },
     {
       "type": "image-band",
       "id": "divisions",
-      "eyebrow": "Divisions",
       "heading": "Internal units",
       "paragraphs": [
         "The missions and responsibilities of each internal unit are awaiting information from the Office of the Royal Society"
@@ -98,7 +97,9 @@
           "title": "Office of the Secretary"
         }
       ],
-      "tone": "light"
+      "tone": "light",
+      "listStyle": "tiles",
+      "tint": true
     }
   ],
   "lang": "en"

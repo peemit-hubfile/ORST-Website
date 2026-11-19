@@ -4,6 +4,7 @@
   "title": "Social Media",
   "navKey": "contact",
   "description": "Follow news, activities and knowledge from the Office of the Royal Society on social media",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -28,7 +29,10 @@
       "type": "feature-list",
       "id": "accounts",
       "layout": "cards",
+      "columns": 3,
+      "linkStyle": "rows",
       "heading": "Official accounts",
+      "lead": "Follow news and contact the Office through its official accounts below.",
       "items": [
         {
           "icon": "i-people",
@@ -62,29 +66,6 @@
               "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Other contact channels",
-      "items": [
-        {
-          "title": "Complaints",
-          "href": "complaints.html",
-          "icon": "i-megaphone"
-        },
-        {
-          "title": "Contact Form",
-          "href": "contact.html#message-form",
-          "icon": "i-form"
-        },
-        {
-          "title": "Website Survey",
-          "href": "website-survey.html",
-          "icon": "i-check"
         }
       ]
     }

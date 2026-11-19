@@ -1,6 +1,6 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "อธิบายตามสิ่งที่โค้ดเว็บนี้จัดเก็บจริง (localStorage ใน components.js / knowledge.js) — ตัวบททางการรอ ORST อนุมัติ",
+  "_note": "อธิบายตามสิ่งที่โค้ดเว็บนี้จัดเก็บจริง (localStorage ใน components.js / knowledge.js) — ตัวบททางการรอ ORST อนุมัติ · ตัวบททางการ: ยังรอ ORST อนุมัติ (เอาช่อง placeholder ออกจากหน้าแล้วตามที่ผู้ใช้สั่ง)",
   "title": "Cookie Policy",
   "navKey": "home",
   "description": "How the Office of the Royal Society website uses cookies and browser storage",
@@ -21,38 +21,84 @@
       ]
     },
     {
-      "type": "rich-text",
-      "id": "about",
-      "heading": "What are cookies?",
-      "paragraphs": [
-        "Cookies and browser storage (Local Storage) are small pieces of data that a website saves on your device to remember your settings and make the site easier to use.",
-        "This website does not use cookies for tracking or advertising."
+      "type": "feature-list",
+      "id": "summary",
+      "layout": "cards",
+      "columns": 3,
+      "heading": "At a glance",
+      "lead": "Cookies and browser storage (Local Storage) are small pieces of data a website saves on your device to remember your settings and make the site easier to use.",
+      "items": [
+        {
+          "icon": "i-shield",
+          "title": "No tracking, no ads",
+          "body": "This website does not use cookies to track your behaviour or show advertising."
+        },
+        {
+          "icon": "i-check",
+          "title": "Only your settings",
+          "body": "Only your chosen language, text size and display options are saved."
+        },
+        {
+          "icon": "i-access",
+          "title": "You are in control",
+          "body": "Change your choice or clear stored data at any time on this page."
+        }
       ]
+    },
+    {
+      "type": "rich-text",
+      "id": "settings",
+      "variant": "alt",
+      "heading": "Your cookie settings",
+      "html": "<div class=\"cookie-prefs\" data-cookie-prefs></div>",
+      "width": "full"
     },
     {
       "type": "table",
       "id": "storage",
       "heading": "Data this website stores in your browser",
       "columns": [
-        "Name",
+        "Data",
         "Type",
-        "Purpose"
+        "Purpose",
+        "Retention"
       ],
       "rows": [
         [
-          "orst-lang",
+          "Chosen language (orst-lang)",
           "Necessary",
-          "Remembers your chosen language (Thai / English)"
+          "Remembers your chosen language (Thai / English)",
+          "Until you delete it"
         ],
         [
-          "orst-cookie-consent",
+          "Accessibility (orst-a11y)",
           "Necessary",
-          "Remembers your answer to the cookie notice"
+          "Remembers your text size and accessibility tools",
+          "Until you delete it"
         ],
         [
-          "List view (e.g. kb-view)",
+          "Consent choice (orst-cookie-consent)",
           "Necessary",
-          "Remembers grid or list layout"
+          "Remembers your answer to the cookie notice",
+          "Until you delete it"
+        ],
+        [
+          "List view (e.g. doc-view, kb-view)",
+          "Necessary",
+          "Remembers grid or list layout",
+          "Until you delete it"
+        ],
+        [
+          "Recent searches (orst-recent-search)",
+          "Convenience",
+          "Remembers your last 5 searches (only if you accept all)",
+          "Until you delete it"
+        ],
+        [
+          "Welcome tip (orst-a11y-hello)",
+          "Necessary",
+          "Shows the accessibility tools tip only once",
+          "Until you close the browser"
         ]
       ]
     },
@@ -63,48 +109,6 @@
       "paragraphs": [
         "Some pages include YouTube videos, a Google Calendar and links to Facebook. These providers may set their own cookies when you play or open their content, under their own policies.",
         "Videos on this website play through youtube-nocookie.com, which does not set cookies until you press play."
-      ]
-    },
-    {
-      "type": "rich-text",
-      "id": "manage",
-      "heading": "Managing cookies",
-      "paragraphs": [
-        "Choose “Accept all” or “Necessary only” on the consent bar when you first visit, and clear stored data at any time in your browser settings."
-      ]
-    },
-    {
-      "type": "notice",
-      "id": "official",
-      "tone": "info",
-      "body": "[Official cookie policy text — awaiting approval by the Office]"
-    },
-    {
-      "type": "link-list",
-      "id": "policies",
-      "variant": "alt",
-      "heading": "Other website policies",
-      "items": [
-        {
-          "title": "Website Policy",
-          "href": "website-policy.html",
-          "icon": "i-file"
-        },
-        {
-          "title": "Privacy Policy",
-          "href": "privacy-policy.html",
-          "icon": "i-shield"
-        },
-        {
-          "title": "Security Policy",
-          "href": "security-policy.html",
-          "icon": "i-shield"
-        },
-        {
-          "title": "Disclaimer",
-          "href": "disclaimer.html",
-          "icon": "i-file"
-        }
       ]
     }
   ],

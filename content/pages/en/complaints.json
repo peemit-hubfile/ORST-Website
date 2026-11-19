@@ -29,15 +29,14 @@
       "type": "feature-list",
       "id": "channels",
       "layout": "cards",
-      "eyebrow": "Complaints & Suggestions",
+      "columns": 3,
+      "linkStyle": "rows",
       "heading": "Ways to submit",
       "lead": "Choose the most convenient channel to file a complaint or grievance, report a tip-off, or make suggestions on the work of the Office of the Royal Society.",
       "action": {
         "label": "Track your case",
         "href": "track-request.html"
       },
-      "image": "assets/images/hero-4.jpg",
-      "imagePosition": "center 60%",
       "items": [
         {
           "icon": "i-megaphone",

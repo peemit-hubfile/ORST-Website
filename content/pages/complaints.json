@@ -29,15 +29,14 @@
       "type": "feature-list",
       "id": "channels",
       "layout": "cards",
-      "eyebrow": "Complaints & Suggestions",
+      "columns": 3,
+      "linkStyle": "rows",
       "heading": "ช่องทางรับเรื่อง",
       "lead": "เลือกช่องทางที่สะดวกในการแจ้งเรื่องร้องเรียน ร้องทุกข์ แจ้งเบาะแส หรือเสนอแนะต่อการดำเนินงานของสำนักงานราชบัณฑิตยสภา",
       "action": {
         "label": "ติดตามสถานะเรื่อง",
         "href": "track-request.html"
       },
-      "image": "assets/images/hero-4.jpg",
-      "imagePosition": "center 60%",
       "items": [
         {
           "icon": "i-megaphone",

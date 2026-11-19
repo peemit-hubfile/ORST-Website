@@ -21,41 +21,56 @@
       ]
     },
     {
-      "type": "feature-list",
+      "type": "rich-text",
+      "id": "try",
+      "width": "full",
+      "html": "<div class=\"a11y-cta\"><div class=\"a11y-cta-text\"><span class=\"a11y-cta-ic\" aria-hidden=\"true\"><svg class=\"icon\"><use href=\"#i-access\"></use></svg></span><div><h3>Adjust the website to suit your reading</h3><p>Every page has an “Accessibility” button in the bottom-right corner — or try the tools right here below.</p></div></div><button type=\"button\" class=\"a11y-cta-btn\" data-open-access>Open accessibility panel</button></div>"
+    },
+    {
+      "type": "rich-text",
       "id": "tools",
-      "layout": "cards",
+      "width": "full",
       "heading": "Accessibility tools",
-      "intro": "Use the “Accessibility” button at the bottom right of every page to open these tools",
-      "items": [
-        {
-          "icon": "i-access",
-          "title": "Adjust text size",
-          "body": "Increase, decrease or reset the text size of the whole page"
-        },
-        {
-          "icon": "i-eye",
-          "title": "High contrast colors",
-          "body": "Switch to strongly contrasting background and text colours"
-        },
-        {
-          "icon": "i-book",
-          "title": "Easy reading mode",
-          "body": "Increase line and letter spacing for easier reading"
-        },
-        {
-          "icon": "i-check",
-          "title": "Stop motion",
-          "body": "Turn off animations and auto-scrolling"
-        }
+      "html": "<div class=\"a11y-showcase\" data-a11y-showcase></div>"
+    },
+    {
+      "type": "table",
+      "id": "keyboard",
+      "variant": "alt",
+      "heading": "Using the keyboard",
+      "columns": [
+        "Key",
+        "Action"
+      ],
+      "rows": [
+        [
+          "Tab",
+          "Move to the next link or button (the first press at the top of a page shows “Skip to main content”)"
+        ],
+        [
+          "Shift + Tab",
+          "Move back to the previous link or button"
+        ],
+        [
+          "Enter",
+          "Open the selected link or press the selected button"
+        ],
+        [
+          "Esc",
+          "Close the open menu, dialog or panel"
+        ],
+        [
+          "/",
+          "Open site search"
+        ]
       ]
     },
     {
       "type": "rich-text",
-      "id": "keyboard",
-      "heading": "Keyboard and screen reader use",
+      "id": "screen-reader",
+      "heading": "For screen reader users",
       "paragraphs": [
-        "Press Tab at the top of a page to use the “Skip to main content” link. All menus and buttons work with the keyboard.",
-        "Images have text descriptions, and links that open in a new tab are announced to screen readers."
+        "Images have text alternatives, headings follow the page structure, and links that open in a new tab say so."
       ]
     },
     {
@@ -65,15 +80,37 @@
       "body": "[Accessibility conformance level achieved (e.g. WCAG 2.1 / Thai government website standard) — awaiting audit results]"
     },
     {
-      "type": "link-list",
+      "type": "feature-list",
       "id": "contact",
-      "variant": "alt",
+      "layout": "cards",
+      "columns": 2,
+      "linkStyle": "rows",
       "heading": "Report an accessibility problem",
+      "lead": "If any part of the website is hard to use, please let the Office know through these channels.",
       "items": [
         {
-          "title": "Report it through the contact form",
-          "href": "contact.html#message-form",
-          "icon": "i-form"
+          "icon": "i-form",
+          "title": "Contact form",
+          "body": "Tell us the page and the problem; staff will get back to you.",
+          "links": [
+            {
+              "label": "Write to our staff",
+              "href": "contact.html#message-form",
+              "kind": "Form"
+            }
+          ]
+        },
+        {
+          "icon": "i-mail",
+          "title": "Email",
+          "body": "Send details or a screenshot of the problem.",
+          "links": [
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th",
+              "kind": "Email"
+            }
+          ]
         }
       ]
     }

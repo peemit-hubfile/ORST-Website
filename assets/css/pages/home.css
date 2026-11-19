@@ -13326,3 +13326,50 @@ body.high-contrast #news .read-ic { background: none; color: var(--gold); }
   /* เว้นที่ให้ครึ่งล่างของป้าย ไม่ให้ทับหัวข้อข่าว */
   #news .news-mosaic-card .news-mosaic-card-body { padding-top: calc(var(--space-3) + 28px); }
 }
+
+/* ข่าวหน้าแรก: ชี้ที่ลิงก์ "อ่านต่อ" โดยตรง ลูกศรเคยกลายเป็นกล่องสีเข้ม (กฎเก่า #news .news-mini-foot a:hover .read-ic)
+   → ลูกศรเปล่า ๆ สีเดียวกับตัวอักษร เลื่อนไปทางขวาเล็กน้อยเหมือนตอนชี้ที่การ์ด */
+#news .news-mini-foot a:hover .read-ic,
+#news .news-mini-foot a:focus-visible .read-ic,
+#news .news-primary-action:hover .read-ic { background: none; color: currentColor; transform: translateX(3px); }
+body.no-motion #news .news-mini-foot a:hover .read-ic,
+body.no-motion #news .news-primary-action:hover .read-ic { transform: none; }
+
+/* =============================================================================
+   อินโฟกราฟิกบนหน้าแรก — ใช้ภาพจริง (แทนปกตัวอักษรตัวอย่าง)
+   ภาพสี่เหลี่ยมจัตุรัส · ชื่อเรื่อง 2 บรรทัด · วันที่ + ไอคอนปฏิทินทอง · ชี้ = ภาพขยายเล็กน้อย ชื่อเป็นสีเขียว
+   ============================================================================= */
+.ig-photo { overflow: hidden; }
+.ig-photo .ig-link { display: flex; flex-direction: column; height: 100%; color: inherit; text-decoration: none; }
+.ig-thumb { display: block; aspect-ratio: 1 / 1; overflow: hidden; background: var(--surface-soft); border-bottom: 1px solid var(--line); }
+.ig-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.22, 1, .36, 1); }
+.ig-photo .ig-caption { display: flex; flex-direction: column; flex: 1; gap: var(--space-2); padding: 12px 14px 14px; }
+.ig-photo .ig-caption h3 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin: 0; color: var(--ink); font-size: var(--fs-body); line-height: var(--leading-normal); }
+.ig-date { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; color: color-mix(in srgb, var(--ink) 65%, var(--surface)); font-size: var(--fs-meta); font-weight: 600; }
+.ig-date .icon { width: 14px; height: 14px; flex: none; color: var(--gold); }
+.ig-photo .ig-link:hover .ig-thumb img { transform: scale(1.04); }
+.ig-photo .ig-link:hover .ig-caption h3 { color: var(--deep); }
+.ig-photo .ig-link:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+@media (prefers-reduced-motion: reduce) { .ig-thumb img { transition: none; } .ig-photo .ig-link:hover .ig-thumb img { transform: none; } }
+/* การ์ดอินโฟกราฟิกหน้าแรก — หน้าตาเดียวกับหน้ารายการอินโฟกราฟิก
+   กรอบมุมโค้ง --radius-lg ขอบทองจาง · ชื่อ --text-sm ตัวหนา · ท้ายการ์ดคั่นเส้น: วันที่ (ซ้าย) | ดูภาพ → (ขวา) */
+.knowledge-scroll-row .ig-photo { border: 1px solid color-mix(in srgb, var(--gold) 24%, transparent); border-radius: var(--radius-lg); background: var(--surface); box-shadow: none; }
+.ig-photo .ig-caption { gap: var(--space-3); padding: 12px 16px 16px; }
+.ig-photo .ig-caption h3 { color: var(--ink); font-size: var(--text-sm); font-weight: 700; line-height: 1.25; }
+.ig-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+.ig-foot .ig-date { margin: 0; color: color-mix(in srgb, var(--ink) 72%, var(--surface)); font-size: var(--text-sm); font-weight: 600; line-height: 1.2; white-space: nowrap; }
+.ig-foot .ig-date .icon { width: 15px; height: 15px; }
+.ig-go { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-size: var(--text-sm); font-weight: 700; line-height: 1.2; white-space: nowrap; transition: color .2s ease; }
+.ig-go .icon { width: 14px; height: 14px; transition: transform .2s ease; }
+.ig-photo .ig-link:hover .ig-go { color: var(--deep); }
+.ig-photo .ig-link:hover .ig-go .icon { transform: translateX(3px); }
+.ig-photo .ig-link:hover .ig-caption h3 { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .ig-go, .ig-go .icon { transition: none; } }
+/* ป้องกันกฎเดิม .ig-caption span { display:block } ทับแถวท้ายการ์ด · การ์ดอินโฟกราฟิกกว้างขึ้นเท่าหน้ารายการ (เห็นประมาณ 4 ใบ) */
+.ig-photo .ig-caption .ig-foot { display: flex; margin-top: auto; color: inherit; font-size: inherit; }
+.ig-photo .ig-caption .ig-go { display: inline-flex; margin: 0; color: var(--muted); font-size: var(--text-sm); }
+.ig-photo .ig-link:hover .ig-caption .ig-go { color: var(--deep); }
+@media (min-width: 761px) {
+  #encyclopedia-row.knowledge-scroll-row { grid-auto-columns: max(240px, calc((100% - 48px) / 4.3)); }
+}
+

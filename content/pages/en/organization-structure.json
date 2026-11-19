@@ -33,7 +33,8 @@
       "top": {
         "title": "The Prime Minister, as superior authority",
         "note": "Act on the Reorganization of Ministries, Sub-Ministries and Departments B.E. 2545, Section 46 paragraph 2 · Royal Society Act, Section 5; Prime Minister's Order No. 238/2563, Parts 3 and 8",
-        "aside": "Council of Ministers"
+        "aside": "Council of Ministers",
+        "icon": "i-shield"
       },
       "branches": [
         {
@@ -90,7 +91,8 @@
                 "Academy Secretary"
               ]
             }
-          ]
+          ],
+          "icon": "i-people"
         },
         {
           "title": "Office of the Royal Society",
@@ -145,7 +147,8 @@
               "title": "Other committees",
               "note": "Royal Society Act, Section 36 and Cabinet resolution of 21 February 2017"
             }
-          ]
+          ],
+          "icon": "i-service"
         }
       ],
       "legend": "Dashed frames indicate linked work",

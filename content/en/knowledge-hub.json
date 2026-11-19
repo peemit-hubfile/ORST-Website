@@ -39,7 +39,7 @@
     },
     {
       "cat": "guidelines",
-      "label": "Thai language guidelines",
+      "label": "Thai Language Guidelines",
       "icon": "i-dictionary",
       "page": "language-guidelines",
       "kind": "topics",
@@ -76,7 +76,7 @@
   ],
   "systems": [
     {
-      "title": "Online dictionary",
+      "title": "Online Dictionary",
       "desc": "Search meanings and word usage",
       "href": "dictionary.html",
       "icon": "i-dictionary"

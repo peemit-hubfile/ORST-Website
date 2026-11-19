@@ -1,6 +1,6 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "แม่แบบ T2 + เส้นเวลา — เมนู 3.3.1 ข้อความจาก orst.go.th/iwfm_list.asp?p=ABOUT-HISTORY-ORS คงถ้อยคำเดิม (อยู่ใน paragraphs ของแต่ละช่วง) หัวข้อ/lead/สถิติ สรุปจากข้อความเดิม ให้ ORST ตรวจ · ภาพประวัติจาก Wikimedia Commons (assets/images/orst/history/CREDITS.json) แสดงที่มาใต้ภาพแต่ละภาพ (credit) และมุม hero (จำเป็นตามสัญญาอนุญาต CC BY / CC BY-SA) · ภาพปัจจุบันจากข่าวของสำนักงาน",
+  "_note": "แม่แบบ T2 + เส้นเวลา — เมนู 3.3.1 ข้อความจาก orst.go.th/iwfm_list.asp?p=ABOUT-HISTORY-ORS คงถ้อยคำเดิม (อยู่ใน paragraphs ของแต่ละช่วง) หัวข้อ/lead/สถิติ สรุปจากข้อความเดิม ให้ ORST ตรวจ · ภาพประวัติจาก Wikimedia Commons (assets/images/orst/history/CREDITS.json) แสดงที่มาใต้ภาพแต่ละภาพ (credit) และมุม hero (จำเป็นตามสัญญาอนุญาต CC BY / CC BY-SA) · ภาพปัจจุบันจากข่าวของสำนักงาน · ภาพปกเป็นอาคารสำนักงานปัจจุบัน (hero-1.jpg) · ข้อมูลเครดิตภาพเก็บไว้ในฟิลด์ _credit/_imageCredit (ไม่แสดง) — ภาพ CC BY/CC BY-SA ต้องให้เครดิตเมื่อเผยแพร่",
   "title": "ประวัติความเป็นมา",
   "navKey": "about",
   "description": "ประวัติความเป็นมาของราชบัณฑิตยสภาและสำนักงานราชบัณฑิตยสภา ตั้งแต่ พ.ศ. ๒๔๖๙ จนถึงปัจจุบัน",
@@ -11,7 +11,7 @@
       "type": "page-hero",
       "heading": "ประวัติความเป็นมา",
       "lead": "สำนักงานราชบัณฑิตยสภาเป็นส่วนราชการระดับกรมไม่สังกัดสำนักนายกรัฐมนตรี กระทรวง หรือทบวงอยู่ในบังคับบัญชาของนายกรัฐมนตรี",
-      "image": "assets/images/orst/history/bang-khun-phrom.jpg",
+      "image": "assets/images/hero-1.jpg",
       "imageAlt": "",
       "breadcrumb": [
         {
@@ -39,10 +39,11 @@
           "label": "ราชบัณฑิต ๓ สำนัก"
         }
       ],
-      "imageCredit": {
+      "_imageCredit": {
         "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
         "href": "https://commons.wikimedia.org/wiki/File:Bang_Khun_Phrom_Palace_from_Rama_VIII_Bridge.jpg"
-      }
+      },
+      "_imageOld": "assets/images/orst/history/bang-khun-phrom.jpg"
     },
     {
       "type": "anchor-nav",
@@ -91,10 +92,6 @@
       "lead": "ซึ่งพระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวได้ทรงสถาปนาขึ้น มีวัตถุประสงค์ที่จะค้นคว้าและวิจัยเพื่อเผยแพร่ส่งเสริมแลกเปลี่ยนความรู้ พัฒนา อนุรักษ์ และให้บริการทางวิชาการให้เป็นคุณประโยชน์แก่ประเทศและประชาชน (มาตรา ๖ พระราชบัญญัติราชบัณฑิตยสภา พ.ศ. ๒๕๕๘)",
       "countUp": true,
       "image": "assets/images/orst/history/royal-institute-grand-palace.jpg",
-      "imageCredit": {
-        "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
-        "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
-      },
       "items": [
         {
           "value": "100 ปี",
@@ -116,7 +113,11 @@
           "label": "งานหลักด้านภาษาและวิชาการ",
           "note": "พจนานุกรม · สารานุกรม · ศัพท์บัญญัติ · อักขรานุกรมภูมิศาสตร์ · การถอดอักษรโรมัน"
         }
-      ]
+      ],
+      "_imageCredit": {
+        "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
+        "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
+      }
     },
     {
       "type": "timeline",
@@ -137,7 +138,7 @@
           "portrait": true,
           "alt": "พระบรมฉายาลักษณ์พระบาทสมเด็จพระปรมินทรมหาประชาธิปก พระปกเกล้าเจ้าอยู่หัว",
           "caption": "พระบาทสมเด็จพระปรมินทรมหาประชาธิปก พระปกเกล้าเจ้าอยู่หัว",
-          "credit": {
+          "_credit": {
             "text": "ไม่ปรากฏนาม / Wikimedia Commons (Public domain)",
             "href": "https://commons.wikimedia.org/wiki/File:King_Prajadhipok_portrait_photograph.jpg"
           }
@@ -162,7 +163,7 @@
           "image": "assets/images/orst/history/chakri-maha-prasat.jpg",
           "alt": "พระที่นั่งจักรีมหาปราสาท ในพระบรมมหาราชวัง",
           "caption": "พระบรมมหาราชวัง",
-          "credit": {
+          "_credit": {
             "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
             "href": "https://commons.wikimedia.org/wiki/File:Phra_Thinang_Chakri_Maha_Prasat_(II)_BKK.jpg"
           }
@@ -192,7 +193,7 @@
               "image": "assets/images/orst/history/thawon-watthu.jpg",
               "alt": "ตึกถาวรวัตถุ (อาคารหอสมุดวชิราวุธ) ถนนหน้าพระธาตุ",
               "caption": "ตึกถาวรวัตถุ ถนนหน้าพระธาตุ",
-              "credit": {
+              "_credit": {
                 "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
                 "href": "https://commons.wikimedia.org/wiki/File:Thawon_Watthu_Building_20231209.jpg"
               }
@@ -201,7 +202,7 @@
               "image": "assets/images/orst/history/royal-institute-grand-palace.jpg",
               "alt": "อาคารที่ทำการราชบัณฑิตยสถานเดิม ในพระบรมมหาราชวัง",
               "caption": "ที่ทำการเดิมในพระบรมมหาราชวัง",
-              "credit": {
+              "_credit": {
                 "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
                 "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
               }
@@ -361,6 +362,12 @@
           "body": "นำมาปรับปรุงการให้บริการให้มีประสิทธิภาพยิ่งขึ้น"
         }
       ]
+    },
+    {
+      "type": "rich-text",
+      "id": "photo-credits",
+      "width": "full",
+      "html": "<p class=\"photo-credits\"><strong>ที่มาภาพ</strong> พระที่นั่งจักรีมหาปราสาท และตึกถาวรวัตถุ: <a href=\"https://commons.wikimedia.org/wiki/File:Phra_Thinang_Chakri_Maha_Prasat_(II)_BKK.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Supanut Arunoprayote</a> / Wikimedia Commons (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY 4.0</a>) · ที่ทำการเดิมในพระบรมมหาราชวัง: <a href=\"https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG\" target=\"_blank\" rel=\"noopener noreferrer\">Rikker Dockum</a> / Wikimedia Commons (<a href=\"https://creativecommons.org/licenses/by-sa/2.5/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 2.5</a>) · พระบรมฉายาลักษณ์: <a href=\"https://commons.wikimedia.org/wiki/File:King_Prajadhipok_portrait_photograph.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Wikimedia Commons</a> (สาธารณสมบัติ)</p>"
     }
   ]
 }

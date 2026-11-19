@@ -28,10 +28,10 @@
       "type": "feature-list",
       "id": "ask",
       "layout": "cards",
+      "columns": 3,
+      "linkStyle": "rows",
       "heading": "สอบถามความคืบหน้าของคำขอ",
       "lead": "ระบบติดตามสถานะออนไลน์อยู่ระหว่างพัฒนา ระหว่างนี้สอบถามได้ทางอีเมล โทรศัพท์ หรือติดต่อสำนักงานด้วยตนเอง",
-      "image": "assets/images/orst/services-hero.jpg",
-      "imagePosition": "center 40%",
       "items": [
         {
           "icon": "i-mail",

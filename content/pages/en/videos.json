@@ -32,6 +32,10 @@
       "ratio": "16:9",
       "pageSize": 12,
       "unit": "Clip",
+      "channel": {
+        "label": "YouTube channel",
+        "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+      },
       "items": [
         {
           "youtube": "trzQRPLZ9Xw",

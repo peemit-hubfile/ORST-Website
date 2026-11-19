@@ -32,6 +32,10 @@
       "ratio": "16:9",
       "pageSize": 12,
       "unit": "คลิป",
+      "channel": {
+        "label": "ช่อง YouTube",
+        "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+      },
       "items": [
         {
           "youtube": "trzQRPLZ9Xw",

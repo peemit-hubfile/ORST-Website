@@ -4,6 +4,7 @@
   "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
   "navKey": "contact",
   "description": "ติดตามข่าวสาร กิจกรรม และสาระความรู้ของสำนักงานราชบัณฑิตยสภาผ่านเครือข่ายสังคมออนไลน์",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -28,7 +29,10 @@
       "type": "feature-list",
       "id": "accounts",
       "layout": "cards",
+      "columns": 3,
+      "linkStyle": "rows",
       "heading": "บัญชีทางการของสำนักงาน",
+      "lead": "ติดตามข่าวสารและสอบถามข้อมูลกับสำนักงานได้ผ่านบัญชีทางการด้านล่าง",
       "items": [
         {
           "icon": "i-people",
@@ -62,29 +66,6 @@
               "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "ช่องทางติดต่ออื่น",
-      "items": [
-        {
-          "title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
-          "href": "complaints.html",
-          "icon": "i-megaphone"
-        },
-        {
-          "title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)",
-          "href": "contact.html#message-form",
-          "icon": "i-form"
-        },
-        {
-          "title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
-          "href": "website-survey.html",
-          "icon": "i-check"
         }
       ]
     }

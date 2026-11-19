@@ -4,6 +4,7 @@
   "title": "Website Survey",
   "navKey": "contact",
   "description": "Rate your satisfaction with the Office of the Royal Society website to help us improve our services",
+  "sideNav": false,
   "updatedAt": "2026-11-17",
   "blocks": [
     {
@@ -25,45 +26,30 @@
       ]
     },
     {
-      "type": "notice",
-      "id": "pending",
-      "tone": "info",
-      "title": "Survey in preparation",
-      "body": "[Website satisfaction survey link — awaiting information from the Office]"
-    },
-    {
-      "type": "link-list",
+      "type": "feature-list",
       "id": "feedback",
-      "heading": "Share your feedback here",
+      "layout": "cards",
+      "columns": 2,
+      "linkStyle": "rows",
+      "heading": "Share your feedback",
+      "lead": "Your feedback helps the Office improve the website and its services to better meet your needs.",
       "items": [
         {
-          "title": "Feedback Form",
-          "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+          "icon": "i-check",
+          "title": "Website Survey",
+          "body": "Being prepared — [Website satisfaction survey link — awaiting information from the Office]"
+        },
+        {
           "icon": "i-form",
-          "tag": "Google Form"
-        }
-      ]
-    },
-    {
-      "type": "link-list",
-      "id": "related",
-      "variant": "alt",
-      "heading": "Other contact channels",
-      "items": [
-        {
-          "title": "Complaints",
-          "href": "complaints.html",
-          "icon": "i-megaphone"
-        },
-        {
-          "title": "Contact Form",
-          "href": "contact.html#message-form",
-          "icon": "i-form"
-        },
-        {
-          "title": "Social Media",
-          "href": "social-media.html",
-          "icon": "i-share"
+          "title": "Feedback and suggestions form",
+          "body": "Share your opinions or suggestions on the work of the Office right away using the online form.",
+          "links": [
+            {
+              "label": "Feedback form",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+              "kind": "Google Form"
+            }
+          ]
         }
       ]
     }

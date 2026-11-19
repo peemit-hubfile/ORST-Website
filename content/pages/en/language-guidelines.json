@@ -1,7 +1,7 @@
 {
   "$schema": "../blocks.schema.json",
   "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
-  "title": "Thai language guidelines",
+  "title": "Thai Language Guidelines",
   "navKey": "knowledge",
   "description": "Guidelines on Thai language usage, transliteration, romanization, reading, and the writing of names, as set by the Office of the Royal Society",
   "sideNav": false,
@@ -9,7 +9,7 @@
   "blocks": [
     {
       "type": "page-hero",
-      "heading": "Thai language guidelines",
+      "heading": "Thai Language Guidelines",
       "image": "assets/images/orst/news/data0005-00005306-960.jpg",
       "lead": "Guidelines on Thai language usage, transliteration, romanization, reading, and the writing of names, as set by the Office of the Royal Society",
       "breadcrumb": [
@@ -18,11 +18,11 @@
           "href": "index.html"
         },
         {
-          "label": "Knowledge Repository",
+          "label": "Knowledge Hub",
           "href": "knowledge.html"
         },
         {
-          "label": "Thai language guidelines"
+          "label": "Thai Language Guidelines"
         }
       ]
     },

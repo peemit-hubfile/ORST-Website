@@ -28,10 +28,10 @@
       "type": "feature-list",
       "id": "ask",
       "layout": "cards",
+      "columns": 3,
+      "linkStyle": "rows",
       "heading": "Ask about your request",
       "lead": "The online tracking system is under development. In the meantime, ask by email, by telephone or in person at the Office.",
-      "image": "assets/images/orst/services-hero.jpg",
-      "imagePosition": "center 40%",
       "items": [
         {
           "icon": "i-mail",
