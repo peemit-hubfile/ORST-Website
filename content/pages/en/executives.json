@@ -1,0 +1,72 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "รายชื่อดึงจาก content/people/index.json (source people) — แก้ชื่อ ตำแหน่ง รูป เบอร์โทร ประวัติ ที่ไฟล์นั้นที่เดียว · หน้าประวัติแต่ละคน person.html?id=<id>",
+  "title": "Office Executives",
+  "navKey": "about",
+  "description": "Executives of the Office of the Royal Society and their contact telephone numbers",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Office Executives",
+      "lead": "Executives of the Office of the Royal Society and their contact telephone numbers",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Office Executives"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "secretary-general",
+      "eyebrow": "Head of the Office",
+      "heading": "Secretary-General of the Royal Society of Thailand",
+      "layout": "feature",
+      "source": {
+        "type": "people",
+        "ids": [
+          "secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "person-grid",
+      "id": "deputy",
+      "eyebrow": "Senior executives",
+      "heading": "Deputy Secretary-General of the Office of the Royal Society",
+      "layout": "row",
+      "variant": "alt",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "person-grid",
+      "id": "directors",
+      "eyebrow": "Internal units",
+      "heading": "Directors of Internal Units",
+      "layout": "row",
+      "source": {
+        "type": "people",
+        "ids": [
+          "director-1",
+          "director-2",
+          "director-3",
+          "director-4"
+        ]
+      }
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,1167 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "รายการสิ่งพิมพ์จาก orst.go.th/iwfm_book.asp?p=PUB-% (ดึงเมื่อ 13 พ.ย. 2569) รูปปกย่อเก็บใน assets/images/orst/publications ลิงก์รายละเอียดยังชี้ไปเว็บไซต์เดิม",
+  "title": "Books and Publications",
+  "navKey": "knowledge",
+  "description": "Books, journals, digital media and publications of the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Books and Publications",
+      "image": "assets/images/orst/news/data0004-00004279-960.jpg",
+      "lead": "Books, journals, digital media and publications of the Office",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Hub",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Books and Publications"
+        }
+      ]
+    },
+    {
+      "type": "media-grid",
+      "id": "catalog",
+      "heading": "Publications of the Office of the Royal Society",
+      "lead": "Books, dictionaries and encyclopedias published by the Office: 177 titles in total",
+      "columns": 4,
+      "items": [
+        {
+          "image": "assets/images/orst/publications/00004327.jpg",
+          "alt": "Book cover: Dictionary of Geography Terms",
+          "title": "Dictionary of Geography Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A529625KJD68132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004290.jpg",
+          "alt": "Book cover: The Three Seals Law: Laws on Accepting Plaints, Oaths, Judges, Ordeals by Diving and Fire-Walking, and Appeals",
+          "title": "The Three Seals Law: Laws on Accepting Plaints, Oaths, Judges, Ordeals by Diving and Fire-Walking, and Appeals",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5723633PGC68132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004291.jpg",
+          "alt": "Book cover: Dictionary of Sensory Science Terms",
+          "title": "Dictionary of Sensory Science Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=582%3B374PGC68132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004276.jpg",
+          "alt": "Book cover: Dictionary of Electrical Engineering Terms (Electronics)",
+          "title": "Dictionary of Electrical Engineering Terms (Electronics)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7922253NOM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004257.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Europe, Volume 7, Letters T–Z",
+          "title": "Encyclopedia of Modern World History: Europe, Volume 7, Letters T–Z",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=882%3B6%3B4MKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004258.jpg",
+          "alt": "Book cover: Dictionary of Environmental Geology Terms",
+          "title": "Dictionary of Environmental Geology Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3A27466MKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004259.jpg",
+          "alt": "Book cover: Dictionary of Contemporary Terms: Thai–Chinese",
+          "title": "Dictionary of Contemporary Terms: Thai–Chinese",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8224727MKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004260.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Dance Terms: Dance Terminology",
+          "title": "Encyclopedia of Thai Dance Terms: Dance Terminology",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=662%3A367MKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004261.jpg",
+          "alt": "Book cover: Dictionary of Basic Thai Culture Terms: Thai Food Terms",
+          "title": "Dictionary of Basic Thai Culture Terms: Thai Food Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B824642NKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004262.jpg",
+          "alt": "Book cover: Encyclopedia of Modern Thai Literature: Royal Writings of King Vajiravudh (Rama VI)",
+          "title": "Encyclopedia of Modern Thai Literature: Royal Writings of King Vajiravudh (Rama VI)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=4922772NKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004263.jpg",
+          "alt": "Book cover: Manual of the Bisu Writing System",
+          "title": "Manual of the Bisu Writing System",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7424652QKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004264.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Malay as Used in Malaysia, Singapore and Brunei Darussalam",
+          "title": "Guidelines for the Transliteration of Malay as Used in Malaysia, Singapore and Brunei Darussalam",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A522392QKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004265.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Indonesian",
+          "title": "Guidelines for the Transliteration of Indonesian",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9%3B2%3B6%3B2QKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004266.jpg",
+          "alt": "Book cover: Under the Royal Grace: Kings of the Chakri Dynasty",
+          "title": "Under the Royal Grace: Kings of the Chakri Dynasty",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=74246%3A3QKM58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004255.jpg",
+          "alt": "Book cover: Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 7, Letters ก–จ",
+          "title": "Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 7, Letters ก–จ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6629265Q%2FL58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004256.jpg",
+          "alt": "Book cover: Dictionary of Thai Literature Terms, Ayutthaya Period: Racha Philap Kham Chan",
+          "title": "Dictionary of Thai Literature Terms, Ayutthaya Period: Racha Philap Kham Chan",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A52%3B472R%2FL58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004244.jpg",
+          "alt": "Book cover: Dictionary of Communication Arts Terms",
+          "title": "Dictionary of Communication Arts Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5825736KTJ58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004246.jpg",
+          "alt": "Book cover: The Royal Coronation Ceremony",
+          "title": "The Royal Coronation Ceremony",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A%3A26527KTJ58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004247.jpg",
+          "alt": "Book cover: Dictionary of Political Science Terms",
+          "title": "Dictionary of Political Science Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9%3B26797KTJ58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004249.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Europe, Volume 5, Letters L–O",
+          "title": "Encyclopedia of Modern World History: Europe, Volume 5, Letters L–O",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3B22393PTJ58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00004250.jpg",
+          "alt": "Book cover: Royal Vocabulary",
+          "title": "Royal vocabulary",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5825254PTJ58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000590.jpg",
+          "alt": "Book cover: Mushrooms in Thailand",
+          "title": "Mushrooms in Thailand",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6628237LYF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000591.jpg",
+          "alt": "Book cover: Plant Taxonomy, Vol. 1, letter ก",
+          "title": "Plant Taxonomy, Vol. 1, letter ก",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B323547LYF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000592.jpg",
+          "alt": "Book cover: Plant Taxonomy, Vol. 2, letter ข",
+          "title": "Plant Taxonomy, Vol. 2, letter ข",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3527657LYF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000593.jpg",
+          "alt": "Book cover: Animal Taxonomy, Vol. 1, letter ก",
+          "title": "Animal Taxonomy, Vol. 1, letter ก",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B324567LYF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000594.jpg",
+          "alt": "Book cover: Hippias Major: Plato's Dialogue on Beauty",
+          "title": "Hippias Major: Plato's Dialogue on Beauty",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=4426377LYF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000355.jpg",
+          "alt": "Book cover: Dictionary of Archaic Words",
+          "title": "Dictionary of Archaic Words",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6625223QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000356.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Literature: Ramakien, Royal Society of Thailand Edition, Volume 1",
+          "title": "Encyclopedia of Thai Literature: Ramakien, Royal Society of Thailand Edition, Volume 1",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A%3A27643QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000357.jpg",
+          "alt": "Book cover: Encyclopedia of World History: America, Vol. 4, H–I",
+          "title": "Encyclopedia of World History: America, Vol. 4, H–I",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B28653QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000358.jpg",
+          "alt": "Book cover: Plant Taxonomy, Letter ต, Volume 1",
+          "title": "Plant Taxonomy, Letter ต, Volume 1",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8228373QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000359.jpg",
+          "alt": "Book cover: Dictionary of Thai Regional Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Volume 4",
+          "title": "Dictionary of Thai Regional Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Volume 4",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A2%3A683QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000360.jpg",
+          "alt": "Book cover: Foreign Terms Replaceable by Thai Words, Volume 3",
+          "title": "Foreign Terms Replaceable by Thai Words, Volume 3",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A27693QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000361.jpg",
+          "alt": "Book cover: Expressions and Idioms: Meanings and Usage, Volume 1",
+          "title": "Expressions and Idioms: Meanings and Usage, Volume 1",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A242%3B3QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000362.jpg",
+          "alt": "Book cover: Dictionary of Contemporary Education Terms: Literacy",
+          "title": "Dictionary of Contemporary Education Terms: Literacy",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=662%3B324QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000363.jpg",
+          "alt": "Book cover: Encyclopedia of Architecture and Construction: Architectural Components",
+          "title": "Encyclopedia of Architecture and Construction: Architectural Components",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=662%3A434QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000364.jpg",
+          "alt": "Book cover: Encyclopedia of the History of World War II (European Theater)",
+          "title": "Encyclopedia of the History of World War II (European Theater)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A28254QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000365.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Asia, Volume 4, Letters H–J",
+          "title": "Encyclopedia of Modern World History: Asia, Volume 4, Letters H–J",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8726364QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000366.jpg",
+          "alt": "Book cover: Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 6, Letter อ",
+          "title": "Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 6, Letter อ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A25274QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000367.jpg",
+          "alt": "Book cover: Dictionary of Anthropology Terms",
+          "title": "Dictionary of Anthropology Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6628774QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000368.jpg",
+          "alt": "Book cover: Gazetteer of Thai Geography, Vol. 4 (letters ย–ฮ)",
+          "title": "Gazetteer of Thai Geography, Vol. 4 (letters ย–ฮ)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8723684QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000369.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Spanish",
+          "title": "Guidelines for the Transliteration of Spanish",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6626594QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000370.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Japanese",
+          "title": "Guidelines for the Transliteration of Japanese",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=66244%3A4QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000371.jpg",
+          "alt": "Book cover: Dictionary of Statistics Terms",
+          "title": "Dictionary of Statistics Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=35276%3B4QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000372.jpg",
+          "alt": "Book cover: Dictionary of Contemporary Education Terms: Assessment, Research and Quality Assurance",
+          "title": "Dictionary of Contemporary Education Terms: Assessment, Research and Quality Assurance",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9623525QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000373.jpg",
+          "alt": "Book cover: Dictionary of Western Music Terms",
+          "title": "Dictionary of Western Music Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=822%3A535QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000374.jpg",
+          "alt": "Book cover: Plant Taxonomy, Letter ด",
+          "title": "Plant Taxonomy, Letter ด",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8228445QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000375.jpg",
+          "alt": "Book cover: Origins of Indian Beliefs and Traditions, Parts 5–6",
+          "title": "Origins of Indian Beliefs and Traditions, Parts 5–6",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B722555QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000376.jpg",
+          "alt": "Book cover: How to Read and How to Write",
+          "title": "How to Read and How to Write",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6523475QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000377.jpg",
+          "alt": "Book cover: Dictionary of Petrochemical Terms",
+          "title": "Dictionary of Petrochemical Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9626795QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000378.jpg",
+          "alt": "Book cover: Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 4, Letter อ",
+          "title": "Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 4, Letter อ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3A223%3B5QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000379.jpg",
+          "alt": "Book cover: Gazetteer of Thai Geography, Vol. 3 (letters น–ม)",
+          "title": "Gazetteer of Thai Geography, Vol. 3 (letters น–ม)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B22%3A226QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000380.jpg",
+          "alt": "Book cover: Encyclopedia of Thai History, Volume 3, Letters ฉ–ต",
+          "title": "Encyclopedia of Thai History, Volume 3, Letters ฉ–ต",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9%3B2%3B236QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000381.jpg",
+          "alt": "Book cover: Dictionary of Literary Terms (Revised)",
+          "title": "Dictionary of Literary Terms (Revised)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7423446QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000382.jpg",
+          "alt": "Book cover: Dictionary of Thai Ornamental Pattern Terms (Revised)",
+          "title": "Dictionary of Thai Ornamental Pattern Terms (Revised)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A526456QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000383.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Music Terms: Biographies of Musicians and Singers",
+          "title": "Encyclopedia of Thai Music Terms: Biographies of Musicians and Singers",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7928466QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000384.jpg",
+          "alt": "Book cover: Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 5, Letter อ",
+          "title": "Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 5, Letter อ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7425586QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000385.jpg",
+          "alt": "Book cover: Dictionary of Linguistics Terms (General Linguistics)",
+          "title": "Dictionary of Linguistics Terms (General Linguistics)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7422696QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000386.jpg",
+          "alt": "Book cover: Thai Proverbs, Sayings and Idioms",
+          "title": "Thai Proverbs, Sayings and Idioms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A5254%3B6QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000387.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 30, อั้งยี่ – ไฮโดรเจน",
+          "title": "Thai Encyclopedia, Vol. 30, อั้งยี่ – ไฮโดรเจน",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7924237QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000388.jpg",
+          "alt": "Book cover: Plant Taxonomy, Letters ฉ–ฒ",
+          "title": "Plant Taxonomy, Letters ฉ–ฒ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=742%3A247QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000389.jpg",
+          "alt": "Book cover: Plant Taxonomy, Letters ฆ–จ",
+          "title": "Plant Taxonomy, Letters ฆ–จ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=2228357QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000390.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Music Terms: Vocal and Instrumental Music",
+          "title": "Encyclopedia of Thai Music Terms: Vocal and Instrumental Music",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5825277QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000391.jpg",
+          "alt": "Book cover: Manual of the Kong Writing System in Thai Script",
+          "title": "Manual of the Kong Writing System in Thai Script",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7923487QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000392.jpg",
+          "alt": "Book cover: Manual of the So (Thavueng) Writing System in Thai Script",
+          "title": "Manual of the So (Thavueng) Writing System in Thai Script",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7423497QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000393.jpg",
+          "alt": "Book cover: Dictionary of Philosophy Terms",
+          "title": "Dictionary of Philosophy Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=72223%3A7QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000394.jpg",
+          "alt": "Book cover: Dictionary of Insurance Terms",
+          "title": "Dictionary of Insurance Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=58264%3B7QXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000395.jpg",
+          "alt": "Book cover: Thai Words Derived from Pali and Sanskrit",
+          "title": "Thai Words Derived from Pali and Sanskrit",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7424342RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000396.jpg",
+          "alt": "Book cover: Coined Technical Terms of Prince Wan",
+          "title": "Coined Technical Terms of Prince Wan",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5827352RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000397.jpg",
+          "alt": "Book cover: Dictionary of Genetics Terms",
+          "title": "Dictionary of Genetics Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A925752RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000398.jpg",
+          "alt": "Book cover: Dictionary of Botanical Terms",
+          "title": "Dictionary of Botanical Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=522%3A762RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000399.jpg",
+          "alt": "Book cover: Dictionary of Polymer Terms",
+          "title": "Dictionary of Polymer Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3625282RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000400.jpg",
+          "alt": "Book cover: Dictionary of Nanomaterials Terms",
+          "title": "Dictionary of Nanomaterials Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8828782RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000401.jpg",
+          "alt": "Book cover: Encyclopedia of Psychology, Volume 2, Letters C–F",
+          "title": "Encyclopedia of Psychology, Volume 2, Letters C–F",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A%3A26792RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000402.jpg",
+          "alt": "Book cover: Encyclopedia of Architecture and Construction: History of Architecture",
+          "title": "Encyclopedia of Architecture and Construction: History of Architecture",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=22285%3A2RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000403.jpg",
+          "alt": "Book cover: Foreign Terms Replaceable by Thai Words, Vol. 2",
+          "title": "Foreign Terms Replaceable by Thai Words, Vol. 2",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=58275%3B2RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000404.jpg",
+          "alt": "Book cover: ASEAN Languages and Cultures, Vol. 2",
+          "title": "ASEAN Languages and Cultures, Vol. 2",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=7222423RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000405.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Politics and Government, Vol. 1",
+          "title": "Encyclopedia of Thai Politics and Government, Vol. 1",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A923433RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000406.jpg",
+          "alt": "Book cover: Gazetteer of Thai Geography, Vol. 2 (letters ก–ธ)",
+          "title": "Gazetteer of Thai Geography, Vol. 2 (letters ก–ธ)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8328243RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000407.jpg",
+          "alt": "Book cover: Dictionary of Mathematics Terms",
+          "title": "Dictionary of Mathematics Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8827743RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000408.jpg",
+          "alt": "Book cover: Dictionary of Business Administration Terms",
+          "title": "Dictionary of Business Administration Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5225753RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000409.jpg",
+          "alt": "Book cover: Manual of the Nyah Kur Writing System in Thai Script",
+          "title": "Manual of the Nyah Kur Writing System in Thai Script",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3625763RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000410.jpg",
+          "alt": "Book cover: Manual of the Lavue Writing System in Thai Script",
+          "title": "Manual of the Lavue Writing System in Thai Script",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3B25483RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000411.jpg",
+          "alt": "Book cover: Encyclopedia of Psychology, Volume 1, Letters A–B",
+          "title": "Encyclopedia of Psychology, Volume 1, Letters A–B",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8829293RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000412.jpg",
+          "alt": "Book cover: San Somdet, Vol. 1, 1914–1918",
+          "title": "San Somdet, Vol. 1, 1914–1918",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8829693RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000413.jpg",
+          "alt": "Book cover: Dictionary of Contemporary Education Terms",
+          "title": "Dictionary of Contemporary Education Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=36276%3A3RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000414.jpg",
+          "alt": "Book cover: The Three Seals Law: Phra Thammasat and the Principles of Inthaphat",
+          "title": "The Three Seals Law: Phra Thammasat and the Principles of Inthaphat",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=57257%3B3RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000415.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Europe, Vol. 6, P–S",
+          "title": "Encyclopedia of Modern World History: Europe, Vol. 6, P–S",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8327734RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000416.jpg",
+          "alt": "Book cover: Plant Taxonomy, letter ข, Vol. 2",
+          "title": "Plant Taxonomy, letter ข, Vol. 2",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5728354RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000417.jpg",
+          "alt": "Book cover: Coined Terms for Mineral Names and Element Names",
+          "title": "Coined Terms for Mineral Names and Element Names",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8827664RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000418.jpg",
+          "alt": "Book cover: Dictionary of Thermal Engineering Terms",
+          "title": "Dictionary of Thermal Engineering Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A424574RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000419.jpg",
+          "alt": "Book cover: Dictionary of Minerals and Gems Terms",
+          "title": "Dictionary of Minerals and Gems Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3B22484RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000420.jpg",
+          "alt": "Book cover: Plant Taxonomy, Letter ค",
+          "title": "Plant Taxonomy, Letter ค",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8826594RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000421.jpg",
+          "alt": "Book cover: Dictionary of Economics Terms",
+          "title": "Dictionary of Economics Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=83234%3A4RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000422.jpg",
+          "alt": "Book cover: Dictionary of Demography Terms",
+          "title": "Dictionary of Demography Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A9292%3B4RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000423.jpg",
+          "alt": "Book cover: Dictionary of Thai Legal Terms",
+          "title": "Dictionary of Thai Legal Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8824225RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000424.jpg",
+          "alt": "Book cover: Dictionary of Sociology Terms",
+          "title": "Dictionary of Sociology Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B27725RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000425.jpg",
+          "alt": "Book cover: Encyclopedia of World History: America, Vol. 2, C–D",
+          "title": "Encyclopedia of World History: America, Vol. 2, C–D",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B23635RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000426.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Europe, Vol. 2, C–D",
+          "title": "Encyclopedia of Modern World History: Europe, Vol. 2, C–D",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8729445RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000427.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Europe, Vol. 3, E–G",
+          "title": "Encyclopedia of Modern World History: Europe, Vol. 3, E–G",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B827355RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000428.jpg",
+          "alt": "Book cover: Gazetteer of Thai Geography, Vol. 1",
+          "title": "Gazetteer of Thai Geography, Vol. 1",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B825755RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000429.jpg",
+          "alt": "Book cover: Dictionary of Nuclear Energy Terms",
+          "title": "Dictionary of Nuclear Energy Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8228665RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000430.jpg",
+          "alt": "Book cover: Dictionary of Geology Terms",
+          "title": "Dictionary of Geology Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B324575RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000431.jpg",
+          "alt": "Book cover: ASEAN Languages and Cultures",
+          "title": "ASEAN Languages and Cultures",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A528785RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000432.jpg",
+          "alt": "Book cover: Dictionary of Thai Regional Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Volume 3",
+          "title": "Dictionary of Thai Regional Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Volume 3",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=872%3B2%3A5RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000433.jpg",
+          "alt": "Book cover: Dictionary of Linguistics Terms (Applied Linguistics)",
+          "title": "Dictionary of Linguistics Terms (Applied Linguistics)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=66282%3B5RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000434.jpg",
+          "alt": "Book cover: Dictionary of Welding Terms",
+          "title": "Dictionary of Welding Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B32%3A226RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000435.jpg",
+          "alt": "Book cover: Know and Love Thai, Vol. 7",
+          "title": "Know and Love Thai, Vol. 7",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A427446RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000436.jpg",
+          "alt": "Book cover: Know and Love Thai, Vol. 6",
+          "title": "Know and Love Thai, Vol. 6",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3%3A2%3A256RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000437.jpg",
+          "alt": "Book cover: Know and Love Thai, Vol. 5",
+          "title": "Know and Love Thai, Vol. 5",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=662%3B656RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000438.jpg",
+          "alt": "Book cover: Dictionary of Imaging Technology Terms",
+          "title": "Dictionary of Imaging Technology Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B322666RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000439.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Korean",
+          "title": "Guidelines for the Transliteration of Korean",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B825476RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000440.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Vietnamese",
+          "title": "Guidelines for the Transliteration of Vietnamese",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=492%3A286RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000441.jpg",
+          "alt": "Book cover: Know and Love Thai, Vol. 4",
+          "title": "Know and Love Thai, Vol. 4",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6625786RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000442.jpg",
+          "alt": "Book cover: Dictionary of Thai Literary Terms, Sukhothai Period: Inscription of King Ramkhamhaeng the Great, Inscription No. 1",
+          "title": "Dictionary of Thai Literary Terms, Sukhothai Period: Inscription of King Ramkhamhaeng the Great, Inscription No. 1",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B827696RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000443.jpg",
+          "alt": "Book cover: Faulty Thai That Needs Correcting, Vol. 2",
+          "title": "Faulty Thai That Needs Correcting, Vol. 2",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B225%3A6RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000444.jpg",
+          "alt": "Book cover: Manual of the Northern Khmer (Thai Khmer) Writing System in Thai Script",
+          "title": "Manual of the Northern Khmer (Thai Khmer) Writing System in Thai Script",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B234%3B6RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000445.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Arabic",
+          "title": "Guidelines for the Transliteration of Arabic",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3524327RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000446.jpg",
+          "alt": "Book cover: Dynasties of the European Great Powers in the 19th Century: Kings and Queens Regnant",
+          "title": "Dynasties of the European Great Powers in the 19th Century: Kings and Queens Regnant",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3523337RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000447.jpg",
+          "alt": "Book cover: Indian Philosophy",
+          "title": "Indian Philosophy",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6627737RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000448.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of French",
+          "title": "Guidelines for the Transliteration of French",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8728547RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000449.jpg",
+          "alt": "Book cover: Dictionary of Thai Literature Terms, Sukhothai Period: Traiphum Katha",
+          "title": "Dictionary of Thai Literature Terms, Sukhothai Period: Traiphum Katha",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6624357RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000450.jpg",
+          "alt": "Book cover: Manual of the Chong Writing System in Thai Script",
+          "title": "Manual of the Chong Writing System in Thai Script",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B24757RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000451.jpg",
+          "alt": "Book cover: Dictionary of New Words, Vol. 3, Royal Institute Edition",
+          "title": "Dictionary of New Words, Vol. 3, Royal Institute Edition",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B326567RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000452.jpg",
+          "alt": "Book cover: Know and Love Thai, Vol. 3, Royal Institute Edition",
+          "title": "Know and Love Thai, Vol. 3, Royal Institute Edition",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B82%3A377RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000453.jpg",
+          "alt": "Book cover: Dictionary of Architecture Terms",
+          "title": "Dictionary of Architecture Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6623287RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000454.jpg",
+          "alt": "Book cover: Foreign Affairs and Thai Independence and Sovereignty (from the Reign of King Rama IV to the End of the Field Marshal P. Phibunsongkhram Era)",
+          "title": "Foreign Affairs and Thai Independence and Sovereignty (from the Reign of King Rama IV to the End of the Field Marshal P. Phibunsongkhram Era)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B329687RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000455.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 29, หวี่, แมลง – อังคุตรนิกาย",
+          "title": "Thai Encyclopedia, Vol. 29, หวี่, แมลง – อังคุตรนิกาย",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=66264%3A7RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000456.jpg",
+          "alt": "Book cover: Urban Planning Terms: English–Thai, Thai–English",
+          "title": "Urban Planning Terms: English–Thai, Thai–English",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=44263%3B7RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000457.jpg",
+          "alt": "Book cover: Manual of the Patani Malay Writing System in Thai Script, Royal Institute Edition",
+          "title": "Manual of the Patani Malay Writing System in Thai Script, Royal Institute Edition",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=87277%3B7RXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000458.jpg",
+          "alt": "Book cover: Dictionary of Education Terms, Letters M–Z",
+          "title": "Dictionary of Education Terms, Letters M–Z",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3528722SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000459.jpg",
+          "alt": "Book cover: Dictionary of Thai Regional Literature Terms, Northern Region: Khlong Mangthra Rop Chiang Mai",
+          "title": "Dictionary of Thai Regional Literature Terms, Northern Region: Khlong Mangthra Rop Chiang Mai",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A%3A26632SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000460.jpg",
+          "alt": "Book cover: The Three Seals Law: Phra Thamnun, Royal Institute Edition",
+          "title": "The Three Seals Law: Phra Thamnun, Royal Institute Edition",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=4422542SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000461.jpg",
+          "alt": "Book cover: Dictionary of Thai Regional Literature Terms, Southern Region: Suphasit Roi Paet",
+          "title": "Dictionary of Thai Regional Literature Terms, Southern Region: Suphasit Roi Paet",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3528352SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000462.jpg",
+          "alt": "Book cover: Dictionary of World Religion Terms: English–Thai, Royal Institute Edition (Revised)",
+          "title": "Dictionary of World Religion Terms: English–Thai, Royal Institute Edition (Revised)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6623262SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000463.jpg",
+          "alt": "Book cover: Dictionary of Thai Local Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Vol. 2",
+          "title": "Dictionary of Thai Local Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Vol. 2",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8225662SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000464.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 28, สาลี, ข้าว – หวาย, ต้น",
+          "title": "Thai Encyclopedia, Vol. 28, สาลี, ข้าว – หวาย, ต้น",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3524472SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000465.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Asia, Volume 3, Letters E–G",
+          "title": "Encyclopedia of Modern World History: Asia, Volume 3, Letters E–G",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3522382SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000466.jpg",
+          "alt": "Book cover: Thammasat Pakon: Ancient Lanna Law on Family and Inheritance",
+          "title": "Thammasat Pakon: Ancient Lanna Law on Family and Inheritance",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6626782SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000467.jpg",
+          "alt": "Book cover: Encyclopedia of World History: America, Volume 3, Letters E–G",
+          "title": "Encyclopedia of World History: America, Volume 3, Letters E–G",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6623692SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000468.jpg",
+          "alt": "Book cover: The Three Seals Law, Royal Institute Edition (2 volumes)",
+          "title": "The Three Seals Law, Royal Institute Edition (2 volumes)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B225%3A2SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000469.jpg",
+          "alt": "Book cover: Kudakhan",
+          "title": "Kudakhan",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B72%3B3%3B2SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000470.jpg",
+          "alt": "Book cover: Zen and Japanese Culture",
+          "title": "Zen and Japanese Culture",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6522723SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000471.jpg",
+          "alt": "Book cover: Origins of Chinese Beliefs and Traditions, Parts 1–3",
+          "title": "Origins of Chinese Beliefs and Traditions, Parts 1–3",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=4927433SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000472.jpg",
+          "alt": "Book cover: Origins of Japanese Beliefs and Traditions, Parts 1–4",
+          "title": "Origins of Japanese Beliefs and Traditions, Parts 1–4",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B726343SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000474.jpg",
+          "alt": "Book cover: Announcements of the Office of the Prime Minister and the Royal Institute on Writing the Names of Provinces, Districts and Sub-Districts, and on the Principles of Romanization of Thai by Transcription",
+          "title": "Announcements of the Office of the Prime Minister and the Royal Institute on Writing the Names of Provinces, Districts and Sub-Districts, and on the Principles of Romanization of Thai by Transcription",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8224653SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000475.jpg",
+          "alt": "Book cover: Lecture on Local Government in Thailand",
+          "title": "Lecture on Local Government in Thailand",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3B23683SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000476.jpg",
+          "alt": "Book cover: Dictionary of World Geographical Names, Volume 2, Letters M–Z",
+          "title": "Dictionary of World Geographical Names, Volume 2, Letters M–Z",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3525593SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000477.jpg",
+          "alt": "Book cover: Dictionary of World Geographical Names, Volume 1, Letters A–L",
+          "title": "Dictionary of World Geographical Names, Volume 1, Letters A–L",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=662%3A3%3A3SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000478.jpg",
+          "alt": "Book cover: Dictionary of Thermodynamics Terms",
+          "title": "Dictionary of Thermodynamics Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=35222%3B3SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000479.jpg",
+          "alt": "Book cover: Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 2, Letter อ",
+          "title": "Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 2, Letter อ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=66286%3B3SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000480.jpg",
+          "alt": "Book cover: Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 1, Letter อ",
+          "title": "Dictionary of Tipitaka Terms: Pali–Roman–Thai, Volume 1, Letter อ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3524524SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000481.jpg",
+          "alt": "Book cover: Dictionary of Automotive and Engine Terms",
+          "title": "Dictionary of Automotive and Engine Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8226334SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000482.jpg",
+          "alt": "Book cover: Dictionary of Thai Literature Terms, Ayutthaya Period: Anirut Kham Chan",
+          "title": "Dictionary of Thai Literature Terms, Ayutthaya Period: Anirut Kham Chan",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=652%3A734SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000484.jpg",
+          "alt": "Book cover: Dictionary of Thai Local Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Vol. 1",
+          "title": "Dictionary of Thai Local Literature Terms, Northeastern Region: Thao Hung or Thao Chueang, Vol. 1",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9629454SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000485.jpg",
+          "alt": "Book cover: Dictionary of Thai Literature Terms, Ayutthaya Period: Lilit Ongkan Chaeng Nam",
+          "title": "Dictionary of Thai Literature Terms, Ayutthaya Period: Lilit Ongkan Chaeng Nam",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3A23364SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000486.jpg",
+          "alt": "Book cover: Dictionary of Fine Arts Terms, Letters ก–ฮ",
+          "title": "Dictionary of Fine Arts Terms, Letters ก–ฮ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=4425274SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000487.jpg",
+          "alt": "Book cover: Dictionary of Art Terms: English–Thai",
+          "title": "Dictionary of Art Terms: English–Thai",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=442%3A674SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000489.jpg",
+          "alt": "Book cover: Common Bone and Joint Diseases in Thailand",
+          "title": "Common Bone and Joint Diseases in Thailand",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9%3B29294SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000490.jpg",
+          "alt": "Book cover: Western Music Terms",
+          "title": "Western Music Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6523794SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000491.jpg",
+          "alt": "Book cover: Imaging Technology Terms",
+          "title": "Imaging Technology Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B72%3A5%3A4SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000492.jpg",
+          "alt": "Book cover: Demography Terms",
+          "title": "Demography Terms",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B2254%3B4SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000493.jpg",
+          "alt": "Book cover: Forestry Terms: English–Thai",
+          "title": "Forestry Terms: English–Thai",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B227225SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000494.jpg",
+          "alt": "Book cover: Energy Terms: English–Thai",
+          "title": "Energy Terms: English–Thai",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9%3B22435SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000495.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 22",
+          "title": "Thai Encyclopedia, Vol. 22",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6526345SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000496.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 24 (out of print)",
+          "title": "Thai Encyclopedia, Vol. 24 (out of print)",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3A22745SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000497.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 25",
+          "title": "Thai Encyclopedia, Vol. 25",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9%3B25455SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000498.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 26, ฦ, ฦๅ – สตูล",
+          "title": "Thai Encyclopedia, Vol. 26, ฦ, ฦๅ – สตูล",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3A%3A28755SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000499.jpg",
+          "alt": "Book cover: Thai Encyclopedia, Vol. 27, สถานเสาวภา – สาละ, ต้น",
+          "title": "Thai Encyclopedia, Vol. 27, สถานเสาวภา – สาละ, ต้น",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=5825565SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000500.jpg",
+          "alt": "Book cover: Encyclopedia of Thai History, Vol. 2, letters ข–จ",
+          "title": "Encyclopedia of Thai History, Vol. 2, letters ข–จ",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9623375SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000501.jpg",
+          "alt": "Book cover: Encyclopedia of World History: America, Vol. 1, A–B",
+          "title": "Encyclopedia of World History: America, Vol. 1, A–B",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B222775SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000502.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Europe, Vol. 1, A–B",
+          "title": "Encyclopedia of Modern World History: Europe, Vol. 1, A–B",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=9624685SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000503.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Asia, Vol. 2, C–D",
+          "title": "Encyclopedia of Modern World History: Asia, Vol. 2, C–D",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B725495SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000504.jpg",
+          "alt": "Book cover: Encyclopedia of Modern World History: Europe, Vol. 4, H–K",
+          "title": "Encyclopedia of Modern World History: Europe, Vol. 4, H–K",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B7242%3A5SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000505.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Music Terms: History and Lyrics of Thao Songs",
+          "title": "Encyclopedia of Thai Music Terms: History and Lyrics of Thao Songs",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=96257%3A5SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000506.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Music Terms: History and Lyrics of Tap Song Suites, and History of Na Phat and Overture Pieces",
+          "title": "Encyclopedia of Thai Music Terms: History and Lyrics of Tap Song Suites, and History of Na Phat and Overture Pieces",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B2245%3B5SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000507.jpg",
+          "alt": "Book cover: Encyclopedia of Thai Music Terms: History of Miscellaneous Songs and Lakhon Rong Songs",
+          "title": "Encyclopedia of Thai Music Terms: History of Miscellaneous Songs and Lakhon Rong Songs",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6%3A29226SXF58132272262%3B2222622"
+        },
+        {
+          "image": "assets/images/orst/publications/00000508.jpg",
+          "alt": "Book cover: Guidelines for the Transliteration of Chinese and Hindi",
+          "title": "Guidelines for the Transliteration of Chinese and Hindi",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=%3B726626SXF58132272262%3B2222622"
+        }
+      ],
+      "ratio": "3:4",
+      "fit": "contain",
+      "pageSize": 24,
+      "unit": "books"
+    },
+    {
+      "type": "card-grid",
+      "id": "media",
+      "variant": "alt",
+      "heading": "Digital Media",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-video",
+          "title": "Videos and multimedia",
+          "body": "Knowledge to watch",
+          "href": "#"
+        },
+        {
+          "icon": "i-puzzle",
+          "title": "Infographics",
+          "body": "Knowledge summarized in a single, easy-to-understand image",
+          "href": "infographics.html"
+        },
+        {
+          "icon": "i-megaphone",
+          "title": "Publicity Materials",
+          "body": "Posters and materials for sharing",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "how-to-order",
+      "heading": "How to Order Books",
+      "lead": "Steps for those who would like printed copies",
+      "items": [
+        {
+          "title": "Choose your books",
+          "body": "Check the titles and prices in the Office's publications list"
+        },
+        {
+          "title": "Fill in the order form",
+          "body": "Specify the titles, quantities and delivery address"
+        },
+        {
+          "title": "Make payment",
+          "body": "Pay by money order or by transfer to the Siam Commercial Bank account named \"Office of the Royal Society (Book Sales Room)\""
+        },
+        {
+          "title": "Receive your books",
+          "body": "Staff will ship the books once payment for the books and shipping has been received"
+        }
+      ],
+      "action": {
+        "label": "Ordering details",
+        "href": "book-ordering.html"
+      }
+    },
+    {
+      "type": "notice",
+      "tone": "info",
+      "title": "Reprinting publications",
+      "body": "Reprinting or redistributing the Office's content or publications requires prior permission. See the procedure on the Academic Services page."
+    }
+  ],
+  "updatedAt": "2026-11-13",
+  "lang": "en"
+}

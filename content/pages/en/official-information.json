@@ -1,0 +1,35 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีเอกสารหน้านี้ — รอข้อมูลจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "Official Information",
+  "navKey": "about",
+  "description": "Information disclosed by the Office of the Royal Society under the Official Information Act B.E. 2540 (1997)",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Official Information",
+      "lead": "Information disclosed by the Office of the Royal Society under the Official Information Act B.E. 2540 (1997)",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Official Information"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Official Information documents — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

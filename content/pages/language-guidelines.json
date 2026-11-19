@@ -1,0 +1,142 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "หลักเกณฑ์ภาษาไทย",
+  "navKey": "knowledge",
+  "description": "หลักเกณฑ์การใช้ภาษาไทย การทับศัพท์ การถอดอักษร การอ่าน และการเขียนชื่อต่าง ๆ ที่สำนักงานราชบัณฑิตยสภากำหนด",
+  "sideNav": false,
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "หลักเกณฑ์ภาษาไทย",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "หลักเกณฑ์การใช้ภาษาไทย การทับศัพท์ การถอดอักษร การอ่าน และการเขียนชื่อต่าง ๆ ที่สำนักงานราชบัณฑิตยสภากำหนด",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หลักเกณฑ์ภาษาไทย"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "topics",
+      "layout": "guide",
+      "items": [
+        {
+          "icon": "i-book",
+          "title": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด",
+          "href": "guideline-ancient-fonts.html",
+          "body": "ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย · อักษรไทยน้อย · อักษรธรรมอีสาน …",
+          "meta": "๖ หัวข้อ"
+        },
+        {
+          "icon": "i-dictionary",
+          "title": "หลักเกณฑ์การทับศัพท์",
+          "href": "guideline-transcription.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
+        },
+        {
+          "icon": "i-pen",
+          "title": "การถอดอักษรไทยเป็นอักษรโรมัน",
+          "href": "guideline-romanization.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
+        },
+        {
+          "icon": "i-list",
+          "title": "การอ่านตัวเลขต่างๆ",
+          "href": "guideline-reading-numbers.html",
+          "body": "การอ่านจำนวนเลขตั้งแต่ ๒ หลักขึ้นไป · การอ่านตัวเลขบอกเวลา · การอ่านตัวเลขที่แสดงมาตราส่วนหรืออัตราส่วน …",
+          "meta": "๑๒ หัวข้อ"
+        },
+        {
+          "icon": "i-megaphone",
+          "title": "การอ่านวิสามานยนาม",
+          "href": "guideline-reading-proper-nouns.html",
+          "body": "วิสามานยนามทั่วไป · จังหวัด · ถนน ตรอก ซอย ในเขตกรุงเทพมหานคร …",
+          "meta": "๖ หัวข้อ"
+        },
+        {
+          "icon": "i-megaphone",
+          "title": "การอ่านเครื่องหมาย",
+          "href": "guideline-reading-symbols.html",
+          "body": "การอ่านคำหรือข้อความที่มีเครื่องหมายวงเล็บกำกับอยู่ · การอ่านเครื่องหมายไปยาลใหญ่ หรือ เปยยาลใหญ่ · การอ่านเครื่องหมายไข่ปลา หรือ จุดไข่ปลา …",
+          "meta": "๖ หัวข้อ"
+        },
+        {
+          "icon": "i-pen",
+          "title": "เครื่องหมายวรรคตอน",
+          "href": "guideline-punctuation.html",
+          "body": "ปรัศนี · มหัพภาค · ยัติภังค์ …",
+          "meta": "๒๓ หัวข้อ"
+        },
+        {
+          "icon": "i-file",
+          "title": "การเว้นวรรค",
+          "href": "guideline-spacing.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
+        },
+        {
+          "icon": "i-file",
+          "title": "การเขียนคำย่อ",
+          "href": "guideline-abbreviations.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
+        },
+        {
+          "icon": "i-map",
+          "title": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง",
+          "href": "guideline-place-names.html",
+          "body": "ชื่อจังหวัด อำเภอ ตำบล เขต และแขวง · ตัวสะกดชื่อเขตของกรุงเทพมหานครทั้งอักษรไทย อักษรโรมัน และประวัติความเป็นมา",
+          "meta": "๒ หัวข้อ"
+        },
+        {
+          "icon": "i-map",
+          "title": "ชื่อทะเล",
+          "href": "guideline-sea-names.html",
+          "body": "ทะเลติดต่อมหาสมุทรแปซิฟิก · ทะเลติดต่อมหาสมุทรอินเดีย · ทะเลติดต่อมหาสมุทรแอตแลนติก …",
+          "meta": "๕ หัวข้อ"
+        },
+        {
+          "icon": "i-puzzle",
+          "title": "ชื่อธาตุ",
+          "href": "guideline-element-names.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
+        },
+        {
+          "icon": "i-pin",
+          "title": "ชื่อประเทศ/เมืองหลวง",
+          "href": "guideline-country-names.html",
+          "body": "ประกาศสำนักนายกรัฐมนตรี เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๓๐ ส.ค. ๖๕) · ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง กำหนดชื่อประเทศ ดินแดน เขตการปกครอง และเมืองหลวง (๒๙ มิ.ย. ๖๕) · ลิงก์ไปยังประกาศในราชกิจจานุเบกษา",
+          "meta": "๓ หัวข้อ"
+        },
+        {
+          "icon": "i-list",
+          "title": "ลักษณนาม",
+          "href": "guideline-classifiers.html",
+          "body": "คำชี้แจง · อักษร ก · อักษร ข …",
+          "meta": "๓๕ หัวข้อ"
+        },
+        {
+          "icon": "i-shield",
+          "title": "ราชาศัพท์",
+          "href": "guideline-royal-vocabulary.html",
+          "body": "",
+          "meta": "อ่านเนื้อหา"
+        }
+      ]
+    }
+  ]
+}

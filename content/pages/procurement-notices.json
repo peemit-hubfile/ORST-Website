@@ -1,0 +1,2403 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบ T1 (รายการเอกสาร) — เมนู 5.2.1 ข้อมูลจาก orst.go.th/iwfm_table.asp?a=2 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์ยังชี้ไปหน้าประกาศบนเว็บเดิม",
+  "title": "ประกาศการจัดซื้อจัดจ้าง",
+  "navKey": "news",
+  "description": "ประกาศการจัดซื้อจัดจ้างของสำนักงานราชบัณฑิตยสภา ค้นหาชื่อประกาศหรือกรองตามปีงบประมาณ",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ประกาศการจัดซื้อจัดจ้าง",
+      "lead": "ประกาศการจัดซื้อจัดจ้างของสำนักงานราชบัณฑิตยสภา ค้นหาชื่อประกาศหรือกรองตามปีงบประมาณ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ประกาศการจัดซื้อจัดจ้าง"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "notices",
+      "items": [
+        {
+          "title": "ยกเลิกประกาศประกวดราคาเช่ารถนั่งส่วนกลางและรถโดยสาร ๑๒ ที่นั่ง พร้อมคนขับ รวม ๒ คัน ระยะเวลาการเช่า ๕ ปี (๖๐ เดือน) ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-11-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002082.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศประกวดราคาซื้อครุภัณฑ์ชุดอุปกรณ์เพื่อเพิ่มประสิทธิภาพในการจัดการองค์ความรู้ และการสื่อสารของสำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-11-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002081.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาเช่ารถนั่งส่วนกลางและรถโดยสาร ๑๒ ที่นั่ง พร้อมคนขับ รวม ๒ คัน ระยะเวลาการเช่า ๕ ปี (๖๐ เดือน) ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-09-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002077.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภาเรื่อง ประกวดราคาจ้างพิมพ์หนังสือชุด \"สิริกิตยานุสรณ์\" ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-09-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002083.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาซื้อครุภัณฑ์ชุดอุปกรณ์เพื่อเพิ่มประสิทธิภาพในการจัดการองค์ความรู้และการสื่อสารของสำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-09-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002072.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาเช่ารถนั่งส่วนกลางและรถโดยสาร ๑๒ ที่นั่ง พร้อมคนขับ รวม ๒ คัน ระยะเวลาการเช่า ๕ ปี (๖๐ เดือน) ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-09-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002076.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาซื้อครุภัณฑ์ชุดอุปกรณ์เพื่อเพิ่มประสิทธิภาพในการจัดการองค์ความรู้และการสื่อสารของสำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-09-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002069.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2026-08-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002067.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาจ้างจัดพิมพ์หนังสือ “ราชบัณฑิตยสภา ปัจจุบันและอนาคต” เนื่องในโอกาส ๑๐๐ ปีราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-07-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002059.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างจัดพิมพ์หนังสือ “ราชบัณฑิตยสภา ปัจจุบันและอนาคต” เนื่องในโอกาส ๑๐๐ ปีราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-07-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002057.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศประกวดราคาซื้อสิทธิ์การใช้งานระบบประมวลผลด้วยปัญญาประดิษฐ์ระดับองค์กร ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ จำนวน ๘๐ สิทธิ์ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-06-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002030.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาซื้อสิทธิ์การใช้งานระบบประมวลผลด้วยปัญญาประดิษฐ์ระดับองค์กร ประจำปีงบประมาณ พ.ศ. 2569 ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-05-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002022.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาจ้างจัดทำเว็บไซต์สำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002027.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างจัดทำเว็บไซต์สำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น ครั้งที่ 2",
+          "publishedAt": "2026-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002016.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาซื้อสิทธิ์การใช้งานระบบประมวลผลด้วยปัญญาประดิษฐ์ระดับองค์กร ประจำปีงบประมาณ พ.ศ. 2569 ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-04-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002013.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาจ้างจัดกิจกรรมเพื่อส่งเสริมการใช้ภาษาไทย ภาษาไทยถิ่น และงานสัปดาห์วันภาษาไทยแห่งชาติ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-04-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002012.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างจัดกิจกรรมเพื่อส่งเสริมการใช้ภาษาไทย ภาษาไทยถิ่น และงานสัปดาห์วันภาษาไทยแห่งชาติ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-04-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002007.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาซื้อวัสดุคอมพิวเตอร์ (หมึกพิมพ์และดรัมเครื่องพิมพ์) ประจำปีงบประมาณ พ.ศ. 2569 ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002010.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างจัดทำเว็บไซต์สำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-03-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001996.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาซื้อวัสดุคอมพิวเตอร์ (หมึกพิมพ์และดรัมเครื่องพิมพ์) ประจำปีงบประมาณ พ.ศ ๒๕๖๙ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-03-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001992.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาจ้างเหมาบริการทำความสะอาดอาคารสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001990.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2026-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001985.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกวดราคาจ้างเหมาบริการรักษาความปลอดภัย ประจำสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-02-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001981.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างเหมาบริการทำความสะอาดอาคารสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น ครั้งที่ ๒",
+          "publishedAt": "2026-02-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001980.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ยกเลิกประกาศรายชื่อผู้ชนะการเสนอราคาและยกเลิกการประกวดราคาอิเล็กทรอนิกส์ (e-bidding) โครงการจ้างทำระบบฐานข้อมูลของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2026-02-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001969.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2026-02-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001970.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างเหมาบริการรักษาความปลอดภัย ประจำสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2569 ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-02-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001968.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2026-02-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001971.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างพิมพ์พจนานุกรม ฉบับราชบัณฑิตยสภา พ.ศ. ๒๕๖๙ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-01-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001962.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างจัดพิมพ์หนังสือเนื่องในโอกาส ๑๐๐ ปี ราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2026-01-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001963.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างเหมาบริการทำความสะอาดอาคารสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-01-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001964.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างพิมพ์พจนานุกรม ฉบับราชบัณฑิตยสภา พ.ศ. ๒๕๖๙ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-01-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001957.PDF"
+        },
+        {
+          "title": "เผยแพร่เอกสารประกวดราคาจ้างจัดพิมพ์หนังสือเนื่องในโอกาส ๑๐๐ ปี ราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) เพื่อรับฟังความคิดเห็น",
+          "publishedAt": "2026-01-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001958.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2025-09-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001921.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน โครงการจ้างจัดทำระบบฐานข้อมูลของสำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2025-08-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001906.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างทำระบบสำนักงานอัจฉริยะ (Smart Office) สำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2025-08-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001907.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่ร่างประกาศและร่างเอกสารประกวดราคาจ้างทำระบบสำนักงานอัจฉริยะ (Smart Office) สำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2025-06-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001869.PDF"
+        },
+        {
+          "title": "รายละเอียดคุณลักษณะเฉพาะร่างประกาศและร่างเอกสารประกวดราคาจ้างจัดทําระบบ ถอดบันทึกการประชุมอัตโนมัติ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2025-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001901.PDF"
+        },
+        {
+          "title": "เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2568 (ครั้งที่ 3)",
+          "publishedAt": "2025-04-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001847.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2024-08-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001758.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2024-07-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001741.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2024-07-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001746.PDF"
+        },
+        {
+          "title": "ประกวดราคาซื้อและติดตั้งเครื่องคอมพิวเตอร์แม่ข่าย และอุปกรณ์ระบบเครือข่ายของสำนักงานราชบัณฑิตยสภา โซน C ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2024-06-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001742.PDF"
+        },
+        {
+          "title": "ประกวดราคาซื้อและติดตั้งระบบห้องประชุมอัจฉริยะ (Smart Meeting Room) สำนักงานราชบัณฑิตยสภา โซน C ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2024-06-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001743.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างก่อสร้างจ้างตกแต่งภายในและจัดนิทรรศการ อาคารเรือนเจ้าจอมมารดาเลื่อน ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2024-03-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001710.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2022-07-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001367.PDF"
+        },
+        {
+          "title": "ขอบเขตงานจ้างที่ปรึกษา (Term of Reference : TOR)จ้างที่ปรึกษาโครงการศึกษาเพื่อจัดทำแผนอัตรากำลังและแผนพัฒนาบุคลากร ระยะ ๓ ปี (พ.ศ. ๒๕๖๕ - ๒๕๖๗) ของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2021-05-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001195.PDF"
+        },
+        {
+          "title": "ขอบเขตงาน (Term of Reference : TOR) จ้างออกแบบตกแต่งภายในและออกแบบนิทรรศการอาคารเรือนเจ้าจอมมารดาเลื่อน",
+          "publishedAt": "2021-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001174.PDF"
+        },
+        {
+          "title": "TOR จ้างจัดกิจกรรมโครงการส่งเสริมการใช้ภาษาไทยและภาษาไทยถิ่น ประจำพุทธศักราช 2564",
+          "publishedAt": "2021-02-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001151.PDF"
+        },
+        {
+          "title": "แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563 (ฉ.7)",
+          "publishedAt": "2020-09-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001067.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563 (ฉ.6)",
+          "publishedAt": "2020-08-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63HDQ1927075"
+        },
+        {
+          "title": "แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563 (ฉ.5)",
+          "publishedAt": "2020-06-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001018.PDF"
+        },
+        {
+          "title": "ประกาศยกเลิกแผนการจัดซื้อจัดจ้าง",
+          "publishedAt": "2020-06-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63HDJ5722056"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างพิมพ์หนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช 2563 โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001016.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาสำหรับจ้างทำรายงานประจำปี ๒๕๖๒ สำนักงานราชบัณฑิตยสภา ในรูปแบบ Electronic Book โดยวิธีเฉพาะเจาะจง2563",
+          "publishedAt": "2020-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001015.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างซ่อมแซมและบำรุงรักษาครุภัณฑ์สำนักงาน (เครื่องถ่ายเอกสาร) โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001012.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างซ่อมแซมและบำรุงรักษาเครื่องปรับอากาศ จำนวน ๒ เครื่อง โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001013.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างเหมารถตู้โดยสารปรับอากาศ รวมน้ำมันเชื้อเพลิง คนขับ และค่าทางด่วนพิเศษ จำนวน 9 คัน โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001014.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างซ่อมแซมและบำรุงรักษาครุภัณฑ์สำนักงาน (เครื่องถ่ายเอกสาร) โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-02-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001011.JPG"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2020-02-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000001.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างทำวิดีทัศน์งานมอบรางวัลราชบัณฑิตยสภาสรรเสริญ ถ่ายภาพนิ่งและภาพเคลื่อนไหว โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-02-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001010.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน 29 ชุด ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2020-02-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000002.PDF"
+        },
+        {
+          "title": "ประกาศแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563 (ฉบับที่ 4 เพิ่มเติมการซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน 29 ชุด)",
+          "publishedAt": "2020-01-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000003.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างจ้างทำโล่รางวัลราชบัณฑิตยสภาสรรเสริญ จำนวน 18 โล่ โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-01-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001039.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างซ่อมแซมและบำรุงรักษารถยนต์ราชการ หมายเลขทะเบียน วฮ 6706 กรุงเทพมหานคร โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-01-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001040.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างทำบัตรติดรถยนต์ผ่านเข้า-ออก สนามเสือป่า ประจำปี ๒๕๖๓ โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2020-01-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001041.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2020-01-09",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63DOP0840031"
+        },
+        {
+          "title": "ประกวดราคาซื้อวัสดุคอมพิวเตอร์ (หมึก) ของสำนักงานราชบัณฑิตยสภา ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2019-12-26",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63DOP4418075"
+        },
+        {
+          "title": "ประกาศแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563 (ฉบับที่ 3 เพิ่มเติมการซื้อวัสดุคอมพิวเตอร์ (หมึก) ของสำนักงานราชบัณฑิตยสภา)",
+          "publishedAt": "2019-12-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000006.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างเหมารถตู้โดยสารปรับอากาศ จำนวน 3 คัน โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-12-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001042.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างซ่อมแซมและบำรุงรักษาเครื่องปรับอากาศ จำนวน ๔ เครื่อง โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-12-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001043.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างทำวีดิทัศน์ จำนวน 8 ตอน โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-12-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001044.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างถ่ายเอกสารพร้อมเข้าเล่ม (แบบอาคารเรือนเจ้าจอมมารดาเลื่อน) โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-12-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001045.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างเหมาทำความสะอาดพรม โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-12-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001046.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างซ่อมแซมและบำรุงรักษาเครื่องปรับอากาศ จำนวน ๒ เครื่อง โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-11-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001047.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างเหมาบริการบุคคลภายนอก ตำแหน่งแม่บ้าน จำนวน ๒ อัตรา โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-11-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001048.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างเหมารถตู้โดยสารปรับอากาศเพื่อเดินทางไปถวายผ้าพระกฐินพระราชทาน พ.ศ. ๒๕๖๒ จำนวน 6 คัน โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-11-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001049.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาเช่าเต็นท์ เก้าอี้พลาสติก และพัดลมไอน้ำ ในโครงการแข่งขันและ คัดเลือกผู้ใช้ภาษาไทยดีเด่น ประจำปี พ.ศ. 2562 โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-10-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001050.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างถ่ายภาพนิ่งและภาพเคลื่อนไหว ในโครงการแข่งขันและคัดเลือก ผู้ใช้ภาษาไทยดีเด่น ประจำปี พ.ศ. 2562 โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-10-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001057.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างพิมพ์หนังสือประวัติวัดอุดมธานีที่ระลึก งานถวายผ้าพระกฐินพระราชทาน พ.ศ. 2562 จำนวน 1,000 เล่ม",
+          "publishedAt": "2019-10-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001055.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างเหมารถกระบะขนหนังสือพร้อมพนักงานขน โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-09-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001054.PDF"
+        },
+        {
+          "title": "ประกาศเปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563",
+          "publishedAt": "2019-09-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000013.PDF"
+        },
+        {
+          "title": "ประกาศแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563 (ฉบับที่ 2 เพิ่มเติมการจ้างเหมาบริการ)",
+          "publishedAt": "2019-09-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000014.PDF"
+        },
+        {
+          "title": "ประกาศแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2563",
+          "publishedAt": "2019-09-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000015.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2019-06-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000016.PDF"
+        },
+        {
+          "title": "ประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ (4 รายการ) จำนวน 33 เครื่อง ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2019-03-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000017.PDF"
+        },
+        {
+          "title": "ประกาศรับพนักงานจำนวน 2 ตำแหน่ง",
+          "publishedAt": "2019-03-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000018.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างพิมพ์หนังสืออนุกรมวิธานพืช อักษร ต (เล่ม 1) จำนวน 1,000เล่ม ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2019-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000019.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2562",
+          "publishedAt": "2019-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000020.PDF"
+        },
+        {
+          "title": "ประกาศผู้ชนะการเสนอราคาจ้างติดตั้งทำเนียบผู้บริหารสำนักงานราชบัณฑิตยสภา โดยวิธีเฉพาะเจาะจง",
+          "publishedAt": "2019-02-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001056.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน",
+          "publishedAt": "2019-02-05",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63HDP1823056"
+        },
+        {
+          "title": "ประกวดราคาจ้างพิมพ์หนังสือใต้ร่มพระบารมี จักรีนฤบดินทร์ สยามมินทราธิราชจำนวน ๓,๐๐๐ ชุด (ชุดละ 2 เล่ม)",
+          "publishedAt": "2019-01-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000022.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาซื้อการจัดซื้อวัสดุคอมพิวเตอร์ (หมึก) ของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2019-01-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000024.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2562",
+          "publishedAt": "2019-01-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000025.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2019-01-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000026.PDF"
+        },
+        {
+          "title": "ประกาศ เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2562",
+          "publishedAt": "2019-01-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000027.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกประกาศผู้ชนะการเสนอราคา ประกวดราคาจัดจ้างพิมพ์หนังสือใต้ร่มพระบารมี",
+          "publishedAt": "2018-09-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000028.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-09-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000029.PDF"
+        },
+        {
+          "title": "ประกาศ เผยแพร่แผนการจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2562 (ฝค.611-2561)",
+          "publishedAt": "2018-09-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000030.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาจ้างการจ้างเหมาบริการทำความสะอาดสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2018-09-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000031.PDF"
+        },
+        {
+          "title": "ประกาศ เผยแพร่แผนการจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2562",
+          "publishedAt": "2018-09-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000032.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงประกาศเชิญชวน ประกวดราคาจัดจ้างพิมพ์หนังสือราชาศัพท์ ฉบับราชบัณฑิตยสภา",
+          "publishedAt": "2018-08-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000033.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงประกาศเชิญชวน ประกวดราคาจัดจ้างพิมพ์หนังสือราชาศัพท์ที่ใช้ในโอกาสต่าง ๆ ฉบับราชบัณฑิตยสภา",
+          "publishedAt": "2018-08-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000034.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงประกาศเชิญชวน ประกวดราคาจัดจ้างพิมพ์หนังสือศัพท์ปฐพีศาสตร์",
+          "publishedAt": "2018-08-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000035.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงประกาศเชิญชวน ประกวดราคาจัดจ้างพิมพ์หนังสือใต้ร่มพระบารมี",
+          "publishedAt": "2018-08-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000036.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาจัดจ้างพิมพ์หนังสือใต้ร่มพระบารมี",
+          "publishedAt": "2018-08-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000037.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาจัดจ้างพิมพ์หนังสือราชาศัพท์ ฉบับราชบัณฑิตยสภา",
+          "publishedAt": "2018-08-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000038.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาจัดจ้างพิมพ์หนังสือราชาศัพท์ที่ใช้ในโอกาสต่าง ๆ ฉบับราชบัณฑิตยสภา",
+          "publishedAt": "2018-08-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000039.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-08-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000040.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาจัดจ้างพิมพ์หนังสือศัพท์ปฐพีศาสตร์",
+          "publishedAt": "2018-08-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000041.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกประกาศ ประกวดราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์ปฐพีศาสตร์",
+          "publishedAt": "2018-08-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000042.PDF"
+        },
+        {
+          "title": "ประกาศ ประกวดราคาจัดจ้างพิมพ์หนังสือศัพท์ปฐพีศาสตร์",
+          "publishedAt": "2018-08-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000043.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดจ้าง ประจำปีงบปะรมาณ พ.ศ. 2561 (ฝค.471-2561)",
+          "publishedAt": "2018-07-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000044.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดจ้าง ประจำปีงบปะรมาณ พ.ศ. 2561 (ฝค.450-2561)",
+          "publishedAt": "2018-07-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000045.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกประกาศ ซื้อครุภัณฑ์คอมพิวเตอร์ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2018-07-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000046.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกประกาศ จัดซื้อโปรแกรมครุภัณฑ์คอมพิวเตอร์ ด้วยวิธีตลาดอิเล็กทรอนิกส์ (e-market)",
+          "publishedAt": "2018-07-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000047.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกประกาศ ซื้อเครื่องมัลติมีเดียโปรเจคเตอร์ จำนวน 1 เครื่อง",
+          "publishedAt": "2018-07-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000048.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561 (ฝค.419-2561)",
+          "publishedAt": "2018-07-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000049.PDF"
+        },
+        {
+          "title": "ประกาศ เผยแพร่แผนการจัดจ้าง ประจำปีงบปะรมาณ พ.ศ. 2561",
+          "publishedAt": "2018-07-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000050.PDF"
+        },
+        {
+          "title": "ประกาศ จัดซื้อครุภัณฑ์คอมพิวเตอร์ ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2018-07-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000051.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-06-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000052.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดจ้าง ประจำปีงบปะรมาณ พ.ศ. 2561",
+          "publishedAt": "2018-06-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000053.PDF"
+        },
+        {
+          "title": "ประกาศ เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-06-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000054.PDF"
+        },
+        {
+          "title": "ประกาศ เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-06-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000055.PDF"
+        },
+        {
+          "title": "ประกาศ จัดซื้อครุภัณฑ์คอมพิวเตอร์ ด้วยวิธีตลาดอิเล็กทรอนิกส์ (e-market)",
+          "publishedAt": "2018-06-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000056.PDF"
+        },
+        {
+          "title": "ประกาศ จัดซื้อเครื่องมัลติมีเดียโปรเจคเตอร์ จำนวน 1 เครื่อง",
+          "publishedAt": "2018-06-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000057.PDF"
+        },
+        {
+          "title": "ประกาศ ยกเลิกแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-06-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000058.PDF"
+        },
+        {
+          "title": "ประกาศ เปลี่ยนแปลงแผนการจัดจ้างหนังสือพจนานุกรมศัพท์สถิติศาสตร์",
+          "publishedAt": "2018-06-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000059.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2018-06-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000060.PDF"
+        },
+        {
+          "title": "ประกาศ เรื่อง ยกเลิกแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-06-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000061.PDF"
+        },
+        {
+          "title": "ประกาศ เรื่อง เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-06-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000062.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2018-06-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000063.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2018-05-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000064.PDF"
+        },
+        {
+          "title": "ประกาศยกเลิกแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-05-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000066.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2018-05-15",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63HDP1358097"
+        },
+        {
+          "title": "ยกเลิกประกาศ ประกวดราคาจัดซื้อโปรแกรม ChemDraw",
+          "publishedAt": "2018-05-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000067.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน เรื่อง ประกวดราคาจัดซื้อโปรแกรม ChemDraw จำนวน 4 ใบอนุญาต",
+          "publishedAt": "2018-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000068.PDF"
+        },
+        {
+          "title": "ประกาศเปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561 รายการจัดพิมพ์หนังสืออนุกรมวิธานพืช อักษร ด ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2018-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000069.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศ (จัดซื้อเครื่องคอมพิวเตอร์ จำนวน 2 ชุด)",
+          "publishedAt": "2018-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000070.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศ (จัดซื้อเครื่องคอมพิวเตอร์โน้ตบุ๊ก จำนวน 7 ชุด)",
+          "publishedAt": "2018-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000071.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศ (จัดซื้อเครื่องคอมพิวเตอร์ จำนวน 9 ชุด)",
+          "publishedAt": "2018-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000072.PDF"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภา ขอเปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2561 เฉพาะรายการจัดจ้างโครงการวิจัยและออกแบบระบบทดสอบความรู้ภาษาไทยสำหรับนักเรียนชั้นมัธยมศึกษาตอนปลายและนักศึกษาระดับอุดมศึกษา ออนไลน์",
+          "publishedAt": "2018-03-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000073.PDF"
+        },
+        {
+          "title": "ประกาศจัดซื้อเครื่องพิมพ์ชนิดเลเซอร์ หรือชนิด LED ขาวดำ ชนิด Network แบบที่ 1 (27 หน้า/นาที) จำนวน 3 เครื่อง",
+          "publishedAt": "2018-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000074.PDF"
+        },
+        {
+          "title": "ประกาศเปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561 เฉพาะรายการจ้างโครงการวิจัยและออกแบบระบบทดสอบความรู้ภาษาไทยสำหรับนักเรียนนักศึกษา",
+          "publishedAt": "2018-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000075.PDF"
+        },
+        {
+          "title": "เครื่องคอมพิวเตอร์ สำหรับประมวลผล จำนวน 2 ชุด",
+          "publishedAt": "2018-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000076.PDF"
+        },
+        {
+          "title": "ประกาศเรื่อง การประกวดราคาจัดซื้อโปรแกรม ChemDraw",
+          "publishedAt": "2018-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000077.PDF"
+        },
+        {
+          "title": "ประกาศเรื่อง การจัดซื้อเครื่องคอมพิวเตอร์ ประมวลผล จำนวน 9 ชุด",
+          "publishedAt": "2018-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000078.PDF"
+        },
+        {
+          "title": "ประกาษเรื่อง การจัดซื้อเครื่องคอมพิวเตอร์โน้ตบุ๊ก จำนวน 7 ชุด",
+          "publishedAt": "2018-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000079.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2018-03-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000080.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกัน เรื่อง ประกวดราคาจ้างพิมพ์หนังสืออ่านอย่างไรและเขียนอย่างไร ฉบับราชบัณฑิตยสภา พิมพ์ครั้งที่ 23 (แก้ไขเพิ่มเติม)",
+          "publishedAt": "2018-02-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000081.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสืออ่านอย่างไรและเขียนอย่างไร ฉบับราชบัณฑิตยสภา พิมพ์ครั้งที่ 23 (แก้ไขเพิ่มเติม) จำนวน 100,000 เล่ม",
+          "publishedAt": "2018-01-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000082.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561 (เพิ่มเติม)",
+          "publishedAt": "2018-01-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000083.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561 (เพิ่มเติม)",
+          "publishedAt": "2018-01-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000084.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2561",
+          "publishedAt": "2017-10-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000085.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจัดจ้างพิมพ์หนังสือพจนานุกรมศัพท์พฤกษศาสตร์ ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2017-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000086.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือสารานุกรมศัพท์ดนตรีไทย ภาคคีตะ-ดุริยางค์ พิมพ์ครั้งที่ 3 จำนวน 1,000 เล่ม",
+          "publishedAt": "2017-02-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000088.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศประกวดราคาจ้างพิมพ์หนังสือสารานุกรมศัพท์ดนตรีไทย ภาคคีตะ-ดุริยางค์ พิมพ์ครั้งที่ 3 จำนวน 1,000 เล่ม",
+          "publishedAt": "2017-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000089.PDF"
+        },
+        {
+          "title": "ประกาศขายทอดตลาดครุภัณฑ์ยานพาหนะและขนส่ง จำนวน 2 รายการ",
+          "publishedAt": "2017-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000090.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือสารานุกรมศัพท์ดนตรีไทย ภาคคีตะ-ดุริยางค์ พิมพ์ครั้งที่ 3 จำนวน 1,000 เล่ม",
+          "publishedAt": "2017-01-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000091.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์พันธุศาสตร์ ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2017-01-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000092.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือคำไทยที่มาจากภาษาบาลีและภาษาสันสกฤต พิมพ์ครั้งที่ 2 จำนวน 1,000 เล่ม",
+          "publishedAt": "2017-01-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000093.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 41 เล่ม 2 (เมษายน-มิถุนายน 2559) จำนวน 1,000 เล่ม",
+          "publishedAt": "2017-01-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000094.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์ยานพาหนะและขนส่ง จำนวน 2 รายการ (ครั้งที่ 2)",
+          "publishedAt": "2016-12-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000095.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศประกวดราคาซื้อครุภัณฑ์ยานพาหนะและขนส่ง จำนวน 2 รายการ",
+          "publishedAt": "2016-12-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000096.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างเหมาทำความสะอาดอาคารและสถานที่สำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ 2560 (1 ม.ค.-30 ก.ย. 2560) ครั้งที่ 2",
+          "publishedAt": "2016-11-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000097.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์ยานพาหนะและขนส่ง จำนวน 2 รายการ",
+          "publishedAt": "2016-11-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000098.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ จำนวน 4 รายการ",
+          "publishedAt": "2016-11-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000099.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ จำนวน 3 รายการ",
+          "publishedAt": "2016-11-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000100.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์สำนักงาน เครื่องถ่ายเอกสารระบบดิจิทัล (ขาว-ดำ) ความเร็ว 40 แผ่นนาที จำนวน 1 เครื่อง",
+          "publishedAt": "2016-11-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000101.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์อักขรานุกรมภูมิศาสตร์ไทย ฉบับราชบัณฑิตยสภา เล่ม 3 (อักษร น-ม) พิมพ์ครั้งที่ 4 (แก้ไขเพิ่มเติม) จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-11-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000102.PDF"
+        },
+        {
+          "title": "ประกาศจ้างเหมาทำความสะอาดอาคารสำนักงานราชบัณฑิตยสภา ระยะเวลา 9 เดือน (1 ม.ค. 2560-30 ก.ย. 2560)",
+          "publishedAt": "2016-10-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000103.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสืออนุกรมวิธานพืช อักษร ฉ-ฒ ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-10-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000104.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างให้บริการอินเทอร์เน็ตของสำนักงานราชบัณฑิตยสภา ปีงบประมาณ 2560",
+          "publishedAt": "2016-09-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000105.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างเหมาบำรุงรักษาดูแลระบบคอมพิวเตอร์และเครื่องแม่ข่าย ประจำปี 2560",
+          "publishedAt": "2016-09-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000106.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์ไฟฟ้าและวิทยุ (เครื่องบันทึกเสียงระบบดิจิทัลแบบพกพา) จำนวน 11 เครื่อง",
+          "publishedAt": "2016-08-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000107.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 40 ฉบับที่ 2 (เมษายน-มิถุนายน 2558) จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-06-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000108.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์พจนานุกรมศัพท์วัสดุนาโน ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-04-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000109.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์พจนานุกรมศัพท์ภาษาศาสตร์ (ภาษาศาสตร์ทั่วไป) จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-04-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000110.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์พอลิเมอร์ ฉบับราชบัณฑิตยสภา พิมพ์ครั้งที่ 2 (แก้ไขเพิ่มเติม) จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-04-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000111.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 40 ฉบับที่ 4 ตุลาคม-ธันวาคม 2558 จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-04-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000112.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์พจนานุกรมศัพท์วรรณกรรม ฉบับราชบัณฑิตยสภา (ปรับปรุงเพิ่มเติม) จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-04-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000113.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือศัพท์ต่างประเทศที่ใช้คำไทยแทนได้ ฉบับราชบัณฑิตยสภา เล่ม 2 จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-04-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000114.PDF"
+        },
+        {
+          "title": "สรุปผลการจัดซื้อจัดจ้างประจำเดือน มีนาคม 2559",
+          "publishedAt": "2016-04-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000115.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือสารานุกรมประวัติศาสตร์ไทย เล่ม 3 อักษร ฉ-ต ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000116.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือสารานุกรมประวัติศาสตร์สากลสมัยใหม่ : เอเชีย เล่ม 4 อักษร H-J ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000117.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์พจนานุกรมศัพท์ดนตรีสากล ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000118.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือProceedings of the Princess Maha Chakri Sirindhorn Congress (The Fifth Interdisciplinary Day Conference) จำนวน 500 เล่ม",
+          "publishedAt": "2016-03-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000119.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือภาษาและวัฒนธรรมอาเซียน ฉบับราชบัณฑิตยสภา เล่ม 2 จำนวน 2,000 เล่ม",
+          "publishedAt": "2016-03-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000120.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ ระบบกล้องโทรทัศน์วงจรปิดแบบดิจิทับ พร้อมติดตั้ง 1 ระบบ",
+          "publishedAt": "2016-03-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000121.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือสารานุกรมการเมืองการปกครองไทย เล่ม 1 ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000122.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสือสารานุกรมจิตวิทยา เล่ม 2 อักษร C-F ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-02-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000123.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสืออักขรานุกรมภูมิศาสตร์ไทย ฉบับราชบัณฑิตยสภา เล่ม 2 (อักษร ก-ธ) พิมพ์ครั้งที่ 4 (แก้ไขเพิ่มเติม)",
+          "publishedAt": "2016-02-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000124.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 40 ฉบับที่ 3 กรกฎาคม-กันยายน 2558 จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-02-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000125.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา (ฉบับภาษาอังกฤษ) เล่ม 7",
+          "publishedAt": "2016-02-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000126.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์หนังสืออนุกรมวิธานพืชอักษร ฆ-จ ฉบับราชบัณฑิตยสภา จำนวน 1,000 เล่ม",
+          "publishedAt": "2016-01-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000127.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อหมึกพิมพ์คอมพิวเตอร์ จำนวน 44 รายการ",
+          "publishedAt": "2015-12-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000128.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์สำนักงาน เครื่องถ่ายเอกสารระบบดิจิทัล (ขาว-ดำ) จำนวน 1 เครื่อง (ครั้งที่ 2)",
+          "publishedAt": "2015-12-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000129.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างเหมาบำรุงรักษาดูแลระบบคอมพิวเตอร์และเครื่องแม่ข่าย",
+          "publishedAt": "2015-11-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000130.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์สำนักงาน เครื่องถ่ายเอกสารระบบดิจิทัล (ขาว-ดำ) จำนวน 1 เครื่อง",
+          "publishedAt": "2015-11-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000131.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ เครื่องมัลติมีเดียโปรเจกเตอร์ ระดับ XGA ขนาด 3,000 ANSI Lumens ครั้งที่ 2",
+          "publishedAt": "2015-11-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000132.PDF"
+        },
+        {
+          "title": "ประกาศยกเลิกประกวดราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ เครื่องมัลติมีเดียโปรเจกเตอร์ ระดับ XGA ขนาด 3,000 ANSI Lumens",
+          "publishedAt": "2015-11-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000133.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ เครื่องมัลติมีเดียโปรเจกเตอร์ ระดับ XGA ขนาด 3,000 ANSI Lumens",
+          "publishedAt": "2015-11-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000134.PDF"
+        },
+        {
+          "title": "แผนการจัดซื้อจัดจ้าง ปีงบประมาณ พ.ศ. 2559",
+          "publishedAt": "2015-10-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000135.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 40 ฉบับที่ 1 (มกราคม-มีนาคม 2558) ครั้งที่ 3",
+          "publishedAt": "2015-10-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000136.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างให้บริการอินเทอร์เน็ตของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ 2559",
+          "publishedAt": "2015-09-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000137.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างเหมาทำความสะอาดอาคารและสถานที่สำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ 2559",
+          "publishedAt": "2015-09-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000138.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างออกแบบและผลิตโปรแกรมประยุกต์ (application) และหนังสือพร้อมปากกาอัจฉริยะ (tutor pen)",
+          "publishedAt": "2015-08-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000139.PDF"
+        },
+        {
+          "title": "ประกาศร่างเอกสารประกวดราคาจ้างออกแบบและผลิตโปรแกรมประยุกต์ (application) และหนังสือพร้อมปากกาอัจฉริยะ",
+          "publishedAt": "2015-07-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000140.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 40 ฉบับที่ 1 (มกราคม-มีนาคม 2558) ครั้งที่ 2",
+          "publishedAt": "2015-07-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000141.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน 2 รายการ ในโครงการด้านเทคโนโลยีสารสนเทศและการสื่อสารจากการกันเงินงบประมาณเหลือจ่ายในปีงบประมาณ พ.ศ. 2556 เพื่อนำมาจัดสรรเป็นสิ่งจูงใจ",
+          "publishedAt": "2015-07-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000142.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ จำนวน 11 รายการ โดยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2015-07-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000143.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 40 ฉบับที่ 1 (มกราคม-มีนาคม 2558) (ยกเลิก)",
+          "publishedAt": "2015-06-22",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63HDP0817038"
+        },
+        {
+          "title": "ประกาศประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน 2 รายการ โดยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding)",
+          "publishedAt": "2015-06-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000145.PDF"
+        },
+        {
+          "title": "ประกาศรายชื่อผู้ผ่านการตรวจสอบผู้ไม่มีผลประโยชน์ร่วมกันจ้างพิมพ์หนังสือวาราสารราชบัณฑิตยสถาน ปีที่ 39 ฉบับที่ 4 (ตุลาคม-ธันวาคม 2557)",
+          "publishedAt": "2015-05-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000146.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ 39 ฉบับที่ 4 (ตุลาคม-ธันวาคม 2557)",
+          "publishedAt": "2015-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000147.PDF"
+        },
+        {
+          "title": "ประกาศยกเลิกสอบราคาซื้อครุภัณฑ์คอมพิวเตอร์ 2 รายการ",
+          "publishedAt": "2015-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000148.PDF"
+        },
+        {
+          "title": "ประกาศผู้ไม่มีผลประโยชน์ร่วมกันของสอบราคาซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน 5 รายการ",
+          "publishedAt": "2015-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000149.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ พจนานุกรมศัพท์ศึกษาศาสตร์ร่วมสมัย ฉบับราชบัณฑิตยสภา จำนวน 2,000 เล่ม",
+          "publishedAt": "2015-03-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000150.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมนักเรียนฉบับราชบัณฑิตยสภาเนื่องในการเฉลิมพระเกียรติสมเด็จพระเทพฯ",
+          "publishedAt": "2015-03-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000151.PDF"
+        },
+        {
+          "title": "ประกาศประกวดราคาจ้างพิมพ์วารสารราชบัณฑิตยสภา ปีที่ 40 ฉบับที่ 3 กรกฎาคม-กันยายน 2558 จำนวน 1,000 เล่ม",
+          "publishedAt": "2015-02-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000152.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน ๕ รายการ",
+          "publishedAt": "2015-01-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000153.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือคู่มือระบบเขียนภาษาเลอเวือะ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2015-01-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000154.PDF"
+        },
+        {
+          "title": "เปลี่ยนแปลงประกาศเชิญชวนสอบราคาจ้างพิมพ์หนังสือ ภาษิต คำพังเพย สำนวนไทย ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2015-01-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000155.PDF"
+        },
+        {
+          "title": "เปลี่ยนแปลงประกาศเชิญชวนสอบราคาจ้างพิมพ์หนังสือการใช้กระและกะพร้อมความหมายฉบับราชบัณฑิตยฯ",
+          "publishedAt": "2015-01-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000156.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ\"การใช้ กระ และ กะ พร้อมความหมาย ฉบับราชบัณฑิตยสถาน\"",
+          "publishedAt": "2015-01-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000157.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ ภาษิต คำพังเพย สำนวนไทย ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2015-01-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000158.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมศัพท์สถาปัตยกรรมและการก่อสร้าง หมวดประวัติศาสตร์สถาปัตยกรรมฯ",
+          "publishedAt": "2014-12-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000159.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาปรับปรุงและพัฒนาเว็บไซต์ราชบัณฑิตยสถาน",
+          "publishedAt": "2014-12-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000160.PDF"
+        },
+        {
+          "title": "เปลี่ยนแปลงประกาศเชิญชวนสอบราคาจ้างพิมพ์หนังสือกฎหมายตราสามดวงฯ",
+          "publishedAt": "2014-12-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000161.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์คอมพิวเตอร์",
+          "publishedAt": "2014-12-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000162.PDF"
+        },
+        {
+          "title": "ประกาศคัดเลือกผู้มีอาชีพในการรับจ้างพิมพ์และจำหน่ายพจนานุกรมศัพท์ศึกษาศาสตร์ร่วมสมัย",
+          "publishedAt": "2014-12-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000163.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสาส์นสมเด็จ ฉบับราชบัณฑิตยสถาน เล่ม ๑",
+          "publishedAt": "2014-12-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000164.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างจ้างพิมพ์หนังสือกฎหมายตราสามดวง:พระธรรมสาตรและหลักอินทภาษ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2014-12-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000165.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์พจนานุกรมศัพท์เศรษฐศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๓",
+          "publishedAt": "2014-11-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000166.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๙ ฉบับที่ ๓ (ก.ค.-ก.ย.๕๗)",
+          "publishedAt": "2014-11-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000167.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมศัพท์จิตวิทยา เล่ม ๑ อักษร A-B ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2014-11-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000168.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างการให้บริการอินเทอร์เน็ตของราชบัณฑิตยสถาน ปีงบประมาณ ๒๕๕๘",
+          "publishedAt": "2014-09-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000169.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างทำความสะอาดอาคารราชบัณฑิตยสถาน ปีงบประมาณ ๒๕๕๘",
+          "publishedAt": "2014-09-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000170.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือภาษาไทย ภาษาสื่อ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2014-09-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000171.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"อ่านอย่างไรและเขียนอย่างไร ฉบับราชบัณฑิตยสถาน\"",
+          "publishedAt": "2014-08-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000172.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ รู้ รัก ภาษาไทย เล่ม ๗",
+          "publishedAt": "2014-08-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000173.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๙ ฉบับที่ ๒ เม.ย.-มิ.ย. ๕๗",
+          "publishedAt": "2014-08-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000174.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน (ฉบับภาษาอังกฤษ) เล่ม ๖",
+          "publishedAt": "2014-08-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000175.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือที่ระลึกเนื่องในโอกาส ๘๐ ปี แห่งการสถาปนาราชบัณฑิตยสถาน",
+          "publishedAt": "2014-08-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000176.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมประเทศเพื่อนบ้านในอาเซียน ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2014-08-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000177.PDF"
+        },
+        {
+          "title": "เปลี่ยนแปลงประกาศเชิญชวนสอบราคาจ้างพิมพ์หนังสือ",
+          "publishedAt": "2014-07-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000178.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาจ้างพิมพ์หนังสือ \"ภาษาและวัฒนธรรมอาเซียน ฉบับราชบัณฑิตยสถาน\" พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2014-07-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000179.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาจ้างพิมพ์หนังสือสารานุกรมประวัติศาสตร์สากลสมัยใหม่:ยุโรป เล่ม ๒ อักษร C-D",
+          "publishedAt": "2014-07-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000180.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์สังคมวิทยา พิมพ์ครั้งที่ ๔",
+          "publishedAt": "2014-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000181.PDF"
+        },
+        {
+          "title": "รับสมัครบุคคลเพื่อจ้างเหมาพนักงานบริการตำแหน่งพนักงานบริการทั่วไป จำนวน ๒ อัตรา",
+          "publishedAt": "2014-06-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000182.PDF"
+        },
+        {
+          "title": "รับสมัครบุคคลเพื่อจ้างเหมาบริการดูแลรักษาระบบสาธารณูปโภค",
+          "publishedAt": "2014-06-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000183.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมประวัติศาสตร์สากลสมัยใหม่ : ยุโรป เล่ม ๖ อักษร P-S",
+          "publishedAt": "2014-06-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000184.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือศัพท์นิติศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๘",
+          "publishedAt": "2014-06-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000185.PDF"
+        },
+        {
+          "title": "คัดเลือกผู้มีอาชีพในการรับจ้างพิมพ์และจำหน่ายหนังสือ เพื่ออนุญาตให้ใช้สิทธิในการพิมพ์และจำหน่าย ...",
+          "publishedAt": "2014-06-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000186.PDF"
+        },
+        {
+          "title": "รับสมัครบุคคลเพื่อจ้างเหมาบริการพนักงานขับรถ ครั้งที่ ๔",
+          "publishedAt": "2014-06-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000187.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์เผยแพร่ความรู้เกี่ยวกับภาษาและวัฒนธรรมฯ (ชุดที่ ๒)",
+          "publishedAt": "2014-06-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000188.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๘ ฉบับที่ ๔ (ตุลาคม-ธันวาคม ๒๕๕๖)",
+          "publishedAt": "2014-06-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000189.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาจ้างผลิตรายการโทรทัศน์เผยแพร่ความรู้เกี่ยวกับภาษาฯ (ชุดที่ ๒)",
+          "publishedAt": "2014-05-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000190.PDF"
+        },
+        {
+          "title": "รับสมัครบุคคลเพื่อจ้างเหมาบริการพนักงานขับรถ",
+          "publishedAt": "2014-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000191.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมไทย เล่ม ๓๐ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2014-03-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000192.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมประวัติศาสตร์สากล : อเมริกา เล่ม ๒ อักษร C-D",
+          "publishedAt": "2014-03-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000193.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวารสารราชบัณฑิตยสถาน ปีที่ ๓๙ ฉบับที่ ๑ (มกราคม-มีนาคม ๒๕๕๗)",
+          "publishedAt": "2014-03-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000194.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์ธรณีวิทยา ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2014-03-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000195.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์เผยแพร่ความรู้เกี่ยวกับภาษาและวัฒนธรรมของประเทศต่าง ๆ ในกลุ่มอาเซียน",
+          "publishedAt": "2014-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000196.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาจ้างผลิตรายการโทรทัศน์เผยแพร่ความรู้เกี่ยวกับภาษาฯ",
+          "publishedAt": "2014-02-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000197.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์ประชากรศาสตร์ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2014-02-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000198.PDF"
+        },
+        {
+          "title": "รับสมัครบุคคลเพื่อจ้างเหมาบริการดูแลรักษาระบบสาธารณูปโภค ครั้งที่ ๒",
+          "publishedAt": "2014-02-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000199.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิง \"แมวเหมียวเล่าเรื่องไทย\"",
+          "publishedAt": "2014-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000200.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2014-01-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000201.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาจ้างผลิตรายการ \"แมวเหมียวเล่าเรื่องไทย\"",
+          "publishedAt": "2014-01-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000202.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารการประกวดราคาฯ \"สายตรวจภาษา\" (หลังจากมีข้อเสนอแนะ)",
+          "publishedAt": "2014-01-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000203.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสืออักขรานุกรมภูมิศาสตร์ไทย ฉบับราชบัณฑิตยสถาน เล่ม ๑ พิมพ์ครั้งที่ ๕",
+          "publishedAt": "2014-01-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000204.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารการประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\" (แก้ไข)",
+          "publishedAt": "2014-01-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000205.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์พจนานุกรมศัพท์ภาษาศาสตร์ (ภาษาศาสตร์ประยุกต์) พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2014-01-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000206.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารการประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2014-01-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000207.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์พจนานุกรมศัพท์พระไตรปิฎก บาลี-โรมัน-ไทย เล่ม ๒ อักษร อ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2014-01-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000208.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตงานและร่างเอกสารประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2013-12-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000209.PDF"
+        },
+        {
+          "title": "รับสมัครบุคคลเพื่อจ้างเหมาบริการขับรถ",
+          "publishedAt": "2013-11-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000210.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่",
+          "publishedAt": "2013-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000211.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิง รายการ \"วรรคทอง\"",
+          "publishedAt": "2013-10-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000212.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิง รายการ \"วรรคทอง\"",
+          "publishedAt": "2013-10-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000213.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิง รายการ \"วรรคทอง\"",
+          "publishedAt": "2013-10-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000214.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๘ ฉบับที่ ๓ กรกฎาคม-กันยายน ๒๕๕๖",
+          "publishedAt": "2013-09-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000215.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างการใช้บริการอินเทอร์เน็ตของราชบัณฑิตยสถาน ปีงบประมาณ ๒๕๕๗",
+          "publishedAt": "2013-09-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000216.PDF"
+        },
+        {
+          "title": "คัดเลือกผู้มีอาชีพในการรับจ้างพิมพ์และจำหน่าย",
+          "publishedAt": "2013-09-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000217.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาทำความสะอาดอาคารและสถานที่ของราชบัณฑิตยสถาน",
+          "publishedAt": "2013-09-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000218.PDF"
+        },
+        {
+          "title": "ประกวดราคาการจ้างออกแบบและพิมพ์หนังสือ \"กวีวัจน์วรรณนา วรรคทองในวรรณคดีไทยพร้อมประวัติและคำอธิบาย\"",
+          "publishedAt": "2013-09-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000219.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาการจ้างออกแบบและพิมพ์หนังสือ ...",
+          "publishedAt": "2013-08-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000220.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน (ฉบับภาษาอังกฤษ) เล่ม ๕",
+          "publishedAt": "2013-08-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000221.PDF"
+        },
+        {
+          "title": "คัดเลือกผู้มีอาชีพในการรับจ้างพิมพ์และจำหน่ายหนังสือเพื่ออนุญาตให้ใช้สิทธิในการพิมพ์และจำหน่ายหนังสือพจนานุกรม",
+          "publishedAt": "2013-08-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000222.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมประเทศในทวีปยุโรป ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2013-07-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000223.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือบ่อเกิดลัทธิประเพณีอินเดีย เล่ม ๑ ภาค๑-๔ (พิมพ์ครั้งที่ ๓)",
+          "publishedAt": "2013-07-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000224.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๘ ฉบับที่ ๒ เมษายน-มิถุนายน ๒๕๕๖",
+          "publishedAt": "2013-07-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000225.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตสื่อเสริมทักษะการใช้ภาษาไทยในรูปแบบบทเรียนอิเล็กทรอนิกส์ (e-Learning)",
+          "publishedAt": "2013-06-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000226.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาจ้างผลิตสื่อเสริมทักษะการใช้ภาษาไทย",
+          "publishedAt": "2013-06-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000227.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศประกวดราคาจ้างผลิตสื่อเสริมทักษะการใช้ภาษาไทยในรูปแบบบทเรียนอิเล็กทรอนิกส์ (e-Learning)",
+          "publishedAt": "2013-06-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000228.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์คณิตศาสตร์",
+          "publishedAt": "2013-05-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000229.PDF"
+        },
+        {
+          "title": "รับสมัครบุคคลเพื่อจ้างเหมาบริการขับรถ",
+          "publishedAt": "2013-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000230.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตสื่อเสริมทักษะการใช้ภาษาไทย ในรูปแบบบทเรียนอิเล็กทรอนิกส์ (e-Learning)",
+          "publishedAt": "2013-05-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000231.PDF"
+        },
+        {
+          "title": "ประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ ประจำปีงบประมาณ พ.ศ. ๒๕๕๖",
+          "publishedAt": "2013-05-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000232.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิงที่ใช้เทคนิคแอนิเมชัน ...",
+          "publishedAt": "2013-05-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000233.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงานและร่างเอกสารประกวดราคาการจ้างผลิตสื่อเสริมทักษะการใช้ภาษาไทย ...",
+          "publishedAt": "2013-04-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000234.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตงานและร่างเอกสารประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิงที่ใช้เทคนิคแอนิเมชัน",
+          "publishedAt": "2013-04-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000235.PDF"
+        },
+        {
+          "title": "ยกเลิกร่างขอบเขตงาน (Terms of Reference : TOR) และร่างเอกสารประกวดราคาจ้างผลิตรายการโทรทัศน์ ...",
+          "publishedAt": "2013-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000236.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตงานและร่างเอกสารประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ ด้วยวิธีการทางอิเล็กทรอนิกส์",
+          "publishedAt": "2013-04-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000237.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์คณิตศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2013-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000238.PDF"
+        },
+        {
+          "title": "ยกเลิกประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ ประจำปีงบประมาณ พ.ศ. ๒๕๕๖ ด้วยวิธีการทางอิเล็กทรอนิกส์",
+          "publishedAt": "2013-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000239.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตงานและร่างเอกสารประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิงที่ใช้แอนิเมชั่น ...",
+          "publishedAt": "2013-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000240.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์เทคโนโลยีทางภาพ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2013-04-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000241.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ รู้ รัก ภาษาไทย เล่ม ๖",
+          "publishedAt": "2013-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000242.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์พจนานุกรมศัพท์รัฐศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2013-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000243.PDF"
+        },
+        {
+          "title": "ประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ ประจำปีงบประมาณ พ.ศ. ๒๕๕๖ ด้วยวิธีการทางอิเล็กทรอนิกส์",
+          "publishedAt": "2013-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000244.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๘ ฉบับที่ ๑ มกราคม-มีนาคม",
+          "publishedAt": "2013-03-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000245.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์วรรณกรรมท้องถิ่นไทย ภาคอีสาน ท้าวฮุ่งหรือท้าวเจือง เล่ม ๓",
+          "publishedAt": "2013-03-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000246.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์ยานพาหนะและขนส่ง",
+          "publishedAt": "2013-02-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000247.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือคู่มือระบบเขียนภาษาเขมรถิ่นไทย ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2013-02-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000248.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๗ ฉบับที่ ๔ ตุลาคม-ธันวาคม ๒๕๕๕",
+          "publishedAt": "2013-02-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000249.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตและร่างเอกสารประกวดราคาซื้อครุภัณฑ์คอมพิวเตอร์ด้วยวิธีการทางอิเล็กทรอนิกส์",
+          "publishedAt": "2013-02-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63ELN4550000"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2013-02-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000252.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์พจนานุกรมศัพท์กฎหมายไทย ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๔ แก้ไขเพิ่มเติม",
+          "publishedAt": "2013-02-08",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63ELN4811025"
+        },
+        {
+          "title": "ร่างขอบเขตงานและร่างเอกสารประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2013-02-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000254.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2013-02-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000255.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2012-12-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000256.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ ภาษาไทยที่บกพร่องต้องแก้ไข เล่ม ๒ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2012-12-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000257.PDF"
+        },
+        {
+          "title": "สอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาตให้ใช้สิทธิจัดพิมพ์และจำหน่ายหนังสือ",
+          "publishedAt": "2012-12-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000258.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตงานและร่างเอกสารประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์ \"สายตรวจภาษา\"",
+          "publishedAt": "2012-12-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000259.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสืออนุกรมวิธานพืช อักษร ค ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2012-11-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000260.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมประวัติศาสตร์สากลสมัยใหม่ยุโรป เล่ม ๓ อักษร E-G ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2012-11-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000261.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาทำความสะอาดอาคารและสถานที่ของราชบัณฑิตยสถาน",
+          "publishedAt": "2012-09-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000262.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาบำรุงรักษาดูแลระบบคอมพิวเตอร์และเครื่องแม่ข่าย",
+          "publishedAt": "2012-09-10",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63ELO0319075"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวารสารราชบัณฑิตยสถาน (ฉบับภาษาอังกฤษ)",
+          "publishedAt": "2012-08-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000264.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างดำเนินการพัฒนาปรับปรุงเว็บไซต์ราชบัณฑิตยสถาน",
+          "publishedAt": "2012-08-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000265.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์วรรณคดีไทย สมัยสุโขทัย ศิลาจารึกพ่อขุนรามคำแหง หลักที่ ๑ ฉบับรา",
+          "publishedAt": "2012-08-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000266.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ รู้ รัก ภาษาไทย เล่ม ๕",
+          "publishedAt": "2012-08-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000267.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวิวัฒนาการของพจนานุกรมไทย",
+          "publishedAt": "2012-08-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000268.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน ๒ รายการ",
+          "publishedAt": "2012-08-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000269.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างการใช้บริการอินเทอร์เน็ตของราชบัณฑิตยสถาน ปีงบประมาณ ๒๕๕๖",
+          "publishedAt": "2012-07-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000270.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือรายงานประจำปี ๒๕๕๔ ราชบัณฑิตยสถาน",
+          "publishedAt": "2012-07-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000271.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาซื้อครุภัณฑ์คอมพิวเตอร์และครุภัณฑ์โฆษณาและเผยแพร่",
+          "publishedAt": "2012-07-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000272.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ รู้ รัก ภาษาไทย เล่ม ๔",
+          "publishedAt": "2012-06-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000273.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๗ ฉบับที่ ๒",
+          "publishedAt": "2012-06-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000274.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๗ ฉบับที่ ๓",
+          "publishedAt": "2012-06-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000275.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิง รายการ \"แมวเหมียวเล่าเรื่องไทย\"",
+          "publishedAt": "2012-06-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000276.PDF"
+        },
+        {
+          "title": "ร่างขอบเขตของงาน (Terms of Reference: TOR) เรื่อง ประกวดราคาจ้างผลิตรายการโทรทัศน์",
+          "publishedAt": "2012-05-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000277.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างทำวีดิทัศน์ประชาสัมพันธ์ราชบัณฑิตยสถาน",
+          "publishedAt": "2012-05-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000278.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์เพื่อเผยแพร่ความรู้เกี่ยวกับการเขียนสะกดคำภาษาไทย",
+          "publishedAt": "2012-05-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000279.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์เพื่อเผยแพร่ความรู้เกี่ยวกับการเขียนสะกดคำภาษาไทย",
+          "publishedAt": "2012-04-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000280.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์เพื่อเผยแพร่ความรู้เกี่ยวกับการเขียนสะกดคำภาษาไทย",
+          "publishedAt": "2012-04-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000281.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างการให้บริการแม่ข่าย (Hosting) และบริหารจัดการระบบการเรียนการสอนภาษาไทย ...",
+          "publishedAt": "2012-03-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000282.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือศัพท์นิติศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๗",
+          "publishedAt": "2012-02-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000283.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน ๑ รายการ",
+          "publishedAt": "2012-02-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000284.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๖ ฉบับที่ ๑-๔",
+          "publishedAt": "2012-02-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000285.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์พจนานุกรมศัพท์ศึกษาศาสตร์ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2012-02-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000286.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาบำรุงรักษาดูแลระบบคอมพิวเตอร์และเครื่องแม่ข่าย",
+          "publishedAt": "2012-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000287.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๗ ฉบับที่ ๑ มกราคม-มีนาคม ๒๕๕๕",
+          "publishedAt": "2012-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000288.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือปรัชญาอินเดีย โดยนายอดิศักดิ์ ทองบุญ ราชบัณฑิตยสถานจัดพิมพ์เผยแพร่",
+          "publishedAt": "2012-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000289.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือศัพท์นิติศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๗",
+          "publishedAt": "2012-02-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000290.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์โฆษณาและเผยแพร่ จำนวน ๑ รายการ",
+          "publishedAt": "2012-01-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000291.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์คอมพิวเตอร์และครุภัณฑ์โฆษณาและเผยแพร่",
+          "publishedAt": "2012-01-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000292.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์เศรษฐศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2012-01-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000293.PDF"
+        },
+        {
+          "title": "ยกเลิกประกาศสอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์เศรษฐศาสตร์ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2011-12-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000294.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์เศรษฐศาสตร์ ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2011-11-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000295.PDF"
+        },
+        {
+          "title": "สอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาตให้ใช้สิทธิจัดพิมพ์และจำหน่ายหนังสือศัพท์นิติศาสตร์",
+          "publishedAt": "2011-09-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000296.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์คอมพิวเตอร์",
+          "publishedAt": "2011-09-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000297.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาทำความสะอาดอาคารและสถานที่ของราชบัณฑิตยสถาน",
+          "publishedAt": "2011-08-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000298.PDF"
+        },
+        {
+          "title": "สอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาตให้ใช้สิทธิจัดพิมพ์และจำหน่ายหนังสือ",
+          "publishedAt": "2011-08-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000299.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์เผยแพร่ความรู้เกี่ยวกับสำนวนไทย",
+          "publishedAt": "2011-08-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000300.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน (ฉบับภาษาอังกฤษ) เล่ม ๓",
+          "publishedAt": "2011-08-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000301.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์เพื่อเผยแพร่องค์ความรู้เกี่ยวกับสำนวนไทย",
+          "publishedAt": "2011-08-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000302.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตและออกอากาศรายการโทรทัศน์เพื่อเผยแพร่องค์ความรู้เกี่ยวกับสำนวนไทย",
+          "publishedAt": "2011-08-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000303.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างดำเนินงานโครงการพัฒนาระบบคอมพิวเตอร์เครือข่าย",
+          "publishedAt": "2011-07-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000304.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือราชวงศ์แห่งมหาอำนาจยุโรปในคริสต์ศตวรรษที่ ๑๙ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2011-06-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000306.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"ไขปัญหาภาษาไทย ฉบับราชบัณฑิตยสถาน จัดพิมพ์ครั้งที่ ๓ พ.ศ. ๒๕๕๔ ...",
+          "publishedAt": "2011-05-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000307.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสืออ่านอย่างไรและเขียนอย่างไร (พิมพ์ครั้งที่ ๒๑)",
+          "publishedAt": "2011-05-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000308.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างดำเนินงานโครงการพัฒนาระบบดับเพลิงในห้องคอมพิวเตอร์เครื่องแม่ข่าย",
+          "publishedAt": "2011-05-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000836.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสำนวนไทย ในโครงการ รู้ รัก ภาษาไทย",
+          "publishedAt": "2011-05-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000837.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ รู้ รัก ภาษาไทย เล่ม ๔",
+          "publishedAt": "2011-05-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000838.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์วารสารราชบัณฑิตยสถาน ปีที่ ๓๖ ฉบับที่ ๑-๔",
+          "publishedAt": "2011-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000839.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือหลักเกณฑ์การทับศัพท์ภาษาฝรั่งเศส",
+          "publishedAt": "2011-04-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000840.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์แร่และอัญมณี ฉบับราชบัณฑิตยสถาน พิมพ์ครั้งที่ ๒",
+          "publishedAt": "2011-03-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000841.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างผลิตรายการโทรทัศน์แข่งขันตอบปัญหารายการคนเก่งภาษาไทยในโครงการ",
+          "publishedAt": "2011-03-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000842.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"พจนานุกรมศัพท์การเชื่อม ฉบับราชบัณฑิตยสถาน\"",
+          "publishedAt": "2011-03-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000843.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"พจนานุกรมศัพท์วิศวกรรมเครื่องกล ฉบับราชบัณฑิตยสถาน\"",
+          "publishedAt": "2011-02-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000844.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์แข่งขันตอบปัญหารายการคนเก่งภาษาไทยในโครงการ \"รู้ รัก ภาษาไทย\"",
+          "publishedAt": "2011-02-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000845.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์แข่งขันตอบปัญหารายการคนเก่งภาษาไทย",
+          "publishedAt": "2011-02-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000846.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมคำใหม่ ฉบับราชบัณฑิตยสถาน เล่ม ๓",
+          "publishedAt": "2011-01-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000847.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือการต่างประเทศกับเอกราชและอธิปไตยของไทย ...",
+          "publishedAt": "2011-01-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000848.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวรรคทองในวรรณคดีไทย ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2010-12-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000849.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือศัพท์ผังเมือง ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2010-11-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000850.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาซื้อครุภัณฑ์คอมพิวเตอร์ และครุภัณฑ์โฆษณาและเผยแพร่",
+          "publishedAt": "2010-11-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000851.PDF"
+        },
+        {
+          "title": "ประกาศสอบราคาซื้อเครื่องถ่ายเอกสาร",
+          "publishedAt": "2010-11-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000852.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์สถาปัตยกรรมศาสตร์",
+          "publishedAt": "2010-10-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000853.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวารสารราชบัณฑิตยสถาน ปีที่ ๓๕ ฉบับที่ ๓ และ ๔",
+          "publishedAt": "2010-09-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000854.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสหวิทยาการเพื่อการวิจัยและพัฒนา ปี ๒๕๕๓",
+          "publishedAt": "2010-09-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000855.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือความรู้ในประวัติศาสตร์ไทย เล่ม ๑ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2010-09-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000856.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาทำความสะอาดอาคารและสถานที่ของราชบัณฑิตยสถาน",
+          "publishedAt": "2010-09-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000857.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"ราชาศัพท์ ฉบับราชบัณฑิตยสถาน (พิมพ์ครั้งที่ ๒)\"",
+          "publishedAt": "2010-08-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000858.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวารสารราชบัณฑิตยสถาน (ฉบับภาษาอังกฤษ) เล่ม ๒",
+          "publishedAt": "2010-08-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000859.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาจัดทำพจนานุกรมศัพท์เภสัชศาสตร์",
+          "publishedAt": "2010-08-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000860.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาจัดทำพจนานุกรมศัพท์พันธุศาสตร์",
+          "publishedAt": "2010-08-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000861.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์จิตวิทยา อักษร A-Z",
+          "publishedAt": "2010-07-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000862.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"คำไทยที่มาจากภาษาบาลีและภาษาสันสกฤต\"",
+          "publishedAt": "2010-07-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000863.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ จำนวน ๒ รายการ",
+          "publishedAt": "2010-07-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000864.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"ไขปัญหาภาษาไทย ฉบับราชบัณฑิตยสถาน\" จัดพิมพ์ครั้งที่ ๒ พ.ศ. ๒๕๕๓",
+          "publishedAt": "2010-07-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000865.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างผลิตเกมออนไลน์ความรู้ภาษาไทยเผยแพร่บนระบบอินเทอร์เน็ต ผ่านเว็บไซต์ รู้ รัก ภาษาไทย",
+          "publishedAt": "2010-07-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000866.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือรายงานประจำปี ๒๕๕๒ ราชบัณฑิตยสถาน",
+          "publishedAt": "2010-06-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000867.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์ศึกษาศาสตร์ อักษร M-Z",
+          "publishedAt": "2010-06-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000868.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างผลิตรายการโทรทัศน์ประเภทสาระบันเทิงที่ให้ความรู้เกี่ยวกับภาษาไทยในลักษณะการ์ตูน ...",
+          "publishedAt": "2010-06-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000869.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างผลิตซีดีบันทึกเสียง (audio CD) รายการวิทยุ",
+          "publishedAt": "2010-06-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000870.PDF"
+        },
+        {
+          "title": "สอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาตให้ใช้สิทธิจัดพิมพ์และจำหน่ายหนังสือ",
+          "publishedAt": "2010-06-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000871.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ รู้ รัก ภาษาไทย เล่ม ๓",
+          "publishedAt": "2010-05-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000872.PDF"
+        },
+        {
+          "title": "ประกาศจัดซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2010-05-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000873.PDF"
+        },
+        {
+          "title": "สอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาติให้ใช้สิทธิจัดพิมพ์และจำหน่ายหนังสือ",
+          "publishedAt": "2010-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000874.PDF"
+        },
+        {
+          "title": "ประกาศจัดซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2010-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000875.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือสารานุกรมไทย เล่ม ๒๙",
+          "publishedAt": "2010-04-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000876.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมคำใหม่ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2010-04-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000877.PDF"
+        },
+        {
+          "title": "ประกาศจัดซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2010-04-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000878.PDF"
+        },
+        {
+          "title": "ประกาศจัดซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2010-02-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000879.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างด้วยวิธีการทางอิเล็กทรอนิกส์ ผลิตรายการโทรทัศน์ประเภทสาระบันเทิง",
+          "publishedAt": "2009-12-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000880.PDF"
+        },
+        {
+          "title": "ประกวดราคาการจ้างออกแบบและผลิตสื่อการเรียนการสอนภาษาไทยในรูปแบบบทเรียนอิเล็กทรอนิกส์ (e-Learning)",
+          "publishedAt": "2009-12-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000881.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตรายการโทรทัศน์แข่งขันตอบปัญหารายการคนเก่งภาษาไทย ในโครงการ \"รู้ รัก ภาษาไทย\"",
+          "publishedAt": "2009-12-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000882.PDF"
+        },
+        {
+          "title": "จัดซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-12-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000883.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างออกแบบและผลิตสื่อการเรียนการสอนภาษาไทยในรูปแบบบทเรียนอิเล็กทรอนิกส์ (e-Learning)",
+          "publishedAt": "2009-12-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000884.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างด้วยวิธีการทางอิเล็กทรอนิกส์ ผลิตรายการโทรทัศน์ประเภทสาระบันเทิง",
+          "publishedAt": "2009-12-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000885.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างด้วยวิธีการทางอิเล็กทรอนิกส์ ผลิตรายการโทรทัศน์แข่งขันตอบปัญหารายการคนเก่งภาษาไทย",
+          "publishedAt": "2009-12-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000886.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างออกแบบและผลิตสื่อการเรียนการสอนภาษาไทยในรูปแบบบทเรียนอิเล็กทรอนิกส์ (e-Learning)",
+          "publishedAt": "2009-12-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000887.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างด้วยวิธีการทางอิเล็กทรอนิกส์ ผลิตรายการโทรทัศน์ประเภทสาระบันเทิง ...",
+          "publishedAt": "2009-12-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000888.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างออกแบบและพัฒนาระบบจัดการข้อมูล",
+          "publishedAt": "2009-11-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000889.PDF"
+        },
+        {
+          "title": "จัดซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-11-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000890.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-11-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000891.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-09-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000892.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือเครือข่ายสหวิทยาการแห่งราชบัณฑิตยสถาน ปี ๒๕๕๒",
+          "publishedAt": "2009-09-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000893.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาทำความสะอาดอาคารและสถานที่ของราชบัณฑิตยสถาน ภายในสนามเสือป่า",
+          "publishedAt": "2009-09-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000894.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวารสารราชบัณฑิตยสถาน ฉบับพิเศษ เรื่อง \\\"F3FIRST\\\"",
+          "publishedAt": "2009-08-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000895.PDF"
+        },
+        {
+          "title": "สอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาตให้ใช้สิทธิในการจัดพิมพ์และจำหน่ายหนังสือ",
+          "publishedAt": "2009-08-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000896.PDF"
+        },
+        {
+          "title": "ยกเลิกการสอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาตให้ใช้สิทธิในการจัดพิมพ์และจำหน่ายหนังสือ",
+          "publishedAt": "2009-08-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000897.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างจ้างพิมพ์หนังสือการ์ตูนชุดแมวไทยในโครงการ \"รู้ รัก ภาษาไทย\"",
+          "publishedAt": "2009-08-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000898.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"ทำเนียบราชบัณฑิตและภาคีสมาชิก\"",
+          "publishedAt": "2009-07-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000899.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างพิมพ์หนังสือการ์ตูนชุดแมวไทยในโครงการ \"รู้ รัก ภาษาไทย\" ด้วยวิธีการทางอิเล็กทรอนิกส์",
+          "publishedAt": "2009-07-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000900.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างจัดทำพจนานุกรมศัพท์เภสัชศาสตร์",
+          "publishedAt": "2009-07-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000901.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างจัดทำพจนานุกรมศัพท์พันธุศาสตร์",
+          "publishedAt": "2009-07-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000902.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-07-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000903.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือกฎหมายตราสามดวง : พระทำนูน ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2009-07-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000904.PDF"
+        },
+        {
+          "title": "สอบราคาแข่งขันการให้ผลประโยชน์ตอบแทนการอนุญาตใช้สิทธิในการจัดพิมพ์และจำหน่ายหนังสือ",
+          "publishedAt": "2009-07-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000905.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์คอมพิวเตอร์ เครื่องมัลติมีเดียโปรเจกเตอร์",
+          "publishedAt": "2009-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000906.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างทำพจนานุกรมอิเล็กทรอนิกส์ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2009-06-17",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000103001001%2F63EZO0326094"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ จำนวน ๒ รายการ",
+          "publishedAt": "2009-06-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000908.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวารสารราชบัณฑิตยสถาน (ฉบับภาษาอังกฤษ) เล่ม ๑",
+          "publishedAt": "2009-06-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000909.PDF"
+        },
+        {
+          "title": "สอบราคาจัดซื้อครุภัณฑ์คอมพิวเตอร์ จำนวน 9 รายการ",
+          "publishedAt": "2009-06-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000910.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-06-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000911.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างด้วยวิธีการทางอิเล็กทรอนิกส์การจ้างผลิตรายการโทรทัศน์แข่งขันตอบปัญหาความรู้ ...",
+          "publishedAt": "2009-05-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000912.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างด้วยวิธีการทางอิเล็กทรอนิกส์ ผลิตรายการโทรทัศน์แข่งขันตอบปัญหาความรู้ด้านภาษาไทย ...",
+          "publishedAt": "2009-05-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000913.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์วรรณกรรมท้องถิ่นไทย ภาคเหนือ โคลงมังทรารบเชียงใหม่",
+          "publishedAt": "2009-04-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000914.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-04-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000915.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์จัดพิมพ์พจนานุกรมคำใหม่ ฉบับราชบัณฑิตยสถาน เล่ม ๒",
+          "publishedAt": "2009-03-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000916.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือภาษาไทยที่บกพร่อง ต้องแก้ไข ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2009-03-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000917.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2009-03-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000918.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ \"รู้ รัก ภาษาไทย\" เล่ม ๒ ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2009-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000919.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์ภาษาศาสตร์ (ภาษาศาสตร์ประยุกต์) ฉบับราชบัณฑิตยสถาน",
+          "publishedAt": "2009-03-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000920.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์วรรณกรรมท้องถิ่นไทย ภาคใต้ เรื่อง \"สุภาษิตร้อยแปด\"",
+          "publishedAt": "2009-02-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000921.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือพจนานุกรมศัพท์วรรณกรรมไทย",
+          "publishedAt": "2009-02-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000922.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ จำนวน ๓ รายการ",
+          "publishedAt": "2009-02-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000923.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือรายงานประจำปี ๒๕๕๑ ราชบัณฑิตยสถาน",
+          "publishedAt": "2009-01-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000924.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อครุภัณฑ์เครื่องปรับอากาศ",
+          "publishedAt": "2009-01-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000925.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างทำซีดีบันทึกเสียง (audio CD) รายการวิทยุ",
+          "publishedAt": "2008-11-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000926.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตสื่ออิเล็กทรอนิกส์การ์ตูนภาพเคลื่อนไหวล้วน (Full Animation) ๓ มิติ (๓ D)",
+          "publishedAt": "2008-11-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000927.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือวารสารราชบัณฑิตยสถาน ปีที่ ๓๔ ฉบับที่ ๑ ถึง ฉบับที่ ๔",
+          "publishedAt": "2008-11-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000928.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตสื่ออิเล็กทรอนิกส์การ์ตูนภาพเคลื่อนไหวล้วน (Full Animation) 3 มิติ (3 D) ...",
+          "publishedAt": "2008-11-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000929.PDF"
+        },
+        {
+          "title": "ขอยกเลิกเรื่องประกวดราคาจ้างผลิตสื่ออิเล็กทรอนิกส์การ์ตูนภาพเคลื่อนไหวล้วน",
+          "publishedAt": "2008-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000930.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2008-10-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000931.PDF"
+        },
+        {
+          "title": "ประกวดราคาจ้างผลิตสื่ออิเล็กทรอนิกส์การ์ตูนภาพเคลื่อนไหวล้วน (Full Animation) 3 มิติ (3 D) ...",
+          "publishedAt": "2008-10-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000932.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างพิมพ์หนังสือ",
+          "publishedAt": "2008-09-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000933.PDF"
+        },
+        {
+          "title": "สอบราคาจ้างเหมาทำความสะอาดอาคารและสถานที่",
+          "publishedAt": "2008-09-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000934.PDF"
+        },
+        {
+          "title": "สอบราคาซื้อวัสดุคอมพิวเตอร์",
+          "publishedAt": "2008-09-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000935.PDF"
+        }
+      ]
+    }
+  ]
+}

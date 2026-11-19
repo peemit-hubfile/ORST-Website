@@ -1,0 +1,107 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ขั้นตอนตามระบบงานบริการ e-Services ของเว็บเดิม (orst.go.th/info.asp)",
+  "title": "คำแนะนำการใช้บริการออนไลน์",
+  "navKey": "services",
+  "description": "ขั้นตอนการยื่นคำขอรับบริการออนไลน์ของสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คำแนะนำการใช้บริการออนไลน์",
+      "lead": "ขั้นตอนการยื่นคำขอรับบริการออนไลน์ของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ"
+        },
+        {
+          "label": "คำแนะนำการใช้บริการออนไลน์"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "steps",
+      "layout": "directory",
+      "heading": "ขั้นตอนการยื่นคำขอ",
+      "lead": "ทำตามขั้นตอนด้านล่าง แต่ละขั้นมีลิงก์ไปยังเอกสารและช่องทางที่ต้องใช้",
+      "items": [
+        {
+          "title": "เลือกบริการ",
+          "body": "เลือกบริการที่ต้องการในหน้างานบริการ (E-Service)",
+          "links": [
+            {
+              "kind": "บริการที่ยื่นคำขอได้",
+              "label": "งานบริการ (E-Service)",
+              "href": "e-services.html"
+            }
+          ]
+        },
+        {
+          "title": "อ่านระเบียบ",
+          "body": "อ่านระเบียบและเงื่อนไขของบริการนั้นให้ครบถ้วน",
+          "links": [
+            {
+              "kind": "การขออนุญาตจัดพิมพ์และเผยแพร่",
+              "label": "ระเบียบ (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF"
+            },
+            {
+              "kind": "การขออนุญาตใช้สิทธิจัดพิมพ์และจำหน่าย",
+              "label": "ระเบียบ (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF"
+            }
+          ]
+        },
+        {
+          "title": "ดาวน์โหลดและกรอกแบบฟอร์ม",
+          "body": "ดาวน์โหลดแบบฟอร์มคำขอ กรอกข้อมูล และเตรียมเอกสารประกอบ",
+          "links": [
+            {
+              "kind": "การขออนุญาตจัดพิมพ์และเผยแพร่",
+              "label": "แบบฟอร์ม (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF"
+            },
+            {
+              "kind": "การขออนุญาตใช้สิทธิจัดพิมพ์และจำหน่าย",
+              "label": "แบบฟอร์ม (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF"
+            },
+            {
+              "kind": "แบบฟอร์มอื่น ๆ",
+              "label": "ดาวน์โหลดแบบฟอร์ม",
+              "href": "download-forms.html"
+            }
+          ]
+        },
+        {
+          "title": "ส่งเอกสาร",
+          "body": "ส่งแบบฟอร์มและเอกสารประกอบทางอีเมล รองรับไฟล์ .pdf .doc .docx ขนาดไม่เกิน 10MB",
+          "links": [
+            {
+              "kind": "ส่งเอกสารทางอีเมล",
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
+        },
+        {
+          "title": "ติดตามสถานะคำขอ",
+          "body": "สอบถามความคืบหน้าของคำขอทางอีเมลหรือโทรศัพท์",
+          "links": [
+            {
+              "kind": "ช่องทางสอบถาม",
+              "label": "ติดตามสถานะคำขอรับบริการ",
+              "href": "track-request.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

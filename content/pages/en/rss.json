@@ -1,0 +1,86 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "rss.xml สร้างโดย tools/build.mjs จาก general-news.json + activity-news.json (ต้องตั้ง SITE_URL ตอน build)",
+  "title": "RSS Feed",
+  "navKey": "news",
+  "description": "Follow the latest press releases and activity news of the Office of the Royal Society with an RSS reader",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "RSS Feed",
+      "lead": "Follow the latest press releases and activity news of the Office of the Royal Society with an RSS reader",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "RSS Feed"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "feeds",
+      "layout": "cards",
+      "columns": 1,
+      "cardStyle": "compact",
+      "heading": "Office RSS feeds",
+      "lead": "RSS (Really Simple Syndication) is a file format for publishing frequently updated news. Add the RSS link to an RSS reader or news app to receive the Office's latest news without visiting the website.",
+      "items": [
+        {
+          "icon": "i-megaphone",
+          "highlight": true,
+          "title": "News and Activities",
+          "body": "General news and activity news",
+          "details": [
+            {
+              "label": "RSS link",
+              "value": "rss.xml",
+              "copy": "url"
+            }
+          ],
+          "links": [
+            {
+              "kind": "Open RSS file",
+              "label": "rss.xml",
+              "href": "rss.xml",
+              "icon": "i-file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "how",
+      "layout": "cards",
+      "variant": "alt",
+      "heading": "How to follow news via RSS",
+      "lead": "It takes less than a minute and only needs doing once. New Office news will then arrive straight in your RSS reader.",
+      "items": [
+        {
+          "title": "Copy the RSS link",
+          "body": "Press “Copy” next to the RSS link above to copy the full link instantly.",
+          "icon": "i-copy"
+        },
+        {
+          "title": "Open your RSS reader",
+          "body": "Open the RSS reader or app you use and choose to add a new feed",
+          "icon": "i-ebook"
+        },
+        {
+          "title": "Paste the link and save",
+          "body": "Paste the copied link and save. New Office news will then appear in the reader automatically.",
+          "icon": "i-check"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

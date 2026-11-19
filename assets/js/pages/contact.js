@@ -49,6 +49,19 @@ function initCopy() {
 function initForm() {
   const form = qs('#message-form');
   if (!form) return;
+  // ตัวนับตัวอักษรของช่องข้อความ (สูงสุด 1000)
+  const msg = qs('#message', form);
+  const count = qs('#message-count', form);
+  if (msg && count) {
+    const max = Number(msg.maxLength) || 1000;
+    const update = () => {
+      count.textContent = `${msg.value.length}/${max}`;
+      count.classList.toggle('is-near', msg.value.length > max * 0.9);
+    };
+    msg.addEventListener('input', update);
+    form.addEventListener('reset', () => setTimeout(update));
+    update();
+  }
   form.addEventListener('submit', e => {
     e.preventDefault();
     if (!form.checkValidity()) {

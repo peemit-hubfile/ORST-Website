@@ -1,0 +1,43 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-ITMS (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "แผนแม่บทเทคโนโลยีสารสนเทศ",
+  "navKey": "about",
+  "description": "แผนแม่บทเทคโนโลยีสารสนเทศและแผนปฏิบัติการดิจิทัลของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "แผนแม่บทเทคโนโลยีสารสนเทศ",
+      "lead": "แผนแม่บทเทคโนโลยีสารสนเทศและแผนปฏิบัติการดิจิทัลของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "แผนแม่บทเทคโนโลยีสารสนเทศ"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "แผนปฏิบัติการดิจิทัล ของสำนักงานราชบัณฑิตยสภา พ.ศ. 2563-2565",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000167.PDF",
+          "fileSize": 961437
+        },
+        {
+          "title": "แผนปฏิบัติการดิจิทัล ของสำนักงานราชบัณฑิตยสภา พ.ศ. 2563-2565",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000805.PDF",
+          "fileSize": 961437
+        }
+      ]
+    }
+  ]
+}

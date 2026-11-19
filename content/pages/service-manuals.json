@@ -1,0 +1,48 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=18 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "คู่มือหรือมาตรฐานการให้บริการ",
+  "navKey": "about",
+  "description": "คู่มือและมาตรฐานการให้บริการของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คู่มือหรือมาตรฐานการให้บริการ",
+      "lead": "คู่มือและมาตรฐานการให้บริการของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "คู่มือหรือมาตรฐานการให้บริการ"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "คำอธิบายรายละเอียดตัวชี้วัด PMQA",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000120.PDF"
+        },
+        {
+          "title": "รายละเอียดตัวชี้วัดเพื่อประกอบคำรับรองการปฏิบัติราชการ ราชบัณฑิตยสถาน",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000121.PDF"
+        },
+        {
+          "title": "โปรแกรมคำนวณคะแนน PMQA",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000122.XLS"
+        }
+      ]
+    }
+  ]
+}

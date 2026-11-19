@@ -333,6 +333,15 @@ document.addEventListener('DOMContentLoaded', () => {
     news: 'ข่าวสาร'
   };
 
+  // ปุ่ม "ดูรายละเอียด" ของผลค้นหา — เดิมลิงก์ไป #type-id ที่ไม่มีในหน้า (กดแล้วไม่ไปไหน)
+  // ยังไม่มีหน้ารายละเอียดรายชิ้น จึงพาไปหน้าหมวดที่ตรงกับชนิดผลลัพธ์ (ใส่ item.url เพื่อระบุหน้าเองได้)
+  const resultPage = {
+    dictionary: 'dictionary.html', term: 'dictionary.html',
+    article: 'knowledge.html', journal: 'knowledge.html', document: 'knowledge.html',
+    news: 'general-news.html', service: 'e-services.html'
+  };
+  const resultUrl = item => item.url || resultPage[item.type] || 'knowledge.html';
+
   const searchData = [
     {
       id: 1,
@@ -558,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h3>${highlight(item.title, activeQuery)}</h3>
     <p>${highlight(item.desc, activeQuery)}</p>
     <small>${item.source} • อัปเดต ${item.year} • ความนิยม ${item.popularity}%</small><br>
-    <a href="#${item.type}-${item.id}" aria-label="ดูรายละเอียด ${item.title}">ดูรายละเอียด →</a>
+    <a href="${resultUrl(item)}" aria-label="ดูรายละเอียด ${item.title}">ดูรายละเอียด →</a>
   `;
   }
 
@@ -623,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <span>นิยม ${item.popularity}%</span>
       </div>
 
-      <a class="orst-card-action" href="#${item.type}-${item.id}" aria-label="ดูรายละเอียด ${item.title}">
+      <a class="orst-card-action" href="${resultUrl(item)}" aria-label="ดูรายละเอียด ${item.title}">
         ดูรายละเอียด
       </a>
     </article>
@@ -693,8 +702,9 @@ document.addEventListener('DOMContentLoaded', () => {
    -----------------------------------------------------------------------------
    - ข้อมูลจำลองชุดที่สอง: searchData (8 รายการ) + suggestions
    - init() รวมการเริ่มทำงาน: initHeader, initMobileMenu, initSearch, initFilters,
-     initModals, initAccessibility, initFAQ, initScrollers, initReveal,
-     initBackTop, initAccessPanelEnhance, initFAQEnhance, initServiceHub, initMediaPlaylist
+     initModals, initFAQ, initScrollers, initReveal,
+     initFAQEnhance, initServiceHub, initMediaPlaylist
+   - ช่วยการเข้าถึง / ปุ่มขึ้นด้านบน ย้ายไปใช้ของกลางใน components.js (initA11y)
    ============================================================================= */
 const searchData = [
   { type: 'term', label: 'คำศัพท์', title: 'พจนานุกรมฉบับราชบัณฑิตยสถาน พ.ศ. 2554', desc: 'ค้นหาความหมาย การอ่าน และการเขียนคำภาษาไทยมาตรฐาน', meta: 'ฐานข้อมูลคำศัพท์' },
@@ -715,7 +725,7 @@ const suggestions = [
   { q: 'สารานุกรม', hint: 'คลังความรู้และสิ่งพิมพ์', icon: 'i-book' },
   { q: 'สุภาษิต', hint: 'คลังคำและสำนวนไทย', icon: 'i-puzzle' }
 ];
-let currentFilter = 'all'; let currentQuery = ''; let fontStep = 0; let lastFocused = null;
+let currentFilter = 'all'; let currentQuery = ''; let lastFocused = null;
 const qs = (s, r = document) => r.querySelector(s); const qsa = (s, r = document) => r ? [...r.querySelectorAll(s)] : [];
 
 function init() {
@@ -724,15 +734,14 @@ function init() {
   initSearch();
   initFilters();
   initModals();
-  initAccessibility();
   initFAQ();
   initScrollers();
   initReveal();
-  initBackTop();
-  initAccessPanelEnhance();
   initFAQEnhance();
   initMediaPlaylist();
   initEventCalendar();
+  initServiceHub();
+  initHomeNews();
 }
 function initHeader() {
   const h = qs('#site-header');
@@ -898,7 +907,6 @@ function highlight(t, q) { return t.replace(new RegExp(`(${escapeRegExp(q)})`, '
 function initModals() { qsa('[data-modal-open]').forEach(btn => btn.addEventListener('click', () => openModal(btn.dataset.modalOpen))); qsa('[data-modal-close]').forEach(btn => btn.addEventListener('click', () => closeModal(btn.closest('.modal')?.id))); document.addEventListener('keydown', e => { if (e.key === 'Escape') qsa('.modal:not([hidden])').forEach(m => closeModal(m.id)) }); qs('#advanced-form')?.addEventListener('submit', e => { e.preventDefault(); const q = qs('#advanced-q').value.trim() || 'ภาษาไทย'; const type = new FormData(e.target).get('adv-type'); currentFilter = type; qsa('[data-filter]').forEach(b => { const active = b.dataset.filter === type; b.classList.toggle('active', active); b.setAttribute('aria-selected', String(active)) }); qs('#global-search').value = q; closeModal('advanced-modal'); doSearch(q) }) }
 function openModal(id) { const m = qs('#' + id); if (!m) return; lastFocused = document.activeElement; m.hidden = false; document.body.style.overflow = 'hidden'; setTimeout(() => qs('button,input,select,a', m)?.focus(), 20) }
 function closeModal(id) { const m = qs('#' + id); if (!m) return; m.hidden = true; document.body.style.overflow = ''; lastFocused?.focus?.() }
-function initAccessibility() { qsa('[data-font]').forEach(btn => btn.addEventListener('click', () => { const a = btn.dataset.font; if (a === 'plus') fontStep = Math.min(3, fontStep + 1); if (a === 'minus') fontStep = Math.max(-2, fontStep - 1); if (a === 'reset') fontStep = 0; document.documentElement.style.setProperty('--base-size', `${17 + fontStep}px`) })); qsa('[data-toggle-contrast]').forEach(b => b.addEventListener('click', () => document.body.classList.toggle('high-contrast'))); qsa('[data-reduce-motion]').forEach(b => b.addEventListener('click', () => document.body.classList.toggle('no-motion'))) }
 function initFAQ() {
   qsa('.faq-q').forEach(btn => btn.addEventListener('click', () => {
     const a = btn.nextElementSibling; const open = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', String(!open)); const icon = btn.querySelector('em') || btn.querySelector('span:last-child');
@@ -940,8 +948,27 @@ function initReveal() { const items = qsa('.reveal'); if (!('IntersectionObserve
 function initMediaPlaylist() {
   const img = qs('[data-mm-feature-img]');
   const title = qs('[data-mm-feature-title]');
+  const kind = qs('[data-mm-feature-kind]');
+  const play = qs('[data-mm-play]');
+  const link = qs('[data-mm-feature-link]');
   const items = qsa('.mm-item');
   if (!img || !title || !items.length) return;
+  const watch = id => `https://www.youtube.com/watch?v=${id}`;
+
+  // กดภาพวิดีโอเด่น -> เล่นในหน้า (โหลด iframe ของ YouTube เฉพาะตอนกด ไม่ถ่วงการโหลดหน้า)
+  // กด Ctrl/Cmd/Shift หรือคลิกกลาง -> ปล่อยให้เปิด YouTube ในแท็บใหม่ตามปกติ
+  play?.addEventListener('click', e => {
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    const frame = document.createElement('iframe');
+    frame.className = 'mm-frame';
+    frame.src = `https://www.youtube-nocookie.com/embed/${play.dataset.mmId}?autoplay=1&rel=0`;
+    frame.title = title.textContent;
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    frame.allowFullscreen = true;
+    play.replaceWith(frame);
+    frame.focus();
+  });
 
   items.forEach(item => item.addEventListener('click', () => {
     if (item.classList.contains('is-active')) return;
@@ -950,9 +977,19 @@ function initMediaPlaylist() {
       other.classList.toggle('is-active', active);
       other.setAttribute('aria-pressed', String(active));
     });
+    const { mmId: id, mmTitle: t, mmKind: k, mmSrc: src } = item.dataset;
+    // ถ้ากำลังเล่นวิดีโอเดิมอยู่ -> หยุดและกลับเป็นภาพปก
+    qs('.mm-frame')?.replaceWith(play);
     const swap = () => {
-      img.src = item.dataset.mmSrc;
-      title.textContent = item.dataset.mmTitle;
+      img.src = src;
+      title.textContent = t;
+      if (kind) kind.textContent = k || '';
+      if (play) {
+        play.href = watch(id);
+        play.dataset.mmId = id;
+        play.setAttribute('aria-label', `เล่นวิดีโอ: ${t}`);
+      }
+      if (link) link.href = watch(id);
       img.classList.remove('is-swapping');
     };
     // จอแคบ: เพลย์ลิสต์อยู่ใต้วิดีโอเด่น — เลื่อนให้เห็นวิดีโอที่เพิ่งเลือก
@@ -965,127 +1002,180 @@ function initMediaPlaylist() {
   }));
 }
 
-// ปฏิทินกิจกรรม: กดวันที่มีกิจกรรม -> ไฮไลต์รายการที่ตรงกันในกำหนดการ
-function initEventCalendar() {
-  const days = qsa('[data-cal-event]');
-  days.forEach(day => day.addEventListener('click', () => {
-    const target = qs(`#${day.dataset.calEvent}`);
-    days.forEach(d => d.classList.toggle('is-selected', d === day));
-    qsa('.cal-event').forEach(ev => ev.classList.toggle('is-selected', ev === target));
-    target?.focus({ preventScroll: true });
-    target?.scrollIntoView({ block: 'nearest', behavior: reduce() ? 'auto' : 'smooth' });
-  }));
-}
+// ปฏิทินกิจกรรม — สร้างจาก content/events.json (ข้อมูลจริงจาก Google Calendar ของหน่วยงานที่เว็บเดิมฝังไว้)
+// - ปุ่ม ‹ › เปลี่ยนเดือน: ตั้งแต่เดือนแรกที่มีกิจกรรม ถึงเดือนปัจจุบัน (หรือเดือนสุดท้ายที่มีกิจกรรมถ้าเลยไปแล้ว)
+// - เปิดหน้า: เดือนปัจจุบันถ้ามีกิจกรรม ไม่งั้นเดือนถัดไปที่มีกิจกรรม ไม่งั้นเดือนล่าสุดที่มีกิจกรรม
+// - กิจกรรมหลายวัน: ทำเครื่องหมายทุกวันในช่วง
+// - กดวันที่มีกิจกรรม -> เปิดรายละเอียดกิจกรรมของวันนั้นในรายการ
+// - "เพิ่มลงปฏิทินของฉัน" -> ดาวน์โหลดไฟล์ .ics แบบทั้งวัน (เปิดได้กับ Google/Apple/Outlook Calendar)
+// โหลดไม่สำเร็จ = คงลิงก์ไปปฏิทินของเว็บเดิมที่อยู่ใน HTML ไว้
+const TH_MONTHS = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+const TH_MONTHS_SHORT = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+const TH_DAYS = ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'];
+const TH_DAYS_SHORT = ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'];
 
-function initBackTop() {
-  const btn = qs('[data-back-top]');
-  if (!btn) return;
+async function initEventCalendar() {
+  const card = qs('[data-cal-src]');
+  if (!card) return;
+  const grid = qs('[data-cal-grid]', card);
+  const list = qs('[data-cal-list]', card);
+  const monthEl = qs('[data-cal-month]', card);
+  const countEl = qs('[data-cal-count]', card);
+  const prev = qs('[data-cal-prev]', card);
+  const next = qs('[data-cal-next]', card);
 
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('show', window.scrollY > 500);
+  let events = [];
+  try {
+    events = (window.orstI18n ? (await window.orstI18n.fetchJSON(card.dataset.calSrc)).data : await (await fetch(card.dataset.calSrc)).json()).events || [];   // ภาษาอังกฤษ: content/en/events.json
+  } catch { /* คงลิงก์สำรองใน HTML */ }
+  if (!events.length) { prev.hidden = true; next.hidden = true; return; }
+
+  const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const pad = n => String(n).padStart(2, '0');
+  const parse = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+  const dayKey = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const monthIdx = d => d.getFullYear() * 12 + d.getMonth();
+  const endOf = ev => parse(ev.end || ev.start);
+
+  const byDay = new Map();
+  events.forEach(ev => {
+    for (let d = parse(ev.start); d <= endOf(ev); d.setDate(d.getDate() + 1)) {
+      const k = dayKey(d);
+      if (!byDay.has(k)) byDay.set(k, []);
+      byDay.get(k).push(ev);
+    }
   });
 
-  btn.addEventListener('click', () => {
-    scrollTo({
-      top: 0,
-      behavior: reduce() ? 'auto' : 'smooth'
-    });
+  const today = new Date();
+  const months = [...new Set(events.map(ev => monthIdx(parse(ev.start))))].sort((a, b) => a - b);
+  const minM = months[0];
+  const maxM = Math.max(months[months.length - 1], monthIdx(today));
+  let cur = months.includes(monthIdx(today)) ? monthIdx(today)
+    : (months.find(m => m > monthIdx(today)) ?? months[months.length - 1]);
+
+  const dateText = ev => {
+    const s = parse(ev.start), e = endOf(ev), y = s.getFullYear() + 543;
+    if (+s === +e) return `วัน${TH_DAYS[s.getDay()]}ที่ ${s.getDate()} ${TH_MONTHS[s.getMonth()]} ${y}`;
+    if (s.getMonth() === e.getMonth()) return `${s.getDate()}–${e.getDate()} ${TH_MONTHS[s.getMonth()]} ${y}`;
+    return `${s.getDate()} ${TH_MONTHS_SHORT[s.getMonth()]} – ${e.getDate()} ${TH_MONTHS_SHORT[e.getMonth()]} ${e.getFullYear() + 543}`;
+  };
+  const svgCal = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>';
+  const svgPin = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>';
+  const item = ev => {
+    const s = parse(ev.start);
+    return `<li>
+      <button type="button" class="cal-event" id="${esc(ev.id)}" aria-expanded="false" aria-controls="${esc(ev.id)}-detail">
+        <span class="cal-event-date"><small>${TH_DAYS_SHORT[s.getDay()]}</small><b>${s.getDate()}</b><small>${TH_MONTHS_SHORT[s.getMonth()]}</small></span>
+        <span class="cal-event-body">
+          <strong>${esc(ev.title)}</strong>
+          <span class="cal-event-meta"><span><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg>${esc(ev.unit || 'สำนักงานราชบัณฑิตยสภา')}</span></span>
+        </span>
+        <span class="cal-event-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span>
+      </button>
+      <div class="cal-event-detail" id="${esc(ev.id)}-detail" hidden>
+        <ul class="cal-detail-meta">
+          <li>${svgCal}${dateText(ev)}</li>
+          ${ev.location ? `<li>${svgPin}${esc(ev.location)}</li>` : ''}
+        </ul>
+        <div class="cal-detail-actions">
+          <button type="button" class="cal-detail-ics" data-cal-ics="${esc(ev.id)}">เพิ่มลงปฏิทินของฉัน</button>
+        </div>
+      </div>
+    </li>`;
+  };
+
+  let rows = [];
+  const setOpen = (row, open) => {
+    row.setAttribute('aria-expanded', String(open));
+    row.classList.toggle('is-selected', open);
+    const detail = qs(`#${CSS.escape(row.getAttribute('aria-controls'))}`);
+    if (detail) detail.hidden = !open;
+  };
+  const markDays = ev => qsa('[data-cal-day]', grid).forEach(d => d.classList.toggle('is-selected',
+    !!ev && d.dataset.calDay >= ev.start && d.dataset.calDay <= (ev.end || ev.start)));
+  const openOnly = row => {
+    rows.forEach(r => setOpen(r, r === row));
+    markDays(row ? events.find(e => e.id === row.id) : null);
+  };
+
+  const render = () => {
+    const y = Math.floor(cur / 12), m = cur % 12;
+    const first = new Date(y, m, 1), days = new Date(y, m + 1, 0).getDate();
+    const inMonth = events.filter(ev => monthIdx(parse(ev.start)) <= cur && cur <= monthIdx(endOf(ev)));
+
+    monthEl.textContent = `${TH_MONTHS[m]} ${y + 543}`;
+    countEl.textContent = inMonth.length ? `${inMonth.length} กิจกรรม` : 'ไม่มีกิจกรรม';
+    prev.disabled = cur <= minM;
+    next.disabled = cur >= maxM;
+    grid.setAttribute('aria-label', `ปฏิทินกิจกรรม เดือน${TH_MONTHS[m]} ${y + 543}`);
+
+    let h = ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'].map(d => `<span class="cal-dow" aria-hidden="true">${d}</span>`).join('');
+    h += '<span aria-hidden="true"></span>'.repeat(first.getDay());
+    for (let d = 1; d <= days; d++) {
+      const dt = new Date(y, m, d), k = dayKey(dt), evs = byDay.get(k);
+      const cls = `cal-day${[0, 6].includes(dt.getDay()) ? ' is-weekend' : ''}${k === dayKey(today) ? ' is-today' : ''}`;
+      h += evs
+        ? `<button type="button" class="${cls} has-event" data-cal-day="${k}" aria-label="${d} ${TH_MONTHS[m]}: ${esc(evs.map(e => e.title).join(' / '))}">${d}</button>`
+        : `<span class="${cls}">${d}</span>`;
+    }
+    grid.innerHTML = h;
+
+    list.innerHTML = inMonth.length ? inMonth.map(item).join('')
+      : '<li class="cal-empty">ไม่มีกิจกรรมในเดือนนี้<small>กดปุ่มลูกศรด้านบนเพื่อดูเดือนอื่น</small></li>';
+    list.parentElement.scrollTop = 0;
+    rows = qsa('.cal-event', list);
+    rows.forEach(row => row.addEventListener('click', () => {
+      openOnly(row.getAttribute('aria-expanded') === 'true' ? null : row);
+    }));
+    qsa('[data-cal-day]', grid).forEach(day => day.addEventListener('click', () => {
+      const ev = byDay.get(day.dataset.calDay)?.[0];
+      const row = ev && qs(`#${CSS.escape(ev.id)}`, list);
+      if (!row) return;
+      openOnly(row);
+      row.focus({ preventScroll: true });
+      row.scrollIntoView({ block: 'nearest', behavior: reduce() ? 'auto' : 'smooth' });
+    }));
+    openOnly(rows[0] || null);
+  };
+
+  prev.addEventListener('click', () => { if (cur > minM) { cur--; render(); } });
+  next.addEventListener('click', () => { if (cur < maxM) { cur++; render(); } });
+  render();
+
+  // ไฟล์ปฏิทิน .ics แบบกิจกรรมทั้งวัน (DTEND = วันถัดจากวันสุดท้าย ตามมาตรฐาน iCalendar)
+  const icsText = v => String(v).replace(/[\\;,]/g, c => `\\${c}`).replace(/\n/g, '\\n');
+  const icsDate = d => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`;
+  list.addEventListener('click', e => {
+    const btn = e.target.closest('[data-cal-ics]');
+    const ev = btn && events.find(x => x.id === btn.dataset.calIcs);
+    if (!ev) return;
+    const end = endOf(ev);
+    end.setDate(end.getDate() + 1);
+    const lines = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ORST//Website//TH', 'CALSCALE:GREGORIAN',
+      'BEGIN:VEVENT',
+      `UID:${ev.id}@orst-website`,
+      `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')}`,
+      `DTSTART;VALUE=DATE:${icsDate(parse(ev.start))}`,
+      `DTEND;VALUE=DATE:${icsDate(end)}`,
+      `SUMMARY:${icsText(ev.title)}`,
+      ev.location ? `LOCATION:${icsText(ev.location)}` : '',
+      `DESCRIPTION:${icsText(ev.unit || '')}`,
+      'END:VEVENT', 'END:VCALENDAR'
+    ].filter(Boolean);
+    const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${ev.id}.ics`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
 }
+
 function reduce() { return document.body.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches }
 
-
-
-function initAccessPanelEnhance() {
-  const toggleMap = [
-    ['[data-toggle-contrast]', 'high-contrast'],
-    ['[data-readable]', 'readable-mode'],
-    ['[data-reduce-motion]', 'no-motion'],
-    ['[data-access-link]', 'access-link-mode'],
-    ['[data-access-heading]', 'access-heading-mode'],
-    ['[data-access-spacing]', 'access-spacing-mode'],
-    ['[data-access-cursor]', 'access-cursor-mode']
-  ];
-
-  toggleMap.forEach(([selector, className]) => {
-    qsa(selector).forEach(btn => {
-      btn.addEventListener('click', () => {
-        setTimeout(() => {
-          const isOn = document.body.classList.contains(className);
-          qsa(selector).forEach(item => item.classList.toggle('is-on', isOn));
-        }, 0);
-      });
-    });
-  });
-
-  qsa('[data-access-reset]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.body.classList.remove(
-        'high-contrast',
-        'readable-mode',
-        'no-motion',
-        'access-link-mode',
-        'access-heading-mode',
-        'access-spacing-mode',
-        'access-cursor-mode'
-      );
-
-      qsa('.access-setting-row, .access-quick-btn').forEach(item => {
-        item.classList.remove('is-on');
-      });
-
-      // รีเซ็ตขนาดตัวอักษรผ่านปุ่ม "ก" ให้ตัวนับของ components.js กับไฟล์นี้กลับเป็น 0 พร้อมกัน
-      // ต้องเป็นปุ่มในแผงเดียวกัน — ปุ่มแรกของหน้าคือแผงซ่อนของ components.js ซึ่ง home.js ไม่ได้ผูกไว้
-      (btn.closest('.access-panel')?.querySelector('[data-font="reset"]')
-        || document.querySelector('#accessibility-modal [data-font="reset"]'))?.click();
-    });
-  });
-
-  // ปุ่มขนาดตัวอักษร (เล็ก / ปกติ / ใหญ่) — ไฮไลต์ตามขนาดจริงของหน้า
-  // ("ใหญ่" กดซ้ำได้หลายระดับ จึงเทียบกับขนาดฐานแทนการจำปุ่มที่กดล่าสุด)
-  const segment = qs('.font-segment');
-  if (segment) {
-    const basePx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 17;
-    const syncSegment = () => {
-      const px = parseFloat(getComputedStyle(document.documentElement).fontSize) || basePx;
-      const mode = px > basePx ? 'plus' : px < basePx ? 'minus' : 'reset';
-      qsa('[data-font]', segment).forEach(b => {
-        const on = b.dataset.font === mode;
-        b.classList.toggle('active', on);
-        b.setAttribute('aria-pressed', String(on));
-      });
-    };
-    qsa('[data-font]').forEach(btn => btn.addEventListener('click', () => setTimeout(syncSegment, 0)));
-    syncSegment();
-  }
-
-  qsa('[data-access-link]').forEach(btn => {
-    btn.addEventListener('click', () => document.body.classList.toggle('access-link-mode'));
-  });
-
-  qsa('[data-access-heading]').forEach(btn => {
-    btn.addEventListener('click', () => document.body.classList.toggle('access-heading-mode'));
-  });
-
-  qsa('[data-access-spacing]').forEach(btn => {
-    btn.addEventListener('click', () => document.body.classList.toggle('access-spacing-mode'));
-  });
-
-  qsa('[data-access-cursor]').forEach(btn => {
-    btn.addEventListener('click', () => document.body.classList.toggle('access-cursor-mode'));
-  });
-
-  qsa('[data-access-reader]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const text = document.querySelector('#main-content')?.innerText?.slice(0, 600) || 'ยินดีต้อนรับ';
-      if ('speechSynthesis' in window) {
-        speechSynthesis.cancel();
-        speechSynthesis.speak(new SpeechSynthesisUtterance(text));
-      }
-      btn.classList.toggle('is-on');
-    });
-  });
-}
 
 
 function initFAQEnhance() {
@@ -1167,20 +1257,59 @@ function initFAQEnhance() {
 
 
 function initServiceHub() {
+  // ปุ่มบริการ (data-service-card) -> เปิดแผง service-modal แล้วตั้งหัวข้อ/คำอธิบาย และเลือกประเภทเรื่องให้ตรงกับบริการที่กด
+  // (เดิมอ้าง id ของแผงรุ่นเก่า #service-title/#service-type ที่ไม่มีแล้ว ฟังก์ชันจึงออกทันที -> ทุกบริการเลือก "สอบถาม" เสมอ)
+  const modal = qs('#service-modal');
   const serviceButtons = qsa('[data-service-card]');
-  const title = qs('#service-title');
-  const subtitle = qs('#service-subtitle');
-  const serviceType = qs('#service-type');
-  const submitBtn = qs('#service-submit-btn');
+  if (!modal || !serviceButtons.length) return;
 
-  if (!serviceButtons.length || !title || !subtitle || !serviceType || !submitBtn) return;
+  const title = qs('#service-modal-title', modal);
+  const subtitle = title?.nextElementSibling;
+  const submitBtn = qs('#service-request-form button[type="submit"]', modal);
+  const defaults = { title: title?.textContent, subtitle: subtitle?.textContent, submit: submitBtn?.textContent };
+
+  // ชื่อบริการ -> ค่า radio name="serviceType" (ใส่ data-service-value บนปุ่มเพื่อระบุเองได้)
+  const typeFor = name => {
+    if (/ขออนุญาต/.test(name)) return 'permission';
+    if (/ร้องเรียน|เสนอแนะ|แบบสำรวจ/.test(name)) return 'suggestion';
+    if (/เว็บไซต์/.test(name)) return 'website';
+    return 'academic';
+  };
+
+  // ส่งฟอร์ม: เดิมไม่มีตัวจัดการ เบราว์เซอร์จึงส่งแบบ GET -> โหลดหน้าใหม่และชื่อ/อีเมลไปโผล่ใน URL
+  // ตอนนี้: ตรวจช่องบังคับ -> ซ่อนฟอร์ม แสดงข้อความยืนยันในแผง (ยังไม่มี backend จึงไม่ส่งข้อมูลไปไหน)
+  const form = qs('#service-request-form', modal);
+  let done = null;
+  const resetForm = () => {
+    done?.remove(); done = null;
+    if (form) { form.hidden = false; form.reset(); }
+  };
+  form?.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const email = form.querySelector('[name="email"]')?.value || '';
+    done = document.createElement('div');
+    done.className = 'service-done';
+    done.setAttribute('role', 'status');
+    done.innerHTML = `<strong>ส่งคำขอเรียบร้อยแล้ว</strong>
+      <p>เจ้าหน้าที่จะตรวจสอบและติดต่อกลับทางอีเมล <b></b></p>
+      <button type="button" class="btn" data-modal-close>ปิด</button>`;
+    done.querySelector('b').textContent = email;
+    done.querySelector('[data-modal-close]').addEventListener('click', () => closeModal('service-modal'));
+    form.hidden = true;
+    form.after(done);
+    done.querySelector('button').focus();
+  });
 
   serviceButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      title.textContent = btn.dataset.serviceTitle || 'เริ่มใช้บริการออนไลน์';
-      subtitle.textContent = btn.dataset.serviceSubtitle || 'เลือกประเภทบริการ กรอกข้อมูล และรับเลขติดตามสถานะ';
-      serviceType.value = btn.dataset.serviceType || serviceType.value;
-      submitBtn.textContent = btn.dataset.serviceAction || 'ส่งคำขอ';
+      resetForm();
+      if (title) title.textContent = btn.dataset.serviceTitle || defaults.title;
+      if (subtitle) subtitle.textContent = btn.dataset.serviceSubtitle || defaults.subtitle;
+      if (submitBtn && btn.dataset.serviceAction) submitBtn.textContent = btn.dataset.serviceAction;
+      const value = btn.dataset.serviceValue || typeFor(btn.dataset.serviceTitle || '');
+      const radio = qs(`input[name="serviceType"][value="${value}"]`, modal);
+      if (radio) radio.checked = true;
     }, true);
   });
 }
@@ -1191,3 +1320,73 @@ function initServiceHub() {
 
 
 init();
+
+/* =============================================================================
+   ข่าวสารและกิจกรรมบนหน้าแรก — ดึงจาก content/news/index.json (แหล่งเดียวกับหน้ารายการข่าว / CMS)
+   แต่ละแท็บ 7 เรื่องใหม่สุด (1 ข่าวเด่น + 6 การ์ด) แยกตาม "type" ของข่าว
+     news = ข่าวประชาสัมพันธ์ · training = อบรมและเสวนา · activity = ข่าวกิจกรรม · announcement = ประกาศ
+   HTML การ์ดเดิมใน index.html เป็นค่าสำรอง (ถ้าโหลดไม่ได้ยังเห็นข่าวชุดเดิม)
+   ============================================================================= */
+const HOME_NEWS_TABS = { news: 'news', training: 'training', event: 'activity', announcement: 'announcement' };
+const HOME_NEWS_LABEL = { news: 'ข่าวประชาสัมพันธ์', training: 'อบรมและเสวนา', activity: 'ข่าวกิจกรรม', announcement: 'ประกาศ' };
+const HOME_NEWS_PER_TAB = 7;
+const HN_MONTHS = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+const HN_MONTHS_SHORT = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+const escHtml = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const shortText = (t, n) => (t = String(t || '')).length <= n ? t : `${t.slice(0, n).replace(/\s+\S*$/, '')}…`;
+
+async function initHomeNews() {
+  const panels = qsa('[data-news-panel]');
+  if (!panels.length) return;
+  let index;
+  try {
+    index = window.orstI18n
+      ? (await window.orstI18n.fetchJSON('content/news/index.json')).data
+      : await fetch('content/news/index.json', { cache: 'no-cache' }).then(r => r.json());
+  } catch { return; }   // ใช้การ์ดเดิมใน HTML
+  const items = (index.items || []).filter(it => it.id || it.href)
+    .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+  const url = it => (it.id ? `news-detail.html?id=${encodeURIComponent(it.id)}` : it.href);
+  const ic = '<span class="read-ic" aria-hidden="true"><svg class="icon"><use href="#i-arrow"></use></svg></span>';
+  const fullDate = iso => { const [y, m, d] = String(iso).split('-').map(Number); return y ? `${d} ${HN_MONTHS[m - 1]} ${y + 543}` : ''; };
+  const badge = iso => {
+    const [y, m, d] = String(iso).split('-').map(Number);
+    return y ? `<time class="news-date-badge" datetime="${escHtml(iso)}" aria-label="${fullDate(iso)}"><b>${d}</b><span>${HN_MONTHS_SHORT[m - 1]} ${String(y + 543).slice(-2)}</span></time>` : '';
+  };
+  const img = it => escHtml(it.imageLarge || it.image || 'assets/images/New-01.png');
+
+  panels.forEach(panel => {
+    const type = HOME_NEWS_TABS[panel.dataset.newsPanel];
+    const layout = panel.querySelector('.news-mosaic-layout');
+    // ข่าวที่มีหน้ารายละเอียดก่อน (มีรูป/เนื้อหาครบ) แล้วค่อยข่าวลิงก์ภายนอก
+    const picked = items.filter(it => it.type === type).sort((a, b) => (b.id ? 1 : 0) - (a.id ? 1 : 0)).slice(0, HOME_NEWS_PER_TAB)
+      .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+    if (!type || !layout || !picked.length) return;
+    const label = HOME_NEWS_LABEL[type];
+    const [lead, ...rest] = picked;
+    layout.innerHTML = `
+                <article class="news-mosaic-feature">
+                  <a href="${escHtml(url(lead))}" class="news-mosaic-feature-img" aria-label="อ่านข่าว${escHtml(shortText(lead.title, 80))}">
+                    <img src="${img(lead)}" alt="${escHtml(shortText(lead.title, 120))}" loading="lazy">
+                    <span class="news-type-badge">ข่าวเด่น</span>
+                  </a>
+                  <div class="news-mosaic-feature-body">
+                    <div class="news-meta"><span>${fullDate(lead.publishedAt)}</span><span>${label}</span></div>
+                    <h3>${escHtml(lead.title)}</h3>
+                    <p>${escHtml(shortText(lead.excerpt, 220))}</p>
+                    <a class="news-primary-action" href="${escHtml(url(lead))}">อ่านต่อ ${ic}</a>
+                  </div>
+                </article>
+                <div class="news-mosaic-side">${rest.map(it => `
+                  <article class="news-mosaic-card">
+                    <a href="${escHtml(url(it))}" class="news-mosaic-thumb"><img src="${img(it)}" alt="${escHtml(shortText(it.title, 120))}" loading="lazy"></a>
+                    ${badge(it.publishedAt)}
+                    <div class="news-mosaic-card-body">
+                      <h4>${escHtml(it.title)}</h4>
+                      <p>${escHtml(shortText(it.excerpt, 120))}</p>
+                      <div class="news-mini-foot"><span class="news-mini-type">${label}</span><a href="${escHtml(url(it))}">อ่านต่อ ${ic}</a></div>
+                    </div>
+                  </article>`).join('')}
+                </div>`;
+  });
+}

@@ -1,0 +1,149 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69GXI2522022 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69gxi2522022",
+  "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบ",
+  "navKey": "news",
+  "description": "เมื่อวันที่ ๒๒ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๓.๐๐ น. ณ โถงชั้น",
+  "sideNav": false,
+  "updatedAt": "2026-07-24",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "ข่าวประชาสัมพันธ์",
+      "date": "2026-07-24",
+      "heading": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว",
+      "image": "assets/images/orst/news/data0005-00005324-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่น",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005324.JPG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "เมื่อวันที่ ๒๒ กรกฎาคม พ.ศ. ๒๕๖๙ เวลา ๑๓.๐๐ น. ณ โถงชั้น",
+        "๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ดร.ศุภฤกษ์",
+        "ภู่พงศ์ศักดิ์ เลขาธิการราชบัณฑิตยสภา เป็นประธานนำผู้บริหาร",
+        "ข้าราชการและเจ้าหน้าที่สำนักงานราชบัณฑิตยสภา จัดพิธีถวายสัตย์ปฏิญาณเป็นข้าราชการที่ดีและพลังของแผ่นดิน",
+        "ประจำปี ๒๕๖๙ เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว ๒๘",
+        "กรกฎาคม ๒๕๖๙ โดยเปิดกรวยกระทงดอกไม้ธูปเทียนแพหน้าพระบรมฉายาลักษณ์พระบาทสมเด็จพระเจ้าอยู่หัวและกล่าวกราบบังคมทูลถวายพระพรชัยมงคล",
+        "กล่าวนำถวายสัตย์ปฏิญาณฯ ร่วมร้องเพลงสรรเสริญพระบารมี และเพลงสดุดีจอมราชา เพื่อแสดงออกถึงความจงรักภักดี",
+        "สำนึกในพระมหากรุณาธิคุณอย่างหาที่สุดมิได้"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005324-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005324.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005325-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005325.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005326-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005326.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005327-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005327.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005328-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005328.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005329-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005329.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005330-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005330.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005331-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005331.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005332-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005332.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005333-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005333.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 10"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005334-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005334.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 11"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005335-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005335.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 12"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาร่วมพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๘",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68G%2DP0902091",
+          "category": "ข่าว",
+          "publishedAt": "2025-07-30"
+        },
+        {
+          "title": "พิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน เนื่องในโอกาสวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว ๒๘ กรกฎาคม ๒๕๖๒",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO3030044",
+          "category": "กิจกรรม",
+          "publishedAt": "2019-07-24"
+        },
+        {
+          "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีลงนามถวายพระพรชัยมงคลพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๒๘ กรกฎาคม ๒๕๖๓ และพิธีถวายสัตย์ปฏิญาณ เพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HFO3347063",
+          "category": "ข่าว",
+          "publishedAt": "2020-07-29"
+        },
+        {
+          "title": "พิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่นดิน",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66G%21O5733069",
+          "category": "ข่าว",
+          "publishedAt": "2023-07-27"
+        }
+      ]
+    }
+  ]
+}

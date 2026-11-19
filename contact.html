@@ -11,7 +11,10 @@
   <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
   <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/Sarabun-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/typography.css">
   <link rel="stylesheet" href="assets/css/base.css">
 
   <link rel="stylesheet" href="assets/css/pages/contact.css">
@@ -49,7 +52,7 @@
         </div>
         <p class="contact-hours"><svg class="icon" aria-hidden="true">
             <use href="#i-clock"></use>
-          </svg><span>เวลาทำการ</span> [วันและเวลาทำการ]</p>
+          </svg><span>เวลาทำการ</span> จันทร์ – ศุกร์ ๐๘.๓๐ – ๑๖.๓๐ น.</p><!-- ข้อมูลตัวอย่าง (เวลาราชการทั่วไป) — รอสำนักงานยืนยันเวลาทำการจริง -->
       </div>
     </section>
 
@@ -67,7 +70,7 @@
           <li>
             <a class="channel" href="mailto:saraban@orst.go.th">
               <span class="channel-label"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>อีเมล</span>
-              <strong class="channel-value">saraban@orst.go.th</strong>
+              <strong class="channel-value" lang="en">saraban@orst.go.th</strong>
               <span class="channel-note">สอบถามข้อมูลและคำศัพท์</span>
               <span class="channel-go">ส่งอีเมล <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
             </a>
@@ -94,63 +97,96 @@
 
     <section class="section">
       <div class="container contact-grid">
-        <section class="contact-form-panel reveal" id="contact-form" aria-labelledby="form-title">
-          <span class="section-kicker">แบบฟอร์มออนไลน์</span>
-          <h2 id="form-title">ส่งข้อความถึงเรา</h2>
-          <p class="form-intro">เจ้าหน้าที่จะพิจารณาและติดต่อกลับตามช่องทางที่ท่านเลือก</p>
+        <section class="contact-form-panel cf reveal" id="contact-form" aria-labelledby="form-title">
+          <!-- แบบฟอร์มติดต่อ — 3 ขั้นสั้น ๆ: เลือกเรื่อง → ข้อมูลผู้ติดต่อ → ข้อความ
+               ยังไม่ส่งข้อมูลไปที่ใด (ตรวจค่าฝั่งเบราว์เซอร์เท่านั้น) — ต่อ backend/CMS ที่ initForm() ใน assets/js/pages/contact.js -->
+          <div class="cf-head">
+            <span class="cf-head-ic" aria-hidden="true"><svg class="icon"><use href="#i-send"></use></svg></span>
+            <div>
+              <h2 id="form-title">ส่งข้อความถึงเจ้าหน้าที่</h2>
+              <p>กรอก 3 ขั้นตอนสั้น ๆ เจ้าหน้าที่จะติดต่อกลับตามช่องทางที่ท่านเลือก</p>
+            </div>
+          </div>
 
-          <form id="message-form">
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">ชื่อ-นามสกุล <span class="required">*</span></label>
-                <input id="name" name="name" type="text" placeholder="กรุณากรอกชื่อ" required>
+          <form id="message-form" class="cf-form">
+            <fieldset class="cf-step">
+              <legend><span class="cf-num" aria-hidden="true">1</span>เรื่องที่ต้องการติดต่อ <span class="required">*</span></legend>
+              <div class="cf-topics">
+                <label class="cf-topic">
+                  <input type="radio" name="subject" value="general" required>
+                  <span class="cf-topic-ic" aria-hidden="true"><svg class="icon"><use href="#i-search"></use></svg></span>
+                  <span class="cf-topic-tx"><strong>สอบถามข้อมูลทั่วไป</strong><small>ข้อมูลสำนักงาน หนังสือ กิจกรรม</small></span>
+                </label>
+                <label class="cf-topic">
+                  <input type="radio" name="subject" value="service">
+                  <span class="cf-topic-ic" aria-hidden="true"><svg class="icon"><use href="#i-service"></use></svg></span>
+                  <span class="cf-topic-tx"><strong>สอบถามการให้บริการ</strong><small>คำศัพท์ ศัพท์บัญญัติ หลักเกณฑ์ภาษา</small></span>
+                </label>
+                <label class="cf-topic">
+                  <input type="radio" name="subject" value="website">
+                  <span class="cf-topic-ic" aria-hidden="true"><svg class="icon"><use href="#i-x"></use></svg></span>
+                  <span class="cf-topic-tx"><strong>แจ้งปัญหาเว็บไซต์</strong><small>ลิงก์เสีย หน้าเว็บใช้งานไม่ได้</small></span>
+                </label>
+                <label class="cf-topic">
+                  <input type="radio" name="subject" value="cooperation">
+                  <span class="cf-topic-ic" aria-hidden="true"><svg class="icon"><use href="#i-people"></use></svg></span>
+                  <span class="cf-topic-tx"><strong>ติดต่อเพื่อความร่วมมือ</strong><small>หน่วยงาน สถานศึกษา องค์กร</small></span>
+                </label>
+                <label class="cf-topic">
+                  <input type="radio" name="subject" value="other">
+                  <span class="cf-topic-ic" aria-hidden="true"><svg class="icon"><use href="#i-mail"></use></svg></span>
+                  <span class="cf-topic-tx"><strong>อื่น ๆ</strong><small>เรื่องที่ไม่อยู่ในรายการ</small></span>
+                </label>
               </div>
-              <div class="field">
-                <label for="contact-email">อีเมล <span class="required">*</span></label>
-                <input id="contact-email" name="email" type="email" placeholder="example@email.com" required>
-              </div>
-              <div class="field">
-                <label for="contact-phone">เบอร์โทรศัพท์</label>
-                <input id="contact-phone" name="phone" type="tel" placeholder="081-234-5678">
-              </div>
-              <div class="field">
-                <label for="contact-subject">เรื่องที่ติดต่อ <span class="required">*</span></label>
-                <select id="contact-subject" name="subject" required>
-                  <option value="">กรุณาเลือกเรื่องที่ติดต่อ</option>
-                  <option value="general">สอบถามข้อมูลทั่วไป</option>
-                  <option value="service">สอบถามการให้บริการ</option>
-                  <option value="website">แจ้งปัญหาเว็บไซต์</option>
-                  <option value="cooperation">ติดต่อเพื่อความร่วมมือ</option>
-                  <option value="other">อื่น ๆ</option>
-                </select>
-              </div>
-              <fieldset class="field full contact-reply">
-                <legend>ช่องทางที่สะดวกให้ติดต่อกลับ</legend>
-                <div class="contact-choice">
-                  <label><input type="radio" name="reply" value="email" checked> อีเมล</label>
-                  <label><input type="radio" name="reply" value="phone"> โทรศัพท์</label>
-                  <label><input type="radio" name="reply" value="both"> ทั้งสองช่องทาง</label>
+            </fieldset>
+
+            <fieldset class="cf-step">
+              <legend><span class="cf-num" aria-hidden="true">2</span>ข้อมูลผู้ติดต่อ</legend>
+              <div class="cf-grid">
+                <div class="cf-field cf-full">
+                  <label for="name">ชื่อ-นามสกุล <span class="required">*</span></label>
+                  <span class="cf-input"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg>
+                    <input id="name" name="name" type="text" placeholder="ชื่อและนามสกุล" autocomplete="name" required></span>
                 </div>
-              </fieldset>
-              <div class="field full">
-                <label for="message">ข้อความ <span class="required">*</span></label>
-                <textarea id="message" name="message" placeholder="กรุณากรอกข้อความที่ต้องการติดต่อ"
-                  required></textarea>
+                <div class="cf-field">
+                  <label for="contact-email">อีเมล <span class="required">*</span></label>
+                  <span class="cf-input"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                    <input id="contact-email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required></span>
+                </div>
+                <div class="cf-field">
+                  <label for="contact-phone">เบอร์โทรศัพท์ <span class="cf-opt">(ถ้ามี)</span></label>
+                  <span class="cf-input"><svg class="icon" aria-hidden="true"><use href="#i-phone-call"></use></svg>
+                    <input id="contact-phone" name="phone" type="tel" placeholder="0X-XXX-XXXX" autocomplete="tel" inputmode="tel"></span>
+                </div>
+                <div class="cf-field cf-full" role="radiogroup" aria-labelledby="reply-label">
+                  <span class="cf-label" id="reply-label">ช่องทางที่สะดวกให้ติดต่อกลับ</span>
+                  <div class="cf-segment">
+                    <label><input type="radio" name="reply" value="email" checked><span>อีเมล</span></label>
+                    <label><input type="radio" name="reply" value="phone"><span>โทรศัพท์</span></label>
+                    <label><input type="radio" name="reply" value="both"><span>ทั้งสองช่องทาง</span></label>
+                  </div>
+                </div>
               </div>
-            </div>
+            </fieldset>
 
-            <label class="privacy-check">
-              <input type="checkbox" required>
-              <span>ข้าพเจ้ายินยอมให้สำนักงานราชบัณฑิตยสภาเก็บรวบรวมข้อมูลตามที่ระบุใน <a
-                  href="/privacy">นโยบายคุ้มครองข้อมูลส่วนบุคคล</a></span>
-            </label>
+            <fieldset class="cf-step">
+              <legend><span class="cf-num" aria-hidden="true">3</span>ข้อความ <span class="required">*</span></legend>
+              <div class="cf-field">
+                <label class="sr-only" for="message">ข้อความ</label>
+                <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="เล่ารายละเอียดเรื่องที่ต้องการติดต่อ เช่น คำศัพท์ที่สงสัย หรือหน้าเว็บที่พบปัญหา" required aria-describedby="message-count"></textarea>
+                <span class="cf-count" id="message-count" aria-live="polite">0/1000</span>
+              </div>
+            </fieldset>
 
-            <div class="form-actions">
-              <span class="form-note">ช่องที่มีเครื่องหมาย * จำเป็นต้องกรอก</span>
-              <button class="btn" type="submit"><svg class="icon">
-                  <use href="#i-send"></use>
-                </svg> ส่งข้อความ</button>
+            <div class="cf-foot">
+              <label class="cf-consent">
+                <input type="checkbox" required>
+                <span>ข้าพเจ้ายินยอมให้สำนักงานราชบัณฑิตยสภาเก็บรวบรวมข้อมูลตาม <a
+                    href="https://www.orst.go.th/iwfm_view.asp?i=0030000703001007%2F65JRI5857038" target="_blank" rel="noopener noreferrer">นโยบายคุ้มครองข้อมูลส่วนบุคคล<span class="sr-only"> (เปิดในแท็บใหม่)</span></a></span>
+              </label>
+              <button class="cf-submit" type="submit"><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg>ส่งข้อความ</button>
             </div>
+            <p class="cf-note"><span class="required">*</span> จำเป็นต้องกรอก</p>
           </form>
         </section>
 
@@ -165,9 +201,9 @@
             <h2 id="map-title">สำนักงานราชบัณฑิตยสภา</h2>
             <p>เลขที่ ๑๒๐ หมู่ ๓ ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ (อาคารซี) ถนนแจ้งวัฒนะ แขวงทุ่งสองห้อง เขตหลักสี่ กรุงเทพมหานคร ๑๐๒๑๐</p>
             <div class="map-actions">
-              <a class="btn" href="https://maps.google.com/?cid=6757793602429635294" target="_blank" rel="noopener">เปิด Google Maps</a>
+              <a class="btn" href="https://maps.google.com/?cid=6757793602429635294" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>เปิด Google Maps<span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
               <button class="mini-action" type="button"
-                data-copy="สำนักงานราชบัณฑิตยสภา เลขที่ ๑๒๐ หมู่ ๓ ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ (อาคารซี) ถนนแจ้งวัฒนะ แขวงทุ่งสองห้อง เขตหลักสี่ กรุงเทพมหานคร ๑๐๒๑๐">คัดลอกที่อยู่</button>
+                data-copy="สำนักงานราชบัณฑิตยสภา เลขที่ ๑๒๐ หมู่ ๓ ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ (อาคารซี) ถนนแจ้งวัฒนะ แขวงทุ่งสองห้อง เขตหลักสี่ กรุงเทพมหานคร ๑๐๒๑๐"><svg class="icon" aria-hidden="true"><use href="#i-copy"></use></svg><span data-copy-label>คัดลอกที่อยู่</span></button>
             </div>
           </div>
         </aside>
@@ -203,8 +239,8 @@
               <li><span class="dir-num"><a href="tel:021411722">0 2141 1722</a></span><span class="dir-label">ฝ่ายบริหารงานบุคคล</span></li>
             </ul>
             <ul class="dir-mails" aria-label="อีเมล">
-              <li><a href="mailto:saraban@orst.go.th">saraban@orst.go.th</a></li>
-              <li><a href="mailto:ribook@orst.go.th">ribook@orst.go.th</a><span class="dir-label">ห้องจำหน่ายหนังสือ</span></li>
+              <li><a href="mailto:saraban@orst.go.th" lang="en">saraban@orst.go.th</a></li>
+              <li><a href="mailto:ribook@orst.go.th" lang="en">ribook@orst.go.th</a><span class="dir-label">ห้องจำหน่ายหนังสือ</span></li>
             </ul>
           </article>
           <article class="dir-row">
@@ -217,7 +253,7 @@
               <li><span class="dir-num"><a href="tel:021411735">0 2141 1735</a></span><span class="dir-label">ผู้อำนวยการกอง</span></li>
             </ul>
             <ul class="dir-mails" aria-label="อีเมล">
-              <li><a href="mailto:saraban@orst.go.th">saraban@orst.go.th</a></li>
+              <li><a href="mailto:saraban@orst.go.th" lang="en">saraban@orst.go.th</a></li>
             </ul>
           </article>
           <article class="dir-row">
@@ -230,7 +266,7 @@
               <li><span class="dir-num"><a href="tel:021411737">0 2141 1737</a></span><span class="dir-label">ผู้อำนวยการกอง</span></li>
             </ul>
             <ul class="dir-mails" aria-label="อีเมล">
-              <li><a href="mailto:saraban@orst.go.th">saraban@orst.go.th</a></li>
+              <li><a href="mailto:saraban@orst.go.th" lang="en">saraban@orst.go.th</a></li>
             </ul>
           </article>
           <article class="dir-row">
@@ -243,7 +279,7 @@
               <li><span class="dir-num"><a href="tel:021411736">0 2141 1736</a></span><span class="dir-label">ผู้อำนวยการกอง</span></li>
             </ul>
             <ul class="dir-mails" aria-label="อีเมล">
-              <li><a href="mailto:saraban@orst.go.th">saraban@orst.go.th</a></li>
+              <li><a href="mailto:saraban@orst.go.th" lang="en">saraban@orst.go.th</a></li>
             </ul>
           </article>
         </div>

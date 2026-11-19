@@ -1,0 +1,74 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-CONTACT (ช่องทางอิเล็กทรอนิกส์สำหรับการติดต่อสำนักงานราชบัณฑิตยสภา พ.ศ. 2568) — ถ้ามีไฟล์ประกาศฉบับจริง ให้เพิ่มเป็น document-list",
+  "title": "e-Channels Notice",
+  "navKey": "services",
+  "description": "Electronic channels for contacting the Office of the Royal Society, B.E. 2568 (2025)",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "e-Channels Notice",
+      "lead": "Electronic channels for contacting the Office of the Royal Society, B.E. 2568 (2025)",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services"
+        },
+        {
+          "label": "e-Channels Notice"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "channels",
+      "layout": "directory",
+      "heading": "Ways to contact the Office",
+      "lead": "Tap an email address or link to contact the Office right away.",
+      "items": [
+        {
+          "title": "Email",
+          "links": [
+            {
+              "kind": "General enquiries, terminology and official correspondence",
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            },
+            {
+              "kind": "Book enquiries and orders",
+              "label": "ribook@orst.go.th",
+              "href": "mailto:ribook@orst.go.th"
+            }
+          ]
+        },
+        {
+          "title": "Website",
+          "links": [
+            {
+              "kind": "Official website",
+              "label": "www.orst.go.th",
+              "href": "https://www.orst.go.th"
+            }
+          ]
+        },
+        {
+          "title": "Office address",
+          "body": "Office of the Royal Society, 120 Moo 3, The Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5 December B.E. 2550 (2007) (Building C), Bangkok 10210",
+          "links": [
+            {
+              "kind": "Office location",
+              "label": "Map and directions",
+              "href": "contact.html#map"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

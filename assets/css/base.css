@@ -2,9 +2,10 @@
    base.css — สไตล์พื้นฐานที่ใช้ร่วมกันทุกหน้า
    -----------------------------------------------------------------------------
    ลำดับการโหลด CSS ของโปรเจกต์ (ห้ามสลับ):
-     1) assets/css/base.css                <-- ไฟล์นี้
-     2) assets/css/pages/<ชื่อหน้า>.css     (มีเฉพาะหน้าที่ต้องการ)
-     3) assets/css/components.css          (ต้องเป็นตัวสุดท้ายเสมอ)
+     1) assets/css/typography.css          ฟอนต์ ขนาดตัวอักษร ระยะห่าง (ไม่มีสี)
+     2) assets/css/base.css                <-- ไฟล์นี้
+     3) assets/css/blocks.css / pages/<ชื่อหน้า>.css
+     4) assets/css/components.css          (ต้องเป็นตัวสุดท้ายเสมอ)
 
    สารบัญ
      - Design tokens (:root)         ตัวแปรสี / เงา / มุมโค้ง / ความกว้าง container
@@ -19,106 +20,49 @@
      - Responsive + fixed-header patch
    ============================================================================= */
 
-/* -----------------------------------------------------------------------------
-   TH Sarabun New — ฟอนต์ราชการ (ฟอนต์แห่งชาติ) ใช้กับภาษาไทยทุกหน้า
-   เก็บไฟล์ไว้ในเว็บเอง (self-host) ที่ assets/fonts/ ไม่พึ่ง Google Fonts
-   มี 4 สไตล์: Regular/Bold/Italic/BoldItalic (น้ำหนัก 400 กับ 700)
-   -------------------------------------------------------------------------- */
-@font-face {
-  font-family: "TH Sarabun New";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/THSarabunNew-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "TH Sarabun New";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/THSarabunNew-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "TH Sarabun New";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/THSarabunNew-Italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "TH Sarabun New";
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/THSarabunNew-BoldItalic.woff2") format("woff2");
-}
-
-/* -----------------------------------------------------------------------------
-   Sarabun (Cadson Demak) — สารบรรณเวอร์ชันเว็บ มีหลายน้ำหนัก (300–800)
-   ใช้เฉพาะ "หัวข้อ/ดิสเพลย์" เพื่อเล่นคอนทราสต์หนา-บาง ส่วนเนื้อหายังเป็น
-   TH Sarabun New (ฟอนต์ราชการ) — self-host เหมือนกัน
-   -------------------------------------------------------------------------- */
-@font-face {
-  font-family: "Sarabun";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("../fonts/Sarabun-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Sarabun";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/Sarabun-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Sarabun";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("../fonts/Sarabun-SemiBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Sarabun";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/Sarabun-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Sarabun";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/Sarabun-ExtraBold.woff2") format("woff2");
-}
+/* ฟอนต์ (@font-face TH Sarabun New) ขนาดตัวอักษร ระยะห่าง มุมโค้ง อยู่ใน typography.css ซึ่งโหลดก่อนไฟล์นี้
+   Geist + Newsreader (ภาษาอังกฤษ) โหลดด้วย <link> ใน <head> ของทุกหน้า */
 
 :root {
-  --container: 1800px;
-  --paper: #fbf7ef;
+  /* ชุดฟอนต์ — ชื่อเดิมของโปรเจกต์ ชี้ไปที่ token ของ typography.css (ชุดเดียวกับเว็บไซต์ราชบัณฑิตยสภา)
+     --font-th          ภาษาไทยทั้งหมด = TH Sarabun New
+     --font-en          คำ/ข้อความภาษาอังกฤษ เมนู ปุ่ม อีเมล โดเมน = Geist
+     --font-en-heading  หัวข้อในโหมดภาษาอังกฤษ (lang="en") = Newsreader */
+  --font-th: var(--font-body);
+  --font-en: var(--font-latin);
+  --font-en-heading: "Newsreader", "TH Sarabun New", Georgia, serif;
+
+  --paper: #f5f6f4;
   --surface: #ffffff;
-  --surface-soft: #fffaf1;
+  --surface-soft: #fafbf9;
   --ink: #102033;
   --muted: #667085;
   --deep: #073b34;
   --deep-2: #0f4b43;
-  --gold: #b99143;
-  --gold-soft: #efe4ce;
-  --line: #e7ddcf;
+  --gold: #9e7a2f;
+  --gold-soft: #ebeee9;
+  --line: #e2e5e1;
+  --file-pdf: #b42318;          /* ป้ายชนิดไฟล์ PDF ในรายการเอกสาร */
+  /* สีหมวดในปฏิทินกิจกรรม (ตามหน่วยงาน) — ตัวอักษรขาวบนพื้นสีอ่านได้ทุกสี */
+  --cal-1: #0b7a52;
+  --cal-2: #a8641a;
+  --cal-3: #3f51b5;
+  --cal-4: #c62828;
+  --cal-5: #7b3fa0;
+  --cal-6: #0277bd;
   --shadow: 0 14px 35px rgba(16, 32, 51, .10);
-  --radius: 18px;
+  --radius: var(--radius-xl);   /* มุมโค้งสูงสุด 16px ตาม typography.css */
 
-  /* สเกลตัวอักษร (ฐาน 17px, TH Sarabun New) — ทุกหน้าใช้ชุดเดียวกัน
-     ป้าย/วันที่/แท็ก/breadcrumb ต่ำสุด 16px เพราะ TH Sarabun New ตัวเล็กกว่าฟอนต์ทั่วไป */
-  --fs-meta: .94rem;      /* 16px   ป้าย วันที่ แท็ก หมายเหตุ breadcrumb */
-  --fs-body: 1rem;        /* 17px   เนื้อหา คำอธิบายการ์ด ปุ่ม ลิงก์ */
-  --fs-title: 1.15rem;    /* 19.6px หัวข้อการ์ด */
-  --fs-subhead: 1.3rem;   /* 22px   หัวข้อกล่อง/แผงย่อย */
-  --fs-panel: 1.85rem;    /* 31.5px หัวข้อแผงเด่น/แบนเนอร์ */
-  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);   /* หัวข้อ section ≤ 42.5px */
-  --fs-h1: clamp(2.3rem, 4vw, 3.3rem);    /* หัวข้อหน้า ≤ 56px */
-  --fs-label-en: .72rem;  /* ป้ายภาษาอังกฤษตัวพิมพ์ใหญ่ (Sarabun) 12px */
+  /* ชื่อขนาดเดิมของโปรเจกต์ — ชี้ไปที่สเกล --text-* ของ typography.css
+     (ขนาดจริงโตตามจอ และเปลี่ยนเองเมื่อ html[lang="en"]) */
+  --fs-meta: var(--text-xs);      /* ป้าย วันที่ แท็ก breadcrumb */
+  --fs-body: var(--text-base);    /* เนื้อหา คำอธิบายการ์ด */
+  --fs-title: var(--text-md);     /* หัวข้อการ์ด ข้อความนำ */
+  --fs-subhead: var(--text-lg);   /* หัวข้อรอง h3 */
+  --fs-panel: var(--text-xl);     /* หัวข้อแผงเด่น/แบนเนอร์ */
+  --fs-h2: var(--text-xl);        /* หัวข้อส่วน h2 */
+  --fs-h1: var(--text-2xl);       /* ชื่อหน้า h1 */
+  --fs-label-en: var(--text-xs);  /* ป้ายภาษาอังกฤษตัวพิมพ์ใหญ่ */
 }
 
 * {
@@ -127,18 +71,16 @@
 
 html {
   scroll-behavior: smooth;
-  /* TH Sarabun New เป็นฟอนต์ตัวเล็ก ขยายฐานเล็กน้อยให้อ่านสบายขึ้น
-     (rem ทั้งเว็บจะสเกลตามอัตโนมัติ) */
-  font-size: 17px;
+  /* ขนาดฐานโตตามจอ ตั้งไว้ที่ typography.css (ไทย 17.5–23px / อังกฤษ 15–16px) */
 }
 
 body {
   margin: 0;
-  font-family: "TH Sarabun New", "TH SarabunPSK", sans-serif;
+  font-family: var(--font-th);
   color: var(--ink);
   background: var(--paper);
-  line-height: 1.7;
-  letter-spacing: .005em;
+  line-height: var(--leading-reading);
+  /* ภาษาไทยไม่ใส่ letter-spacing (ตาม typography.css) */
   overflow-x: hidden;
 }
 
@@ -160,10 +102,11 @@ body.high-contrast {
   --gold: #ffda6a;
   --gold-soft: #30270d;
   --line: #fff;
+  --file-pdf: #ffda6a;
 }
 
 body.readable-mode {
-  font-size: 18px;
+  font-size: calc(var(--text-base) * 1.08);   /* โหมดอ่านง่าย: ใหญ่กว่าเนื้อหาปกติเล็กน้อย */
   --paper: #fffbea;
   --surface: #fffdf2;
   --ink: #111827;
@@ -188,10 +131,7 @@ svg {
   max-width: 100%;
 }
 
-.container {
-  width: min(var(--container), calc(100% - 40px));
-  margin-inline: auto;
-}
+
 
 .skip-link {
   position: fixed;
@@ -202,7 +142,7 @@ svg {
   background: var(--gold);
   color: #111;
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   font-weight: 700;
 }
 
@@ -213,7 +153,7 @@ svg {
 :focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 3px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
 }
 
 .icon {
@@ -230,7 +170,7 @@ svg {
 .topbar {
   background: linear-gradient(90deg, var(--deep), #092c27);
   color: #eef8f4;
-  font-size: .875rem;
+  font-size: var(--text-sm);
 }
 
 .topbar-inner {
@@ -254,7 +194,7 @@ svg {
   border: 0;
   color: inherit;
   padding: 5px 8px;
-  border-radius: 99px;
+  border-radius: var(--radius-pill);
 }
 
 .topbar button:hover,
@@ -305,14 +245,14 @@ svg {
 .brand-title {
   display: block;
   font-weight: 700;
-  font-size: 1.22rem;
-  line-height: 1.2;
+  font-size: var(--text-md);
+  line-height: var(--leading-tight);
 }
 
 .brand-subtitle {
   display: block;
   color: var(--muted);
-  font-size: .9rem;
+  font-size: var(--text-sm);
 }
 
 .main-nav {
@@ -323,7 +263,7 @@ svg {
 
 .main-nav a {
   padding: 13px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   color: #273548;
 }
@@ -345,7 +285,7 @@ svg {
   border: 1px solid var(--line);
   background: #fff;
   color: var(--ink);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0 16px;
   display: inline-flex;
   align-items: center;
@@ -366,7 +306,7 @@ svg {
   height: 46px;
   border: 1px solid var(--line);
   background: #fff;
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
 }
 
 .mobile-menu-btn span {
@@ -375,7 +315,7 @@ svg {
   height: 2px;
   background: var(--ink);
   margin: 4px auto;
-  border-radius: 99px;
+  border-radius: var(--radius-pill);
 }
 
 .mobile-menu {
@@ -393,7 +333,7 @@ svg {
   align-items: center;
   border: 1px solid var(--line);
   background: var(--surface-soft);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 13px 14px;
   margin-top: 8px;
   font-weight: 700;
@@ -404,7 +344,7 @@ svg {
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, #fffdf6 0%, #f5eee1 48%, #e7dcc9 100%);
+  background: linear-gradient(90deg, #fcfcfb 0%, #f5eee1 48%, #e7dcc9 100%);
   border-bottom: 1px solid var(--line);
 }
 
@@ -412,7 +352,7 @@ svg {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 75% 25%, rgba(185, 145, 67, .22), transparent 34%);
+  background: radial-gradient(circle at 75% 25%, rgba(158, 122, 47, .22), transparent 34%);
   pointer-events: none;
 }
 
@@ -427,17 +367,17 @@ svg {
 }
 
 .hero-copy h1 {
-  font-family: "TH Sarabun New", "TH SarabunPSK", sans-serif;
-  font-size: clamp(2.9rem, 5.4vw, 5rem);
+  font-family: var(--font-th);
+  font-size: var(--text-3xl);
   font-weight: 700;
-  line-height: 1.22;
+  line-height: var(--leading-tight);
   letter-spacing: -.005em;
   margin: 0 0 16px;
 }
 
 .hero-copy p {
   color: var(--muted);
-  font-size: 1.1rem;
+  font-size: var(--text-md);
   max-width: 620px;
   margin: 0 0 24px;
 }
@@ -448,7 +388,7 @@ svg {
   align-items: center;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 7px;
   box-shadow: var(--shadow);
 }
@@ -466,7 +406,7 @@ svg {
   width: 58px;
   height: 52px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--deep);
   color: var(--gold);
   display: grid;
@@ -483,14 +423,14 @@ svg {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 14px;
-  font-size: .9rem;
+  font-size: var(--text-sm);
   color: var(--muted);
 }
 
 .hero-tags button {
   border: 1px solid var(--line);
   background: #fff;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 6px 11px;
   color: var(--ink);
 }
@@ -498,7 +438,7 @@ svg {
 .hero-image {
   position: relative;
   min-height: 340px;
-  border-radius: 28px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
   background: linear-gradient(135deg, #183b35, #cab27f);
   box-shadow: var(--shadow);
@@ -516,7 +456,7 @@ svg {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 250, 240, .75), rgba(7, 59, 52, .05));
+  background: linear-gradient(90deg, rgba(250, 251, 249, .75), rgba(7, 59, 52, .05));
 }
 
 .trust-strip {
@@ -555,7 +495,7 @@ svg {
 
 .trust-item span {
   color: rgba(255, 255, 255, .75);
-  font-size: .92rem;
+  font-size: var(--text-sm);
 }
 
 .section {
@@ -575,24 +515,24 @@ svg {
 }
 
 .section-head h2 {
-  font-family: "TH Sarabun New", "TH SarabunPSK", sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-family: var(--font-th);
+  font-size: var(--fs-h2);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: var(--leading-tight);
   letter-spacing: -.005em;
   margin: 0;
 }
 
 .section-head p {
   color: var(--muted);
-  font-size: 1.1rem;
+  font-size: var(--text-md);
   margin: 4px 0 0;
 }
 
 .view-all {
   border: 1px solid var(--line);
   background: #fff;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 10px 16px;
   font-weight: 700;
 }
@@ -607,7 +547,7 @@ svg {
   position: relative;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: var(--radius-xl);
   padding: 18px;
   min-height: 128px;
   transition: .22s;
@@ -623,7 +563,7 @@ svg {
 .service-icon {
   width: 54px;
   height: 54px;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   background: #f5ebd8;
   color: var(--deep);
   border: 1px solid var(--line);
@@ -641,13 +581,13 @@ svg {
 
 .service-card h3 {
   margin: 0 0 4px;
-  font-size: 1rem;
+  font-size: var(--text-base);
 }
 
 .service-card p {
   margin: 0;
   color: var(--muted);
-  font-size: .9rem;
+  font-size: var(--text-sm);
 }
 
 .news-grid {
@@ -659,7 +599,7 @@ svg {
 .news-card {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
   transition: .22s;
 }
@@ -681,7 +621,7 @@ svg {
   left: 12px;
   background: var(--deep);
   color: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 8px 10px;
   font-weight: 700;
 }
@@ -703,9 +643,9 @@ svg {
   display: inline-flex;
   background: var(--gold-soft);
   color: #67470e;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 4px 9px;
-  font-size: .78rem;
+  font-size: var(--text-xs);
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -730,7 +670,7 @@ svg {
 .footer a,
 .footer li {
   color: rgba(255, 255, 255, .76);
-  font-size: .95rem;
+  font-size: var(--text-sm);
 }
 
 .footer ul {
@@ -756,23 +696,23 @@ svg {
 
 /* Shared utility */
 .page-hero {
-  background: linear-gradient(90deg, #fffdf6, #f1eadf);
+  background: linear-gradient(90deg, #fcfcfb, #f1eadf);
   border-bottom: 1px solid var(--line);
   padding: 52px 0;
 }
 
 .page-hero h1 {
-  font-family: "TH Sarabun New", "TH SarabunPSK", sans-serif;
-  font-size: clamp(2.3rem, 4vw, 3.3rem);   /* สูงสุด ~56px เท่าหัวข้อหน้าแรก */
+  font-family: var(--font-th);
+  font-size: var(--text-3xl);   /* สูงสุด ~56px เท่าหัวข้อหน้าแรก */
   font-weight: 700;
-  line-height: 1.25;
+  line-height: var(--leading-tight);
   letter-spacing: -.005em;
   margin: 0 0 10px;
 }
 
 .page-hero p {
   color: var(--muted);
-  font-size: 1.15rem;
+  font-size: var(--text-md);
   margin: 0;
   max-width: 760px;
 }
@@ -780,7 +720,7 @@ svg {
 .content-card {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: var(--radius-xl);
   padding: 24px;
   box-shadow: 0 6px 20px rgba(16, 32, 51, .05);
 }
@@ -816,7 +756,7 @@ svg {
   position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
   width: min(720px, 100%);
   max-height: 86vh;
@@ -833,7 +773,7 @@ svg {
 
 .modal-header h2 {
   margin: 0;
-  font-family: "TH Sarabun New", "TH SarabunPSK", sans-serif;
+  font-family: var(--font-th);
 }
 
 .modal-close {
@@ -856,7 +796,7 @@ svg {
 
 .result-card {
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   padding: 14px;
   background: #fff;
 }
@@ -869,7 +809,7 @@ svg {
   border: 0;
   background: var(--deep);
   color: #fff;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 13px 18px;
   font-weight: 700;
   display: flex;
@@ -886,7 +826,7 @@ svg {
 
 .tool-grid button {
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   background: var(--surface-soft);
   padding: 15px;
   font-weight: 700;
@@ -928,9 +868,7 @@ svg {
 }
 
 @media (max-width: 760px) {
-  .container {
-    width: min(100% - 26px, var(--container));
-  }
+
 
   .topbar .topbar-right {
     display: none;
@@ -954,7 +892,7 @@ svg {
   }
 
   .brand-title {
-    font-size: 1rem;
+    font-size: var(--text-base);
   }
 
   .brand-subtitle {
@@ -971,11 +909,11 @@ svg {
   }
 
   .hero-copy h1 {
-    font-size: 2.35rem;
+    font-size: var(--text-2xl);
   }
 
   .hero-search {
-    border-radius: 20px;
+    border-radius: var(--radius-xl);
     flex-direction: column;
     align-items: stretch;
     padding: 10px;
@@ -1030,7 +968,7 @@ svg {
 
   .modal-card {
     width: 100%;
-    border-radius: 26px 26px 0 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   }
 
   .tool-grid {
@@ -1103,7 +1041,7 @@ svg {
 }
 
 .nav-caret {
-  font-size: .76rem;
+  font-size: var(--text-xs);
   opacity: .7;
   transform: translateY(1px);
 }
@@ -1141,8 +1079,8 @@ svg {
   grid-template-columns: 285px 1fr;
   gap: 24px;
   padding: 24px;
-  border-radius: 26px;
-  background: rgba(255, 253, 248, .98);
+  border-radius: var(--radius-xl);
+  background: rgba(252, 252, 251, .98);
   border: 1px solid var(--line);
   box-shadow: 0 28px 80px rgba(16, 32, 51, .16);
   backdrop-filter: blur(14px);
@@ -1165,9 +1103,9 @@ svg {
   position: relative;
   overflow: hidden;
   padding: 24px;
-  border-radius: 22px;
+  border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 100% 100%, rgba(185, 145, 67, .22), transparent 36%),
+    radial-gradient(circle at 100% 100%, rgba(158, 122, 47, .22), transparent 36%),
     linear-gradient(135deg, var(--deep), var(--deep-2));
   color: #fff;
 }
@@ -1192,9 +1130,9 @@ svg {
   z-index: 1;
   margin: 8px 0 10px;
   color: #fff;
-  font-family: "TH Sarabun New", "TH SarabunPSK", sans-serif;
-  font-size: 1.45rem;
-  line-height: 1.28;
+  font-family: var(--font-th);
+  font-size: var(--text-lg);
+  line-height: var(--leading-tight);
 }
 
 .mega-feature p {
@@ -1217,7 +1155,7 @@ svg {
 .mega-group h4 {
   margin: 0 0 10px;
   color: var(--deep);
-  font-size: 1rem;
+  font-size: var(--text-base);
   font-weight: 700;
 }
 
@@ -1230,7 +1168,7 @@ svg {
   min-height: 38px;
   padding: 8px 10px;
   margin-bottom: 4px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   color: var(--ink);
   font-weight: 700;
   transition: background .18s ease, color .18s ease, transform .18s ease;
@@ -1281,7 +1219,7 @@ svg {
 .mobile-menu details {
   border: 1px solid var(--line);
   background: var(--surface-soft);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   margin-top: 8px;
   overflow: hidden;
 }
@@ -1328,7 +1266,7 @@ svg {
 .mobile-menu-group a {
   margin-top: 0;
   background: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 11px 12px;
   font-weight: 700;
 }
@@ -1345,7 +1283,7 @@ svg {
 }
 
 #shared-search-results .result-card:hover {
-  border-color: rgba(185, 145, 67, .5);
+  border-color: rgba(158, 122, 47, .5);
   box-shadow: 0 12px 28px rgba(16, 32, 51, .08);
 }
 
@@ -1363,7 +1301,7 @@ svg {
   border: 1px solid rgba(255, 255, 255, .18);
   background: rgba(255, 255, 255, .08);
   color: #fff;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0 16px;
   outline: 0;
 }
@@ -1373,7 +1311,7 @@ svg {
 }
 
 .footer a:hover {
-  color: #fff4ce;
+  color: #eef1ec;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -1429,7 +1367,7 @@ svg {
   }
 
   .topbar {
-    font-size: .8rem;
+    font-size: var(--text-xs);
   }
 
   .topbar-group {
@@ -1473,7 +1411,7 @@ svg {
   inset: 0 0 auto 0;
   width: 100%;
   z-index: 9990;
-  background: #fffaf1;
+  background: #fafbf9;
 }
 
 #app-header .site-header {

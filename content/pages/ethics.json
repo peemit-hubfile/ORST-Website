@@ -1,0 +1,108 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=10 และหน้า ABOUT-*-ETHICS (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส",
+  "navKey": "about",
+  "description": "ประมวลจริยธรรม ข้อกำหนดจริยธรรม และมาตรการส่งเสริมคุณธรรมและความโปร่งใสของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส",
+      "lead": "ประมวลจริยธรรม ข้อกำหนดจริยธรรม และมาตรการส่งเสริมคุณธรรมและความโปร่งใสของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "ศูนย์ปฏิบัติการต่อต้านการทุจริต",
+          "href": "anti-corruption-center.html"
+        },
+        {
+          "label": "จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เจตจำนงการบริหารงานด้วยความซื่อสัตย์สุจริต",
+          "publishedAt": "2023-12-07",
+          "category": "เจตจำนงการบริหารงานด้วยความซื่อสัตย์สุจริต",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000190.PDF"
+        },
+        {
+          "title": "The Declaration of the Office of the Royal Society Subject: Statement of Intent: Administration with Integrity and Morality",
+          "publishedAt": "2023-12-07",
+          "category": "เจตจำนงการบริหารงานด้วยความซื่อสัตย์สุจริต",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000191.PDF"
+        },
+        {
+          "title": "ประมวลจริยธรรม",
+          "category": "ประมวลจริยธรรม",
+          "note": "เว็บไซต์เดิมไม่มีไฟล์แนบ"
+        },
+        {
+          "title": "จรรยาข้าราชการพลเรือน",
+          "category": "จรรยาข้าราชการพลเรือน",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000032.PDF",
+          "fileSize": 4707435
+        },
+        {
+          "title": "คณะกรรมการจริยธรรม",
+          "category": "คณะกรรมการจริยธรรม",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000034.PDF",
+          "fileSize": 734464
+        },
+        {
+          "title": "โครงการ/กิจกรรมที่เกี่ยวข้อง",
+          "category": "โครงการ/กิจกรรมที่เกี่ยวข้อง",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000038.PDF",
+          "fileSize": 88681
+        },
+        {
+          "title": "การป้องกันการล่วงละเมิดหรือคุกคามทางเพศ",
+          "category": "การป้องกันการล่วงละเมิดหรือคุกคามทางเพศ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000186.PDF",
+          "fileSize": 3236357
+        },
+        {
+          "title": "องค์กรคุณธรรมต้นแบบ",
+          "category": "องค์กรคุณธรรมต้นแบบ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000195.PDF",
+          "fileSize": 790998
+        },
+        {
+          "title": "ข้อกำหนดจริยธรรม",
+          "category": "ข้อกำหนดจริยธรรม",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000197.PDF",
+          "fileSize": 1924667
+        },
+        {
+          "title": "แนวทางการปฏิบัติตนตามประมวลจริยธรรม",
+          "category": "แนวทางการปฏิบัติตนตามประมวลจริยธรรม",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000199.PDF",
+          "fileSize": 2621156
+        },
+        {
+          "title": "แบบฟอร์มรายงานผลการนำการประเมินจริยธรรมไปใช้",
+          "category": "แบบฟอร์มรายงานผลการนำการประเมินจริยธรรมไปใช้",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000206.PDF",
+          "fileSize": 1513938
+        },
+        {
+          "title": "แบบฟอร์มรายงานผลการเปิดโอกาสให้มีส่วนร่วม",
+          "category": "แบบฟอร์มรายงานผลการเปิดโอกาสให้มีส่วนร่วม",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000202.PDF",
+          "fileSize": 1540362
+        }
+      ]
+    }
+  ]
+}

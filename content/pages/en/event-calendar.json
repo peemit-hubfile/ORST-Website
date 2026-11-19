@@ -1,0 +1,41 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ปฏิทินของเว็บเอง (แบบ Google Calendar: เดือน/สัปดาห์/วัน/กำหนดการ) จาก content/events.json (ไฟล์เดียวกับปฏิทินหน้าแรก — CMS เขียนไฟล์นี้) ไม่ฝัง Google Calendar แล้ว · เพิ่มเวลาได้ด้วย start \"YYYY-MM-DDTHH:MM\" และ url = หน้ารายละเอียด",
+  "title": "Event Calendar",
+  "navKey": "news",
+  "description": "Activities, forums and lectures of the Office of the Royal Society. Follow the schedule on the online calendar",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Event Calendar",
+      "lead": "Activities, forums and lectures of the Office of the Royal Society. Follow the schedule on the online calendar",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Event Calendar"
+        }
+      ],
+      "image": "assets/images/orst/news/data0005-00005277-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "event-calendar",
+      "id": "calendar",
+      "listHeading": "Latest activities",
+      "boardHeading": "Event Calendar",
+      "limit": 12,
+      "source": {
+        "type": "events"
+      }
+    }
+  ],
+  "sideNav": false,
+  "lang": "en"
+}

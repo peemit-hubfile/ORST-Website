@@ -26,3 +26,25 @@
   for = "/assets/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# หน้าหมวด "การปฏิบัติราชการ" ถูกเอาออก (ทุกหัวข้อมีหน้าของตัวเองแล้ว) — ลิงก์เดิมพาไปแผนผังเว็บไซต์
+[[redirects]]
+  from = "/operations.html"
+  to = "/sitemap.html"
+  status = 301
+
+# หน้าหมวด เกี่ยวกับเรา / ข่าวสารและกิจกรรม / บริการวิชาการ ถูกเอาออก — ลิงก์เดิมพาไปหน้าแรกของหมวด
+[[redirects]]
+  from = "/about.html"
+  to = "/history.html"
+  status = 301
+
+[[redirects]]
+  from = "/news.html"
+  to = "/general-news.html"
+  status = 301
+
+[[redirects]]
+  from = "/services.html"
+  to = "/e-services.html"
+  status = 301

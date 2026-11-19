@@ -1,0 +1,419 @@
+{
+  "_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step6_sitemap.py (อ่านจาก page-index ของหน้าหมวด) — อย่าแก้ด้วยมือ",
+  "sections": [
+    {
+      "key": "about",
+      "title": "เกี่ยวกับเรา",
+      "groups": [
+        {
+          "heading": "ผู้บริหาร",
+          "items": [
+            {
+              "title": "ผู้บริหารสำนักงานราชบัณฑิตยสภา",
+              "href": "executives.html"
+            },
+            {
+              "title": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
+              "href": "cio.html"
+            },
+            {
+              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO",
+              "href": "cio-it-management.html"
+            }
+          ]
+        },
+        {
+          "heading": "ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)",
+          "items": [
+            {
+              "title": "ข้อมูลของ ศปท.",
+              "href": "anti-corruption-center.html"
+            },
+            {
+              "title": "ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+              "href": "corruption-complaints.html"
+            },
+            {
+              "title": "แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+              "href": "complaint-guidelines.html"
+            },
+            {
+              "title": "ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+              "href": "complaint-statistics.html"
+            },
+            {
+              "title": "มาตรการป้องกันการรับสินบน (No Gift Policy)",
+              "href": "no-gift-policy.html"
+            },
+            {
+              "title": "การประเมินความเสี่ยงและแผนป้องกันการทุจริต",
+              "href": "anti-corruption-plan.html"
+            },
+            {
+              "title": "จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส",
+              "href": "ethics.html"
+            }
+          ]
+        },
+        {
+          "heading": "ข้อมูลองค์กร",
+          "items": [
+            {
+              "title": "ประวัติความเป็นมา",
+              "href": "history.html"
+            },
+            {
+              "title": "วิสัยทัศน์ พันธกิจ",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "ค่านิยม",
+              "href": "core-values.html"
+            },
+            {
+              "title": "โครงสร้างหน่วยงานและการแบ่งส่วนราชการ",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "เครื่องหมายราชการ",
+              "href": "emblem.html"
+            },
+            {
+              "title": "กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "อำนาจหน้าที่และภารกิจ",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
+          "heading": "บุคลากรและการบริหารทรัพยากรบุคคล",
+          "items": [
+            {
+              "title": "คณะกรรมการวิชาการ และกรรมการอื่น",
+              "href": "committees.html"
+            },
+            {
+              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล",
+              "href": "hr-plan.html"
+            },
+            {
+              "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล",
+              "href": "hr-criteria.html"
+            },
+            {
+              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี",
+              "href": "hr-annual-report.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "operations",
+      "title": "การปฏิบัติราชการ",
+      "groups": [
+        {
+          "heading": "แผนปฏิบัติราชการ",
+          "items": [
+            {
+              "title": "กฎหมายที่เกี่ยวข้อง",
+              "href": "related-laws.html"
+            },
+            {
+              "title": "คู่มือหรือมาตรฐานการปฏิบัติงาน",
+              "href": "operation-manuals.html"
+            },
+            {
+              "title": "แผนยุทธศาสตร์และแผนปฏิบัติการราชการ ๕ ปี",
+              "href": "strategic-plans.html"
+            },
+            {
+              "title": "แผนปฏิบัติราชการประจำปี",
+              "href": "annual-action-plan.html"
+            },
+            {
+              "title": "แผนบริหารความต่อเนื่อง",
+              "href": "continuity-plan.html"
+            },
+            {
+              "title": "แผนแม่บทเทคโนโลยีสารสนเทศ",
+              "href": "it-master-plan.html"
+            },
+            {
+              "title": "แผนบริหารความเสี่ยง",
+              "href": "risk-management-plan.html"
+            },
+            {
+              "title": "การลดใช้พลังงานของสำนักงานราชบัณฑิตยสภา",
+              "href": "energy-saving.html"
+            },
+            {
+              "title": "กฎบัตรการตรวจสอบภายใน",
+              "href": "internal-audit-charter.html"
+            },
+            {
+              "title": "แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี",
+              "href": "annual-budget-plan.html"
+            }
+          ]
+        },
+        {
+          "heading": "ผลการปฏิบัติราชการ",
+          "items": [
+            {
+              "title": "คู่มือหรือมาตรฐานการให้บริการ",
+              "href": "service-manuals.html"
+            },
+            {
+              "title": "ผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม",
+              "href": "monthly-performance.html"
+            },
+            {
+              "title": "มาตรฐานระยะเวลาการให้บริการ",
+              "href": "service-time-standards.html"
+            },
+            {
+              "title": "สรุปผลการปฏิบัติราชการตามคำรับรองการปฏิบัติราชการ",
+              "href": "performance-agreement.html"
+            },
+            {
+              "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิต / งบทดลอง",
+              "href": "unit-cost.html"
+            },
+            {
+              "title": "รายงานการกำกับติดตามการดำเนินงานและการใช้งบประมาณ รอบ ๖ เดือน",
+              "href": "six-month-report.html"
+            },
+            {
+              "title": "รายงานผลการดำเนินงานประจำปี",
+              "href": "annual-report.html"
+            },
+            {
+              "title": "รายงานผลการใช้จ่ายงบประมาณประจำปี",
+              "href": "budget-spending-report.html"
+            },
+            {
+              "title": "ข้อมูลเชิงสถิติการให้บริการ",
+              "href": "service-statistics.html"
+            },
+            {
+              "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการ",
+              "href": "satisfaction-survey.html"
+            }
+          ]
+        },
+        {
+          "heading": "ข้อมูลเปิดภาครัฐและการเปิดเผยข้อมูล",
+          "items": [
+            {
+              "title": "ข้อมูลข่าวสารตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. ๒๕๔๐",
+              "href": "official-information.html"
+            },
+            {
+              "title": "ชุดข้อมูลเปิดภาครัฐ (Open Data)",
+              "href": "open-data.html"
+            },
+            {
+              "title": "แบบคำขอชุดข้อมูลเปิด",
+              "href": "open-data-request.html"
+            },
+            {
+              "title": "นโยบายและแผนด้านข้อมูล (ธรรมาภิบาลข้อมูล การเปิดเผยข้อมูล และการคุ้มครองข้อมูลส่วนบุคคล)",
+              "href": "data-policy.html"
+            },
+            {
+              "title": "การเปิดเผยข้อมูลสาธารณะ (ITA / OIT)",
+              "href": "public-disclosure.html"
+            },
+            {
+              "title": "ช่องทางยื่นคำขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล",
+              "href": "data-subject-request.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "news",
+      "title": "ข่าวสารและกิจกรรม",
+      "groups": [
+        {
+          "heading": "ข่าวประชาสัมพันธ์",
+          "items": [
+            {
+              "title": "ข่าวประชาสัมพันธ์ทั่วไป",
+              "href": "general-news.html"
+            },
+            {
+              "title": "ข่าวกิจกรรม",
+              "href": "activity-news.html"
+            },
+            {
+              "title": "การบรรยายทางวิชาการ",
+              "href": "academic-lectures.html"
+            },
+            {
+              "title": "ปฏิทินกิจกรรม",
+              "href": "event-calendar.html"
+            },
+            {
+              "title": "คำถาม-คำตอบ (Q&A)",
+              "href": "qa.html"
+            },
+            {
+              "title": "คลังภาพ",
+              "href": "media-gallery.html"
+            },
+            {
+              "title": "คลังวิดีโอ",
+              "href": "videos.html"
+            },
+            {
+              "title": "RSS ข่าวสาร",
+              "href": "rss.html"
+            }
+          ]
+        },
+        {
+          "heading": "ประกาศ",
+          "items": [
+            {
+              "title": "ประกาศการจัดซื้อจัดจ้าง",
+              "href": "procurement-notices.html"
+            },
+            {
+              "title": "ประกาศผลจัดซื้อจัดจ้าง",
+              "href": "procurement-results.html"
+            },
+            {
+              "title": "ประกาศราคากลาง",
+              "href": "reference-prices.html"
+            },
+            {
+              "title": "สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)",
+              "href": "procurement-summary.html"
+            },
+            {
+              "title": "ประกาศผลการจัดซื้อจัดจ้าง (รายไตรมาส)",
+              "href": "procurement-quarterly.html"
+            },
+            {
+              "title": "ประกาศแผนจัดซื้อจัดจ้าง",
+              "href": "procurement-plans.html"
+            },
+            {
+              "title": "ประกาศขายทอดตลาด",
+              "href": "auctions.html"
+            },
+            {
+              "title": "ประกาศรับสมัครงานและประกาศด้านการบริหารงานบุคคล",
+              "href": "job-announcements.html"
+            },
+            {
+              "title": "ข่าวสารทางราชการ",
+              "href": "official-news.html"
+            },
+            {
+              "title": "ประกาศเผยแพร่สัญญา",
+              "href": "contracts.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "title": "บริการวิชาการ",
+      "groups": [
+        {
+          "heading": "บริการวิชาการ",
+          "items": [
+            {
+              "title": "พจนานุกรม",
+              "href": "dictionary.html"
+            },
+            {
+              "title": "คลังความรู้",
+              "href": "knowledge-base.html"
+            },
+            {
+              "title": "ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน",
+              "href": "book-ordering.html"
+            },
+            {
+              "title": "อินโฟกราฟิก",
+              "href": "infographics.html"
+            },
+            {
+              "title": "หลักเกณฑ์ต่าง ๆ",
+              "href": "language-guidelines.html"
+            },
+            {
+              "title": "ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+              "href": "ethnic-language-audio.html"
+            },
+            {
+              "title": "งานบริการ (E-Service)",
+              "href": "e-services.html"
+            },
+            {
+              "title": "คู่มือสำหรับประชาชน",
+              "href": "citizen-manual.html"
+            },
+            {
+              "title": "ดาวน์โหลดแบบฟอร์ม",
+              "href": "download-forms.html"
+            },
+            {
+              "title": "ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ",
+              "href": "e-channels.html"
+            },
+            {
+              "title": "ข้อมูลการอนุญาตที่ดำเนินการแล้ว",
+              "href": "permits-issued.html"
+            },
+            {
+              "title": "ติดตามสถานะคำขอรับบริการ",
+              "href": "track-request.html"
+            },
+            {
+              "title": "คำแนะนำการใช้บริการออนไลน์",
+              "href": "e-service-guide.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "title": "ติดต่อเรา",
+      "href": "contact.html",
+      "groups": [
+        {
+          "heading": "ติดต่อเรา",
+          "items": [
+            {
+              "title": "รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ",
+              "href": "complaints.html"
+            },
+            {
+              "title": "แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)",
+              "href": "contact.html#message-form"
+            },
+            {
+              "title": "แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์",
+              "href": "website-survey.html"
+            },
+            {
+              "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
+              "href": "social-media.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Country and Capital Names",
+  "navKey": "knowledge",
+  "description": "Country and capital names — Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022) · Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022) · Link to the announcement in the Royal Gazette",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Country and Capital Names",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society — 3 topics",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Country and Capital Names"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "intro",
+      "html": "<p>Following the Office of the Royal Society's announcement on the names of countries, territories, administrative areas and capitals, dated 29 June 2022, and its preparation of an announcement of the Office of the Prime Minister, General Prawit Wongsuwon, Deputy Prime Minister acting on behalf of the Prime Minister, signed the Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals, which was published in the Royal Gazette on 1 September 2022.</p>"
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004928.PDF",
+          "category": "Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022)"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004929.PDF",
+          "category": "Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022)"
+        },
+        {
+          "title": "Announcement of the Office of the Prime Minister on the names of countries, territories, administrative areas and capitals (30 Aug 2022)",
+          "file": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0013.PDF",
+          "category": "Announcements in the Royal Thai Government Gazette",
+          "note": "Royal Thai Government Gazette"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the names of countries, territories, administrative areas and capitals (29 Jun 2022)",
+          "file": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/205/T_0028.PDF",
+          "category": "Announcements in the Royal Thai Government Gazette",
+          "note": "Royal Thai Government Gazette"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

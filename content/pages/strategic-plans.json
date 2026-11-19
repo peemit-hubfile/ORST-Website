@@ -1,0 +1,53 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-SGP (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "แผนยุทธศาสตร์และแผนปฏิบัติราชการ ๕ ปี",
+  "navKey": "about",
+  "description": "แผนยุทธศาสตร์และแผนปฏิบัติราชการระยะ ๕ ปีของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "แผนยุทธศาสตร์และแผนปฏิบัติราชการ ๕ ปี",
+      "lead": "แผนยุทธศาสตร์และแผนปฏิบัติราชการระยะ ๕ ปีของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "แผนยุทธศาสตร์และแผนปฏิบัติราชการ ๕ ปี"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "แผนปฏิบัติราชการ ระยะ ๕ ปี ระยะเริ่มแรก ๓ ปี (พ.ศ. ๒๕๖๓-๒๕๖๕) สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000855.PDF",
+          "fileSize": 467326
+        },
+        {
+          "title": "แผนปฏิบัติราชการ ระยะ ๕ ปี ช่วงที่ ๒ (พ.ศ. ๒๕๖๖-๒๕๗๐) สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000886.PDF",
+          "fileSize": 222381
+        },
+        {
+          "title": "แผนยุทธศาสตร์สำนักงานราชบัณฑิตยสภา ระยะ ๒๐ ปี (พ.ศ. ๒๕๖๑-๒๕๘๐)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000892.PDF",
+          "fileSize": 1550932
+        },
+        {
+          "title": "แผนปฏิบัติราชการระยะ ๕ ปี (พ.ศ. ๒๕๖๖-๒๕๗๐) ของสำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000987.PDF",
+          "fileSize": 108265
+        }
+      ]
+    }
+  ]
+}

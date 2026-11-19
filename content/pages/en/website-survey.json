@@ -1,0 +1,58 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมไม่มีแบบสำรวจความพึงพอใจเว็บไซต์ — รอลิงก์ (เช่น Google Form) จาก ORST",
+  "title": "Website Survey",
+  "navKey": "contact",
+  "description": "Rate your satisfaction with the Office of the Royal Society website to help us improve our services",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Website Survey",
+      "lead": "Rate your satisfaction with the Office of the Royal Society website to help us improve our services",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Contact Us",
+          "href": "contact.html"
+        },
+        {
+          "label": "Website Survey"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "feedback",
+      "layout": "cards",
+      "columns": 2,
+      "linkStyle": "rows",
+      "heading": "Share your feedback",
+      "lead": "Your feedback helps the Office improve the website and its services to better meet your needs.",
+      "items": [
+        {
+          "icon": "i-check",
+          "title": "Website Survey",
+          "body": "Being prepared — [Website satisfaction survey link — awaiting information from the Office]"
+        },
+        {
+          "icon": "i-form",
+          "title": "Feedback and suggestions form",
+          "body": "Share your opinions or suggestions on the work of the Office right away using the online form.",
+          "links": [
+            {
+              "label": "Feedback form",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+              "kind": "Google Form"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

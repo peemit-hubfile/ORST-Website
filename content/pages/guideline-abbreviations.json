@@ -1,0 +1,54 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "การเขียนคำย่อ",
+  "navKey": "knowledge",
+  "description": "การเขียนคำย่อ ตามหลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "การเขียนคำย่อ",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "หลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หลักเกณฑ์ภาษาไทย",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "การเขียนคำย่อ"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": false,
+      "sections": [
+        {
+          "html": "<p>นักวรรณศิลป์ของสำนักงานราชบัณฑิตยสภาได้รวบรวมคำย่อที่มีผู้สอบถามบ่อยมาเผยแพร่ดังรายการที่ปรากฏในหน้านี้และหน้าต่อ ๆ ไป ท่านสามารถสอบถามเพิ่มเติมได้ที่ ๐ ๒๓๕๖ ๐๔๖๖-๗๐ หรือติดต่อทาง e-mail : ripub@orst.go.th<br></p>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ดูหลักเกณฑ์เรื่องอื่น",
+      "body": "หลักเกณฑ์การใช้ภาษาไทยทั้งหมดของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "หลักเกณฑ์ภาษาไทยทั้งหมด",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ]
+}

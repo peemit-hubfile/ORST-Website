@@ -1,0 +1,101 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69IWO1639084 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69iwo1639084",
+  "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+  "navKey": "news",
+  "description": "3 images · 2 attachments",
+  "sideNav": false,
+  "updatedAt": "2026-09-23",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Announcements",
+      "date": "2026-09-23",
+      "heading": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+      "image": "assets/images/orst/news/data0005-00005407-960.jpg",
+      "imageAlt": "News image: Announcement of the Office of the Royal Society on inviting applications for selection and appointment as Associate Fellow",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005407.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005410.PDF"
+        },
+        {
+          "title": "Regulation on qualifications of applicants for Associate Fellowship",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005411.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005407-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005407.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005408-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005408.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005409-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005409.JPG",
+          "alt": "News photo 3"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Cancellation of the Call for Applications for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66EYJ0634075",
+          "category": "Announcements",
+          "publishedAt": "2023-05-25"
+        },
+        {
+          "title": "Call for applications for appointment as Associate Fellow, Philosophy (all fields), Academy of Moral and Political Sciences, 1 position",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67CMP0204075",
+          "category": "News",
+          "publishedAt": "2024-03-13"
+        },
+        {
+          "title": "Call for Applications for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68FTT3628019",
+          "category": "Announcements",
+          "publishedAt": "2025-06-20"
+        },
+        {
+          "title": "Call for applications for appointment as Associate Fellow, Academy of Moral and Political Sciences, 1 position",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64AYN2731075",
+          "category": "Announcements",
+          "publishedAt": "2021-01-25"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

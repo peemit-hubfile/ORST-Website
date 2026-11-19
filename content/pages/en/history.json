@@ -1,0 +1,374 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบ T2 + เส้นเวลา — เมนู 3.3.1 ข้อความจาก orst.go.th/iwfm_list.asp?p=ABOUT-HISTORY-ORS คงถ้อยคำเดิม (อยู่ใน paragraphs ของแต่ละช่วง) หัวข้อ/lead/สถิติ สรุปจากข้อความเดิม ให้ ORST ตรวจ · ภาพประวัติจาก Wikimedia Commons (assets/images/orst/history/CREDITS.json) แสดงที่มาใต้ภาพแต่ละภาพ (credit) และมุม hero (จำเป็นตามสัญญาอนุญาต CC BY / CC BY-SA) · ภาพปัจจุบันจากข่าวของสำนักงาน · ภาพปกเป็นอาคารสำนักงานปัจจุบัน (hero-1.jpg) · ข้อมูลเครดิตภาพเก็บไว้ในฟิลด์ _credit/_imageCredit (ไม่แสดง) — ภาพ CC BY/CC BY-SA ต้องให้เครดิตเมื่อเผยแพร่",
+  "title": "History",
+  "navKey": "about",
+  "description": "History of the Royal Society of Thailand and the Office of the Royal Society, from 1926 to the present",
+  "updatedAt": "2026-11-18",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "History",
+      "lead": "The Office of the Royal Society is a department-level government agency that is not part of the Office of the Prime Minister, any ministry or sub-ministry, and reports directly to the Prime Minister",
+      "image": "assets/images/hero-1.jpg",
+      "imageAlt": "",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "History"
+        }
+      ],
+      "highlights": [
+        {
+          "icon": "i-calendar",
+          "label": "Founded 19 April 1926"
+        },
+        {
+          "icon": "i-book",
+          "label": "A home for all fields of learning"
+        },
+        {
+          "icon": "i-people",
+          "label": "Fellows in 3 academies"
+        }
+      ],
+      "_imageCredit": {
+        "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
+        "href": "https://commons.wikimedia.org/wiki/File:Bang_Khun_Phrom_Palace_from_Rama_VIII_Bridge.jpg"
+      },
+      "_imageOld": "assets/images/orst/history/bang-khun-phrom.jpg"
+    },
+    {
+      "type": "anchor-nav",
+      "label": "Jump to period",
+      "items": [
+        {
+          "label": "2469",
+          "href": "#timeline-1"
+        },
+        {
+          "label": "2476",
+          "href": "#timeline-2"
+        },
+        {
+          "label": "2477",
+          "href": "#timeline-3"
+        },
+        {
+          "label": "2485",
+          "href": "#timeline-4"
+        },
+        {
+          "label": "2531–2549",
+          "href": "#timeline-5"
+        },
+        {
+          "label": "2556",
+          "href": "#timeline-6"
+        },
+        {
+          "label": "2558",
+          "href": "#timeline-7"
+        },
+        {
+          "label": "Today",
+          "href": "#timeline-8"
+        }
+      ]
+    },
+    {
+      "type": "stat-row",
+      "id": "overview",
+      "variant": "dark",
+      "eyebrow": "Royal Society of Thailand",
+      "heading": "A home for all fields of learning",
+      "lead": "Founded by His Majesty King Prajadhipok to research, disseminate, promote and exchange knowledge, and to develop, conserve and provide academic services for the benefit of the nation and its people (Section 6, Royal Society Act B.E. 2558).",
+      "countUp": true,
+      "image": "assets/images/orst/history/royal-institute-grand-palace.jpg",
+      "items": [
+        {
+          "value": "100 years",
+          "label": "since its founding",
+          "note": "19 April 1926 – 2026"
+        },
+        {
+          "value": "51",
+          "label": "first Fellows",
+          "note": "appointed 30 September 1942"
+        },
+        {
+          "value": "3",
+          "label": "academies",
+          "note": "Moral and Political Sciences · Science · Arts"
+        },
+        {
+          "value": "5",
+          "label": "core language and academic programmes",
+          "note": "Dictionary · Encyclopedia · Coined terms · Geographical gazetteer · Romanization"
+        }
+      ],
+      "_imageCredit": {
+        "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
+        "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
+      }
+    },
+    {
+      "type": "timeline",
+      "id": "timeline",
+      "eyebrow": "1926 – present",
+      "heading": "The Royal Society through the years",
+      "lead": "Scroll down to follow the key events in order. Select “Read more” for the full text.",
+      "items": [
+        {
+          "year": "2469",
+          "date": "19 April 1926",
+          "title": "Founding of the “Royal Society”",
+          "lead": "King Prajadhipok, King Rama VII, graciously proclaimed the establishment of the “Royal Society”, reviving the ancient Krom Ratchabandit.",
+          "paragraphs": [
+            "On 19 April 1926, His Majesty King Prajadhipok, King Rama VII of the Chakri Dynasty, graciously proclaimed the establishment of the “ราชบัณฑิตยสภา” (Royal Society). The King saw fit to revive the work of the Krom Ratchabandit, an ancient department and a position to which those learned in the arts and sciences were appointed to serve the Crown."
+          ],
+          "image": "assets/images/orst/history/king-prajadhipok.jpg",
+          "portrait": true,
+          "alt": "Portrait of His Majesty King Prajadhipok",
+          "caption": "His Majesty King Prajadhipok",
+          "_credit": {
+            "text": "Unknown author / Wikimedia Commons (Public domain)",
+            "href": "https://commons.wikimedia.org/wiki/File:King_Prajadhipok_portrait_photograph.jpg"
+          }
+        },
+        {
+          "year": "2476",
+          "title": "The Royal Institute Act",
+          "lead": "The Royal Institute Act was enacted so that research could be carried out, knowledge shared with the public and textbooks produced widely.",
+          "paragraphs": [
+            "Later, in 1933, the House of Representatives advised His Majesty King Prajadhipok that a Royal Institute should be established, with members of learning who might in future be elected as Fellows, to carry out research and disseminate knowledge to the public and to produce textbooks widely. His Majesty therefore graciously enacted the Royal Institute Act in 1933 and repealed the proclamation establishing the Royal Society dated 19 April 1926."
+          ]
+        },
+        {
+          "year": "2477",
+          "date": "16 June 1934",
+          "title": "The first meeting of Associate Fellows and the early work",
+          "lead": "Associate Fellows held their first meeting in the Grand Palace, and work began on revising the dictionary and on the annual Buddhist children’s book competition.",
+          "paragraphs": [
+            "When the Royal Institute was first established, there were as yet no Fellows, only Associate Fellows, who held their first meeting in the Grand Palace on 16 June 1934.",
+            "Key work in the early period arose from the royal initiative of His Majesty King Prajadhipok, namely the annual competition for writing books teaching Buddhism to children, which the Royal Institute has carried on from 1934 to the present. In addition, there are 5 other main areas of work: revising the dictionary, which was originally the work of revising the Pathanukrom transferred from the Ministry of Public Instruction in 1934; the encyclopedia; coining Thai technical terms; the geographical gazetteer; and setting the guidelines for the romanization of Thai."
+          ],
+          "image": "assets/images/orst/history/chakri-maha-prasat.jpg",
+          "alt": "Chakri Maha Prasat Throne Hall, Grand Palace",
+          "caption": "The Grand Palace",
+          "_credit": {
+            "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
+            "href": "https://commons.wikimedia.org/wiki/File:Phra_Thinang_Chakri_Maha_Prasat_(II)_BKK.jpg"
+          }
+        },
+        {
+          "year": "2485",
+          "date": "30 September 1942",
+          "title": "The first Fellows appointed",
+          "lead": "The first Fellows were appointed by Royal Command, following the Royal Institute Act B.E. 2485.",
+          "paragraphs": [
+            "Later, the Royal Institute Act B.E. 2485 was issued, and the first Fellows were appointed by Royal Command on 30 September 1942, numbering 51 people."
+          ],
+          "stat": {
+            "value": "51",
+            "label": "first Fellows appointed"
+          }
+        },
+        {
+          "year": "2531–2549",
+          "title": "From Bang Khun Phrom Palace to Sanam Suea Pa",
+          "lead": "From Bang Khun Phrom Palace to the Thawon Watthu Building, the Ratchawanlop Building in the Grand Palace, and Sanam Suea Pa.",
+          "paragraphs": [
+            "The Royal Institute's premises were first the upper floor of the Somdet residence at Bang Khun Phrom Palace. It later moved to the Thawon Watthu Building, the northern part of the Vajiravudh Library building on Na Phra That Road, until 1988, then to the Ratchawallop Building in the Grand Palace until 2006, when it moved to Sanam Suea Pa, Dusit District, Bangkok, where it remains today."
+          ],
+          "images": [
+            {
+              "image": "assets/images/orst/history/thawon-watthu.jpg",
+              "alt": "Thawon Watthu Building (Vajiravudh Library), Na Phra That Road",
+              "caption": "Thawon Watthu Building, Na Phra That Road",
+              "_credit": {
+                "text": "Supanut Arunoprayote / Wikimedia Commons (CC BY 4.0)",
+                "href": "https://commons.wikimedia.org/wiki/File:Thawon_Watthu_Building_20231209.jpg"
+              }
+            },
+            {
+              "image": "assets/images/orst/history/royal-institute-grand-palace.jpg",
+              "alt": "The former Royal Institute building in the Grand Palace",
+              "caption": "Former offices in the Grand Palace",
+              "_credit": {
+                "text": "Rikker Dockum / Wikimedia Commons (CC BY-SA 2.5)",
+                "href": "https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG"
+              }
+            }
+          ]
+        },
+        {
+          "year": "2556",
+          "title": "From the “Royal Institute” to the “Royal Society”",
+          "lead": "The Council of Fellows proposed restoring the original name, “Royal Society”, to honour the 120th anniversary of King Prajadhipok’s birth.",
+          "paragraphs": [
+            "In 2013, the Council of Fellows considered it appropriate to change the name “ราชบัณฑิตยสถาน” (Royal Institute) to “ราชบัณฑิตยสภา” (Royal Society of Thailand), the original name given by His Majesty King Prajadhipok when he founded it on 19 April 1926, in honour of the 120th anniversary of his birth. It also sought to improve the powers, duties and academic administration of the Royal Society so that its work would reach the national academic community and the general public more widely; to establish a welfare fund for members of the Royal Society for their benefit; and to allow income the Royal Society receives from academic administration and from education and training to be spent on the duties of the Office of the Royal Society without having to remit it to the Treasury as state revenue, giving greater flexibility in academic administration."
+          ]
+        },
+        {
+          "year": "2558",
+          "date": "14 February 2015",
+          "title": "Royal Society of Thailand Act, B.E. 2558",
+          "lead": "The “Royal Institute” became the “Office of the Royal Society”, and the “Council of Fellows” became the “Royal Society”.",
+          "paragraphs": [
+            "In 2015, His Majesty the King issued a Royal Command proclaiming that it was appropriate to revise the law on the Royal Institute, and graciously enacted the Royal Society Act B.E. 2558, published in the Royal Gazette, Volume 132, Part 10 Kor, dated 13 February 2015, and in force from 14 February 2015. The name of the agency “ราชบัณฑิตยสถาน” (Royal Institute) was therefore changed to “สำนักงานราชบัณฑิตยสภา” (Office of the Royal Society), and “สภาราชบัณฑิต” (Council of Fellows) was changed to “ราชบัณฑิตยสภา” (Royal Society of Thailand)."
+          ],
+          "stat": {
+            "value": "3",
+            "label": "membership types — Associate Fellow, Fellow, Honorary Fellow"
+          }
+        },
+        {
+          "year": "Today",
+          "title": "Developing public services",
+          "lead": "Academic services keep developing to reach more people, faster — from dictionary apps and Braille editions to knowledge on local dialects.",
+          "paragraphs": [
+            "Since 14 February 2015, the agency “ราชบัณฑิตยสถาน” (Royal Institute) has been renamed “สำนักงานราชบัณฑิตยสภา” (Office of the Royal Society), and “สภาราชบัณฑิต” (Council of Fellows) has been renamed “ราชบัณฑิตยสภา” (Royal Society of Thailand), but academic work and services disseminating its work to the public continue, along with development to meet the public's needs more widely and quickly. Besides producing academic books in various fields, radio and television programmes, CDs and DVDs disseminating knowledge, and e-learning materials, in 2015 the Office of the Royal Society made its most-demanded books more usable by engaging the National Electronics and Computer Technology Center (NECTEC) to develop applications of the Royal Institute Dictionary B.E. 2554 and of How to Read and How to Write, Royal Institute edition, for use on smartphones. The Office of the Royal Society and NECTEC have also agreed to cooperate in turning other academic works into applications. In addition, the Office of the Royal Society has improved and promoted Thai-language learning for people with disabilities, for example by producing Braille editions of the Royal Institute Dictionary and How to Read and How to Write for people with visual impairments, and by holding training in correct Thai pronunciation for blind people and teachers of the blind, so that people with visual impairments and blind people can learn correct Thai pronunciation on an equal footing with others.",
+            "The Office of the Royal Society also runs a project to build a database of words in the Royal Institute Dictionary, and promotes the preservation of local dialects and local wisdom in every region of the country by compiling knowledge on the dialects of the North, the Northeast and the South and disseminating it through printed books, radio programmes and competitions in which students tell stories of pride in their home communities in their local dialect.",
+            "The duties, mission and key roles of the Office of the Royal Society — creating knowledge in various fields, setting standards for the use of the Thai language and improving academic services to the public — have been carried out and developed continuously over the 90 years since the founding of the Royal Society of Thailand on 19 April 1926 to the present."
+          ],
+          "image": "assets/images/orst/news/data0005-00005024-960.jpg",
+          "alt": "Academic forum “Revered Fellows, Sages of the Land” No. 14",
+          "caption": "Academic forum “Revered Fellows, Sages of the Land” No. 14 (December 2025)"
+        }
+      ]
+    },
+    {
+      "type": "org-chart",
+      "id": "structure",
+      "variant": "alt",
+      "eyebrow": "Structure and powers",
+      "heading": "The role of the Office and the Royal Society",
+      "lead": "The work is divided into two parts: the Royal Society, which sets academic policy, and the Office of the Royal Society, the permanent government agency.",
+      "tiers": [
+        {
+          "tone": "deep",
+          "eyebrow": "Policy body",
+          "title": "Royal Society of Thailand",
+          "roles": [
+            {
+              "role": "President of the Council",
+              "holder": "President of the Royal Society"
+            },
+            {
+              "role": "Vice Presidents of the Council",
+              "holder": "2 Vice Presidents of the Royal Society"
+            },
+            {
+              "role": "Council members",
+              "holder": "All Fellows"
+            }
+          ],
+          "childrenLabel": "Fellows in 3 academies",
+          "children": [
+            "Academy of Moral and Political Sciences",
+            "Academy of Science",
+            "Academy of Arts"
+          ]
+        },
+        {
+          "tone": "gold",
+          "eyebrow": "Links both parts",
+          "title": "Secretary-General of the Royal Society of Thailand",
+          "roles": [
+            {
+              "role": "In the Royal Society",
+              "holder": "Secretary of the Council"
+            },
+            {
+              "role": "In the Office",
+              "holder": "Head of agency"
+            }
+          ],
+          "note": "The Deputy Secretary-General serves as Assistant Secretary of the Council and assists in running the Office."
+        },
+        {
+          "tone": "plain",
+          "eyebrow": "Government agency",
+          "title": "Office of the Royal Society",
+          "note": "A department-level government agency, not under the Office of the Prime Minister or any ministry.",
+          "childrenLabel": "Internal units",
+          "children": [
+            "Office of the Secretary",
+            "Moral and Political Sciences Division",
+            "Science Division",
+            "Arts Division"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "title": "Powers and duties of the Royal Society",
+          "items": [
+            "Set academic policy",
+            "Approve the Royal Society’s regulations and rules",
+            "Elect the President and Vice Presidents of the Royal Society",
+            "Approve nominations of Fellows and Honorary Fellows"
+          ],
+          "more": [
+            "Section 6 of the Royal Society Act B.E. 2558 states that the Royal Society of Thailand is an institution for the advancement of all branches of knowledge, founded by His Majesty King Prajadhipok, with the objective of carrying out study and research in order to disseminate, promote and exchange knowledge, and to develop, preserve and provide academic services for the benefit of the country and the people. Under Section 12, the Royal Society of Thailand has 3 types of members: 1. Associate Fellows, 2. Fellows, 3. Honorary Fellows. Section 24 of the Act establishes a council within the Office of the Royal Society, called the “ราชบัณฑิตยสภา” (Royal Society of Thailand), consisting of the President of the Royal Society of Thailand as President of the Council, 2 Vice Presidents of the Royal Society of Thailand as Vice Presidents of the Council, and all Fellows as council members, with the Secretary-General of the Office of the Royal Society serving as Secretary of the Council and the Deputy Secretary-General serving as Assistant Secretary of the Council.",
+            "The Royal Society of Thailand has the power and duty to set policy for academic work within the powers and duties of the Office of the Royal Society; to consider and approve rules and regulations on the operations of the Royal Society; to elect the President and Vice Presidents of the Royal Society of Thailand; and to resolve to approve nominations for the appointment of Fellows and Honorary Fellows."
+          ]
+        },
+        {
+          "title": "Powers and duties of the Office of the Royal Society",
+          "items": [
+            "Research and foster all fields of learning, and publish the results for the benefit of the nation and its people",
+            "Produce dictionaries, encyclopedias, gazetteers and taxonomies, and coin academic terms in many fields",
+            "Set standards for Thai usage, and conserve and promote Thai as part of the national identity"
+          ],
+          "more": [
+            "The Office of the Royal Society is a government agency known by another name, with the status of a department not under the Office of the Prime Minister, a ministry or a sub-ministry, under the law on state administration. It has many important powers and duties, such as conducting study and research, advancing all branches of knowledge and disseminating its work for the benefit of the country and the people; producing dictionaries, encyclopedias, gazetteers and taxonomies; coining technical terms in various fields, including compiling dictionaries of foreign-language technical terms in Thai, and other academic work; setting guidelines on the use of the Thai language; preserving the Thai language so that it does not change for the worse; and promoting the Thai language, a hallmark of the nation, so that it becomes ever more prominent.",
+            "The Royal Institute's operations were divided into 2 parts: the Council of Fellows and the civil service. The Council of Fellows set policy for academic work and consisted of council members who were Fellows from 3 academies, namely the Academy of Moral and Political Sciences, the Academy of Science and the Academy of Arts. The President of the Royal Institute was President of the Council, the Vice President of the Royal Institute was Vice President of the Council, the Secretary-General of the Royal Institute served as Secretary of the Council, and the Deputy Secretary-General served as Assistant Secretary of the Council. In the civil service part, the Secretary-General of the Royal Institute was head of the agency, assisted by the Deputy Secretary-General, overseeing the academic and administrative work of the Office of the Secretary, the Moral and Political Sciences Division, the Science Division and the Arts Division, and coordinating work with all the academies.",
+            "In addition, the Royal Institute has run many projects to disseminate knowledge in various fields and to preserve and promote the Thai language, including the “Know and Love Thai” project, a key project under government policy; the ASEAN Languages and Cultures project; and the National Language Policy project. It also exchanges knowledge and coordinates with other learned societies and academic institutions in Thailand and abroad. The Royal Institute has continuously carried out its mission of study, research and the advancement of all branches of knowledge. Its best-known academic work, used as a reference and as the standard for writing Thai, both in official documents and in education, so that usage is uniform, is the Royal Institute Dictionary."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "academic-work",
+      "layout": "timeline",
+      "eyebrow": "Academic work",
+      "heading": "From academic committees to the public",
+      "lead": "Academic work is carried out through academic committees, which hold meetings to consider terms, coin technical terms, write explanations of terms in various fields and set language guidelines. The results, as bodies of knowledge, are then disseminated to the public through various channels, including print, radio, television and electronic media, so as to meet the public's needs widely. Feedback is also gathered in order to make services more effective.",
+      "items": [
+        {
+          "title": "Academic committees",
+          "body": "Meet to review and coin terms, and write term definitions across fields"
+        },
+        {
+          "title": "Set language standards",
+          "body": "Build knowledge and standards for Thai usage"
+        },
+        {
+          "title": "Share with the public",
+          "body": "Print, radio, television and electronic media"
+        },
+        {
+          "title": "Listen to feedback",
+          "body": "Use it to make services more effective"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "photo-credits",
+      "width": "full",
+      "html": "<p class=\"photo-credits\"><strong>Photo credits</strong> Chakri Maha Prasat Throne Hall and Thawon Watthu Building: <a href=\"https://commons.wikimedia.org/wiki/File:Phra_Thinang_Chakri_Maha_Prasat_(II)_BKK.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Supanut Arunoprayote</a> / Wikimedia Commons (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY 4.0</a>) · Former office in the Grand Palace: <a href=\"https://commons.wikimedia.org/wiki/File:Royal_Institute_Building.JPG\" target=\"_blank\" rel=\"noopener noreferrer\">Rikker Dockum</a> / Wikimedia Commons (<a href=\"https://creativecommons.org/licenses/by-sa/2.5/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 2.5</a>) · Royal portrait: <a href=\"https://commons.wikimedia.org/wiki/File:King_Prajadhipok_portrait_photograph.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Wikimedia Commons</a> (public domain)</p>"
+    }
+  ],
+  "lang": "en"
+}

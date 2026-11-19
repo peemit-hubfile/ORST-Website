@@ -1,0 +1,39 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-CIO (ถอดข้อความจากภาพ) — ข้อ 4.3 ยังขาดที่อยู่ และโทรสาร (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS · รายชื่อดึงจาก content/people/index.json",
+  "title": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
+  "navKey": "about",
+  "description": "ข้อมูลผู้บริหารเทคโนโลยีสารสนเทศระดับสูงของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
+      "lead": "ข้อมูลผู้บริหารเทคโนโลยีสารสนเทศระดับสูงของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "cio",
+      "layout": "feature",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general"
+        ]
+      }
+    }
+  ]
+}
