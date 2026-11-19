@@ -3068,7 +3068,16 @@ function initA11yShowcase() {
   document.querySelectorAll('[data-a11y-showcase]').forEach(root => {
     if (root.dataset.bound === '1') return;
     const panel = document.querySelector('[data-a11y]');
-    if (!panel) return;
+    // หน้าที่ build ไว้ล่วงหน้า (dist/): page-runtime เรียกก่อน components.js สร้างแผงช่วยการเข้าถึง → รอแล้วลองใหม่
+    if (!panel) {
+      if (!root.dataset.wait) {
+        root.dataset.wait = '1';
+        const retry = () => setTimeout(initA11yShowcase, 0);
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', retry, { once: true });
+        else setTimeout(initA11yShowcase, 300);
+      }
+      return;
+    }
     root.dataset.bound = '1';
     const T = s => (I18N.lang === 'en' ? I18N.translate(s) : s);
     const DESC = {
