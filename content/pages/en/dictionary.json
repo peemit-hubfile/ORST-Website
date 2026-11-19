@@ -1,0 +1,129 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ลิงก์ระบบและหลักเกณฑ์จาก orst.go.th — คำถามที่พบบ่อยด้านภาษายังเป็นตัวอย่างเดิม",
+  "title": "Dictionaries and vocabulary",
+  "navKey": "dictionary",
+  "description": "Search for meanings, pronunciations, spellings and coined technical terms in the standard databases of the Office of the Royal Society",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "Language services",
+      "heading": "Dictionaries and vocabulary",
+      "lead": "Search for meanings, pronunciations, spellings and coined technical terms in the standard databases",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Dictionaries and vocabulary"
+        }
+      ],
+      "actions": [
+        {
+          "label": "Open the online dictionary",
+          "href": "#"
+        },
+        {
+          "label": "Download guidelines",
+          "href": "#",
+          "variant": "ghost"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "services",
+      "variant": "alt",
+      "heading": "Vocabulary services",
+      "lead": "Select a database to search",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-dictionary",
+          "title": "Online Dictionary",
+          "body": "Search meanings, pronunciations and usage examples of standard Thai words",
+          "href": "https://dictionary.orst.go.th/",
+          "meta": "Terminology database"
+        },
+        {
+          "icon": "i-form",
+          "title": "ORST Coined Words Online",
+          "body": "Coined technical terms, organized by academic field",
+          "href": "https://coined-word.orst.go.th/",
+          "meta": "Academic terms"
+        },
+        {
+          "icon": "i-database",
+          "title": "Encyclopedia & Taxonomy",
+          "body": "Knowledge repository and word categories for academic reference",
+          "href": "https://lst.nectec.or.th/encyclopedia/",
+          "meta": "Reference repository"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "guidelines",
+      "heading": "Thai language usage guidelines",
+      "lead": "Standard documents for writing and referencing",
+      "items": [
+        {
+          "title": "Transliteration guidelines",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=8728397LTG5813223326234222622",
+          "icon": "i-file"
+        },
+        {
+          "title": "Romanization of Thai",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERJ5814038",
+          "icon": "i-file"
+        },
+        {
+          "title": "Punctuation marks",
+          "href": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0249069",
+          "icon": "i-file"
+        },
+        {
+          "title": "Spacing",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=3529352MTG5813223326234222622",
+          "icon": "i-file"
+        },
+        {
+          "title": "Writing abbreviations",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=6622562MTG5813223326234222622",
+          "icon": "i-file"
+        },
+        {
+          "title": "Royal vocabulary",
+          "href": "https://www.orst.go.th/iwfm_modal.asp?i=65233%3A2MTG5813223326234222622",
+          "icon": "i-file"
+        }
+      ],
+      "action": {
+        "label": "View all guidelines",
+        "href": "language-guidelines.html"
+      }
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "variant": "alt",
+      "heading": "Frequently asked language questions",
+      "items": [
+        {
+          "q": "Which spelling is correct: “อนุญาต” or “อนุญาติ” (permit)?",
+          "a": "The correct spelling is “อนุญาต”, without the vowel ิ (sara i) on ต"
+        },
+        {
+          "q": "What should I do if I cannot find a word in the dictionary?",
+          "a": "You can send a question through the academic information inquiry form on the Academic Services page"
+        },
+        {
+          "q": "Can content from the dictionary be reused?",
+          "a": "Printing or commercial distribution requires prior permission. See the procedure on the Academic Services page"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

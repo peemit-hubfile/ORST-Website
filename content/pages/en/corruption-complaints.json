@@ -1,0 +1,78 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_mb.asp — เบอร์โทร 0 2356 xxxx เป็นเลขหมายเดิมสมัยสนามเสือป่า ให้ ORST ยืนยัน (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Report Corruption & Misconduct",
+  "navKey": "about",
+  "description": "Channels for reporting complaints of corruption and misconduct by staff of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Report Corruption & Misconduct",
+      "lead": "Channels for reporting complaints of corruption and misconduct by staff of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Anti-Corruption Operation Center",
+          "href": "anti-corruption-center.html"
+        },
+        {
+          "label": "Report Corruption & Misconduct"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "channels",
+      "toc": false,
+      "intro": [
+        "If you witness staff of the Office of the Royal Society engaging in what may be corruption or misconduct, you can file a complaint through the following channels"
+      ],
+      "sections": [
+        {
+          "heading": "Complaint box for corruption and misconduct",
+          "paragraphs": [
+            "1st floor, Office of the Royal Society"
+          ]
+        },
+        {
+          "heading": "By mail",
+          "paragraphs": [
+            "Anti-Corruption Operation Center (ACOC), Office of the Royal Society, The Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5th December B.E. 2550 (Building C), Chaeng Watthana Road, Thung Song Hong, Lak Si, Bangkok 10210"
+          ]
+        },
+        {
+          "heading": "By email",
+          "html": "<p><a href=\"mailto:anti.corruption@orst.go.th\">anti.corruption@orst.go.th</a></p>"
+        },
+        {
+          "heading": "By telephone",
+          "paragraphs": [
+            "0 2356 0466-70 ext. 2021"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "guidelines",
+      "items": [
+        {
+          "title": "Guidelines for handling complaints of corruption and misconduct",
+          "publishedAt": "2024-02-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000959.PDF"
+        }
+      ],
+      "heading": "Guidelines for handling complaints",
+      "variant": "alt",
+      "layout": "compact"
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,216 @@
+/* =============================================================================
+   page-runtime.js — โหลดเนื้อหาหน้าจากไฟล์ JSON แล้ว render ลงหน้าเว็บ
+   -----------------------------------------------------------------------------
+   ใช้กับหน้าที่เนื้อหามาจาก content/pages/<slug>.json
+   หน้า HTML ต้องมีโครงแบบนี้
+
+     <body data-page="about">
+       <div id="app-header"></div>
+       <main id="main-content">
+         <div id="app-content" data-content="content/pages/about.json"></div>
+       </main>
+       <div id="app-footer"></div>
+       <script src="assets/js/components.js"></script>
+       <script type="module" src="assets/js/page-runtime.js"></script>
+     </body>
+
+   ถ้าไม่ใส่ data-content จะเดาชื่อไฟล์จากชื่อหน้า เช่น about.html -> content/pages/about.json
+
+   หมายเหตุเรื่อง SEO
+     วิธีนี้ render ฝั่งเบราว์เซอร์ เหมาะกับช่วงต้นแบบ/ก่อนต่อ CMS
+     ถ้าต้องการ HTML นิ่งสำหรับ production ให้รัน  node tools/build.mjs
+     ซึ่งจะเขียนเนื้อหาลงไฟล์ HTML ให้เลย โดยใช้ตัว render ตัวเดียวกัน
+   ============================================================================= */
+
+import { renderPage, validatePage } from './blocks.js';
+import { resolveSources } from './content-sources.js';
+
+const MOUNT_ID = 'app-content';
+
+function ready() {
+  return document.readyState === 'loading'
+    ? new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve, { once: true }))
+    : Promise.resolve();
+}
+
+function guessContentPath() {
+  const file = location.pathname.split('/').pop() || 'index.html';
+  const slug = file.replace(/\.html?$/i, '') || 'index';
+  return `content/pages/${slug}.json`;
+}
+
+function showError(mount, title, details = []) {
+  mount.innerHTML = `
+    <section class="section">
+      <div class="container">
+        <div class="block-notice is-warn" role="alert">
+          <div>
+            <strong>${title}</strong>
+            ${details.length ? `<ul>${details.map(d => `<li>${d}</li>`).join('')}</ul>` : ''}
+            <p>ดูวิธีเขียนไฟล์เนื้อหาได้ที่ <code>CONTENT-MODEL.md</code></p>
+          </div>
+        </div>
+      </div>
+    </section>`;
+}
+
+/** ไม่พบเนื้อหา (เช่น ข่าวที่ถูกลบหรือ id ผิด) — บอกผู้ใช้และพาไปหน้ารวมข่าว */
+function showNotFound(mount) {
+  document.title = 'ไม่พบหน้าที่ต้องการ | สำนักงานราชบัณฑิตยสภา';
+  mount.innerHTML = `
+    <section class="section">
+      <div class="container">
+        <div class="block-notice is-info" role="alert">
+          <div>
+            <strong>ไม่พบข่าวที่ต้องการ</strong>
+            <p>ข่าวนี้อาจถูกย้ายหรือลบแล้ว <a href="general-news.html">ดูข่าวสารและกิจกรรมทั้งหมด</a></p>
+          </div>
+        </div>
+      </div>
+    </section>`;
+}
+
+function applyMeta(page) {
+  if (page.title) {
+    document.title = page.seoTitle || `${page.title} | ${window.orstI18n?.lang === 'en' ? 'Office of the Royal Society' : 'สำนักงานราชบัณฑิตยสภา'}`;
+  }
+  if (page.description) {
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', page.description);
+  }
+  // เตือนถ้า data-page ในไฟล์ HTML ไม่ตรงกับ navKey ใน JSON (เมนูจะไฮไลต์ผิด)
+  const bodyKey = document.body.dataset.page;
+  if (page.navKey && bodyKey && page.navKey !== bodyKey) {
+    console.warn(`[ORST] data-page="${bodyKey}" ไม่ตรงกับ navKey "${page.navKey}" ใน JSON — เมนูอาจไฮไลต์ผิดหน้า`);
+  }
+}
+
+/* โครงร่างหน้า (loading skeleton) ระหว่างโหลด JSON — hero + แถบเครื่องมือ + การ์ด 6 ใบ
+   แทนที่ด้วยเนื้อหาจริง (หรือข้อความผิดพลาด) ทันทีที่โหลดเสร็จ */
+function skeletonHTML() {
+  const card = `
+        <div class="skel-card">
+          <span class="skel skel-thumb"></span>
+          <span class="skel skel-line is-90"></span>
+          <span class="skel skel-line is-70"></span>
+          <span class="skel skel-line is-40 is-thin"></span>
+        </div>`;
+  return `
+    <div class="skel-page" role="status" aria-live="polite">
+      <span class="sr-only">กำลังโหลดเนื้อหา…</span>
+      <section class="skel-hero" aria-hidden="true">
+        <div class="container">
+          <span class="skel skel-crumb"></span>
+          <span class="skel skel-h1"></span>
+          <span class="skel skel-lead"></span>
+          <span class="skel skel-lead is-short"></span>
+        </div>
+      </section>
+      <div class="container skel-body" aria-hidden="true">
+        <div class="skel-toolbar"><span class="skel skel-search"></span><span class="skel skel-pill"></span><span class="skel skel-pill"></span></div>
+        <div class="skel-grid">${card.repeat(6)}
+        </div>
+      </div>
+    </div>`;
+}
+
+async function main() {
+  await ready();
+
+  const mount = document.getElementById(MOUNT_ID);
+  if (!mount) return;
+
+  const en = window.orstI18n?.lang === 'en';
+  // จะโหลดเนื้อหาใหม่ (ยังไม่มีเนื้อหา หรือโหมดภาษาอังกฤษ) — แสดงโครงร่างไว้ก่อน ไม่ให้หน้าว่าง/กระพริบเป็นภาษาไทย
+  const prerendered = mount.children.length > 0;
+  if (!(prerendered && !en)) {
+    mount.setAttribute('aria-busy', 'true');
+    mount.innerHTML = skeletonHTML();
+  }
+  // ถ้าเนื้อหาถูกใส่มาแล้วตั้งแต่ฝั่งเซิร์ฟเวอร์ (ผลจาก node tools/build.mjs = ภาษาไทย)
+  // ภาษาไทย: ไม่ต้อง fetch ซ้ำ แค่ผูก event ให้ block ที่ต้องใช้ JS ก็พอ · ภาษาอังกฤษ: โหลดเนื้อหาอังกฤษมาแทน
+  if (prerendered && !en) {
+    window.orstHeader?.bindDynamicContent?.();
+    return;
+  }
+
+  let path = mount.dataset.content || guessContentPath();
+  // แม่แบบหน้าเดียวหลายเนื้อหา (เช่น news-detail.html?id=<id> -> content/news/<id>.json)
+  if (path.includes('{id}')) {
+    const id = new URLSearchParams(location.search).get('id') || '';
+    if (!/^[a-z0-9-]{1,64}$/i.test(id)) {
+      showNotFound(mount);
+      return;
+    }
+    path = path.replace('{id}', id);
+  }
+
+  let page;
+  let translated = true;
+  try {
+    // ภาษาอังกฤษ: content/pages/en/<slug>.json (ไม่มี = ใช้ไฟล์ไทย + แถบแจ้ง) — ดู orstI18n ใน components.js
+    if (window.orstI18n) {
+      ({ data: page, translated } = await window.orstI18n.fetchJSON(path));
+    } else {
+      const response = await fetch(path, { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      page = await response.json();
+    }
+  } catch (error) {
+    if (mount.dataset.content?.includes('{id}')) { showNotFound(mount); return; }
+    showError(mount, `โหลดไฟล์เนื้อหาไม่สำเร็จ: ${path}`, [
+      error.message,
+      'ตรวจว่าไฟล์มีอยู่จริงและ JSON ถูกต้อง (ไม่มี comma เกิน)',
+      'ต้องเปิดผ่าน Live Server ไม่ใช่เปิดไฟล์ตรง ๆ ด้วย file://',
+    ]);
+    return;
+  }
+
+  // block ที่ดึงรายการจากแหล่งกลาง (source) — เช่น รายการข่าวจาก content/news/index.json
+  try {
+    await resolveSources(page, async p => (window.orstI18n
+      ? (await window.orstI18n.fetchJSON(p)).data
+      : await fetch(p, { cache: 'no-cache' }).then(r => r.json())), { id: new URLSearchParams(location.search).get('id') || '' });
+  } catch (error) {
+    console.warn('[ORST] โหลดรายการจากแหล่งกลางไม่สำเร็จ', error);
+  }
+
+  const problems = validatePage(page);
+  if (problems.length) {
+    showError(mount, `ไฟล์เนื้อหา ${path} ยังไม่ถูกต้อง`, problems);
+    return;
+  }
+
+  applyMeta(page);
+  // โครงเมนูของหมวด สำหรับแถบเมนูย่อยข้างเนื้อหา — โหลดไม่ได้ก็ยังแสดงหน้าได้ (แค่ไม่มีแถบ)
+  const nav = await (window.orstI18n ? window.orstI18n.fetchJSON('content/site-nav.json').then(r => r.data) : fetch('content/site-nav.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null)).catch(() => null);
+  const slug = path.split('/').pop().replace(/\.json$/, '');
+  mount.innerHTML = renderPage(page, nav, slug);
+  mount.removeAttribute('aria-busy');
+  mount.classList.add('is-loaded');
+  if (!translated) {
+    mount.insertAdjacentHTML('afterbegin', `
+    <div class="lang-notice" role="note" lang="en" data-i18n-skip><div class="container">
+      <strong>This page is currently available in Thai only.</strong>
+      <span>An English version is being prepared. <a href="?lang=th" data-lang-switch="th">View in Thai</a></span>
+    </div></div>`);
+  }
+
+  // ผูก event ให้ block ที่ต้องใช้ JS (เช่น faq) เพราะเนื้อหาเพิ่งถูกใส่เข้า DOM
+  window.orstHeader?.bindDynamicContent?.();
+
+  // ลิงก์ที่มี #anchor (เช่น services.html#channels) — เนื้อหาเพิ่ง render หลังเบราว์เซอร์โหลดหน้า
+  // เบราว์เซอร์จึงหา id ไม่เจอเอง ต้องเลื่อนไปให้หลัง render เสร็จ
+  if (location.hash.length > 1) {
+    document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView({ behavior: 'instant' });
+  }
+
+  document.dispatchEvent(new CustomEvent('orst:content-rendered', { detail: { page, path } }));
+}
+
+main();

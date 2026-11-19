@@ -1,0 +1,103 @@
+{
+  "_note": "ตั้งค่าหน้าคลังองค์ความรู้ของชาติ (knowledge.html) — อ่านโดย assets/js/pages/knowledge.js ตอนต่อ CMS ให้หลังบ้านแก้ไฟล์นี้ (หรือ endpoint ที่คืนโครงสร้างเดียวกัน): ลำดับ/ชื่อ/ไอคอนของแต่ละประเภท, ระบบสืบค้น และคำค้นยอดนิยม — รายการในแต่ละประเภทดึงจาก content/pages/<page>.json ของประเภทนั้น จำนวนรายการนับจากข้อมูลจริงอัตโนมัติ",
+  "popular": [
+    "Royal vocabulary",
+    "Transliteration",
+    "Classifiers",
+    "Country names",
+    "Ancient scripts",
+    "Dictionary"
+  ],
+  "categories": [
+    {
+      "cat": "infographic",
+      "label": "Infographics",
+      "icon": "i-eye",
+      "page": "infographics",
+      "kind": "cards",
+      "unit": "images",
+      "action": "View image"
+    },
+    {
+      "cat": "publications",
+      "label": "Books and Publications",
+      "icon": "i-book",
+      "page": "publications",
+      "kind": "covers",
+      "unit": "books",
+      "action": "Details"
+    },
+    {
+      "cat": "video",
+      "label": "Knowledge Videos",
+      "icon": "i-video",
+      "kind": "video",
+      "unit": "Clip",
+      "action": "Watch video",
+      "description": "Academic forums, training sessions and videos of the Office of the Royal Society",
+      "page": "videos"
+    },
+    {
+      "cat": "guidelines",
+      "label": "Thai Language Guidelines",
+      "icon": "i-dictionary",
+      "page": "language-guidelines",
+      "kind": "topics",
+      "unit": "items",
+      "action": "Read more"
+    },
+    {
+      "cat": "lectures",
+      "label": "Academic lectures",
+      "icon": "i-journal",
+      "page": "academic-lectures",
+      "kind": "list",
+      "unit": "items",
+      "action": "Read more"
+    },
+    {
+      "cat": "audio",
+      "label": "Local Language Audio Recordings",
+      "icon": "i-megaphone",
+      "page": "ethnic-language-audio",
+      "kind": "list",
+      "unit": "languages",
+      "action": "Details"
+    },
+    {
+      "cat": "documents",
+      "label": "Knowledge publications",
+      "icon": "i-database",
+      "page": "knowledge-base",
+      "kind": "list",
+      "unit": "items",
+      "action": "Read more"
+    }
+  ],
+  "systems": [
+    {
+      "title": "Online Dictionary",
+      "desc": "Search meanings and word usage",
+      "href": "dictionary.html",
+      "icon": "i-dictionary"
+    },
+    {
+      "title": "ORST Coined Words Online",
+      "desc": "Specialized terms and standard words",
+      "href": "https://coined-word.orst.go.th/",
+      "icon": "i-form"
+    },
+    {
+      "title": "Search Thai vocabulary",
+      "desc": "Search words by category and related words",
+      "href": "https://dictionary.orst.go.th/",
+      "icon": "i-search"
+    },
+    {
+      "title": "Encyclopedia & Taxonomy",
+      "desc": "Knowledge repository and word categories",
+      "href": "https://lst.nectec.or.th/encyclopedia/",
+      "icon": "i-book"
+    }
+  ]
+}

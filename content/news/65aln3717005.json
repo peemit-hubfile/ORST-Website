@@ -1,0 +1,123 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F65ALN3717005 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=65aln3717005",
+  "title": "ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕",
+  "navKey": "news",
+  "description": "ขอเชิญโรงเรียนทั่วประเทศ ส่งนักเรียนระดับประถมศึกษาปีที่ ๕-๖ สมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕ (ทักษะการอ่าน",
+  "sideNav": false,
+  "updatedAt": "2022-01-12",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "ข่าวกิจกรรม",
+      "date": "2022-01-12",
+      "heading": "ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕",
+      "image": "assets/images/orst/news/data0002-00002439-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002439.JPG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ข่าวกิจกรรม",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "ขอเชิญสมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "ขอเชิญโรงเรียนทั่วประเทศ ส่งนักเรียนระดับประถมศึกษาปีที่ ๕-๖ สมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๕ (ทักษะการอ่านออกเสียง) ผ่านระบบ Zoom Cloud Meetings",
+        "ชิงทุนการศึกษาและรับรางวัลราชบัณฑิตยสภาสรรเสริญ",
+        "รับสมัครจำนวน ๑๐๐ คน ตั้งแต่บัดนี้เป็นต้นไปจนถึงวันจันทร์ที่ ๓๑ มกราคม พ.ศ. ๒๕๖๕ (เมื่อครบจำนวน ๑๐๐ คน จะปิดรับสมัครทันที แม้จะยังไม่ถึงวันสิ้นสุดการรับสมัคร)",
+        "ลิงก์รับสมัคร",
+        "https://forms.gle/9EjEXa1rDAHUUNFd9",
+        "กำหนดแข่งขันรอบคัดเลือกในวันเสาร์ที่ ๑๒ กุมภาพันธ์ พ.ศ. ๒๕๖๕ และรอบชิงชนะเลิศในวันเสาร์ที่ ๒๖ กุมภาพันธ์ พ.ศ. ๒๕๖๕",
+        "รายละเอียดดังประกาศที่แนบ"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0002-00002439-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002439.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002440-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002440.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002441-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002441.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002442-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002442.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002443-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002443.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002444-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002444.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002445-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002445.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "activity-news.html",
+      "items": [
+        {
+          "title": "การแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๒",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DON2706025",
+          "category": "กิจกรรม",
+          "publishedAt": "2019-11-06"
+        },
+        {
+          "title": "ขอเชิญโรงเรียนทั่วประเทศ ส่งนักเรียนระดับประถมศึกษาปีที่ ๕-๖ สมัครเข้าร่วมกิจกรรมแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๖",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66E%40J4312063",
+          "category": "ข่าว",
+          "publishedAt": "2023-05-31"
+        },
+        {
+          "title": "ขอเชิญร่วมกิจกรรมการแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๓",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F64CSK2602044",
+          "category": "ข่าว",
+          "publishedAt": "2021-03-19"
+        },
+        {
+          "title": "ผลการแข่งขันทักษะการใช้ภาษาไทยของเยาวชน ประจำพุทธศักราช ๒๕๖๖",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66GDN5451069",
+          "category": "ข่าว",
+          "publishedAt": "2023-07-04"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,365 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมไม่มีหน้านี้ (sitemap 3.1.4 'เพิ่ม') — เนื้อหาถอดจากเอกสาร 'แผนปฏิบัติการดิจิทัล ของสำนักงานราชบัณฑิตยสภา พ.ศ. 2563-2565' บนเว็บเดิม (orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000805.PDF หน้า 2-3, 19-32 · ถอดเมื่อ 18 พ.ย. 2569) ข้อมูลผู้บริหารจาก content/people/index.json · ระบบบริการดิจิทัลจากเมนูเว็บเดิม · ถ้ามีแผนฉบับใหม่ ให้แทนที่ตัวเลข/ยุทธศาสตร์/โครงการทั้งหน้า",
+  "title": "IT Management",
+  "navKey": "about",
+  "description": "Overview of information technology management at the Office of the Royal Society: the Chief Information Officer, vision, strategies, projects and digital services",
+  "updatedAt": "2026-11-18",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "IT Management",
+      "lead": "Direction, strategies and digital technology projects of the Office of the Royal Society under the Digital Action Plan 2020–2022",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "IT Management"
+        }
+      ]
+    },
+    {
+      "type": "anchor-nav",
+      "items": [
+        {
+          "label": "Overview",
+          "href": "#overview"
+        },
+        {
+          "label": "CIO",
+          "href": "#cio"
+        },
+        {
+          "label": "Vision and mission",
+          "href": "#vision"
+        },
+        {
+          "label": "Strategies",
+          "href": "#strategies"
+        },
+        {
+          "label": "Project",
+          "href": "#projects"
+        },
+        {
+          "label": "Digital services",
+          "href": "#services"
+        },
+        {
+          "label": "Implementation",
+          "href": "#pdca"
+        }
+      ]
+    },
+    {
+      "type": "stat-row",
+      "id": "overview",
+      "eyebrow": "Digital Action Plan 2020–2022",
+      "heading": "Digital technology plan at a glance",
+      "lead": "The framework and direction for developing the Office's information and communication technology, aligned with the national Digital Development Plan for Economy and Society and Thailand's Digital Development Plan",
+      "items": [
+        {
+          "value": "3",
+          "label": "Strategic issues",
+          "note": "Knowledge services · Digital use in the organization · Personnel"
+        },
+        {
+          "value": "5",
+          "label": "Work plans",
+          "note": "Work plans 1.1 – 3"
+        },
+        {
+          "value": "12",
+          "label": "Project",
+          "note": "Carried out by the IT Working Group and the Personnel Section"
+        },
+        {
+          "value": "11.84",
+          "label": "million baht · planned budget",
+          "note": "2021–2022, across the 9 projects with a stated budget"
+        }
+      ],
+      "variant": "dark"
+    },
+    {
+      "type": "person-grid",
+      "id": "cio",
+      "variant": "alt",
+      "eyebrow": "Responsible",
+      "heading": "Chief Information Officer (CIO)",
+      "layout": "feature",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "feature-list",
+      "id": "vision",
+      "eyebrow": "Vision",
+      "heading": "“An agency that serves through digital technology, giving users easy and fast access to knowledge”",
+      "lead": "Four missions",
+      "layout": "cards",
+      "columns": 2,
+      "items": [
+        {
+          "icon": "i-service",
+          "title": "1. Public services",
+          "body": "Develop digital technology for public services"
+        },
+        {
+          "icon": "i-grid",
+          "title": "2. Work processes",
+          "body": "Make work processes more efficient with digital technology"
+        },
+        {
+          "icon": "i-shield",
+          "title": "3. Infrastructure and security",
+          "body": "Manage the infrastructure and the security of information systems"
+        },
+        {
+          "icon": "i-people",
+          "title": "4. Personnel capability",
+          "body": "Develop personnel capability towards Government 4.0"
+        }
+      ],
+      "headingStyle": "quote"
+    },
+    {
+      "type": "stat-row",
+      "id": "goals",
+      "variant": "alt",
+      "eyebrow": "Goals",
+      "heading": "By 2022, an agency with modern digital capability in its services and operations",
+      "items": [
+        {
+          "value": "80%",
+          "label": "Public services",
+          "note": "of government services can be accessed by the public through digital technology",
+          "progress": 80
+        },
+        {
+          "value": "80%",
+          "label": "Information and system integration",
+          "note": "of work systems and databases are linked and work together in an integrated way",
+          "progress": 80
+        },
+        {
+          "value": "80%",
+          "label": "Personnel",
+          "note": "of personnel have developed their digital technology knowledge and skills",
+          "progress": 80
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "strategies",
+      "eyebrow": "Strategic issues",
+      "heading": "Three digital strategies",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-book",
+          "tag": "Strategy 1",
+          "title": "Developing and applying digital technology to disseminate knowledge and provide knowledge services",
+          "body": "Raise the Office's dissemination and academic services to the level of Government 4.0",
+          "meta": "Work plan 1.1 Producing knowledge in digital form · Work plan 1.2 Developing service innovations for public convenience"
+        },
+        {
+          "icon": "i-database",
+          "tag": "Strategy 2",
+          "title": "Managing the use of digital technology within the organization",
+          "body": "Make operations more convenient and faster, and integrate internal management systems",
+          "meta": "Work plan 2.1 Managing network and security systems · Work plan 2.2 Developing information systems"
+        },
+        {
+          "icon": "i-people",
+          "tag": "Strategy 3",
+          "title": "Developing personnel's digital technology knowledge and skills",
+          "body": "Personnel are able to use information technology, use technology with sound judgement, and have the knowledge to create digital innovation",
+          "meta": "Work plan: Activities promoting the use of information technology"
+        }
+      ],
+      "numbered": true
+    },
+    {
+      "type": "table",
+      "id": "projects",
+      "variant": "alt",
+      "eyebrow": "Work plans / projects",
+      "heading": "Projects under the Digital Action Plan",
+      "lead": "Responsible units and planned budget, 2021–2022",
+      "caption": "Projects under the Digital Action Plan of the Office of the Royal Society, 2020–2022",
+      "columns": [
+        "Project",
+        "Work plans",
+        "Responsible",
+        "Budget (baht)"
+      ],
+      "rows": [
+        [
+          "Electronic book (e-Book) project for disseminating knowledge",
+          "1.1",
+          "IT Working Group",
+          "180,000"
+        ],
+        [
+          "Search system for transliterated foreign words",
+          "1.2",
+          "IT Working Group",
+          "2020 budget"
+        ],
+        [
+          "Database of entries in the Royal Society's Thai Geographical Gazetteer",
+          "1.2",
+          "IT Working Group",
+          "2020 budget"
+        ],
+        [
+          "Online search database of the Office of the Royal Society's academic works",
+          "1.2",
+          "IT Working Group",
+          "6,709,400"
+        ],
+        [
+          "Online bookstore system (e-Book)",
+          "1.2",
+          "IT Working Group",
+          "2020 budget"
+        ],
+        [
+          "Maintenance of equipment and network security systems",
+          "2.1",
+          "IT Working Group",
+          "560,000"
+        ],
+        [
+          "Procurement of equipment to detect and prevent information and network threats",
+          "2.1",
+          "IT Working Group",
+          "181,900"
+        ],
+        [
+          "Replacement computer equipment for office operations",
+          "2.1",
+          "IT Working Group",
+          "846,900"
+        ],
+        [
+          "Project management system of the Office of the Royal Society (ORST PMS)",
+          "2.2",
+          "IT Working Group",
+          "500,000"
+        ],
+        [
+          "Budget management system for Fellows, Associate Fellows and academic committees",
+          "2.2",
+          "IT Working Group",
+          "500,000"
+        ],
+        [
+          "Enterprise Architecture (EA)",
+          "2.2",
+          "IT Working Group",
+          "2,000,000"
+        ],
+        [
+          "Training personnel in digital technology knowledge and skills",
+          "3",
+          "Personnel Section",
+          "364,570"
+        ]
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "services",
+      "eyebrow": "Digital services",
+      "heading": "Public-facing systems",
+      "lead": "Online search and knowledge services of the Office of the Royal Society",
+      "layout": "tiles",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-dictionary",
+          "title": "Online Dictionary",
+          "body": "Search meanings, pronunciations and usage examples of standard Thai words",
+          "href": "https://dictionary.orst.go.th/"
+        },
+        {
+          "icon": "i-journal",
+          "title": "Coined Terms Online",
+          "body": "Coined technical terms, organized by academic field",
+          "href": "https://coined-word.orst.go.th/"
+        },
+        {
+          "icon": "i-pen",
+          "title": "ORST Transliteration Database",
+          "body": "Search for transliterated foreign words",
+          "href": "https://transliteration.orst.go.th/"
+        },
+        {
+          "icon": "i-map",
+          "title": "Thai Gazetteer",
+          "body": "Entries of the Royal Society's Thai Geographical Gazetteer",
+          "href": "https://gazetteer.orst.go.th/"
+        },
+        {
+          "icon": "i-puzzle",
+          "title": "Thai Language Proficiency Test",
+          "href": "https://etest.orst.go.th/"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "pdca",
+      "variant": "dark",
+      "eyebrow": "Putting the plan into practice",
+      "heading": "Monitoring and evaluation through the PDCA cycle",
+      "lead": "Monitoring and evaluation let executives and staff track progress and adjust their approach to reach the goals",
+      "layout": "timeline",
+      "items": [
+        {
+          "title": "Plan",
+          "body": "Set strategies, work plans or projects"
+        },
+        {
+          "title": "Do",
+          "body": "Put the plan into practice by cascading it to the teams"
+        },
+        {
+          "title": "Check",
+          "body": "Monitor whether results meet the set indicators"
+        },
+        {
+          "title": "Act",
+          "body": "Revise the plan when results fall short"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "heading": "Documents",
+      "layout": "compact",
+      "items": [
+        {
+          "title": "Digital Action Plan of the Office of the Royal Society, 2020-2022",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000805.PDF",
+          "fileSize": 961437
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

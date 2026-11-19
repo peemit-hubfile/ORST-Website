@@ -1,0 +1,42 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-RMP (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Risk Management Plan",
+  "navKey": "about",
+  "description": "Risk Management Plan of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Risk Management Plan",
+      "lead": "Risk Management Plan of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Risk Management Plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Risk Management Plan 2009",
+          "note": "The former website has no attachment"
+        },
+        {
+          "title": "Risk Management Plan 2010",
+          "note": "The former website has no attachment"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

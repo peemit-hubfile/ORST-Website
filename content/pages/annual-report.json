@@ -1,0 +1,73 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "รายงานผลการดำเนินงานประจำปี",
+  "navKey": "about",
+  "description": "รายงานผลการดำเนินงานประจำปีงบประมาณของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "รายงานผลการดำเนินงานประจำปี",
+      "lead": "รายงานผลการดำเนินงานประจำปีงบประมาณของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "รายงานผลการดำเนินงานประจำปี"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "รายงานผลการดำเนินงานตามแผนดำเนินงาน ประจำปีงบประมาณ พ.ศ. 2568 สำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2026-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001024.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินงานโครงการ/กิจกรรม ตามแผนปฏิบัติการและแผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2567 รอบ 12 เดือน",
+          "publishedAt": "2025-03-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000984.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานและผลการใช้จ่ายงบประมาณของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2566 รอบ 12 เดือน (1 ตุลาคม 2565-30 กันยายน 2566)",
+          "publishedAt": "2024-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000950.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานประจำปีงบประมาณ พ.ศ. 2565 สำนักงานราชบัณฑิตยสภา รอบ 12 เดือน (1 ตุลาคม 2564-30 กันยายน 2565)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000915.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงาน ประจำปีงบประมาณ พ.ศ. 2564 สำนักงานราชบัณฑิตยสภา รอบ 12 เดือน (1 ตุลาคม 2563-30 กันยายน 2564)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000869.PDF"
+        },
+        {
+          "title": "ผลการดำเนินงานตามมาตรการปรับปรุงประสิทธิภาพในการปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. 2563 รอบ 12 เดือน",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000798.PDF"
+        },
+        {
+          "title": "ผลการปฏิบัติงานของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000127.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๒ รอบ ๑๒ เดือน (๑ ตุลาคม ๒๕๖๑-๓๐ กันยายน ๒๕๖๒)",
+          "publishedAt": "2019-09-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000446.PDF"
+        }
+      ]
+    }
+  ]
+}

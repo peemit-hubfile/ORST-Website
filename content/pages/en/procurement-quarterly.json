@@ -1,0 +1,128 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=6 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Quarterly Procurement Results",
+  "navKey": "news",
+  "description": "Quarterly procurement results of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Quarterly Procurement Results",
+      "lead": "Quarterly procurement results of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Quarterly Procurement Results"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "List of procurement or supply acquisitions for fiscal year 2024, capital budget category",
+          "publishedAt": "2024-03-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000225.XLS"
+        },
+        {
+          "title": "Announcement of procurement winners, year 2023, quarter 2 (January 2023 to March 2023)",
+          "publishedAt": "2023-05-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000503001005%2F66ESO3330006"
+        },
+        {
+          "title": "Announcement of procurement winners, year 2023, quarter 1 (October 2022 to December 2022)",
+          "publishedAt": "2023-01-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001586.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, year 2022, quarter 4 (July 2022 to September 2022)",
+          "publishedAt": "2022-10-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000503001005%2F66B%21J4019038"
+        },
+        {
+          "title": "Announcement of procurement winners, year 2022, quarter 3 (April 2022 to June 2022)",
+          "publishedAt": "2022-07-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001584.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, year 2022, quarter 2 (January 2022 to March 2022)",
+          "publishedAt": "2022-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001583.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, year 2022, quarter 1 (October 2021 to December 2021)",
+          "publishedAt": "2022-01-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001582.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 4 (July 2021 to September 2021)",
+          "publishedAt": "2021-10-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001581.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 3 (April 2021 to June 2021)",
+          "publishedAt": "2021-07-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001228.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 2 (January 2021 to March 2021)",
+          "publishedAt": "2021-04-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001171.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 1 (October 2020 to December 2020)",
+          "publishedAt": "2021-01-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001135.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 4 (July 2020 to September 2020)",
+          "publishedAt": "2020-10-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001102.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 3 (April 2020 to June 2020)",
+          "publishedAt": "2020-07-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001003.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 2 (January 2020 to March 2020)",
+          "publishedAt": "2020-04-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000800.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 4 (July 2019 to September 2019)",
+          "publishedAt": "2019-10-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000798.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 3 (April 2019 to June 2019)",
+          "publishedAt": "2019-07-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000797.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 2 (January 2019 to March 2019)",
+          "publishedAt": "2019-04-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000796.PDF"
+        },
+        {
+          "title": "Announcement of procurement winners, quarter 1 (October 2019 to December 2019)",
+          "publishedAt": "2018-10-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000799.PDF"
+        },
+        {
+          "title": "List of procurement or supply acquisitions for fiscal year 2024, capital budget category",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67CVJ4636059"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

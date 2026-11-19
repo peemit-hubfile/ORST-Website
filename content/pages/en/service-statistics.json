@@ -1,0 +1,74 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Service Statistics",
+  "navKey": "about",
+  "description": "Statistics on public services provided by the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Service Statistics",
+      "lead": "Statistics on public services provided by the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Service Statistics"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Statistics on online services (E-Service), fiscal year 2025, 12-month period",
+          "publishedAt": "2026-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001025.PDF"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2024, 12-month period (1 October 2023 - 30 September 2024)",
+          "publishedAt": "2025-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000992.PDF"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2023, 12-month period (1 October 2022 - 30 September 2023)",
+          "publishedAt": "2024-02-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000960.PDF"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2023, 6-month period (1 October 2022 - 31 March 2023)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000917.PDF"
+        },
+        {
+          "title": "Service statistics of the Office of the Royal Society, fiscal year 2022, 6-month period (1 October 2021 - 31 March 2022)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000868.PDF"
+        },
+        {
+          "title": "Number of public services provided in 2021, 6-month period (1 October 2020 - 31 March 2021)",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000796.PDF"
+        },
+        {
+          "title": "Number of public services provided, October 2019 - May 2020",
+          "publishedAt": "2020-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000443.PDF"
+        },
+        {
+          "title": "Summary of internet service users of the Office of the Royal Society, 2014-2018",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000133.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

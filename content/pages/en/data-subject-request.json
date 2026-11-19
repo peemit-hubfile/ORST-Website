@@ -1,0 +1,35 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีเอกสารหน้านี้ — รอข้อมูลจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "Data Subject Request",
+  "navKey": "about",
+  "description": "Channels for data subjects to exercise their rights under the Personal Data Protection Act B.E. 2562 (2019)",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Data Subject Request",
+      "lead": "Channels for data subjects to exercise their rights under the Personal Data Protection Act B.E. 2562 (2019)",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Data Subject Request"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Data Subject Request documents — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

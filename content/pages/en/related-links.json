@@ -1,0 +1,96 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ลิงก์ที่เว็บนี้และเว็บเดิมใช้อยู่จริง — หน่วยงานอื่นรอรายชื่อจาก ORST",
+  "title": "Related Links",
+  "navKey": "home",
+  "description": "Links to websites of agencies and systems related to the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Related Links",
+      "lead": "Links to websites of agencies and systems related to the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Related Links"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "agencies",
+      "heading": "Related agencies",
+      "items": [
+        {
+          "title": "Royal Society of Thailand",
+          "href": "https://royalsociety.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Former website of the Office of the Royal Society",
+          "href": "https://www.orst.go.th/",
+          "icon": "i-external"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "systems",
+      "variant": "alt",
+      "heading": "Databases and online services",
+      "items": [
+        {
+          "title": "Dictionary",
+          "href": "https://dictionary.orst.go.th/",
+          "icon": "i-dictionary"
+        },
+        {
+          "title": "ORST Coined Words Online",
+          "href": "https://coined-word.orst.go.th/",
+          "icon": "i-journal"
+        },
+        {
+          "title": "ORST Transliteration Database",
+          "href": "https://transliteration.orst.go.th/",
+          "icon": "i-pen"
+        },
+        {
+          "title": "Thai Gazetteer",
+          "href": "https://gazetteer.orst.go.th/",
+          "icon": "i-map"
+        },
+        {
+          "title": "Encyclopedia & Taxonomy",
+          "href": "https://lst.nectec.or.th/encyclopedia/",
+          "icon": "i-book"
+        },
+        {
+          "title": "Archives",
+          "href": "https://da3.thaidlt.org/",
+          "icon": "i-database"
+        },
+        {
+          "title": "Thai Language Proficiency Test",
+          "href": "https://etest.orst.go.th/",
+          "icon": "i-puzzle"
+        },
+        {
+          "title": "Thai Sign Language Dictionary (Royal Society Edition)",
+          "href": "http://164.115.33.116/",
+          "icon": "i-people"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "more",
+      "tone": "info",
+      "body": "[Other government agency links the Office wishes to list — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

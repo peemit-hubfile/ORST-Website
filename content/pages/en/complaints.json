@@ -1,0 +1,87 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ช่องทางรับเรื่องเดียวกับหน้าบริการวิชาการ (services.json id=channels ข้อมูลจาก orst.go.th) — แก้ที่ step3_hubs.py",
+  "title": "Complaints",
+  "navKey": "contact",
+  "description": "Channels for complaints, grievances, corruption reports and suggestions to the Office of the Royal Society, and how to follow up on your case",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Complaints",
+      "lead": "Channels for complaints, grievances, corruption reports and suggestions to the Office of the Royal Society, and how to follow up on your case",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Contact Us",
+          "href": "contact.html"
+        },
+        {
+          "label": "Complaints"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "channels",
+      "layout": "cards",
+      "columns": 3,
+      "linkStyle": "rows",
+      "heading": "Ways to submit",
+      "lead": "Choose the most convenient channel to file a complaint or grievance, report a tip-off, or make suggestions on the work of the Office of the Royal Society.",
+      "action": {
+        "label": "Track your case",
+        "href": "track-request.html"
+      },
+      "items": [
+        {
+          "icon": "i-megaphone",
+          "title": "Service complaints",
+          "body": "Report problems or difficulties in receiving the Office's services",
+          "links": [
+            {
+              "label": "0 2141 1718",
+              "href": "tel:021411718"
+            },
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
+        },
+        {
+          "icon": "i-shield",
+          "title": "Report corruption",
+          "body": "Or use the complaint box on the 1st floor of the Office of the Royal Society",
+          "links": [
+            {
+              "label": "anti.corruption@orst.go.th",
+              "href": "mailto:anti.corruption@orst.go.th"
+            },
+            {
+              "label": "Corruption complaint channels",
+              "href": "corruption-complaints.html"
+            }
+          ]
+        },
+        {
+          "icon": "i-pen",
+          "title": "Suggestions on our operations",
+          "body": "Feedback and suggestion form on the Office's operations",
+          "links": [
+            {
+              "label": "Feedback form",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
+              "kind": "Google Form"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

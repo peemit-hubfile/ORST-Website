@@ -1,0 +1,378 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-RUL-0 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Laws & Regulations",
+  "navKey": "about",
+  "description": "Acts, regulations, rules and announcements relating to the Royal Society of Thailand and the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Laws & Regulations",
+      "lead": "Acts, regulations, rules and announcements relating to the Royal Society of Thailand and the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Laws & Regulations"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Royal Institute Act, B.E. 2544",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000049.PDF",
+          "category": "Acts",
+          "fileSize": 98639
+        },
+        {
+          "title": "Royal Society of Thailand Act, B.E. 2558",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000048.PDF",
+          "category": "Acts",
+          "fileSize": 98985
+        },
+        {
+          "title": "Royal Society Act, B.E. 2558 (2015)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000047.PDF",
+          "category": "Acts",
+          "fileSize": 92683
+        },
+        {
+          "title": "Summary explanation of the key points of the Royal Society of Thailand Act, B.E. 2558",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000160.PDF",
+          "category": "Acts",
+          "fileSize": 187643
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Criteria and Procedures for Selecting Associate Fellows for Appointment as Fellows to Newly Established or Vacant Positions, B.E. 2569",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000157.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 224363
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Criteria and Procedures for Appointing Honorary Fellows, B.E. 2569",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000242.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 66729
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Criteria and Procedures for Electing Academy Presidents and Academy Secretaries, B.E. 2567.PDF",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000235.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 91302
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Designating Fields of Study in Each Academy and Dividing Fields into Disciplines, B.E. 2568.PDF",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000236.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 66475
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Academic Services, Academic Education, Training and Development, and the Collection of Expenses, Fees and Service Charges for Academic Services, B.E. 2564",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000170.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 95652
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Criteria and Procedures for Electing the President and Vice President of the Royal Society of Thailand, B.E. 2563",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000159.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 82105
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Determining the Number of Associate Fellows and Fellows, B.E. 2563",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000158.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 88843
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Qualifications of Applicants for Associate Fellowship and Criteria and Procedures for Application and Admission of Associate Fellows, B.E. 2563",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000156.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 524545
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Academy Meetings, B.E. 2563",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000155.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 77781
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Meetings of the Royal Society of Thailand, B.E. 2563",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000154.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 83894
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on Removal of Members of the Royal Society of Thailand from Office, B.E. 2559",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000193.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 3147934
+        },
+        {
+          "title": "Royal Society of Thailand Regulation on the Appointment and Terms of Office of Qualified Members and Meetings of the Office of the Royal Society Affairs Committee, B.E. 2558",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000061.PDF",
+          "category": "Royal Society of Thailand regulations",
+          "fileSize": 44604
+        },
+        {
+          "title": "Royal Society of Thailand Rule on Allowances and Special Allowances for Fellows and Associate Fellows, B.E. 2567",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000247.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 101944
+        },
+        {
+          "title": "Royal Society of Thailand Rule on the Welfare Fund, Welfare Provision, Assistance and Other Benefits for Members of the Royal Society of Thailand, B.E. 2560",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000090.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 1622163
+        },
+        {
+          "title": "Royal Society of Thailand Rule on the Fund for the Promotion of Royal Institute Affairs, B.E. 2549",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000086.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 89341
+        },
+        {
+          "title": "Royal Institute Council Rule on Wearing the Insignia Pin, B.E. 2548",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000248.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 974190
+        },
+        {
+          "title": "Royal Society of Thailand Rule on Guidelines for Admitting and Appointing Associate Fellows, B.E. 2546",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000088.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 83405
+        },
+        {
+          "title": "Royal Institute Rule on Remuneration for Authors, Translators or Compilers of Books (No. 2), B.E. 2539",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000243.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 537544
+        },
+        {
+          "title": "Royal Institute Rule on Expenses for Royal Institute Affairs, B.E. 2533",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000245.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 873776
+        },
+        {
+          "title": "Royal Institute Rule on the Textbook Publication Fund, B.E. 2531",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000246.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 1497299
+        },
+        {
+          "title": "Royal Institute Rule on Remuneration for Authors, Translators or Compilers of Books, B.E. 2525",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000244.PDF",
+          "category": "Royal Society of Thailand rules",
+          "fileSize": 1156268
+        },
+        {
+          "title": "Office of the Royal Society Rule on Complimentary Copies of Books Produced by the Office of the Royal Society for Distribution and Sale, B.E. 2569",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 166756
+        },
+        {
+          "title": "Office of the Royal Society Rule on Internal Welfare Provision within the Office of the Royal Society, B.E. 2568",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000093.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 8900399
+        },
+        {
+          "title": "Office of the Royal Society Rule on Setting the Sale Prices of Books of the Office of the Royal Society, B.E. 2563",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000239.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 602189
+        },
+        {
+          "title": "Office of the Royal Society Welfare Rule on Member Assistance, B.E. 2562",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000094.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 555974
+        },
+        {
+          "title": "Office of the Royal Society Welfare Rule on Welfare Loans, B.E. 2562",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000241.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 5032741
+        },
+        {
+          "title": "Office of the Royal Society Rule on Licensing the Right to Print and Sell Books Produced by the Office of the Royal Society for Distribution and Sale, B.E. 2561",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 732095
+        },
+        {
+          "title": "Office of the Royal Society Rule on Permission to Print and Publish Printed Materials, Electronic Media, Electronic Data and Other Media of the Office of the Royal Society, B.E. 2561",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 1984067
+        },
+        {
+          "title": "Application form for permission to print or use printed materials, electronic media, electronic data and other media of the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000101.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 136768
+        },
+        {
+          "title": "Royal Institute Rule on the Writing and Compilation of Academic Books or Textbooks by Literary Officers (No. 2), B.E. 2557",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000102.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 1237315
+        },
+        {
+          "title": "Royal Institute Rule on the Writing and Compilation of Academic Books or Textbooks by Literary Officers, B.E. 2555",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000240.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 1665397
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on guidelines for public disclosure of information through the Office of the Royal Society website",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000105.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 4008082
+        },
+        {
+          "title": "Appointment of the President and Secretary of the Academy of Arts",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000106.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 245173
+        },
+        {
+          "title": "Invitation for applications for selection and appointment as Associate Fellows, Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000107.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 619407
+        },
+        {
+          "title": "Invitation for applications for selection and appointment as Associate Fellows, Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000108.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 2248653
+        },
+        {
+          "title": "Appointment of Ms. Kannika Wimonkasem as Associate Fellow, Academy of Arts",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000109.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 66321
+        },
+        {
+          "title": "Appointment of Professor Sukanya Sutbanthat as Associate Fellow, Academy of Moral and Political Sciences",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000110.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 66577
+        },
+        {
+          "title": "Appointment of Mr. Loetsiri Bowonkitti as Associate Fellow, Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000111.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 69540
+        },
+        {
+          "title": "Re: Criteria and methods for allocating reward money, fiscal year 2012",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000112.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 1424211
+        },
+        {
+          "title": "Appointment of Professor Dr. Wanlop Surakamphonthon as Associate Fellow, Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000113.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 143320
+        },
+        {
+          "title": "Appointment of Professor Dr. Parinya Chindaprasoet as Associate Fellow, Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000114.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 85842
+        },
+        {
+          "title": "Revocation and appointment of the Spokesperson and Deputy Spokesperson of the Royal Institute",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000115.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 312439
+        },
+        {
+          "title": "Re: Criteria and methods for allocating reward money, fiscal year 2011",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000116.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 1389705
+        },
+        {
+          "title": "Appointment of the President of the Academy of Moral and Political Sciences",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000117.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 216315
+        },
+        {
+          "title": "Appointment of Associate Fellows, Academy of Moral and Political Sciences",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000118.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 329563
+        },
+        {
+          "title": "Re: Criteria and conditions for participating in the workforce adjustment measures of the Royal Institute",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000119.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 403258
+        },
+        {
+          "title": "Appointment of the President and Secretary of the Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000120.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 60273
+        },
+        {
+          "title": "Re: Criteria and methods for performance evaluation of Royal Institute civil servants",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000121.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 96759
+        },
+        {
+          "title": "Re: Request for royally bestowed funeral bathing water and royally bestowed cremation for Fellows of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000122.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 92510
+        },
+        {
+          "title": "Appointment of Professor Emeritus Dr. Somphon Prakhongphan (pharmacist) as Associate Fellow, Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000123.HTM",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 14
+        },
+        {
+          "title": "Re: Appointment of the President and Secretary of the Academy of Science",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000124.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 66623
+        },
+        {
+          "title": "Re: Moral and ethical standards for Royal Institute officials",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000125.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 77651
+        },
+        {
+          "title": "Re: Setting work completion timeframes, B.E. 2548",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000126.PDF",
+          "category": "Announcements of the Office of the Royal Society",
+          "fileSize": 80985
+        }
+      ],
+      "sort": "none"
+    }
+  ],
+  "lang": "en"
+}

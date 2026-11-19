@@ -1,0 +1,153 @@
+{
+  "_note": "ข้อมูลบุคคลส่วนกลาง (เชื่อม CMS) — หน้ารายชื่อใช้ person-grid + source {type: people, ids} · หน้าประวัติ person.html?id=<id> · ชื่อ ตำแหน่ง รูป เบอร์โทร จาก orst.go.th/iwfm_list.asp?p=ABOUT-EXC (ดึงเมื่อ 13 พ.ย. 2569) · ประวัติการศึกษา/การทำงานยังเป็น placeholder รอข้อมูลจริง",
+  "items": [
+    {
+      "id": "secretary-general",
+      "name": "Mr. Supharoek Phuphongsak",
+      "position": "Secretary-General of the Royal Society of Thailand",
+      "image": "assets/images/orst/people/secretary-general.jpg",
+      "alt": "Mr. Supharoek Phuphongsak",
+      "phone": "02-141-1725",
+      "education": [
+        {
+          "period": "[Year]",
+          "title": "[Degree, field and institution — awaiting information from the office]"
+        }
+      ],
+      "career": [
+        {
+          "period": "[Year] – present",
+          "title": "Secretary-General of the Royal Society of Thailand"
+        },
+        {
+          "period": "[Year]",
+          "title": "[Previous position — awaiting information from the office]"
+        }
+      ]
+    },
+    {
+      "id": "deputy-secretary-general",
+      "name": "Mr. Santi Phakdikham",
+      "position": "Deputy Secretary-General of the Office of the Royal Society",
+      "image": "assets/images/orst/people/deputy-secretary-general.jpg",
+      "alt": "Mr. Santi Phakdikham",
+      "phone": "02-141-1718",
+      "email": "Santi.p@orst.go.th",
+      "roles": [
+        "Chief Information Officer (CIO)"
+      ],
+      "education": [
+        {
+          "period": "[Year]",
+          "title": "[Degree, field and institution — awaiting information from the office]"
+        }
+      ],
+      "career": [
+        {
+          "period": "[Year] – present",
+          "title": "Deputy Secretary-General of the Office of the Royal Society"
+        },
+        {
+          "period": "[Year]",
+          "title": "[Previous position — awaiting information from the office]"
+        }
+      ]
+    },
+    {
+      "id": "director-1",
+      "name": "Ms. Ari Phondi",
+      "position": "Secretary of the Office",
+      "image": "assets/images/orst/people/director-1.jpg",
+      "alt": "Ms. Ari Phondi",
+      "phone": "02-141-1723",
+      "education": [
+        {
+          "period": "[Year]",
+          "title": "[Degree, field and institution — awaiting information from the office]"
+        }
+      ],
+      "career": [
+        {
+          "period": "[Year] – present",
+          "title": "Secretary of the Office"
+        },
+        {
+          "period": "[Year]",
+          "title": "[Previous position — awaiting information from the office]"
+        }
+      ]
+    },
+    {
+      "id": "director-2",
+      "name": "Mrs. Kanokwan Thongtako",
+      "position": "Director, Moral and Political Sciences Division",
+      "image": "assets/images/orst/people/director-2.jpg",
+      "alt": "Mrs. Kanokwan Thongtako",
+      "phone": "02-141-1732",
+      "education": [
+        {
+          "period": "[Year]",
+          "title": "[Degree, field and institution — awaiting information from the office]"
+        }
+      ],
+      "career": [
+        {
+          "period": "[Year] – present",
+          "title": "Director, Moral and Political Sciences Division"
+        },
+        {
+          "period": "[Year]",
+          "title": "[Previous position — awaiting information from the office]"
+        }
+      ]
+    },
+    {
+      "id": "director-3",
+      "name": "Ms. Kunsirin Nakphaichit",
+      "position": "Director, Science Division",
+      "image": "assets/images/orst/people/director-3.jpg",
+      "alt": "Ms. Kunsirin Nakphaichit",
+      "phone": "02-141-1730",
+      "education": [
+        {
+          "period": "[Year]",
+          "title": "[Degree, field and institution — awaiting information from the office]"
+        }
+      ],
+      "career": [
+        {
+          "period": "[Year] – present",
+          "title": "Director, Science Division"
+        },
+        {
+          "period": "[Year]",
+          "title": "[Previous position — awaiting information from the office]"
+        }
+      ]
+    },
+    {
+      "id": "director-4",
+      "name": "Ms. Piyarat In-on",
+      "position": "Director, Arts Division",
+      "image": "assets/images/orst/people/director-4.jpg",
+      "alt": "Ms. Piyarat In-on",
+      "phone": "02-141-1733",
+      "education": [
+        {
+          "period": "[Year]",
+          "title": "[Degree, field and institution — awaiting information from the office]"
+        }
+      ],
+      "career": [
+        {
+          "period": "[Year] – present",
+          "title": "Director, Arts Division"
+        },
+        {
+          "period": "[Year]",
+          "title": "[Previous position — awaiting information from the office]"
+        }
+      ]
+    }
+  ]
+}

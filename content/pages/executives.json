@@ -1,0 +1,71 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "รายชื่อดึงจาก content/people/index.json (source people) — แก้ชื่อ ตำแหน่ง รูป เบอร์โทร ประวัติ ที่ไฟล์นั้นที่เดียว · หน้าประวัติแต่ละคน person.html?id=<id>",
+  "title": "ผู้บริหารสำนักงานราชบัณฑิตยสภา",
+  "navKey": "about",
+  "description": "รายชื่อผู้บริหารสำนักงานราชบัณฑิตยสภาและหมายเลขโทรศัพท์ติดต่อ",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ผู้บริหารสำนักงานราชบัณฑิตยสภา",
+      "lead": "รายชื่อผู้บริหารสำนักงานราชบัณฑิตยสภาและหมายเลขโทรศัพท์ติดต่อ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "ผู้บริหารสำนักงานราชบัณฑิตยสภา"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "secretary-general",
+      "eyebrow": "ผู้บริหารสูงสุด",
+      "heading": "เลขาธิการราชบัณฑิตยสภา",
+      "layout": "feature",
+      "source": {
+        "type": "people",
+        "ids": [
+          "secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "person-grid",
+      "id": "deputy",
+      "eyebrow": "ผู้บริหารระดับสูง",
+      "heading": "รองเลขาธิการราชบัณฑิตยสภา",
+      "layout": "row",
+      "variant": "alt",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "person-grid",
+      "id": "directors",
+      "eyebrow": "หน่วยงานภายใน",
+      "heading": "ผู้อำนวยการหน่วยงานภายใน",
+      "layout": "row",
+      "source": {
+        "type": "people",
+        "ids": [
+          "director-1",
+          "director-2",
+          "director-3",
+          "director-4"
+        ]
+      }
+    }
+  ]
+}

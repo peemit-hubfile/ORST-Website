@@ -1,0 +1,44 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=15 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Energy Saving",
+  "navKey": "about",
+  "description": "Energy conservation measures and results of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Energy Saving",
+      "lead": "Energy conservation measures and results of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Energy Saving"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Energy Conservation Action Plan for Fiscal Year 2012",
+          "publishedAt": "2020-04-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000013.PDF"
+        },
+        {
+          "title": "Energy Conservation at the Royal Institute",
+          "publishedAt": "2020-04-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000014.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

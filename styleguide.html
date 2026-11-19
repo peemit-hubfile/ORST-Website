@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ตัวอย่าง block ทุกชนิดที่ใช้สร้างหน้าเว็บจากไฟล์ JSON">
+  <title>คลังบล็อก (Style Guide) | สำนักงานราชบัณฑิตยสภา</title>
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- ลำดับ CSS ห้ามสลับ: typography -> base -> blocks -> (pages/xxx) -> components -->
+  <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
+  <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
+  <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=dbcc836d">
+  <link rel="stylesheet" href="assets/css/components.css?v=670139e7">
+</head>
+
+<body data-page="home">
+
+  <div id="app-header"></div>
+
+  <main id="main-content">
+    <!-- เนื้อหาทั้งหมดของหน้านี้อยู่ในไฟล์ JSON ด้านล่าง — แก้เนื้อหาที่ไฟล์นั้นไฟล์เดียว -->
+    <div id="app-content" data-content="content/pages/_styleguide.json">
+
+    <section class="page-hero is-plain">
+      <span class="page-hero-mark" aria-hidden="true"></span>
+      <div class="container">
+        <nav class="block-breadcrumb" aria-label="เส้นทางหน้า"><a href="index.html">หน้าหลัก</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span aria-current="page" title="คลังบล็อก">คลังบล็อก</span></nav>
+        <span class="block-eyebrow">ระบบการออกแบบ</span>
+        <h1>คลังบล็อก</h1>
+        <p>block ทุกชนิดที่ระบบรองรับ พร้อมตัวอย่างการใช้งาน — คัดลอก JSON จาก content/pages/_styleguide.json ไปใช้ได้เลย</p>
+        <div class="block-actions"><a class="block-btn" href="#">อ่าน CONTENT-MODEL.md</a><a class="block-btn is-ghost" href="index.html">กลับหน้าหลัก</a></div>
+        
+      </div>
+      
+    </section>
+
+    <nav class="anchor-nav" aria-label="ไปยังหัวข้อในหน้านี้" data-anchor-nav>
+      <div class="container"><ul><li><a href="#b-card-grid">การ์ด</a></li><li><a href="#b-steps-timeline">ขั้นตอน (dark)</a></li><li><a href="#b-document-list">เอกสาร</a></li><li><a href="#b-table">ตาราง</a></li><li><a href="#b-faq">คำถาม</a></li></ul></div>
+    </nav>
+
+    <section class="section" id="b-notice">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>notice</h2>
+          <p>กล่องแจ้งเตือน — tone: info | warn | success</p>
+        </div>
+        
+      </div>
+        <div class="block-notice is-info" role="note">
+          <span class="block-notice-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-file"></use></svg></span>
+          <div>
+            <strong>นี่คือ block ชนิด notice</strong>
+            <p>ใช้เน้นข้อความสำคัญ เช่น ข้อควรระวัง เงื่อนไขการใช้บริการ หรือประกาศชั่วคราว</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-rich-text">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>rich-text</h2>
+          <p>ข้อความยาว ใช้ paragraphs (ปลอดภัย) หรือ html (ต้องเชื่อถือแหล่งที่มา)</p>
+        </div>
+        
+      </div>
+        <div class="block-prose block-prose-narrow">
+          <p>ใส่ข้อความเป็น array ของย่อหน้าใน paragraphs ระบบจะ escape อักขระพิเศษให้อัตโนมัติ จึงปลอดภัยเมื่อเนื้อหามาจาก CMS หรือผู้ใช้</p>
+        <p>ถ้าต้องการ HTML เต็มรูปแบบ (ลิสต์ ตัวหนา ลิงก์) ให้ใช้ฟิลด์ html แทน แต่ต้องมั่นใจว่าเนื้อหามาจากแหล่งที่เชื่อถือได้เท่านั้น</p>
+        <p>ค่าเริ่มต้นจำกัดความกว้างที่ 78 ตัวอักษรเพื่อให้อ่านง่าย ตั้ง width เป็น full ถ้าต้องการเต็มความกว้าง</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-card-grid">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>card-grid</h2>
+          <p>การ์ดเนื้อหาเรียงเป็นตาราง — block ที่ใช้บ่อยที่สุด (columns: 2, 3 หรือ 4)</p>
+        </div>
+        <a class="view-all" href="#">ตัวอย่างปุ่มมุมขวา <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </div>
+        <div class="block-grid block-grid-3">
+          <article class="content-card block-card">
+            <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-book"></use></svg></span>
+            
+            <h3>การ์ดที่มีไอคอน</h3>
+            <p>ใส่ icon เป็น id จาก sprite เช่น i-book, i-file, i-people</p>
+            <small class="block-meta">ฟิลด์ meta อยู่ล่างสุด</small>
+            
+          </article>
+          <a class="content-card block-card is-link" href="#">
+            
+            <span class="block-card-tags"><span class="block-tag">มี tag</span></span>
+            <h3>การ์ดที่คลิกได้</h3>
+            <p>ถ้าใส่ href การ์ดทั้งใบจะกลายเป็นลิงก์และมี hover effect ใส่ action เพื่อแสดงปุ่มท้ายการ์ด</p>
+            
+            <span class="block-card-action">ยื่นคำขอ <span aria-hidden="true">→</span></span>
+          </a>
+          <article class="content-card block-card">
+            
+            
+            <h3>การ์ดแบบเรียบ</h3>
+            <p>ไม่ใส่ icon ไม่ใส่ href ก็ได้ เหลือแค่หัวข้อกับเนื้อหา</p>
+            
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-cards-numbered">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>card-grid (numbered)</h2>
+          <p>numbered: true = เลข 01 02 03 จาง ๆ มุมการ์ด การ์ดกะทัดรัด</p>
+        </div>
+        
+      </div>
+        <div class="block-grid block-grid-3 block-cards-numbered">
+          <article class="content-card block-card">
+            <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-book"></use></svg></span>
+            <span class="block-card-tags"><span class="block-tag">ยุทธศาสตร์ที่ 1</span></span>
+            <h3>การพัฒนาและประยุกต์ใช้เทคโนโลยีดิจิทัลเพื่อการเผยแพร่และบริการองค์ความรู้</h3>
+            
+            <small class="block-meta">2 แผนงาน</small>
+            
+          </article>
+          <article class="content-card block-card">
+            <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-database"></use></svg></span>
+            <span class="block-card-tags"><span class="block-tag">ยุทธศาสตร์ที่ 2</span></span>
+            <h3>การบริหารจัดการการใช้เทคโนโลยีดิจิทัลในองค์กร</h3>
+            
+            <small class="block-meta">2 แผนงาน</small>
+            
+          </article>
+          <article class="content-card block-card">
+            <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-people"></use></svg></span>
+            <span class="block-card-tags"><span class="block-tag">ยุทธศาสตร์ที่ 3</span></span>
+            <h3>การพัฒนาความรู้และทักษะด้านเทคโนโลยีดิจิทัลของบุคลากร</h3>
+            
+            <small class="block-meta">1 แผนงาน</small>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-feature-list">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>feature-list</h2>
+          <p>ไอคอน + หัวข้อ + คำอธิบาย เรียงเป็นแถว เหมาะกับการสรุปจุดเด่นหรือคุณสมบัติ</p>
+        </div>
+        
+      </div>
+        <ul class="block-grid block-grid-2 block-feature-list">
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+              <div>
+                <strong>หัวข้อรายการที่ 1</strong>
+                <p>คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ</p>
+                
+                
+              </div>
+            </li>
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-people"></use></svg></span>
+              <div>
+                <strong>หัวข้อรายการที่ 2</strong>
+                <p>คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ</p>
+                
+                
+              </div>
+            </li>
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-service"></use></svg></span>
+              <div>
+                <strong>หัวข้อรายการที่ 3</strong>
+                <p>คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ</p>
+                
+                
+              </div>
+            </li>
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-database"></use></svg></span>
+              <div>
+                <strong>หัวข้อรายการที่ 4</strong>
+                <p>คำอธิบายสั้น ๆ ต่อท้ายหัวข้อ</p>
+                
+                
+              </div>
+            </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="b-card-grid-service">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>card-grid (layout: service)</h2>
+          
+        </div>
+        
+      </div>
+        <div class="block-grid block-grid-3 block-cards-service">
+          <a class="content-card block-card is-link" href="#">
+            <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-form"></use></svg></span>
+            <span class="block-card-tags"><span class="block-tag">ออนไลน์</span><span class="block-tag">ตอบกลับทางอีเมล</span></span>
+            <h3>ชื่อบริการ</h3>
+            <p>คำอธิบายบริการ 1-2 บรรทัด</p>
+            
+            <span class="block-card-action">เริ่มใช้บริการ <svg class="icon block-card-arrow" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+          </a>
+          <a class="content-card block-card is-link" href="#">
+            <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-file"></use></svg></span>
+            <span class="block-card-tags"><span class="block-tag">แนบเอกสารได้</span></span>
+            <h3>ชื่อบริการ</h3>
+            <p>คำอธิบายบริการ</p>
+            
+            <span class="block-card-action">ยื่นคำขอ <svg class="icon block-card-arrow" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+          </a>
+          <a class="content-card block-card is-link" href="#">
+            <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-people"></use></svg></span>
+            <span class="block-card-tags"><span class="block-tag">หน่วยงาน</span></span>
+            <h3>ชื่อบริการ</h3>
+            <p>คำอธิบายบริการ</p>
+            
+            <span class="block-card-action">ยื่นคำขอ <svg class="icon block-card-arrow" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-card-grid-tiles">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>card-grid (layout: tiles)</h2>
+          
+        </div>
+        
+      </div>
+        <div class="block-grid block-grid-4 block-cards-tiles">
+          <a class="content-card block-card is-link" href="https://dictionary.orst.go.th/" target="_blank" rel="noopener noreferrer">
+            <span class="block-tile-top">
+              <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-dictionary"></use></svg></span>
+              <svg class="icon block-card-arrow" aria-hidden="true"><use href="#i-external"></use></svg>
+            </span>
+            <span class="block-card-text">
+              <strong>พจนานุกรม</strong>
+              <span>ลิงก์ภายนอก เปิดแท็บใหม่</span>
+            </span>
+            <small class="block-tile-host" lang="en">dictionary.orst.go.th</small><span class="sr-only"> (เปิดในแท็บใหม่)</span>
+          </a>
+          <a class="content-card block-card is-link" href="https://coined-word.orst.go.th/" target="_blank" rel="noopener noreferrer">
+            <span class="block-tile-top">
+              <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-journal"></use></svg></span>
+              <svg class="icon block-card-arrow" aria-hidden="true"><use href="#i-external"></use></svg>
+            </span>
+            <span class="block-card-text">
+              <strong>ศัพท์บัญญัติ</strong>
+              <span>ลิงก์ภายนอก</span>
+            </span>
+            <small class="block-tile-host" lang="en">coined-word.orst.go.th</small><span class="sr-only"> (เปิดในแท็บใหม่)</span>
+          </a>
+          <a class="content-card block-card is-link" href="knowledge-base.html">
+            <span class="block-tile-top">
+              <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-book"></use></svg></span>
+              <svg class="icon block-card-arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </span>
+            <span class="block-card-text">
+              <strong>หน้าภายใน</strong>
+              <span>ลิงก์ภายในเว็บ</span>
+            </span>
+            
+          </a>
+          <article class="content-card block-card">
+            <span class="block-tile-top">
+              <span class="block-card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-form"></use></svg></span>
+              
+            </span>
+            <span class="block-card-text">
+              <strong>ยังไม่มีลิงก์</strong>
+              <span>อยู่ระหว่างจัดทำเนื้อหา</span>
+            </span>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-feature-cards">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>feature-list (layout: cards)</h2>
+          
+        </div>
+        
+      </div>
+        <ul class="block-grid block-grid-3 block-feature-list block-feature-cards">
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-megaphone"></use></svg></span>
+              <div>
+                <strong>หัวข้อ</strong>
+                <p>คำอธิบาย</p>
+                
+                
+              </div>
+            </li>
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+              <div>
+                <strong>หัวข้อ</strong>
+                <p>คำอธิบาย</p>
+                
+                
+              </div>
+            </li>
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-pen"></use></svg></span>
+              <div>
+                <strong>หัวข้อ</strong>
+                <p>คำอธิบาย</p>
+                
+                
+              </div>
+            </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="b-stat-row">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>stat-row</h2>
+          <p>ตัวเลขสถิติ ปรับจำนวนคอลัมน์อัตโนมัติตามความกว้างจอ</p>
+        </div>
+        
+      </div>
+        <div class="block-stat-row">
+            <div class="block-stat" style="--i:0">
+              <strong>14</strong>
+              <span>ชนิดของ block</span>
+              <small>ขยายเพิ่มได้</small>
+            </div>
+            <div class="block-stat" style="--i:1">
+              <strong>0</strong>
+              <span>dependency ภายนอก</span>
+              <small>ไม่ต้อง npm install</small>
+            </div>
+            <div class="block-stat" style="--i:2">
+              <strong>1</strong>
+              <span>ไฟล์ JSON ต่อ 1 หน้า</span>
+              <small>แก้ที่เดียว</small>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-stat-progress">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>stat-row (progress)</h2>
+          <p>ใส่ progress 0-100 = วงแหวนความคืบหน้าแทนตัวเลขใหญ่ — ตัวอย่างจากเป้าหมายแผนปฏิบัติการดิจิทัล พ.ศ. 2563–2565</p>
+        </div>
+        
+      </div>
+        <div class="block-stat-row">
+            <div class="block-stat has-ring">
+              <span class="block-stat-ring" style="--p:80" aria-hidden="true"><b>80<small>%</small></b></span>
+              <span class="block-stat-text">
+                <strong class="sr-only">ร้อยละ 80</strong>
+                <span>ด้านบริการประชาชน</span>
+                <small>ของการบริการภาครัฐ ประชาชนสามารถเข้าถึงได้ด้วยเทคโนโลยีดิจิทัล</small>
+              </span>
+            </div>
+            <div class="block-stat has-ring">
+              <span class="block-stat-ring" style="--p:80" aria-hidden="true"><b>80<small>%</small></b></span>
+              <span class="block-stat-text">
+                <strong class="sr-only">ร้อยละ 80</strong>
+                <span>ด้านบุคลากร</span>
+                <small>ของบุคลากรได้รับการพัฒนาความรู้ความสามารถด้านเทคโนโลยีดิจิทัล</small>
+              </span>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section is-dark" id="b-stat-dark">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>stat-row (variant dark)</h2>
+          <p>การ์ดโปร่งบนแถบเขียวเข้ม ตัวเลขสีทอง</p>
+        </div>
+        
+      </div>
+        <div class="block-stat-row">
+            <div class="block-stat" style="--i:0">
+              <strong>3</strong>
+              <span>ประเด็นยุทธศาสตร์</span>
+              
+            </div>
+            <div class="block-stat" style="--i:1">
+              <strong>5</strong>
+              <span>แผนงาน</span>
+              
+            </div>
+            <div class="block-stat" style="--i:2">
+              <strong>12</strong>
+              <span>โครงการ</span>
+              
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-quote">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="block-eyebrow" lang="en">headingStyle: quote</span>
+          <h2 class="is-quote">“เป็นหน่วยงานที่ให้บริการด้วยเทคโนโลยีดิจิทัล ผู้รับบริการเข้าถึงองค์ความรู้ได้ง่ายและรวดเร็ว”</h2>
+          
+        </div>
+        
+      </div>
+        <div class="block-prose block-prose-narrow">
+          <p>ใส่ headingStyle: &quot;quote&quot; ให้ block ใดก็ได้ หัวข้อจะเป็นกล่องคำคม — ใช้กับวิสัยทัศน์หรือข้อความสำคัญ 1 ประโยค</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-link-list">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>link-list</h2>
+          <p>รายการเอกสาร/ลิงก์ พร้อมชนิดไฟล์และวันที่ เหมาะกับหน้าดาวน์โหลดและประกาศ</p>
+        </div>
+        
+      </div>
+        <div class="block-link-pages" data-doc-list data-doc-item=".block-link-item" data-page-size="10">
+          <ul class="block-link-list">
+            <li class="block-link-item">
+              <a class="block-link-row" href="#">
+                <span class="block-link-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg></span>
+                <span class="block-link-text">
+                  <strong>รายการที่มีครบทุกฟิลด์</strong>
+                  <span>คำอธิบายใต้ชื่อรายการ</span>
+                </span>
+                <span class="block-tag">PDF</span>
+                <span class="block-meta">1 ม.ค. 2569</span>
+              </a>
+            </li>
+            <li class="block-link-item">
+              <a class="block-link-row" href="#">
+                <span class="block-link-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg></span>
+                <span class="block-link-text">
+                  <strong>รายการที่มีเฉพาะชื่อ</strong>
+                  
+                </span>
+                
+                
+              </a>
+            </li>
+            <li class="block-link-item">
+              <a class="block-link-row" href="#">
+                <span class="block-link-icon"><svg class="icon" aria-hidden="true"><use href="#i-journal"></use></svg></span>
+                <span class="block-link-text">
+                  <strong>รายการที่เปลี่ยนไอคอนได้</strong>
+                  <span>ใส่ icon เพื่อเปลี่ยนจากไอคอนไฟล์เริ่มต้น</span>
+                </span>
+                <span class="block-tag">วารสาร</span>
+                
+              </a>
+            </li>
+          </ul>
+          <nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section doc-section" id="b-document-list">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>document-list</h2>
+          <p>แม่แบบ T1 รายการเอกสาร/ประกาศ — มีช่องค้นหา ตัวกรองปีงบประมาณ และปุ่มแสดงเพิ่ม (แถบค้นหาขึ้นเมื่อมีมากกว่า 5 รายการ) ตัวอย่างนี้ใช้ข้อมูลจริงจากเว็บเดิม</p>
+        </div>
+        
+      </div>
+        <div class="doc-list" data-doc-list data-page-size="5" data-unit="รายการ" data-view="list" data-view-default="list" data-view-key="doc-file-view">
+          <form class="doc-toolbar is-news is-docs" data-doc-toolbar hidden role="search" aria-label="ค้นหาเอกสาร">
+            <div class="doc-tools">
+              <label class="doc-search-pill">
+                <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+                <span class="sr-only">ค้นหาชื่อเอกสาร</span>
+                <input type="search" data-doc-search placeholder="ค้นหาชื่อเอกสาร" autocomplete="off">
+              </label>
+              <label class="doc-year-pill">
+                <span class="sr-only">ปีงบประมาณ</span>
+                <select data-doc-year>
+                  <option value="">ทุกปีงบประมาณ</option>
+                  <option value="2569">ปีงบ ๒๕๖๙</option><option value="2568">ปีงบ ๒๕๖๘</option><option value="2567">ปีงบ ๒๕๖๗</option><option value="2566">ปีงบ ๒๕๖๖</option><option value="2565">ปีงบ ๒๕๖๕</option><option value="2564">ปีงบ ๒๕๖๔</option>
+                </select>
+              </label>
+              
+              <div class="doc-view" role="group" aria-label="รูปแบบการแสดงผล">
+                <button type="button" data-doc-view="list" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg><span>รายการ</span></button>
+                <button type="button" data-doc-view="grid" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg><span>ตาราง</span></button>
+              </div>
+            </div>
+          </form>
+          <p class="doc-count" data-doc-count aria-live="polite">พบ 7 รายการ</p>
+          <ul class="doc-items" id="b-document-list-items">
+            <li class="doc-item is-pdf" data-year="2569">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" target="_blank" rel="noopener noreferrer">แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา<span class="sr-only"> (PDF 1.8 MB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2569<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>1.8 MB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" data-doc-title="แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา</span></a>
+              </div>
+            </li>
+            <li class="doc-item is-pdf" data-year="2568">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF" target="_blank" rel="noopener noreferrer">แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๘ สำนักงานราชบัณฑิตยสภา<span class="sr-only"> (PDF 290 KB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2568<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>290 KB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF" data-doc-title="แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๘ สำนักงานราชบัณฑิตยสภา"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๘ สำนักงานราชบัณฑิตยสภา</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๘ สำนักงานราชบัณฑิตยสภา</span></a>
+              </div>
+            </li>
+            <li class="doc-item is-pdf" data-year="2567">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF" target="_blank" rel="noopener noreferrer">แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๗ สำนักงานราชบัณฑิตยสภา<span class="sr-only"> (PDF 326 KB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2567<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>326 KB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF" data-doc-title="แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๗ สำนักงานราชบัณฑิตยสภา"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๗ สำนักงานราชบัณฑิตยสภา</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๗ สำนักงานราชบัณฑิตยสภา</span></a>
+              </div>
+            </li>
+            <li class="doc-item is-pdf" data-year="2566">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF" target="_blank" rel="noopener noreferrer">แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา<span class="sr-only"> (PDF 313 KB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2566<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>313 KB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF" data-doc-title="แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา</span></a>
+              </div>
+            </li>
+            <li class="doc-item is-pdf" data-year="2566">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF" target="_blank" rel="noopener noreferrer">แผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา<span class="sr-only"> (PDF 19.3 MB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2566<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>19.3 MB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF" data-doc-title="แผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา</span></a>
+              </div>
+            </li>
+            <li class="doc-item is-pdf" data-year="2565">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF" target="_blank" rel="noopener noreferrer">แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๕ สำนักงานราชบัณฑิตยสภา<span class="sr-only"> (PDF 667 KB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2565<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>667 KB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF" data-doc-title="แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๕ สำนักงานราชบัณฑิตยสภา"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๕ สำนักงานราชบัณฑิตยสภา</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๕ สำนักงานราชบัณฑิตยสภา</span></a>
+              </div>
+            </li>
+            <li class="doc-item is-pdf" data-year="2564">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF" target="_blank" rel="noopener noreferrer">แผนปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔<span class="sr-only"> (PDF 493 KB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2564<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>493 KB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF" data-doc-title="แผนปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔</span></a>
+              </div>
+            </li>
+          </ul>
+          <p class="doc-empty" data-doc-empty hidden>ไม่พบเอกสารที่ตรงกับเงื่อนไข</p>
+          <nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt doc-section" id="b-document-list-compact">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>document-list (layout: compact)</h2>
+          <p>แบบย่อ ไม่มีแถบค้นหา — ใช้เป็น &quot;เอกสารแนบ&quot; ท้ายหน้าเนื้อหา</p>
+        </div>
+        
+      </div>
+        <div class="doc-list is-compact" data-doc-list data-page-size="10" data-unit="รายการ">
+          
+          <ul class="doc-items" id="b-document-list-compact-items">
+            <li class="doc-item is-pdf" data-year="2569">
+              <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" target="_blank" rel="noopener noreferrer">แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา<span class="sr-only"> (PDF 1.8 MB เปิดในแท็บใหม่)</span></a>
+                <div class="doc-meta">ปีงบประมาณ 2569<span aria-hidden="true"> · </span>PDF<span aria-hidden="true"> · </span>1.8 MB</div>
+                
+              </div>
+              <div class="doc-actions">
+                <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" data-doc-title="แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา</span></a>
+                <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา</span></a>
+              </div>
+            </li>
+          </ul>
+          <p class="doc-empty" data-doc-empty hidden>ไม่พบเอกสารที่ตรงกับเงื่อนไข</p>
+          <nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-document-list-empty">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>document-list (ยังไม่มีเอกสาร)</h2>
+          <p>เมื่อ items ว่าง จะแสดงข้อความแจ้งแทนหน้าเปล่า — เปลี่ยนข้อความได้ด้วย emptyText</p>
+        </div>
+        
+      </div>
+        <div class="block-notice is-info" role="note">
+          <span class="block-notice-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-file"></use></svg></span>
+          <div><p>ยังไม่มีเอกสารในหมวดนี้ อยู่ระหว่างรวบรวมข้อมูล</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-article">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>article</h2>
+          <p>แม่แบบ T2 เนื้อหายาวแบ่งหัวข้อ — มีสารบัญ &quot;หัวข้อในหน้านี้&quot; อัตโนมัติเมื่อมีหัวข้อตั้งแต่ 3 หัวข้อ (ติดด้านข้างบนจอใหญ่ ย้ายขึ้นบนบนมือถือ)</p>
+        </div>
+        
+      </div>
+        <div class="article has-toc">
+          <nav class="article-toc" aria-label="หัวข้อในหน้านี้">
+            <strong>หัวข้อในหน้านี้</strong>
+            <ol><li><a href="#b-article-1">หัวข้อที่มีย่อหน้า</a></li><li><a href="#b-article-2">หัวข้อที่มีรายการ</a></li><li><a href="#b-article-3">หัวข้อที่ใช้ HTML</a></li></ol>
+          </nav>
+          <div class="article-body block-prose">
+            <p class="article-intro">ย่อหน้านำ (intro) ตัวใหญ่กว่าเนื้อหาเล็กน้อย ใช้สรุปใจความของหน้า</p>
+            <section class="article-section" id="b-article-1" aria-labelledby="b-article-1-h">
+              <h3 id="b-article-1-h">หัวข้อที่มีย่อหน้า</h3>
+              <p>แต่ละหัวข้อมี paragraphs เป็นรายการย่อหน้า</p>
+              <p>ย่อหน้าที่สองของหัวข้อเดียวกัน</p>
+              
+              
+            </section>
+            <section class="article-section" id="b-article-2" aria-labelledby="b-article-2-h">
+              <h3 id="b-article-2-h">หัวข้อที่มีรายการ</h3>
+              
+              <ul><li>รายการแบบจุดข้อที่ ๑</li><li>รายการแบบจุดข้อที่ ๒</li><li>รายการแบบจุดข้อที่ ๓</li></ul>
+              
+            </section>
+            <section class="article-section" id="b-article-3" aria-labelledby="b-article-3-h">
+              <h3 id="b-article-3-h">หัวข้อที่ใช้ HTML</h3>
+              
+              
+              <p>ใช้ฟิลด์ <strong>html</strong> เมื่อต้องการตัวหนา ลิงก์ หรือตาราง — ใส่เฉพาะเนื้อหาที่เชื่อถือได้</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-page-index">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>page-index</h2>
+          <p>แม่แบบ T3 หน้าหมวด — สารบัญหน้าลูกแบ่งเป็นกลุ่ม ลิงก์ภายนอก (http) เปิดแท็บใหม่ รายการที่ไม่มี href แสดงเป็น &quot;รอเนื้อหา&quot;</p>
+        </div>
+        
+      </div>
+        <div class="page-index index-cols-2">
+            <section class="index-group" data-index-sec="กลุ่มที่มีไอคอนและคำอธิบาย">
+              <header class="index-group-head">
+                <span class="index-group-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-journal"></use></svg></span>
+                <div>
+                  
+                  <h3>กลุ่มที่มีไอคอนและคำอธิบาย</h3>
+                  <p>คำอธิบายกลุ่ม (desc) แสดงใต้ชื่อกลุ่ม</p>
+                </div>
+              </header>
+              <ul class="index-list">
+                <li class="index-item">
+                  <a class="index-link" href="styleguide.html">
+                    <span class="index-text"><strong>ลิงก์ไปหน้าในเว็บ</strong></span>
+                    
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                  </a>
+                </li>
+                <li class="index-item">
+                  <a class="index-link" href="styleguide.html">
+                    <span class="index-text"><strong>รายการที่มีคำอธิบาย</strong><span>คำอธิบายสั้นใต้ชื่อรายการ</span></span>
+                    
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                  </a>
+                </li>
+                <li class="index-item">
+                  <a class="index-link" href="https://www.orst.go.th/" target="_blank" rel="noopener noreferrer">
+                    <span class="index-text"><strong>ลิงก์ภายนอกพร้อมป้าย</strong></span>
+                    <span class="index-tag">เว็บไซต์เดิม</span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only">(เปิดในแท็บใหม่)</span>
+                  </a>
+                </li>
+                <li class="index-item is-pending">
+                  <span class="index-link"><span class="index-text"><strong>รายการที่ยังไม่มีหน้า</strong></span>
+                  <span class="index-pending">รอเนื้อหา</span></span>
+                </li>
+              </ul>
+            </section>
+            <section class="index-group" data-index-sec="กลุ่มที่ไม่มีไอคอน">
+              <header class="index-group-head">
+                
+                <div>
+                  
+                  <h3>กลุ่มที่ไม่มีไอคอน</h3>
+                  
+                </div>
+              </header>
+              <ul class="index-list">
+                <li class="index-item">
+                  <a class="index-link" href="styleguide.html">
+                    <span class="index-text"><strong>รายการที่ ๑</strong></span>
+                    
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                  </a>
+                </li>
+                <li class="index-item">
+                  <a class="index-link" href="styleguide.html">
+                    <span class="index-text"><strong>รายการที่ ๒</strong></span>
+                    
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                  </a>
+                </li>
+              </ul>
+            </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-person-grid">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>person-grid</h2>
+          <p>แม่แบบ T5 บุคคล — รูปแนวตั้ง 3:4 ครอปจากด้านล่างให้ศีรษะไม่ขาด เบอร์โทรและอีเมลกดได้ ไม่มีรูปจะแสดงไอคอนแทน</p>
+        </div>
+        
+      </div>
+        <div class="block-grid block-grid-4 person-grid">
+          <article class="person-card">
+            <div class="person-photo"><img src="assets/images/orst/people/deputy-secretary-general.jpg" alt="นายศานติ ภักดีคำ" loading="lazy"></div>
+            <div class="person-body">
+              <h3>นายศานติ ภักดีคำ</h3>
+              <p class="person-position">รองเลขาธิการราชบัณฑิตยสภา</p>
+              
+              <ul class="person-contact"><li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span class="sr-only">โทรศัพท์</span><a href="tel:021411718">02-141-1718</a></li><li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><span class="sr-only">อีเมล</span><a href="mailto:Santi.p@orst.go.th" lang="en">Santi.p@orst.go.th</a></li></ul>
+              
+              
+            </div>
+          </article>
+          <article class="person-card">
+            <div class="person-photo"><span class="person-photo-empty" aria-hidden="true"><svg class="icon-lg" aria-hidden="true"><use href="#i-user"></use></svg></span></div>
+            <div class="person-body">
+              <h3>[ชื่อ-นามสกุล]</h3>
+              <p class="person-position">[ตำแหน่ง]</p>
+              
+              
+              <p class="person-note">ตัวอย่างกรณียังไม่มีรูป</p>
+              
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-person-feature">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>person-grid (layout feature)</h2>
+          <p>ผู้บริหารสูงสุด 1 คน — รูปมีกรอบ ตารางข้อมูลติดต่อ ปุ่มดูประวัติ · ดึงจาก content/people/index.json ด้วย source people กดได้ทั้งการ์ดไป person.html?id=</p>
+        </div>
+        
+      </div>
+        <div class="person-grid is-feature">
+          <article class="person-card is-link">
+            <div class="person-photo is-framed"><img src="assets/images/orst/people/secretary-general.jpg" alt="นายศุภฤกษ์ ภู่พงศ์ศักดิ์"></div>
+            <div class="person-body">
+              <p class="person-position">เลขาธิการราชบัณฑิตยสภา</p>
+              <h3><a class="person-link" href="person.html?id=secretary-general">นายศุภฤกษ์ ภู่พงศ์ศักดิ์</a></h3>
+              
+              <dl class="person-facts"><div><dt>โทรศัพท์</dt><dd><a href="tel:021411725">02-141-1725</a></dd></div></dl>
+              
+              <span class="person-more is-button" aria-hidden="true">ดูประวัติ <svg class="icon person-more-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-person-row">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>person-grid (layout row)</h2>
+          <p>รองผู้บริหาร / ผู้อำนวยการ — รูปมีกรอบ ข้อมูลด้านข้าง 2 คอลัมน์ (จอแคบเหลือ 1 คอลัมน์)</p>
+        </div>
+        
+      </div>
+        <div class="person-grid is-row">
+          <article class="person-card is-link">
+            <div class="person-photo is-framed"><img src="assets/images/orst/people/deputy-secretary-general.jpg" alt="นายศานติ ภักดีคำ" loading="lazy"></div>
+            <div class="person-body">
+              <p class="person-position">รองเลขาธิการราชบัณฑิตยสภา</p>
+              <h3><a class="person-link" href="person.html?id=deputy-secretary-general">นายศานติ ภักดีคำ</a></h3>
+              <ul class="person-roles"><li>ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)</li></ul>
+              <ul class="person-contact"><li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span class="sr-only">โทรศัพท์</span><a href="tel:021411718">02-141-1718</a></li><li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><span class="sr-only">อีเมล</span><a href="mailto:Santi.p@orst.go.th" lang="en">Santi.p@orst.go.th</a></li></ul>
+              
+              <span class="person-more" aria-hidden="true">ดูประวัติ <svg class="icon person-more-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+            </div>
+          </article>
+          <article class="person-card is-link">
+            <div class="person-photo is-framed"><img src="assets/images/orst/people/director-1.jpg" alt="นางสาวอารี พลดี" loading="lazy"></div>
+            <div class="person-body">
+              <p class="person-position">เลขานุการกรม</p>
+              <h3><a class="person-link" href="person.html?id=director-1">นางสาวอารี พลดี</a></h3>
+              
+              <ul class="person-contact"><li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span class="sr-only">โทรศัพท์</span><a href="tel:021411723">02-141-1723</a></li></ul>
+              
+              <span class="person-more" aria-hidden="true">ดูประวัติ <svg class="icon person-more-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-media-contain">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>media-grid (ratio 3:4, fit contain)</h2>
+          <p>ปกหนังสือหรือภาพสแกน — เห็นทั้งภาพไม่ครอป</p>
+        </div>
+        
+      </div>
+        <div class="block-grid block-grid-4 block-media-grid media-ratio-3-4 media-fit-contain">
+          <div class="block-media-card">
+            <span class="block-media-thumb">
+              <img src="assets/images/orst/publications/00000355.jpg" alt="ปกหนังสือตัวอย่าง" loading="lazy">
+              
+              
+            </span>
+            <span class="block-media-body">
+              
+              <strong>ตัวอย่างปกหนังสือ</strong>
+              
+              
+            </span>
+          </div>
+          <a class="block-media-card is-link is-video" href="https://www.youtube.com/watch?v=trzQRPLZ9Xw" target="_blank" rel="noopener noreferrer" data-yt="trzQRPLZ9Xw" data-yt-title="วิดีโอ YouTube (ใส่ youtube = รหัสวิดีโอ) กดแล้วเล่นในป๊อปอัป">
+            <span class="block-media-thumb">
+              <img src="assets/images/orst/video/trzQRPLZ9Xw.jpg" alt="ภาพตัวอย่างวิดีโอ คำถิ่น คำกวี" loading="lazy">
+              <span class="media-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></span>
+              
+            </span>
+            <span class="block-media-body">
+              <small class="media-kicker">การเสวนาทางวิชาการ</small>
+              <strong>วิดีโอ YouTube (ใส่ youtube = รหัสวิดีโอ) กดแล้วเล่นในป๊อปอัป</strong>
+              
+              <span class="media-go" aria-hidden="true">ดูวิดีโอ <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+            </span><span class="sr-only"> (เล่นวิดีโอ)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section doc-section" id="b-news-list">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>document-list (layout: news)</h2>
+          <p>แม่แบบ T4 รายการข่าว — รูปปก + ชื่อข่าว + วันที่ + คำโปรย ข่าวที่ไม่มีรูปแสดงป้ายวันที่ (ข้อมูลจริงจากเว็บเดิม)</p>
+        </div>
+        
+      </div>
+        <div class="doc-list is-news" data-doc-list data-page-size="12" data-unit="ข่าว" data-view="grid">
+          <form class="doc-toolbar is-news" data-doc-toolbar hidden role="search" aria-label="ค้นหาข่าว">
+            
+            <div class="doc-tools">
+              <label class="doc-search-pill">
+                <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+                <span class="sr-only">ค้นหาข่าว</span>
+                <input type="search" data-doc-search placeholder="ค้นหาข่าว" autocomplete="off">
+              </label>
+              <label class="doc-year-pill">
+                <span class="sr-only">ปีงบประมาณ</span>
+                <select data-doc-year>
+                  <option value="">ทุกปีงบประมาณ</option>
+                  <option value="2570">ปีงบ ๒๕๗๐</option><option value="2569">ปีงบ ๒๕๖๙</option>
+                </select>
+              </label>
+              <div class="doc-view" role="group" aria-label="รูปแบบการแสดงผล">
+                <button type="button" data-doc-view="grid" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg><span>ตาราง</span></button>
+                <button type="button" data-doc-view="list" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg><span>รายการ</span></button>
+              </div>
+            </div>
+          </form>
+          <p class="doc-count" data-doc-count aria-live="polite">พบ 3 ข่าว</p>
+          <ul class="doc-items" id="b-news-list-items">
+            <li class="doc-item news-row" data-year="2570">
+              <a class="news-row-thumb" href="news-detail.html?id=69kbj5538066" tabindex="-1" aria-hidden="true"><span class="news-cover-tpl nct-t0">
+                
+                <span class="nct-year"><small>พ.ศ.</small>2569</span>
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+              </span></a>
+              <time class="news-row-date" datetime="2026-11-02" aria-label="2 พฤศจิกายน 2569"><b>2</b><span>พ.ย. 69</span></time>
+              <div class="doc-body">
+                <a class="doc-title" href="news-detail.html?id=69kbj5538066">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”</a>
+                
+                <p class="news-row-excerpt">ภาพประกอบ 3 ภาพ</p>
+                <p class="news-row-meta"><time class="nrm-date" datetime="2026-11-02">2 พฤศจิกายน 2569</time></p>
+              </div>
+              
+              <div class="news-row-foot">
+                <time class="news-row-when" datetime="2026-11-02">2 พ.ย. 2569</time>
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span>
+              </div>
+            </li>
+            <li class="doc-item news-row" data-year="2570">
+              <a class="news-row-thumb" href="news-detail.html?id=69jaj1403044" tabindex="-1" aria-hidden="true"><span class="news-cover-tpl nct-t0">
+                
+                <span class="nct-year"><small>พ.ศ.</small>2569</span>
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+              </span></a>
+              <time class="news-row-date" datetime="2026-10-31" aria-label="31 ตุลาคม 2569"><b>31</b><span>ต.ค. 69</span></time>
+              <div class="doc-body">
+                <a class="doc-title" href="news-detail.html?id=69jaj1403044">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ</a>
+                
+                <p class="news-row-excerpt">ภาพประกอบ 10 ภาพ · เอกสารแนบ 5 ไฟล์</p>
+                <p class="news-row-meta"><time class="nrm-date" datetime="2026-10-31">31 ตุลาคม 2569</time></p>
+              </div>
+              
+              <div class="news-row-foot">
+                <time class="news-row-when" datetime="2026-10-31">31 ต.ค. 2569</time>
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span>
+              </div>
+            </li>
+            <li class="doc-item news-row" data-year="2569">
+              <a class="news-row-thumb" href="https://www.orst.go.th/iwfm_list.asp?n=g&amp;b=e&amp;i=0020000402001002%2F69HZK5054022" tabindex="-1" aria-hidden="true" target="_blank" rel="noopener noreferrer"><span class="news-cover-tpl nct-t0">
+                
+                <span class="nct-year"><small>พ.ศ.</small>2569</span>
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+              </span></a>
+              <time class="news-row-date" datetime="2026-08-26" aria-label="26 สิงหาคม 2569"><b>26</b><span>ส.ค. 69</span></time>
+              <div class="doc-body">
+                <a class="doc-title" href="https://www.orst.go.th/iwfm_list.asp?n=g&amp;b=e&amp;i=0020000402001002%2F69HZK5054022" target="_blank" rel="noopener noreferrer">ประกาศรับสมัครภาคีสมาชิกเป็นราชบัณฑิต<span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
+                
+                
+                <p class="news-row-meta"><time class="nrm-date" datetime="2026-08-26">26 สิงหาคม 2569</time></p>
+              </div>
+              
+              <div class="news-row-foot">
+                <time class="news-row-when" datetime="2026-08-26">26 ส.ค. 2569</time>
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg></span></span>
+              </div>
+            </li>
+          </ul>
+          <p class="doc-empty" data-doc-empty hidden>ไม่พบข่าวที่ตรงกับเงื่อนไข</p>
+          <nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>
+        </div>
+      </div>
+    </section>
+
+    <div class="block-share" id="b-share">
+      <div class="container">
+        <span class="share-label">แชร์ข่าวนี้</span>
+        <a class="share-btn is-facebook" href="#" data-share="facebook" target="_blank" rel="noopener noreferrer"><span>Facebook</span><span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
+        <a class="share-btn is-line" href="#" data-share="line" target="_blank" rel="noopener noreferrer"><span>LINE</span><span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
+        <a class="share-btn is-x" href="#" data-share="x" target="_blank" rel="noopener noreferrer"><span>X</span><span class="sr-only"> (เปิดในแท็บใหม่)</span></a>
+        <button class="share-btn is-copy" type="button" data-share="copy">คัดลอกลิงก์</button>
+        <span class="share-status" data-share-status aria-live="polite"></span>
+      </div>
+    </div>
+
+    <section class="section alt figure-section" id="b-figure">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>figure</h2>
+          <p>ภาพเด่นของหน้าข่าว — เห็นทั้งภาพ กดเพื่อดูภาพเต็มใน lightbox</p>
+        </div>
+        
+      </div>
+        <figure class="block-figure"><a href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005324.JPG" data-lightbox="b-figure"><img src="assets/images/orst/news/data0005-00005324-960.jpg" alt="ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดีและพลังของแผ่น" loading="lazy"><span class="sr-only">ดูภาพขนาดเต็ม</span></a>
+          <figcaption>คำบรรยายภาพ (caption)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="b-media-grid">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>media-grid</h2>
+          <p>การ์ดที่มีรูปภาพ อัตราส่วนภาพถูกบังคับเป็น 4:3 เพื่อให้แถวเรียงเสมอกัน</p>
+        </div>
+        
+      </div>
+        <div class="block-grid block-grid-4 block-media-grid media-ratio-4-3">
+          <a class="block-media-card is-link" href="#">
+            <span class="block-media-thumb">
+              <img src="assets/images/e-Book01.png" alt="ตัวอย่างปกหนังสือ 1" loading="lazy">
+              
+              <span class="block-tag">e-Book</span>
+            </span>
+            <span class="block-media-body">
+              
+              <strong>การ์ดสื่อที่คลิกได้</strong>
+              <span>ใส่ href เพื่อให้คลิกได้</span>
+              
+            </span>
+          </a>
+          <a class="block-media-card is-link" href="#">
+            <span class="block-media-thumb">
+              <img src="assets/images/e-Book02.png" alt="ตัวอย่างปกหนังสือ 2" loading="lazy">
+              
+              
+            </span>
+            <span class="block-media-body">
+              
+              <strong>การ์ดที่ไม่มี tag</strong>
+              <span>ไม่ใส่ tag ก็ได้</span>
+              
+            </span>
+          </a>
+          <div class="block-media-card">
+            <span class="block-media-thumb">
+              <img src="assets/images/e-Book03.png" alt="ตัวอย่างปกหนังสือ 3" loading="lazy">
+              
+              
+            </span>
+            <span class="block-media-body">
+              
+              <strong>การ์ดที่คลิกไม่ได้</strong>
+              <span>ไม่ใส่ href จะเป็นการ์ดเฉย ๆ</span>
+              
+            </span>
+          </div>
+          <a class="block-media-card is-link" href="#">
+            <span class="block-media-thumb">
+              <img src="assets/images/e-Book04.png" alt="ตัวอย่างปกหนังสือ 4" loading="lazy">
+              
+              <span class="block-tag">ใหม่</span>
+            </span>
+            <span class="block-media-body">
+              
+              <strong>การ์ดที่มีเฉพาะชื่อ</strong>
+              
+              
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-table">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>table</h2>
+          <p>ตารางข้อมูล คอลัมน์แรกจะถูกทำเป็น row header อัตโนมัติ และเลื่อนแนวนอนได้บนจอเล็ก</p>
+        </div>
+        
+      </div>
+        <div class="block-table-wrap">
+          <table class="block-table">
+            <caption>ตัวอย่างตาราง — columns คือหัวตาราง rows คือ array ซ้อน array</caption>
+            <thead><tr><th scope="col">ชื่อ block</th><th scope="col">ใช้ทำอะไร</th><th scope="col">ฟิลด์บังคับ</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">page-hero</th><td>หัวหน้าเพจ</td><td>heading</td></tr>
+              <tr><th scope="row">card-grid</th><td>การ์ดเรียงตาราง</td><td>items</td></tr>
+              <tr><th scope="row">faq</th><td>คำถามที่พบบ่อย</td><td>items</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-steps">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>steps</h2>
+          <p>ขั้นตอนการทำงาน ระบบใส่เลขลำดับให้อัตโนมัติ</p>
+        </div>
+        
+      </div>
+        <ol class="block-steps">
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">1</span>
+              <div>
+                <strong>ขั้นตอนที่หนึ่ง</strong>
+                <p>คำอธิบายของขั้นตอน</p>
+              </div>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">2</span>
+              <div>
+                <strong>ขั้นตอนที่สอง</strong>
+                <p>คำอธิบายของขั้นตอน</p>
+              </div>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">3</span>
+              <div>
+                <strong>ขั้นตอนที่สาม</strong>
+                <p>คำอธิบายของขั้นตอน</p>
+              </div>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section is-dark" id="b-steps-timeline">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>steps (layout: timeline, variant: dark)</h2>
+          
+        </div>
+        
+      </div>
+        <ol class="block-steps block-steps-timeline">
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">1</span>
+              <strong>ขั้นที่หนึ่ง</strong>
+              <p>คำอธิบายสั้น</p>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">2</span>
+              <strong>ขั้นที่สอง</strong>
+              <p>คำอธิบายสั้น</p>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">3</span>
+              <strong>ขั้นที่สาม</strong>
+              <p>คำอธิบายสั้น</p>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">4</span>
+              <strong>ขั้นที่สี่</strong>
+              <p>คำอธิบายสั้น</p>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-two-column">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>two-column</h2>
+          <p>ข้อความคู่กับรูป สลับข้างได้ด้วย imageSide: left</p>
+        </div>
+        
+      </div>
+        <div class="block-two-col">
+          <div class="block-two-col-text">
+            <h3>หัวข้อย่อยของคอลัมน์ข้อความ</h3>
+            <p>ใส่ข้อความเป็น array ใน paragraphs เช่นเดียวกับ rich-text</p>
+            <p>บนจอมือถือจะเรียงเป็นแนวตั้งอัตโนมัติ โดยข้อความอยู่บนและรูปอยู่ล่างเสมอ</p>
+            <div class="block-actions"><a class="block-btn" href="#">ปุ่มหลัก</a><a class="block-btn is-ghost" href="#">ปุ่มรอง</a></div>
+          </div>
+          <div class="block-two-col-media">
+            <img src="assets/images/ConnectedNetwork01.JPG" alt="ตัวอย่างภาพประกอบ" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="b-faq">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>faq</h2>
+          <p>คำถามที่พบบ่อย กดเปิด/ปิดได้ (components.js ผูก event ให้อัตโนมัติ)</p>
+        </div>
+        
+      </div>
+        
+        <div class="faq-compact-list">
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-b-faq-0">
+                <span class="faq-mark" aria-hidden="true">Q</span>
+                <span class="faq-q-text">ต้องใส่ id ให้ block ไหม</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+              </button>
+              <div class="faq-a" id="faq-a-b-faq-0" hidden>
+                <span class="faq-mark is-a" aria-hidden="true">A</span>
+                <div class="faq-a-body">
+                  <p>ไม่บังคับ แต่ถ้าใส่จะทำ anchor link มาที่ section นั้นได้ และ block faq ใช้ id ในการสร้าง id ของคำตอบด้วย</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-b-faq-1">
+                <span class="faq-mark" aria-hidden="true">Q</span>
+                <span class="faq-q-text">เปลี่ยนสีพื้นหลัง section ยังไง</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+              </button>
+              <div class="faq-a" id="faq-a-b-faq-1" hidden>
+                <span class="faq-mark is-a" aria-hidden="true">A</span>
+                <div class="faq-a-body">
+                  <p>ใส่ variant เป็น alt จะได้พื้นสีขาว ถ้าไม่ใส่จะเป็นพื้นสีกระดาษตามธีม</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-b-faq-2">
+                <span class="faq-mark" aria-hidden="true">Q</span>
+                <span class="faq-q-text">เพิ่ม block ชนิดใหม่ได้ไหม</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+              </button>
+              <div class="faq-a" id="faq-a-b-faq-2" hidden>
+                <span class="faq-mark is-a" aria-hidden="true">A</span>
+                <div class="faq-a-body">
+                  <p>ได้ เขียนฟังก์ชัน render ใน assets/js/blocks.js แล้วลงทะเบียนใน BLOCKS ท้ายไฟล์</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-contact-info">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>contact-info</h2>
+          <p>ข้อมูลติดต่อ เบอร์โทรและอีเมลจะกลายเป็นลิงก์ tel: / mailto: อัตโนมัติ</p>
+        </div>
+        
+      </div>
+        <div class="block-contact">
+          <ul class="block-contact-list">
+            
+            <li class="block-contact-row">
+              <span class="block-contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-map"></use></svg></span>
+              <div>
+                <small>ที่อยู่</small>
+                <span>[ที่อยู่สำนักงาน]</span>
+              </div>
+            </li>
+            
+            <li class="block-contact-row">
+              <span class="block-contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+              <div>
+                <small>โทรศัพท์</small>
+                <a href="tel:">[หมายเลขโทรศัพท์]</a>
+              </div>
+            </li>
+            
+            <li class="block-contact-row">
+              <span class="block-contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg></span>
+              <div>
+                <small>อีเมล</small>
+                <a href="mailto:[อีเมลติดต่อ]">[อีเมลติดต่อ]</a>
+              </div>
+            </li>
+            
+            <li class="block-contact-row">
+              <span class="block-contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg></span>
+              <div>
+                <small>เวลาทำการ</small>
+                <span>[วันและเวลาทำการ]</span>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="block-cta" id="b-cta-band">
+      <div class="container block-cta-inner">
+        <div>
+          <h2>cta-band</h2>
+          <p>แถบเรียกให้ทำอะไรบางอย่าง วางไว้ท้ายหน้าเพื่อชี้ทางผู้ใช้ต่อ</p>
+        </div>
+        <div class="block-actions"><a class="block-btn" href="#">ปุ่มหลัก</a><a class="block-btn is-ghost" href="#">ปุ่มรอง</a></div>
+      </div>
+    </section>
+
+    <section class="section news-media-section" id="b-news-media">
+      <div class="container">
+        <div class="news-media">
+          <div class="nm-col nm-gallery">
+            <h2 class="nm-head">ภาพประกอบข่าว <span class="nm-count">3</span></h2>
+            <div class="nm-mosaic is-3">
+              <a class="nm-tile is-main" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005462.JPG" data-lightbox="b-news-media"><img src="assets/images/orst/news/data0005-00005462-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 1" loading="lazy"><span class="sr-only">ดูภาพขนาดเต็ม</span></a><a class="nm-tile" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005463.JPG" data-lightbox="b-news-media"><img src="assets/images/orst/news/data0005-00005463-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 2" loading="lazy"><span class="sr-only">ดูภาพขนาดเต็ม</span></a><a class="nm-tile" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005464.JPG" data-lightbox="b-news-media"><img src="assets/images/orst/news/data0005-00005464-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 3" loading="lazy"><span class="sr-only">ดูภาพขนาดเต็ม</span></a>
+            </div>
+            
+          </div></div>
+      </div>
+    </section>
+
+    <section class="section alt news-related" id="b-news-related" aria-labelledby="b-news-related-h">
+      <div class="container">
+        <div class="news-related-head">
+          <h2 id="b-news-related-h">news-related — ข่าวอื่น ๆ ท้ายหน้าข่าว</h2>
+          <a class="view-all" href="general-news.html">ดูทั้งหมด <svg class="icon view-all-ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="doc-list is-news" data-view="grid"><ul class="doc-items">
+            <li class="doc-item news-row">
+              <a class="news-row-thumb" href="news-detail.html?id=69jaj1403044" tabindex="-1" aria-hidden="true"><span class="news-cover-tpl nct-t0">
+                <span class="nct-kicker">ประกาศ</span>
+                <span class="nct-year"><small>พ.ศ.</small>2569</span>
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+              </span></a>
+              <time class="news-row-date" datetime="2026-10-31" aria-label="31 ตุลาคม 2569"><b>31</b><span>ต.ค. 69</span></time>
+              <div class="doc-body"><a class="doc-title" href="news-detail.html?id=69jaj1403044">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การรับสมัครบุคคลเพื่อจ้างเหมาบริการ</a></div>
+              <div class="news-row-foot">
+                <time class="news-row-when" datetime="2026-10-31">31 ต.ค. 2569</time>
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span>
+              </div>
+            </li>
+            <li class="doc-item news-row">
+              <a class="news-row-thumb" href="news-detail.html?id=69jsh5647044" tabindex="-1" aria-hidden="true"><span class="news-cover-tpl nct-t0">
+                <span class="nct-kicker">ประกาศ</span>
+                <span class="nct-year"><small>พ.ศ.</small>2569</span>
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+              </span></a>
+              <time class="news-row-date" datetime="2026-10-29" aria-label="29 ตุลาคม 2569"><b>29</b><span>ต.ค. 69</span></time>
+              <div class="doc-body"><a class="doc-title" href="news-detail.html?id=69jsh5647044">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง การประกวดแต่งหนังสือสอนพระพุทธศาสนาแก่เด็ก ประจำพุทธศักราช ๒๕๗๐ หัวข้อเรื่อง “ยิ่งเสียยิ่งได้ ยิ่งให้ยิ่งมี”</a></div>
+              <div class="news-row-foot">
+                <time class="news-row-when" datetime="2026-10-29">29 ต.ค. 2569</time>
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span>
+              </div>
+            </li>
+            <li class="doc-item news-row">
+              <a class="news-row-thumb" href="news-detail.html?id=69jsn0030075" tabindex="-1" aria-hidden="true"><span class="news-cover-tpl nct-t0">
+                <span class="nct-kicker">ประกาศ</span>
+                <span class="nct-year"><small>พ.ศ.</small>2569</span>
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+              </span></a>
+              <time class="news-row-date" datetime="2026-10-29" aria-label="29 ตุลาคม 2569"><b>29</b><span>ต.ค. 69</span></time>
+              <div class="doc-body"><a class="doc-title" href="news-detail.html?id=69jsn0030075">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักธรรมศาสตร์และการเมือง</a></div>
+              <div class="news-row-foot">
+                <time class="news-row-when" datetime="2026-10-29">29 ต.ค. 2569</time>
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span>
+              </div>
+            </li>
+            <li class="doc-item news-row">
+              <a class="news-row-thumb" href="news-detail.html?id=69jsm4847075" tabindex="-1" aria-hidden="true"><span class="news-cover-tpl nct-t0">
+                <span class="nct-kicker">ประกาศ</span>
+                <span class="nct-year"><small>พ.ศ.</small>2569</span>
+                <img src="assets/images/orst-emblem.png" alt="" loading="lazy">
+              </span></a>
+              <time class="news-row-date" datetime="2026-10-19" aria-label="19 ตุลาคม 2569"><b>19</b><span>ต.ค. 69</span></time>
+              <div class="doc-body"><a class="doc-title" href="news-detail.html?id=69jsm4847075">ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง รับสมัครคัดเลือกบุคคลเพื่อแต่งตั้งเป็นภาคีสมาชิก สำนักวิทยาศาสตร์</a></div>
+              <div class="news-row-foot">
+                <time class="news-row-when" datetime="2026-10-19">19 ต.ค. 2569</time>
+                <span class="news-row-go" aria-hidden="true">อ่านต่อ<span class="news-row-go-ic"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span>
+              </div>
+            </li>
+        </ul></div>
+      </div>
+    </section>
+
+    <section class="section evcal-section" id="sg-event-calendar">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>event-calendar — ปฏิทินกิจกรรม</h2>
+          
+        </div>
+        
+      </div>
+        <div class="evcal">
+          <div class="gcal" data-gcal aria-labelledby="sg-event-calendar-board">
+            <script type="application/json" data-gcal-data>{"events":[{"id":"","title":"[ชื่อกิจกรรมหลายวัน]","start":"2026-02-02","end":"2026-02-04","location":"[สถานที่]","unit":"","url":"","color":1},{"id":"","title":"[ชื่อกิจกรรม]","start":"2026-01-15","end":"","location":"[สถานที่]","unit":"[หน่วยงาน]","url":"","color":1}],"units":[{"name":"[หน่วยงาน]","color":1}]}</script>
+            <div class="gcal-head">
+              <h2 class="gcal-board-title" id="sg-event-calendar-board"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>ปฏิทินกิจกรรม</h2>
+              <div class="gcal-toolbar">
+                <button type="button" class="gcal-today" data-gcal-today>วันนี้</button>
+                <span class="gcal-nav">
+                  <button type="button" class="gcal-icon-btn" data-gcal-prev aria-label="ก่อนหน้า"><svg class="icon gcal-prev-ic" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
+                  <button type="button" class="gcal-icon-btn" data-gcal-next aria-label="ถัดไป"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
+                </span>
+                <p class="gcal-title" data-gcal-title aria-live="polite"></p>
+                <div class="gcal-views" role="group" aria-label="มุมมองปฏิทิน">
+                  <button type="button" data-gcal-view="day" aria-pressed="false">วัน</button><button type="button" data-gcal-view="week" aria-pressed="false">สัปดาห์</button><button type="button" data-gcal-view="month" aria-pressed="false">เดือน</button><button type="button" data-gcal-view="schedule" aria-pressed="false">กำหนดการ</button>
+                </div>
+              </div>
+              <div class="gcal-legend" role="group" aria-label="แสดงตามหน่วยงาน">
+                <button type="button" class="gcal-chip" aria-pressed="true" data-gcal-unit="[หน่วยงาน]" style="--c:var(--cal-1)"><span class="gcal-chip-box" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span><span>[หน่วยงาน]</span></button>
+              </div>
+            </div>
+            <div class="gcal-body" data-gcal-body>
+              <p class="gcal-noscript">เปิด JavaScript เพื่อดูปฏิทิน — รายการกิจกรรมทั้งหมดอยู่ในแผงด้านข้าง</p>
+            </div>
+            <div class="gcal-pop" data-gcal-pop role="dialog" aria-modal="false" aria-labelledby="sg-event-calendar-pop-title" hidden></div>
+          </div>
+          <aside class="evcal-side" aria-labelledby="sg-event-calendar-list">
+            <div class="evcal-side-head">
+              <h2 id="sg-event-calendar-list">กิจกรรมล่าสุด</h2>
+              <span class="evcal-count">2 กิจกรรม</span>
+            </div>
+            
+            <ol class="evcal-list" data-evcal-list>
+            <li class="evcal-month">
+              <h3 class="evcal-month-head">กุมภาพันธ์ 2569</h3>
+              <ol class="evcal-month-list">
+              <li class="evcal-item">
+                <time class="evcal-date" datetime="2026-02-02"><small>จ.</small><b>2</b><span>ก.พ.</span></time>
+                <div class="evcal-body">
+                  <strong class="evcal-title">[ชื่อกิจกรรมหลายวัน]</strong>
+                  <span class="evcal-meta">
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>2–4 กุมภาพันธ์ 2569</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>[สถานที่]</span>
+                  </span>
+                  
+                </div>
+              </li>
+              </ol>
+            </li>
+            <li class="evcal-month">
+              <h3 class="evcal-month-head">มกราคม 2569</h3>
+              <ol class="evcal-month-list">
+              <li class="evcal-item" data-unit="[หน่วยงาน]" style="--c:var(--cal-1)">
+                <time class="evcal-date" datetime="2026-01-15"><small>พฤ.</small><b>15</b><span>ม.ค.</span></time>
+                <div class="evcal-body">
+                  <strong class="evcal-title">[ชื่อกิจกรรม]</strong>
+                  <span class="evcal-meta">
+                    
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>[สถานที่]</span>
+                  </span>
+                  <span class="evcal-unit">[หน่วยงาน]</span>
+                </div>
+              </li>
+              </ol>
+            </li>
+            </ol>
+            <p class="evcal-empty" data-evcal-empty hidden>ไม่มีกิจกรรมของหน่วยงานนี้</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section album-section" id="sg-photo-album">
+      <div class="container">
+        <header class="album-head">
+          <div class="album-head-text">
+            <h2 class="album-title">โครงการราชบัณฑิตยสภานำความรู้สู่สังคม การเสวนาวิชาการ เรื่อง “ความหลากหลายทางชีวภาพ: สินทรัพย์เพื่อการพัฒนาเศรษฐกิจและ สังคมแห่งอนาคต”</h2>
+            <p class="album-meta">
+              <span class="album-tag">อบรมและเสวนา</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg><time datetime="2026-08-14">14 สิงหาคม 2569</time></span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg>7 ภาพ</span>
+            </p>
+          </div>
+          <div class="album-actions">
+            <a class="album-btn" href="media-gallery.html"><svg class="icon is-back" aria-hidden="true"><use href="#i-arrow"></use></svg><span>อัลบั้มทั้งหมด</span></a>
+            <a class="album-btn is-primary" href="news-detail.html?id=69hni1055034"><span>อ่านข่าว</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+          </div>
+        </header>
+        <div class="album-grid">
+          <a class="album-photo" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005386.JPG" data-lightbox="album-69hni1055034">
+            <img src="assets/images/orst/news/data0005-00005386-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 1" loading="eager">
+          </a>
+          <a class="album-photo" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005387.JPG" data-lightbox="album-69hni1055034">
+            <img src="assets/images/orst/news/data0005-00005387-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 2" loading="eager">
+          </a>
+          <a class="album-photo" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005388.JPG" data-lightbox="album-69hni1055034">
+            <img src="assets/images/orst/news/data0005-00005388-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 3" loading="eager">
+          </a>
+          <a class="album-photo" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005389.JPG" data-lightbox="album-69hni1055034">
+            <img src="assets/images/orst/news/data0005-00005389-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 4" loading="eager">
+          </a>
+          <a class="album-photo" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005390.JPG" data-lightbox="album-69hni1055034">
+            <img src="assets/images/orst/news/data0005-00005390-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 5" loading="eager">
+          </a>
+          <a class="album-photo" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005391.JPG" data-lightbox="album-69hni1055034">
+            <img src="assets/images/orst/news/data0005-00005391-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 6" loading="eager">
+          </a>
+          <a class="album-photo" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005392.JPG" data-lightbox="album-69hni1055034">
+            <img src="assets/images/orst/news/data0005-00005392-640.jpg" alt="ภาพประกอบข่าว ภาพที่ 7" loading="eager">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt tl-section" id="b-timeline">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>timeline</h2>
+          <p>เส้นเวลา — จอกว้างสลับซ้าย/ขวาตามเส้นกลาง จอแคบเรียงแถวเดียว · image ไม่บังคับ (ตัวอย่างจากหน้าประวัติความเป็นมา)</p>
+        </div>
+        
+      </div>
+        <ol class="tl" data-tl>
+            <li class="tl-item is-year" id="b-timeline-1" data-tl-item>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <article class="tl-card">
+                <header class="tl-head">
+                  <span class="tl-year">2469</span>
+                  
+                </header>
+                <h3>ทรงสถาปนา “ราชบัณฑิตยสภา”</h3>
+                
+                <p>[ข้อความสั้น ๆ ของเหตุการณ์]</p>
+              </article><div class="tl-side tl-ghost" aria-hidden="true">2469</div>
+            </li>
+            <li class="tl-item is-media" id="b-timeline-2" data-tl-item>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <article class="tl-card">
+                <header class="tl-head">
+                  <span class="tl-year">2558</span>
+                  
+                </header>
+                <h3>พระราชบัญญัติราชบัณฑิตยสภา พ.ศ. ๒๕๕๘</h3>
+                
+                <p>[ข้อความสั้น ๆ ของเหตุการณ์]</p>
+              </article><div class="tl-side"><figure class="tl-figure"><img src="assets/images/orst/news/data0005-00005374-640.jpg" alt="ภาพตัวอย่าง" loading="lazy"></figure></div>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="b-pillars">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>pillars</h2>
+          <p>แผงเทียบส่วนงานเคียงกัน — หัวสีเข้ม/สีทอง ตารางตำแหน่ง รายการหน้าที่ ป้ายคำ ข้อความฉบับเต็มพับเก็บ (ตัวอย่างจากหน้าประวัติความเป็นมา)</p>
+        </div>
+        
+      </div>
+        <div class="pillars">
+          <article class="pillar">
+            <header class="pillar-head">
+              <span class="pillar-ic" aria-hidden="true"><svg class="icon-lg" aria-hidden="true"><use href="#i-people"></use></svg></span>
+              <div>
+                <small>ส่วนที่ ๑</small>
+                <h3>[ชื่อส่วนงาน]</h3>
+              </div>
+              <p>[บทบาทโดยย่อ]</p>
+            </header>
+            <div class="pillar-body">
+              <dl class="pillar-facts"><div><dt>[ตำแหน่ง]</dt><dd>[ผู้ดำรงตำแหน่ง]</dd></div></dl>
+              <h4>อำนาจหน้าที่</h4><ul class="pillar-list"><li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span>[หน้าที่ข้อ ๑]</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span>[หน้าที่ข้อ ๒]</span></li></ul>
+              
+              
+              
+            </div>
+          </article>
+          <article class="pillar">
+            <header class="pillar-head">
+              <span class="pillar-ic" aria-hidden="true"><svg class="icon-lg" aria-hidden="true"><use href="#i-service"></use></svg></span>
+              <div>
+                <small>ส่วนที่ ๒</small>
+                <h3>[ชื่อส่วนงาน]</h3>
+              </div>
+              <p>[บทบาทโดยย่อ]</p>
+            </header>
+            <div class="pillar-body">
+              
+              
+              <h4>หน่วยงานภายใน</h4><ul class="pillar-tags"><li>[หน่วยงาน ๑]</li><li>[หน่วยงาน ๒]</li></ul>
+              <details class="pillar-more"><summary><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><span>อ่านข้อความฉบับเต็ม</span><svg class="icon pillar-more-ic" aria-hidden="true"><use href="#i-chevron"></use></svg></summary>
+                <div class="pillar-more-body"><p>[ข้อความฉบับเต็ม]</p></div></details>
+              
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="b-org-chart">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>org-chart</h2>
+          <p>แผนผังโครงสร้าง — ชั้นบนลงล่าง เชื่อมเส้น หน่วยย่อยแยกกิ่ง (ตัวอย่างจากหน้าประวัติความเป็นมา)</p>
+        </div>
+        
+      </div>
+        <ol class="org" data-reveal>
+          <li class="org-tier is-deep" style="--i:0">
+            <div class="org-node">
+              <small>[บทบาท]</small>
+              <h3>[ส่วนบน]</h3>
+              <ul class="org-roles"><li><span>[ตำแหน่ง]</span><b>[ผู้ดำรงตำแหน่ง]</b></li></ul>
+              
+            </div>
+            <div class="org-kids"><span class="org-kids-label">[กลุ่มย่อย]</span><ul style="--n:3"><li>[หน่วย ๑]</li><li>[หน่วย ๒]</li><li>[หน่วย ๓]</li></ul></div>
+          </li>
+          <li class="org-tier is-gold" style="--i:1">
+            <div class="org-node">
+              
+              <h3>[ตำแหน่งเชื่อม]</h3>
+              
+              <p>[คำอธิบาย]</p>
+            </div>
+            
+          </li>
+          <li class="org-tier is-plain" style="--i:2">
+            <div class="org-node">
+              
+              <h3>[ส่วนล่าง]</h3>
+              
+              
+            </div>
+            <div class="org-kids"><span class="org-kids-label">[หน่วยงานภายใน]</span><ul style="--n:2"><li>[หน่วย ๑]</li><li>[หน่วย ๒]</li></ul></div>
+          </li>
+        </ol>
+        <div class="org-cols">
+          <section class="org-col">
+            <h3>[อำนาจหน้าที่]</h3>
+            <ol><li>[ข้อ ๑]</li><li>[ข้อ ๒]</li></ol>
+            
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt block-org-tree" id="b-org-tree">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>org-tree</h2>
+          <p>แผนผังการบริหารงาน 2 สาย + เอกสารฉบับเผยแพร่ (ตัวอย่างจริง: หน้าโครงสร้างหน่วยงาน)</p>
+        </div>
+        
+      </div>
+        
+      <div class="ot" data-reveal>
+        <div class="ot-top">
+          <div class="ot-node is-top">
+            
+            <h3 class="ot-title">[ผู้บังคับบัญชาสูงสุด]</h3>
+            
+          </div>
+          <p class="ot-aside"><span class="ot-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span>[หน่วยที่เชื่อมโยง]</p>
+        </div>
+        <div class="ot-branches">
+        <div class="ot-branch is-deep" style="--i:0">
+          <div class="ot-node is-head">
+            
+            <h3 class="ot-title">[สายที่ ๑]</h3>
+            
+          </div>
+          <ol class="ot-chain">
+            <li>
+            <div class="ot-node">
+              <h3 class="ot-title">[ตำแหน่ง]</h3>
+              
+              
+              
+            </div>
+            <ul class="ot-side"><li><strong>[คณะที่ปรึกษา]</strong></li></ul></li>
+          </ol>
+          
+          <div class="ot-units">
+            <p class="ot-label">[กลุ่มย่อย]</p>
+            <ul>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">01</span>
+                <strong>[หน่วย ๑]</strong>
+                
+                <p class="ot-unit-roles"><span>[ประธาน]</span><span class="ot-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span>[เลขานุการ]</span></p>
+              </li>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">02</span>
+                <strong>[หน่วย ๒]</strong>
+                
+                
+              </li></ul>
+          </div>
+          
+        </div>
+        <div class="ot-branch is-gold" style="--i:1">
+          <div class="ot-node is-head">
+            
+            <h3 class="ot-title">[สายที่ ๒]</h3>
+            
+          </div>
+          <ol class="ot-chain">
+            <li>
+            <div class="ot-node">
+              <h3 class="ot-title">[ตำแหน่ง]</h3>
+              
+              
+              <div class="ot-roles"><span class="ot-roles-label">ทำหน้าที่</span><ul><li>[บทบาท]</li></ul></div>
+            </div></li>
+          </ol>
+          
+          <div class="ot-units">
+            <p class="ot-label">[หน่วยงานภายใน]</p>
+            <ul>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">01</span>
+                <strong>[หน่วย ๑]</strong>
+                
+                
+              </li>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">02</span>
+                <strong>[หน่วย ๒]</strong>
+                
+                
+              </li></ul>
+          </div>
+          
+        </div>
+        </div>
+        
+      </div>
+      </div>
+    </section>
+
+    <section class="section block-annotated-figure" id="b-annotated-figure">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>annotated-figure</h2>
+          <p>ภาพพร้อมหมุดชี้ส่วนต่าง ๆ + ความหมาย (ตัวอย่างจริง: หน้าเครื่องหมายราชการ)</p>
+        </div>
+        
+      </div>
+        
+      <div class="af" data-af-root data-reveal>
+        <figure class="af-figure">
+          <div class="af-stage">
+            <div class="af-canvas">
+              <img src="assets/images/orst/about/emblem.png" alt="" loading="lazy">
+              <button type="button" class="af-pin" style="--x:50%;--y:22%;--pin-i:0" data-af="0" aria-describedby="b-annotated-figure-p0"><span aria-hidden="true">1</span><span class="sr-only">[ส่วนที่ ๑]</span></button>
+              <button type="button" class="af-pin" style="--x:50%;--y:57%;--pin-i:1" data-af="1" aria-describedby="b-annotated-figure-p1"><span aria-hidden="true">2</span><span class="sr-only">[ส่วนที่ ๒]</span></button>
+            </div>
+          </div>
+        </figure>
+        <ol class="af-parts">
+            <li class="af-part" data-af="0" id="b-annotated-figure-p0" tabindex="-1" style="--i:0">
+              <span class="af-num" aria-hidden="true">1</span>
+              <div>
+                <h3>[ส่วนที่ ๑]</h3>
+                <p>[ความหมาย]</p>
+              </div>
+            </li>
+            <li class="af-part" data-af="1" id="b-annotated-figure-p1" tabindex="-1" style="--i:1">
+              <span class="af-num" aria-hidden="true">2</span>
+              <div>
+                <h3>[ส่วนที่ ๒]</h3>
+                <p>[ความหมาย]</p>
+              </div>
+            </li>
+        </ol>
+      </div>
+      </div>
+    </section>
+
+    <section class="block-image-band is-light is-img-right" id="b-image-band" data-reveal>
+      <div class="ib-media"><img src="assets/images/orst-bg.jpg" alt="อาคารสำนักงาน" loading="lazy"></div>
+      <div class="container ib-inner">
+        <div class="ib-content">
+          <div class="ib-head">
+          <p class="ib-eyebrow">image-band · tone light · imageSide right</p>
+          <h2 class="ib-heading">วิสัยทัศน์</h2>
+          <p class="ib-statement">[<mark class="ib-hl" style="--i:0">ข้อความวิสัยทัศน์</mark>]</p>
+          
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="block-image-band is-dark is-img-cover is-short" id="b-image-band-dark" data-reveal>
+      <div class="ib-media"><img src="assets/images/orst/services-hero.jpg" alt="" loading="lazy"></div>
+      <div class="container ib-inner">
+        <div class="ib-content">
+          <div class="ib-head">
+          <p class="ib-eyebrow">image-band · tone dark · imageSide cover</p>
+          <h2 class="ib-heading">พันธกิจ</h2>
+          
+          <p class="ib-text">[ข้อความนำ]</p>
+          </div>
+          <ol class="ib-list"><li style="--i:0"><span class="ib-num" aria-hidden="true">๑</span><span class="ib-item-text">[รายการที่ ๑]</span></li><li style="--i:1"><span class="ib-num" aria-hidden="true">๒</span><span class="ib-item-text">[รายการที่ ๒]</span></li><li style="--i:2"><span class="ib-num" aria-hidden="true">๓</span><span class="ib-item-text">[รายการที่ ๓]</span></li></ol>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="assets/js/components.js?v=4eae80ab"></script>
+  <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
+</body>
+
+</html>

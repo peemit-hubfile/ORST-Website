@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ขั้นตอนการสั่งซื้อหนังสือของสำนักงานราชบัณฑิตยสภาและวิธีการชำระเงิน">
+  <title>ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน | สำนักงานราชบัณฑิตยสภา</title>
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- ลำดับ CSS ห้ามสลับ: typography -> base -> blocks -> (pages/xxx) -> components -->
+  <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
+  <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
+  <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=dbcc836d">
+  <link rel="stylesheet" href="assets/css/components.css?v=670139e7">
+</head>
+
+<body data-page="services">
+
+  <div id="app-header"></div>
+
+  <main id="main-content">
+    <!-- เนื้อหาทั้งหมดของหน้านี้อยู่ในไฟล์ JSON ด้านล่าง — แก้เนื้อหาที่ไฟล์นั้นไฟล์เดียว -->
+    <div id="app-content" data-content="content/pages/book-ordering.json">
+
+    <section class="page-hero is-plain">
+      <span class="page-hero-mark" aria-hidden="true"></span>
+      <div class="container">
+        <nav class="block-breadcrumb" aria-label="เส้นทางหน้า"><a href="index.html">หน้าหลัก</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span>บริการวิชาการ</span><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span aria-current="page" title="ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน">ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน</span></nav>
+        
+        <h1>ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน</h1>
+        <p>ขั้นตอนการสั่งซื้อหนังสือของสำนักงานราชบัณฑิตยสภาและวิธีการชำระเงิน</p>
+        
+        
+      </div>
+      
+    </section>
+
+    <section class="section" id="order">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>ขั้นตอนการสั่งซื้อ</h2>
+          <p>ผู้ซื้อต้องชำระค่าหนังสือพร้อมค่าจัดส่งก่อน เจ้าหน้าที่จึงจะดำเนินการส่งหนังสือไปให้</p>
+        </div>
+        
+      </div>
+        <ol class="block-steps block-steps-timeline">
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">1</span>
+              <strong>แจ้งรายการหนังสือ</strong>
+              <p>แจ้งรายการหนังสือที่สั่งซื้อ เพื่อให้เจ้าหน้าที่คำนวณค่าจัดส่ง</p>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">2</span>
+              <strong>ชำระเงิน</strong>
+              <p>ชำระค่าหนังสือพร้อมค่าจัดส่งด้วยวิธีใดวิธีหนึ่งจาก ๒ วิธีด้านล่าง</p>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">3</span>
+              <strong>ส่งรายละเอียดการสั่งซื้อ</strong>
+              <p>ส่งรายละเอียดการสั่งซื้อและที่อยู่ที่จัดส่งพร้อมหลักฐานการชำระเงิน</p>
+            </li>
+            <li class="block-step">
+              <span class="block-step-no" aria-hidden="true">4</span>
+              <strong>รับหนังสือ</strong>
+              <p>เจ้าหน้าที่ดำเนินการจัดส่งหนังสือไปยังที่อยู่ที่แจ้งไว้</p>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt" id="payment">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>วิธีการชำระเงิน</h2>
+          <p>การชำระเงินมี ๒ วิธี</p>
+        </div>
+        
+      </div>
+        <ol class="feature-dir" data-reveal>
+            <li class="dir-row" style="--i:0">
+              <div class="dir-head"><span class="dir-no" aria-hidden="true">01</span><div><h3>ชำระทางธนาณัติ</h3><p class="dir-note">แนบรายละเอียดการสั่งซื้อและที่อยู่ที่จัดส่งมาพร้อมกับธนาณัติ</p></div></div>
+              <div class="dir-body">
+                
+                <dl class="feature-details"><div class="feature-detail is-wide"><dt>สั่งจ่ายในนาม</dt><dd><span>เลขานุการกรม สำนักงานราชบัณฑิตยสภา</span></dd></div><div class="feature-detail"><dt>ที่อยู่</dt><dd><span>สนามเสือป่า เขตดุสิต กรุงเทพฯ ๑๐๓๐๐</span></dd></div><div class="feature-detail"><dt>ที่ทำการไปรษณีย์</dt><dd><span>ปณ ดุสิต</span></dd></div></dl>
+                
+              </div>
+            </li>
+            <li class="dir-row" style="--i:1">
+              <div class="dir-head"><span class="dir-no" aria-hidden="true">02</span><div><h3>โอนเงินผ่านธนาคาร</h3><p class="dir-note">แฟกซ์หลักฐานการโอนเงินพร้อมรายละเอียดการสั่งซื้อและที่อยู่ที่จัดส่งมาที่ห้องจำหน่ายหนังสือ</p></div></div>
+              <div class="dir-body">
+                
+                <dl class="feature-details"><div class="feature-detail has-copy"><dt>เลขที่บัญชี</dt><dd><span lang="en" data-keep-digits>406-347071-9</span><button type="button" class="feature-copy" data-copy="406-347071-9"><svg class="icon" aria-hidden="true"><use href="#i-copy"></use></svg><span data-copy-label>คัดลอก</span></button></dd></div><div class="feature-detail is-wide"><dt>ธนาคารและสาขา</dt><dd><span>ธนาคารไทยพาณิชย์ จำกัด (มหาชน) สาขาสำนักพระราชวัง (สนามเสือป่า)</span></dd></div><div class="feature-detail is-wide"><dt>ชื่อบัญชี</dt><dd><span>สำนักงานราชบัณฑิตยสภา (ห้องจำหน่ายหนังสือ)</span></dd></div><div class="feature-detail"><dt>ประเภทบัญชี</dt><dd><span>บัญชีเงินฝากออมทรัพย์</span></dd></div><div class="feature-detail"><dt>โทรสาร</dt><dd><span lang="en" data-keep-digits>0 2356 0492</span></dd></div></dl>
+                
+              </div>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>สอบถามข้อมูลเพิ่มเติม</h2>
+          
+        </div>
+        
+      </div>
+        <ol class="feature-dir" data-reveal>
+            <li class="dir-row" style="--i:0">
+              <div class="dir-head"><span class="dir-no" aria-hidden="true">01</span><div><h3>ห้องจำหน่ายหนังสือ</h3></div></div>
+              <div class="dir-body">
+                <p>สอบถามรายการหนังสือ ค่าจัดส่ง และการสั่งซื้อ</p>
+                
+                <ul class="dir-links"><li><a class="dir-link" href="tel:023560466"><span class="dir-value" lang="en" data-keep-digits>0 2356 0466-70</span><small>โทรศัพท์ (ต่อ 1020)</small><svg class="icon dir-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li><a class="dir-link" href="mailto:ribook@orst.go.th"><span class="dir-value" lang="en" data-keep-digits>ribook@orst.go.th</span><small>อีเมล</small><svg class="icon dir-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </li>
+        </ol>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="assets/js/components.js?v=4eae80ab"></script>
+  <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
+</body>
+
+</html>

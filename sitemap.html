@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="แผนผังเว็บไซต์สำนักงานราชบัณฑิตยสภา รวมลิงก์ไปทุกหมวดและทุกหน้า">
+  <title>แผนผังเว็บไซต์ | สำนักงานราชบัณฑิตยสภา</title>
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- ลำดับ CSS ห้ามสลับ: typography -> base -> blocks -> (pages/xxx) -> components -->
+  <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
+  <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
+  <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=dbcc836d">
+  <link rel="stylesheet" href="assets/css/components.css?v=670139e7">
+</head>
+
+<body data-page="home">
+
+  <div id="app-header"></div>
+
+  <main id="main-content">
+    <!-- เนื้อหาทั้งหมดของหน้านี้อยู่ในไฟล์ JSON ด้านล่าง — แก้เนื้อหาที่ไฟล์นั้นไฟล์เดียว -->
+    <div id="app-content" data-content="content/pages/sitemap.json">
+
+    <section class="page-hero is-plain">
+      <span class="page-hero-mark" aria-hidden="true"></span>
+      <div class="container">
+        <nav class="block-breadcrumb" aria-label="เส้นทางหน้า"><a href="index.html">หน้าหลัก</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span aria-current="page" title="แผนผังเว็บไซต์">แผนผังเว็บไซต์</span></nav>
+        
+        <h1>แผนผังเว็บไซต์</h1>
+        <p>รวมลิงก์ไปทุกหมวดและทุกหน้าของเว็บไซต์สำนักงานราชบัณฑิตยสภา</p>
+        
+        
+      </div>
+      
+    </section>
+
+    <section class="section" id="sitemap">
+      <div class="container">
+        <div class="page-index-wrap smap" data-page-index>
+        <div class="index-tools">
+          <label class="index-search">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <span class="sr-only">ค้นหาหน้าในเว็บไซต์</span>
+            <input type="search" placeholder="ค้นหาหน้าในเว็บไซต์" data-index-search autocomplete="off">
+          </label>
+          <nav class="index-jump" aria-label="ไปยังหมวด">
+            <span class="index-jump-label" aria-hidden="true">ไปยังหมวด</span>
+            <button type="button" data-index-jump="หน้าหลักของเว็บไซต์"><b aria-hidden="true">01</b>หน้าหลักของเว็บไซต์</button><button type="button" data-index-jump="เกี่ยวกับเรา"><b aria-hidden="true">02</b>เกี่ยวกับเรา</button><button type="button" data-index-jump="การปฏิบัติราชการ"><b aria-hidden="true">03</b>การปฏิบัติราชการ</button><button type="button" data-index-jump="ข่าวสาร"><b aria-hidden="true">04</b>ข่าวสาร</button><button type="button" data-index-jump="บริการวิชาการ"><b aria-hidden="true">05</b>บริการวิชาการ</button><button type="button" data-index-jump="ติดต่อเรา"><b aria-hidden="true">06</b>ติดต่อเรา</button><button type="button" data-index-jump="ข้อมูลเว็บไซต์และนโยบาย"><b aria-hidden="true">07</b>ข้อมูลเว็บไซต์และนโยบาย</button>
+          </nav>
+        </div>
+          <p class="index-empty" data-index-empty hidden>ไม่พบหน้าที่ค้นหา</p>
+          <div class="smap-secs" data-reveal>
+          <section class="smap-sec" data-index-sec="หน้าหลักของเว็บไซต์">
+            <header class="smap-head">
+              <span class="smap-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>
+              <div class="smap-title">
+                <p class="smap-kicker"><span class="smap-no" aria-hidden="true">01</span><small>5 หน้า</small></p>
+                <h3>หน้าหลักของเว็บไซต์</h3>
+              </div>
+            </header>
+            <div class="smap-groups">
+              <div class="smap-group index-group">
+                
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="index.html"><span>หน้าหลัก</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="dictionary.html"><span>พจนานุกรมและคำศัพท์</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="knowledge.html"><span>องค์ความรู้</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="publications.html"><span>หนังสือและสิ่งพิมพ์</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="contact.html"><span>ติดต่อเรา</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </div>
+          </section>
+          <section class="smap-sec" data-index-sec="เกี่ยวกับเรา">
+            <header class="smap-head">
+              <span class="smap-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></span>
+              <div class="smap-title">
+                <p class="smap-kicker"><span class="smap-no" aria-hidden="true">02</span><small>21 หน้า</small></p>
+                <h3>เกี่ยวกับเรา</h3>
+              </div>
+            </header>
+            <div class="smap-groups">
+              <div class="smap-group index-group">
+                <h4><span>ผู้บริหาร</span><small>3</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="executives.html"><span>ผู้บริหารสำนักงานราชบัณฑิตยสภา</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="cio.html"><span>ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="cio-it-management.html"><span>การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+              <div class="smap-group index-group">
+                <h4><span>ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)</span><small>7</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="anti-corruption-center.html"><span>ข้อมูลของ ศปท.</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="corruption-complaints.html"><span>ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="complaint-guidelines.html"><span>แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="complaint-statistics.html"><span>ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="no-gift-policy.html"><span>มาตรการป้องกันการรับสินบน (No Gift Policy)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="anti-corruption-plan.html"><span>การประเมินความเสี่ยงและแผนป้องกันการทุจริต</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="ethics.html"><span>จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+              <div class="smap-group index-group">
+                <h4><span>ข้อมูลองค์กร</span><small>7</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="history.html"><span>ประวัติความเป็นมา</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="vision-mission.html"><span>วิสัยทัศน์ พันธกิจ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="core-values.html"><span>ค่านิยม</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="organization-structure.html"><span>โครงสร้างหน่วยงานและการแบ่งส่วนราชการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="emblem.html"><span>เครื่องหมายราชการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="laws-regulations.html"><span>กฎหมาย ระเบียบ และข้อบังคับที่เกี่ยวข้อง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="duties.html"><span>อำนาจหน้าที่และภารกิจ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+              <div class="smap-group index-group">
+                <h4><span>บุคลากรและการบริหารทรัพยากรบุคคล</span><small>4</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="committees.html"><span>คณะกรรมการวิชาการ และกรรมการอื่น</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="hr-plan.html"><span>นโยบายและแผนการบริหารทรัพยากรบุคคล</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="hr-criteria.html"><span>หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="hr-annual-report.html"><span>รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </div>
+          </section>
+          <section class="smap-sec" data-index-sec="การปฏิบัติราชการ">
+            <header class="smap-head">
+              <span class="smap-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-journal"></use></svg></span>
+              <div class="smap-title">
+                <p class="smap-kicker"><span class="smap-no" aria-hidden="true">03</span><small>27 หน้า</small></p>
+                <h3>การปฏิบัติราชการ</h3>
+              </div>
+            </header>
+            <div class="smap-groups">
+              <div class="smap-group index-group">
+                <h4><span>แผนปฏิบัติราชการ</span><small>10</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="related-laws.html"><span>กฎหมายที่เกี่ยวข้อง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="operation-manuals.html"><span>คู่มือหรือมาตรฐานการปฏิบัติงาน</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="strategic-plans.html"><span>แผนยุทธศาสตร์และแผนปฏิบัติการราชการ ๕ ปี</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="annual-action-plan.html"><span>แผนปฏิบัติราชการประจำปี</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="continuity-plan.html"><span>แผนบริหารความต่อเนื่อง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="it-master-plan.html"><span>แผนแม่บทเทคโนโลยีสารสนเทศ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="risk-management-plan.html"><span>แผนบริหารความเสี่ยง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="energy-saving.html"><span>การลดใช้พลังงานของสำนักงานราชบัณฑิตยสภา</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="internal-audit-charter.html"><span>กฎบัตรการตรวจสอบภายใน</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="annual-budget-plan.html"><span>แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+              <div class="smap-group index-group">
+                <h4><span>ผลการปฏิบัติราชการ</span><small>11</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="service-manuals.html"><span>คู่มือหรือมาตรฐานการให้บริการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="monthly-performance.html"><span>ผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="service-time-standards.html"><span>มาตรฐานระยะเวลาการให้บริการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="performance-agreement.html"><span>สรุปผลการปฏิบัติราชการตามคำรับรองการปฏิบัติราชการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="unit-cost.html"><span>รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิต / งบทดลอง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="https://forms.gle/mc1qF9RCDQbvLnho6" target="_blank" rel="noopener noreferrer"><span>แบบรับฟังความคิดเห็น/ข้อเสนอแนะที่มีต่อการดำเนินงาน</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="six-month-report.html"><span>รายงานการกำกับติดตามการดำเนินงานและการใช้งบประมาณ รอบ ๖ เดือน</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="annual-report.html"><span>รายงานผลการดำเนินงานประจำปี</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="budget-spending-report.html"><span>รายงานผลการใช้จ่ายงบประมาณประจำปี</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="service-statistics.html"><span>ข้อมูลเชิงสถิติการให้บริการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="satisfaction-survey.html"><span>รายงานผลการสำรวจความพึงพอใจการให้บริการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+              <div class="smap-group index-group">
+                <h4><span>ข้อมูลเปิดภาครัฐและการเปิดเผยข้อมูล</span><small>6</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="official-information.html"><span>ข้อมูลข่าวสารตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. ๒๕๔๐</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="open-data.html"><span>ชุดข้อมูลเปิดภาครัฐ (Open Data)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="open-data-request.html"><span>แบบคำขอชุดข้อมูลเปิด</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="data-policy.html"><span>นโยบายและแผนด้านข้อมูล (ธรรมาภิบาลข้อมูล การเปิดเผยข้อมูล และการคุ้มครองข้อมูลส่วนบุคคล)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="public-disclosure.html"><span>การเปิดเผยข้อมูลสาธารณะ (ITA / OIT)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="data-subject-request.html"><span>ช่องทางยื่นคำขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </div>
+          </section>
+          <section class="smap-sec" data-index-sec="ข่าวสาร">
+            <header class="smap-head">
+              <span class="smap-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-megaphone"></use></svg></span>
+              <div class="smap-title">
+                <p class="smap-kicker"><span class="smap-no" aria-hidden="true">04</span><small>18 หน้า</small></p>
+                <h3>ข่าวสาร</h3>
+              </div>
+            </header>
+            <div class="smap-groups">
+              <div class="smap-group index-group">
+                <h4><span>ข่าวประชาสัมพันธ์</span><small>8</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="general-news.html"><span>ข่าวประชาสัมพันธ์ทั่วไป</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="activity-news.html"><span>ข่าวกิจกรรม</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="academic-lectures.html"><span>การบรรยายทางวิชาการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="event-calendar.html"><span>ปฏิทินกิจกรรม</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="qa.html"><span>คำถาม-คำตอบ (Q&amp;A)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="media-gallery.html"><span>คลังภาพ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="videos.html"><span>คลังวิดีโอ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="rss.html"><span>RSS ข่าวสาร</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+              <div class="smap-group index-group">
+                <h4><span>ประกาศ</span><small>10</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="procurement-notices.html"><span>ประกาศการจัดซื้อจัดจ้าง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="procurement-results.html"><span>ประกาศผลจัดซื้อจัดจ้าง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="reference-prices.html"><span>ประกาศราคากลาง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="procurement-summary.html"><span>สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="procurement-quarterly.html"><span>ประกาศผลการจัดซื้อจัดจ้าง (รายไตรมาส)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="procurement-plans.html"><span>ประกาศแผนจัดซื้อจัดจ้าง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="auctions.html"><span>ประกาศขายทอดตลาด</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="job-announcements.html"><span>ประกาศรับสมัครงานและประกาศด้านการบริหารงานบุคคล</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="official-news.html"><span>ข่าวสารทางราชการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="contracts.html"><span>ประกาศเผยแพร่สัญญา</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </div>
+          </section>
+          <section class="smap-sec" data-index-sec="บริการวิชาการ">
+            <header class="smap-head">
+              <span class="smap-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-service"></use></svg></span>
+              <div class="smap-title">
+                <p class="smap-kicker"><span class="smap-no" aria-hidden="true">05</span><small>20 หน้า</small></p>
+                <h3>บริการวิชาการ</h3>
+              </div>
+            </header>
+            <div class="smap-groups">
+              <div class="smap-group index-group">
+                <h4><span>บริการวิชาการ</span><small>20</small></h4>
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="dictionary.html"><span>พจนานุกรม</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="https://coined-word.orst.go.th/" target="_blank" rel="noopener noreferrer"><span>ศัพท์บัญญัติ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="https://lst.nectec.or.th/encyclopedia/" target="_blank" rel="noopener noreferrer"><span>สารานุกรมและอนุกรมวิธาน</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="https://da3.thaidlt.org/" target="_blank" rel="noopener noreferrer"><span>คลังเอกสารเก่า</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="https://transliteration.orst.go.th/search" target="_blank" rel="noopener noreferrer"><span>ระบบฐานข้อมูลคำทับศัพท์</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="https://gazetteer.orst.go.th/" target="_blank" rel="noopener noreferrer"><span>อักขรานุกรมภูมิศาสตร์ไทย</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="knowledge-base.html"><span>คลังความรู้</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="book-ordering.html"><span>ขั้นตอนการสั่งซื้อหนังสือและวิธีการชำระเงิน</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="infographics.html"><span>อินโฟกราฟิก</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="https://etest.orst.go.th/" target="_blank" rel="noopener noreferrer"><span>ระบบทดสอบความรู้ด้านภาษาไทย</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="http://164.115.33.116/" target="_blank" rel="noopener noreferrer"><span>พจนานุกรมภาษามือไทย</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></li><li class="index-item"><a class="smap-link" href="language-guidelines.html"><span>หลักเกณฑ์ต่าง ๆ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="ethnic-language-audio.html"><span>ข้อมูลเสียง คู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="e-services.html"><span>งานบริการ (E-Service)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="citizen-manual.html"><span>คู่มือสำหรับประชาชน</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="download-forms.html"><span>ดาวน์โหลดแบบฟอร์ม</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="e-channels.html"><span>ประกาศช่องทางอิเล็กทรอนิกส์ในการติดต่อราชการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="permits-issued.html"><span>ข้อมูลการอนุญาตที่ดำเนินการแล้ว</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="track-request.html"><span>ติดตามสถานะคำขอรับบริการ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="e-service-guide.html"><span>คำแนะนำการใช้บริการออนไลน์</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </div>
+          </section>
+          <section class="smap-sec" data-index-sec="ติดต่อเรา">
+            <header class="smap-head">
+              <span class="smap-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-phone-call"></use></svg></span>
+              <div class="smap-title">
+                <p class="smap-kicker"><span class="smap-no" aria-hidden="true">06</span><small>4 หน้า</small></p>
+                <h3><a href="contact.html">ติดต่อเรา</a></h3>
+              </div>
+            </header>
+            <div class="smap-groups">
+              <div class="smap-group index-group">
+                
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="complaints.html"><span>รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="contact.html#message-form"><span>แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="website-survey.html"><span>แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="social-media.html"><span>เครือข่ายสังคมออนไลน์ (Social Media)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </div>
+          </section>
+          <section class="smap-sec" data-index-sec="ข้อมูลเว็บไซต์และนโยบาย">
+            <header class="smap-head">
+              <span class="smap-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+              <div class="smap-title">
+                <p class="smap-kicker"><span class="smap-no" aria-hidden="true">07</span><small>8 หน้า</small></p>
+                <h3>ข้อมูลเว็บไซต์และนโยบาย</h3>
+              </div>
+            </header>
+            <div class="smap-groups">
+              <div class="smap-group index-group">
+                
+                <ul class="smap-list"><li class="index-item"><a class="smap-link" href="qa.html"><span>คำถามที่พบบ่อย (FAQ)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="related-links.html"><span>เว็บลิงก์หน่วยงานที่เกี่ยวข้อง</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="disclaimer.html"><span>การปฏิเสธความรับผิด (Disclaimer)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="website-policy.html"><span>นโยบายเว็บไซต์ (Website Policy)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="privacy-policy.html"><span>นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="cookie-policy.html"><span>นโยบายคุกกี้ (Cookies Policy)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="security-policy.html"><span>นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์ (Website Security Policy)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li><li class="index-item"><a class="smap-link" href="accessibility.html"><span>การเข้าถึงเว็บไซต์ (Web Accessibility)</span><svg class="icon smap-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li></ul>
+              </div>
+            </div>
+          </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="assets/js/components.js?v=4eae80ab"></script>
+  <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
+</body>
+
+</html>

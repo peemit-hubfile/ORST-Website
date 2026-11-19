@@ -1,0 +1,97 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69J%24H5647044 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69jsh5647044",
+  "title": "Announcement of the Office of the Royal Society on the Buddhist Book for Children Writing Contest 2027, on the theme “The more",
+  "navKey": "news",
+  "description": "3 images · 1 attachment",
+  "sideNav": false,
+  "updatedAt": "2026-10-29",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Announcements",
+      "date": "2026-10-29",
+      "heading": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+      "image": "assets/images/orst/news/data0005-00005428-960.jpg",
+      "imageAlt": "News image: Announcement of the Office of the Royal Society on the Buddhist Book for Children Writing Contest",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005428.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "attachments": [
+        {
+          "title": "Buddhist Book for Children Writing Contest 2027",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005431.PDF"
+        }
+      ],
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005428-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005428.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005429-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005429.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005430-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005430.JPG",
+          "alt": "News photo 3"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Results of the Competition for Writing Books Teaching Buddhism to Children 2022",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F65D%23N5844072",
+          "category": "News",
+          "publishedAt": "2022-04-28"
+        },
+        {
+          "title": "Competition for Writing Books Teaching Buddhism to Children 2024, on the theme \"Adaptation\"",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66G%21P2034056",
+          "category": "News",
+          "publishedAt": "2023-07-27"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Results of the Competition for Writing Books Teaching Buddhism to Children 2024, on the theme \"Adaptation\"",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F67ECR1056094",
+          "category": "Announcements",
+          "publishedAt": "2024-05-03"
+        },
+        {
+          "title": "Call for entries to the Competition for Writing Books Teaching Buddhism to Children 2020",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO0106091",
+          "category": "Announcements",
+          "publishedAt": "2019-08-27"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "รายงานผลการใช้จ่ายงบประมาณประจำปี",
+  "navKey": "about",
+  "description": "รายงานผลการเบิกจ่ายและการใช้จ่ายงบประมาณประจำปีของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "รายงานผลการใช้จ่ายงบประมาณประจำปี",
+      "lead": "รายงานผลการเบิกจ่ายและการใช้จ่ายงบประมาณประจำปีของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "รายงานผลการใช้จ่ายงบประมาณประจำปี"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "สรุปผลการดำเนินงานโครงการ/กิจกรรม ตามแผนปฏิบัติการและแผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2567 รอบ 12 เดือน",
+          "publishedAt": "2025-03-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000984.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานและผลการใช้จ่ายงบประมาณของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2566 รอบ 12 เดือน (1 ตุลาคม 2565-30 กันยายน 2566)",
+          "publishedAt": "2024-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000950.PDF"
+        },
+        {
+          "title": "ผลการเบิกจ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2564 รอบ 12 เดือน (1 ตุลาคม พ.ศ. 2563-30 กันยายน พ.ศ. 2564)",
+          "publishedAt": "2022-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000857.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2563 รอบ 12 เดือน",
+          "publishedAt": "2021-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000797.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายเงินงบประมาณประจำปีงบประมาณ พ.ศ. ๒๕๖๓ ข้อมูล ณ วันที่ ๒๙ มิถุนายน ๒๕๖๓",
+          "publishedAt": "2020-06-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000442.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายเงินงบประมาณประจำปีงบประมาณ พ.ศ. ๒๕๖๒ ตั้งแต่วันที่ ๑ ตุลาคม ๒๕๖๑-๓๑ มีนาคม ๒๕๖๒",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000124.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายเงินงบประมาณประจำปีงบประมาณ พ.ศ. ๒๕๖๑ ตั้งแต่วันที่ ๑ ตุลาคม ๒๕๖๐-๓๐ กันยายน ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000125.PDF"
+        },
+        {
+          "title": "รายงานผลการตรวจสอบงบการเงินจากสำนักงานตรวจเงินแผ่นดิน ตาม พรบ.วินัยการเงินการคลังของรัฐ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000132.PDF"
+        },
+        {
+          "title": "รายงานผลการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๒ ตั้งแต่วันที่ ๑ ตุลาคม ๒๕๖๑-๓๐ กันยายน ๒๕๖๒",
+          "publishedAt": "2019-09-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000444.PDF"
+        }
+      ]
+    }
+  ]
+}

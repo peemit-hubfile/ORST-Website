@@ -1,0 +1,61 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-PAP (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "คู่มือหรือมาตรฐานการปฏิบัติงาน",
+  "navKey": "about",
+  "description": "คู่มือการปฏิบัติงานและมาตรฐานการปฏิบัติงานของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คู่มือหรือมาตรฐานการปฏิบัติงาน",
+      "lead": "คู่มือการปฏิบัติงานและมาตรฐานการปฏิบัติงานของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "คู่มือหรือมาตรฐานการปฏิบัติงาน"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "คู่มือการปฏิบัติงาน กระบวนงานการสร้างองค์ความรู้ในศาสตร์สาขาต่าง ๆ และหลักเกณฑ์ทางภาษาของสำนักงานราชบัณฑิตยสภา รุ่นที่ ๔",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000164.PDF",
+          "fileSize": 3217290
+        },
+        {
+          "title": "กระบวนงานการเบิกเงินอุปการะราชบัณฑิตและภาคีสมาชิก และค่าเบี้ยประชุม",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000620.PDF",
+          "fileSize": 166416
+        },
+        {
+          "title": "คู่มือการปฏิบัติงาน การแต่งตั้งราชบัณฑิต ภาคีสมาชิก นายกและอุปนายกราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000848.PDF",
+          "category": "การเบิกค่าเบี้ยประชุม",
+          "fileSize": 2226065
+        },
+        {
+          "title": "คู่มือการใช้ระบบการให้บริการผ่านช่องทางออนไลน์ (E-Service) ของสำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000952.PDF",
+          "category": "การเบิกค่าเบี้ยประชุม",
+          "fileSize": 2508770
+        },
+        {
+          "title": "แนวทางการขอรับบริการสำหรับผู้รับบริการหรือผู้มาติดต่อสำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000954.PDF",
+          "category": "การเบิกค่าเบี้ยประชุม",
+          "fileSize": 233415
+        }
+      ]
+    }
+  ]
+}

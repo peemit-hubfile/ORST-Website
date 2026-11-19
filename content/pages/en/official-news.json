@@ -1,0 +1,139 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=8 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Official News",
+  "navKey": "news",
+  "description": "Official news published by the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Official News",
+      "lead": "Official news published by the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Official News"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Personal Data Protection Policy of the Office of the Royal Society",
+          "publishedAt": "2022-10-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001420.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 19 (12 September 2015 - 30 April 2016)",
+          "publishedAt": "2016-07-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000011.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 18 (12 September 2015 - 31 March 2016)",
+          "publishedAt": "2016-06-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000012.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 17 (12 September 2015 - 29 February 2016)",
+          "publishedAt": "2016-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000326.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy by the Kor Kho Ro committee, January 2016",
+          "publishedAt": "2016-04-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000327.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 15 (12 September 2014 - 31 December 2015)",
+          "publishedAt": "2016-03-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000328.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 14 (12 September 2014 - 30 November 2015)",
+          "publishedAt": "2016-02-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000329.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 13 (12 September 2014 - 31 October 2015)",
+          "publishedAt": "2016-01-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000330.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 12 (12 September 2014 - 30 September 2015)",
+          "publishedAt": "2015-11-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000331.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 11 (12 September 2014 - 31 August 2015)",
+          "publishedAt": "2015-11-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000332.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 10 (12 September 2014 - 31 July 2015)",
+          "publishedAt": "2015-09-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000333.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 9 (12 September 2014 - 30 June 2015)",
+          "publishedAt": "2015-08-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000334.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 8 (12 September 2014 - 31 May 2015)",
+          "publishedAt": "2015-07-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000335.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 7 (12 September 2014 - 30 April 2015)",
+          "publishedAt": "2015-06-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000336.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 6 (12 September 2014 - 31 March 2015)",
+          "publishedAt": "2015-05-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000337.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 5 (12 September 2014 - 28 February 2015)",
+          "publishedAt": "2015-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000338.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 4 (12 September 2014 - 31 January 2015)",
+          "publishedAt": "2015-03-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000339.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 3 (12 September - 31 December 2014), part 2",
+          "publishedAt": "2015-02-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000340.PDF"
+        },
+        {
+          "title": "Summary of driving and accelerating the implementation of government policy, No. 3 (12 September - 31 December 2014), part 1",
+          "publishedAt": "2015-02-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000341.PDF"
+        },
+        {
+          "title": "Summary report on driving and accelerating the implementation of government policy, 2-month period (12 September - 30 November 2014)",
+          "publishedAt": "2015-01-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000342.PDF"
+        },
+        {
+          "title": "Notice of amendment to a Royal Institute announcement",
+          "publishedAt": "2013-09-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000343.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบหน้าอัลบั้มภาพ album.html?id=<id> — ภาพจาก content/news/<id>.json (block news-media) ไม่ต้องสร้างไฟล์ต่ออัลบั้ม · prerender: false = build ไม่สร้าง HTML นิ่ง",
+  "title": "คลังภาพ",
+  "navKey": "news",
+  "description": "อัลบั้มภาพกิจกรรมของสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
+  "prerender": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คลังภาพ",
+      "image": "assets/images/orst/news/data0005-00005374-960.jpg",
+      "imageAlt": "",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "คลังภาพ",
+          "href": "media-gallery.html"
+        }
+      ]
+    },
+    {
+      "type": "photo-album",
+      "id": "album",
+      "source": {
+        "type": "album"
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=11 (เฉพาะรายการที่เกี่ยวกับ No Gift) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "มาตรการป้องกันการรับสินบน (No Gift Policy)",
+  "navKey": "about",
+  "description": "ประกาศเจตนารมณ์และผลการดำเนินการตามนโยบายไม่รับของขวัญและของกำนัล (No Gift Policy)",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "มาตรการป้องกันการรับสินบน (No Gift Policy)",
+      "lead": "ประกาศเจตนารมณ์และผลการดำเนินการตามนโยบายไม่รับของขวัญและของกำนัล (No Gift Policy)",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "ศูนย์ปฏิบัติการต่อต้านการทุจริต",
+          "href": "anti-corruption-center.html"
+        },
+        {
+          "label": "มาตรการป้องกันการรับสินบน (No Gift Policy)"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "แบบสรุปรายงานตามนโยบาย No Gift Policy จากการปฏิบัติหน้าที่ ประจำปีงบประมาณ พ.ศ. ๒๕๖๘ รอบ ๑๒ เดือน",
+          "publishedAt": "2025-11-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001005.PDF"
+        },
+        {
+          "title": "การประเมินความเสี่ยงที่อาจเกิดการให้หรือรับสินบนจากการดำเนินงานตามภารกิจของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๘",
+          "publishedAt": "2025-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000994.PDF"
+        },
+        {
+          "title": "แบบสรุปรายงานการรับทรัพย์สินหรือประโยชน์อื่นใดอันอาจคำนวณเป็นเงินได้ ประจำปีงบประมาณ พ.ศ. ๒๕๖๗ รอบ ๑๒ เดือน (๑ ตุลาคม ๒๕๖๖-๓๐ กันยายน ๒๕๖๗)",
+          "publishedAt": "2024-12-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000977.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง นโยบายการไม่รับของขวัญและของกำนัลทุกชนิดจากการปฏิบัติหน้าที่ (No Gift Policy) ของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๘",
+          "publishedAt": "2024-12-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000972.PDF"
+        },
+        {
+          "title": "แบบสรุปรายงานการรับทรัพย์สินหรือประโยชน์อื่นใดอันอาจคำนวณเป็นเงินได้ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ รอบ ๑๒ เดือน (๑ ตุลาคม ๒๕๖๕-๓๐ กันยายน ๒๕๖๖)",
+          "publishedAt": "2024-02-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000949.PDF"
+        },
+        {
+          "title": "แบบสรุปรายงานตามนโยบาย No Gift Policy จากการปฏิบัติหน้าที่ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ รอบ ๑๒ เดือน (๑ ตุลาคม ๒๕๖๕-๓๐ กันยายน ๒๕๖๖)",
+          "publishedAt": "2023-10-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000947.PDF"
+        },
+        {
+          "title": "แบบสรุปรายงานตามนโยบาย No Gift Policy จากการปฏิบัติหน้าที่ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ รอบ ๖ เดือน (๑ ตุลาคม ๒๕๖๕-๓๑ มีนาคม ๒๕๖๖)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000910.PDF"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ติดตามข่าวประชาสัมพันธ์และข่าวกิจกรรมล่าสุดของสำนักงานราชบัณฑิตยสภาผ่านโปรแกรมอ่าน RSS">
+  <title>RSS ข่าวสาร | สำนักงานราชบัณฑิตยสภา</title>
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- ลำดับ CSS ห้ามสลับ: typography -> base -> blocks -> (pages/xxx) -> components -->
+  <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
+  <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
+  <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=dbcc836d">
+  <link rel="stylesheet" href="assets/css/components.css?v=670139e7">
+</head>
+
+<body data-page="news">
+
+  <div id="app-header"></div>
+
+  <main id="main-content">
+    <!-- เนื้อหาทั้งหมดของหน้านี้อยู่ในไฟล์ JSON ด้านล่าง — แก้เนื้อหาที่ไฟล์นั้นไฟล์เดียว -->
+    <div id="app-content" data-content="content/pages/rss.json">
+
+    <section class="page-hero is-plain">
+      <span class="page-hero-mark" aria-hidden="true"></span>
+      <div class="container">
+        <nav class="block-breadcrumb" aria-label="เส้นทางหน้า"><a href="index.html">หน้าหลัก</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span>ข่าวสารและกิจกรรม</span><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span aria-current="page" title="RSS ข่าวสาร">RSS ข่าวสาร</span></nav>
+        
+        <h1>RSS ข่าวสาร</h1>
+        <p>ติดตามข่าวประชาสัมพันธ์และข่าวกิจกรรมล่าสุดของสำนักงานราชบัณฑิตยสภาผ่านโปรแกรมอ่าน RSS</p>
+        
+        
+      </div>
+      
+    </section>
+
+    <section class="section" id="feeds">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>ช่อง RSS ของสำนักงาน</h2>
+          <p>RSS (Really Simple Syndication) คือรูปแบบไฟล์สำหรับเผยแพร่ข่าวที่อัปเดตอยู่เสมอ เมื่อนำลิงก์ RSS ไปใส่ในโปรแกรมอ่าน RSS หรือแอปพลิเคชันอ่านข่าว จะได้รับข่าวใหม่ของสำนักงานโดยไม่ต้องเข้าเว็บไซต์</p>
+        </div>
+        
+      </div>
+        <ul class="block-grid block-grid-1 block-feature-list block-feature-cards">
+            <li class="block-feature feature-compact is-highlight">
+              <span class="feature-compact-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-megaphone"></use></svg></span>
+              <div class="feature-compact-text">
+                <strong>ข่าวสารและกิจกรรม</strong>
+                <p>ข่าวประชาสัมพันธ์ทั่วไป และข่าวกิจกรรม</p>
+              </div>
+              <div class="feature-compact-act"><dl class="feature-details"><div class="feature-detail has-copy"><dt>ลิงก์ RSS</dt><dd><span lang="en" data-keep-digits>rss.xml</span><button type="button" class="feature-copy" data-copy="rss.xml" data-copy-url><svg class="icon" aria-hidden="true"><use href="#i-copy"></use></svg><span data-copy-label>คัดลอก</span></button></dd></div></dl><a class="feature-compact-link" href="rss.xml"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><span>เปิดดูไฟล์ RSS</span></a></div>
+            </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" id="how">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>วิธีติดตามข่าวผ่าน RSS</h2>
+          <p>ใช้เวลาไม่ถึงหนึ่งนาที ทำครั้งเดียว แล้วข่าวใหม่ของสำนักงานจะส่งตรงถึงโปรแกรมอ่าน RSS ของคุณ</p>
+        </div>
+        
+      </div>
+        <ol class="step-cards" data-reveal>
+            <li class="step-card" style="--i:0">
+              <div class="step-card-top">
+                <span class="step-card-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-copy"></use></svg></span>
+                <span class="step-card-no" aria-hidden="true">01</span>
+              </div>
+              <small class="step-card-kicker">ขั้นที่ 1</small>
+              <strong>คัดลอกลิงก์ RSS</strong>
+              <p>กดปุ่ม “คัดลอก” ที่ช่องลิงก์ RSS ด้านบน ระบบจะคัดลอกลิงก์แบบเต็มให้ทันที</p>
+            </li>
+            <li class="step-card" style="--i:1">
+              <div class="step-card-top">
+                <span class="step-card-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-ebook"></use></svg></span>
+                <span class="step-card-no" aria-hidden="true">02</span>
+              </div>
+              <small class="step-card-kicker">ขั้นที่ 2</small>
+              <strong>เปิดโปรแกรมอ่าน RSS</strong>
+              <p>เปิดโปรแกรมหรือแอปพลิเคชันอ่าน RSS ที่ใช้อยู่ แล้วเลือกเพิ่มแหล่งข่าวใหม่</p>
+            </li>
+            <li class="step-card" style="--i:2">
+              <div class="step-card-top">
+                <span class="step-card-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+                <span class="step-card-no" aria-hidden="true">03</span>
+              </div>
+              <small class="step-card-kicker">ขั้นที่ 3</small>
+              <strong>วางลิงก์และบันทึก</strong>
+              <p>วางลิงก์ที่คัดลอกไว้ แล้วบันทึก ข่าวใหม่ของสำนักงานจะแสดงในโปรแกรมโดยอัตโนมัติ</p>
+            </li>
+        </ol>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="assets/js/components.js?v=4eae80ab"></script>
+  <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
+</body>
+
+</html>

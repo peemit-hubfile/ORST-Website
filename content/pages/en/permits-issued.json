@@ -1,0 +1,121 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีหน้านี้ — รอข้อมูลจาก ORST (เหมาะกับ table: เลขที่คำขอ เรื่อง วันที่อนุญาต) · ตาราง records เป็นข้อมูลตัวอย่าง (ผู้ได้รับอนุญาตมีคำว่า \"ตัวอย่าง\") — แทนด้วยข้อมูลจริงก่อนเผยแพร่",
+  "title": "Permits Issued",
+  "navKey": "services",
+  "description": "Completed permissions to print, publish and use the rights to Office of the Royal Society publications",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Permits Issued",
+      "lead": "Completed permissions to print, publish and use the rights to Office of the Royal Society publications",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services"
+        },
+        {
+          "label": "Permits Issued"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "records",
+      "heading": "Permissions granted",
+      "lead": "[Sample data — awaiting actual records from the Office]",
+      "columns": [
+        "No.",
+        "Publication / data requested",
+        "Permit holder",
+        "Types of permission",
+        "Date granted"
+      ],
+      "rows": [
+        [
+          "1",
+          "Royal Institute Dictionary B.E. 2554 (electronic data)",
+          "Sample Software Co., Ltd.",
+          "Printing and publishing",
+          "14 Oct 2025"
+        ],
+        [
+          "2",
+          "Thai Gazetteer",
+          "Sample Publishing House",
+          "Licence to print and sell",
+          "2 Sep 2025"
+        ],
+        [
+          "3",
+          "Principles of English Transcription",
+          "Sample University",
+          "Printing and publishing",
+          "18 Aug 2025"
+        ],
+        [
+          "4",
+          "Academic Technical Terms (electronic data)",
+          "Sample Education Co., Ltd.",
+          "Printing and publishing",
+          "7 Jul 2025"
+        ],
+        [
+          "5",
+          "Dictionary of Literary Terms",
+          "Sample Publishing House",
+          "Licence to print and sell",
+          "23 Jun 2025"
+        ]
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "types",
+      "layout": "directory",
+      "variant": "alt",
+      "heading": "Types of permission",
+      "lead": "The Office of the Royal Society grants permission under two regulations.",
+      "items": [
+        {
+          "title": "Printing and publishing",
+          "body": "Request for permission to print and publish publications, electronic media, electronic data and other media of the Office of the Royal Society",
+          "links": [
+            {
+              "kind": "Related regulation",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF"
+            },
+            {
+              "kind": "e-Services",
+              "label": "Apply for permission",
+              "href": "e-services.html"
+            }
+          ]
+        },
+        {
+          "title": "Licence to print and sell",
+          "body": "Request for the right to print and sell books produced by the Office of the Royal Society for publication and sale",
+          "links": [
+            {
+              "kind": "Related regulation",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF"
+            },
+            {
+              "kind": "e-Services",
+              "label": "Apply for permission",
+              "href": "e-services.html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

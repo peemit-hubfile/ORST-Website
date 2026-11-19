@@ -1,0 +1,74 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_qa.asp (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Questions and answers (Q&A)",
+  "navKey": "news",
+  "description": "Questions and answers on Thai language usage submitted by the public to the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Questions and answers (Q&A)",
+      "lead": "Questions and answers on Thai language usage submitted by the public to the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and activities"
+        },
+        {
+          "label": "Questions and answers (Q&A)"
+        }
+      ],
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "faq",
+      "id": "qa",
+      "items": [
+        {
+          "q": "Which classifier is used for พระสงฆ์ (Buddhist monks)?",
+          "a": "The classifiers are รูป (rup) and องค์ (ong) (องค์ is generally colloquial)."
+        },
+        {
+          "q": "What is the Thai term for the English \"Nitrous oxide N20\": ไนทรัสออกไซด์ or ไนตรัสออกไซด์?",
+          "a": "nitrous oxide is transliterated as \"ไนทรัสออกไซด์\"; its molecular formula is \"N2O\"."
+        },
+        {
+          "q": "Are เนกไท / มัลติมีเดีย / รีโมตคอนโทรล / แจ็กเกต spelled correctly?",
+          "a": "1. necktie is transliterated as เนกไท 2. multi media is transliterated as มัลติมิเดีย 3. remote control is transliterated as ริโมตคอนโทรล 4. jacket is transliterated as แจ็กเกต"
+        },
+        {
+          "q": "What do the names ปุณชรัศมิ์ and ปุญชรัสมิ์ mean?",
+          "a": "1. The name “ปุณชรัศมิ์” (Punnacharat) can be broken down as: - “ปุณ” from Pali “ปุณฺณ”, meaning full - “ช” from Pali and Sanskrit, meaning born - “รัศมิ์” from Sanskrit “รศฺมิ”, meaning light. Therefore, “ปุณชรัศมิ์” can be translated as “light born in fullness”. 2. The name “ปุญชรัสมิ์” (Punyacharat) can be broken down as: - “ปุญ” from Pali “ปุญฺ?”, meaning merit - “ช” from Pali and Sanskrit, meaning born - “รัสมิ์” resembles a word of Pali and Sanskrit origin, but it was not found in Pali or Sanskrit dictionaries. Since not every part of the name “ปุญชรัสมิ์” can be given a meaning, the name as a whole cannot be interpreted"
+        },
+        {
+          "q": "What should a master of ceremonies say when instructing attendees to pay respects to His Majesty the King at ceremonies: ถวายคำนับ, ทำความเคารพ, or some other phrase?",
+          "a": "Use \"ถวายความเคารพ\" (thawai khwam khaorop, to pay respects), usually stating what respect is paid to, e.g. ถวายความเคารพพระบรมฉายาลักษณ์ (paying respects to the royal portrait) or ถวายความเคารพพระบรมรูป (paying respects to the royal statue)."
+        },
+        {
+          "q": "Why can words pronounced \"ban\" be spelled in several ways, such as บรร, บัน and บรรณ? For words like บรรณ spelled with รร, how can one tell whether they come from Khmer or Sanskrit?",
+          "a": "1. Thai words pronounced \"ban\" can be written in several ways, such as บรร, บัน and บรรณ, because each word has a different origin and is formed differently. 2. Words with บรร may come from Khmer, e.g. บรรทม (banthom) from ผทํ; from Sanskrit and Pali, e.g. บรรถร (banthon) from Pali ปตฺถร and Sanskrit ปฺรสฺตร; or may be derived from Thai words, e.g. บรรสาน (bansan) derived from ประสาน (prasan). Learners should consult dictionaries and academic texts on the Thai language and remember the origin or derivation of each word"
+        }
+      ],
+      "search": true
+    },
+    {
+      "type": "cta-band",
+      "id": "qa-ask",
+      "heading": "Can't find the answer you need?",
+      "body": "Send further questions about Thai language usage to the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "Contact us",
+          "href": "contact.html"
+        }
+      ]
+    }
+  ],
+  "sideNav": false,
+  "lang": "en"
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="แผนภูมิและการแบ่งส่วนราชการของสำนักงานราชบัณฑิตยสภา">
+  <title>โครงสร้างหน่วยงานและการแบ่งส่วนราชการ | สำนักงานราชบัณฑิตยสภา</title>
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- ลำดับ CSS ห้ามสลับ: typography -> base -> blocks -> (pages/xxx) -> components -->
+  <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
+  <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
+  <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=dbcc836d">
+  <link rel="stylesheet" href="assets/css/components.css?v=670139e7">
+</head>
+
+<body data-page="about">
+
+  <div id="app-header"></div>
+
+  <main id="main-content">
+    <!-- เนื้อหาทั้งหมดของหน้านี้อยู่ในไฟล์ JSON ด้านล่าง — แก้เนื้อหาที่ไฟล์นั้นไฟล์เดียว -->
+    <div id="app-content" data-content="content/pages/organization-structure.json">
+
+    <section class="page-hero is-plain">
+      <span class="page-hero-mark" aria-hidden="true"></span>
+      <div class="container">
+        <nav class="block-breadcrumb" aria-label="เส้นทางหน้า"><a href="index.html">หน้าหลัก</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span>เกี่ยวกับเรา</span><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span aria-current="page" title="โครงสร้างหน่วยงานและการแบ่งส่วนราชการ">โครงสร้างหน่วยงานและการแบ่งส่วนราชการ</span></nav>
+        
+        <h1>โครงสร้างหน่วยงานและการแบ่งส่วนราชการ</h1>
+        <p>แผนภูมิและการแบ่งส่วนราชการของสำนักงานราชบัณฑิตยสภา</p>
+        
+        
+      </div>
+      
+    </section>
+
+    <section class="section block-org-tree" id="chart">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="block-eyebrow">โครงสร้างหน่วยงาน</span>
+          <h2>แผนผังการบริหารงาน</h2>
+          <p>ราชบัณฑิตยสภาและสำนักงานราชบัณฑิตยสภา</p>
+        </div>
+        
+      </div>
+        
+      <div class="ot" data-reveal>
+        <div class="ot-top">
+          <div class="ot-node is-top">
+            <span class="ot-head-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+            <h3 class="ot-title">นายกรัฐมนตรีในฐานะบังคับบัญชา</h3>
+            <p class="ot-note">พ.ร.บ. ปรับปรุงกระทรวง ทบวง กรม พ.ศ. 2545 มาตรา 46 วรรคสอง · พ.ร.บ. รภ. มาตรา 5, คำสั่งนายกรัฐมนตรี ที่ 238/2563 ส่วนที่ 3 และ 8</p>
+          </div>
+          <p class="ot-aside"><span class="ot-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span>คณะรัฐมนตรี</p>
+        </div>
+        <div class="ot-branches">
+        <div class="ot-branch is-deep" style="--i:0">
+          <div class="ot-node is-head">
+            <span class="ot-head-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg></span>
+            <h3 class="ot-title">ราชบัณฑิตยสภา</h3>
+            <p class="ot-note">พ.ร.บ. รภ. มาตรา 4, 6, 12, 24, 31</p>
+          </div>
+          <ol class="ot-chain">
+            <li>
+            <div class="ot-node">
+              <h3 class="ot-title">นายกราชบัณฑิตยสภา</h3>
+              
+              <p class="ot-note">พ.ร.บ. รภ. มาตรา 8 (2), (3) มาตรา 26 และมาตรา 36 วรรคหนึ่ง และวรรคสอง</p>
+              
+            </div>
+            <ul class="ot-side"><li><strong>คณะราชบัณฑิตที่ปรึกษา</strong><small>ที่ กค 0406.6/20027 ลว. 29 ก.ค. 51</small></li><li><strong>คณะกรรมการกิจการสำนักงานราชบัณฑิตยสภา</strong><small>พ.ร.บ. รภ. มาตรา 37</small></li></ul></li>
+            <li>
+            <div class="ot-node">
+              <h3 class="ot-title">อุปนายกราชบัณฑิตยสภา</h3>
+              <p class="ot-chips"><span>คนที่ 1</span><span>คนที่ 2</span></p>
+              <p class="ot-note">พ.ร.บ. รภ. มาตรา 27</p>
+              
+            </div></li>
+          </ol>
+          
+          <div class="ot-units">
+            <p class="ot-label">ราชบัณฑิต 3 สำนัก</p>
+            <ul>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">01</span>
+                <strong>สำนักธรรมศาสตร์และการเมือง</strong>
+                <small>พ.ร.บ. รภ. มาตรา 9</small>
+                <p class="ot-unit-roles"><span>ประธานสำนัก</span><span class="ot-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span>เลขานุการสำนัก</span></p>
+              </li>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">02</span>
+                <strong>สำนักวิทยาศาสตร์</strong>
+                <small>พ.ร.บ. รภ. มาตรา 9</small>
+                <p class="ot-unit-roles"><span>ประธานสำนัก</span><span class="ot-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span>เลขานุการสำนัก</span></p>
+              </li>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">03</span>
+                <strong>สำนักศิลปกรรม</strong>
+                <small>พ.ร.บ. รภ. มาตรา 9</small>
+                <p class="ot-unit-roles"><span>ประธานสำนัก</span><span class="ot-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span>เลขานุการสำนัก</span></p>
+              </li></ul>
+          </div>
+          
+        </div>
+        <div class="ot-branch is-gold" style="--i:1">
+          <div class="ot-node is-head">
+            <span class="ot-head-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-service"></use></svg></span>
+            <h3 class="ot-title">สำนักงานราชบัณฑิตยสภา</h3>
+            <p class="ot-note">พ.ร.บ. รภ. มาตรา 4, 7, 8 และ พ.ร.บ. ปรับปรุงกระทรวง ทบวง กรม พ.ศ. 2545 มาตรา 46 (6)</p>
+          </div>
+          <ol class="ot-chain">
+            <li>
+            <div class="ot-node">
+              <h3 class="ot-title">เลขาธิการราชบัณฑิตยสภา</h3>
+              
+              <p class="ot-note">พ.ร.บ. รภ. มาตรา 38</p>
+              <div class="ot-roles"><span class="ot-roles-label">ทำหน้าที่</span><ul><li>เลขานุการราชบัณฑิตยสภา (มาตรา 24)</li><li>เลขานุการคณะกรรมการกิจการฯ (มาตรา 37 (5))</li></ul></div>
+            </div></li>
+            <li>
+            <div class="ot-node">
+              <h3 class="ot-title">รองเลขาธิการราชบัณฑิตยสภา</h3>
+              
+              <p class="ot-note">พ.ร.บ. รภ. มาตรา 38</p>
+              <div class="ot-roles"><span class="ot-roles-label">ทำหน้าที่</span><ul><li>ผู้ช่วยเลขานุการราชบัณฑิตยสภา (มาตรา 24)</li><li>ผู้ช่วยเลขานุการคณะกรรมการกิจการฯ (มาตรา 37 (5))</li></ul></div>
+            </div></li>
+          </ol>
+          
+          <div class="ot-units">
+            <p class="ot-label">หน่วยงานภายใน</p>
+            <ul>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">01</span>
+                <strong>กองธรรมศาสตร์และการเมือง</strong>
+                <small>กฎกระทรวงฯ 45 ข้อ 2</small>
+                
+              </li>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">02</span>
+                <strong>กองวิทยาศาสตร์</strong>
+                <small>กฎกระทรวงฯ 45 ข้อ 2</small>
+                
+              </li>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">03</span>
+                <strong>กองศิลปกรรม</strong>
+                <small>กฎกระทรวงฯ 45 ข้อ 2</small>
+                
+              </li>
+              <li class="ot-unit">
+                <span class="ot-unit-no" aria-hidden="true">04</span>
+                <strong>สำนักงานเลขานุการกรม</strong>
+                <small>กฎกระทรวงฯ 45 ข้อ 2</small>
+                
+              </li></ul>
+          </div>
+          
+          <div class="ot-extras">
+            <p class="ot-label">คณะกรรมการ</p>
+            <ul><li><strong>คณะกรรมการทางวิชาการของสำนักงานราชบัณฑิตยสภา</strong><small>พ.ร.บ. รภ. มาตรา 36 และมติ ครม. 21 ก.พ. 60</small></li><li><strong>คณะกรรมการอื่น</strong><small>พ.ร.บ. รภ. มาตรา 36 และมติ ครม. 21 ก.พ. 60</small></li></ul>
+          </div>
+        </div>
+        </div>
+        <p class="ot-legend">กรอบเส้นประ หมายถึง การทำงานเชื่อมโยง</p>
+      </div>
+      <div class="ot-doc">
+        <a class="ot-doc-thumb" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF" data-doc-title="แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564" aria-label="แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564"><img src="assets/images/orst/about/org-chart-2564.jpg" alt="" loading="lazy"></a>
+        <div class="ot-doc-body">
+          <p class="ot-label">เอกสาร</p>
+          <h3 class="ot-doc-title">แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564</h3>
+          <p class="ot-doc-lead">แผนผังการบริหารงานราชบัณฑิตยสภาและสำนักงานราชบัณฑิตยสภา ฉบับที่สำนักงานเผยแพร่</p>
+          <div class="doc-list is-compact ot-doc-list">
+            <ul class="doc-items">
+              <li class="doc-item is-pdf">
+                <span class="doc-icon doc-icon-pdf" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg><b>PDF</b></span>
+                <div class="doc-body">
+                  <a class="doc-title" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF" target="_blank" rel="noopener noreferrer">แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564<span class="sr-only"> (PDF 571 KB เปิดในแท็บใหม่)</span></a>
+                  <div class="doc-meta">PDF<span aria-hidden="true"> · </span>571 KB</div>
+                </div>
+                <div class="doc-actions">
+                  <a class="doc-btn is-primary" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF" target="_blank" rel="noopener noreferrer" data-doc-preview="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF" data-doc-title="แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg><span>เปิดเอกสาร</span><span class="sr-only"> แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564</span></a>
+                  <a class="doc-btn" href="https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF" target="_blank" rel="noopener noreferrer" download><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span>ดาวน์โหลด</span><span class="sr-only"> แผนภูมิการแบ่งส่วนราชการ พุทธศักราช 2564</span></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="assets/js/components.js?v=4eae80ab"></script>
+  <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
+</body>
+
+</html>

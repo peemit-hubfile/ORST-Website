@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="เครื่องมือและแนวทางที่ช่วยให้ทุกคนเข้าถึงเนื้อหาบนเว็บไซต์สำนักงานราชบัณฑิตยสภาได้">
+  <title>การเข้าถึงเว็บไซต์ (Web Accessibility) | สำนักงานราชบัณฑิตยสภา</title>
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- ลำดับ CSS ห้ามสลับ: typography -> base -> blocks -> (pages/xxx) -> components -->
+  <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
+  <link rel="preload" href="assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
+  <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=dbcc836d">
+  <link rel="stylesheet" href="assets/css/components.css?v=670139e7">
+</head>
+
+<body data-page="home">
+
+  <div id="app-header"></div>
+
+  <main id="main-content">
+    <!-- เนื้อหาทั้งหมดของหน้านี้อยู่ในไฟล์ JSON ด้านล่าง — แก้เนื้อหาที่ไฟล์นั้นไฟล์เดียว -->
+    <div id="app-content" data-content="content/pages/accessibility.json">
+
+    <section class="page-hero is-plain">
+      <span class="page-hero-mark" aria-hidden="true"></span>
+      <div class="container">
+        <nav class="block-breadcrumb" aria-label="เส้นทางหน้า"><a href="index.html">หน้าหลัก</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span aria-current="page" title="การเข้าถึงเว็บไซต์ (Web Accessibility)">การเข้าถึงเว็บไซต์ (Web Accessibility)</span></nav>
+        
+        <h1>การเข้าถึงเว็บไซต์ (Web Accessibility)</h1>
+        <p>เครื่องมือและแนวทางที่ช่วยให้ทุกคนเข้าถึงเนื้อหาบนเว็บไซต์สำนักงานราชบัณฑิตยสภาได้</p>
+        
+        
+      </div>
+      
+    </section>
+
+    <section class="section" id="try">
+      <div class="container">
+        <div class="block-prose">
+          <div class="a11y-cta"><div class="a11y-cta-text"><span class="a11y-cta-ic" aria-hidden="true"><svg class="icon"><use href="#i-access"></use></svg></span><div><h3>ปรับเว็บไซต์ให้เหมาะกับการอ่านของท่าน</h3><p>ทุกหน้ามีปุ่ม “ช่วยการเข้าถึง” ที่มุมขวาล่าง หรือทดลองเปิด-ปิดเครื่องมือได้ทันทีด้านล่างนี้</p></div></div><button type="button" class="a11y-cta-btn" data-open-access>เปิดแผงช่วยการเข้าถึง</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>เครื่องมือช่วยการเข้าถึง</h2>
+          
+        </div>
+        
+      </div>
+        <div class="block-prose">
+          <div class="a11y-showcase" data-a11y-showcase></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="keyboard">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>ใช้งานด้วยแป้นพิมพ์</h2>
+          
+        </div>
+        
+      </div>
+        <div class="block-table-wrap">
+          <table class="block-table">
+            
+            <thead><tr><th scope="col">ปุ่มบนแป้นพิมพ์</th><th scope="col">การทำงาน</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Tab</th><td>ไปยังลิงก์หรือปุ่มถัดไป (กดครั้งแรกที่ต้นหน้าจะพบลิงก์ “ข้ามไปยังเนื้อหาหลัก”)</td></tr>
+              <tr><th scope="row">Shift + Tab</th><td>ย้อนกลับไปยังลิงก์หรือปุ่มก่อนหน้า</td></tr>
+              <tr><th scope="row">Enter</th><td>เปิดลิงก์หรือกดปุ่มที่เลือกอยู่</td></tr>
+              <tr><th scope="row">Esc</th><td>ปิดเมนู หน้าต่าง หรือแผงที่เปิดอยู่</td></tr>
+              <tr><th scope="row">/</th><td>เปิดการค้นหาในเว็บไซต์</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screen-reader">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>สำหรับผู้ใช้โปรแกรมอ่านหน้าจอ</h2>
+          
+        </div>
+        
+      </div>
+        <div class="block-prose block-prose-narrow">
+          <p>รูปภาพมีข้อความอธิบาย หัวข้อเรียงตามโครงสร้างของหน้า และลิงก์ที่เปิดในแท็บใหม่มีข้อความแจ้งให้ทราบ</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="standard">
+      <div class="container">
+        <div class="block-notice is-info" role="note">
+          <span class="block-notice-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-file"></use></svg></span>
+          <div>
+            
+            <p>[ระดับมาตรฐานการเข้าถึงที่เว็บไซต์ผ่านการรับรอง (เช่น WCAG 2.1 / มาตรฐานเว็บไซต์ภาครัฐ) — รอผลการตรวจสอบ]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>พบปัญหาในการเข้าถึง</h2>
+          <p>หากพบส่วนใดของเว็บไซต์ที่ใช้งานไม่สะดวก แจ้งสำนักงานได้ทางช่องทางต่อไปนี้</p>
+        </div>
+        
+      </div>
+        <ul class="block-grid block-grid-2 block-feature-list block-feature-cards">
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-form"></use></svg></span>
+              <div>
+                <strong>แบบฟอร์มติดต่อ</strong>
+                <p>ระบุหน้าเว็บและปัญหาที่พบ เจ้าหน้าที่จะติดต่อกลับ</p>
+                
+                <div class="block-feature-links feature-rows"><a class="feature-row" href="contact.html#message-form"><svg class="icon feature-row-ic" aria-hidden="true"><use href="#i-file"></use></svg><span class="feature-row-body"><small>แบบฟอร์ม</small><span>เขียนข้อความถึงเจ้าหน้าที่</span></span><svg class="icon feature-row-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+              </div>
+            </li>
+            <li class="block-feature">
+              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+              <div>
+                <strong>อีเมล</strong>
+                <p>ส่งรายละเอียดหรือภาพหน้าจอที่พบปัญหา</p>
+                
+                <div class="block-feature-links feature-rows"><a class="feature-row" href="mailto:saraban@orst.go.th"><svg class="icon feature-row-ic" aria-hidden="true"><use href="#i-mail"></use></svg><span class="feature-row-body"><small>อีเมล</small><span lang="en" data-keep-digits>saraban@orst.go.th</span></span><svg class="icon feature-row-go" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="assets/js/components.js?v=4eae80ab"></script>
+  <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
+</body>
+
+</html>

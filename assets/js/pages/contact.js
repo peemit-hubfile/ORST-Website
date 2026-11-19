@@ -1,0 +1,94 @@
+/* =============================================================================
+   pages/contact.js — สคริปต์เฉพาะหน้า ติดต่อเรา (contact.html)
+   -----------------------------------------------------------------------------
+   ต้องโหลด "หลัง" assets/js/components.js เสมอ
+   สารบัญ
+     showToast()   แสดงข้อความแจ้งเตือนมุมจอ (#toast)
+     ฟอร์มติดต่อ   ตรวจค่าที่กรอกฝั่งหน้าเว็บอย่างเดียว ยังไม่ส่งไปที่ไหน
+                   (ไม่มี action / fetch — ต้องต่อ backend เอง)
+   ============================================================================= */
+
+/* sticky header: ย้ายไปอยู่ที่ assets/js/components.js -> initFixedHeader() */
+
+const qs = (s, r = document) => r.querySelector(s);
+const qsa = (s, r = document) => [...r.querySelectorAll(s)];
+
+function showToast(text) {
+  const toast = qs('#toast');
+  toast.textContent = text;
+  toast.classList.add('show');
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => toast.classList.remove('show'), 1800);
+}
+
+function initMobileMenu() {
+  const btn = qs('[data-mobile-menu]');
+  const menu = qs('#mobile-menu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', () => {
+    const open = !menu.classList.contains('is-open');
+    menu.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+}
+
+function initCopy() {
+  qsa('[data-copy]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.copy || '';
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast('คัดลอกข้อมูลแล้ว');
+      } catch (e) {
+        showToast('ไม่สามารถคัดลอกได้');
+      }
+    });
+  });
+}
+
+function initForm() {
+  const form = qs('#message-form');
+  if (!form) return;
+  // ตัวนับตัวอักษรของช่องข้อความ (สูงสุด 1000)
+  const msg = qs('#message', form);
+  const count = qs('#message-count', form);
+  if (msg && count) {
+    const max = Number(msg.maxLength) || 1000;
+    const update = () => {
+      count.textContent = `${msg.value.length}/${max}`;
+      count.classList.toggle('is-near', msg.value.length > max * 0.9);
+    };
+    msg.addEventListener('input', update);
+    form.addEventListener('reset', () => setTimeout(update));
+    update();
+  }
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    showToast('ส่งข้อความเรียบร้อยแล้ว');
+    form.reset();
+  });
+}
+
+function initReveal() {
+  const items = qsa('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(i => i.classList.add('is-visible'));
+    return;
+  }
+  const ob = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      ob.unobserve(entry.target);
+    }
+  }), { threshold: .12 });
+  items.forEach(i => ob.observe(i));
+}
+
+initMobileMenu();
+initCopy();
+initForm();
+initReveal();

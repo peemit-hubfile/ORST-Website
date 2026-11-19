@@ -1,0 +1,44 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "รอเนื้อหา — sitemap มาตรฐานเว็บไซต์ภาครัฐ ข้อ 8.9 (5) กำหนดให้ผู้พัฒนาจัดทำร่างตามภาคผนวก ค แล้ว ORST พิจารณาอนุมัติ ยังไม่มีร่างที่อนุมัติ",
+  "title": "Disclaimer",
+  "navKey": "about",
+  "description": "Disclaimer on the use of information on the Office of the Royal Society website",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Disclaimer",
+      "lead": "Disclaimer on the use of information on the Office of the Royal Society website",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Sitemap",
+          "href": "sitemap.html"
+        },
+        {
+          "label": "Disclaimer"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "tone": "info",
+      "title": "In preparation",
+      "body": "This draft policy is in preparation and awaits approval by the Office of the Royal Society before it takes effect. If you have any questions, contact the website administrator via the Contact us page"
+    },
+    {
+      "type": "cta-band",
+      "heading": "Contact the website administrator",
+      "actions": [
+        {
+          "label": "Contact Us",
+          "href": "contact.html#contact-form"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากประกาศฝ่ายบริหารงานบุคคล orst.go.th (iwfm_table.asp?a=7) — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "HR Plan",
+  "navKey": "about",
+  "description": "Human resource management policy and the annual human resource management and development plans of the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "HR Plan",
+      "lead": "Human resource management policy and the annual human resource management and development plans of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "HR Plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2026",
+          "publishedAt": "2026-05-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002054.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2025",
+          "publishedAt": "2025-04-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001839.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2024",
+          "publishedAt": "2024-04-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000226.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Plan and Action Plan of the Office of the Royal Society, fiscal years 2023-2027",
+          "publishedAt": "2023-04-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001609.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2022",
+          "publishedAt": "2022-04-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001333.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2021",
+          "publishedAt": "2021-04-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001182.PDF"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on human resource management policy",
+          "publishedAt": "2020-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001022.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Plan of the Office of the Royal Society, fiscal year 2020",
+          "publishedAt": "2020-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001024.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

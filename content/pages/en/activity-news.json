@@ -1,0 +1,41 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=35 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Activities",
+  "navKey": "news",
+  "description": "Activity news of the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Activities",
+      "lead": "Activity news of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Activities"
+        }
+      ],
+      "image": "assets/images/orst/news/data0004-00004279-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "layout": "news",
+      "source": {
+        "type": "news",
+        "channel": "activity"
+      },
+      "keepImages": true
+    }
+  ],
+  "updatedAt": "2026-11-13",
+  "lang": "en"
+}

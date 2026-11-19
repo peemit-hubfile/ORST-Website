@@ -1,0 +1,73 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "บัญชีที่เว็บเดิม/เว็บนี้ใช้อยู่: เพจ Facebook id 206167399441363 และช่อง YouTube ของคลังองค์ความรู้ — ถ้ามีบัญชีอื่น (LINE, X, TikTok) ให้เพิ่มใน accounts",
+  "title": "เครือข่ายสังคมออนไลน์ (Social Media)",
+  "navKey": "contact",
+  "description": "ติดตามข่าวสาร กิจกรรม และสาระความรู้ของสำนักงานราชบัณฑิตยสภาผ่านเครือข่ายสังคมออนไลน์",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "เครือข่ายสังคมออนไลน์ (Social Media)",
+      "lead": "ติดตามข่าวสาร กิจกรรม และสาระความรู้ของสำนักงานราชบัณฑิตยสภาผ่านเครือข่ายสังคมออนไลน์",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ติดต่อเรา",
+          "href": "contact.html"
+        },
+        {
+          "label": "เครือข่ายสังคมออนไลน์ (Social Media)"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "accounts",
+      "layout": "cards",
+      "columns": 3,
+      "linkStyle": "rows",
+      "heading": "บัญชีทางการของสำนักงาน",
+      "lead": "ติดตามข่าวสารและสอบถามข้อมูลกับสำนักงานได้ผ่านบัญชีทางการด้านล่าง",
+      "items": [
+        {
+          "icon": "i-people",
+          "title": "Facebook",
+          "body": "เพจราชบัณฑิตยสภา ข่าวสารและกิจกรรมของสำนักงาน",
+          "links": [
+            {
+              "label": "เปิดเพจ Facebook",
+              "href": "https://www.facebook.com/206167399441363"
+            }
+          ]
+        },
+        {
+          "icon": "i-mail",
+          "title": "Messenger",
+          "body": "ส่งข้อความสอบถามผ่าน Facebook Messenger ของเพจราชบัณฑิตยสภา",
+          "links": [
+            {
+              "label": "เริ่มแชทใน Messenger",
+              "href": "https://m.me/206167399441363"
+            }
+          ]
+        },
+        {
+          "icon": "i-video",
+          "title": "YouTube",
+          "body": "วิดีโอการบรรยาย การเสวนาวิชาการ และสาระความรู้",
+          "links": [
+            {
+              "label": "เปิดช่อง YouTube",
+              "href": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

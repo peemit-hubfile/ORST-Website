@@ -1,0 +1,131 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด",
+  "navKey": "knowledge",
+  "description": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด — ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย · อักษรไทยน้อย · อักษรธรรมอีสาน และอื่น ๆ",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "หลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด — ๖ หัวข้อ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หลักเกณฑ์ภาษาไทย",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "ชุดแบบอักษรหรือฟอนต์อักษรโบราณ ๖ ชุด"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "pageSize": 8,
+      "items": [
+        {
+          "title": "ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004907.PDF",
+          "category": "ราชบัณฑิตยสภากับมาตรฐานระหว่างประเทศด้านภาษาไทย"
+        },
+        {
+          "title": "ผังข้อมูลฟอนต์อักษรไทยน้อย",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF",
+          "category": "อักษรไทยน้อย"
+        },
+        {
+          "title": "คู่มือการพิมพ์ฟอนต์อักษรไทยน้อย",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF",
+          "category": "อักษรไทยน้อย"
+        },
+        {
+          "title": "รายละเอียดสำหรับการดาวน์โหลดฟอนต์อักษรไทยน้อย",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF",
+          "category": "อักษรไทยน้อย"
+        },
+        {
+          "title": "ไฟล์ฟอนต์ RST-THNOI (.zip)",
+          "href": "https://drive.google.com/file/d/1Nb92ATAgCMZHQ3dxkTsXN5O5gu-q1GPV/view?usp=sharing",
+          "category": "อักษรไทยน้อย"
+        },
+        {
+          "title": "ผังข้อมูลฟอนต์อักษรธรรมอีสาน",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF",
+          "category": "อักษรธรรมอีสาน"
+        },
+        {
+          "title": "คู่มือการพิมพ์ฟอนต์อักษรธรรมอีสาน",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF",
+          "category": "อักษรธรรมอีสาน"
+        },
+        {
+          "title": "รายละเอียดสำหรับการดาวน์โหลดฟอนต์อักษรธรรมอีสาน",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF",
+          "category": "อักษรธรรมอีสาน"
+        },
+        {
+          "title": "ไฟล์ฟอนต์ RST-ISAN (.zip)",
+          "href": "https://drive.google.com/file/d/1ytQM8zxUyk_sOCT_ozgs25O5oP9HjNJp/view?usp=sharing",
+          "category": "อักษรธรรมอีสาน"
+        },
+        {
+          "title": "ผังข้อมูลฟอนต์อักษรธรรมล้านนา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF",
+          "category": "อักษรธรรมล้านนา"
+        },
+        {
+          "title": "คู่มือการพิมพ์ฟอนต์อักษรธรรมล้านนา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF",
+          "category": "อักษรธรรมล้านนา"
+        },
+        {
+          "title": "รายละเอียดสำหรับการดาวน์โหลดฟอนต์อักษรธรรมล้านนา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF",
+          "category": "อักษรธรรมล้านนา"
+        },
+        {
+          "title": "ไฟล์ฟอนต์ RST-LANNA (.zip)",
+          "href": "https://drive.google.com/file/d/1yUvuQAXRWLpsodlLIJpjMV7ZYjTEnqdy/view?usp=sharing",
+          "category": "อักษรธรรมล้านนา"
+        },
+        {
+          "title": "อักษรไทยนิเทศ",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF",
+          "category": "อักษรไทยนิเทศ"
+        },
+        {
+          "title": "ไฟล์ฟอนต์ RST-NITHET (.zip)",
+          "href": "https://drive.google.com/drive/folders/1R6pSh3J9kxir7zHOkYQ9gwFY244PAwO8",
+          "category": "อักษรไทยนิเทศ"
+        },
+        {
+          "title": "แบบอักษรขอมไทย",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005336.PDF",
+          "category": "แบบอักษรขอมไทย"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ดูหลักเกณฑ์เรื่องอื่น",
+      "body": "หลักเกณฑ์การใช้ภาษาไทยทั้งหมดของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "หลักเกณฑ์ภาษาไทยทั้งหมด",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ]
+}

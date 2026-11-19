@@ -1,0 +1,54 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากประกาศฝ่ายบริหารงานบุคคล orst.go.th (iwfm_table.asp?a=7) — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "HR Annual Report",
+  "navKey": "about",
+  "description": "Reports on human resource management and development of the Office of the Royal Society for each fiscal year",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "HR Annual Report",
+      "lead": "Reports on human resource management and development of the Office of the Royal Society for each fiscal year",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "HR Annual Report"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2025",
+          "publishedAt": "2026-03-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002053.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2024",
+          "publishedAt": "2025-04-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001837.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Report of the Office of the Royal Society, fiscal year 2023",
+          "publishedAt": "2024-03-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000221.PDF"
+        },
+        {
+          "title": "Human Resource Management and Development Report, fiscal year 2021 (revised)",
+          "publishedAt": "2022-04-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001332.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

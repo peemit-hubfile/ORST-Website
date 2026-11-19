@@ -1,0 +1,59 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=16 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Internal Audit Charter",
+  "navKey": "about",
+  "description": "Internal Audit Charter of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Internal Audit Charter",
+      "lead": "Internal Audit Charter of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Internal Audit Charter"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society, fiscal year 2026",
+          "publishedAt": "2025-10-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000234.PDF"
+        },
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society, fiscal year 2023",
+          "publishedAt": "2022-10-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000179.PDF"
+        },
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society, fiscal year 2022",
+          "publishedAt": "2021-11-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000172.PDF"
+        },
+        {
+          "title": "Internal Audit Charter of the Office of the Royal Society",
+          "publishedAt": "2020-04-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000011.PDF"
+        },
+        {
+          "title": "Code of Ethics of the Internal Audit Group, Office of the Royal Society",
+          "publishedAt": "2020-04-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000012.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

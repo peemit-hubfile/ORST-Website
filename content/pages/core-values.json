@@ -1,0 +1,43 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-VALUE (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ค่านิยม",
+  "navKey": "about",
+  "description": "ค่านิยมของราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ค่านิยม",
+      "lead": "ค่านิยมของราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "ค่านิยม"
+        }
+      ]
+    },
+    {
+      "type": "image-band",
+      "id": "values",
+      "eyebrow": "Core Values",
+      "heading": "ค่านิยมราชบัณฑิตยสภา",
+      "paragraphs": [
+        "ปฏิบัติงานโดยยึดหลัก"
+      ],
+      "list": [
+        "ความถูกต้อง",
+        "เป็นมาตรฐาน",
+        "และมีจิตบริการ"
+      ],
+      "tone": "light"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Writing abbreviations",
+  "navKey": "knowledge",
+  "description": "Writing Abbreviations, According to the Guidelines Set by the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Writing abbreviations",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Writing abbreviations"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": false,
+      "sections": [
+        {
+          "html": "<p>Literary officers of the Office of the Royal Society have compiled frequently asked abbreviations and published them as listed on this page and the following pages. For further enquiries, please call 0 2356 0466-70 or email ripub@orst.go.th<br></p>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

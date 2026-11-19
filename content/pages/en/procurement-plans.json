@@ -1,0 +1,169 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=39 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Procurement Plan",
+  "navKey": "news",
+  "description": "Announcement of the annual procurement plans of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Procurement Plan",
+      "lead": "Announcement of the annual procurement plans of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Procurement Plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Office of the Royal Society announcement: Publication of the procurement plan for fiscal year 2027 (No. 2)",
+          "publishedAt": "2026-10-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002078.PDF"
+        },
+        {
+          "title": "Office of the Royal Society announcement: Publication of the procurement plan for fiscal year 2027 (No. 1)",
+          "publishedAt": "2026-09-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002079.PDF"
+        },
+        {
+          "title": "Office of the Royal Society announcement: Publication of the procurement plan for fiscal year 2026 (No. 8)",
+          "publishedAt": "2026-06-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002029.PDF"
+        },
+        {
+          "title": "Amendment to the procurement plan for fiscal year 2026 (No. 2)",
+          "publishedAt": "2026-03-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001995.PDF"
+        },
+        {
+          "title": "Publication of the procurement plan for fiscal year 2026 (No. 6)",
+          "publishedAt": "2026-02-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001984.PDF"
+        },
+        {
+          "title": "Amendment to the procurement plan for fiscal year 2026 (No. 1)",
+          "publishedAt": "2026-02-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001967.PDF"
+        },
+        {
+          "title": "Office of the Royal Society announcement: Publication of the procurement plan for fiscal year 2026 (No. 1)",
+          "publishedAt": "2025-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001939.PDF"
+        },
+        {
+          "title": "Office of the Royal Society announcement: Cancellation of the procurement plan for fiscal year 2025",
+          "publishedAt": "2025-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001876.PDF"
+        },
+        {
+          "title": "Office of the Royal Society announcement: Publication of the procurement plan for fiscal year 2025 (No. 2)",
+          "publishedAt": "2025-01-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001812.PDF"
+        },
+        {
+          "title": "Announcement on the publication of procurement for fiscal year 2024 (No. 3)",
+          "publishedAt": "2024-03-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001709.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2024 (No. 2)",
+          "publishedAt": "2023-12-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001689.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2024 (No. 1)",
+          "publishedAt": "2023-09-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001688.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2023 (No. 4)",
+          "publishedAt": "2023-05-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001636.PDF"
+        },
+        {
+          "title": "Publication of the procurement plan (book printing) for fiscal year 2023 (No. 4)",
+          "publishedAt": "2022-12-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001600.PDF"
+        },
+        {
+          "title": "Publication of the procurement plan for fiscal year 2023 (No. 3)",
+          "publishedAt": "2022-11-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001428.PDF"
+        },
+        {
+          "title": "Publication of the procurement plan for fiscal year 2023 (No. 2)",
+          "publishedAt": "2022-10-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001427.PDF"
+        },
+        {
+          "title": "Publication of the procurement plan for fiscal year 2023 (No. 1)",
+          "publishedAt": "2022-10-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001426.PDF"
+        },
+        {
+          "title": "Procurement plan for fiscal year 2022 (Hiring Plan 1)",
+          "publishedAt": "2021-12-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001294.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2022",
+          "publishedAt": "2021-09-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001266.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2021 (Issue 7)",
+          "publishedAt": "2021-09-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001251.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2021 (Issue 6)",
+          "publishedAt": "2021-07-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001230.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2021 (Issue 5)",
+          "publishedAt": "2021-06-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001215.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2021 (Issue 4)",
+          "publishedAt": "2021-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001187.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2021 (Issue 3)",
+          "publishedAt": "2021-04-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001169.PDF"
+        },
+        {
+          "title": "Announcement of amendments to the procurement plan for fiscal year 2021",
+          "publishedAt": "2021-01-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001134.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2021 (Issue 2)",
+          "publishedAt": "2020-11-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001113.PDF"
+        },
+        {
+          "title": "Announcement on the publication of the procurement plan for fiscal year 2021",
+          "publishedAt": "2020-09-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001112.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}
