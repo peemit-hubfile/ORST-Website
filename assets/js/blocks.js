@@ -1458,6 +1458,86 @@ function documentList(b) {
         </div>`, 'doc-section');
 }
 
+/* ---------- Block: staff-directory  (สมุดรายชื่อเจ้าหน้าที่) ---------- */
+/* การ์ดเจ้าหน้าที่ + ค้นหาชื่อ/ตำแหน่ง/หน่วยงาน + กรองตามหน่วยงาน + สลับมุมมองการ์ด/รายการ
+   ใช้ตัวกรองและตัวแบ่งหน้าชุดเดียวกับ document-list (components.js initDocLists)
+   { type, heading?, lead?, pageSize?, units?: [string] (ลำดับปุ่มกรอง ไม่ใส่ = ตามลำดับที่พบ),
+     items: [{ name, position?, unit?, ext? (เบอร์ภายใน), phone? (เบอร์ตรง), email?, image?, alt? }] }  */
+const NAME_PREFIX = /^(นาย|นางสาว|นาง|น\.ส\.|ดร\.|ผศ\.|รศ\.|ศ\.|Mr\.?|Mrs\.?|Ms\.?|Miss|Dr\.?)\s*/i;
+function staffInitials(name) {
+  const words = String(name || '').replace(NAME_PREFIX, '').trim().split(/\s+/);
+  // อักษรตัวแรกของชื่อและนามสกุล — ข้ามสระหน้า (เ แ โ ใ ไ) ให้ได้พยัญชนะ
+  return words.slice(0, 2).map(w => (w.match(/[ก-ฮA-Za-z]/) || [''])[0]).join('').toUpperCase();
+}
+function staffAvatar(it) {
+  if (it.image) return `<span class="staff-avatar"><img src="${esc(it.image)}" alt="${esc(it.alt || '')}" loading="lazy"></span>`;
+  const placeholder = /^\s*\[/.test(it.name || '');
+  const ini = placeholder ? '' : staffInitials(it.name);
+  // สีพื้นวงกลมวนตามชื่อ (4 โทนจากตัวแปรสี) — คนเดิมได้สีเดิมทุกครั้ง
+  const tone = [...String(it.name || '')].reduce((n, ch) => n + ch.charCodeAt(0), 0) % 4;
+  return `<span class="staff-avatar is-t${tone}" aria-hidden="true">${ini ? `<b>${esc(ini)}</b>` : icon('i-user', 'icon-lg')}</span>`;
+}
+
+function staffDirectory(b) {
+  const items = b.items || [];
+  if (!items.length) {
+    return section(b, `<div class="block-notice is-info" role="note">
+          <span class="block-notice-icon">${icon('i-people', 'icon-lg')}</span>
+          <div><p>${esc(b.emptyText || 'ยังไม่มีรายชื่อเจ้าหน้าที่')}</p></div>
+        </div>`);
+  }
+  const found = [...new Set(items.map(it => it.unit).filter(Boolean))];
+  const units = [...(b.units || []).filter(u => found.includes(u)), ...found.filter(u => !(b.units || []).includes(u))];
+  const countOf = u => items.filter(it => it.unit === u).length;
+  const uid = esc(b.id || 'staff');
+
+  const cards = items.map(it => {
+    const contact = [
+      it.ext ? `<span class="staff-ext">${icon('i-phone-call')}<span class="staff-ext-label">โทรศัพท์ภายใน</span> <b>${esc(it.ext)}</b></span>` : '',
+      it.phone ? `<a class="staff-link" href="${esc(telHref(it.phone))}">${icon('i-phone')}<span>${esc(it.phone)}</span></a>` : '',
+      it.email ? `<a class="staff-link" href="mailto:${esc(it.email)}">${icon('i-mail')}<span lang="en">${esc(it.email)}</span></a>` : '',
+    ].filter(Boolean).join('');
+    return `
+            <li class="staff-card"${attr('data-cat', it.unit)}>
+              ${staffAvatar(it)}
+              <div class="staff-body">
+                <h3 class="staff-name">${esc(it.name)}</h3>
+                ${it.position ? `<p class="staff-pos">${esc(it.position)}</p>` : ''}
+                ${it.unit ? `<p class="staff-unit">${icon('i-people')}<span>${esc(it.unit)}</span></p>` : ''}
+              </div>
+              ${contact ? `<div class="staff-contact">${contact}</div>` : ''}
+            </li>`;
+  }).join('');
+
+  const toolbar = `
+          <form class="doc-toolbar is-news staff-toolbar" data-doc-toolbar hidden role="search" aria-label="ค้นหาเจ้าหน้าที่">
+            <div class="doc-tools">
+              <label class="doc-search-pill staff-search">
+                ${icon('i-search')}
+                <span class="sr-only">ค้นหาชื่อ ตำแหน่ง หรือหน่วยงาน</span>
+                <input type="search" data-doc-search placeholder="ค้นหาชื่อ ตำแหน่ง หรือหน่วยงาน" autocomplete="off">
+              </label>
+              <div class="doc-view" role="group" aria-label="รูปแบบการแสดงผล">
+                <button type="button" data-doc-view="grid" aria-pressed="true">${icon('i-grid')}<span>การ์ด</span></button>
+                <button type="button" data-doc-view="list" aria-pressed="false">${icon('i-list')}<span>รายการ</span></button>
+              </div>
+            </div>
+            ${units.length > 1 ? `<div class="doc-chips staff-chips" role="group" aria-label="หน่วยงาน">
+              <button type="button" data-doc-chip="" aria-pressed="true">ทั้งหมด <span class="staff-chip-n">${items.length}</span></button>
+              ${units.map(u => `<button type="button" data-doc-chip="${esc(u)}" aria-pressed="false">${esc(u)} <span class="staff-chip-n">${countOf(u)}</span></button>`).join('')}
+            </div>` : ''}
+          </form>`;
+
+  const pageSize = Number(b.pageSize) || 24;
+  return section(b, `<div class="staff-dir" data-doc-list data-doc-item=".staff-card" data-page-size="${pageSize}" data-unit="คน" data-view="grid" data-view-default="grid" data-view-key="staff-view">${toolbar}
+          <p class="doc-count staff-count" data-doc-count aria-live="polite">พบ ${items.length} คน</p>
+          <ul class="staff-items" id="${uid}-items">${cards}
+          </ul>
+          <p class="doc-empty" data-doc-empty hidden>ไม่พบเจ้าหน้าที่ที่ตรงกับคำค้น ลองค้นด้วยคำอื่น หรือเลือก "ทั้งหมด"</p>
+          <nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>
+        </div>`, 'staff-section');
+}
+
 /* ---------- Block: article  (แม่แบบ T2 หน้าเนื้อหา) ---------- */
 /* บทความยาวแบ่งเป็นหัวข้อ พร้อมสารบัญ "หัวข้อในหน้านี้" (ติดด้านข้างบนจอใหญ่)
    { type, heading?, lead?, toc?: boolean (ค่าเริ่มต้น: แสดงเมื่อมี >= 3 หัวข้อ),
@@ -2083,6 +2163,7 @@ export const BLOCKS = {
   'article': article,
   'page-index': pageIndex,
   'person-grid': personGrid,
+  'staff-directory': staffDirectory,
   'person-profile': personProfile,
   'timeline': timeline,
   'pillars': pillars,

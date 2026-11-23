@@ -30,6 +30,17 @@ const basePath = location.pathname.includes('/pages/') ? '../' : './';
 // ที่มา: ลิงก์ "ข้อมูลราชบัณฑิตยสภา" ในเมนูของเว็บไซต์เดิม orst.go.th
 const ROYAL_SOCIETY_URL = 'https://royalsociety.go.th/';
 
+// เมนู "สำหรับเจ้าหน้าที่" บน topbar (แทนลิงก์ "ติดต่อเรา" เดิม ซึ่งยังมีในเมนูหลัก) + ในเมนูมือถือ — ระบบภายในของสำนักงาน เปิดแท็บใหม่
+// ที่มา: คอมเมนต์ลูกค้า (ชื่อระบบและ URL ตามที่ลูกค้าให้มา)
+// [ชื่อระบบ, ลิงก์, คำอธิบายสั้นในเมนู topbar, ไอคอนหน้ารายการ]
+const STAFF_LINKS = [
+  ['e-Office', 'https://orst.eoffice.go.th/portal/home', 'ระบบสำนักงานอิเล็กทรอนิกส์', 'i-file'],
+  ['DPIS', 'https://orst.dpis.go.th', 'ระบบสารสนเทศทรัพยากรบุคคล', 'i-people'],
+  ['ระบบลงเวลา', 'https://time.orst.go.th', 'บันทึกเวลาปฏิบัติงาน', 'i-clock'],
+];
+// ชื่อระบบภาษาอังกฤษ (e-Office, DPIS) ไม่ต้องแปล
+const staffName = label => /^[a-z]/i.test(label) ? `<span data-i18n-skip lang="en">${label}</span>` : label;
+
 // ลิงก์แชท Facebook Messenger ของเพจสำนักงาน — ใช้กับปุ่ม "เริ่มแชทใน Messenger" ในการ์ดแชทมุมขวาล่าง (เปิดแท็บใหม่)
 // รูปแบบ: https://m.me/<ชื่อผู้ใช้ของเพจ>  (ดูได้จาก URL เพจ facebook.com/<ชื่อผู้ใช้ของเพจ>)
 // ที่มา: กล่อง Facebook ของเพจ "ราชบัณฑิตยสภา" (page id 206167399441363) บนเว็บไซต์เดิม orst.go.th
@@ -102,7 +113,8 @@ const I18N = (() => {
     if (!raw || !THAI.test(raw)) return raw;
     const lead = raw.match(/^\s*/)[0];
     const tail = raw.match(/\s*$/)[0];
-    const core = raw.trim();
+    // ตัด word joiner / zero-width space (ตัวช่วยตัดบรรทัดภาษาไทยใน HTML) ออกก่อนเทียบพจนานุกรม
+    const core = raw.trim().replace(/[​⁠]/g, '');
     const norm = core.replace(/\s+/g, ' ');
     let out = dict.strings[core] ?? dict.strings[norm] ?? dict.strings[toArabic(norm)];
     if (out == null) {
@@ -304,28 +316,9 @@ const megaMenuData = {
   about: {
     title: 'เกี่ยวกับเรา',
     image: 'about',
-    description: 'ผู้บริหาร ศูนย์ปฏิบัติการต่อต้านการทุจริต ข้อมูลองค์กร และการบริหารทรัพยากรบุคคลของสำนักงาน',
+    description: 'ข้อมูลองค์กร ผู้บริหาร บุคลากร และศูนย์ปฏิบัติการต่อต้านการทุจริตของสำนักงาน',
+    // ลำดับหมวดตามคอมเมนต์ลูกค้า: ข้อมูลองค์กร → ผู้บริหาร → ผู้บริหารด้าน IT → บุคลากร → ศปท.
     groups: [
-      {
-        heading: 'ผู้บริหาร',
-        links: [
-          ['ผู้บริหารสำนักงานราชบัณฑิตยสภา', `${basePath}executives.html`],
-          ['ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)', `${basePath}cio.html`],
-          ['การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO', `${basePath}cio-it-management.html`],
-        ]
-      },
-      {
-        heading: 'ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)',
-        links: [
-          ['ข้อมูลของ ศปท.', `${basePath}anti-corruption-center.html`],
-          ['ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}corruption-complaints.html`],
-          ['แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}complaint-guidelines.html`],
-          ['ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}complaint-statistics.html`],
-          ['มาตรการป้องกันการรับสินบน (No Gift Policy)', `${basePath}no-gift-policy.html`],
-          ['การประเมินความเสี่ยงและแผนป้องกันการทุจริต', `${basePath}anti-corruption-plan.html`],
-          ['จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส', `${basePath}ethics.html`],
-        ]
-      },
       {
         heading: 'ข้อมูลองค์กร',
         links: [
@@ -339,12 +332,36 @@ const megaMenuData = {
         ]
       },
       {
-        heading: 'บุคลากรและการบริหารทรัพยากรบุคคล',
+        heading: 'ผู้บริหารสำนักงานราชบัณฑิตยสภา',
         links: [
+          ['ผู้บริหารสำนักงานราชบัณฑิตยสภา', `${basePath}executives.html`],
+        ]
+      },
+      {
+        heading: 'ผู้บริหารด้านเทคโนโลยีสารสนเทศ',
+        links: [
+          ['ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)', `${basePath}cio.html`],
+          ['การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO', `${basePath}cio-it-management.html`],
+        ]
+      },
+      {
+        heading: 'บุคลากร',
+        links: [
+          ['รายชื่อเจ้าหน้าที่สำนักงาน', `${basePath}staff-directory.html`],
           ['คณะกรรมการวิชาการ และกรรมการอื่น', `${basePath}committees.html`],
-          ['นโยบายและแผนการบริหารทรัพยากรบุคคล', `${basePath}hr-plan.html`],
           ['หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล', `${basePath}hr-criteria.html`],
-          ['รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี', `${basePath}hr-annual-report.html`],
+        ]
+      },
+      {
+        heading: 'ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)',
+        links: [
+          ['ข้อมูลของ ศปท.', `${basePath}anti-corruption-center.html`],
+          ['ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}corruption-complaints.html`],
+          ['แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}complaint-guidelines.html`],
+          ['ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ', `${basePath}complaint-statistics.html`],
+          ['มาตรการป้องกันการรับสินบน (No Gift Policy)', `${basePath}no-gift-policy.html`],
+          ['การประเมินความเสี่ยงและแผนป้องกันการทุจริต', `${basePath}anti-corruption-plan.html`],
+          ['จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส', `${basePath}ethics.html`],
         ]
       }
     ]
@@ -367,6 +384,7 @@ const megaMenuData = {
           ['การลดใช้พลังงานของสำนักงานราชบัณฑิตยสภา', `${basePath}energy-saving.html`],
           ['กฎบัตรการตรวจสอบภายใน', `${basePath}internal-audit-charter.html`],
           ['แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี', `${basePath}annual-budget-plan.html`],
+          ['นโยบายและแผนการบริหารทรัพยากรบุคคล', `${basePath}hr-plan.html`],
         ]
       },
       {
@@ -383,6 +401,7 @@ const megaMenuData = {
           ['รายงานผลการใช้จ่ายงบประมาณประจำปี', `${basePath}budget-spending-report.html`],
           ['ข้อมูลเชิงสถิติการให้บริการ', `${basePath}service-statistics.html`],
           ['รายงานผลการสำรวจความพึงพอใจการให้บริการ', `${basePath}satisfaction-survey.html`],
+          ['รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี', `${basePath}hr-annual-report.html`],
         ]
       },
       {
@@ -698,6 +717,10 @@ function renderDrawer(active) {
             ${langSwitch('is-drawer')}
             <a class="drawer-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer">ราชบัณฑิตยสภา ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>
           </div>
+          <div class="drawer-staff">
+            <span class="drawer-staff-label">สำหรับเจ้าหน้าที่</span>
+            ${STAFF_LINKS.map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${staffName(label)} ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>`).join('')}
+          </div>
         </div>
       </div>
     </div>`;
@@ -711,10 +734,25 @@ function renderHeader() {
     <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
     <div class="topbar">
       <div class="container topbar-inner">
-        <!-- ปุ่มช่วยการเข้าถึง (ขนาดตัวอักษร/ความคมชัด) อยู่ที่ปุ่มลอย "ช่วยการเข้าถึง" มุมขวาล่าง -->
-        <div class="topbar-group topbar-right">
+        <!-- topbar 2 กลุ่ม: ซ้าย = ลิงก์ออกไปที่อื่น (ราชบัณฑิตยสภา, ระบบสำหรับเจ้าหน้าที่)
+             ขวา = ตั้งค่าการแสดงผล (ขนาดตัวอักษร แล้วภาษาอยู่ขวาสุดตามที่ผู้ใช้คุ้น) — เครื่องมือช่วยการเข้าถึงอื่นอยู่ที่ปุ่มลอยมุมขวาล่าง -->
+        <div class="topbar-group topbar-left">
           <a class="topbar-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer">ราชบัณฑิตยสภา ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>
-          <a href="${basePath}contact.html">ติดต่อเรา</a>
+          <div class="topbar-menu" data-topbar-menu>
+            <button class="topbar-menu-btn" type="button" aria-expanded="false" aria-controls="topbar-staff-menu">${icon('i-user')}สำหรับเจ้าหน้าที่<span class="nav-caret" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 7.5 10 12l4.5-4.5"></path></svg></span></button>
+            <ul class="topbar-menu-list" id="topbar-staff-menu" hidden>
+              ${STAFF_LINKS.map(([label, url, desc, ic]) => `<li><a href="${url}" target="_blank" rel="noopener noreferrer"><span class="topbar-menu-ic" aria-hidden="true">${icon(ic)}</span><span class="topbar-menu-text"><strong>${staffName(label)}</strong><small>${desc}</small></span>${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a></li>`).join('')}
+            </ul>
+          </div>
+        </div>
+        <div class="topbar-group topbar-right">
+          <span class="topbar-font" role="group" aria-label="ขนาดตัวอักษร">
+            <span class="topbar-font-label" aria-hidden="true">ขนาดตัวอักษร</span>
+            <button type="button" data-topbar-font="-1" aria-label="ลดขนาดตัวอักษร"><span aria-hidden="true">ก-</span></button>
+            <button type="button" data-topbar-font="0" aria-label="ขนาดตัวอักษรปกติ"><span aria-hidden="true">ก</span></button>
+            <button type="button" data-topbar-font="1" aria-label="เพิ่มขนาดตัวอักษร"><span aria-hidden="true">ก+</span></button>
+          </span>
+          <span class="topbar-divider" aria-hidden="true"></span>
           ${langSwitch()}
         </div>
       </div>
@@ -1173,6 +1211,37 @@ function initMegaMenu() {
   });
 }
 
+/* เมนู "สำหรับเจ้าหน้าที่" บน topbar — คลิก/Enter เปิด-ปิด, มีเมาส์: ชี้แล้วเปิดเอง
+   ปิดด้วย Esc (คืนโฟกัสที่ปุ่ม), คลิกนอกเมนู, หรือโฟกัสออกจากเมนู */
+function initTopbarMenus() {
+  document.querySelectorAll('[data-topbar-menu]').forEach(wrap => {
+    const btn = wrap.querySelector('.topbar-menu-btn');
+    const list = wrap.querySelector('.topbar-menu-list');
+    let timer;
+    let byHover = false;   // เปิดเพราะชี้อยู่ — คลิกครั้งแรกหลังจากนั้นไม่ปิดเมนูทิ้ง
+    const setOpen = open => {
+      clearTimeout(timer);
+      if (!open) byHover = false;
+      list.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      wrap.classList.toggle('is-open', open);
+    };
+    btn.addEventListener('click', () => {
+      if (byHover) { byHover = false; return; }
+      setOpen(list.hidden);
+    });
+    if (window.matchMedia('(hover: hover)').matches) {
+      wrap.addEventListener('mouseenter', () => { if (list.hidden) byHover = true; setOpen(true); });
+      wrap.addEventListener('mouseleave', () => { timer = setTimeout(() => setOpen(false), 180); });
+    }
+    wrap.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !list.hidden) { setOpen(false); btn.focus(); }
+    });
+    wrap.addEventListener('focusout', e => { if (!wrap.contains(e.relatedTarget)) setOpen(false); });
+    document.addEventListener('click', e => { if (!wrap.contains(e.target)) setOpen(false); });
+  });
+}
+
 function initDrawer() {
   const btn = document.querySelector('[data-drawer-open]');
   const drawer = document.getElementById('site-drawer');
@@ -1236,7 +1305,8 @@ function initDrawer() {
   });
 
   // ขยายจอเป็นเดสก์ท็อป (ตรงกับ breakpoint ใน CSS) -> ปิดแผงอัตโนมัติ
-  const desktopMq = window.matchMedia('(min-width: 1366px)');
+  // อุปกรณ์ที่มีเมาส์ แสดงเมนูหลักเสมอแม้ย่อหน้าต่าง/ซูม (ดู "เมนูหลักบนคอมพิวเตอร์" ใน components.css)
+  const desktopMq = window.matchMedia('(min-width: 1366px), (hover: hover) and (pointer: fine)');
   const closeOnDesktop = () => { if (desktopMq.matches) close(false); };
   desktopMq.addEventListener('change', closeOnDesktop);
   window.addEventListener('resize', closeOnDesktop);
@@ -1443,6 +1513,12 @@ function initA11y() {
     dots.forEach((d, i) => d.classList.toggle('is-on', i <= state.font - A11Y_FONT.min));
     root.querySelector('[data-a11y-font="-1"]').disabled = state.font <= A11Y_FONT.min;
     root.querySelector('[data-a11y-font="1"]').disabled = state.font >= A11Y_FONT.max;
+    // ปุ่ม ก- ก ก+ บน topbar ใช้ค่าเดียวกับแผงช่วยการเข้าถึง
+    document.querySelectorAll('[data-topbar-font]').forEach(b => {
+      const step = Number(b.dataset.topbarFont);
+      b.disabled = step < 0 ? state.font <= A11Y_FONT.min : step > 0 ? state.font >= A11Y_FONT.max : false;
+      if (!step) b.setAttribute('aria-pressed', String(state.font === 0));
+    });
   };
   let resizeTimer;
   window.addEventListener('resize', () => {
@@ -1509,6 +1585,13 @@ function initA11y() {
     syncBadge();
     save();
     if (!reduced()) replay(fontVal, 'is-bump');
+  }));
+  document.querySelectorAll('[data-topbar-font]').forEach(btn => btn.addEventListener('click', () => {
+    const step = Number(btn.dataset.topbarFont);
+    state.font = step ? Math.min(A11Y_FONT.max, Math.max(A11Y_FONT.min, state.font + step)) : 0;
+    applyFont();
+    syncBadge();
+    save();
   }));
   root.querySelector('[data-a11y-reset]').addEventListener('click', e => {
     tiles.forEach((_, k) => setTool(k, false));
@@ -2851,6 +2934,7 @@ function initComponents() {
   }
 
   initMegaMenu();
+  initTopbarMenus();
   initDrawer();
   initSharedModals();
   initSharedSearch();

@@ -96,6 +96,7 @@
             { "$ref": "#/definitions/article" },
             { "$ref": "#/definitions/pageIndex" },
             { "$ref": "#/definitions/personGrid" },
+            { "$ref": "#/definitions/staffDirectory" },
             { "$ref": "#/definitions/personProfile" },
             { "$ref": "#/definitions/timeline" },
             { "$ref": "#/definitions/pillars" },
@@ -514,6 +515,35 @@
         }
       },
       "required": ["type", "groups"]
+    },
+
+    "staffDirectory": {
+      "description": "สมุดรายชื่อเจ้าหน้าที่ — การ์ดวงกลมอักษรย่อ/รูป ชื่อ ตำแหน่ง หน่วยงาน เบอร์ภายใน อีเมล · ค้นหา กรองตามหน่วยงาน และสลับมุมมองการ์ด/รายการได้",
+      "properties": {
+        "type": { "const": "staff-directory" },
+        "pageSize": { "type": "integer", "minimum": 1, "description": "จำนวนคนต่อหน้า (ค่าเริ่มต้น 24)" },
+        "units": { "type": "array", "items": { "type": "string" }, "description": "ลำดับปุ่มกรองหน่วยงาน ไม่ใส่ = ตามลำดับที่พบใน items" },
+        "emptyText": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "position": { "type": "string" },
+              "unit": { "type": "string", "description": "หน่วยงานที่สังกัด (ใช้เป็นตัวกรอง)" },
+              "ext": { "type": "string", "description": "หมายเลขโทรศัพท์ภายใน" },
+              "phone": { "type": "string", "description": "เบอร์ตรง (กดโทรได้)" },
+              "email": { "type": "string" },
+              "image": { "type": "string", "description": "รูปหน้าตรง (ไม่ใส่ = วงกลมอักษรย่อ)" },
+              "alt": { "type": "string" }
+            }
+          }
+        }
+      },
+      "required": ["type", "items"]
     },
 
     "personGrid": {

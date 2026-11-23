@@ -569,6 +569,38 @@
       }
     },
     {
+      "type": "staff-directory",
+      "id": "sg-staff-directory",
+      "heading": "staff-directory — สมุดรายชื่อเจ้าหน้าที่",
+      "lead": "ค้นหาชื่อ ตำแหน่ง หรือหน่วยงาน กรองตามหน่วยงาน และสลับมุมมองการ์ด/รายการ · ไม่มีรูป = วงกลมอักษรย่อ",
+      "variant": "alt",
+      "units": [
+        "กองวิทยาศาสตร์",
+        "กองศิลปกรรม"
+      ],
+      "items": [
+        {
+          "name": "[ชื่อ-นามสกุล]",
+          "position": "[ตำแหน่ง]",
+          "unit": "กองวิทยาศาสตร์",
+          "ext": "[เบอร์ภายใน]",
+          "email": "name@example.com"
+        },
+        {
+          "name": "[ชื่อ-นามสกุล]",
+          "position": "[ตำแหน่ง]",
+          "unit": "กองศิลปกรรม",
+          "ext": "[เบอร์ภายใน]"
+        },
+        {
+          "name": "[ชื่อ-นามสกุล]",
+          "position": "[ตำแหน่ง]",
+          "unit": "กองศิลปกรรม",
+          "ext": "[เบอร์ภายใน]"
+        }
+      ]
+    },
+    {
       "type": "media-grid",
       "id": "b-media-contain",
       "heading": "media-grid (ratio 3:4, fit contain)",

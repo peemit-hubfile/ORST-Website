@@ -1,60 +1,10 @@
 {
-  "_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step6_sitemap.py (อ่านจาก page-index ของหน้าหมวด) — อย่าแก้ด้วยมือ",
+  "_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step6_sitemap.py (อ่านจาก page-index ของหน้าหมวด) — อย่าแก้ด้วยมือ · หมวดเกี่ยวกับเรา จัดลำดับใหม่ด้วยมือตามคอมเมนต์ลูกค้า (22 พ.ย. 2569) ให้ตรงกับ megaMenuData ใน components.js",
   "sections": [
     {
       "key": "about",
       "title": "About Us",
       "groups": [
-        {
-          "heading": "Executives",
-          "items": [
-            {
-              "title": "Office Executives",
-              "href": "executives.html"
-            },
-            {
-              "title": "Chief Information Officer (CIO)",
-              "href": "cio.html"
-            },
-            {
-              "title": "IT Management",
-              "href": "cio-it-management.html"
-            }
-          ]
-        },
-        {
-          "heading": "Anti-Corruption Center",
-          "items": [
-            {
-              "title": "About the Center",
-              "href": "anti-corruption-center.html"
-            },
-            {
-              "title": "Report Corruption & Misconduct",
-              "href": "corruption-complaints.html"
-            },
-            {
-              "title": "Complaint Handling Guidelines",
-              "href": "complaint-guidelines.html"
-            },
-            {
-              "title": "Complaint Statistics",
-              "href": "complaint-statistics.html"
-            },
-            {
-              "title": "No Gift Policy",
-              "href": "no-gift-policy.html"
-            },
-            {
-              "title": "Anti-Corruption Plan",
-              "href": "anti-corruption-plan.html"
-            },
-            {
-              "title": "Integrity & Transparency",
-              "href": "ethics.html"
-            }
-          ]
-        },
         {
           "heading": "Organization",
           "items": [
@@ -89,23 +39,74 @@
           ]
         },
         {
-          "heading": "Personnel & HR Management",
+          "heading": "Office Executives",
           "items": [
+            {
+              "title": "Office Executives",
+              "href": "executives.html"
+            }
+          ]
+        },
+        {
+          "heading": "IT Executives",
+          "items": [
+            {
+              "title": "Chief Information Officer (CIO)",
+              "href": "cio.html"
+            },
+            {
+              "title": "IT Management",
+              "href": "cio-it-management.html"
+            }
+          ]
+        },
+        {
+          "heading": "Personnel",
+          "items": [
+            {
+              "title": "Staff Directory",
+              "href": "staff-directory.html"
+            },
             {
               "title": "Committees",
               "href": "committees.html"
             },
             {
-              "title": "HR Plan",
-              "href": "hr-plan.html"
-            },
-            {
               "title": "HR Criteria",
               "href": "hr-criteria.html"
+            }
+          ]
+        },
+        {
+          "heading": "Anti-Corruption Center",
+          "items": [
+            {
+              "title": "About the Center",
+              "href": "anti-corruption-center.html"
             },
             {
-              "title": "HR Annual Report",
-              "href": "hr-annual-report.html"
+              "title": "Report Corruption & Misconduct",
+              "href": "corruption-complaints.html"
+            },
+            {
+              "title": "Complaint Handling Guidelines",
+              "href": "complaint-guidelines.html"
+            },
+            {
+              "title": "Complaint Statistics",
+              "href": "complaint-statistics.html"
+            },
+            {
+              "title": "No Gift Policy",
+              "href": "no-gift-policy.html"
+            },
+            {
+              "title": "Anti-Corruption Plan",
+              "href": "anti-corruption-plan.html"
+            },
+            {
+              "title": "Integrity & Transparency",
+              "href": "ethics.html"
             }
           ]
         }
@@ -157,6 +158,10 @@
             {
               "title": "Annual Plan & Budget",
               "href": "annual-budget-plan.html"
+            },
+            {
+              "title": "HR Plan",
+              "href": "hr-plan.html"
             }
           ]
         },
@@ -202,6 +207,10 @@
             {
               "title": "Satisfaction Survey Results",
               "href": "satisfaction-survey.html"
+            },
+            {
+              "title": "HR Annual Report",
+              "href": "hr-annual-report.html"
             }
           ]
         },
