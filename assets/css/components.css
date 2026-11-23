@@ -4121,3 +4121,16 @@ body.high-contrast .megax-row:focus-visible { background: var(--gold-soft); colo
 .topbar a.topbar-ext:hover,
 .topbar a.topbar-ext:focus-visible { color: var(--gold-2); background: rgba(255, 255, 255, .12); }
 .topbar a.topbar-ext:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* ปุ่มสลับภาษาบน topbar — เล็กลงให้สูงเท่าปุ่ม ก- ก ก+ (26px)
+   (Geist ตัวใหญ่กว่า TH Sarabun ที่ขนาดเดียวกัน จึงย่อแบบเดียวกับชื่อ e-Office/DPIS ในเมนูเจ้าหน้าที่) */
+.topbar .lang-switch { gap: 6px; }
+.topbar .lang-switch > .icon { width: .95em; height: .95em; }
+.topbar .lang-switch .lang-switch-track { padding: 2px; }
+.topbar .lang-switch a {
+  min-width: 30px;
+  min-height: 20px;
+  padding: 0 8px;
+  font-size: calc(var(--text-xs) * .78);
+  font-weight: 600;
+}
