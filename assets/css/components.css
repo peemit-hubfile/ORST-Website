@@ -4134,3 +4134,12 @@ body.high-contrast .megax-row:focus-visible { background: var(--gold-soft); colo
   font-size: calc(var(--text-xs) * .78);
   font-weight: 600;
 }
+
+/* เมนู "สำหรับเจ้าหน้าที่" — กะทัดรัดขึ้น (ผู้ใช้: ใหญ่ไป)
+   ไอคอน 38→32px, แถวเตี้ยลง, คำอธิบายบรรทัดเดียวเสมอ (แผงกว้างตามข้อความ ไม่ตัด "บุคคล" ลงบรรทัดใหม่เมื่อขยายตัวอักษร) */
+.topbar-menu-list { min-width: 0; width: max-content; max-width: calc(100vw - 32px); padding: 6px; }
+.topbar .topbar-menu-list a { gap: var(--space-3); padding: 6px var(--space-3) 6px 6px; min-height: 0; }
+.topbar .topbar-menu-ic { width: 32px; height: 32px; border-radius: var(--radius-sm); }
+.topbar .topbar-menu-list .topbar-menu-ic .icon { width: 16px; height: 16px; }
+.topbar .topbar-menu-list small { white-space: nowrap; margin-top: 0; }
+.topbar .topbar-menu-list a > .icon { margin-left: var(--space-2); }
