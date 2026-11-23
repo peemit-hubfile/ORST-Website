@@ -2980,10 +2980,11 @@ html.i18n-pending body { visibility: hidden; }   /* ระหว่างโห�
 .lang-notice a { color: var(--deep); font-weight: 700; }
 
 /* FOOTER ตามผังเว็บไซต์ ORST: หัวข้อติดต่อ · วันที่ปรับปรุง · จำนวนผู้เข้าชม */
+/* ขนาดเท่าหัวคอลัมน์ (.orst-footer-head span) — คอมเมนต์ลูกค้า: หัวข้อติดต่อเล็กเกินไป */
 .orst-footer .orst-footer-subhead {
   margin: 22px 0 10px;
   color: #fff;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 700;
   line-height: var(--leading-tight);
 }
@@ -3777,3 +3778,346 @@ body.high-contrast .skel, body.high-contrast .img-skel { background: var(--line)
 @media (prefers-reduced-motion: reduce) { .ss-sheet { animation: none; } }
 body.high-contrast .ss-bar { border-color: var(--ink); }
 
+/* =============================================================================
+   เมนูหลัก — ชี้/เปิดเมนูใหญ่ให้เด่นขึ้น (คอมเมนต์ลูกค้า: แค่ตัวอักษรเปลี่ยนสียังไม่ชัด อยากให้มีแรเงา)
+   รอบ 2 (ผู้ใช้: แคปซูลทองมีขอบดูไม่ทันสมัย): พื้นเขียวจาง ๆ มุมโค้งพอดี ไม่มีเส้นขอบ
+   - ชี้ = พื้นจาง 6% · เปิดเมนูใหญ่ = พื้น 10% + ลูกศรหมุนขึ้น + แถบทองขอบล่าง header เต็ม
+   - เว้นระยะระหว่างเมนู 2px ไม่ให้พื้นแรเงาชนเมนูข้าง ๆ
+   หน้าปัจจุบัน (active) ยังเป็นตัวหนา + แถบทอง เมื่อชี้ก็ได้พื้นแรเงาแบบเดียวกัน
+   ============================================================================= */
+/* พื้นแรเงาวาดด้วย ::before สูงพอดีตัวอักษร (ไม่เต็มความสูงปุ่ม ~60px ซึ่งดูเป็นก้อนใหญ่) — ::after เป็นแถบทองขอบล่าง */
+.main-nav a {
+  margin-inline: 2px;
+  isolation: isolate;
+  transition: color var(--duration) var(--ease);
+}
+.main-nav a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 50% 2px auto;
+  height: 1.85em;
+  border-radius: var(--radius-md);
+  background: var(--deep);
+  opacity: 0;
+  transform: translateY(-50%) scale(.94);
+  transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+.main-nav a:hover,
+.main-nav a.is-open,
+.main-nav a[aria-expanded="true"],
+.main-nav a.active:hover,
+.main-nav a.active.is-open {
+  background: transparent;
+  box-shadow: none;
+  color: var(--deep);
+}
+.main-nav a:hover::before { opacity: .06; transform: translateY(-50%) scale(1); }
+.main-nav a.is-open::before,
+.main-nav a[aria-expanded="true"]::before { opacity: .09; transform: translateY(-50%) scale(1); }
+@media (prefers-reduced-motion: reduce) { .main-nav a::before { transition: none; } }
+body.no-motion .main-nav a::before { transition: none; }
+.main-nav a:not(.active):hover::after,
+.main-nav a:not(.active):focus-visible::after { transform: scaleX(1); opacity: .55; }
+.main-nav a:hover .nav-caret,
+.main-nav a[aria-expanded="true"] .nav-caret { color: var(--deep); }
+body.high-contrast .main-nav a:hover,
+body.high-contrast .main-nav a.is-open,
+body.high-contrast .main-nav a[aria-expanded="true"] { background: transparent; box-shadow: none; color: var(--ink); }
+body.high-contrast .main-nav a:hover::before,
+body.high-contrast .main-nav a.is-open::before,
+body.high-contrast .main-nav a[aria-expanded="true"]::before { opacity: 1; background: var(--gold-soft); box-shadow: inset 0 0 0 1px var(--gold); }
+body.high-contrast .main-nav a:hover .nav-caret { color: var(--gold); }
+
+/* =============================================================================
+   เมนูหลักบนคอมพิวเตอร์ (มีเมาส์) — ไม่ย่อเป็นปุ่มเมนูมือถือ ไม่ว่าจะย่อหน้าต่างหรือซูมเบราว์เซอร์
+   (คอมเมนต์ลูกค้า: ย่อเป็นปุ่มได้เฉพาะแท็บเล็ต/มือถือ)
+   - แท็บเล็ต/มือถือ = จอสัมผัส (hover: none / pointer: coarse) ยังใช้ breakpoint 1366px เดิม
+   - คอมพิวเตอร์ที่แคบกว่า 1366px (ซูม 125–400% หรือย่อหน้าต่าง): เมนูลงไปเป็นแถวที่สองใต้โลโก้
+     เต็มความกว้าง ตัดขึ้นบรรทัดใหม่ได้ถ้ายังไม่พอ
+   ต้องประกาศ display ทับ pages/*.css และ base.css ที่ซ่อน .main-nav ตามความกว้างจอไว้ด้วย
+   JS: initDrawer() ใช้เงื่อนไขเดียวกันปิดแผงเมนูมือถือ
+   ============================================================================= */
+/* ทุกความกว้าง < 1366px บนเครื่องที่มีเมาส์: เมนูหลักแสดงเสมอ ไม่ใช้ปุ่มเมนูมือถือ */
+@media (max-width: 1365.98px) and (hover: hover) and (pointer: fine) {
+  .main-nav { display: flex; min-width: 0; }
+  .mobile-menu-btn { display: none; }
+  .mega-menu { display: block !important; }
+  .mega-menu[hidden] { display: none !important; }
+  /* เมนูใหญ่สูงเกินจอเมื่อซูมมาก — เลื่อนในแผงได้ (--fixed-header-height ตั้งจาก initFixedHeader) */
+  .megax { max-height: calc(100vh - var(--fixed-header-height, 160px) - 16px); overflow-y: auto; }
+  .topbar { display: block; }
+  /* base.css / pages/*.css ซ่อน .topbar-right ที่ ≤760px (สมัยที่จอแคบ = มือถือ) — คอมพิวเตอร์ที่ซูมยังต้องเห็น */
+  .topbar .topbar-group.topbar-right { display: flex; justify-content: flex-end; }
+}
+/* 900–1365px: แถวเดียวแบบเดสก์ท็อป (โลโก้ | เมนู | ค้นหา) — วัดจริง: เมนู 6 หมวด ≈ 690px */
+@media (min-width: 900px) and (max-width: 1365.98px) and (hover: hover) and (pointer: fine) {
+  .main-nav { flex: 1; justify-content: center; gap: 0; }
+  .main-nav a, .main-nav button { padding-inline: 8px; }
+}
+/* 900–1179px: ที่ไม่พอสำหรับชื่อหน่วยงาน — เหลือตราสัญลักษณ์ (ลิงก์มี aria-label ชื่อเต็มอยู่แล้ว) */
+@media (min-width: 900px) and (max-width: 1179.98px) and (hover: hover) and (pointer: fine) {
+  .brand .brand-text { display: none; }
+  .brand.brand-image { min-width: 0; }
+}
+/* < 900px (ซูมมาก): สองแถว — แถวบนโลโก้ + ค้นหา, แถวล่างเมนูชิดซ้ายตรงขอบโลโก้ */
+@media (max-width: 899.98px) and (hover: hover) and (pointer: fine) {
+  .header-inner { flex-wrap: wrap; row-gap: 0; min-height: 0; padding-top: var(--space-2); }
+  .header-actions { margin-left: auto; }
+  .main-nav {
+    order: 3;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+    margin-top: var(--space-2);
+    margin-inline: -10px;        /* ตัวอักษรเมนูแรกตรงขอบโลโก้ (ชดเชย padding ของปุ่ม) */
+    border-top: 1px solid var(--line);
+  }
+  .main-nav a, .main-nav button { padding: 10px; min-height: 44px; }
+  /* แถบทอง (หน้าปัจจุบัน/เปิดเมนู) ทับเส้นขอบล่างของ header เหมือนจอใหญ่ — ไม่ซ้อนอยู่ในแคปซูล */
+  .main-nav a.active::after,
+  .main-nav a:not(.active)::after { bottom: -1px; left: 10px; right: 10px; }
+  .megax-in { grid-template-columns: minmax(0, 1fr); }
+  .megax-side { border-right: 0; border-bottom: 1px solid var(--line); }
+  .megax-desc, .megax-mark { display: none; }
+}
+/* base.css ซ่อนปุ่มแรกของ topbar ที่ ≤760px (กฎเก่า) ซึ่งตอนนี้คือปุ่ม "สำหรับเจ้าหน้าที่" */
+.topbar .topbar-group button.topbar-menu-btn { display: inline-flex; }
+
+/* =============================================================================
+   topbar: เมนู "สำหรับเจ้าหน้าที่" (แทนลิงก์ติดต่อเรา) + ปุ่มขนาดตัวอักษร ก- ก ก+ ต่อจาก TH/EN
+   ปุ่มขนาดตัวอักษรใช้ค่าเดียวกับแผง "ช่วยการเข้าถึง" (initA11y ใน components.js)
+   ============================================================================= */
+.topbar { position: relative; z-index: 101; }   /* ให้เมนูย่อยทับ header (sticky z-index 100) */
+.topbar-menu { position: relative; display: inline-flex; }
+.topbar .topbar-menu-btn { cursor: pointer; padding: 4px 2px; gap: 4px; }
+.topbar .topbar-menu-btn .nav-caret { width: 14px; height: 14px; color: inherit; opacity: .85; transform: none; transition: transform var(--duration) var(--ease); }
+.topbar .topbar-menu-btn .nav-caret svg { width: 12px; height: 12px; }
+.topbar-menu.is-open .topbar-menu-btn .nav-caret { transform: rotate(180deg); }
+/* พื้น topbar เขียวเข้ม — ทอง (--gold) ตัดกับพื้นไม่พอ จึงใช้ขีดเส้นใต้แทนการเปลี่ยนสี */
+.topbar .topbar-menu-btn:hover,
+.topbar-menu.is-open .topbar-menu-btn { text-decoration: underline; text-underline-offset: 4px; }
+.topbar .topbar-menu-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: var(--radius-sm); }
+.topbar-menu-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;              /* กลุ่มลิงก์อยู่ซ้ายของ topbar — แผงเปิดชิดซ้ายใต้ปุ่ม */
+  min-width: 280px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* เรียบแบบทางการ ชุดเดียวกับเมนูใหญ่ (.mega-a): มุมเหลี่ยม เส้นทองด้านบน เงาสั้น ไม่มีกรอบมน/แคปซูล */
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 8px 16px -10px color-mix(in srgb, var(--ink) 35%, transparent);
+}
+.topbar-menu-list li + li { border-top: 1px solid var(--line); }
+.topbar-menu-list[hidden] { display: none; }
+/* สะพานล่องหนระหว่างปุ่มกับแผง — เลื่อนเมาส์ลงมาแล้วเมนูไม่ปิด */
+.topbar-menu-list::before { content: ""; position: absolute; left: 0; right: 0; top: -9px; height: 8px; }
+.topbar .topbar-menu-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  min-height: 44px;
+  border-radius: 0;
+  color: var(--ink);
+  font-size: var(--text-sm);
+}
+.topbar .topbar-menu-list a .icon { width: .9em; height: .9em; color: var(--muted); flex: none; }
+/* hover: เส้นทองบางด้านซ้าย + พื้นจาง (แบบรายการในเมนูใหญ่) */
+.topbar .topbar-menu-list a:hover,
+.topbar .topbar-menu-list a:focus-visible { background: var(--surface-soft); color: var(--deep); box-shadow: inset 3px 0 0 var(--gold); outline: none; }
+.topbar .topbar-menu-list a:hover .icon { color: var(--deep); }
+.topbar .topbar-menu-list a:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+body.high-contrast .topbar .topbar-menu-list a:hover,
+body.high-contrast .topbar .topbar-menu-list a:focus-visible { background: var(--gold-soft); color: var(--ink); }
+
+.topbar .topbar-font { gap: 2px; }
+.topbar .topbar-font-label { margin-right: 4px; opacity: .85; }
+.topbar .topbar-font button {
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  min-height: 26px;
+  padding: 0 6px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color .15s, color .15s;
+}
+.topbar .topbar-font button:nth-of-type(1) { font-size: var(--text-xs); }
+.topbar .topbar-font button:nth-of-type(2) { font-size: var(--text-sm); }
+.topbar .topbar-font button:nth-of-type(3) { font-size: var(--text-base); }
+.topbar .topbar-font button:hover:not(:disabled) { background: rgba(255,255,255,.12); }
+.topbar .topbar-font button[aria-pressed="true"] { background: var(--white, #fff); color: var(--deep); border-color: transparent; }
+.topbar .topbar-font button:disabled { opacity: .4; cursor: not-allowed; }
+.topbar .topbar-font button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+body.high-contrast .topbar .topbar-font button[aria-pressed="true"] { background: var(--gold); color: #000; }
+
+/* เมนูมือถือ: ลิงก์ระบบสำหรับเจ้าหน้าที่ ใต้ลิงก์ภาษา/ราชบัณฑิตยสภา */
+.drawer-staff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 14px;
+  font-size: var(--text-sm);
+}
+.drawer-staff-label { flex-basis: 100%; text-align: center; color: var(--muted); font-size: var(--text-xs); }
+.drawer-staff a { display: inline-flex; align-items: center; gap: 4px; color: var(--deep-2); text-decoration: none; }
+.drawer-staff a .icon { width: .9em; height: .9em; }
+.drawer-staff a:hover,
+.drawer-staff a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+body.high-contrast .drawer-staff a { color: var(--ink); }
+
+
+/* topbar 2 กลุ่ม (คอมเมนต์ลูกค้า: เรียงให้ UX ดีขึ้น)
+   ซ้าย = ลิงก์ออกไปที่อื่น · ขวา = ตั้งค่าการแสดงผล (ขนาดตัวอักษร | ภาษา) คั่นด้วยเส้นบาง */
+.topbar .topbar-inner { justify-content: space-between; flex-wrap: wrap; column-gap: var(--space-6); }
+/* pages/home.css ตั้ง overflow-x: auto ที่ ≤900px (สมัยที่จอแคบ = มือถือ) — ตัดเมนูย่อยทิ้งเมื่อซูมบนคอมพิวเตอร์ */
+.topbar .topbar-inner { overflow: visible; white-space: normal; }
+.topbar .topbar-group { gap: var(--space-4); }
+.topbar-divider { display: block; width: 1px; height: 18px; background: rgba(255,255,255,.28); }
+.topbar .topbar-menu-btn > .icon { width: 1em; height: 1em; opacity: .85; }
+/* รายการระบบ: ชื่อ (หนา) + คำอธิบายสั้น 1 บรรทัด */
+.topbar .topbar-menu-list .topbar-menu-text { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+.topbar .topbar-menu-list strong { font-size: var(--text-sm); font-weight: 700; line-height: var(--leading-tight); color: var(--ink); }
+/* Geist ตัวใหญ่และหนากว่า TH Sarabun ที่ขนาดเดียวกัน — ย่อให้ชื่อทั้งสามระบบดูเท่ากัน */
+.topbar .topbar-menu-list strong [lang="en"] { font-family: var(--font-latin); font-size: calc(var(--text-xs) * .85); font-weight: 600; letter-spacing: .01em; }
+.topbar .topbar-menu-list small { font-size: var(--text-xs); line-height: var(--leading-tight); color: var(--muted); }
+.topbar .topbar-menu-list a { padding-block: var(--space-3); }
+.topbar .topbar-menu-list a:hover strong,
+.topbar .topbar-menu-list a:focus-visible strong { color: var(--deep); }
+body.high-contrast .topbar-divider { background: var(--ink); }
+body.high-contrast .topbar .topbar-menu-list a:hover strong { color: var(--ink); }
+
+/* =============================================================================
+   เมนู "สำหรับเจ้าหน้าที่" — รอบ 2 (ผู้ใช้: แผงมุมเหลี่ยม + เส้นทองบน + เส้นคั่นทุกแถว ดูแปลก)
+   ปุ่ม: ไม่ขีดเส้นใต้ — ชี้/เปิด = พื้นขาวโปร่งทรงแคปซูล
+   แผง: การ์ดขาวมุมโค้ง เงานุ่ม มีช่องว่างรอบใน ไม่มีเส้นคั่น
+   รายการ: ไอคอนในกล่องสีเขียวจาง | ชื่อ + คำอธิบาย | ลูกศร ↗ (จางจนกว่าจะชี้)
+   ============================================================================= */
+.topbar .topbar-menu-btn {
+  padding: 4px 10px;
+  margin-left: -10px;
+  border-radius: var(--radius-pill);
+  transition: background-color var(--duration) var(--ease);
+}
+.topbar .topbar-menu-btn:hover,
+.topbar-menu.is-open .topbar-menu-btn { text-decoration: none; background: rgba(255, 255, 255, .12); }
+.topbar-menu-list {
+  top: calc(100% + 8px);
+  left: -10px;
+  min-width: 300px;
+  padding: var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 40px -12px color-mix(in srgb, var(--ink) 28%, transparent), 0 2px 6px color-mix(in srgb, var(--ink) 6%, transparent);
+  transform-origin: top left;
+  animation: topbar-menu-in .18s var(--ease);
+}
+@keyframes topbar-menu-in { from { opacity: 0; transform: translateY(-4px) scale(.98); } }
+.topbar-menu-list li + li { border-top: 0; }
+.topbar .topbar-menu-list a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+}
+.topbar .topbar-menu-ic {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--deep) 8%, var(--surface));
+  color: var(--deep);
+  transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+.topbar .topbar-menu-list .topbar-menu-ic .icon { width: 18px; height: 18px; color: inherit; }
+.topbar .topbar-menu-list a > .icon {
+  width: 14px;
+  height: 14px;
+  color: var(--muted);
+  opacity: .45;
+  transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+.topbar .topbar-menu-list a:hover,
+.topbar .topbar-menu-list a:focus-visible { background: color-mix(in srgb, var(--deep) 5%, var(--surface)); box-shadow: none; }
+/* ชี้: กล่องไอคอนเป็นเขียวเข้ม ไอคอนขาว — ต้องระบุสีไอคอนตรง ๆ เพราะกฎเดิม a:hover .icon { color: var(--deep) } เจาะจงกว่า
+   (ไม่งั้นไอคอนกลืนกับพื้นกล่องจนหายไป) */
+.topbar .topbar-menu-list a:hover .topbar-menu-ic,
+.topbar .topbar-menu-list a:focus-visible .topbar-menu-ic { background: var(--deep); color: var(--surface); }
+.topbar .topbar-menu-list a:hover .topbar-menu-ic .icon,
+.topbar .topbar-menu-list a:focus-visible .topbar-menu-ic .icon { color: var(--surface); }
+.topbar .topbar-menu-list a:hover > .icon,
+.topbar .topbar-menu-list a:focus-visible > .icon { opacity: 1; color: var(--gold); transform: translate(2px, -2px); }
+.topbar .topbar-menu-list small { margin-top: 1px; }
+@media (prefers-reduced-motion: reduce) { .topbar-menu-list { animation: none; } }
+body.no-motion .topbar-menu-list { animation: none; }
+body.high-contrast .topbar-menu-list { border-color: var(--ink); box-shadow: none; }
+body.high-contrast .topbar .topbar-menu-ic { background: var(--surface); border: 1px solid var(--ink); color: var(--ink); }
+body.high-contrast .topbar .topbar-menu-list a:hover .topbar-menu-ic,
+body.high-contrast .topbar .topbar-menu-list a:hover .topbar-menu-ic .icon { background: var(--gold); color: #000; }
+
+/* =============================================================================
+   เมนูใหญ่ — ชี้แล้วเห็นชัดขึ้น (ผู้ใช้: อยากให้ตัวหนังสือหนาและเห็นได้ชัดกว่านี้)
+   รายการลิงก์ (.megax-row) และหัวข้อด้านซ้าย (.megax-tab):
+   ตัวหนา + สีเขียวเข้ม + พื้นเข้มขึ้นเล็กน้อย + แถบทองด้านซ้าย (แบบเดียวกับหัวข้อที่เลือก)
+   ============================================================================= */
+.megax-row { position: relative; }
+.megax-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--gold);
+  opacity: 0;
+  transform: scaleY(.4);
+  transition: opacity .15s, transform .15s;
+}
+/* ตัวหนาด้วยเส้นขอบตัวอักษร (ไม่ใช่ font-weight) — ความกว้างข้อความเท่าเดิม จึงไม่ตัดบรรทัดใหม่/แถวไม่กระโดด
+   (วัดจริง: font-weight 700 ทำให้ "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO" ขึ้น 2 บรรทัด แถวสูง 51 → 73px) */
+.megax-row:hover,
+.megax-row:focus-visible {
+  background: color-mix(in srgb, var(--deep) 9%, var(--surface));
+  color: var(--deep);
+  -webkit-text-stroke: .045em currentColor;
+}
+.megax-row:hover::before,
+.megax-row:focus-visible::before,
+.megax-row.is-current::before { opacity: 1; transform: none; }
+.megax-row:hover .megax-go,
+.megax-row:focus-visible .megax-go { color: var(--deep); }
+.megax-tab:not([aria-selected="true"]):hover {
+  background: color-mix(in srgb, var(--deep) 9%, var(--surface-soft));
+  color: var(--deep);
+  font-weight: 700;
+}
+@media (prefers-reduced-motion: reduce) { .megax-row::before { transition: none; } }
+body.high-contrast .megax-row:hover,
+body.high-contrast .megax-row:focus-visible { background: var(--gold-soft); color: var(--ink); }
+
+/* ลิงก์ "ราชบัณฑิตยสภา" บน topbar — ชี้แล้วเป็นแคปซูลพื้นขาวโปร่ง ชุดเดียวกับปุ่ม "สำหรับเจ้าหน้าที่"
+   (เดิม base.css ใส่พื้นให้ลิงก์ที่ไม่มี padding → ได้วงรีบีบชิดตัวอักษร) · ตัวอักษรยังเปลี่ยนเป็นทองตอนชี้ (ผู้ใช้ชอบ) */
+.topbar a.topbar-ext {
+  padding: 4px 10px;
+  margin-left: -10px;
+  border-radius: var(--radius-pill);
+  transition: background-color var(--duration) var(--ease);
+}
+.topbar a.topbar-ext:hover,
+.topbar a.topbar-ext:focus-visible { color: var(--gold-2); background: rgba(255, 255, 255, .12); }
+.topbar a.topbar-ext:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }

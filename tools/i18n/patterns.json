@@ -68,6 +68,10 @@
   "en": "$1 results for “$2”"
  },
  {
+  "re": "^พบ ([\\d,]+) คน$",
+  "en": "$1 people found"
+ },
+ {
   "re": "^พบ ([\\d,]+) ข่าว$",
   "en": "$1 news items"
  },

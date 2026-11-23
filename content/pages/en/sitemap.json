@@ -63,58 +63,6 @@
           ]
         },
         {
-          "heading": "About Us · Executives",
-          "icon": "i-user",
-          "items": [
-            {
-              "title": "Office Executives",
-              "href": "executives.html"
-            },
-            {
-              "title": "Chief Information Officer (CIO)",
-              "href": "cio.html"
-            },
-            {
-              "title": "IT Management",
-              "href": "cio-it-management.html"
-            }
-          ]
-        },
-        {
-          "heading": "About Us · Anti-Corruption Center",
-          "icon": "i-shield",
-          "items": [
-            {
-              "title": "About the Center",
-              "href": "anti-corruption-center.html"
-            },
-            {
-              "title": "Report Corruption & Misconduct",
-              "href": "corruption-complaints.html"
-            },
-            {
-              "title": "Complaint Handling Guidelines",
-              "href": "complaint-guidelines.html"
-            },
-            {
-              "title": "Complaint Statistics",
-              "href": "complaint-statistics.html"
-            },
-            {
-              "title": "No Gift Policy",
-              "href": "no-gift-policy.html"
-            },
-            {
-              "title": "Anti-Corruption Plan",
-              "href": "anti-corruption-plan.html"
-            },
-            {
-              "title": "Integrity & Transparency",
-              "href": "ethics.html"
-            }
-          ]
-        },
-        {
           "heading": "About Us · Organization",
           "icon": "i-book",
           "items": [
@@ -149,24 +97,78 @@
           ]
         },
         {
-          "heading": "About Us · Personnel & HR Management",
+          "heading": "About Us · Office Executives",
+          "icon": "i-user",
+          "items": [
+            {
+              "title": "Office Executives",
+              "href": "executives.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · IT Executives",
+          "icon": "i-user",
+          "items": [
+            {
+              "title": "Chief Information Officer (CIO)",
+              "href": "cio.html"
+            },
+            {
+              "title": "IT Management",
+              "href": "cio-it-management.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · Personnel",
           "icon": "i-people",
           "items": [
+            {
+              "title": "Staff Directory",
+              "href": "staff-directory.html"
+            },
             {
               "title": "Committees",
               "href": "committees.html"
             },
             {
-              "title": "HR Plan",
-              "href": "hr-plan.html"
-            },
-            {
               "title": "HR Criteria",
               "href": "hr-criteria.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · Anti-Corruption Center",
+          "icon": "i-shield",
+          "items": [
+            {
+              "title": "About the Center",
+              "href": "anti-corruption-center.html"
             },
             {
-              "title": "HR Annual Report",
-              "href": "hr-annual-report.html"
+              "title": "Report Corruption & Misconduct",
+              "href": "corruption-complaints.html"
+            },
+            {
+              "title": "Complaint Handling Guidelines",
+              "href": "complaint-guidelines.html"
+            },
+            {
+              "title": "Complaint Statistics",
+              "href": "complaint-statistics.html"
+            },
+            {
+              "title": "No Gift Policy",
+              "href": "no-gift-policy.html"
+            },
+            {
+              "title": "Anti-Corruption Plan",
+              "href": "anti-corruption-plan.html"
+            },
+            {
+              "title": "Integrity & Transparency",
+              "href": "ethics.html"
             }
           ]
         },
@@ -213,6 +215,10 @@
             {
               "title": "Annual Plan & Budget",
               "href": "annual-budget-plan.html"
+            },
+            {
+              "title": "HR Plan",
+              "href": "hr-plan.html"
             }
           ]
         },
@@ -263,6 +269,10 @@
             {
               "title": "Satisfaction Survey Results",
               "href": "satisfaction-survey.html"
+            },
+            {
+              "title": "HR Annual Report",
+              "href": "hr-annual-report.html"
             }
           ]
         },

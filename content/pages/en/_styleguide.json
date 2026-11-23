@@ -197,7 +197,7 @@
         {
           "icon": "i-people",
           "tags": [
-            "Agency"
+            "Unit"
           ],
           "title": "Service name",
           "body": "Service description",
@@ -567,6 +567,38 @@
           "director-1"
         ]
       }
+    },
+    {
+      "type": "staff-directory",
+      "id": "sg-staff-directory",
+      "heading": "staff-directory — Staff directory",
+      "lead": "Search by name, position or unit, filter by unit and switch between card and list views · No photo = initials circle",
+      "variant": "alt",
+      "units": [
+        "Science Division",
+        "Arts Division"
+      ],
+      "items": [
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Science Division",
+          "ext": "[Internal extension]",
+          "email": "name@example.com"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Arts Division",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Arts Division",
+          "ext": "[Internal extension]"
+        }
+      ]
     },
     {
       "type": "media-grid",
@@ -997,7 +1029,7 @@
         {
           "tone": "plain",
           "title": "[ส่วนล่าง]",
-          "childrenLabel": "[หน่วยงานภายใน]",
+          "childrenLabel": "[Internal unit]",
           "children": [
             "[หน่วย ๑]",
             "[หน่วย ๒]"
@@ -1064,7 +1096,7 @@
               ]
             }
           ],
-          "unitsLabel": "[หน่วยงานภายใน]",
+          "unitsLabel": "[Internal unit]",
           "units": [
             {
               "title": "[หน่วย ๑]"

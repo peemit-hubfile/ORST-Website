@@ -63,58 +63,6 @@
           ]
         },
         {
-          "heading": "เกี่ยวกับเรา · ผู้บริหาร",
-          "icon": "i-user",
-          "items": [
-            {
-              "title": "ผู้บริหารสำนักงานราชบัณฑิตยสภา",
-              "href": "executives.html"
-            },
-            {
-              "title": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
-              "href": "cio.html"
-            },
-            {
-              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO",
-              "href": "cio-it-management.html"
-            }
-          ]
-        },
-        {
-          "heading": "เกี่ยวกับเรา · ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)",
-          "icon": "i-shield",
-          "items": [
-            {
-              "title": "ข้อมูลของ ศปท.",
-              "href": "anti-corruption-center.html"
-            },
-            {
-              "title": "ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
-              "href": "corruption-complaints.html"
-            },
-            {
-              "title": "แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
-              "href": "complaint-guidelines.html"
-            },
-            {
-              "title": "ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
-              "href": "complaint-statistics.html"
-            },
-            {
-              "title": "มาตรการป้องกันการรับสินบน (No Gift Policy)",
-              "href": "no-gift-policy.html"
-            },
-            {
-              "title": "การประเมินความเสี่ยงและแผนป้องกันการทุจริต",
-              "href": "anti-corruption-plan.html"
-            },
-            {
-              "title": "จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส",
-              "href": "ethics.html"
-            }
-          ]
-        },
-        {
           "heading": "เกี่ยวกับเรา · ข้อมูลองค์กร",
           "icon": "i-book",
           "items": [
@@ -149,24 +97,78 @@
           ]
         },
         {
-          "heading": "เกี่ยวกับเรา · บุคลากรและการบริหารทรัพยากรบุคคล",
+          "heading": "เกี่ยวกับเรา · ผู้บริหารสำนักงานราชบัณฑิตยสภา",
+          "icon": "i-user",
+          "items": [
+            {
+              "title": "ผู้บริหารสำนักงานราชบัณฑิตยสภา",
+              "href": "executives.html"
+            }
+          ]
+        },
+        {
+          "heading": "เกี่ยวกับเรา · ผู้บริหารด้านเทคโนโลยีสารสนเทศ",
+          "icon": "i-user",
+          "items": [
+            {
+              "title": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)",
+              "href": "cio.html"
+            },
+            {
+              "title": "การบริหารงานด้านเทคโนโลยีสารสนเทศของ CIO",
+              "href": "cio-it-management.html"
+            }
+          ]
+        },
+        {
+          "heading": "เกี่ยวกับเรา · บุคลากร",
           "icon": "i-people",
           "items": [
+            {
+              "title": "รายชื่อเจ้าหน้าที่สำนักงาน",
+              "href": "staff-directory.html"
+            },
             {
               "title": "คณะกรรมการวิชาการ และกรรมการอื่น",
               "href": "committees.html"
             },
             {
-              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล",
-              "href": "hr-plan.html"
-            },
-            {
               "title": "หลักเกณฑ์การบริหารและพัฒนาทรัพยากรบุคคล",
               "href": "hr-criteria.html"
+            }
+          ]
+        },
+        {
+          "heading": "เกี่ยวกับเรา · ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)",
+          "icon": "i-shield",
+          "items": [
+            {
+              "title": "ข้อมูลของ ศปท.",
+              "href": "anti-corruption-center.html"
             },
             {
-              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี",
-              "href": "hr-annual-report.html"
+              "title": "ช่องทางแจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+              "href": "corruption-complaints.html"
+            },
+            {
+              "title": "แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+              "href": "complaint-guidelines.html"
+            },
+            {
+              "title": "ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ",
+              "href": "complaint-statistics.html"
+            },
+            {
+              "title": "มาตรการป้องกันการรับสินบน (No Gift Policy)",
+              "href": "no-gift-policy.html"
+            },
+            {
+              "title": "การประเมินความเสี่ยงและแผนป้องกันการทุจริต",
+              "href": "anti-corruption-plan.html"
+            },
+            {
+              "title": "จริยธรรมและมาตรการส่งเสริมคุณธรรมและความโปร่งใส",
+              "href": "ethics.html"
             }
           ]
         },
@@ -213,6 +215,10 @@
             {
               "title": "แผนการดำเนินงานและงบประมาณรายจ่ายประจำปี",
               "href": "annual-budget-plan.html"
+            },
+            {
+              "title": "นโยบายและแผนการบริหารทรัพยากรบุคคล",
+              "href": "hr-plan.html"
             }
           ]
         },
@@ -263,6 +269,10 @@
             {
               "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการ",
               "href": "satisfaction-survey.html"
+            },
+            {
+              "title": "รายงานผลการบริหารและพัฒนาทรัพยากรบุคคลประจำปี",
+              "href": "hr-annual-report.html"
             }
           ]
         },

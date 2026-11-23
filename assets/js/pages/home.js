@@ -742,6 +742,7 @@ function init() {
   initEventCalendar();
   initServiceHub();
   initHomeNews();
+  initAgencyMarquee();
 }
 function initHeader() {
   const h = qs('#site-header');
@@ -1389,4 +1390,42 @@ async function initHomeNews() {
                   </article>`).join('')}
                 </div>`;
   });
+}
+
+/* แถบเลื่อน "เชื่อมโยงหน่วยงานภาครัฐ" (#agency)
+   - ชี้ที่แถบ = ช้าลงแบบนุ่ม (เปลี่ยน playbackRate ไม่ใช่หยุดกระตุก) — กดการ์ดได้ง่าย
+   - โฟกัสการ์ดด้วยคีย์บอร์ด = หยุด · เลื่อนพ้นจอ = หยุด (ไม่กินเครื่อง)
+   - ไม่มีปุ่มหยุด (ผู้ใช้ให้ตัดออก) — ผู้ที่ต้องการหยุดใช้ "ลดการเคลื่อนไหว" ในแผงช่วยการเข้าถึง/ระบบ
+     ซึ่ง CSS ปิดแอนิเมชันเป็นแถวปัดเลื่อนด้วยมือ (getAnimations() ว่าง ฟังก์ชันนี้จึงไม่ทำอะไร) */
+function initAgencyMarquee() {
+  const root = document.querySelector('[data-govmq]');
+  if (!root || root.dataset.bound) return;
+  root.dataset.bound = '1';
+  const viewport = root.querySelector('.govmq-viewport');
+  const anims = () => [...root.querySelectorAll('.govmq-track')].flatMap(t => t.getAnimations ? t.getAnimations() : []);
+  let focused = false, offscreen = false, rate = 1, raf = 0;
+
+  const sync = () => root.classList.toggle('is-paused', focused || offscreen);
+  // ค่อย ๆ ปรับความเร็ว (ease) แทนการเปลี่ยนทันที
+  const easeTo = target => {
+    cancelAnimationFrame(raf);
+    const step = () => {
+      rate += (target - rate) * 0.12;
+      if (Math.abs(target - rate) < 0.01) rate = target;
+      anims().forEach(a => { a.playbackRate = rate; });
+      if (rate !== target) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+  };
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    viewport.addEventListener('mouseenter', () => easeTo(0.15));
+    viewport.addEventListener('mouseleave', () => easeTo(1));
+  }
+  viewport.addEventListener('focusin', () => { focused = true; sync(); });
+  viewport.addEventListener('focusout', e => { if (!viewport.contains(e.relatedTarget)) { focused = false; sync(); } });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => { offscreen = !e.isIntersecting; sync(); }).observe(root);
+  }
+  sync();
 }

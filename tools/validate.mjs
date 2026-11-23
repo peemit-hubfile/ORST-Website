@@ -55,6 +55,7 @@ const REQUIRED = {
   'article': ['sections'],
   'page-index': ['groups'],
   'person-grid': ['items'],
+  'staff-directory': ['items'],
   'figure': ['image'],
   'share': [],
   'news-media': [],

@@ -1,0 +1,88 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าเพิ่มใหม่ตามคอมเมนต์ลูกค้า (22 พ.ย. 2569) — เว็บไซต์เดิมไม่มีรายชื่อเจ้าหน้าที่ จึงยังเป็น placeholder รอข้อมูลจริงจากสำนักงาน · เพิ่มคนใน items ได้ไม่จำกัด (ฟิลด์: name position unit ext phone email image) — ชื่อหน่วยงานใน unit ใช้เป็นปุ่มกรอง ลำดับปุ่มตาม units",
+  "title": "Staff Directory",
+  "navKey": "about",
+  "description": "Staff of the Office of the Royal Society, with their positions, units and internal phone numbers",
+  "updatedAt": "2026-11-23",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Staff Directory",
+      "lead": "Staff of the Office of the Royal Society, with their positions, units and internal phone numbers",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Staff Directory"
+        }
+      ]
+    },
+    {
+      "type": "staff-directory",
+      "id": "staff",
+      "units": [
+        "Office of the Secretary",
+        "Moral and Political Sciences Division",
+        "Science Division",
+        "Arts Division"
+      ],
+      "items": [
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Office of the Secretary",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Office of the Secretary",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Moral and Political Sciences Division",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Moral and Political Sciences Division",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Science Division",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Science Division",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Arts Division",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Arts Division",
+          "ext": "[Internal extension]"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

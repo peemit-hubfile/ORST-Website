@@ -13373,3 +13373,169 @@ body.no-motion #news .news-primary-action:hover .read-ic { transform: none; }
   #encyclopedia-row.knowledge-scroll-row { grid-auto-columns: max(240px, calc((100% - 48px) / 4.3)); }
 }
 
+
+/* เว็บไซต์หน่วยงานที่เกี่ยวข้อง (#agency) — การ์ดสูงเท่ากันทั้งแถว (ชื่อหน่วยงาน 1–2 บรรทัด) โลโก้อยู่บนสุดตรงกันทุกใบ */
+#agency .network-marquee-group { align-items: stretch; }
+#agency .network-logo-item { align-content: start; }
+/* ชื่อบนการ์ด + คำโปรย: ตัดบรรทัดให้สองบรรทัดยาวใกล้กัน (ไม่เหลือคำเดียวค้างบรรทัดล่าง) */
+#agency .network-logo-item strong { text-wrap: balance; }
+#agency .network-head-compact p { text-wrap: balance; }
+
+/* =============================================================================
+   เชื่อมโยงหน่วยงานภาครัฐ (#agency) — รอบ 3 (ผู้ใช้: กลับไปเลื่อนเหมือนเดิม แต่การ์ดต้องสมูท น่าสนใจ UX ดีกว่าเดิม)
+   แถบเลื่อนวนต่อเนื่อง (2 กลุ่มเหมือนกัน เลื่อนไป -100% ของกลุ่ม แล้ววนกลับแบบไม่สะดุด)
+   - รอบ 5 (ผู้ใช้: จัดกลาง + เอาโดเมนออก): การ์ดแนวตั้งจัดกึ่งกลาง ลูกศรลอยมุมขวาบน
+                  [↗]
+         [โลโก้ในกรอบ]
+       ชื่อหน่วยงาน (ตัวเล็ก ไม่เกิน 2 บรรทัด)
+     ชี้ = ยกขึ้น + แสงทองจางจากด้านบน + กรอบโลโก้เป็นทอง + ลูกศรเป็นวงกลมเขียว
+   - ชี้ที่แถบ = เลื่อนช้าลง (playbackRate จาก JS ไม่กระตุก) · ชี้การ์ด = ยกขึ้น เงานุ่ม ขอบทอง ลูกศรเป็นวงกลมเขียว
+   - โฟกัสด้วยคีย์บอร์ด = หยุดนิ่ง (ไม่มีปุ่มหยุดตามที่ผู้ใช้สั่ง — ผู้ที่ต้องการหยุดใช้โหมดลดการเคลื่อนไหว)
+   - ขอบซ้าย-ขวาจางด้วย mask (ไม่มีแผ่นสีทับการ์ด)
+   - ลดการเคลื่อนไหว: ไม่เลื่อนเอง → แถวปัดเลื่อนด้วยมือ (scroll-snap) ซ่อนกลุ่มที่ซ้ำ
+   ============================================================================= */
+#agency .network-head-compact {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-8);
+  flex-wrap: wrap;
+}
+#agency .network-head-compact p { margin-bottom: 0; }
+#agency .network-head-compact .view-all { margin: 0; flex: none; }
+
+.govmq { --govmq-gap: var(--space-4); --govmq-speed: 60s; position: relative; display: flex; flex-direction: column; margin-top: var(--space-6); }
+.govmq-viewport {
+  display: flex;
+  overflow: hidden;
+  margin-inline: calc(var(--space-4) * -1);
+  padding: var(--space-3) var(--space-4) var(--space-6);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.govmq-track {
+  display: flex;
+  flex: none;
+  gap: var(--govmq-gap);
+  margin: 0;
+  padding: 0 var(--govmq-gap) 0 0;
+  list-style: none;
+  animation: govmq-scroll var(--govmq-speed) linear infinite;
+}
+@keyframes govmq-scroll { to { transform: translateX(-100%); } }
+.govmq.is-paused .govmq-track { animation-play-state: paused; }
+.govmq-track > li { display: flex; }
+
+.govmq-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 208px;
+  height: 100%;
+  min-height: 148px;
+  padding: var(--space-6) var(--space-4) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--ink);
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
+}
+/* แสงทองจาง ๆ จากด้านบน โผล่เมื่อชี้ */
+.govmq-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(90% 70% at 50% 0%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 70%);
+  opacity: 0;
+  transition: opacity .4s var(--ease);
+  pointer-events: none;
+}
+.govmq-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  transition: border-color .4s var(--ease);
+}
+.govmq-logo img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform .45s var(--ease); }
+/* ลูกศรมุมขวาบน (ไม่กินพื้นที่จัดกลาง) */
+.govmq-go {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: var(--muted);
+  opacity: .35;
+  transition: background-color .3s var(--ease), color .3s var(--ease), opacity .3s var(--ease), transform .3s var(--ease);
+}
+.govmq-go .icon { width: 12px; height: 12px; }
+.govmq-text { position: relative; display: block; width: 100%; }
+/* ชื่อไม่เกิน 2 บรรทัด — line-height ปกติ (ไม่ใช้ tight) กันสระ/วรรณยุกต์บรรทัดสองถูกตัดหรือล้นทับ
+   จองความสูง 2 บรรทัดไว้เสมอ ให้โลโก้ทุกใบอยู่แนวเดียวกัน */
+.govmq-text strong {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  min-height: calc(2 * 1.5em);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.5;
+  text-wrap: balance;
+  transition: color .3s var(--ease);
+}
+
+.govmq-card:hover,
+.govmq-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--gold) 40%, var(--line));
+  box-shadow: 0 16px 32px -18px color-mix(in srgb, var(--deep) 45%, transparent);
+}
+.govmq-card:hover::before,
+.govmq-card:focus-visible::before { opacity: 1; }
+.govmq-card:hover .govmq-logo,
+.govmq-card:focus-visible .govmq-logo { border-color: color-mix(in srgb, var(--gold) 45%, var(--line)); }
+.govmq-card:hover .govmq-logo img { transform: scale(1.08); }
+.govmq-card:hover strong,
+.govmq-card:focus-visible strong { color: var(--deep); }
+.govmq-card:hover .govmq-go,
+.govmq-card:focus-visible .govmq-go { opacity: 1; background: var(--deep); color: var(--surface); transform: scale(1.05); }
+.govmq-card:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  .govmq { --govmq-gap: var(--space-3); --govmq-speed: 40s; }
+  .govmq-card { width: 172px; min-height: 132px; padding: var(--space-4) var(--space-3) var(--space-3); }
+  .govmq-logo { width: 48px; height: 48px; }
+}
+
+/* ลดการเคลื่อนไหว: ไม่เลื่อนเอง — ปัดเลื่อนด้วยมือ */
+@media (prefers-reduced-motion: reduce) {
+  .govmq-viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-mask-image: none; mask-image: none; }
+  .govmq-track { animation: none; }
+  .govmq-track > li { scroll-snap-align: start; }
+  .govmq-clone { display: none; }
+  .govmq-card, .govmq-card::before, .govmq-logo, .govmq-logo img, .govmq-go { transition: none; }
+}
+body.no-motion .govmq-viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-mask-image: none; mask-image: none; }
+body.no-motion .govmq-track { animation: none; }
+body.no-motion .govmq-track > li { scroll-snap-align: start; }
+body.no-motion .govmq-clone { display: none; }
+body.high-contrast .govmq-card { border-color: var(--ink); box-shadow: none; }
+body.high-contrast .govmq-viewport { -webkit-mask-image: none; mask-image: none; }
