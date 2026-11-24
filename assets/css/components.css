@@ -4143,3 +4143,78 @@ body.high-contrast .megax-row:focus-visible { background: var(--gold-soft); colo
 .topbar .topbar-menu-list .topbar-menu-ic .icon { width: 16px; height: 16px; }
 .topbar .topbar-menu-list small { white-space: nowrap; margin-top: 0; }
 .topbar .topbar-menu-list a > .icon { margin-left: var(--space-2); }
+
+/* footer: ไอคอนโซเชียล "ติดตามเรา" (ย้ายมาจากเมนูติดต่อเรา) — ใต้ปุ่มติดต่อเรา/แผนที่
+   ไอคอนขาวโปร่ง ไม่มีกรอบ (แบบเรียบ) · ชี้ = สีทอง + ยกขึ้นเล็กน้อย · พื้นที่กด 44px */
+.orst-footer-social { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-top: var(--space-6); }
+.orst-footer-social-label { color: rgba(255, 255, 255, .7); font-size: var(--text-sm); }
+.orst-footer-social ul { display: flex; gap: var(--space-1); margin: 0 0 0 calc(var(--space-2) * -1); padding: 0; list-style: none; }
+.orst-footer-social a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, .85);
+  transition: color var(--duration) var(--ease), transform var(--duration) var(--ease), background-color var(--duration) var(--ease);
+}
+.orst-footer-social a .icon { width: 24px; height: 24px; fill: currentColor; stroke: none; }
+.orst-footer-social a:hover,
+.orst-footer-social a:focus-visible { color: var(--gold-2); background: rgba(255, 255, 255, .06); transform: translateY(-2px); }
+.orst-footer-social a:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .orst-footer-social a { transition: none; } .orst-footer-social a:hover { transform: none; } }
+body.no-motion .orst-footer-social a:hover { transform: none; }
+
+/* =============================================================================
+   footer — จัด responsive ใหม่ (ผู้ใช้: จัดเรียงให้ responsive)
+   ≥1200   แบรนด์+ติดต่อ | บริการทั่วไป | เมนูหลัก | ข้อมูลเว็บไซต์และนโยบาย (เดิม)
+   721–1199 แถวแบรนด์เต็มกว้าง: [ตรา / ชื่อ / ปุ่มติดต่อ / ติดตามเรา]  |  [ที่อยู่ โทร อีเมล]
+            721–1023: บริการทั่วไป | เมนูหลัก แล้ว "ข้อมูลเว็บไซต์และนโยบาย" เต็มแถว ลิงก์ 2 คอลัมน์
+            (เดิม 3 คอลัมน์แคบจนหัวข้อตัดบรรทัด และ "ติดตามเรา" หลุดไปคอลัมน์ขวาใต้ที่อยู่)
+   ≤720    เรียงทีละส่วน (เดิม)
+   ทุกขนาด: แถบล่างเว้นที่ขวาให้ปุ่มลอย (แชท / ช่วยการเข้าถึง / กลับขึ้นบน) ไม่ทับ "สถิติรวม"
+   ============================================================================= */
+@media (min-width: 721px) {
+  .orst-footer .orst-footer-bottom { padding-right: 150px; }
+}
+@media (min-width: 721px) and (max-width: 1199.98px) {
+  .orst-footer .orst-footer-main > .orst-footer-brand {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-auto-flow: row;
+    align-content: start;
+    row-gap: 0;
+  }
+  .orst-footer .orst-footer-brand > * { grid-column: 1; }
+  .orst-footer .orst-footer-brand .orst-footer-reach { grid-column: 2; grid-row: 1 / span 5; align-self: start; margin-top: 0; }
+  .orst-footer .orst-footer-brand .orst-footer-subhead { margin-top: var(--space-6); }
+  .orst-footer .orst-footer-social { margin-top: var(--space-4); }
+}
+/* 721–1023: หมวดลิงก์ทีละแถว — หัวข้อซ้าย (กว้างคงที่) | ลิงก์เรียงต่อกันทางขวา
+   (ผู้ใช้: 2 คอลัมน์เดิมไม่สมดุล "บริการทั่วไป" 3 ลิงก์ข้าง "เมนูหลัก" 6 ลิงก์ เหลือที่ว่าง + footer ยาว) */
+@media (min-width: 721px) and (max-width: 1023.98px) {
+  .orst-footer .orst-footer-main { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+  .orst-footer .orst-footer-main > .orst-footer-col {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    column-gap: var(--space-8);
+    align-items: start;
+    padding: var(--space-6) 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+  }
+  .orst-footer .orst-footer-col .orst-footer-head { margin: 0; }
+  .orst-footer .orst-footer-col ul,
+  .orst-footer .orst-footer-col--services ul,
+  .orst-footer .orst-footer-col--menu ul,
+  .orst-footer .orst-footer-col--policies ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: var(--space-3) var(--space-6);
+    padding-top: var(--space-6);   /* เริ่มบรรทัดเดียวกับชื่อหมวด (ใต้เส้นทองสั้น) */
+  }
+}
+@media (max-width: 720px) {
+  /* ติดตามเรา: ป้ายอยู่บรรทัดเดียวกับไอคอน ชิดซ้าย */
+  .orst-footer .orst-footer-social { margin-top: var(--space-4); }
+}

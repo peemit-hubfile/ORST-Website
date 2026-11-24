@@ -379,5 +379,20 @@
  "สำนักงานราชบัณฑิตยสภาจะไม่รับผิดต่อความเสียหายใด ๆ รวมถึง ความเสียหาย สูญเสียและค่าใช้จ่ายที่เกิดขึ้นไม่ว่าโดยตรงหรือโดยอ้อม ที่เป็นผลหรือสืบเนื่องจากการที่ผู้ใช้เข้าใช้เว็บไซต์นี้หรือเว็บไซต์ที่เชื่อมโยงกับเว็บไซต์นี้ หรือต่อความเสียหาย สูญเสียหรือค่าใช้จ่ายที่เกิดจากความล้มเหลวในการใช้งาน ความผิดพลาด การละเว้น การหยุดชะงัก ข้อบกพร่องความไม่สมบูรณ์ คอมพิวเตอร์ไวรัส ถึงแม้ว่าสำนักงานราชบัณฑิตยสภา จะได้รับแจ้งว่าอาจจะเกิดความเสียหาย สูญเสียหรือค่าใช้จ่ายดังกล่าวขึ้น นอกจากนี้ สำนักงานราชบัณฑิตยสภาไม่รับผิดต่อผู้ใช้เว็บไซต์หรือบุคคลจากการเรียกร้องใด ๆ ที่เกิดขึ้นจากบนเว็บไซต์ หรือเนื้อหาใดๆ ซึ่งรวมถึงการตัดสินใจหรือการกระทำใด ๆ ที่เกิดจากความเชื่อถือในเนื้อหาดังกล่าวของผู้ใช้เว็บไซต์ หรือในความเสียหายใด ๆ ไม่ว่าความเสียหายทางตรง หรือทางอ้อม รวมถึงความเสียหายอื่นใดที่อาจเกิดขึ้นได้ผู้ใช้บริการยอมรับและตระหนักดีว่าสำนักงานราชบัณฑิตยสภาจะไม่ต้องรับผิดชอบต่อการกระทำใดของผู้ใช้บริการทั้งสิ้น": "The Office of the Royal Society shall not be liable for any damage, including any damage, loss or expense arising, whether directly or indirectly, as a result of or in connection with a user's access to this website or to any website linked to it, or for any damage, loss or expense arising from failure of use, error, omission, interruption, defect, incompleteness or computer virus, even if the Office of the Royal Society has been advised that such damage, loss or expense may occur. In addition, the Office of the Royal Society shall not be liable to any website user or person for any claim arising from the website or any of its content, including any decision made or action taken by a website user in reliance on such content, or for any damage whatsoever, whether direct or indirect, including any other damage that may occur. Users acknowledge and understand that the Office of the Royal Society shall not be responsible for any action of users whatsoever.",
  "ระบบสำนักงานอิเล็กทรอนิกส์": "Electronic office system",
  "ระบบสารสนเทศทรัพยากรบุคคล": "Personnel information system",
- "บันทึกเวลาปฏิบัติงาน": "Record working hours"
+ "บันทึกเวลาปฏิบัติงาน": "Record working hours",
+ "นาย": "Mr.",
+ "นาง": "Mrs.",
+ "นางสาว": "Ms.",
+ "จำนวน": "Quantity",
+ "บริษัทจำกัด": "Limited company",
+ "มาก": "High",
+ "น้อย": "Low",
+ "มากที่สุด": "Very high",
+ "น้อยที่สุด": "Very low",
+ "ปานกลาง": "Moderate",
+ "เพศ": "Gender",
+ "ชาย": "Male",
+ "หญิง": "Female",
+ "อายุ": "Age",
+ "อื่น ๆ": "Other"
 }

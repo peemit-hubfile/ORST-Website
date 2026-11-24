@@ -253,6 +253,25 @@ JSON ประกอบด้วย **ลำดับของ block** เรี
 ```
 ลิงก์ `http(s)` เปิดแท็บใหม่, รายการที่ไม่มี `href` แสดง "รอเนื้อหา" — ตัวอย่างจริง: `operations.json`
 
+### `form` — แบบฟอร์มออนไลน์ (e-Form)
+
+```json
+{ "type": "form", "heading": "ยื่นคำขอออนไลน์", "submitLabel": "ยื่นคำขอ",
+  "action": "(URL รับข้อมูล — ไม่ใส่ = ต้นแบบ แสดงหน้าสรุปให้พิมพ์)",
+  "sections": [
+    { "heading": "ประเภทผู้ขอ", "fields": [
+      { "name": "kind", "label": "ผู้ขอเป็น", "type": "radio", "required": true, "options": ["นิติบุคคล", "บุคคลธรรมดา"] } ] },
+    { "heading": "ข้อมูลนิติบุคคล", "showWhen": { "field": "kind", "value": "นิติบุคคล" }, "fields": [
+      { "name": "org", "label": "ชื่อหน่วยงาน", "required": true },
+      { "name": "phone", "label": "โทรศัพท์", "type": "tel", "width": "half" } ] }
+  ],
+  "consent": { "text": "ข้าพเจ้ายินยอม..." } }
+```
+ชนิดช่อง: `text` `email` `tel` `number` `date` `textarea` `select` `radio` `checkbox` (เลือกหลายข้อ — `required` = อย่างน้อย 1) `file`
+· `width`: `full` (ค่าเริ่มต้น) `half` `third` · `other` = ตัวเลือกท้ายที่เปิดช่องให้ระบุ · `hint` ข้อความช่วยใต้ช่อง
+· ตอนที่มี `showWhen` ฟิลด์เดียวกันติดกันใช้หมายเลขตอนเดียวกัน (เป็นทางเลือก) — ตอนที่ซ่อนไม่ถูกตรวจและไม่ถูกส่ง
+· ตัวอย่างจริง: `publication-permission.json`
+
 ### `staff-directory` — สมุดรายชื่อเจ้าหน้าที่
 
 ```json

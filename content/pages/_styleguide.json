@@ -601,6 +601,82 @@
       ]
     },
     {
+      "type": "form",
+      "id": "sg-form",
+      "variant": "alt",
+      "heading": "form — แบบฟอร์มออนไลน์ (e-Form)",
+      "lead": "แบ่งตอนมีหมายเลข · ตอนที่แสดงตามตัวเลือก (showWhen) · ตรวจข้อมูลภาษาไทย · ไม่มี action = แสดงหน้าสรุปให้พิมพ์",
+      "submitLabel": "ส่งแบบฟอร์ม",
+      "sections": [
+        {
+          "heading": "ประเภทผู้ติดต่อ",
+          "fields": [
+            {
+              "name": "who",
+              "label": "ติดต่อในนาม",
+              "type": "radio",
+              "required": true,
+              "options": [
+                "บุคคลทั่วไป",
+                "หน่วยงาน"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "ข้อมูลหน่วยงาน",
+          "showWhen": {
+            "field": "who",
+            "value": "หน่วยงาน"
+          },
+          "fields": [
+            {
+              "name": "org",
+              "label": "ชื่อหน่วยงาน",
+              "required": true
+            }
+          ]
+        },
+        {
+          "heading": "รายละเอียด",
+          "fields": [
+            {
+              "name": "name",
+              "label": "ชื่อ-นามสกุล",
+              "required": true,
+              "width": "half"
+            },
+            {
+              "name": "email",
+              "label": "อีเมล",
+              "type": "email",
+              "required": true,
+              "width": "half"
+            },
+            {
+              "name": "topics",
+              "label": "หัวข้อ",
+              "type": "checkbox",
+              "required": true,
+              "options": [
+                "ภาษาไทย",
+                "พจนานุกรม"
+              ],
+              "other": "อื่น ๆ (ระบุ)"
+            },
+            {
+              "name": "message",
+              "label": "ข้อความ",
+              "type": "textarea"
+            }
+          ]
+        }
+      ],
+      "consent": {
+        "text": "ยินยอมให้ใช้ข้อมูลนี้เพื่อการติดต่อกลับ"
+      }
+    },
+    {
       "type": "media-grid",
       "id": "b-media-contain",
       "heading": "media-grid (ratio 3:4, fit contain)",

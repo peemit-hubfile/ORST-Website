@@ -7851,3 +7851,538 @@ body.high-contrast .a11y-cta :is(h3, p) { color: var(--ink); }
 }
 body.no-motion .staff-card.is-entering { animation: none; }
 body.no-motion .staff-card:hover { transform: none; }
+
+/* =============================================================================
+   form — แบบฟอร์มออนไลน์ (e-Form) · รอบ 2 (ผู้ใช้: ฟอร์มไม่น่ากรอก ใหญ่ไป)
+   รอบ 3 (ผู้ใช้: เอาแถบขั้นตอนซ้ายออก): การ์ดเดียว มีแถบความคืบหน้าด้านบน · เลขตอนเป็น ✓ เมื่อกรอกครบ
+   ช่องกรอกสูง 44px ป้ายเล็ก ระยะกระชับ · ตัวเลือกแบบการ์ด (layout: cards) มีไอคอน
+   ใช้ตัวแปรสีทั้งหมด (โหมดความคมชัดสูง/อ่านง่ายเปลี่ยนตาม)
+   ============================================================================= */
+.ef { --ef-gap: var(--space-4); }
+.ef { max-width: 820px; }
+.ef-req { margin-left: 2px; color: var(--file-pdf); font-weight: 700; }
+
+/* การ์ดฟอร์ม: ตอนต่อกัน คั่นเส้นบาง */
+.ef-form {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 10px 30px -22px color-mix(in srgb, var(--ink) 45%, transparent);
+}
+.ef-form[hidden] { display: none; }
+.ef-section {
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-6);
+  border: 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: calc(var(--fixed-header-height, 120px) + var(--space-4));
+}
+.ef-form > .ef-section:first-child,
+.ef-form > .ef-section[hidden] + .ef-section:not([hidden]):nth-child(2) { border-top: 0; }
+.ef-section[hidden] { display: none; }
+.ef-section-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  float: left;
+  width: 100%;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  color: var(--deep);
+  font-size: var(--text-base);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+}
+.ef-num {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--deep) 10%, var(--surface));
+  color: var(--deep);
+  font-size: var(--text-xs);
+}
+.ef-section-lead { clear: both; margin: 0 0 var(--space-3); color: var(--muted); font-size: var(--text-sm); }
+.ef-grid { clear: both; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--ef-gap); }
+
+.ef-field { grid-column: 1 / -1; display: grid; gap: 6px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.ef-field.is-half { grid-column: span 3; }
+.ef-field.is-third { grid-column: span 2; }
+.ef-label { padding: 0; color: var(--ink); font-size: var(--text-xs); font-weight: 600; line-height: var(--leading-tight); }
+.ef-hint { color: var(--muted); font-size: var(--text-xs); line-height: var(--leading-tight); opacity: .9; }
+.ef-input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 1px solid color-mix(in srgb, var(--ink) 16%, var(--line));
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-sm);
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease), background-color var(--duration) var(--ease);
+}
+textarea.ef-input { min-height: 76px; padding: var(--space-2) var(--space-3); resize: vertical; line-height: var(--leading-normal); }
+.ef-input::placeholder { color: color-mix(in srgb, var(--muted) 75%, transparent); }
+.ef-input:hover { border-color: color-mix(in srgb, var(--deep) 35%, var(--line)); }
+.ef-input:focus { outline: none; border-color: var(--deep); background: var(--surface); box-shadow: 0 0 0 3px color-mix(in srgb, var(--deep) 14%, transparent); }
+.ef-file { padding: 6px; font-size: var(--text-xs); cursor: pointer; }
+.ef-file::file-selector-button {
+  margin-right: var(--space-3);
+  padding: 4px var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--deep);
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ตัวเลือก */
+.ef-choices { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.ef-choice {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: 6px var(--space-3);
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, var(--line));
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  line-height: var(--leading-tight);
+  cursor: pointer;
+  transition: border-color var(--duration) var(--ease), background-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.ef-choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.ef-choice-box {
+  display: inline-grid;
+  place-items: center;
+  order: -1;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid color-mix(in srgb, var(--ink) 30%, var(--line));
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: border-color var(--duration) var(--ease), background-color var(--duration) var(--ease);
+}
+.ef-choice input[type="radio"] ~ .ef-choice-box { border-radius: 50%; }
+.ef-choice:hover { border-color: color-mix(in srgb, var(--deep) 45%, var(--line)); }
+.ef-choice:has(input:checked) { border-color: var(--deep); background: color-mix(in srgb, var(--deep) 6%, var(--surface)); color: var(--deep); }
+.ef-choice input:checked ~ .ef-choice-box { border-color: var(--deep); background: var(--deep); box-shadow: inset 0 0 0 3px var(--surface); }
+.ef-choice input[type="checkbox"]:checked ~ .ef-choice-box { box-shadow: none; }
+.ef-choice input[type="checkbox"]:checked ~ .ef-choice-box::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  margin-top: -2px;
+  border: solid var(--surface);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.ef-choice:has(input:focus-visible) { outline: 3px solid var(--gold); outline-offset: 2px; }
+.ef-other-input { flex: 1 1 200px; min-height: 40px; }
+
+/* ตัวเลือกแบบการ์ด (ประเภทผู้ขอ): ไอคอน | ชื่อ + คำอธิบาย | วงกลมเลือกมุมขวา */
+.ef-choices.is-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3); }
+.ef-choice.is-card {
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 72px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+}
+.ef-choice.is-card .ef-choice-box { order: 2; margin-left: auto; }
+.ef-choice-ic {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--deep) 8%, var(--surface));
+  color: var(--deep);
+  transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+.ef-choice-ic .icon { width: 20px; height: 20px; }
+.ef-choice-text { display: grid; gap: 2px; }
+.ef-choice-text small { color: var(--muted); font-size: var(--text-xs); font-weight: 400; }
+.ef-choice.is-card:has(input:checked) { box-shadow: 0 0 0 1px var(--deep); }
+.ef-choice.is-card:has(input:checked) .ef-choice-ic { background: var(--deep); color: var(--surface); }
+.ef-choice.is-card:has(input:checked) .ef-choice-text { font-weight: 700; }
+
+/* ยืนยัน + ปุ่มส่ง (ตอนสุดท้าย พื้นอ่อน) */
+.ef-section-consent { background: var(--surface-soft); }
+.ef-consent { display: grid; gap: var(--space-1); margin-bottom: var(--space-4); }
+.ef-choice-consent { align-items: flex-start; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); background: var(--surface); font-size: var(--text-sm); line-height: var(--leading-normal); }
+.ef-choice-consent .ef-choice-box { margin-top: 3px; }
+
+/* ผิดพลาด */
+.ef-error { color: var(--file-pdf); font-size: var(--text-xs); font-weight: 600; }
+.ef-error[hidden] { display: none; }
+.is-invalid > .ef-input,
+.is-invalid .ef-choice { border-color: var(--file-pdf); }
+.is-invalid > .ef-input:focus { box-shadow: 0 0 0 3px color-mix(in srgb, var(--file-pdf) 14%, transparent); }
+
+/* ปุ่ม */
+.ef-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.ef-submit,
+.ef-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-pill);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--duration) var(--ease), border-color var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+.ef-submit { border: 0; background: var(--deep); color: var(--surface); }
+.ef-submit:hover { background: color-mix(in srgb, var(--deep) 85%, var(--ink)); }
+.ef-submit .icon { width: 16px; height: 16px; }
+.ef-reset { border: 1px solid var(--line); background: transparent; color: var(--muted); }
+.ef-reset:hover { border-color: var(--deep); color: var(--deep); }
+.ef-submit:focus-visible,
+.ef-reset:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.ef-note { margin: var(--space-3) 0 0; color: var(--muted); font-size: var(--text-xs); line-height: var(--leading-normal); }
+
+/* หลังส่ง: สรุปคำขอ */
+.ef-done { display: grid; gap: var(--space-6); padding: var(--space-6); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
+.ef-done[hidden] { display: none; }
+.ef-done:focus { outline: none; }
+.ef-done-head { display: flex; align-items: flex-start; gap: var(--space-4); }
+.ef-done-head h3 { margin: 0 0 var(--space-1); color: var(--deep); font-size: var(--text-lg); }
+.ef-done-head p { margin: 0; color: var(--muted); font-size: var(--text-sm); }
+.ef-done-ic { display: grid; place-items: center; flex: none; width: 48px; height: 48px; border-radius: 50%; background: color-mix(in srgb, var(--deep) 10%, var(--surface)); color: var(--deep); }
+.ef-summary { display: grid; gap: var(--space-4); margin: 0; }
+.ef-sum-sec { display: grid; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
+.ef-sum-sec h4 { margin: 0; padding: var(--space-2) var(--space-4); background: var(--surface-soft); color: var(--deep); font-size: var(--text-sm); }
+.ef-sum-sec > div { display: grid; grid-template-columns: minmax(140px, 34%) minmax(0, 1fr); gap: var(--space-3); padding: var(--space-2) var(--space-4); border-top: 1px solid var(--line); font-size: var(--text-sm); }
+.ef-sum-sec dt { color: var(--muted); }
+.ef-sum-sec dd { margin: 0; color: var(--ink); white-space: pre-line; overflow-wrap: anywhere; }
+
+@media (max-width: 640px) {
+  .ef-section, .ef-done { padding: var(--space-4); }
+  .ef-field.is-half, .ef-field.is-third { grid-column: 1 / -1; }
+  .ef-choice:not(.is-card) { flex: 1 1 auto; }
+  .ef-submit, .ef-reset { flex: 1 1 100%; justify-content: center; }
+  .ef-sum-sec > div { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ef-input, .ef-choice, .ef-choice-box, .ef-choice-ic, .ef-submit, .ef-reset { transition: none; }
+}
+
+/* พิมพ์คำขอ: เฉพาะการ์ดสรุป (ปุ่ม "พิมพ์คำขอ" ใส่คลาส is-ef-print ที่ html ชั่วคราว) */
+@media print {
+  html.is-ef-print body * { visibility: hidden; }
+  html.is-ef-print .ef-done,
+  html.is-ef-print .ef-done * { visibility: visible; }
+  html.is-ef-print .ef-done { position: absolute; inset: 0 0 auto; border: 0; }
+  html.is-ef-print .ef-done .ef-actions { display: none; }
+}
+
+/* form: ทุกอย่างในตอนอยู่ใต้หัวตอน (legend ลอยซ้าย) — เดิมกล่องยินยอม/ปุ่มขึ้นไปเบียดข้างหัวตอน
+   ช่องในแถวเดียวกันสูงไม่เท่ากันเมื่ออีกช่องมีข้อความช่วย — ให้เนื้อหาชิดบน ไม่ยืดช่องกรอก */
+.ef-section > :not(legend) { clear: both; }
+.ef-field { align-content: start; }
+/* ตอนที่ ๒ ก่อนเลือกประเภทผู้ขอ: แสดงตัวแทนจาง ๆ (ลำดับตอนไม่กระโดด ๑ → ๓) */
+.ef-section.is-placeholder { color: var(--muted); }
+.ef-section.is-placeholder .ef-section-head { color: var(--muted); margin-bottom: var(--space-2); }
+.ef-section.is-placeholder .ef-num { background: var(--surface-soft); color: var(--muted); }
+.ef-placeholder-text { margin: 0; font-size: var(--text-sm); }
+
+/* form รอบ 3: แถบความคืบหน้าในการ์ด · เลขตอน ✓ เมื่อครบ · ช่องกรอกพื้นขาว (พื้นเทาเดิมดูเหมือนปิดใช้งาน) */
+.ef-progress { padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--line); background: var(--surface-soft); }
+.ef-progress-top { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); font-size: var(--text-xs); }
+.ef-progress-label { color: var(--ink); font-weight: 700; }
+.ef-progress-text { color: var(--muted); }
+.ef-progress.is-complete .ef-progress-text { color: var(--deep); font-weight: 700; }
+.ef-progress-bar { height: 6px; overflow: hidden; border-radius: var(--radius-pill); background: color-mix(in srgb, var(--deep) 10%, var(--surface)); }
+.ef-progress-bar span { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--deep), var(--gold)); transition: width .4s var(--ease); }
+.ef-progress-note { margin: var(--space-2) 0 0; color: var(--muted); font-size: var(--text-xs); }
+.ef-form > .ef-progress + .ef-section { border-top: 0; }
+
+.ef-num { position: relative; transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease); }
+.ef-section.is-done .ef-num { background: var(--deep); color: transparent; }
+.ef-section.is-done .ef-num::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  margin-top: -2px;
+  border: solid var(--surface);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.ef-input { background: var(--surface); border-color: color-mix(in srgb, var(--ink) 20%, var(--line)); }
+.ef-input:hover { border-color: color-mix(in srgb, var(--deep) 45%, var(--line)); }
+@media (max-width: 640px) {
+  .ef-progress { padding: var(--space-3) var(--space-4); }
+}
+@media (prefers-reduced-motion: reduce) { .ef-progress-bar span, .ef-num { transition: none; } }
+body.no-motion .ef-progress-bar span { transition: none; }
+body.high-contrast .ef-progress-bar span { background: var(--gold); }
+
+/* form: กล่องเงื่อนไขพับได้ (consent.terms) เหนือช่องยินยอมในขั้นสุดท้าย
+   ปิดอยู่ = แถบเดียว "อ่านเงื่อนไข… (๖ ข้อ)" · เปิด = รายการมีเลข เลื่อนอ่านในกล่อง (ไม่ดันฟอร์มยาว) */
+.ef-terms { margin-bottom: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); }
+.ef-terms summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: var(--space-2) var(--space-4);
+  color: var(--deep);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+.ef-terms summary::-webkit-details-marker { display: none; }
+.ef-terms summary > .icon { width: 18px; height: 18px; flex: none; color: var(--gold); }
+.ef-terms-count { color: var(--muted); font-weight: 400; }
+.ef-terms summary .ef-terms-chev { margin-left: auto; width: 16px; height: 16px; color: var(--muted); transform: rotate(90deg); transition: transform var(--duration) var(--ease); }
+.ef-terms[open] summary .ef-terms-chev { transform: rotate(-90deg); }
+.ef-terms summary:hover { background: color-mix(in srgb, var(--deep) 4%, var(--surface)); }
+.ef-terms summary:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; border-radius: var(--radius-md); }
+.ef-terms-body {
+  max-height: 320px;
+  overflow-y: auto;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+.ef-terms-body ol { display: grid; gap: var(--space-2); margin: 0; padding-left: 1.4em; }
+.ef-terms-body li::marker { color: var(--deep); font-weight: 700; }
+.ef-terms-body p { margin: var(--space-3) 0 0; color: var(--muted); font-size: var(--text-xs); }
+@media (prefers-reduced-motion: reduce) { .ef-terms summary .ef-terms-chev { transition: none; } }
+
+/* form: dropdown ของเว็บ (ui-select) แทน select ของระบบ — เต็มช่อง สูงเท่าช่องกรอก
+   ฟอนต์: หัวตอนใช้ฟอนต์หัวข้อของเว็บ (อังกฤษ = Newsreader เหมือนหัวข้ออื่น) · ป้ายช่องอ่านง่ายขึ้น */
+.ef-field .ui-select,
+.ef-field .ui-select-btn { width: 100%; }
+.ef-field .ui-select-btn {
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border-color: color-mix(in srgb, var(--ink) 20%, var(--line));
+  font-size: var(--text-sm);
+}
+.ef-field .ui-select-btn.is-placeholder .ui-select-value { color: color-mix(in srgb, var(--muted) 85%, transparent); }
+.ef-field .ui-select-list { padding: 6px; border-radius: var(--radius-md); }
+.ef-field .ui-select-list [role="option"] { min-height: 40px; padding: 8px var(--space-3); font-size: var(--text-sm); white-space: normal; }
+.ef-field .ui-select-list [role="option"]:first-child[aria-selected="true"] { color: var(--muted); font-weight: 400; }
+.ef-field .ui-select-list [role="option"]:first-child .ui-select-check { display: none; }
+.is-invalid .ui-select-btn { border-color: var(--file-pdf); }
+
+.ef-section-head { font-family: var(--font-display); font-size: var(--text-md); letter-spacing: -.005em; }
+.ef-label { font-size: var(--text-sm); color: var(--ink); }
+.ef-choice-text { font-weight: 500; }
+
+/* form: ช่องในแถวเดียวกันเรียงตรงกันเสมอ แม้ป้ายของอีกช่องยาวจนขึ้น 2 บรรทัด
+   (subgrid 4 แถว: ป้าย / ช่องกรอก / ข้อความช่วย / ข้อความผิดพลาด ใช้ร่วมกันทั้งแถว) */
+@supports (grid-template-rows: subgrid) {
+  .ef-field:not(.ef-group) { grid-row: span 4; grid-template-rows: subgrid; row-gap: 6px; align-content: initial; }
+  .ef-field:not(.ef-group) > .ef-label { align-self: end; }
+}
+
+/* form: แผงช่วยเหลือด้านขวา (aside) — ฟอร์มกว้างขึ้น + การ์ดย่อยติดจอขณะเลื่อน
+   (ผู้ใช้: พื้นที่ขวาว่าง — ขยายฟอร์มเต็มจอทำให้ช่องยาวเกินอ่านยาก จึงใช้เป็นข้อมูลประกอบแทน) */
+.ef.has-aside { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 340px); gap: var(--space-8); align-items: start; max-width: 1240px; }
+.ef.has-aside.is-done { grid-template-columns: minmax(0, 1fr); }
+.ef.has-aside.is-done .ef-aside { display: none; }
+.ef-aside { position: sticky; top: calc(var(--fixed-header-height, 120px) + var(--space-4)); display: grid; gap: var(--space-4); }
+.ef-aside-card { padding: var(--space-4) var(--space-6) var(--space-6); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
+.ef-aside-card h3 { display: flex; align-items: center; gap: var(--space-2); margin: 0 0 var(--space-2); color: var(--deep); font-family: var(--font-display); font-size: var(--text-base); }
+.ef-aside-card h3 .icon { width: 18px; height: 18px; flex: none; color: var(--gold); }
+.ef-aside-card p { margin: 0 0 var(--space-3); color: var(--muted); font-size: var(--text-sm); line-height: var(--leading-normal); }
+.ef-aside-card ul { display: grid; gap: var(--space-2); margin: 0; padding: 0; list-style: none; font-size: var(--text-sm); line-height: var(--leading-tight); }
+.ef-aside-card li { position: relative; padding-left: var(--space-6); color: var(--ink); }
+.ef-aside-card li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: .3em;
+  width: 6px;
+  height: 11px;
+  border: solid var(--deep);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.ef-aside-links { display: grid; gap: var(--space-2); }
+.ef-aside-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  color: var(--deep);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+.ef-aside-link .icon { width: 16px; height: 16px; flex: none; color: var(--gold); }
+.ef-aside-link:hover { border-color: var(--deep); background: color-mix(in srgb, var(--deep) 5%, var(--surface)); }
+.ef-aside-link.is-primary { border-color: var(--deep); background: var(--deep); color: var(--surface); justify-content: center; }
+.ef-aside-link.is-primary .icon { color: var(--surface); }
+.ef-aside-link.is-primary:hover { background: color-mix(in srgb, var(--deep) 85%, var(--ink)); }
+.ef-aside-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+@media (max-width: 1023.98px) {
+  .ef.has-aside { grid-template-columns: minmax(0, 1fr); }
+  .ef-aside { position: static; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) { .ef-aside-link { transition: none; } }
+/* แผงช่วยเหลือสูงเกินจอ (ขยายตัวอักษร/จอเตี้ย) — เลื่อนในแผงได้ ไม่ค้างตัดล่าง */
+@media (min-width: 1024px) {
+  .ef-aside { max-height: calc(100vh - var(--fixed-header-height, 120px) - var(--space-8)); overflow-y: auto; scrollbar-width: thin; }
+}
+
+/* form: rating — ข้อความประเมิน | แถบระดับ 5 ปุ่มติดกัน (มากที่สุด → น้อยที่สุด)
+   แต่ละข้อเป็นแถวคั่นเส้นบาง · มือถือ: ข้อความบน แถบระดับล่างเต็มกว้าง */
+.ef-group.is-rating {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-2) var(--space-6);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--line);
+}
+.ef-grid > .ef-group.is-rating + .ef-group.is-rating { margin-top: calc(var(--ef-gap) * -1); }
+.ef-group.is-rating > .ef-label { float: left; width: 100%; font-weight: 500; line-height: var(--leading-normal); }
+.ef-group.is-rating > .ef-error { grid-column: 1 / -1; }
+.ef-choices.is-scale { display: inline-flex; flex-wrap: nowrap; gap: 0; border: 1px solid color-mix(in srgb, var(--ink) 16%, var(--line)); border-radius: var(--radius-pill); background: var(--surface); }
+.ef-choices.is-scale .ef-choice {
+  min-height: 38px;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: var(--text-xs);
+  white-space: nowrap;
+}
+.ef-choices.is-scale .ef-choice + .ef-choice { border-left: 1px solid var(--line); }
+.ef-choices.is-scale .ef-choice:first-child { border-radius: var(--radius-pill) 0 0 var(--radius-pill); padding-left: var(--space-4); }
+.ef-choices.is-scale .ef-choice:last-child { border-radius: 0 var(--radius-pill) var(--radius-pill) 0; padding-right: var(--space-4); }
+.ef-choices.is-scale .ef-choice-box { display: none; }
+.ef-choices.is-scale .ef-choice:hover { background: color-mix(in srgb, var(--deep) 5%, var(--surface)); }
+.ef-choices.is-scale .ef-choice:has(input:checked) { background: var(--deep); color: var(--surface); font-weight: 700; }
+.ef-choices.is-scale .ef-choice:has(input:focus-visible) { outline: 3px solid var(--gold); outline-offset: -3px; }
+.is-invalid .ef-choices.is-scale { border-color: var(--file-pdf); }
+.is-invalid .ef-choices.is-scale .ef-choice { border-color: var(--line); }
+@media (max-width: 760px) {
+  .ef-group.is-rating { grid-template-columns: minmax(0, 1fr); }
+  .ef-choices.is-scale { display: flex; width: 100%; }
+  .ef-choices.is-scale .ef-choice { flex: 1 1 0; justify-content: center; padding: 0 var(--space-1); text-align: center; white-space: normal; line-height: var(--leading-tight); }
+  .ef-choices.is-scale .ef-choice:first-child, .ef-choices.is-scale .ef-choice:last-child { padding-inline: var(--space-1); }
+}
+
+/* =============================================================================
+   form layout "survey" — แบบสำรวจตามตัวอย่างผู้ใช้
+   การ์ดกลางจอ: หัวการ์ด → ตอน (เลขวงกลมเขียวทึบ) → ข้อประเมินเป็นการ์ดย่อยมีเลข + แถบ 5 ระดับเต็มกว้าง
+   แถบล่างติดขอบล่างจอ: "ตอบแล้ว x / n ข้อ" + ความคืบหน้า + ปุ่มส่ง (ครบทุกข้อ = ปุ่มสีเข้ม)
+   ============================================================================= */
+.ef.is-survey { max-width: 1120px; margin-inline: auto; counter-reset: ef-rq; }
+.ef.is-survey .ef-form { overflow: visible; padding: var(--space-8) var(--space-8) 0; border-radius: var(--radius-xl); }
+.ef-card-head { margin-bottom: var(--space-2); }
+.ef-card-head h3 { margin: 0 0 var(--space-2); color: var(--ink); font-family: var(--font-display); font-size: var(--text-xl); line-height: var(--leading-tight); }
+.ef-card-head p { margin: 0; color: var(--muted); font-size: var(--text-sm); }
+.ef.is-survey .ef-section { padding: var(--space-6) 0 var(--space-2); border-top: 0; background: transparent; }
+.ef.is-survey .ef-section-head { gap: var(--space-3); font-size: var(--text-lg); }
+.ef.is-survey .ef-num { width: 36px; height: 36px; background: var(--deep); color: var(--surface); font-size: var(--text-sm); }
+.ef.is-survey .ef-section.is-done .ef-num { color: transparent; }
+/* ตอบตัวเลือกเดียวที่มีป้ายซ้ำกับหัวตอน ("ท่านคือ") — ซ่อนป้ายช่อง ให้หัวตอนทำหน้าที่แทน */
+.ef.is-survey .ef-group:not(.is-rating) > .ef-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.ef.is-survey .ef-group:not(.is-rating) .ef-choice { min-height: 48px; padding: 0 var(--space-5, 20px); font-size: var(--text-base); }
+.ef.is-survey .ef-group:not(.is-rating) .ef-choice-box { display: none; }
+.ef.is-survey .ef-group:not(.is-rating) .ef-choice:has(input:checked) { background: var(--deep); border-color: var(--deep); color: var(--surface); font-weight: 700; }
+.ef.is-survey textarea + .ef-label, .ef.is-survey .ef-field:has(textarea) > .ef-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.ef.is-survey textarea.ef-input { min-height: 140px; font-size: var(--text-base); }
+
+/* ข้อประเมิน: การ์ดย่อย เลขข้อ + คำถาม + แถบ 5 ระดับเต็มกว้าง */
+.ef.is-survey .ef-group.is-rating {
+  counter-increment: ef-rq;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-5, 20px) var(--space-6) var(--space-6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-soft);
+  transition: background-color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+.ef.is-survey .ef-grid > .ef-group.is-rating + .ef-group.is-rating { margin-top: 0; }
+.ef.is-survey .ef-group.is-rating:has(input:checked) { background: var(--surface); border-color: color-mix(in srgb, var(--deep) 30%, var(--line)); }
+.ef.is-survey .ef-group.is-rating > .ef-label { display: flex; gap: var(--space-4); font-size: var(--text-base); font-weight: 600; }
+.ef.is-survey .ef-group.is-rating > .ef-label::before { content: counter(ef-rq, thai); min-width: 1.4em; color: var(--deep); font-weight: 700; }
+html[lang="en"] .ef.is-survey .ef-group.is-rating > .ef-label::before { content: counter(ef-rq); }
+.ef.is-survey .ef-group.is-rating > .ef-label .ef-req { display: none; }
+.ef.is-survey .ef-choices.is-scale { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: 100%; border-radius: var(--radius-md); overflow: hidden; }
+.ef.is-survey .ef-choices.is-scale .ef-choice,
+.ef.is-survey .ef-choices.is-scale .ef-choice:first-child,
+.ef.is-survey .ef-choices.is-scale .ef-choice:last-child { justify-content: center; min-height: 56px; padding: 0 var(--space-2); border-radius: 0; font-size: var(--text-sm); text-align: center; white-space: normal; }
+.ef.is-survey .ef-choices.is-scale .ef-choice:has(input:checked) { background: var(--deep); }
+
+/* แถบล่างติดจอ */
+.ef-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin: var(--space-6) calc(var(--space-8) * -1) 0;
+  padding: var(--space-4) var(--space-8);
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(8px);
+}
+.ef-bar-info { flex: 1; display: grid; gap: var(--space-2); }
+.ef-bar-text { color: var(--muted); font-size: var(--text-sm); }
+.ef-bar-track { height: 6px; overflow: hidden; border-radius: var(--radius-pill); background: color-mix(in srgb, var(--deep) 10%, var(--surface)); }
+.ef-bar-track span { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--deep); transition: width .35s var(--ease); }
+.ef-bar .ef-submit { flex: none; min-width: 200px; justify-content: center; background: color-mix(in srgb, var(--deep) 60%, var(--surface)); }
+.ef-bar.is-ready .ef-submit { background: var(--deep); }
+.ef-bar.is-ready .ef-bar-text { color: var(--deep); font-weight: 700; }
+
+@media (max-width: 640px) {
+  .ef.is-survey .ef-form { padding: var(--space-6) var(--space-4) 0; }
+  .ef.is-survey .ef-group.is-rating { padding: var(--space-4); }
+  .ef.is-survey .ef-choices.is-scale .ef-choice { min-height: 52px; font-size: var(--text-xs); }
+  .ef-bar { flex-wrap: wrap; gap: var(--space-3); margin-inline: calc(var(--space-4) * -1); padding: var(--space-3) var(--space-4); }
+  .ef-bar .ef-submit { flex: 1 1 100%; min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .ef-bar-track span, .ef.is-survey .ef-group.is-rating { transition: none; } }
+
+/* form survey: ลดขนาดตัวอักษรลงหนึ่งขั้นทุกส่วน (ผู้ใช้: font ใหญ่ไปมาก) */
+.ef-card-head h3 { font-size: var(--text-lg); }
+.ef-card-head p { font-size: var(--text-xs); }
+.ef.is-survey .ef-form { padding-top: var(--space-6); }
+.ef.is-survey .ef-section { padding-top: var(--space-4); }
+.ef.is-survey .ef-section-head { font-size: var(--text-md); margin-bottom: var(--space-3); }
+.ef.is-survey .ef-num { width: 28px; height: 28px; font-size: var(--text-xs); }
+.ef.is-survey .ef-group:not(.is-rating) .ef-choice { min-height: 40px; padding: 0 var(--space-4); font-size: var(--text-sm); }
+.ef.is-survey .ef-group.is-rating { gap: var(--space-3); padding: var(--space-4) var(--space-4) var(--space-4); }
+.ef.is-survey .ef-group.is-rating > .ef-label { font-size: var(--text-sm); }
+.ef.is-survey .ef-choices.is-scale .ef-choice,
+.ef.is-survey .ef-choices.is-scale .ef-choice:first-child,
+.ef.is-survey .ef-choices.is-scale .ef-choice:last-child { min-height: 44px; font-size: var(--text-xs); }
+.ef.is-survey textarea.ef-input { min-height: 112px; font-size: var(--text-sm); }
+.ef-bar .ef-bar-text { font-size: var(--text-xs); }
+.ef-bar .ef-submit { min-height: 44px; }

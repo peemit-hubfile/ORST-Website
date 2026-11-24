@@ -1,16 +1,16 @@
 {
   "$schema": "../blocks.schema.json",
-  "_note": "เว็บไซต์เดิมไม่มีแบบสำรวจความพึงพอใจเว็บไซต์ — รอลิงก์ (เช่น Google Form) จาก ORST",
+  "_note": "แบบสำรวจออนไลน์ (block form layout survey) ตามตัวอย่างที่ผู้ใช้ให้มา — ข้อ 4–6 ตั้งขึ้นให้ครบชุด ให้สำนักงานตรวจทานข้อคำถามก่อนใช้จริง · ยังไม่มีระบบรับข้อมูล (ไม่ใส่ action)",
   "title": "Website Survey",
   "navKey": "contact",
   "description": "Rate your satisfaction with the Office of the Royal Society website to help us improve our services",
   "sideNav": false,
-  "updatedAt": "2026-11-17",
+  "updatedAt": "2026-11-24",
   "blocks": [
     {
       "type": "page-hero",
       "heading": "Website Survey",
-      "lead": "Rate your satisfaction with the Office of the Royal Society website to help us improve our services",
+      "lead": "Takes about 2 minutes. Your feedback helps us improve the website.",
       "breadcrumb": [
         {
           "label": "Home",
@@ -26,28 +26,98 @@
       ]
     },
     {
-      "type": "feature-list",
-      "id": "feedback",
-      "layout": "cards",
-      "columns": 2,
-      "linkStyle": "rows",
-      "heading": "Share your feedback",
-      "lead": "Your feedback helps the Office improve the website and its services to better meet your needs.",
-      "items": [
+      "type": "form",
+      "id": "survey",
+      "layout": "survey",
+      "formTitle": "How satisfied are you with this website?",
+      "formLead": "Tap an answer for each item. Suggestions are optional.",
+      "submitLabel": "Submit survey",
+      "successTitle": "Thank you for taking the survey",
+      "successText": "Your feedback helps the Office improve its website and services to better meet your needs.",
+      "printable": false,
+      "againLabel": "Take the survey again",
+      "sections": [
         {
-          "icon": "i-check",
-          "title": "Website Survey",
-          "body": "Being prepared — [Website satisfaction survey link — awaiting information from the Office]"
+          "heading": "You are",
+          "fields": [
+            {
+              "name": "respondent",
+              "label": "You are",
+              "type": "radio",
+              "required": true,
+              "options": [
+                "Member of the public",
+                "Student",
+                "Teacher, lecturer or academic",
+                "Civil servant or government officer",
+                "Fellow or Associate Fellow",
+                "Other"
+              ]
+            }
+          ]
         },
         {
-          "icon": "i-form",
-          "title": "Feedback and suggestions form",
-          "body": "Share your opinions or suggestions on the work of the Office right away using the online form.",
-          "links": [
+          "heading": "Satisfaction by Aspect",
+          "fields": [
             {
-              "label": "Feedback form",
-              "href": "https://forms.gle/mc1qF9RCDQbvLnho6",
-              "kind": "Google Form"
+              "name": "q_content",
+              "label": "Content is accurate, complete and useful",
+              "type": "rating",
+              "required": true
+            },
+            {
+              "name": "q_current",
+              "label": "Information is up to date",
+              "type": "rating",
+              "required": true
+            },
+            {
+              "name": "q_search",
+              "label": "Easy to find what you need",
+              "type": "rating",
+              "required": true
+            },
+            {
+              "name": "q_menu",
+              "label": "Menus and categories are easy to understand",
+              "type": "rating",
+              "required": true
+            },
+            {
+              "name": "q_design",
+              "label": "Design is attractive and easy to read",
+              "type": "rating",
+              "required": true
+            },
+            {
+              "name": "q_speed",
+              "label": "Pages load quickly",
+              "type": "rating",
+              "required": true
+            },
+            {
+              "name": "q_mobile",
+              "label": "Easy to use on a mobile phone",
+              "type": "rating",
+              "required": true
+            },
+            {
+              "name": "q_overall",
+              "label": "Overall satisfaction",
+              "type": "rating",
+              "required": true
+            }
+          ]
+        },
+        {
+          "heading": "Additional Suggestions (Optional)",
+          "fields": [
+            {
+              "name": "suggestion",
+              "label": "Additional suggestions",
+              "type": "textarea",
+              "rows": 5,
+              "placeholder": "e.g. information you could not find, or parts that are hard to use"
             }
           ]
         }
