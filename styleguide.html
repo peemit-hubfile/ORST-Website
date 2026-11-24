@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
   <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
   <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
-  <link rel="stylesheet" href="assets/css/blocks.css?v=fa94aa47">
-  <link rel="stylesheet" href="assets/css/components.css?v=f562b8af">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=d4f79fbd">
+  <link rel="stylesheet" href="assets/css/components.css?v=af259e57">
 </head>
 
 <body data-page="home">
@@ -965,6 +965,152 @@
           </ul>
           <p class="doc-empty" data-doc-empty hidden>ไม่พบเจ้าหน้าที่ที่ตรงกับคำค้น ลองค้นด้วยคำอื่น หรือเลือก "ทั้งหมด"</p>
           <nav class="doc-pager" data-doc-pager aria-label="การแบ่งหน้า" hidden></nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt ef-wrap" id="sg-form">
+      <div class="container">
+      <div class="section-head">
+        <div>
+          
+          <h2>form — แบบฟอร์มออนไลน์ (e-Form)</h2>
+          <p>แบ่งตอนมีหมายเลข · ตอนที่แสดงตามตัวเลือก (showWhen) · ตรวจข้อมูลภาษาไทย · ไม่มี action = แสดงหน้าสรุปให้พิมพ์</p>
+        </div>
+        
+      </div>
+        
+        <div class="ef" data-ef>
+          <form class="ef-form" id="sg-form-form" novalidate data-ef-preview>
+          <div class="ef-progress" data-ef-progress data-total="4">
+            <div class="ef-progress-top">
+              <span class="ef-progress-label">ความคืบหน้า</span>
+              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก 4 ขั้น</span>
+            </div>
+            <div class="ef-progress-bar" role="progressbar" aria-label="ความคืบหน้าการกรอก" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span data-ef-progress-fill></span></div>
+            <p class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</p>
+          </div>
+          <fieldset class="ef-section" id="sg-form-step-1" data-ef-step="1">
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">1</span><span>ประเภทผู้ติดต่อ</span></legend>
+            
+            <div class="ef-grid">
+            <fieldset class="ef-field ef-group" data-ef-field>
+              <legend class="ef-label">ติดต่อในนาม<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices">
+                <label class="ef-choice">
+                  <input type="radio" name="who" value="บุคคลทั่วไป" required>
+                  
+                  <span class="ef-choice-text">บุคคลทั่วไป</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="who" value="หน่วยงาน" required>
+                  
+                  <span class="ef-choice-text">หน่วยงาน</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            </div>
+          </fieldset>
+          <fieldset class="ef-section is-placeholder" data-ef-placeholder="2" disabled>
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">2</span><span>ข้อมูลหน่วยงาน</span></legend>
+            <p class="ef-placeholder-text">เลือกตัวเลือกในขั้นก่อนหน้า แล้วช่องกรอกของขั้นนี้จะแสดงขึ้น</p>
+          </fieldset>
+          <fieldset class="ef-section" id="sg-form-step-2" data-ef-step="2" data-ef-show-field="who" data-ef-show-value="หน่วยงาน" hidden>
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">2</span><span>ข้อมูลหน่วยงาน</span></legend>
+            
+            <div class="ef-grid">
+            <div class="ef-field" data-ef-field>
+              <label class="ef-label" for="sg-form-org">ชื่อหน่วยงาน<span class="ef-req" aria-hidden="true">*</span></label>
+              <input class="ef-input" type="text" id="sg-form-org" name="org" required>
+              
+              <small class="ef-error" data-ef-error hidden></small>
+            </div>
+            </div>
+          </fieldset>
+          <fieldset class="ef-section" id="sg-form-step-3" data-ef-step="3">
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">3</span><span>รายละเอียด</span></legend>
+            
+            <div class="ef-grid">
+            <div class="ef-field is-half" data-ef-field>
+              <label class="ef-label" for="sg-form-name">ชื่อ-นามสกุล<span class="ef-req" aria-hidden="true">*</span></label>
+              <input class="ef-input" type="text" id="sg-form-name" name="name" required>
+              
+              <small class="ef-error" data-ef-error hidden></small>
+            </div>
+            <div class="ef-field is-half" data-ef-field>
+              <label class="ef-label" for="sg-form-email">อีเมล<span class="ef-req" aria-hidden="true">*</span></label>
+              <input class="ef-input" type="email" id="sg-form-email" name="email" required>
+              
+              <small class="ef-error" data-ef-error hidden></small>
+            </div>
+            <fieldset class="ef-field ef-group" data-ef-field data-ef-min="1">
+              <legend class="ef-label">หัวข้อ<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices">
+                <label class="ef-choice">
+                  <input type="checkbox" name="topics" value="ภาษาไทย">
+                  
+                  <span class="ef-choice-text">ภาษาไทย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="checkbox" name="topics" value="พจนานุกรม">
+                  
+                  <span class="ef-choice-text">พจนานุกรม</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice ef-choice-other">
+                  <input type="checkbox" name="topics" value="อื่น ๆ (ระบุ)" data-ef-other="sg-form-topics-other">
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                  <span class="ef-choice-text">อื่น ๆ (ระบุ)</span>
+                </label>
+                <input class="ef-input ef-other-input" type="text" id="sg-form-topics-other" name="topics_other" placeholder="โปรดระบุ" aria-label="อื่น ๆ (ระบุ) โปรดระบุ" hidden disabled>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <div class="ef-field" data-ef-field>
+              <label class="ef-label" for="sg-form-message">ข้อความ</label>
+              <textarea class="ef-input" rows="4" id="sg-form-message" name="message"></textarea>
+              
+              <small class="ef-error" data-ef-error hidden></small>
+            </div>
+            </div>
+          </fieldset>
+          <fieldset class="ef-section ef-section-consent" id="sg-form-step-4" data-ef-step="4">
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">4</span><span>ยืนยันและยื่นคำขอ</span></legend>
+            <div class="ef-consent" data-ef-field>
+              <label class="ef-choice ef-choice-consent">
+                <input type="checkbox" name="consent" value="ยินยอม" required>
+                <span class="ef-choice-box" aria-hidden="true"></span>
+                <span class="ef-choice-text">ยินยอมให้ใช้ข้อมูลนี้เพื่อการติดต่อกลับ</span>
+              </label>
+              <small class="ef-error" data-ef-error hidden></small>
+            </div>
+            <div class="ef-actions">
+              <button class="ef-submit" type="submit">ส่งแบบฟอร์ม <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+              <button class="ef-reset" type="reset">ล้างข้อมูล</button>
+            </div>
+            
+          </fieldset>
+          </form>
+          <div class="ef-done" data-ef-done hidden tabindex="-1">
+            <div class="ef-done-head">
+              <span class="ef-done-ic" aria-hidden="true"><svg class="icon-lg" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              <div>
+                <h3>ได้รับคำขอของท่านแล้ว</h3>
+                
+              </div>
+            </div>
+            <dl class="ef-summary" data-ef-summary></dl>
+            <div class="ef-actions">
+              <button class="ef-submit" type="button" data-ef-print><svg class="icon" aria-hidden="true"><use href="#i-print"></use></svg> พิมพ์คำขอ</button>
+              <button class="ef-reset" type="button" data-ef-again>กรอกคำขอใหม่</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1944,7 +2090,7 @@
 
   <div id="app-footer"></div>
 
-  <script src="assets/js/components.js?v=000c7dbb"></script>
+  <script src="assets/js/components.js?v=390c43f4"></script>
   <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
 </body>
 

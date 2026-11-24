@@ -39,6 +39,15 @@ const STAFF_LINKS = [
   ['ระบบลงเวลา', 'https://time.orst.go.th', 'บันทึกเวลาปฏิบัติงาน', 'i-clock'],
 ];
 // ชื่อระบบภาษาอังกฤษ (e-Office, DPIS) ไม่ต้องแปล
+
+// บัญชีโซเชียลทางการ — แสดงเป็นไอคอนใน footer (ย้ายมาจากเมนู "ติดต่อเรา" ตามที่ผู้ใช้สั่ง)
+// ที่มา: content/pages/social-media.json (บัญชีจริงของสำนักงาน) — เพิ่ม/ลบที่นี่และหน้านั้นให้ตรงกัน
+// [ชื่อบริการ, ลิงก์, ไอคอน]
+const SOCIAL_LINKS = [
+  ['Facebook', 'https://www.facebook.com/206167399441363', 'i-facebook'],
+  ['Messenger', 'https://m.me/206167399441363', 'i-messenger'],
+  ['YouTube', 'https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g', 'i-youtube'],
+];
 const staffName = label => /^[a-z]/i.test(label) ? `<span data-i18n-skip lang="en">${label}</span>` : label;
 
 // ลิงก์แชท Facebook Messenger ของเพจสำนักงาน — ใช้กับปุ่ม "เริ่มแชทใน Messenger" ในการ์ดแชทมุมขวาล่าง (เปิดแท็บใหม่)
@@ -259,6 +268,7 @@ const icons = `
   <symbol id="i-clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v4h4"></path><path d="M12 7v5l3 2"></path></symbol>
   <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"></path></symbol>
   <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 1 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></symbol>
   <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"></circle><path d="M4 8h16"></path><path d="M12 6v16"></path><path d="m8 22 4-10 4 10"></path></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-5"></path></symbol>
@@ -280,6 +290,9 @@ const icons = `
   <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M19 13h-2v-2a2 2 0 1 0-4 0v2h-2V9h2V7a2 2 0 1 0-4 0v2H5v10h14Z"></path></symbol>
   <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></symbol>
   <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.7 2.6a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6.2 6.2l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2z"></path></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"></path></symbol>
+  <symbol id="i-messenger" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 0C5.24 0 0 4.95 0 11.64c0 3.5 1.43 6.52 3.77 8.61.2.17.31.42.32.68l.06 2.13a.96.96 0 0 0 1.35.85l2.38-1.05c.2-.09.43-.1.64-.05 1.09.3 2.26.46 3.48.46 6.76 0 12-4.95 12-11.64S18.76 0 12 0zm7.2 8.95-3.52 5.59a1.8 1.8 0 0 1-2.6.48l-2.8-2.1a.72.72 0 0 0-.87 0l-3.78 2.87c-.5.38-1.17-.22-.83-.76l3.52-5.59a1.8 1.8 0 0 1 2.6-.48l2.8 2.1c.26.19.61.19.87 0l3.78-2.87c.5-.38 1.17.22.83.76z"></path></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"></path></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path><path d="m22 6-10 7L2 6"></path></symbol>
   <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="18" cy="19" r="2.5"></circle><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"></path></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"></rect><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"></path></symbol>
@@ -505,8 +518,8 @@ const megaMenuData = {
         links: [
           ['รับเรื่องร้องเรียน ร้องทุกข์ และติดตามสถานะ', `${basePath}complaints.html`],
           ['แบบฟอร์มติดต่อสอบถามและข้อเสนอแนะ (e-Form)', `${basePath}contact.html#message-form`],
+          ['แบบคำขออนุญาตจัดพิมพ์หรือใช้สิ่งพิมพ์และสื่อของสำนักงาน (e-Form)', `${basePath}publication-permission.html`],
           ['แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์', `${basePath}website-survey.html`],
-          ['เครือข่ายสังคมออนไลน์ (Social Media)', `${basePath}social-media.html`],
         ]
       }
     ]
@@ -992,6 +1005,13 @@ function renderFooter() {
             <div class="orst-footer-actions">
               <a class="orst-footer-primary" href="${basePath}contact.html">ติดต่อเรา ${icon('i-arrow')}</a>
               <a class="orst-footer-secondary" href="${basePath}contact.html#map">${icon('i-pin')} แผนที่และการเดินทาง</a>
+            </div>
+
+            <div class="orst-footer-social">
+              <span class="orst-footer-social-label">ติดตามเรา</span>
+              <ul>
+                ${SOCIAL_LINKS.map(([name, url, ic]) => `<li><a href="${url}" target="_blank" rel="noopener noreferrer" title="${name}">${icon(ic)}<span class="sr-only" lang="en" data-i18n-skip>${name}</span><span class="sr-only">(เปิดในแท็บใหม่)</span></a></li>`).join('')}
+              </ul>
             </div>
           </div>
 
@@ -2163,6 +2183,212 @@ function initPageIndex() {
   });
 }
 
+/* -----------------------------------------------------------------------------
+   แบบฟอร์มออนไลน์ (block form ใน blocks.js)
+   - ตอนที่มี data-ef-show-field แสดงเมื่อเลือกค่าที่ตรงกัน (ตอนที่ซ่อน = fieldset disabled ไม่ถูกตรวจ/ไม่ถูกส่ง)
+   - ตัวเลือก "อื่น ๆ" เปิดช่องให้ระบุ (บังคับกรอกเมื่อเลือก)
+   - ตรวจข้อมูลเอง ข้อความผิดพลาดภาษาไทยใต้ช่อง · checkbox ที่บังคับ = เลือกอย่างน้อย 1
+   - ไม่มี action (ต้นแบบ): แสดงหน้าสรุปคำขอ + พิมพ์ได้ · มี action: ส่งแบบปกติหลังตรวจผ่าน
+   -------------------------------------------------------------------------- */
+function initForms() {
+  document.querySelectorAll('[data-ef]').forEach(root => {
+    if (root.dataset.efBound === '1') return;
+    root.dataset.efBound = '1';
+    const form = root.querySelector('form');
+    const done = root.querySelector('[data-ef-done]');
+    const summary = root.querySelector('[data-ef-summary]');
+    if (!form) return;
+    const switches = [...form.querySelectorAll('[data-ef-show-field]')];
+
+    const valueOf = name => {
+      const checked = form.querySelector(`[name="${CSS.escape(name)}"]:checked`);
+      if (checked) return checked.value;
+      const el = form.elements[name];
+      return el && !(el instanceof RadioNodeList) ? el.value : '';
+    };
+    const placeholders = [...form.querySelectorAll('[data-ef-placeholder]')];
+    const syncSections = () => {
+      switches.forEach(sec => {
+        const on = valueOf(sec.dataset.efShowField) === sec.dataset.efShowValue;
+        sec.hidden = !on;
+        sec.disabled = !on;
+      });
+      placeholders.forEach(ph => {
+        ph.hidden = [...form.querySelectorAll(`[data-ef-step="${ph.dataset.efPlaceholder}"]`)].some(sec => !sec.hidden);
+      });
+    };
+    const syncOthers = () => form.querySelectorAll('[data-ef-other]').forEach(opt => {
+      const input = document.getElementById(opt.dataset.efOther);
+      if (!input) return;
+      const on = opt.checked && !opt.disabled;
+      input.hidden = !on;
+      input.disabled = !on;
+      input.required = on;
+    });
+
+    // ข้อความผิดพลาดตามชนิดช่อง — รูปแบบไม่ตรงใช้ข้อความช่วย (hint) ของช่องนั้นต่อท้าย เช่น "ตัวเลข 13 หลัก ..."
+    const message = (el, field) => {
+      const v = el.validity;
+      if (v.valueMissing) {
+        if (el.name === 'consent') return 'กรุณายืนยันว่ารับทราบและยินยอมปฏิบัติตามเงื่อนไข';
+        if (el.classList.contains('ef-other-input')) return 'กรุณาระบุรายละเอียดของตัวเลือก "อื่น ๆ"';
+        return el.type === 'radio' || el.type === 'checkbox' || el.tagName === 'SELECT' ? 'กรุณาเลือก' : 'กรุณากรอกข้อมูล';
+      }
+      if (v.typeMismatch) return el.type === 'email' ? 'รูปแบบอีเมลไม่ถูกต้อง' : 'รูปแบบข้อมูลไม่ถูกต้อง';
+      if (v.patternMismatch) {
+        const hint = field?.querySelector('.ef-hint')?.textContent.trim();
+        return hint ? `รูปแบบข้อมูลไม่ถูกต้อง (${hint})` : 'รูปแบบข้อมูลไม่ถูกต้อง';
+      }
+      if (v.rangeUnderflow) return 'ค่าน้อยกว่าที่กำหนด';
+      if (v.badInput) return 'รูปแบบข้อมูลไม่ถูกต้อง';
+      return el.validationMessage;
+    };
+    const setError = (field, msg) => {
+      const box = field.querySelector('[data-ef-error]');
+      if (box) { box.textContent = msg; box.hidden = !msg; }
+      field.classList.toggle('is-invalid', Boolean(msg));
+      field.querySelectorAll('input, select, textarea').forEach(el => {
+        if (msg) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+      });
+    };
+    const checkField = field => {
+      if (field.closest('fieldset:disabled')) { setError(field, ''); return true; }
+      let msg = '';
+      if (field.dataset.efMin && ![...field.querySelectorAll('input[type="checkbox"]')].some(c => c.checked)) {
+        msg = 'กรุณาเลือกอย่างน้อย 1 รายการ';
+      }
+      if (!msg) {
+        const bad = [...field.querySelectorAll('input, select, textarea')].find(el => !el.disabled && !el.checkValidity());
+        if (bad) msg = message(bad, field);
+      }
+      setError(field, msg);
+      return !msg;
+    };
+    const fields = () => [...form.querySelectorAll('[data-ef-field]')];
+
+    const progress = root.querySelector('[data-ef-progress]');
+    const stepNums = [...new Set([...form.querySelectorAll('[data-ef-step]')].map(sec => sec.dataset.efStep))];
+    const fieldOk = field => {
+      if (field.closest('fieldset:disabled')) return true;
+      if (field.dataset.efMin && ![...field.querySelectorAll('input[type="checkbox"]')].some(c => c.checked)) return false;
+      return [...field.querySelectorAll('input, select, textarea')].every(el => el.disabled || el.checkValidity());
+    };
+    // ขั้นที่กรอกช่องที่ต้องกรอกครบ: เลขตอนเป็น ✓ · แถบความคืบหน้าเดินตามจำนวนขั้นที่ครบ
+    const updateSteps = () => {
+      let doneCount = 0;
+      stepNums.forEach(n => {
+        const secs = [...form.querySelectorAll(`[data-ef-step="${n}"]`)].filter(sec => !sec.disabled);
+        const done = secs.length > 0 && secs.every(sec => [...sec.querySelectorAll('[data-ef-field]')].every(fieldOk));
+        form.querySelectorAll(`[data-ef-step="${n}"]`).forEach(sec => sec.classList.toggle('is-done', done && !sec.disabled));
+        if (done) doneCount += 1;
+      });
+      // แบบสำรวจ: นับข้อที่ต้องตอบ (ช่องบังคับในตอนที่แสดง) ที่ตอบแล้ว
+      const bar = root.querySelector('[data-ef-bar]');
+      if (bar) {
+        const req = fields().filter(f => !f.closest('fieldset:disabled') && !f.parentElement.closest('[data-ef-field]')
+          && (f.dataset.efMin || f.querySelector('[required]')));
+        const answered = req.filter(fieldOk).length;
+        bar.querySelector('[data-ef-bar-text]').textContent = `ตอบแล้ว ${answered} / ${req.length} ข้อ`;
+        bar.querySelector('[data-ef-bar-fill]').style.width = `${req.length ? (answered / req.length) * 100 : 0}%`;
+        bar.classList.toggle('is-ready', answered === req.length);
+      }
+      if (!progress) return;
+      const total = stepNums.length;
+      progress.querySelector('[data-ef-progress-text]').textContent = doneCount === total ? 'กรอกครบทุกขั้นแล้ว พร้อมยื่นคำขอ' : `กรอกครบ ${doneCount} จาก ${total} ขั้น`;
+      progress.querySelector('[data-ef-progress-fill]').style.width = `${(doneCount / total) * 100}%`;
+      progress.querySelector('[role="progressbar"]').setAttribute('aria-valuenow', String(doneCount));
+      progress.classList.toggle('is-complete', doneCount === total);
+    };
+
+    form.addEventListener('change', e => {
+      syncSections();
+      syncOthers();
+      const field = e.target.closest('[data-ef-field]');
+      if (field?.classList.contains('is-invalid')) checkField(field);
+      updateSteps();
+    });
+    form.addEventListener('input', e => {
+      const field = e.target.closest('[data-ef-field]');
+      if (field?.classList.contains('is-invalid')) checkField(field);
+      updateSteps();
+    });
+    form.addEventListener('reset', () => setTimeout(() => {
+      form.querySelectorAll('select.ui-select-native').forEach(sel => sel.dispatchEvent(new Event('change')));
+      syncSections();
+      syncOthers();
+      fields().forEach(f => setError(f, ''));
+      updateSteps();
+    }));
+
+    // หน้าสรุปคำขอ: ชื่อตอน แล้วตามด้วย "หัวข้อ: ค่า" ของช่องที่กรอก (ข้ามตอนที่ซ่อน/ช่องว่าง)
+    const labelOf = field => (field.querySelector('.ef-label')?.textContent || '').replace('*', '').trim();
+    const shownValue = field => {
+      const group = field.matches('fieldset');
+      if (group) {
+        return [...field.querySelectorAll('input:checked')].map(c => {
+          const other = c.dataset.efOther && document.getElementById(c.dataset.efOther)?.value.trim();
+          return other ? `${c.value}: ${other}` : c.value;
+        }).join(', ');
+      }
+      const el = field.querySelector('input, select, textarea');
+      if (!el) return '';
+      if (el.type === 'file') return [...el.files].map(f => f.name).join(', ');
+      if (el.type === 'checkbox') return el.checked ? el.value : '';
+      return el.value.trim();
+    };
+    const buildSummary = () => {
+      const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      const rows = [...form.querySelectorAll('.ef-section')].filter(sec => !sec.disabled).map(sec => {
+        const title = sec.querySelector('.ef-section-head span:last-child')?.textContent || '';
+        const items = [...sec.querySelectorAll('[data-ef-field]')]
+          .filter(f => !f.parentElement.closest('[data-ef-field]'))
+          .map(f => [labelOf(f), shownValue(f)]).filter(([, v]) => v);
+        if (!items.length) return '';
+        return `<div class="ef-sum-sec"><h4>${esc(title)}</h4>${items.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</div>`;
+      }).join('');
+      const when = new Date().toLocaleString(document.documentElement.lang === 'en' ? 'en-GB' : 'th-TH', { dateStyle: 'long', timeStyle: 'short' });
+      summary.innerHTML = `${rows}<div class="ef-sum-sec"><h4>วันที่ยื่นคำขอ</h4><div><dt>วันที่</dt><dd>${esc(when)}</dd></div></div>`;
+    };
+
+    form.addEventListener('submit', e => {
+      syncSections();
+      syncOthers();
+      const bad = fields().filter(f => !checkField(f));
+      if (bad.length) {
+        e.preventDefault();
+        bad[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        (bad[0].querySelector('.ui-select-btn') || bad[0].querySelector('input:not([disabled]), select, textarea'))?.focus({ preventScroll: true });
+        return;
+      }
+      if (!form.hasAttribute('data-ef-preview')) return;   // มีปลายทางจริง — ส่งตามปกติ
+      e.preventDefault();
+      buildSummary();
+      root.classList.add('is-done');
+      form.hidden = true;
+      done.hidden = false;
+      done.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      done.focus({ preventScroll: true });
+    });
+
+    root.querySelector('[data-ef-print]')?.addEventListener('click', () => {
+      document.documentElement.classList.add('is-ef-print');
+      window.print();
+      setTimeout(() => document.documentElement.classList.remove('is-ef-print'), 500);
+    });
+    root.querySelector('[data-ef-again]')?.addEventListener('click', () => {
+      form.reset();
+      root.classList.remove('is-done');
+      done.hidden = true;
+      form.hidden = false;
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    syncSections();
+    syncOthers();
+    updateSteps();
+  });
+}
+
 function initCopy() {
   document.querySelectorAll('[data-copy]').forEach(btn => {
     if (btn.dataset.copyBound === '1') return;
@@ -2663,7 +2889,7 @@ function initDocPreview() {
    - คีย์บอร์ด: Enter/Space/↓ เปิด, ↑↓ Home End เลื่อน, Enter เลือก, Esc/Tab ปิด, พิมพ์อักษรแรกเพื่อกระโดด
    - เรียกซ้ำได้ (ข้าม select ที่ครอบแล้ว) — ใช้หลังสร้างเนื้อหาใหม่ เช่น ตัวแบ่งหน้า
    -------------------------------------------------------------------------- */
-const UI_SELECT_TARGETS = '.doc-year-pill select, .doc-field select, .doc-pager-size select, .kb-select select, .kb-per select, select.ui-select';
+const UI_SELECT_TARGETS = '.doc-year-pill select, .doc-field select, .doc-pager-size select, .kb-select select, .kb-per select, select.ui-select, select.ef-input';
 let uiSelectSeq = 0;
 
 function enhanceSelects(root = document) {
@@ -2680,6 +2906,7 @@ function enhanceSelects(root = document) {
     sel.setAttribute('aria-hidden', 'true');
 
     const label = sel.getAttribute('aria-label')
+      || sel.labels?.[0]?.textContent?.replace('*', '').trim()
       || sel.closest('label')?.querySelector('.sr-only, span')?.textContent?.trim()
       || sel.closest('label')?.childNodes[0]?.textContent?.trim() || '';
     const btn = document.createElement('button');
@@ -2706,6 +2933,7 @@ function enhanceSelects(root = document) {
           <span>${o.text.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]))}</span>${icon('i-check', 'icon ui-select-check')}
         </li>`).join('');
       btn.querySelector('.ui-select-value').textContent = sel.selectedOptions[0]?.text || '';
+      btn.classList.toggle('is-placeholder', !sel.value && sel.required !== undefined && sel.options[0]?.value === '' && sel.selectedIndex === 0);
       if (label) btn.setAttribute('aria-label', `${label}: ${sel.selectedOptions[0]?.text || ''}`);
     };
     const setActive = i => {
@@ -3421,6 +3649,7 @@ window.orstHeader = {
   bindDynamicContent() {
     initCompactFAQ();
     initDocLists();
+    initForms();
     enhanceSelects();
     initLightbox();
     initDocPreview();

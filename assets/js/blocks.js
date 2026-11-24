@@ -1458,6 +1458,212 @@ function documentList(b) {
         </div>`, 'doc-section');
 }
 
+/* ---------- Block: form  (แบบฟอร์มออนไลน์ / e-Form) ---------- */
+/* แบบฟอร์มจาก JSON — แบ่งเป็นตอน (fieldset) มีหมายเลขตอน · ตอนที่แสดงเฉพาะเมื่อเลือกค่าหนึ่ง (showWhen)
+   { type, heading?, lead?, action? (URL ปลายทาง — ไม่ใส่ = ต้นแบบ แสดงหน้าสรุปคำขอในเครื่อง ไม่ส่งไปไหน),
+     submitLabel?, note?, successTitle?, successText?, printable? (false = ไม่มีปุ่มพิมพ์), printLabel?, againLabel?,
+     layout?: "survey" (การ์ดกลางจอ + แถบตอบแล้ว x/n ติดล่าง), formTitle?, formLead? (หัวในการ์ด),
+     sections: [{ heading, stepLabel? (ชื่อสั้นในแถบขั้นตอน), lead?, showWhen?: { field, value },
+                  fields: [{ name, label, type: text|email|tel|number|date|textarea|select|radio|checkbox|rating|file,
+                             required?, options?: [string], other?: string (ตัวเลือก "อื่น ๆ" ที่ต้องระบุเพิ่ม),
+                             width?: "half"|"third"|"full", placeholder?, hint?, pattern?, inputmode?, maxlength?,
+                             autocomplete?, accept?, min?, rows?, value?,
+                             layout?: "cards" (radio/checkbox เป็นการ์ดใหญ่), icons?: [iconId], optionHints?: [string] }] }],
+     consent?: { text, required?, stepLabel?, terms?: { title, items: [string], note?, open? } },
+     aside?: [{ heading, icon?, text?, items?: [string], links?: [{ label, href, icon?, primary? }] }] }
+   การทำงาน (ซ่อน/แสดงตอน, ตรวจข้อมูล, หน้าสรุป, พิมพ์) อยู่ที่ initForms() ใน components.js */
+const RATING_SCALE = ['มากที่สุด', 'มาก', 'ปานกลาง', 'น้อย', 'น้อยที่สุด'];
+
+function formField(f, uid) {
+  // rating = radio แบบแถบระดับ (ค่าเริ่มต้น 5 ระดับ มากที่สุด → น้อยที่สุด) แสดงข้อความประเมินซ้าย ระดับขวา
+  if (f.type === 'rating') f = { ...f, type: 'radio', options: f.options || RATING_SCALE, _rating: true };
+  const id = `${uid}-${f.name}`;
+  const req = f.required ? ' required' : '';
+  const star = f.required ? '<span class="ef-req" aria-hidden="true">*</span>' : '';
+  const hint = f.hint ? `<small class="ef-hint" id="${esc(id)}-hint">${esc(f.hint)}</small>` : '';
+  const desc = f.hint ? ` aria-describedby="${esc(id)}-hint"` : '';
+  const width = ['half', 'third'].includes(f.width) ? ` is-${f.width}` : '';
+  const err = '<small class="ef-error" data-ef-error hidden></small>';
+  const opts = f.options || [];
+
+  if (f.type === 'radio' || f.type === 'checkbox') {
+    const isCheck = f.type === 'checkbox';
+    const radioReq = !isCheck && f.required ? ' required' : '';
+    const cards = f.layout === 'cards';
+    const items = opts.map((o, i) => `
+                <label class="ef-choice${cards ? ' is-card' : ''}">
+                  <input type="${f.type}" name="${esc(f.name)}" value="${esc(o)}"${radioReq}>
+                  ${cards && f.icons?.[i] ? `<span class="ef-choice-ic" aria-hidden="true">${icon(f.icons[i])}</span>` : ''}
+                  <span class="ef-choice-text">${esc(o)}${cards && f.optionHints?.[i] ? `<small>${esc(f.optionHints[i])}</small>` : ''}</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>`).join('');
+    const other = f.other ? `
+                <label class="ef-choice ef-choice-other">
+                  <input type="${f.type}" name="${esc(f.name)}" value="${esc(f.other)}" data-ef-other="${esc(id)}-other"${radioReq}>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                  <span class="ef-choice-text">${esc(f.other)}</span>
+                </label>
+                <input class="ef-input ef-other-input" type="text" id="${esc(id)}-other" name="${esc(f.name)}_other" placeholder="โปรดระบุ" aria-label="${esc(f.other)} โปรดระบุ" hidden disabled>` : '';
+    const minAttr = isCheck && f.required ? ' data-ef-min="1"' : '';
+    return `
+            <fieldset class="ef-field ef-group${width}${f._rating ? ' is-rating' : ''}" data-ef-field${minAttr}${desc}>
+              <legend class="ef-label">${esc(f.label)}${star}</legend>
+              ${hint}
+              <div class="ef-choices${cards ? ' is-cards' : ''}${f._rating ? ' is-scale' : ''}">${items}${other}
+              </div>
+              ${err}
+            </fieldset>`;
+  }
+
+  const common = `id="${esc(id)}" name="${esc(f.name)}"${req}${desc}${f.type === 'select' ? '' : attr('placeholder', f.placeholder)}${attr('pattern', f.pattern)}${attr('inputmode', f.inputmode)}${attr('maxlength', f.maxlength)}${attr('autocomplete', f.autocomplete)}`;
+  let control;
+  if (f.type === 'textarea') {
+    control = `<textarea class="ef-input" rows="${Number(f.rows) || 4}" ${common}>${esc(f.value || '')}</textarea>`;
+  } else if (f.type === 'select') {
+    control = `<select class="ef-input" ${common}>
+                <option value="">${esc(f.placeholder || 'เลือก')}</option>
+                ${opts.map(o => `<option value="${esc(o)}">${esc(o)}</option>`).join('')}
+              </select>`;
+  } else if (f.type === 'file') {
+    control = `<input class="ef-input ef-file" type="file" ${common}${attr('accept', f.accept)}>`;
+  } else {
+    const type = ['email', 'tel', 'number', 'date'].includes(f.type) ? f.type : 'text';
+    control = `<input class="ef-input" type="${type}" ${common}${attr('min', f.min)}${attr('value', f.value)}>`;
+  }
+  return `
+            <div class="ef-field${width}" data-ef-field>
+              <label class="ef-label" for="${esc(id)}">${esc(f.label)}${star}</label>
+              ${control}
+              ${hint}
+              ${err}
+            </div>`;
+}
+
+function form(b) {
+  const uid = esc(b.id || 'eform');
+  const survey = b.layout === 'survey';   // แบบสำรวจ: การ์ดกลางจอ หัวการ์ด + แถบ "ตอบแล้ว x / n ข้อ" ติดล่าง
+  // ขั้นตอน: ตอนทางเลือก (showWhen ฟิลด์เดียวกันติดกัน เช่น นิติบุคคล / บุคคลธรรมดา) อยู่ขั้นเดียวกัน — ผู้ใช้เห็นทีละตอน
+  const steps = [];
+  let prevSwitch = '';
+  const sections = (b.sections || []).map(s => {
+    const sw = s.showWhen?.field || '';
+    const startsGroup = !sw || sw !== prevSwitch;
+    if (startsGroup) steps.push(s.stepLabel || s.heading);
+    prevSwitch = sw;
+    const n = steps.length;
+    const show = sw
+      ? ` data-ef-show-field="${esc(sw)}" data-ef-show-value="${esc(s.showWhen.value)}" hidden`
+      : '';
+    // กลุ่มตอนทางเลือก: ตัวแทนจาง ๆ แสดงจนกว่าจะเลือกในขั้นก่อนหน้า (ลำดับตอนไม่กระโดด) — disabled = ไม่ถูกตรวจ/ไม่ลงสรุป
+    const placeholder = sw && startsGroup ? `
+          <fieldset class="ef-section is-placeholder" data-ef-placeholder="${n}" disabled>
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">${n}</span><span>${esc(s.stepLabel || s.heading)}</span></legend>
+            <p class="ef-placeholder-text">เลือกตัวเลือกในขั้นก่อนหน้า แล้วช่องกรอกของขั้นนี้จะแสดงขึ้น</p>
+          </fieldset>` : '';
+    return `${placeholder}
+          <fieldset class="ef-section" id="${uid}-step-${n}" data-ef-step="${n}"${show}>
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">${n}</span><span>${esc(s.heading)}</span></legend>
+            ${s.lead ? `<p class="ef-section-lead">${esc(s.lead)}</p>` : ''}
+            <div class="ef-grid">${(s.fields || []).map(f => formField(f, uid)).join('')}
+            </div>
+          </fieldset>`;
+  }).join('');
+  const consentStep = b.consent?.text ? steps.push(b.consent.stepLabel || 'ยืนยันและยื่นคำขอ') : 0;
+  // เงื่อนไข/ข้อตกลงที่ผู้ยื่นต้องยินยอม — กล่องพับได้ (เปิดอ่านก่อนติ๊กยินยอม) ไม่แยกไปไว้ต้นหน้า
+  const t = b.consent?.terms;
+  const terms = t?.items?.length ? `
+            <details class="ef-terms"${t.open ? ' open' : ''}>
+              <summary>${icon('i-file')}<span>${esc(t.title || 'อ่านเงื่อนไข')} <span class="ef-terms-count">(${t.items.length} ข้อ)</span></span>${icon('i-chevron', 'icon ef-terms-chev')}</summary>
+              <div class="ef-terms-body">
+                <ol>${t.items.map(x => `<li>${esc(x)}</li>`).join('')}</ol>
+                ${t.note ? `<p>${esc(t.note)}</p>` : ''}
+              </div>
+            </details>` : '';
+  const consent = b.consent?.text ? `
+          <fieldset class="ef-section ef-section-consent" id="${uid}-step-${consentStep}" data-ef-step="${consentStep}">
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">${consentStep}</span><span>${esc(steps[consentStep - 1])}</span></legend>${terms}
+            <div class="ef-consent" data-ef-field>
+              <label class="ef-choice ef-choice-consent">
+                <input type="checkbox" name="consent" value="ยินยอม"${b.consent.required !== false ? ' required' : ''}>
+                <span class="ef-choice-box" aria-hidden="true"></span>
+                <span class="ef-choice-text">${esc(b.consent.text)}</span>
+              </label>
+              <small class="ef-error" data-ef-error hidden></small>
+            </div>
+            <div class="ef-actions">
+              <button class="ef-submit" type="submit">${esc(b.submitLabel || 'ส่งคำขอ')} ${icon('i-arrow')}</button>
+              <button class="ef-reset" type="reset">ล้างข้อมูล</button>
+            </div>
+            ${b.note ? `<p class="ef-note">${esc(b.note)}</p>` : ''}
+          </fieldset>` : survey ? `
+          <div class="ef-bar" data-ef-bar>
+            <div class="ef-bar-info">
+              <span class="ef-bar-text" data-ef-bar-text aria-live="polite">ตอบแล้ว 0 ข้อ</span>
+              <div class="ef-bar-track" aria-hidden="true"><span data-ef-bar-fill></span></div>
+            </div>
+            <button class="ef-submit" type="submit">${esc(b.submitLabel || 'ส่งแบบสำรวจ')}</button>
+          </div>` : `
+          <div class="ef-section ef-section-consent">
+            <div class="ef-actions">
+              <button class="ef-submit" type="submit">${esc(b.submitLabel || 'ส่งคำขอ')} ${icon('i-arrow')}</button>
+              <button class="ef-reset" type="reset">ล้างข้อมูล</button>
+            </div>
+            ${b.note ? `<p class="ef-note">${esc(b.note)}</p>` : ''}
+          </div>`;
+  // แถบความคืบหน้าบนสุดของการ์ด (ผู้ใช้: เอาแถบขั้นตอนด้านซ้ายออก) — initForms อัปเดตจำนวนขั้นที่กรอกครบ
+  const progress = !survey && steps.length > 1 ? `
+          <div class="ef-progress" data-ef-progress data-total="${steps.length}">
+            <div class="ef-progress-top">
+              <span class="ef-progress-label">ความคืบหน้า</span>
+              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก ${steps.length} ขั้น</span>
+            </div>
+            <div class="ef-progress-bar" role="progressbar" aria-label="ความคืบหน้าการกรอก" aria-valuemin="0" aria-valuemax="${steps.length}" aria-valuenow="0"><span data-ef-progress-fill></span></div>
+            <p class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</p>
+          </div>` : '';
+  // แผงช่วยเหลือด้านขวา (ติดจอขณะเลื่อน · มือถืออยู่ใต้ฟอร์ม): การ์ดย่อย หัวข้อ + รายการ/ข้อความ/ลิงก์
+  const aside = (b.aside || []).length ? `
+          <aside class="ef-aside" aria-label="ข้อมูลประกอบการยื่นคำขอ">${b.aside.map(card => {
+            const links = (card.links || []).map(l => {
+              const ext = /^https?:/i.test(l.href || '');
+              const file = /\.pdf$/i.test(l.href || '');
+              const nt = ext || file ? ' target="_blank" rel="noopener noreferrer"' : '';
+              return `<a class="ef-aside-link${l.primary ? ' is-primary' : ''}" href="${esc(l.href)}"${nt}>${icon(l.icon || (file ? 'i-download' : 'i-arrow'))}<span>${esc(l.label)}</span>${nt ? '<span class="sr-only"> (เปิดในแท็บใหม่)</span>' : ''}</a>`;
+            }).join('');
+            return `
+            <section class="ef-aside-card">
+              <h3>${card.icon ? icon(card.icon) : ''}<span>${esc(card.heading)}</span></h3>
+              ${card.text ? `<p>${esc(card.text)}</p>` : ''}
+              ${(card.items || []).length ? `<ul>${card.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+              ${links ? `<div class="ef-aside-links">${links}</div>` : ''}
+            </section>`;
+          }).join('')}
+          </aside>` : '';
+  const action = b.action ? ` action="${esc(b.action)}" method="post" enctype="multipart/form-data"` : ' data-ef-preview';
+  return section(b, `
+        <div class="ef${aside ? ' has-aside' : ''}${survey ? ' is-survey' : ''}" data-ef>
+          <form class="ef-form" id="${uid}-form" novalidate${action}>${b.formTitle ? `
+            <header class="ef-card-head">
+              <h3>${esc(b.formTitle)}</h3>
+              ${b.formLead ? `<p>${esc(b.formLead)}</p>` : ''}
+            </header>` : ''}${progress}${sections}${consent}
+          </form>${aside}
+          <div class="ef-done" data-ef-done hidden tabindex="-1">
+            <div class="ef-done-head">
+              <span class="ef-done-ic" aria-hidden="true">${icon('i-check', 'icon-lg')}</span>
+              <div>
+                <h3>${esc(b.successTitle || 'ได้รับคำขอของท่านแล้ว')}</h3>
+                ${b.successText ? `<p>${esc(b.successText)}</p>` : ''}
+              </div>
+            </div>
+            <dl class="ef-summary" data-ef-summary></dl>
+            <div class="ef-actions">
+              ${b.printable === false ? '' : `<button class="ef-submit" type="button" data-ef-print>${icon('i-print')} ${esc(b.printLabel || 'พิมพ์คำขอ')}</button>`}
+              <button class="ef-reset" type="button" data-ef-again>${esc(b.againLabel || 'กรอกคำขอใหม่')}</button>
+            </div>
+          </div>
+        </div>`, 'ef-wrap');
+}
+
 /* ---------- Block: staff-directory  (สมุดรายชื่อเจ้าหน้าที่) ---------- */
 /* การ์ดเจ้าหน้าที่ + ค้นหาชื่อ/ตำแหน่ง/หน่วยงาน + กรองตามหน่วยงาน + สลับมุมมองการ์ด/รายการ
    ใช้ตัวกรองและตัวแบ่งหน้าชุดเดียวกับ document-list (components.js initDocLists)
@@ -2164,6 +2370,7 @@ export const BLOCKS = {
   'page-index': pageIndex,
   'person-grid': personGrid,
   'staff-directory': staffDirectory,
+  'form': form,
   'person-profile': personProfile,
   'timeline': timeline,
   'pillars': pillars,

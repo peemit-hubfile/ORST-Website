@@ -601,6 +601,82 @@
       ]
     },
     {
+      "type": "form",
+      "id": "sg-form",
+      "variant": "alt",
+      "heading": "form — Online form (e-Form)",
+      "lead": "Numbered sections · sections shown by choice (showWhen) · Thai validation messages · no action = printable summary",
+      "submitLabel": "Submit form",
+      "sections": [
+        {
+          "heading": "Contact type",
+          "fields": [
+            {
+              "name": "who",
+              "label": "Contacting as",
+              "type": "radio",
+              "required": true,
+              "options": [
+                "Individual",
+                "Unit"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Organization details",
+          "showWhen": {
+            "field": "who",
+            "value": "Unit"
+          },
+          "fields": [
+            {
+              "name": "org",
+              "label": "Name of the Office",
+              "required": true
+            }
+          ]
+        },
+        {
+          "heading": "Details",
+          "fields": [
+            {
+              "name": "name",
+              "label": "Full name",
+              "required": true,
+              "width": "half"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "required": true,
+              "width": "half"
+            },
+            {
+              "name": "topics",
+              "label": "Heading",
+              "type": "checkbox",
+              "required": true,
+              "options": [
+                "Thai language",
+                "Dictionary"
+              ],
+              "other": "Other (please specify)"
+            },
+            {
+              "name": "message",
+              "label": "Message",
+              "type": "textarea"
+            }
+          ]
+        }
+      ],
+      "consent": {
+        "text": "I consent to this information being used to contact me"
+      }
+    },
+    {
       "type": "media-grid",
       "id": "b-media-contain",
       "heading": "media-grid (ratio 3:4, fit contain)",

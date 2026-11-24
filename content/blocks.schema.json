@@ -97,6 +97,7 @@
             { "$ref": "#/definitions/pageIndex" },
             { "$ref": "#/definitions/personGrid" },
             { "$ref": "#/definitions/staffDirectory" },
+            { "$ref": "#/definitions/formBlock" },
             { "$ref": "#/definitions/personProfile" },
             { "$ref": "#/definitions/timeline" },
             { "$ref": "#/definitions/pillars" },
@@ -515,6 +516,110 @@
         }
       },
       "required": ["type", "groups"]
+    },
+
+    "formBlock": {
+      "description": "แบบฟอร์มออนไลน์ (e-Form) — แบ่งตอน มีหมายเลข · ตอนที่แสดงตามตัวเลือก (showWhen) · ตรวจข้อมูลภาษาไทย · ไม่มี action = ต้นแบบ แสดงหน้าสรุปคำขอ + พิมพ์ (ไม่ส่งข้อมูลไปไหน)",
+      "properties": {
+        "type": { "const": "form" },
+        "action": { "type": "string", "description": "URL ปลายทางที่รับข้อมูล (POST) — ไม่ใส่ = ยังไม่มีระบบรับ แสดงหน้าสรุปให้พิมพ์" },
+        "submitLabel": { "type": "string" },
+        "printable": { "type": "boolean", "description": "false = หน้าสรุปไม่มีปุ่มพิมพ์ (เช่น แบบสำรวจ)" },
+        "layout": { "enum": ["survey"], "description": "survey = การ์ดกลางจอ หัวการ์ด ข้อประเมินเป็นการ์ดมีเลข และแถบ \"ตอบแล้ว x / n ข้อ\" + ปุ่มส่งติดล่าง" },
+        "formTitle": { "type": "string", "description": "หัวข้อในการ์ดฟอร์ม" },
+        "formLead": { "type": "string" },
+        "printLabel": { "type": "string" },
+        "againLabel": { "type": "string" },
+        "note": { "type": "string", "description": "ข้อความเล็กใต้ปุ่มส่ง" },
+        "successTitle": { "type": "string" },
+        "successText": { "type": "string" },
+        "consent": {
+          "type": "object",
+          "required": ["text"],
+          "properties": { "text": { "type": "string" }, "required": { "type": "boolean" }, "stepLabel": { "type": "string", "description": "ชื่อขั้นสุดท้าย (ค่าเริ่มต้น: ยืนยันและยื่นคำขอ)" },
+            "terms": {
+              "type": "object",
+              "required": ["items"],
+              "description": "เงื่อนไข/ข้อตกลง — กล่องพับได้เหนือช่องยินยอม",
+              "properties": { "title": { "type": "string" }, "items": { "type": "array", "items": { "type": "string" } }, "note": { "type": "string" }, "open": { "type": "boolean" } }
+            } }
+        },
+        "aside": {
+          "type": "array",
+          "description": "แผงช่วยเหลือด้านขวาของฟอร์ม (มือถืออยู่ใต้ฟอร์ม)",
+          "items": {
+            "type": "object",
+            "required": ["heading"],
+            "additionalProperties": false,
+            "properties": {
+              "heading": { "type": "string" },
+              "icon": { "$ref": "#/definitions/iconId" },
+              "text": { "type": "string" },
+              "items": { "type": "array", "items": { "type": "string" } },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["label", "href"],
+                  "properties": { "label": { "type": "string" }, "href": { "type": "string" }, "icon": { "$ref": "#/definitions/iconId" }, "primary": { "type": "boolean" } }
+                }
+              }
+            }
+          }
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["heading", "fields"],
+            "additionalProperties": false,
+            "properties": {
+              "heading": { "type": "string" },
+              "stepLabel": { "type": "string", "description": "ชื่อสั้นในแถบขั้นตอน (ไม่ใส่ = ใช้ heading)" },
+              "lead": { "type": "string" },
+              "showWhen": {
+                "type": "object",
+                "required": ["field", "value"],
+                "properties": { "field": { "type": "string" }, "value": { "type": "string" } },
+                "description": "แสดงตอนนี้เฉพาะเมื่อช่อง field มีค่า value (ตอนที่ซ่อนไม่ถูกตรวจ/ไม่ถูกส่ง)"
+              },
+              "fields": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["name", "label"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": { "type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9_-]*$" },
+                    "label": { "type": "string" },
+                    "type": { "enum": ["text", "email", "tel", "number", "date", "textarea", "select", "radio", "checkbox", "rating", "file"], "description": "rating = ระดับความพึงพอใจ (ค่าเริ่มต้น 5 ระดับ มากที่สุด → น้อยที่สุด)" },
+                    "required": { "type": "boolean" },
+                    "options": { "type": "array", "items": { "type": "string" } },
+                    "other": { "type": "string", "description": "ตัวเลือกท้ายสุดที่เปิดช่องให้ระบุเพิ่ม เช่น \"สื่ออื่น ๆ (ระบุ)\"" },
+                    "width": { "enum": ["full", "half", "third"] },
+                    "placeholder": { "type": "string" },
+                    "hint": { "type": "string" },
+                    "pattern": { "type": "string" },
+                    "inputmode": { "type": "string" },
+                    "maxlength": { "type": "integer" },
+                    "autocomplete": { "type": "string" },
+                    "accept": { "type": "string" },
+                    "min": { "type": "string" },
+                    "rows": { "type": "integer" },
+                    "value": { "type": "string" },
+                    "layout": { "enum": ["cards"], "description": "radio/checkbox เป็นการ์ดใหญ่ (มีไอคอน/คำอธิบายได้)" },
+                    "icons": { "type": "array", "items": { "$ref": "#/definitions/iconId" }, "description": "ไอคอนคู่กับ options ทีละข้อ (layout: cards)" },
+                    "optionHints": { "type": "array", "items": { "type": "string" }, "description": "คำอธิบายใต้ตัวเลือกทีละข้อ (layout: cards)" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": ["type", "sections"]
     },
 
     "staffDirectory": {

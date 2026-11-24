@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
   <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
   <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
-  <link rel="stylesheet" href="assets/css/blocks.css?v=fa94aa47">
-  <link rel="stylesheet" href="assets/css/components.css?v=f562b8af">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=d4f79fbd">
+  <link rel="stylesheet" href="assets/css/components.css?v=af259e57">
 </head>
 
 <body data-page="contact">
@@ -36,43 +36,408 @@
         <nav class="block-breadcrumb" aria-label="เส้นทางหน้า"><a href="index.html">หน้าหลัก</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><a href="contact.html">ติดต่อเรา</a><span class="crumb-sep" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></span><span aria-current="page" title="แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์">แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์</span></nav>
         
         <h1>แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์</h1>
-        <p>ร่วมประเมินความพึงพอใจการใช้งานเว็บไซต์สำนักงานราชบัณฑิตยสภา เพื่อนำไปปรับปรุงการให้บริการ</p>
+        <p>ใช้เวลาประมาณ 2 นาที ความเห็นของท่านช่วยให้เราปรับปรุงเว็บไซต์</p>
         
         
       </div>
       
     </section>
 
-    <section class="section" id="feedback">
+    <section class="section ef-wrap" id="survey">
       <div class="container">
-      <div class="section-head">
-        <div>
-          
-          <h2>ร่วมแสดงความคิดเห็น</h2>
-          <p>ความคิดเห็นของท่านช่วยให้สำนักงานปรับปรุงเว็บไซต์และการให้บริการได้ตรงกับความต้องการมากขึ้น</p>
-        </div>
         
-      </div>
-        <ul class="block-grid block-grid-2 block-feature-list block-feature-cards">
-            <li class="block-feature">
-              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-check"></use></svg></span>
-              <div>
-                <strong>แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์</strong>
-                <p class="is-pending">อยู่ระหว่างจัดทำ — [ลิงก์แบบสำรวจความพึงพอใจการใช้งานเว็บไซต์ — รอข้อมูลจากสำนักงาน]</p>
-                
-                
+        <div class="ef is-survey" data-ef>
+          <form class="ef-form" id="survey-form" novalidate data-ef-preview>
+            <header class="ef-card-head">
+              <h3>ท่านพึงพอใจการใช้งานเว็บไซต์นี้เพียงใด</h3>
+              <p>แตะเลือกคำตอบในแต่ละข้อ ส่วนข้อเสนอแนะจะกรอกหรือไม่ก็ได้</p>
+            </header>
+          <fieldset class="ef-section" id="survey-step-1" data-ef-step="1">
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">1</span><span>ท่านคือ</span></legend>
+            
+            <div class="ef-grid">
+            <fieldset class="ef-field ef-group" data-ef-field>
+              <legend class="ef-label">ท่านคือ<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices">
+                <label class="ef-choice">
+                  <input type="radio" name="respondent" value="ประชาชนทั่วไป" required>
+                  
+                  <span class="ef-choice-text">ประชาชนทั่วไป</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="respondent" value="นักเรียน นักศึกษา" required>
+                  
+                  <span class="ef-choice-text">นักเรียน นักศึกษา</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="respondent" value="ครู อาจารย์ นักวิชาการ" required>
+                  
+                  <span class="ef-choice-text">ครู อาจารย์ นักวิชาการ</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="respondent" value="ข้าราชการ เจ้าหน้าที่ของรัฐ" required>
+                  
+                  <span class="ef-choice-text">ข้าราชการ เจ้าหน้าที่ของรัฐ</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="respondent" value="ราชบัณฑิตหรือภาคีสมาชิก" required>
+                  
+                  <span class="ef-choice-text">ราชบัณฑิตหรือภาคีสมาชิก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="respondent" value="อื่น ๆ" required>
+                  
+                  <span class="ef-choice-text">อื่น ๆ</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
               </div>
-            </li>
-            <li class="block-feature">
-              <span class="block-feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-form"></use></svg></span>
-              <div>
-                <strong>แบบรับฟังความคิดเห็น/ข้อเสนอแนะ</strong>
-                <p>แสดงความคิดเห็นหรือข้อเสนอแนะต่อการดำเนินงานของสำนักงานได้ทันทีผ่านแบบฟอร์มออนไลน์</p>
-                
-                <div class="block-feature-links feature-rows"><a class="feature-row" href="https://forms.gle/mc1qF9RCDQbvLnho6" target="_blank" rel="noopener noreferrer"><svg class="icon feature-row-ic" aria-hidden="true"><use href="#i-form"></use></svg><span class="feature-row-body"><small>Google Form</small><span>แบบรับฟังความคิดเห็น</span></span><svg class="icon feature-row-go" aria-hidden="true"><use href="#i-external"></use></svg><span class="sr-only"> (เปิดในแท็บใหม่)</span></a></div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            </div>
+          </fieldset>
+          <fieldset class="ef-section" id="survey-step-2" data-ef-step="2">
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">2</span><span>ความพึงพอใจต่อเว็บไซต์ในแต่ละด้าน</span></legend>
+            
+            <div class="ef-grid">
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">เนื้อหาถูกต้อง ครบถ้วน และเป็นประโยชน์<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_content" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_content" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_content" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_content" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_content" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
               </div>
-            </li>
-        </ul>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">ข้อมูลเป็นปัจจุบัน<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_current" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_current" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_current" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_current" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_current" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">ค้นหาข้อมูลที่ต้องการได้ง่าย<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_search" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_search" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_search" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_search" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_search" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">เมนูและการจัดหมวดหมู่เข้าใจง่าย<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_menu" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_menu" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_menu" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_menu" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_menu" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">การออกแบบสวยงาม อ่านง่าย สบายตา<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_design" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_design" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_design" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_design" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_design" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">เว็บไซต์แสดงผลรวดเร็ว<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_speed" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_speed" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_speed" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_speed" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_speed" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">ใช้งานบนโทรศัพท์มือถือได้สะดวก<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_mobile" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_mobile" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_mobile" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_mobile" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_mobile" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            <fieldset class="ef-field ef-group is-rating" data-ef-field>
+              <legend class="ef-label">ความพึงพอใจโดยรวม<span class="ef-req" aria-hidden="true">*</span></legend>
+              
+              <div class="ef-choices is-scale">
+                <label class="ef-choice">
+                  <input type="radio" name="q_overall" value="มากที่สุด" required>
+                  
+                  <span class="ef-choice-text">มากที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_overall" value="มาก" required>
+                  
+                  <span class="ef-choice-text">มาก</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_overall" value="ปานกลาง" required>
+                  
+                  <span class="ef-choice-text">ปานกลาง</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_overall" value="น้อย" required>
+                  
+                  <span class="ef-choice-text">น้อย</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+                <label class="ef-choice">
+                  <input type="radio" name="q_overall" value="น้อยที่สุด" required>
+                  
+                  <span class="ef-choice-text">น้อยที่สุด</span>
+                  <span class="ef-choice-box" aria-hidden="true"></span>
+                </label>
+              </div>
+              <small class="ef-error" data-ef-error hidden></small>
+            </fieldset>
+            </div>
+          </fieldset>
+          <fieldset class="ef-section" id="survey-step-3" data-ef-step="3">
+            <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">3</span><span>ข้อเสนอแนะเพิ่มเติม (ถ้ามี)</span></legend>
+            
+            <div class="ef-grid">
+            <div class="ef-field" data-ef-field>
+              <label class="ef-label" for="survey-suggestion">ข้อเสนอแนะเพิ่มเติม</label>
+              <textarea class="ef-input" rows="5" id="survey-suggestion" name="suggestion" placeholder="เช่น ข้อมูลที่ต้องการแต่หาไม่พบ หรือส่วนที่ใช้งานยาก"></textarea>
+              
+              <small class="ef-error" data-ef-error hidden></small>
+            </div>
+            </div>
+          </fieldset>
+          <div class="ef-bar" data-ef-bar>
+            <div class="ef-bar-info">
+              <span class="ef-bar-text" data-ef-bar-text aria-live="polite">ตอบแล้ว 0 ข้อ</span>
+              <div class="ef-bar-track" aria-hidden="true"><span data-ef-bar-fill></span></div>
+            </div>
+            <button class="ef-submit" type="submit">ส่งแบบสำรวจ</button>
+          </div>
+          </form>
+          <div class="ef-done" data-ef-done hidden tabindex="-1">
+            <div class="ef-done-head">
+              <span class="ef-done-ic" aria-hidden="true"><svg class="icon-lg" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              <div>
+                <h3>ขอบคุณที่ร่วมตอบแบบสำรวจ</h3>
+                <p>ความคิดเห็นของท่านช่วยให้สำนักงานปรับปรุงเว็บไซต์และการให้บริการได้ตรงกับความต้องการมากขึ้น</p>
+              </div>
+            </div>
+            <dl class="ef-summary" data-ef-summary></dl>
+            <div class="ef-actions">
+              
+              <button class="ef-reset" type="button" data-ef-again>ตอบแบบสำรวจอีกครั้ง</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     </div>
@@ -80,7 +445,7 @@
 
   <div id="app-footer"></div>
 
-  <script src="assets/js/components.js?v=000c7dbb"></script>
+  <script src="assets/js/components.js?v=390c43f4"></script>
   <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
 </body>
 
