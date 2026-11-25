@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
   <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
   <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
-  <link rel="stylesheet" href="assets/css/blocks.css?v=d4f79fbd">
-  <link rel="stylesheet" href="assets/css/components.css?v=af259e57">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=49cf1392">
+  <link rel="stylesheet" href="assets/css/components.css?v=2ffd7057">
 </head>
 
 <body data-page="contact">
@@ -56,14 +56,19 @@
         
         <div class="ef has-aside" data-ef>
           <form class="ef-form" id="permission-form" novalidate data-ef-preview>
-          <div class="ef-progress" data-ef-progress data-total="4">
-            <div class="ef-progress-top">
-              <span class="ef-progress-label">ความคืบหน้า</span>
-              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก 4 ขั้น</span>
-            </div>
+          <nav class="ef-progress" data-ef-progress data-total="4" aria-label="ขั้นตอนการกรอก">
+            <ol class="ef-steps" style="--ef-steps:4">
+              <li><a class="ef-step" href="#permission-step-1" data-ef-step-link="1"><span class="ef-step-num" aria-hidden="true">1</span><span class="ef-step-label">ประเภทผู้ขออนุญาต</span></a></li>
+              <li><a class="ef-step" href="#permission-step-2" data-ef-step-link="2"><span class="ef-step-num" aria-hidden="true">2</span><span class="ef-step-label">ข้อมูลผู้ขออนุญาต</span></a></li>
+              <li><a class="ef-step" href="#permission-step-3" data-ef-step-link="3"><span class="ef-step-num" aria-hidden="true">3</span><span class="ef-step-label">รายละเอียดที่ขออนุญาต</span></a></li>
+              <li><a class="ef-step" href="#permission-step-4" data-ef-step-link="4"><span class="ef-step-num" aria-hidden="true">4</span><span class="ef-step-label">ยืนยันและยื่นคำขอ</span></a></li>
+            </ol>
             <div class="ef-progress-bar" role="progressbar" aria-label="ความคืบหน้าการกรอก" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span data-ef-progress-fill></span></div>
-            <p class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</p>
-          </div>
+            <div class="ef-progress-top">
+              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก 4 ขั้น</span>
+              <span class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</span>
+            </div>
+          </nav>
           <fieldset class="ef-section" id="permission-step-1" data-ef-step="1">
             <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">1</span><span>ประเภทผู้ขออนุญาต</span></legend>
             
@@ -89,7 +94,7 @@
             </fieldset>
             </div>
           </fieldset>
-          <fieldset class="ef-section is-placeholder" data-ef-placeholder="2" disabled>
+          <fieldset class="ef-section is-placeholder" id="permission-step-2-wait" data-ef-placeholder="2" disabled>
             <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">2</span><span>ข้อมูลผู้ขออนุญาต</span></legend>
             <p class="ef-placeholder-text">เลือกตัวเลือกในขั้นก่อนหน้า แล้วช่องกรอกของขั้นนี้จะแสดงขึ้น</p>
           </fieldset>
@@ -98,54 +103,62 @@
             
             <div class="ef-grid">
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="permission-orgName">ชื่อหน่วยงาน / ภาครัฐ / ภาคเอกชน<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgName">ชื่อหน่วยงาน / ภาครัฐ / ภาคเอกชน<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="text" id="permission-orgName" name="orgName" required autocomplete="organization">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="permission-orgAddress">ที่อยู่<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgAddress">ที่อยู่<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <textarea class="ef-input" rows="2" id="permission-orgAddress" name="orgAddress" required autocomplete="street-address"></textarea>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-orgPhone">หมายเลขโทรศัพท์<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgPhone">หมายเลขโทรศัพท์<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="tel" id="permission-orgPhone" name="orgPhone" required inputmode="tel" autocomplete="tel">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-orgFax">โทรสาร</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgFax">โทรสาร</label>
+              </div>
               <input class="ef-input" type="tel" id="permission-orgFax" name="orgFax" inputmode="tel">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-orgEmail">อีเมล<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgEmail">อีเมล<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="email" id="permission-orgEmail" name="orgEmail" required autocomplete="email">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-orgRegType">ประเภทนิติบุคคลตามหนังสือรับรองการจดทะเบียน</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgRegType">ประเภทนิติบุคคลตามหนังสือรับรองการจดทะเบียน</label><small class="ef-hint" id="permission-orgRegType-hint">เฉพาะภาคเอกชน หน่วยงานภาครัฐไม่ต้องเลือก</small>
+              </div>
               <select class="ef-input" id="permission-orgRegType" name="orgRegType" aria-describedby="permission-orgRegType-hint">
                 <option value="">เลือกประเภทนิติบุคคล</option>
                 <option value="บริษัทจำกัด">บริษัทจำกัด</option><option value="บริษัทมหาชนจำกัด">บริษัทมหาชนจำกัด</option><option value="ห้างหุ้นส่วนจำกัด">ห้างหุ้นส่วนจำกัด</option><option value="ห้างหุ้นส่วนสามัญจดทะเบียน">ห้างหุ้นส่วนสามัญจดทะเบียน</option>
               </select>
-              <small class="ef-hint" id="permission-orgRegType-hint">เฉพาะภาคเอกชน หน่วยงานภาครัฐไม่ต้องเลือก</small>
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-orgRepresentative">โดย (ผู้มีอำนาจจัดการแทนนิติบุคคล / ผู้รับมอบอำนาจ)<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgRepresentative">โดย (ผู้มีอำนาจจัดการแทนนิติบุคคล / ผู้รับมอบอำนาจ)<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="text" id="permission-orgRepresentative" name="orgRepresentative" required autocomplete="name">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-orgPoaDate">หนังสือมอบอำนาจ ลงวันที่</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-orgPoaDate">หนังสือมอบอำนาจ ลงวันที่</label><small class="ef-hint" id="permission-orgPoaDate-hint">กรณีผู้รับมอบอำนาจ</small>
+              </div>
               <input class="ef-input" type="date" id="permission-orgPoaDate" name="orgPoaDate" aria-describedby="permission-orgPoaDate-hint">
-              <small class="ef-hint" id="permission-orgPoaDate-hint">กรณีผู้รับมอบอำนาจ</small>
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             </div>
@@ -155,66 +168,76 @@
             
             <div class="ef-grid">
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-personTitle">คำนำหน้า<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personTitle">คำนำหน้า<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <select class="ef-input" id="permission-personTitle" name="personTitle" required autocomplete="honorific-prefix">
                 <option value="">เลือกคำนำหน้า</option>
                 <option value="นาย">นาย</option><option value="นาง">นาง</option><option value="นางสาว">นางสาว</option>
               </select>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-personFirstName">ชื่อ<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personFirstName">ชื่อ<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="text" id="permission-personFirstName" name="personFirstName" required autocomplete="given-name">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-personLastName">นามสกุล<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personLastName">นามสกุล<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="text" id="permission-personLastName" name="personLastName" required autocomplete="family-name">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-personOccupation">อาชีพ</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personOccupation">อาชีพ</label>
+              </div>
               <input class="ef-input" type="text" id="permission-personOccupation" name="personOccupation">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-personPosition">ตำแหน่ง</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personPosition">ตำแหน่ง</label>
+              </div>
               <input class="ef-input" type="text" id="permission-personPosition" name="personPosition" autocomplete="organization-title">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-personIdCard">บัตรประชาชนเลขที่<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personIdCard">บัตรประชาชนเลขที่<span class="ef-req" aria-hidden="true">*</span></label><small class="ef-hint" id="permission-personIdCard-hint">ตัวเลข 13 หลัก ไม่ต้องเว้นวรรคหรือขีด</small>
+              </div>
               <input class="ef-input" type="text" id="permission-personIdCard" name="personIdCard" required aria-describedby="permission-personIdCard-hint" pattern="\d{13}" inputmode="numeric" maxlength="13">
-              <small class="ef-hint" id="permission-personIdCard-hint">ตัวเลข 13 หลัก ไม่ต้องเว้นวรรคหรือขีด</small>
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="permission-personAddress">ที่อยู่<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personAddress">ที่อยู่<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <textarea class="ef-input" rows="2" id="permission-personAddress" name="personAddress" required autocomplete="street-address"></textarea>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-personPhone">หมายเลขโทรศัพท์<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personPhone">หมายเลขโทรศัพท์<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="tel" id="permission-personPhone" name="personPhone" required inputmode="tel" autocomplete="tel">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-personFax">โทรสาร</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personFax">โทรสาร</label>
+              </div>
               <input class="ef-input" type="tel" id="permission-personFax" name="personFax" inputmode="tel">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-third" data-ef-field>
-              <label class="ef-label" for="permission-personEmail">อีเมล<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-personEmail">อีเมล<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="email" id="permission-personEmail" name="personEmail" required autocomplete="email">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             </div>
@@ -255,39 +278,45 @@
               <small class="ef-error" data-ef-error hidden></small>
             </fieldset>
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="permission-workTitle">ชื่อเรื่อง<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-workTitle">ชื่อเรื่อง<span class="ef-req" aria-hidden="true">*</span></label><small class="ef-hint" id="permission-workTitle-hint">ชื่อสิ่งพิมพ์หรือสื่อของสำนักงานราชบัณฑิตยสภาที่ขออนุญาต</small>
+              </div>
               <input class="ef-input" type="text" id="permission-workTitle" name="workTitle" required aria-describedby="permission-workTitle-hint">
-              <small class="ef-hint" id="permission-workTitle-hint">ชื่อสิ่งพิมพ์หรือสื่อของสำนักงานราชบัณฑิตยสภาที่ขออนุญาต</small>
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-quantity">จำนวน<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-quantity">จำนวน<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="number" id="permission-quantity" name="quantity" required inputmode="numeric" min="1">
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="permission-unit">หน่วยนับ</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-unit">หน่วยนับ</label><small class="ef-hint" id="permission-unit-hint">เล่ม หรือหน่วยนับอย่างอื่น (ระบุ)</small>
+              </div>
               <input class="ef-input" type="text" id="permission-unit" name="unit" aria-describedby="permission-unit-hint" value="เล่ม">
-              <small class="ef-hint" id="permission-unit-hint">เล่ม หรือหน่วยนับอย่างอื่น (ระบุ)</small>
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="permission-purpose">เพื่อ (ระบุวัตถุประสงค์โดยละเอียด)<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-purpose">เพื่อ (ระบุวัตถุประสงค์โดยละเอียด)<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <textarea class="ef-input" rows="3" id="permission-purpose" name="purpose" required></textarea>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="permission-details">รายละเอียดอื่น ๆ ในการขอใช้</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-details">รายละเอียดอื่น ๆ ในการขอใช้</label>
+              </div>
               <textarea class="ef-input" rows="2" id="permission-details" name="details"></textarea>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="permission-attachment">เอกสารประกอบ (ถ้ามี)</label>
+              <div class="ef-head">
+                <label class="ef-label" for="permission-attachment">เอกสารประกอบ (ถ้ามี)</label><small class="ef-hint" id="permission-attachment-hint">เช่น สำเนาหนังสือรับรองการจดทะเบียนนิติบุคคล หรือหนังสือมอบอำนาจ (PDF / JPG / PNG)</small>
+              </div>
               <input class="ef-input ef-file" type="file" id="permission-attachment" name="attachment" aria-describedby="permission-attachment-hint" accept=".pdf,.jpg,.jpeg,.png">
-              <small class="ef-hint" id="permission-attachment-hint">เช่น สำเนาหนังสือรับรองการจดทะเบียนนิติบุคคล หรือหนังสือมอบอำนาจ (PDF / JPG / PNG)</small>
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             </div>
@@ -358,7 +387,7 @@
 
   <div id="app-footer"></div>
 
-  <script src="assets/js/components.js?v=390c43f4"></script>
+  <script src="assets/js/components.js?v=d2557c29"></script>
   <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
 </body>
 

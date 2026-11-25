@@ -2994,183 +2994,202 @@ html.i18n-pending body { visibility: hidden; }   /* ระหว่างโห�
 .orst-footer-visitors b { color: #fff; font-weight: 600; }
 
 /* แถบขอความยินยอมคุกกี้ (initCookieBar ใน components.js)
-   - แถบเต็มความกว้างชิดล่างแบบเว็บไซต์ราชการ: หัวข้อ + คำอธิบายเต็ม + ลิงก์นโยบาย · ปุ่มเรียงด้านขวา (มือถือเรียงใต้ข้อความ)
-   - "รายละเอียดคุกกี้" กางรายการสิ่งที่จัดเก็บจริง
-   - เคลื่อนไหวเท่าที่จำเป็น: เลื่อนขึ้นตอนเปิดหน้า เลื่อนลงเมื่อเลือกแล้ว */
+   - "ด็อก" สีเขียวเข้มประจำเว็บ (สีพื้นเรียบ ไม่ไล่โทน) ลอยกลางล่าง ขอบทองบาง ๆ · ข้อความบรรทัดเดียวสั้น ๆ
+   - ปุ่มหลักสีทองอ่อน (เด่นสุดบนพื้นเข้ม) · "เฉพาะที่จำเป็น" ขอบใส · "ตั้งค่า" กางแผงสวิตช์ด้านบน
+   - สวิตช์ทุกตัวเปิดค้าง = คุกกี้ที่จำเป็น ปิดไม่ได้ (เว็บไม่มีคุกกี้ติดตาม/โฆษณาให้เลือก)
+   - แท็บเล็ตลงมา: ปุ่มขึ้นบรรทัดใหม่ · มือถือ: แผ่นเต็มความกว้างชิดล่าง ยกปุ่มลอยขึ้นเหนือแผ่น
+   - สีอิงตัวแปร --deep / --gold → โหมด high-contrast (deep=ดำ gold=เหลือง) ปรับตามเอง */
 .cookie-bar {
+  --ck-fg: #fff;
+  --ck-soft: color-mix(in srgb, #fff 72%, transparent);
+  --ck-line: color-mix(in srgb, #fff 14%, transparent);
+  --ck-gold: color-mix(in srgb, var(--gold) 55%, #fff);
   position: fixed;
-  inset: auto 0 0 0;
+  left: 0;
+  right: 0;
+  bottom: 20px;
   z-index: 10015;
-  max-height: 85vh;
+  width: min(1060px, calc(100vw - 320px)); /* เว้นขวาให้ปุ่มลอย (ขึ้นด้านบน + ช่วยการเข้าถึง) */
+  margin-inline: auto;
+  max-height: calc(100vh - 40px);
   overflow-y: auto;
-  background: var(--surface);
-  color: var(--ink);
-  border-top: 4px solid var(--deep);
-  box-shadow: 0 -12px 32px color-mix(in srgb, var(--ink) 12%, transparent);
-  transform: translateY(100%);
-  transition: transform .45s var(--ease);
+  overscroll-behavior: contain;
+  color: var(--ck-fg);
+  background: var(--deep);
+  border: 1px solid color-mix(in srgb, var(--ck-gold) 35%, transparent);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 30px 60px -20px color-mix(in srgb, var(--deep) 70%, transparent),
+    inset 0 1px 0 color-mix(in srgb, #fff 10%, transparent);
+  opacity: 0;
+  transform: translateY(32px) scale(.98);
+  transition: transform .5s var(--ease), opacity .4s var(--ease);
 }
-.cookie-bar.is-in { transform: none; transition-delay: .3s; }
-.cookie-bar.is-out { transform: translateY(100%); transition: transform .3s var(--ease); }
-.cookie-bar-inner {
+.cookie-bar.is-in { opacity: 1; transform: none; transition-delay: .4s; }
+.cookie-bar.is-out { opacity: 0; transform: translateY(32px) scale(.98); transition-duration: .3s; transition-delay: 0s; }
+
+.cookie-main {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: start;
-  gap: var(--space-4) var(--space-6);
-  padding-block: var(--space-6);
+  align-items: center;
+  gap: var(--space-4) var(--space-4);
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-4);
 }
 .cookie-ic {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--deep) 8%, var(--surface));
-  color: var(--deep);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--ck-gold) 14%, transparent);
+  color: var(--ck-gold);
 }
-.cookie-ic .icon { width: 26px; height: 26px; stroke-width: 1.8; }
-.cookie-text { min-width: 0; max-width: 1080px; }
-.cookie-title { margin: 0 0 var(--space-2); color: var(--deep); font-size: var(--text-md); line-height: var(--leading-tight); }
-.cookie-text p { margin: 0 0 var(--space-2); font-size: var(--text-sm); line-height: var(--leading-normal); color: var(--ink); }
-.cookie-text p:last-of-type { margin-bottom: 0; }
-.cookie-text a { color: var(--deep); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-.cookie-text a:hover { color: var(--gold); }
-.cookie-text a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: var(--radius-sm); }
+.cookie-ic svg { width: 24px; height: 24px; }
+.cookie-bar.is-in .cookie-ic svg { animation: cookie-wiggle .9s var(--ease) .9s both; }
+@keyframes cookie-wiggle {
+  0% { transform: rotate(0); }
+  30% { transform: rotate(-14deg); }
+  60% { transform: rotate(8deg); }
+  100% { transform: rotate(0); }
+}
+.cookie-bar .cookie-title {
+  margin: 0;
+  color: var(--ck-fg);
+  font-family: inherit;
+  font-size: var(--text-base);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+}
+.cookie-text p { margin: 2px 0 0; color: var(--ck-soft); font-size: var(--text-sm); line-height: var(--leading-normal); }
+.cookie-text a {
+  color: var(--ck-gold);
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ck-gold) 45%, transparent);
+  text-underline-offset: 3px;
+}
+.cookie-text a:hover { text-decoration-color: currentColor; }
+.cookie-text a:focus-visible { outline: 2px solid var(--ck-gold); outline-offset: 2px; border-radius: var(--radius-sm); }
 
-/* รายละเอียดคุกกี้ — กาง/หุบด้วย grid-template-rows */
-.cookie-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s var(--ease); }
+.cookie-actions { display: flex; align-items: center; gap: var(--space-2); }
+.cookie-bar-btn {
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--ck-gold);
+  background: var(--ck-gold);
+  color: var(--deep);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease), transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.cookie-bar-btn:hover { background: color-mix(in srgb, var(--ck-gold) 80%, #fff); transform: translateY(-1px); box-shadow: 0 8px 20px -6px color-mix(in srgb, var(--ck-gold) 60%, transparent); }
+.cookie-bar-btn.is-ghost { background: transparent; color: var(--ck-fg); border-color: color-mix(in srgb, #fff 35%, transparent); }
+.cookie-bar-btn.is-ghost:hover { background: color-mix(in srgb, #fff 10%, transparent); border-color: var(--ck-fg); box-shadow: none; }
+.cookie-bar-btn:focus-visible { outline: 3px solid var(--ck-gold); outline-offset: 2px; }
+.cookie-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: none;
+  color: var(--ck-soft);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+.cookie-toggle:hover, .cookie-toggle[aria-expanded="true"] { color: var(--ck-fg); background: color-mix(in srgb, #fff 8%, transparent); }
+.cookie-toggle:focus-visible { outline: 2px solid var(--ck-gold); outline-offset: 2px; }
+.cookie-toggle-ic { width: 14px; height: 14px; transform: rotate(-90deg); transition: transform .25s var(--ease); }
+.cookie-toggle[aria-expanded="true"] .cookie-toggle-ic { transform: rotate(90deg); }
+
+/* แผงตั้งค่า — กาง/หุบด้วย grid-template-rows อยู่เหนือแถวหลัก */
+.cookie-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s var(--ease); }
 .cookie-bar.is-more .cookie-more { grid-template-rows: 1fr; }
 .cookie-more-inner { min-height: 0; overflow: hidden; }
-.cookie-more-head {
+.cookie-list {
+  margin: 0;
+  padding: var(--space-3) var(--space-3) 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+.cookie-list li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  margin: var(--space-4) 0 0 !important;
-  padding: var(--space-2) var(--space-4);
-  border: 1px solid var(--line);
-  border-bottom: 0;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  background: var(--surface-soft);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, #fff 6%, transparent);
+  border: 1px solid var(--ck-line);
 }
-.cookie-always { color: var(--deep); font-size: var(--text-xs); font-weight: 700; }
-.cookie-list {
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.cookie-list div { padding: var(--space-2) var(--space-4); border-top: 1px solid var(--line); }
-.cookie-list div:nth-child(-n + 2) { border-top: 0; }
-.cookie-list div:nth-child(odd) { border-right: 1px solid var(--line); }
-.cookie-list dt { font-size: var(--text-sm); font-weight: 700; }
-.cookie-list dd { margin: 0; color: var(--muted); font-size: var(--text-xs); line-height: var(--leading-normal); }
-
-.cookie-actions { display: grid; gap: var(--space-2); min-width: 200px; }
-.cookie-bar-btn {
-  min-height: 44px;
-  padding: 0 24px;
+.cookie-item { display: grid; min-width: 0; }
+.cookie-item strong { font-size: var(--text-sm); color: var(--ck-fg); }
+.cookie-item small { font-size: var(--text-xs); color: var(--ck-soft); line-height: var(--leading-normal); }
+/* สวิตช์เปิดค้าง (แสดงสถานะ ไม่ใช่ปุ่ม) */
+.cookie-switch {
+  flex: none;
+  position: relative;
+  width: 36px;
+  height: 20px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--deep);
+  background: var(--ck-gold);
+  opacity: .85;
+}
+.cookie-switch i {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
   background: var(--deep);
-  color: #fff;
-  font: inherit;
-  font-size: var(--text-sm);
-  font-weight: 700;
-  cursor: pointer;
-  transition: background var(--duration) var(--ease), color var(--duration) var(--ease), border-color var(--duration) var(--ease);
 }
-.cookie-bar-btn:hover { background: var(--deep-2); }
-.cookie-bar-btn.is-ghost { background: var(--surface); color: var(--deep); }
-.cookie-bar-btn.is-ghost:hover { background: var(--surface-soft); }
-.cookie-bar-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
-.cookie-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  min-height: 36px;
-  border: 0;
-  background: none;
-  color: var(--deep);
-  font: inherit;
-  font-size: var(--text-sm);
-  font-weight: 700;
-  cursor: pointer;
-}
-.cookie-toggle:hover { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
-.cookie-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: var(--radius-sm); }
-.cookie-toggle-ic { width: 16px; height: 16px; transform: rotate(90deg); transition: transform .25s var(--ease); }
-.cookie-toggle[aria-expanded="true"] .cookie-toggle-ic { transform: rotate(-90deg); }
 
-/* สีประจำเว็บ (เขียวเข้ม + ทอง) — ทางการแต่ไม่เรียบเกินไป */
-.cookie-bar {
-  border-top: 0;
-  background: linear-gradient(100deg, color-mix(in srgb, var(--deep) 9%, var(--surface)) 0%, color-mix(in srgb, var(--gold) 7%, var(--surface)) 45%, var(--surface) 75%);
+/* แท็บเล็ต: ปุ่มลงบรรทัดใหม่ใต้ข้อความ */
+@media (max-width: 1100px) {
+  .cookie-main { grid-template-columns: auto minmax(0, 1fr); }
+  .cookie-actions { grid-column: 1 / -1; justify-content: flex-end; padding-top: var(--space-3); border-top: 1px solid var(--ck-line); }
+  .cookie-toggle { margin-right: auto; }
 }
-.cookie-ic {
-  background: var(--deep);
-  color: color-mix(in srgb, var(--gold) 55%, #fff);
-  box-shadow: 0 0 0 6px color-mix(in srgb, var(--deep) 10%, transparent);
-}
-/* ลิงก์นโยบาย: ตัวหนาสีเขียวเข้ม ไม่ขีดเส้นใต้ (ขีดเส้นเฉพาะตอนชี้/โฟกัส) */
-.cookie-text a { font-weight: 700; text-decoration: none; }
-.cookie-text a:hover,
-.cookie-text a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
-.cookie-actions {
-  padding: var(--space-4);
-  border-radius: var(--radius-lg);
-  background: color-mix(in srgb, var(--surface) 75%, transparent);
-  border: 1px solid color-mix(in srgb, var(--gold) 28%, var(--line));
-}
-.cookie-bar-btn { box-shadow: 0 6px 14px color-mix(in srgb, var(--deep) 22%, transparent); }
-.cookie-bar-btn:hover { background: var(--deep-2); box-shadow: 0 8px 18px color-mix(in srgb, var(--deep) 30%, transparent); }
-.cookie-bar-btn.is-ghost { border-color: var(--gold); box-shadow: none; }
-.cookie-bar-btn.is-ghost:hover { background: color-mix(in srgb, var(--gold) 12%, var(--surface)); }
-.cookie-toggle { color: color-mix(in srgb, var(--gold) 70%, var(--deep)); }
-.cookie-more-head { background: color-mix(in srgb, var(--deep) 8%, var(--surface)); }
-.cookie-always { padding: 2px 10px; border-radius: var(--radius-pill); background: var(--deep); color: #fff; }
-.cookie-list { background: var(--surface); }
-
-/* ระหว่างแสดงแถบ: ยกปุ่มลอย (ช่วยการเข้าถึง / แชท) ขึ้นเหนือแถบ */
-body:has(.cookie-bar) .a11y { bottom: calc(var(--cookie-h, 160px) + 12px); }
-body:has(.cookie-bar) .chat-widget { bottom: calc(var(--cookie-h, 160px) + 76px); }
-
-/* แท็บเล็ต: ปุ่มลงไปอยู่ใต้ข้อความ เรียงแนวนอน */
-@media (max-width: 1023px) {
-  .cookie-bar-inner { grid-template-columns: auto minmax(0, 1fr); }
-  .cookie-actions { grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; min-width: 0; }
-}
-/* มือถือ: ไม่มีไอคอน · ปุ่มเต็มแถว · รายละเอียดคอลัมน์เดียว */
-@media (max-width: 600px) {
-  .cookie-bar-inner { grid-template-columns: minmax(0, 1fr); padding-block: var(--space-4); }
-  .cookie-ic { display: none; }
-  .cookie-actions { grid-column: 1; display: grid; grid-template-columns: 1fr 1fr; }
-  .cookie-toggle { grid-column: 1 / -1; }
+/* มือถือ: แผ่นเต็มความกว้างชิดล่าง · ปุ่มเต็มแถว · ยกปุ่มลอย (ช่วยการเข้าถึง / แชท) ขึ้นเหนือแผ่น */
+@media (max-width: 767px) {
+  .cookie-bar {
+    bottom: 0;
+    width: 100%;
+    max-height: 85vh;
+    border-width: 1px 0 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+  .cookie-main { padding: var(--space-4); gap: var(--space-3); align-items: start; }
+  .cookie-ic { width: 40px; height: 40px; }
+  .cookie-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .cookie-toggle { grid-column: 1 / -1; order: 3; justify-self: center; margin: 0; min-height: 36px; }
   .cookie-bar-btn { padding: 0 12px; }
-  .cookie-list { grid-template-columns: minmax(0, 1fr); }
-  .cookie-list div:nth-child(2) { border-top: 1px solid var(--line); }
-  .cookie-list div:nth-child(odd) { border-right: 0; }
+  .cookie-list { grid-template-columns: minmax(0, 1fr); padding: var(--space-4) var(--space-4) 0; }
   body:has(.cookie-bar) .a11y { bottom: calc(var(--cookie-h, 260px) + 12px); }
   body:has(.cookie-bar) .chat-widget { bottom: calc(var(--cookie-h, 260px) + 72px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cookie-bar, .cookie-bar * { transition: none !important; }
+  .cookie-bar, .cookie-bar * { transition: none !important; animation: none !important; }
 }
-body.high-contrast .cookie-bar { background: var(--surface); border-top: 2px solid var(--line); }
-body.high-contrast .cookie-ic { background: #000; box-shadow: 0 0 0 2px var(--gold); }
-body.high-contrast .cookie-actions,
-body.high-contrast .cookie-list,
-body.high-contrast .cookie-more-head { background: var(--surface); border-color: var(--line); }
-body.high-contrast .cookie-always { background: var(--gold); color: #000; }
-body.high-contrast .cookie-title,
-body.high-contrast .cookie-text a,
-body.high-contrast .cookie-toggle,
-body.high-contrast .cookie-always,
-body.high-contrast .cookie-ic { color: var(--gold); }
-body.high-contrast .cookie-bar-btn { background: var(--gold); border-color: var(--gold); color: #000; }
-body.high-contrast .cookie-bar-btn.is-ghost { background: transparent; color: var(--gold); }
+body.no-motion .cookie-bar, body.no-motion .cookie-bar * { animation: none !important; }
+body.high-contrast .cookie-bar { --ck-gold: var(--gold); background: var(--deep); border: 2px solid var(--gold); box-shadow: none; }
+body.high-contrast .cookie-bar-btn:not(.is-ghost) { color: #000; }
+body.high-contrast .cookie-bar-btn.is-ghost { border-color: var(--ck-fg); }
+body.high-contrast .cookie-list li { background: transparent; border-color: var(--ck-fg); }
 /* โหมดภาษาอังกฤษ: หัวคอลัมน์ footer ถูกแปลแล้ว ไม่ต้องแสดงชื่ออังกฤษตัวเล็กซ้ำ */
 html[lang="en"] .orst-footer-head small { display: none; }
 
@@ -3676,27 +3695,6 @@ body.high-contrast .skel, body.high-contrast .img-skel { background: var(--line)
   .orst-footer-main > :nth-child(n + 2) { padding: 22px 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, .1); }
 }
 
-/* แถบคุกกี้ (แท็บเล็ต/มือถือ): ปุ่มไม่อยู่ในกล่องกรอบ — ใช้เส้นคั่นบาง ๆ ด้านบนแทน
-   "รายละเอียดคุกกี้" ชิดซ้าย · ปุ่มยอมรับ/เฉพาะที่จำเป็นชิดขวา */
-@media (max-width: 1023px) {
-  .cookie-actions {
-    justify-content: flex-end;
-    gap: var(--space-3);
-    margin-top: var(--space-1);
-    padding: var(--space-4) 0 0;
-    border: 0;
-    border-top: 1px solid color-mix(in srgb, var(--gold) 25%, var(--line));
-    border-radius: 0;
-    background: none;
-  }
-  .cookie-toggle { order: -1; margin-right: auto; padding-left: 0; }
-  .cookie-bar-btn { min-width: 150px; }
-}
-@media (max-width: 600px) {
-  .cookie-actions { grid-template-columns: 1fr 1fr; gap: var(--space-2); }
-  .cookie-toggle { order: 0; justify-self: center; margin: 0; }
-  .cookie-bar-btn { min-width: 0; }
-}
 
 /* =============================================================================
    ค้นหาในเว็บไซต์ (ปุ่มค้นหาบน header) — แผงเลื่อนลงจากด้านบน
@@ -4110,17 +4108,48 @@ body.high-contrast .topbar .topbar-menu-list a:hover .topbar-menu-ic .icon { bac
 body.high-contrast .megax-row:hover,
 body.high-contrast .megax-row:focus-visible { background: var(--gold-soft); color: var(--ink); }
 
-/* ลิงก์ "ราชบัณฑิตยสภา" บน topbar — ชี้แล้วเป็นแคปซูลพื้นขาวโปร่ง ชุดเดียวกับปุ่ม "สำหรับเจ้าหน้าที่"
-   (เดิม base.css ใส่พื้นให้ลิงก์ที่ไม่มี padding → ได้วงรีบีบชิดตัวอักษร) · ตัวอักษรยังเปลี่ยนเป็นทองตอนชี้ (ผู้ใช้ชอบ) */
+/* ปุ่ม "ราชบัณฑิตยสภา" ขวาสุดของ topbar — ลิงก์ออกไปอีกระบบ ลูกค้าต้องการให้โดดเด่น
+   แคปซูลพื้นทองอ่อน ตัวอักษรเขียวเข้ม + วงกลมเขียวเข้มใส่ไอคอนลิงก์ภายนอก (บอกว่าพาออกนอกเว็บ)
+   สูงเท่าปุ่ม ก- ก ก+ / TH EN · ชี้แล้วพื้นสว่างขึ้น ไอคอนขยับขึ้นขวาเล็กน้อย */
 .topbar a.topbar-ext {
-  padding: 4px 10px;
-  margin-left: -10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+  margin: 0;
+  padding: 2px 3px 2px 14px;
   border-radius: var(--radius-pill);
-  transition: background-color var(--duration) var(--ease);
+  background: var(--gold-2);
+  color: var(--deep);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold-2) 60%, #fff) inset;
+  transition: background-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
 }
+.topbar a.topbar-ext .topbar-ext-ic {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--deep);
+  color: var(--gold-2);
+}
+.topbar a.topbar-ext .icon { width: 12px; height: 12px; transition: transform var(--duration) var(--ease); }
 .topbar a.topbar-ext:hover,
-.topbar a.topbar-ext:focus-visible { color: var(--gold-2); background: rgba(255, 255, 255, .12); }
-.topbar a.topbar-ext:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.topbar a.topbar-ext:focus-visible {
+  color: var(--deep);
+  background: color-mix(in srgb, var(--gold-2) 70%, #fff);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold-2) 30%, transparent);
+}
+.topbar a.topbar-ext:hover .icon,
+.topbar a.topbar-ext:focus-visible .icon { transform: translate(1px, -1px); }
+.topbar a.topbar-ext:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .topbar a.topbar-ext .icon { transition: none; } }
+body.high-contrast .topbar a.topbar-ext { background: var(--gold); color: #000; box-shadow: none; }
+body.high-contrast .topbar a.topbar-ext .topbar-ext-ic { background: #000; color: var(--gold); }
 
 /* ปุ่มสลับภาษาบน topbar — เล็กลงให้สูงเท่าปุ่ม ก- ก ก+ (26px)
    (Geist ตัวใหญ่กว่า TH Sarabun ที่ขนาดเดียวกัน จึงย่อแบบเดียวกับชื่อ e-Office/DPIS ในเมนูเจ้าหน้าที่) */

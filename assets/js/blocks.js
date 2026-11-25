@@ -1532,9 +1532,10 @@ function formField(f, uid) {
   }
   return `
             <div class="ef-field${width}" data-ef-field>
-              <label class="ef-label" for="${esc(id)}">${esc(f.label)}${star}</label>
+              <div class="ef-head">
+                <label class="ef-label" for="${esc(id)}">${esc(f.label)}${star}</label>${hint}
+              </div>
               ${control}
-              ${hint}
               ${err}
             </div>`;
 }
@@ -1556,7 +1557,7 @@ function form(b) {
       : '';
     // กลุ่มตอนทางเลือก: ตัวแทนจาง ๆ แสดงจนกว่าจะเลือกในขั้นก่อนหน้า (ลำดับตอนไม่กระโดด) — disabled = ไม่ถูกตรวจ/ไม่ลงสรุป
     const placeholder = sw && startsGroup ? `
-          <fieldset class="ef-section is-placeholder" data-ef-placeholder="${n}" disabled>
+          <fieldset class="ef-section is-placeholder" id="${uid}-step-${n}-wait" data-ef-placeholder="${n}" disabled>
             <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">${n}</span><span>${esc(s.stepLabel || s.heading)}</span></legend>
             <p class="ef-placeholder-text">เลือกตัวเลือกในขั้นก่อนหน้า แล้วช่องกรอกของขั้นนี้จะแสดงขึ้น</p>
           </fieldset>` : '';
@@ -1610,16 +1611,19 @@ function form(b) {
             </div>
             ${b.note ? `<p class="ef-note">${esc(b.note)}</p>` : ''}
           </div>`;
-  // แถบความคืบหน้าบนสุดของการ์ด (ผู้ใช้: เอาแถบขั้นตอนด้านซ้ายออก) — initForms อัปเดตจำนวนขั้นที่กรอกครบ
+  // แถบขั้นตอนบนสุดของการ์ด ติดจอขณะเลื่อน (ผู้ใช้: เอาแถบขั้นตอนด้านซ้ายออก · ฟอร์มยาวต้องรู้ว่าอยู่ขั้นไหน)
+  // แต่ละขั้นกดแล้วเลื่อนไปที่ตอนนั้น · initForms ใส่ is-done (✓) / is-current (ขั้นแรกที่ยังไม่ครบ) และเดินแถบความคืบหน้า
   const progress = !survey && steps.length > 1 ? `
-          <div class="ef-progress" data-ef-progress data-total="${steps.length}">
-            <div class="ef-progress-top">
-              <span class="ef-progress-label">ความคืบหน้า</span>
-              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก ${steps.length} ขั้น</span>
-            </div>
+          <nav class="ef-progress" data-ef-progress data-total="${steps.length}" aria-label="ขั้นตอนการกรอก">
+            <ol class="ef-steps" style="--ef-steps:${steps.length}">${steps.map((label, i) => `
+              <li><a class="ef-step" href="#${uid}-step-${i + 1}" data-ef-step-link="${i + 1}"><span class="ef-step-num" aria-hidden="true">${i + 1}</span><span class="ef-step-label">${esc(label)}</span></a></li>`).join('')}
+            </ol>
             <div class="ef-progress-bar" role="progressbar" aria-label="ความคืบหน้าการกรอก" aria-valuemin="0" aria-valuemax="${steps.length}" aria-valuenow="0"><span data-ef-progress-fill></span></div>
-            <p class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</p>
-          </div>` : '';
+            <div class="ef-progress-top">
+              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก ${steps.length} ขั้น</span>
+              <span class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</span>
+            </div>
+          </nav>` : '';
   // แผงช่วยเหลือด้านขวา (ติดจอขณะเลื่อน · มือถืออยู่ใต้ฟอร์ม): การ์ดย่อย หัวข้อ + รายการ/ข้อความ/ลิงก์
   const aside = (b.aside || []).length ? `
           <aside class="ef-aside" aria-label="ข้อมูลประกอบการยื่นคำขอ">${b.aside.map(card => {

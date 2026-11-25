@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
   <link rel="stylesheet" href="assets/css/typography.css?v=ef5f0e28">
   <link rel="stylesheet" href="assets/css/base.css?v=8a5974d7">
-  <link rel="stylesheet" href="assets/css/blocks.css?v=d4f79fbd">
-  <link rel="stylesheet" href="assets/css/components.css?v=af259e57">
+  <link rel="stylesheet" href="assets/css/blocks.css?v=49cf1392">
+  <link rel="stylesheet" href="assets/css/components.css?v=2ffd7057">
 </head>
 
 <body data-page="home">
@@ -982,14 +982,19 @@
         
         <div class="ef" data-ef>
           <form class="ef-form" id="sg-form-form" novalidate data-ef-preview>
-          <div class="ef-progress" data-ef-progress data-total="4">
-            <div class="ef-progress-top">
-              <span class="ef-progress-label">ความคืบหน้า</span>
-              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก 4 ขั้น</span>
-            </div>
+          <nav class="ef-progress" data-ef-progress data-total="4" aria-label="ขั้นตอนการกรอก">
+            <ol class="ef-steps" style="--ef-steps:4">
+              <li><a class="ef-step" href="#sg-form-step-1" data-ef-step-link="1"><span class="ef-step-num" aria-hidden="true">1</span><span class="ef-step-label">ประเภทผู้ติดต่อ</span></a></li>
+              <li><a class="ef-step" href="#sg-form-step-2" data-ef-step-link="2"><span class="ef-step-num" aria-hidden="true">2</span><span class="ef-step-label">ข้อมูลหน่วยงาน</span></a></li>
+              <li><a class="ef-step" href="#sg-form-step-3" data-ef-step-link="3"><span class="ef-step-num" aria-hidden="true">3</span><span class="ef-step-label">รายละเอียด</span></a></li>
+              <li><a class="ef-step" href="#sg-form-step-4" data-ef-step-link="4"><span class="ef-step-num" aria-hidden="true">4</span><span class="ef-step-label">ยืนยันและยื่นคำขอ</span></a></li>
+            </ol>
             <div class="ef-progress-bar" role="progressbar" aria-label="ความคืบหน้าการกรอก" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span data-ef-progress-fill></span></div>
-            <p class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</p>
-          </div>
+            <div class="ef-progress-top">
+              <span class="ef-progress-text" data-ef-progress-text aria-live="polite">กรอกครบ 0 จาก 4 ขั้น</span>
+              <span class="ef-progress-note"><span class="ef-req" aria-hidden="true">*</span> ช่องที่ต้องกรอก</span>
+            </div>
+          </nav>
           <fieldset class="ef-section" id="sg-form-step-1" data-ef-step="1">
             <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">1</span><span>ประเภทผู้ติดต่อ</span></legend>
             
@@ -1015,7 +1020,7 @@
             </fieldset>
             </div>
           </fieldset>
-          <fieldset class="ef-section is-placeholder" data-ef-placeholder="2" disabled>
+          <fieldset class="ef-section is-placeholder" id="sg-form-step-2-wait" data-ef-placeholder="2" disabled>
             <legend class="ef-section-head"><span class="ef-num" aria-hidden="true">2</span><span>ข้อมูลหน่วยงาน</span></legend>
             <p class="ef-placeholder-text">เลือกตัวเลือกในขั้นก่อนหน้า แล้วช่องกรอกของขั้นนี้จะแสดงขึ้น</p>
           </fieldset>
@@ -1024,9 +1029,10 @@
             
             <div class="ef-grid">
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="sg-form-org">ชื่อหน่วยงาน<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="sg-form-org">ชื่อหน่วยงาน<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="text" id="sg-form-org" name="org" required>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             </div>
@@ -1036,15 +1042,17 @@
             
             <div class="ef-grid">
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="sg-form-name">ชื่อ-นามสกุล<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="sg-form-name">ชื่อ-นามสกุล<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="text" id="sg-form-name" name="name" required>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <div class="ef-field is-half" data-ef-field>
-              <label class="ef-label" for="sg-form-email">อีเมล<span class="ef-req" aria-hidden="true">*</span></label>
+              <div class="ef-head">
+                <label class="ef-label" for="sg-form-email">อีเมล<span class="ef-req" aria-hidden="true">*</span></label>
+              </div>
               <input class="ef-input" type="email" id="sg-form-email" name="email" required>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             <fieldset class="ef-field ef-group" data-ef-field data-ef-min="1">
@@ -1073,9 +1081,10 @@
               <small class="ef-error" data-ef-error hidden></small>
             </fieldset>
             <div class="ef-field" data-ef-field>
-              <label class="ef-label" for="sg-form-message">ข้อความ</label>
+              <div class="ef-head">
+                <label class="ef-label" for="sg-form-message">ข้อความ</label>
+              </div>
               <textarea class="ef-input" rows="4" id="sg-form-message" name="message"></textarea>
-              
               <small class="ef-error" data-ef-error hidden></small>
             </div>
             </div>
@@ -2090,7 +2099,7 @@
 
   <div id="app-footer"></div>
 
-  <script src="assets/js/components.js?v=390c43f4"></script>
+  <script src="assets/js/components.js?v=d2557c29"></script>
   <script type="module" src="assets/js/page-runtime.js?v=7f3ce6c3"></script>
 </body>
 
