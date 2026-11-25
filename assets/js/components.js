@@ -747,10 +747,10 @@ function renderHeader() {
     <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
     <div class="topbar">
       <div class="container topbar-inner">
-        <!-- topbar 2 กลุ่ม: ซ้าย = ลิงก์ออกไปที่อื่น (ราชบัณฑิตยสภา, ระบบสำหรับเจ้าหน้าที่)
-             ขวา = ตั้งค่าการแสดงผล (ขนาดตัวอักษร แล้วภาษาอยู่ขวาสุดตามที่ผู้ใช้คุ้น) — เครื่องมือช่วยการเข้าถึงอื่นอยู่ที่ปุ่มลอยมุมขวาล่าง -->
+        <!-- topbar 2 กลุ่ม: ซ้าย = ระบบสำหรับเจ้าหน้าที่
+             ขวา = ตั้งค่าการแสดงผล (ขนาดตัวอักษร | ภาษา) แล้วปิดท้ายด้วยปุ่มเด่น "ราชบัณฑิตยสภา" (ลิงก์ออกไปอีกระบบ — ลูกค้าต้องการให้โดดเด่น)
+             เครื่องมือช่วยการเข้าถึงอื่นอยู่ที่ปุ่มลอยมุมขวาล่าง -->
         <div class="topbar-group topbar-left">
-          <a class="topbar-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer">ราชบัณฑิตยสภา ${icon('i-external')}<span class="sr-only">(เปิดในแท็บใหม่)</span></a>
           <div class="topbar-menu" data-topbar-menu>
             <button class="topbar-menu-btn" type="button" aria-expanded="false" aria-controls="topbar-staff-menu">${icon('i-user')}สำหรับเจ้าหน้าที่<span class="nav-caret" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 7.5 10 12l4.5-4.5"></path></svg></span></button>
             <ul class="topbar-menu-list" id="topbar-staff-menu" hidden>
@@ -767,6 +767,7 @@ function renderHeader() {
           </span>
           <span class="topbar-divider" aria-hidden="true"></span>
           ${langSwitch()}
+          <a class="topbar-ext" href="${ROYAL_SOCIETY_URL}" target="_blank" rel="noopener noreferrer"><span>ราชบัณฑิตยสภา</span><span class="topbar-ext-ic" aria-hidden="true">${icon('i-external')}</span><span class="sr-only">(เปิดในแท็บใหม่)</span></a>
         </div>
       </div>
     </div>
@@ -2276,11 +2277,21 @@ function initForms() {
     // ขั้นที่กรอกช่องที่ต้องกรอกครบ: เลขตอนเป็น ✓ · แถบความคืบหน้าเดินตามจำนวนขั้นที่ครบ
     const updateSteps = () => {
       let doneCount = 0;
+      let current = '';
       stepNums.forEach(n => {
         const secs = [...form.querySelectorAll(`[data-ef-step="${n}"]`)].filter(sec => !sec.disabled);
         const done = secs.length > 0 && secs.every(sec => [...sec.querySelectorAll('[data-ef-field]')].every(fieldOk));
         form.querySelectorAll(`[data-ef-step="${n}"]`).forEach(sec => sec.classList.toggle('is-done', done && !sec.disabled));
         if (done) doneCount += 1;
+        else if (!current) current = n;
+        // แถบขั้นตอน: ✓ เมื่อครบ · ขั้นแรกที่ยังไม่ครบ = ขั้นปัจจุบัน
+        const link = progress?.querySelector(`[data-ef-step-link="${n}"]`);
+        if (link) link.classList.toggle('is-done', done);
+      });
+      progress?.querySelectorAll('[data-ef-step-link]').forEach(link => {
+        const on = link.dataset.efStepLink === current;
+        link.classList.toggle('is-current', on);
+        if (on) link.setAttribute('aria-current', 'step'); else link.removeAttribute('aria-current');
       });
       // แบบสำรวจ: นับข้อที่ต้องตอบ (ช่องบังคับในตอนที่แสดง) ที่ตอบแล้ว
       const bar = root.querySelector('[data-ef-bar]');
@@ -2299,6 +2310,19 @@ function initForms() {
       progress.querySelector('[role="progressbar"]').setAttribute('aria-valuenow', String(doneCount));
       progress.classList.toggle('is-complete', doneCount === total);
     };
+
+    // กดขั้นในแถบขั้นตอน: ไปตอนที่แสดงอยู่ของขั้นนั้น (ตอนทางเลือกที่ซ่อน → ไปที่ตัวแทนของขั้น) แล้วโฟกัสช่องแรก
+    progress?.addEventListener('click', e => {
+      const link = e.target.closest('[data-ef-step-link]');
+      if (!link) return;
+      const n = link.dataset.efStepLink;
+      const target = [...form.querySelectorAll(`[data-ef-step="${n}"], [data-ef-placeholder="${n}"]`)].find(sec => !sec.hidden);
+      if (!target) return;
+      e.preventDefault();
+      const smooth = !document.body.classList.contains('no-motion') && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+      target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+      target.querySelector('input:not([type="hidden"]):not(:disabled), select:not(:disabled), textarea:not(:disabled), .ui-select-btn')?.focus({ preventScroll: true });
+    });
 
     form.addEventListener('change', e => {
       syncSections();
@@ -3464,29 +3488,32 @@ function initCookieBar() {
   ];
   document.body.insertAdjacentHTML('beforeend', `
     <section class="cookie-bar" aria-labelledby="cookie-title" data-cookie-bar>
-      <div class="container cookie-bar-inner">
-        <span class="cookie-ic" aria-hidden="true">${icon('i-shield')}</span>
+      <div class="cookie-more" id="cookie-more" inert>
+        <div class="cookie-more-inner">
+          <ul class="cookie-list">
+            ${stored.map(([t, d]) => `
+            <li>
+              <span class="cookie-item"><strong>${t}</strong><small>${d}</small></span>
+              <span class="cookie-switch" role="img" aria-label="เปิดใช้งานตลอดเวลา"><i></i></span>
+            </li>`).join('')}
+          </ul>
+        </div>
+      </div>
+      <div class="cookie-main">
+        <span class="cookie-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01"/></svg>
+        </span>
         <div class="cookie-text">
-          <h2 class="cookie-title" id="cookie-title">การใช้คุกกี้และพื้นที่จัดเก็บข้อมูลในเบราว์เซอร์</h2>
-          <p>เว็บไซต์สำนักงานราชบัณฑิตยสภาใช้คุกกี้และพื้นที่จัดเก็บข้อมูลในเบราว์เซอร์ (Local Storage) เท่าที่จำเป็นต่อการให้บริการ เพื่อจดจำการตั้งค่าของท่าน เช่น ภาษา ขนาดตัวอักษร และรูปแบบการแสดงผล โดยไม่ใช้คุกกี้เพื่อติดตามพฤติกรรมหรือโฆษณา</p>
-          <p>ท่านสามารถเลือก “ยอมรับทั้งหมด” หรือ “เฉพาะที่จำเป็น” และลบข้อมูลที่จัดเก็บได้ทุกเมื่อจากการตั้งค่าของเบราว์เซอร์ ศึกษารายละเอียดเพิ่มเติมได้ที่
-            <a href="${basePath}cookie-policy.html">นโยบายคุกกี้ (Cookies Policy)</a> และ
-            <a href="${basePath}privacy-policy.html">นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)</a></p>
-          <div class="cookie-more" id="cookie-more" inert>
-            <div class="cookie-more-inner">
-              <p class="cookie-more-head"><strong>คุกกี้ที่จำเป็น</strong><span class="cookie-always">เปิดใช้งานตลอดเวลา</span></p>
-              <dl class="cookie-list">
-                ${stored.map(([t, d]) => `<div><dt>${t}</dt><dd>${d}</dd></div>`).join('')}
-              </dl>
-            </div>
-          </div>
+          <h2 class="cookie-title" id="cookie-title">เราใช้คุกกี้เท่าที่จำเป็น</h2>
+          <p>เพื่อจดจำภาษา ขนาดตัวอักษร และรูปแบบการแสดงผลของท่าน ไม่ใช้ติดตามพฤติกรรมหรือโฆษณา
+            <a href="${basePath}cookie-policy.html">นโยบายคุกกี้</a></p>
         </div>
         <div class="cookie-actions">
-          <button type="button" class="cookie-bar-btn" data-consent="all">ยอมรับทั้งหมด</button>
-          <button type="button" class="cookie-bar-btn is-ghost" data-consent="necessary">เฉพาะที่จำเป็น</button>
           <button type="button" class="cookie-toggle" aria-expanded="false" aria-controls="cookie-more" data-cookie-more>
-            <span>รายละเอียดคุกกี้</span>${icon('i-chevron', 'icon cookie-toggle-ic')}
+            <span>ตั้งค่า</span>${icon('i-chevron', 'icon cookie-toggle-ic')}
           </button>
+          <button type="button" class="cookie-bar-btn is-ghost" data-consent="necessary">เฉพาะที่จำเป็น</button>
+          <button type="button" class="cookie-bar-btn" data-consent="all">ยอมรับทั้งหมด</button>
         </div>
       </div>
     </section>`);

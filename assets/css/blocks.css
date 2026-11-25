@@ -8194,8 +8194,8 @@ body.high-contrast .ef-progress-bar span { background: var(--gold); }
 /* form: ช่องในแถวเดียวกันเรียงตรงกันเสมอ แม้ป้ายของอีกช่องยาวจนขึ้น 2 บรรทัด
    (subgrid 4 แถว: ป้าย / ช่องกรอก / ข้อความช่วย / ข้อความผิดพลาด ใช้ร่วมกันทั้งแถว) */
 @supports (grid-template-rows: subgrid) {
-  .ef-field:not(.ef-group) { grid-row: span 4; grid-template-rows: subgrid; row-gap: 6px; align-content: initial; }
-  .ef-field:not(.ef-group) > .ef-label { align-self: end; }
+  .ef-field:not(.ef-group) { grid-row: span 3; grid-template-rows: subgrid; row-gap: 6px; align-content: initial; }
+  .ef-field:not(.ef-group) > .ef-head { align-self: end; }
 }
 
 /* form: แผงช่วยเหลือด้านขวา (aside) — ฟอร์มกว้างขึ้น + การ์ดย่อยติดจอขณะเลื่อน
@@ -8292,6 +8292,157 @@ body.high-contrast .ef-progress-bar span { background: var(--gold); }
 }
 
 /* =============================================================================
+   form รอบ 4 (ผู้ใช้: ฟอร์มกรอกข้อมูลแปลก ๆ UX ไม่ดี)
+   - แถบขั้นตอนติดจอขณะเลื่อน: ๑ ๒ ๓ ๔ พร้อมชื่อขั้น กดแล้วไปที่ตอน · ✓ เมื่อครบ · วงแหวนที่ขั้นปัจจุบัน
+   - เลขตอนใหญ่ขึ้น (32px ขอบเขียว) ไม่ลีบข้างหัวตอน · ครบแล้วเป็นวงทึบ ✓
+   - ตอนที่ยังรอตัวเลือก (ตัวแทน) เหลือแถวเดียวจาง ๆ ไม่เป็นกล่องว่างกลางฟอร์ม
+   - การ์ดตัวเลือก: ไอคอนบน · ชื่อ + คำอธิบายเต็มความกว้าง · วงเลือกมุมขวาบน (เดิมชื่อถูกบีบจนตัดหลายบรรทัด)
+   - ตัวเลือกหลายข้อ: ไทล์มุมโค้งเล็กเรียงตาราง (เดิมกล่องสี่เหลี่ยมอยู่ในแคปซูล ดูแปลก)
+   - ข้อความช่วยอยู่ใต้ป้าย ก่อนช่องกรอก (อ่านก่อนพิมพ์)
+   แบบสำรวจ (layout survey) มีชุดสไตล์ของตัวเองด้านล่าง — กฎในนี้ไม่แตะ
+   ============================================================================= */
+.ef-form { overflow: clip; }   /* hidden ทำให้แถบขั้นตอน sticky ไม่ทำงาน */
+.ef-section { scroll-margin-top: calc(var(--fixed-header-height, 120px) + 132px); }
+
+/* ---- แถบขั้นตอน ---- */
+.ef-progress {
+  position: sticky;
+  top: var(--fixed-header-height, 0px);
+  z-index: 4;
+  container-type: inline-size;
+  padding: var(--space-4) var(--space-6) var(--space-3);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 95%, transparent);
+  backdrop-filter: blur(8px);
+}
+.ef-steps {
+  display: grid;
+  grid-template-columns: repeat(var(--ef-steps, 4), minmax(0, 1fr));
+  gap: var(--space-2);
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+.ef-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  padding: 6px 4px;
+  border-radius: var(--radius-md);
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+.ef-step:hover { background: color-mix(in srgb, var(--deep) 6%, var(--surface)); color: var(--deep); }
+.ef-step:focus-visible { outline: 3px solid var(--gold); outline-offset: 1px; }
+.ef-step-num {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid color-mix(in srgb, var(--ink) 22%, var(--line));
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  transition: background-color var(--duration) var(--ease), border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.ef-step-label { max-width: 100%; overflow-wrap: anywhere; }
+.ef-step.is-current { color: var(--deep); }
+.ef-step.is-current .ef-step-num { border-color: var(--deep); color: var(--deep); box-shadow: 0 0 0 4px color-mix(in srgb, var(--deep) 12%, transparent); }
+.ef-step.is-done { color: var(--ink); }
+.ef-step.is-done .ef-step-num { border-color: var(--deep); background: var(--deep); color: transparent; }
+.ef-step.is-done .ef-step-num::after,
+.ef-section.is-done .ef-num::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  margin-top: -3px;
+  border: solid var(--surface);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/* การ์ดกว้างพอ: เลข + ชื่อขั้นในแถวเดียว */
+@container (min-width: 600px) {
+  .ef-step { flex-direction: row; justify-content: flex-start; gap: var(--space-2); padding: 4px var(--space-2) 4px 4px; text-align: left; }
+}
+/* แคบมาก: ซ่อนชื่อขั้นอื่น เหลือชื่อขั้นปัจจุบัน */
+@container (max-width: 380px) {
+  .ef-step:not(.is-current) .ef-step-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+}
+.ef-progress-bar { height: 4px; }
+.ef-progress-top { align-items: center; margin: var(--space-2) 0 0; }
+.ef-progress-text { font-weight: 600; }
+.ef-progress-note { margin: 0; }
+
+/* ---- หัวตอน ---- */
+.ef-section-head { gap: var(--space-3); margin-bottom: var(--space-6); }
+.ef-num {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--deep);
+  background: var(--surface);
+  color: var(--deep);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+.ef-section.is-done .ef-num { border-color: var(--deep); background: var(--deep); }
+.ef-section.is-done .ef-num::after { margin-top: -3px; }
+
+/* ---- ตอนที่ยังรอตัวเลือก: แถวเดียวจาง ๆ ---- */
+.ef-section.is-placeholder { padding-block: var(--space-4); background: var(--surface-soft); }
+.ef-section.is-placeholder .ef-section-head { width: auto; margin: 0 var(--space-4) 0 0; font-size: var(--text-base); }
+.ef-section.is-placeholder .ef-num { border-style: dashed; border-color: color-mix(in srgb, var(--ink) 25%, var(--line)); background: transparent; color: var(--muted); }
+.ef-section.is-placeholder > .ef-placeholder-text { clear: none; padding-top: 6px; color: var(--muted); font-size: var(--text-xs); line-height: var(--leading-normal); }
+
+/* ---- ช่องกรอก: หัวช่อง (ป้าย + ข้อความช่วย) → ช่อง → ข้อความผิดพลาด
+   subgrid 3 แถว (กฎด้านบน) หัวช่องชิดล่าง → ช่องกรอกในแถวเดียวกันตรงกันแม้บางช่องมีข้อความช่วย ---- */
+.ef-head { display: grid; gap: 2px; min-width: 0; }
+.ef-group > .ef-hint { margin: -2px 0 var(--space-1); }
+
+/* ---- การ์ดตัวเลือก (layout: cards) ---- */
+.ef-choices.is-cards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.ef-choice.is-card {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: 0;
+  padding: var(--space-4);
+  border-width: 1.5px;
+}
+.ef-choice.is-card .ef-choice-box { position: absolute; top: var(--space-4); right: var(--space-4); width: 20px; height: 20px; margin: 0; }
+.ef-choice.is-card .ef-choice-text { gap: 4px; font-weight: 700; color: var(--ink); line-height: var(--leading-tight); }
+.ef-choice.is-card .ef-choice-text small { font-weight: 400; line-height: var(--leading-normal); }
+.ef-choice.is-card:has(input:checked) { border-color: var(--deep); background: color-mix(in srgb, var(--deep) 5%, var(--surface)); box-shadow: 0 0 0 1px var(--deep); }
+.ef-choice.is-card:has(input:checked) .ef-choice-text { color: var(--deep); }
+
+/* ---- ตัวเลือกปกติ (ไม่ใช่การ์ด/แถบระดับ) นอกแบบสำรวจ: ไทล์เรียงตาราง ---- */
+.ef:not(.is-survey) .ef-choices:not(.is-cards):not(.is-scale) { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: var(--space-2); }
+.ef:not(.is-survey) .ef-choices:not(.is-cards):not(.is-scale) .ef-choice { min-height: 44px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); }
+.ef:not(.is-survey) .ef-choices:not(.is-cards):not(.is-scale) .ef-other-input { grid-column: 1 / -1; }
+
+@media (max-width: 640px) {
+  .ef-progress { padding: var(--space-3) var(--space-4) var(--space-2); }
+  .ef-section-head { margin-bottom: var(--space-4); }
+  .ef-section.is-placeholder .ef-section-head { float: none; margin: 0 0 var(--space-1); }
+  .ef-section.is-placeholder > .ef-placeholder-text { padding-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .ef-step, .ef-step-num { transition: none; } }
+body.high-contrast .ef-progress { background: var(--surface); backdrop-filter: none; }
+body.high-contrast .ef-step.is-done .ef-step-num,
+body.high-contrast .ef-section.is-done .ef-num { background: var(--gold); border-color: var(--gold); }
+
+/* =============================================================================
    form layout "survey" — แบบสำรวจตามตัวอย่างผู้ใช้
    การ์ดกลางจอ: หัวการ์ด → ตอน (เลขวงกลมเขียวทึบ) → ข้อประเมินเป็นการ์ดย่อยมีเลข + แถบ 5 ระดับเต็มกว้าง
    แถบล่างติดขอบล่างจอ: "ตอบแล้ว x / n ข้อ" + ความคืบหน้า + ปุ่มส่ง (ครบทุกข้อ = ปุ่มสีเข้ม)
@@ -8310,7 +8461,7 @@ body.high-contrast .ef-progress-bar span { background: var(--gold); }
 .ef.is-survey .ef-group:not(.is-rating) .ef-choice { min-height: 48px; padding: 0 var(--space-5, 20px); font-size: var(--text-base); }
 .ef.is-survey .ef-group:not(.is-rating) .ef-choice-box { display: none; }
 .ef.is-survey .ef-group:not(.is-rating) .ef-choice:has(input:checked) { background: var(--deep); border-color: var(--deep); color: var(--surface); font-weight: 700; }
-.ef.is-survey textarea + .ef-label, .ef.is-survey .ef-field:has(textarea) > .ef-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.ef.is-survey textarea + .ef-label, .ef.is-survey .ef-field:has(textarea) .ef-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .ef.is-survey textarea.ef-input { min-height: 140px; font-size: var(--text-base); }
 
 /* ข้อประเมิน: การ์ดย่อย เลขข้อ + คำถาม + แถบ 5 ระดับเต็มกว้าง */
