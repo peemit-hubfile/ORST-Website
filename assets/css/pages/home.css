@@ -13539,3 +13539,116 @@ body.no-motion .govmq-track > li { scroll-snap-align: start; }
 body.no-motion .govmq-clone { display: none; }
 body.high-contrast .govmq-card { border-color: var(--ink); box-shadow: none; }
 body.high-contrast .govmq-viewport { -webkit-mask-image: none; mask-image: none; }
+
+/* =============================================================================
+   Hero หน้าแรก — เตี้ยลง (เดิม clamp(720px, 82vh, 940px))
+   แถบใต้ hero — ทางลัดบริการด้านภาษา 4 ช่อง (พจนานุกรม ศัพท์บัญญัติ คำทับศัพท์ หลักเกณฑ์)
+   ============================================================================= */
+.orst-hero-wow {
+  min-height: clamp(540px, 64vh, 720px);
+  padding-bottom: 48px;
+}
+/* ---- การ์ดลิงก์ 4 ช่อง: กรอบบาง ไอคอนในกรอบสี่เหลี่ยมมุมมน ข้อความเล็ก คำอธิบายบรรทัดเดียว ---- */
+.trust-strip--links { padding: 18px 0; }
+.trust-strip--links .trust-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.trust-strip--links .trust-item,
+.trust-strip--links .trust-item:first-child,
+.trust-strip--links .trust-item:nth-child(n) {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px 34px 12px 12px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, .03);
+  color: inherit;
+  text-decoration: none;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.trust-strip--links .trust-badge {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(191, 157, 85, .14);
+  color: var(--gold-2);
+  transition: background-color .2s ease, color .2s ease;
+}
+.trust-strip--links .trust-item .trust-icon { width: 20px; height: 20px; color: currentColor; }
+.trust-strip--links .trust-text { flex: 1 1 auto; min-width: 0; }
+.trust-strip--links .trust-item h3 {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  color: #f5e8c8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trust-strip--links .trust-item p {
+  margin: 2px 0 0;
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: rgba(255, 255, 255, .66);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trust-strip--links .trust-go {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 13px;
+  height: 13px;
+  margin-top: -6.5px;
+  color: var(--gold-2);
+  opacity: .5;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.trust-strip--links .trust-item:hover {
+  background: rgba(255, 255, 255, .07);
+  border-color: rgba(191, 157, 85, .6);
+}
+.trust-strip--links .trust-item:hover .trust-badge { background: var(--gold-2); color: var(--deep); }
+.trust-strip--links .trust-item:hover .trust-go { opacity: 1; transform: translateX(2px); }
+.trust-strip--links .trust-item:focus-visible {
+  outline: 2px solid var(--gold-2);
+  outline-offset: 2px;
+}
+
+/* จอกลาง: 2x2 */
+@media (max-width: 1100px) {
+  .trust-strip--links .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+}
+/* มือถือ: ทีละแถว — คำอธิบายตัดบรรทัดได้ */
+@media (max-width: 560px) {
+  .trust-strip--links { padding: 14px 0; }
+  .trust-strip--links .trust-grid { grid-template-columns: 1fr; gap: 8px; }
+  .trust-strip--links .trust-item p { white-space: normal; }
+}
+
+body.high-contrast .trust-strip--links .trust-item { background: #000; border-color: #fff; }
+body.high-contrast .trust-strip--links .trust-item p { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-strip--links .trust-item,
+  .trust-strip--links .trust-badge,
+  .trust-strip--links .trust-go { transition: none; }
+}
+
+/* ลำดับหน้าแรกใหม่ (ข่าว > บริการวิชาการ > คลังสื่อฯ): คลังสื่อฯ อยู่ต่อจากบริการวิชาการพื้นขาว
+   — กลับทิศไล่สีให้เริ่มจากเทาอ่อน ขอบระหว่าง 2 ส่วนจะไม่กลืนเป็นผืนเดียว */
+.knowledge-hub-section {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(158, 122, 47, .07), transparent 28%),
+    linear-gradient(180deg, #f5f6f4 0%, #fff 100%);
+}

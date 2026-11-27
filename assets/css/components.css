@@ -840,18 +840,6 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
     linear-gradient(135deg, #062f2a 0%, #073b34 55%, #0b3b33 100%);
   color: rgba(255, 255, 255, .8);
 }
-/* ตราจาง ๆ มุมขวาล่าง */
-.orst-footer::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  bottom: -70px;
-  width: 240px;
-  height: 425px;
-  background: url("../images/orst-emblem.png") center / contain no-repeat;
-  opacity: .06;
-  pointer-events: none;
-}
 .orst-footer .container { position: relative; z-index: 1; }
 
 .orst-footer-main {
@@ -1087,7 +1075,6 @@ body.high-contrast .drawer-cta { border: 1px solid var(--line); }
 /* มือถือ: เรียงทีละส่วน */
 @media (max-width: 720px) {
   .orst-footer { padding-top: 40px; }
-  .orst-footer::after { width: 180px; height: 320px; }
   .orst-footer-main { grid-template-columns: 1fr; row-gap: 0; }
   .orst-footer-main > *,
   .orst-footer-main > :nth-child(n + 3) {

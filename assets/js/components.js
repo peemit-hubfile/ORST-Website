@@ -433,14 +433,13 @@ const megaMenuData = {
   news: {
     title: 'ข่าวสารและกิจกรรม',
     image: 'news',
-    description: 'ข่าวประชาสัมพันธ์ กิจกรรม การบรรยายทางวิชาการ และประกาศต่าง ๆ ของสำนักงาน',
+    description: 'ข่าวประชาสัมพันธ์ ข่าวกิจกรรม และประกาศต่าง ๆ ของสำนักงาน',
     groups: [
       {
         heading: 'ข่าวประชาสัมพันธ์',
         links: [
           ['ข่าวประชาสัมพันธ์ทั่วไป', `${basePath}general-news.html`],
           ['ข่าวกิจกรรม', `${basePath}activity-news.html`],
-          ['การบรรยายทางวิชาการ', `${basePath}academic-lectures.html`],
           ['ปฏิทินกิจกรรม', `${basePath}event-calendar.html`],
           ['คำถาม-คำตอบ (Q&A)', `${basePath}qa.html`],
           ['คลังภาพ', `${basePath}media-gallery.html`],
