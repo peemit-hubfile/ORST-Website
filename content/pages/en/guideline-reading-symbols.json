@@ -1,0 +1,76 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Reading Symbols",
+  "navKey": "knowledge",
+  "description": "Reading Symbols — reading words or text in parentheses · reading the ไปยาลใหญ่ or เปยยาลใหญ่ (ฯลฯ) · reading the ellipsis (ไข่ปลา or จุดไข่ปลา), and more",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Reading Symbols",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society — 6 topics",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Reading Symbols"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": true,
+      "sections": [
+        {
+          "heading": "Reading Words or Text in Parentheses",
+          "html": "<p>When there is an opening parenthesis, read it as วงเล็บเปิด (wong-lep poet, “open parenthesis”), and when you reach the closing parenthesis, read it as วงเล็บปิด (wong-lep pit, “close parenthesis”), for example:</p><p>ปวาฬ (แก้วประพาฬ คือหินแก้วชนิดหนึ่งเกิดจากหินปะการัง) (“coral: a kind of gemstone formed from coral rock”)</p><p>Read as: ปะ-วาน วง-เล็บ-เปิด แก้ว-ป ฺระ-พาน … หิน-ปะ-กา-รัง วง-เล็บ-ปิด (pa-wan wong-lep-poet kaeo-pra-phan … hin-pa-ka-rang wong-lep-pit)</p><p>Source: How to Read and How to Write (อ่านอย่างไร และ เขียนอย่างไร), Royal Institute edition, 16th printing, February 2003, p. 80</p><br>"
+        },
+        {
+          "heading": "Reading the ไปยาลใหญ่ or เปยยาลใหญ่ (ฯลฯ)",
+          "html": "<p>5.1 When the ไปยาลใหญ่ or เปยยาลใหญ่ (ฯลฯ) comes at the end of a passage, read it as ละ (la) or และอื่นๆ (lae uen uen, “and others”), for example:</p><blockquote><p>สิ่งของที่ซื้อขายกันในตลาดมี เนื้อสัตว์ ผัก ผลไม้ น้ำตาล น้ำปลา ฯลฯ (“Goods sold in the market include meat, vegetables, fruit, sugar, fish sauce, etc.”)</p><p>Read as: สิ่ง-ของ-ที่-ซื้อ-ขาย-กัน… (sing-khong-thi-sue-khai-kan …)<br>น้ำ- ปฺลา ละ (nam-pla la)</p><p>or สิ่ง-ของ-ที่-ซื้อ-ขาย-กัน… (sing-khong-thi-sue-khai-kan …)<br>น้ำ- ปฺลา และ-อื่น-อื่น (nam-pla lae-uen-uen)</p></blockquote><p>5.2 When the ไปยาลใหญ่ or เปยยาลใหญ่ (ฯลฯ) comes in the middle of a passage, read it as ละถึง (la thueng, “through to”), for example:</p><blockquote><p>พยัญชนะไทย ๔๔ ตัว มี ก ฯลฯ ฮ (“The 44 Thai consonants are ก through ฮ”)</p><p>Read as: พะ-ยัน-ชะ-นะ-ไท-สี่-สิบ-สี่-ตัว มี กอ ละ-ถึง ฮอ (pha-yan-cha-na-thai-si-sip-si-tua mi ko la-thueng ho)</p></blockquote><p>Source: How to Read and How to Write (อ่านอย่างไร และ เขียนอย่างไร), Royal Institute edition, 16th printing, February 2003, p. 82</p><br>"
+        },
+        {
+          "heading": "Reading the Ellipsis (ไข่ปลา or จุดไข่ปลา)",
+          "html": "<p>When there is an ellipsis (ไข่ปลา or จุดไข่ปลา), pause briefly, then read it as ละ ละ ละ (la la la), and pause briefly again before reading the rest of the text, for example:</p><p>ที่เกิดมีภาษาไทย…ก็เพราะแต่ละภาษาสืบต่อภาษาของตนไว้ (“That the Thai language came to be … is because each language has carried on its own language”)</p><blockquote><p>Read as: ที่-เกิด-มี-พา-สา-ไท ละ-ละ-ละ (thi-koet-mi-pha-sa-thai la-la-la)<br> ก็-เพฺราะ-แต่-ละ-พา-สา-สืบ-ต่อ-พา-สา- ของ-ตน-ไว้ (ko-phro-tae-la-pha-sa-suep-to-pha-sa-khong-ton-wai)</p></blockquote><p>Source: How to Read and How to Write (อ่านอย่างไร และ เขียนอย่างไร), Royal Institute edition, 16th printing, February 2003, p. 82</p><br>"
+        },
+        {
+          "heading": "Reading the ไปยาลน้อย or เปยยาลน้อย (ฯ)",
+          "html": "<p>The ไปยาลน้อย or เปยยาลน้อย (ฯ) is used to abbreviate well-known words by omitting the end and keeping only enough of the beginning to be understood. When reading, the full word must be read, for example:</p><blockquote><p>กรุงเทพฯ is read กฺรุง-เทบ-มะ-หา-นะ-คอน (krung-thep-ma-ha-na-khon)<br>ทูลเกล้าฯ is read ทูน-เกฺล้า-ทูน-กฺระ-หฺม่อม (thun-klao-thun-kra-mom)<br>โปรดเกล้าฯ is read โปฺรด-เกฺล้า-โปฺรด-กฺระ-หฺม่อม (prot-klao-prot-kra-mom)<br>ล้นเกล้าฯ is read ล้น-เกฺล้า-ล้น-กฺระ-หฺม่อม (lon-klao-lon-kra-mom)</p></blockquote><p>Source: How to Read and How to Write (อ่านอย่างไร และ เขียนอย่างไร), Royal Institute edition, 16th printing, February 2003, pp. 81-82</p><br>"
+        },
+        {
+          "heading": "Reading the ไม้ยมก or ยมก (ๆ)",
+          "html": "<p>When the ไม้ยมก or ยมก (ๆ) is written after a word, phrase or sentence, read that word, phrase or sentence once more, for example:</p><blockquote><p>เด็กเล็ก ๆ is read เด็ก-เล็ก-เล็ก (dek-lek-lek) (“small children”)<br>แต่ละวัน ๆ is read แต่-ละ-วัน-แต่-ละ-วัน (tae-la-wan-tae-la-wan) (“each and every day”)<br>ในวันหนึ่ง ๆ is read ไน-วัน-หฺนึ่ง-วัน-หฺนึ่ง (nai-wan-nueng-wan-nueng) (“in any one day”)</p></blockquote><p>Reduplicated words must always use the ไม้ยมก or ยมก, and the word is read once more, for example:</p><blockquote><p>สีดำ ๆ is read สี-ดำ-ดำ (si-dam-dam) (“blackish”)<br>เด็กตัวเล็ก ๆ is read เด็ก-ตัว-เล็ก-เล็ก (dek-tua-lek-lek) (“a small child”)</p></blockquote><p>Source: How to Read and How to Write (อ่านอย่างไร และ เขียนอย่างไร), Royal Institute edition, 16th printing, February 2003, p. 81</p><br>"
+        },
+        {
+          "heading": "Reading Quotation Marks (อัญประกาศ)",
+          "html": "<p>When there is an opening quotation mark, read it as อัญประกาศเปิด (an-ya-pra-kat poet, “open quote”), and when you reach the closing quotation mark, read it as อัญประกาศปิด (an-ya-pra-kat pit, “close quote”)</p><p>If the quoted text runs to several paragraphs and an opening quotation mark is placed at every paragraph, read อัญประกาศเปิด only at the start of the text, and read อัญประกาศปิด at the end of the text, for example:</p><p>ครั้งหนึ่งพระพุทธองค์ตรัสว่า (Once the Buddha said)<br> “…ดูกร ภิกษุทั้งหลาย สงสารนี้กำหนดที่สุดเบื้องต้นปลายไม่ได้ เมื่อเหล่าสัตว์ผู้มีอวิชชาเป็นที่กางกั้น มีตัณหาเป็นเครื่องประกอบ ท่องเที่ยวไปมาอยู่ ที่สุดเบื้องต้นย่อมไม่ปรากฏ ฯลฯ (Buddhist scripture: “Monks, the beginning and end of this cycle of rebirth cannot be discerned; for beings hindered by ignorance and bound by craving, wandering on, no first beginning is evident …”) <br> “ดูกรภิกษุทั้งหลาย ท่อนไม้ที่บุคคลโยนขึ้นไปบนอากาศ บางคราวก็ตกลงทางโคน บางคราวก็ตกลงทางขวาง บาง คราวก็ตกลงทางปลาย แม้ฉันใด สัตว์ทั้งหลายผู้มีอวิชชา เป็นที่กางกั้น มีตัณหาเป็นเครื่องประกอบไว้ท่องเที่ยว ไปมาอยู่ ก็ฉันนั้นแล บางคราวก็จากโลกนี้ไปสู่ปรโลก บางคราวก็จากปรโลกมาสู่โลกนี้ ข้อนั้น เพราะเหตุไร เพราะว่า สงสารกำหนดที่สุดเบื้องต้นเบื้องปลายไม่ได้” (“Monks, just as a stick thrown up into the air sometimes falls on its base, sometimes on its side and sometimes on its tip, so too beings hindered by ignorance and bound by craving, wandering on, sometimes go from this world to the next and sometimes from the next world to this. Why is that? Because the beginning and end of this cycle of rebirth cannot be discerned.”)</p><p>Read as</p><p>คฺรั้ง-หฺนึ่ง-พฺระ-พุด-ทะ-อง-ตฺรัด-ว่า (khrang-nueng-phra-phut-tha-ong-trat-wa)<br>อัน-ยะ-ปฺระ-กาด-เปิด (an-ya-pra-kat-poet)<br> ดู-กอน-พิก-สุ … (du-kon-phik-su …)<br> เบื้อง-ปฺลาย-ไม่-ได้ อัน-ยะ-ปฺระ-กาด-ปิด (bueang-plai-mai-dai an-ya-pra-kat-pit)</p><p>Source: How to Read and How to Write (อ่านอย่างไร และ เขียนอย่างไร), Royal Institute edition, 16th printing, February 2003, p. 80</p><br>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

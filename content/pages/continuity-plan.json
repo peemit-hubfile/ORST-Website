@@ -1,0 +1,43 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=CTMP-63 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "แผนบริหารความต่อเนื่อง",
+  "navKey": "about",
+  "description": "แผนบริหารความต่อเนื่องของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "แผนบริหารความต่อเนื่อง",
+      "lead": "แผนบริหารความต่อเนื่องของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "แผนบริหารความต่อเนื่อง"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "แผนบริหารความต่อเนื่องของราชบัณฑิตยสถาน",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000007.PDF",
+          "fileSize": 1032580
+        },
+        {
+          "title": "แผนดำเนินธุรกิจอย่างต่อเนื่องสำหรับการบริหารความพร้อมต่อสภาวะวิกฤต (BCP)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000152.PDF",
+          "fileSize": 1792370
+        }
+      ]
+    }
+  ]
+}

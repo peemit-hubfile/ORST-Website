@@ -1,0 +1,40 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=34 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "General News",
+  "navKey": "news",
+  "description": "Press releases of the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "General News",
+      "lead": "Press releases of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "General News"
+        }
+      ],
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "layout": "news",
+      "source": {
+        "type": "news",
+        "channel": "general"
+      }
+    }
+  ],
+  "updatedAt": "2026-11-13",
+  "lang": "en"
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการ",
+  "navKey": "about",
+  "description": "รายงานผลการสำรวจความพึงพอใจของผู้รับบริการและผู้มีส่วนได้ส่วนเสียของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "รายงานผลการสำรวจความพึงพอใจการให้บริการ",
+      "lead": "รายงานผลการสำรวจความพึงพอใจของผู้รับบริการและผู้มีส่วนได้ส่วนเสียของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "รายงานผลการสำรวจความพึงพอใจการให้บริการ"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "รายงานผลการสำรวจความพึงพอใจการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2565",
+          "publishedAt": "2023-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000888.PDF"
+        },
+        {
+          "title": "ผลการสำรวจความพึงพอใจการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2564",
+          "publishedAt": "2022-02-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000841.PDF"
+        },
+        {
+          "title": "ผลการสำรวจความพึงพอใจของผู้รับบริการและผู้มีส่วนได้ส่วนเสีย สำนักงานราชบัณฑิตยสภา ปี 2563",
+          "publishedAt": "2021-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000777.PDF"
+        },
+        {
+          "title": "รายงานผลการสำรวจความพึงพอใจของผู้รับฟัง จำนวน ๕ รายการ ทางสถานีวิทยุ ม.ก. ปีงบประมาณ ๒๕๖๒",
+          "publishedAt": "2020-08-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000447.PDF"
+        },
+        {
+          "title": "รายงานผลการสำรวจความนิยมของผู้รับฟัง จำนวน ๔ รายการ ทางสถานีวิทยุกระจายเสียงแห่งประเทศไทย ประจำปีงบประมาณ ๒๕๖๒",
+          "publishedAt": "2020-08-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000448.PDF"
+        },
+        {
+          "title": "ผลการสำรวจความพึงพอใจปี พ.ศ. ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000134.PNG"
+        }
+      ]
+    }
+  ]
+}

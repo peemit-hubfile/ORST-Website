@@ -1,0 +1,146 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ลิงก์หน่วยงานจากกล่อง \"เชื่อมโยงเว็บไซต์อื่น\" ของเว็บเดิม orst.go.th (ดึงเมื่อ 22 พ.ย. 2569 · ตัดลิงก์ที่เสียแล้ว/ชี้ไปเว็บ royin.go.th เดิม) + ตัวอย่างในคอมเมนต์ลูกค้า (ป.ป.ช. ศปท. ก.พ. DGA) · ชุดเดียวกับหน้าแรก (index.html #agency) แก้ต้องแก้ทั้งสองที่",
+  "title": "Related Links",
+  "navKey": "home",
+  "description": "Links to websites of agencies and systems related to the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Related Links",
+      "lead": "Links to websites of agencies and systems related to the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Related Links"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "agencies",
+      "heading": "Related agencies",
+      "items": [
+        {
+          "title": "Royal Society of Thailand",
+          "href": "https://royalsociety.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Former website of the Office of the Royal Society",
+          "href": "https://www.orst.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Office of the National Anti-Corruption Commission (NACC)",
+          "href": "https://www.nacc.go.th/",
+          "icon": "i-shield"
+        },
+        {
+          "title": "Anti-Corruption Center",
+          "href": "anti-corruption-center.html",
+          "icon": "i-shield"
+        },
+        {
+          "title": "Office of the Civil Service Commission (OCSC)",
+          "href": "https://www.ocsc.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Digital Government Development Agency (Public Organization) (DGA)",
+          "href": "https://www.dga.or.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Office of the Public Sector Development Commission (OPDC)",
+          "href": "https://www.opdc.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Electronic Transactions Development Agency (ETDA)",
+          "href": "https://www.etda.or.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Official Information Center, Office of the Royal Society",
+          "href": "http://www.oic.go.th/infocenter6/664/",
+          "icon": "i-external"
+        },
+        {
+          "title": "GINFO Government Agency Database",
+          "href": "http://www.oic.go.th/ginfo/",
+          "icon": "i-database"
+        },
+        {
+          "title": "Government Contact Center (Hotline 1111)",
+          "href": "https://gcc.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "Government Pension Fund (GPF)",
+          "href": "https://www.gpf.or.th/",
+          "icon": "i-external"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "systems",
+      "variant": "alt",
+      "heading": "Databases and online services",
+      "items": [
+        {
+          "title": "Dictionary",
+          "href": "https://dictionary.orst.go.th/",
+          "icon": "i-dictionary"
+        },
+        {
+          "title": "ORST Coined Words Online",
+          "href": "https://coined-word.orst.go.th/",
+          "icon": "i-journal"
+        },
+        {
+          "title": "ORST Transliteration Database",
+          "href": "https://transliteration.orst.go.th/",
+          "icon": "i-pen"
+        },
+        {
+          "title": "Thai Gazetteer",
+          "href": "https://gazetteer.orst.go.th/",
+          "icon": "i-map"
+        },
+        {
+          "title": "Encyclopedia & Taxonomy",
+          "href": "https://lst.nectec.or.th/encyclopedia/",
+          "icon": "i-book"
+        },
+        {
+          "title": "Archives",
+          "href": "https://da3.thaidlt.org/",
+          "icon": "i-database"
+        },
+        {
+          "title": "Thai Language Proficiency Test",
+          "href": "https://etest.orst.go.th/",
+          "icon": "i-puzzle"
+        },
+        {
+          "title": "Thai Sign Language Dictionary (Royal Society Edition)",
+          "href": "http://164.115.33.116/",
+          "icon": "i-people"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "more",
+      "tone": "info",
+      "body": "[Other government agency links the Office wishes to list — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

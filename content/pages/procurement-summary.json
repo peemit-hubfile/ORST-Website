@@ -1,0 +1,523 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=5 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)",
+  "navKey": "news",
+  "description": "สรุปผลการดำเนินการจัดซื้อจัดจ้างรายเดือนของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)",
+      "lead": "สรุปผลการดำเนินการจัดซื้อจัดจ้างรายเดือนของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "สรุปผลการจัดซื้อจัดจ้างรายเดือน (แบบ สขร.1)"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน มิถุนายน 2569",
+          "publishedAt": "2026-07-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002058.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน พฤษภาคม 2569",
+          "publishedAt": "2026-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002051.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน เมษายน 2569",
+          "publishedAt": "2026-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002050.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน มีนาคม 2569",
+          "publishedAt": "2026-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002049.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน กุมภาพันธ์ 2569",
+          "publishedAt": "2026-02-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002048.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน มกราคม 2569",
+          "publishedAt": "2026-01-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002047.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน ธันวาคม 2568",
+          "publishedAt": "2025-12-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002046.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน พฤศจิกายน 2568",
+          "publishedAt": "2025-11-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002045.PDF"
+        },
+        {
+          "title": "วิเคราะห์ผลการจัดซื้อจัดจ้างประจาปีงบประมาณ 2568",
+          "publishedAt": "2025-10-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002055.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2569 เดือน ตุลาคม 2568",
+          "publishedAt": "2025-10-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002044.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน กันยายน 2568",
+          "publishedAt": "2025-09-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002043.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน สิงหาคม 2568",
+          "publishedAt": "2025-08-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002042.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน กรกฎาคม 2568",
+          "publishedAt": "2025-07-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002041.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน มิถุนายน 2568",
+          "publishedAt": "2025-06-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002040.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน พฤษภาคม 2568",
+          "publishedAt": "2025-05-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002039.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน เมษายน 2568",
+          "publishedAt": "2025-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002038.PDF"
+        },
+        {
+          "title": "ITA ผลการจัดซื้อจัดจ้างหรือการจัดหาพัสดุประจำปี พ.ศ. 2567",
+          "publishedAt": "2025-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001841.XLSX"
+        },
+        {
+          "title": "ITA รายการจัดซื้อจัดจ้างหรือการจัดหาพัสดุและความก้าวหน้าการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ ประจำปี พ.ศ. 2568",
+          "publishedAt": "2025-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001842.XLSX"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน มีนาคม 2568",
+          "publishedAt": "2025-03-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002037.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน กุมภาพันธ์ 2568",
+          "publishedAt": "2025-02-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002036.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน มกราคม 2568",
+          "publishedAt": "2025-01-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002035.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน ธันวาคม 2567",
+          "publishedAt": "2024-12-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002034.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน พฤศจิกายน 2567",
+          "publishedAt": "2024-11-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002033.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2568 เดือน ตุลาคม 2567",
+          "publishedAt": "2024-10-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002032.CSV"
+        },
+        {
+          "title": "รายงานสรุปผลการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ ประจำปีงบประมาณ พ.ศ. 2566",
+          "publishedAt": "2024-03-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67CMI0646075"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน กันยายน 2566",
+          "publishedAt": "2023-10-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001656.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน สิงหาคม 2566",
+          "publishedAt": "2023-08-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001653.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน กรกฎาคม 2566",
+          "publishedAt": "2023-07-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001652.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน มิถุนายน 2566",
+          "publishedAt": "2023-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001651.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน พฤษภาคม 2566",
+          "publishedAt": "2023-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001650.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน เมษายน 2566",
+          "publishedAt": "2023-05-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001612.PDF"
+        },
+        {
+          "title": "วิเคราะห์ผลการจัดซื้อจัดจ้างประจาปีงบประมาณ 2565",
+          "publishedAt": "2023-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001606.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน มีนาคม 2566",
+          "publishedAt": "2023-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001608.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน กุมภาพันธ์ 2566",
+          "publishedAt": "2023-03-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001607.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน มกราคม 2566",
+          "publishedAt": "2023-02-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001571.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน ธันวาคม 2565",
+          "publishedAt": "2023-01-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001570.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน พฤศจิกายน 2565",
+          "publishedAt": "2022-12-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001569.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2566 เดือน ตุลาคม 2565",
+          "publishedAt": "2022-11-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001568.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน กันยายน 2565",
+          "publishedAt": "2022-10-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001567.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน สิงหาคม 2565",
+          "publishedAt": "2022-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001566.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน กรกฎาคม 2565",
+          "publishedAt": "2022-08-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001565.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน เมษายน 2565",
+          "publishedAt": "2022-05-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001340.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน มีนาคม 2565",
+          "publishedAt": "2022-03-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001323.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน กุมภาพันธ์ 2565",
+          "publishedAt": "2022-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001322.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน มกราคม 2565",
+          "publishedAt": "2022-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001321.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน ธันวาคม 2564",
+          "publishedAt": "2021-12-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001320.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน พฤศจิกายน 2564",
+          "publishedAt": "2021-11-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001319.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างประจำปีงบประมาณ 2565 เดือน ตุลาคม 2564",
+          "publishedAt": "2021-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001318.PDF"
+        },
+        {
+          "title": "วิเคราะห์ผลการจัดซื้อจัดจ้างประจำปีงบประมาณ 2564",
+          "publishedAt": "2021-10-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001324.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.ค. 64)",
+          "publishedAt": "2021-08-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001244.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (มิ.ย. 64)",
+          "publishedAt": "2021-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001226.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (พ.ค. 64)",
+          "publishedAt": "2021-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001209.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (เม.ย. 64)",
+          "publishedAt": "2021-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001192.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (มี.ค. 64)",
+          "publishedAt": "2021-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001168.PDF"
+        },
+        {
+          "title": "วิเคราะห์ผลการจัดซื้อจัดจ้างประจำปีงบประมาณ 2563",
+          "publishedAt": "2021-03-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001153.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.พ. 64)",
+          "publishedAt": "2021-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001167.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ม.ค. 64)",
+          "publishedAt": "2021-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001166.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ธ.ค. 63)",
+          "publishedAt": "2021-01-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001132.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (พ.ย. 63)",
+          "publishedAt": "2020-12-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001121.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ต.ค. 63)",
+          "publishedAt": "2020-11-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001107.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.ย. 63)",
+          "publishedAt": "2020-10-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001103.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ส.ค. 63)",
+          "publishedAt": "2020-09-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001072.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.ค. 63)",
+          "publishedAt": "2020-08-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001063.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (มิ.ย. 63)",
+          "publishedAt": "2020-07-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001005.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (พ.ค. 63)",
+          "publishedAt": "2020-06-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001004.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (เม.ย. 63)",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000804.PDF"
+        },
+        {
+          "title": "ตารางรายงานการวิเคราะห์ผลการจัดซื้อจัดจ้างประจำปีงบประมาณ 2562",
+          "publishedAt": "2020-04-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000805.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (มี.ค. 63)",
+          "publishedAt": "2020-04-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000806.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.พ. 63)",
+          "publishedAt": "2020-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000807.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ม.ค. 63)",
+          "publishedAt": "2020-02-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000808.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ธ.ค. 62)",
+          "publishedAt": "2020-01-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000809.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (พ.ย. 62)",
+          "publishedAt": "2019-12-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000810.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ต.ค. 62)",
+          "publishedAt": "2019-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000811.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.ย. 62)",
+          "publishedAt": "2019-10-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000812.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ส.ค. 62)",
+          "publishedAt": "2019-09-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000813.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.ค. 62)",
+          "publishedAt": "2019-08-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000814.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (มิ.ย. 62)",
+          "publishedAt": "2019-07-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000815.PDF"
+        },
+        {
+          "title": "สรุปรายงานการวิเคราะห์ผลการจัดซื้อจัดจ้าง 2561",
+          "publishedAt": "2019-06-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000816.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (พ.ค. 62)",
+          "publishedAt": "2019-06-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000817.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (เม.ย. 62)",
+          "publishedAt": "2019-05-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001009.JPG"
+        },
+        {
+          "title": "แบบ สขร.1 (มี.ค. 62)",
+          "publishedAt": "2019-04-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000818.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.พ. 62)",
+          "publishedAt": "2019-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000819.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ม.ค. 62)",
+          "publishedAt": "2019-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000820.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ธ.ค. 61)",
+          "publishedAt": "2019-01-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000821.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (พ.ย. 61)",
+          "publishedAt": "2018-11-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000822.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ต.ค. 61)",
+          "publishedAt": "2018-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000823.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.ย. 61)",
+          "publishedAt": "2018-09-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000824.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ส.ค. 61)",
+          "publishedAt": "2018-08-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000825.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (ก.ค. 61)",
+          "publishedAt": "2018-07-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000826.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (มิ.ย. 61)",
+          "publishedAt": "2018-06-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000827.PDF"
+        },
+        {
+          "title": "แบบ สขร.1 (พ.ค. 61)",
+          "publishedAt": "2018-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000828.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน เมษายน 2561",
+          "publishedAt": "2018-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000829.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน มีนาคม 2561",
+          "publishedAt": "2018-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000830.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน กุมภาพันธ์ 2561",
+          "publishedAt": "2018-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000831.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน มกราคม 2561",
+          "publishedAt": "2018-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000832.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน ธันวาคม 2560",
+          "publishedAt": "2018-01-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000833.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน พฤศจิกายน 2560",
+          "publishedAt": "2017-12-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000834.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน ตุลาคม 2560",
+          "publishedAt": "2017-11-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000835.PDF"
+        }
+      ]
+    }
+  ]
+}

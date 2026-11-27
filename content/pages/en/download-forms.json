@@ -1,0 +1,49 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แบบฟอร์มจากหน้ากฎหมาย ระเบียบ (laws-regulations.json) และงานบริการ e-Services ของเว็บเดิม — ไฟล์ยังชี้ไปเว็บไซต์เดิม",
+  "title": "Download Forms",
+  "navKey": "services",
+  "description": "Service request forms of the Office of the Royal Society. Download, complete and submit them through the specified channels",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Download Forms",
+      "lead": "Service request forms of the Office of the Royal Society. Download, complete and submit them through the specified channels",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services"
+        },
+        {
+          "label": "Download Forms"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "forms",
+      "items": [
+        {
+          "title": "Application form for permission to print or use printed materials, electronic media, electronic data and other media of the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000101.PDF",
+          "category": "Office of the Royal Society rules",
+          "fileSize": 136768
+        },
+        {
+          "title": "Form: request for permission to print and publish publications, electronic media, electronic data and other media of the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF"
+        },
+        {
+          "title": "Form: request for the right to print and sell books produced by the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

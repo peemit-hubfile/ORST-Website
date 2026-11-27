@@ -1,0 +1,132 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "6 ancient script typeface or font sets",
+  "navKey": "knowledge",
+  "description": "Six ancient script typeface (font) sets — The Royal Society of Thailand and International Standards for the Thai Language · Thai Noi script · Isan Tham script, and more",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "6 ancient script typeface or font sets",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society — 6 topics",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "6 ancient script typeface or font sets"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "pageSize": 8,
+      "items": [
+        {
+          "title": "The Royal Society of Thailand and International Standards for the Thai Language",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004907.PDF",
+          "category": "The Royal Society of Thailand and International Standards for the Thai Language"
+        },
+        {
+          "title": "Thai Noi font character chart",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004909.PDF",
+          "category": "Thai Noi script (อักษรไทยน้อย)"
+        },
+        {
+          "title": "Thai Noi font typing manual",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004910.PDF",
+          "category": "Thai Noi script (อักษรไทยน้อย)"
+        },
+        {
+          "title": "Thai Noi font download details",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004911.PDF",
+          "category": "Thai Noi script (อักษรไทยน้อย)"
+        },
+        {
+          "title": "RST-THNOI font file (.zip)",
+          "href": "https://drive.google.com/file/d/1Nb92ATAgCMZHQ3dxkTsXN5O5gu-q1GPV/view?usp=sharing",
+          "category": "Thai Noi script (อักษรไทยน้อย)"
+        },
+        {
+          "title": "Isan Tham font character chart",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004912.PDF",
+          "category": "Isan Tham script (อักษรธรรมอีสาน)"
+        },
+        {
+          "title": "Isan Tham font typing manual",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004913.PDF",
+          "category": "Isan Tham script (อักษรธรรมอีสาน)"
+        },
+        {
+          "title": "Isan Tham font download details",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004914.PDF",
+          "category": "Isan Tham script (อักษรธรรมอีสาน)"
+        },
+        {
+          "title": "RST-ISAN font file (.zip)",
+          "href": "https://drive.google.com/file/d/1ytQM8zxUyk_sOCT_ozgs25O5oP9HjNJp/view?usp=sharing",
+          "category": "Isan Tham script (อักษรธรรมอีสาน)"
+        },
+        {
+          "title": "Lanna Tham font character chart",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004915.PDF",
+          "category": "Lanna Tham script (อักษรธรรมล้านนา)"
+        },
+        {
+          "title": "Lanna Tham font typing manual",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004916.PDF",
+          "category": "Lanna Tham script (อักษรธรรมล้านนา)"
+        },
+        {
+          "title": "Lanna Tham font download details",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004917.PDF",
+          "category": "Lanna Tham script (อักษรธรรมล้านนา)"
+        },
+        {
+          "title": "RST-LANNA font file (.zip)",
+          "href": "https://drive.google.com/file/d/1yUvuQAXRWLpsodlLIJpjMV7ZYjTEnqdy/view?usp=sharing",
+          "category": "Lanna Tham script (อักษรธรรมล้านนา)"
+        },
+        {
+          "title": "Thai Nithet script (อักษรไทยนิเทศ)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00004918.PDF",
+          "category": "Thai Nithet script (อักษรไทยนิเทศ)"
+        },
+        {
+          "title": "RST-NITHET font file (.zip)",
+          "href": "https://drive.google.com/drive/folders/1R6pSh3J9kxir7zHOkYQ9gwFY244PAwO8",
+          "category": "Thai Nithet script (อักษรไทยนิเทศ)"
+        },
+        {
+          "title": "Khom Thai typeface (แบบอักษรขอมไทย)",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005336.PDF",
+          "category": "Khom Thai typeface (แบบอักษรขอมไทย)"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

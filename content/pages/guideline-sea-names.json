@@ -1,0 +1,71 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ชื่อทะเล",
+  "navKey": "knowledge",
+  "description": "ชื่อทะเล — ทะเลติดต่อมหาสมุทรแปซิฟิก · ทะเลติดต่อมหาสมุทรอินเดีย · ทะเลติดต่อมหาสมุทรแอตแลนติก และอื่น ๆ",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ชื่อทะเล",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "หลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด — ๕ หัวข้อ",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หลักเกณฑ์ภาษาไทย",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "ชื่อทะเล"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": true,
+      "sections": [
+        {
+          "heading": "ทะเลติดต่อมหาสมุทรแปซิฟิก",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Bering Sea</td> <td>ทะเลเบริง</td> </tr> <tr> <td>Sea of Okhotsk</td> <td>ทะเลโอค็อตสค์</td> </tr> <tr> <td>Sea of Japan</td> <td>ทะเลญี่ปุ่น</td> </tr> <tr> <td>Yellow Sea, or Huang Hai</td> <td>ทะเลเหลือง, หรือทะเลหวางไห่</td> </tr> <tr> <td>China Sea</td> <td>ทะเลจีน</td> </tr> <tr> <td>East China Sea, or Eastern Sea, or Tung Hai</td> <td>ทะเลจีนตะวันออก, หรือทะเลถงไห่</td> </tr> <tr> <td>South China Sea, or Nan Hai</td> <td>ทะเลจีนใต้, หรือทะเลหนานไห่</td> </tr> <tr> <td>Inland Sea</td> <td>ทะเลอินแลนด์</td> </tr> <tr> <td>Philippine Sea</td> <td>ทะเลฟิลิปปิน</td> </tr> <tr> <td>Sulu Sea</td> <td>ทะเลซูลู</td> </tr> <tr> <td>Celebes Sea</td> <td>ทะเลเซเลเบส</td> </tr> <tr> <td>Mindanao Sea</td> <td>ทะเลมินดาเนา</td> </tr> <tr> <td>Molucca Sea</td> <td>ทะเลโมลุกกะ</td> </tr> <tr> <td>Ceram Sea</td> <td>ทะเลเซรัม</td> </tr> <tr> <td>Banda Sea</td> <td>ทะเลบันดา</td> </tr> <tr> <td>Java Sea</td> <td>ทะเลชวา</td> </tr> <tr> <td>Flores Sea</td> <td>ทะเลฟลอเรส</td> </tr> <tr> <td>Timor Sea</td> <td>ทะเลติมอร์</td> </tr> <tr> <td>Arafura Sea</td> <td>ทะเลอาราฟูรา</td> </tr> <tr> <td>Coral Sea</td> <td>ทะเลคอรัล</td> </tr> <tr> <td>Tasman Sea</td> <td>ทะเลแทสมัน</td> </tr> <tr> <td>Ross Sea</td> <td>ทะเลรอสซี</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "ทะเลติดต่อมหาสมุทรอินเดีย",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Andaman Sea</td> <td>ทะเลอันดามัน</td> </tr> <tr> <td>Arabian Sea</td> <td>ทะเลอาหรับ</td> </tr> <tr> <td>Red Sea</td> <td>ทะเลแดง</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "ทะเลติดต่อมหาสมุทรแอตแลนติก",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Norwegian Sea</td> <td>ทะเลนอร์วีเจียน</td> </tr> <tr> <td>North Sea</td> <td>ทะเลเหนือ</td> </tr> <tr> <td>Irish Sea</td> <td>ทะเลไอริช</td> </tr> <tr> <td>Baltic Sea</td> <td>ทะเลบอลติก</td> </tr> <tr> <td>Mediterranean Sea</td> <td>ทะเลเมดิเตอร์เรเนียน</td> </tr> <tr> <td>Adriatic Sea</td> <td>ทะเลเอเดรียติก</td> </tr> <tr> <td>Ionian Sea</td> <td>ทะเลไอโอเนียน</td> </tr> <tr> <td>Tyrhenian Sea</td> <td>ทะเลติร์เรเนียน</td> </tr> <tr> <td>Sicilian Sea</td> <td>ทะเลซิซิเลียน</td> </tr> <tr> <td>Ligurian Sea</td> <td>ทะเลลิกูเรียน</td> </tr> <tr> <td>Sea of Marmara</td> <td>ทะเลมาร์มะรา</td> </tr> <tr> <td>Black Sea</td> <td>ทะเลดำ</td> </tr> <tr> <td>Sea of Azov</td> <td>ทะเลอะซอฟ</td> </tr> <tr> <td>Caribbean Sea</td> <td>ทะเลแคริบเบียน</td> </tr> <tr> <td>Scoia Sea</td> <td>ทะเลสโกเชีย</td> </tr> <tr> <td>Weddell Sea</td> <td>ทะเลเวดเดลล์</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "ทะเลติดต่อมหาสมุทรอาร์กติก",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Barents Sea</td> <td>ทะเลแบเร็นตส์</td> </tr> <tr> <td>White Sea</td> <td>ทะเลขาว</td> </tr> <tr> <td>Kara Sea</td> <td>ทะเลคารา</td> </tr> <tr> <td>Laptev Sea</td> <td>ทะเลแลปทิฟ</td> </tr> <tr> <td>East Siberian Sea</td> <td>ทะเลไซบีเรียนตะวันออก</td> </tr> <tr> <td>Chuckchee Sea; Chuckchi Sea</td> <td>ทะเลชุกชี</td> </tr> <tr> <td>Beaufort Sea</td> <td>ทะเลโบฟอร์ต</td> </tr> <tr> <td>Greenland Sea</td> <td>ทะเลกรีนแลนด์</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "ทะเลปิดภายใน",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Aegean Sea</td> <td>ทะเลอีเจียน</td> </tr> <tr> <td>Caspian Sea</td> <td>ทะเลแคสเปียน</td> </tr> <tr> <td>Aral Sea</td> <td>ทะเลอารัล</td> </tr> <tr> <td>Dead Sea</td> <td>ทะเลเดดซี</td> </tr> <tr> <td>Sea of Tiberias, or Sea of Galilee</td> <td>ทะเลไทบิรีอัส, หรือทะเลแกลิลี</td> </tr></tbody></table></div><br>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ดูหลักเกณฑ์เรื่องอื่น",
+      "body": "หลักเกณฑ์การใช้ภาษาไทยทั้งหมดของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "หลักเกณฑ์ภาษาไทยทั้งหมด",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ]
+}

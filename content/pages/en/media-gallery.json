@@ -1,0 +1,159 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "อัลบั้มจากหน้าข่าว (content/news/<id>.json) แต่ละอัลบั้มเปิดที่ album.html?id=<id> — สร้างโดย step11_news.py รันใหม่หลังเพิ่มข่าว",
+  "title": "Photo Gallery",
+  "navKey": "news",
+  "description": "Activity photos of the Office of the Royal Society, organised into albums by news story. Choose an album to see all its photos",
+  "updatedAt": "2026-11-17",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Photo Gallery",
+      "lead": "Activity photos of the Office of the Royal Society, organised into albums by news story. Choose an album to see all its photos",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Photo Gallery"
+        }
+      ],
+      "image": "assets/images/orst/news/data0005-00005374-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "media-grid",
+      "id": "photos",
+      "layout": "album",
+      "columns": 4,
+      "ratio": "4:3",
+      "pageSize": 12,
+      "unit": "albums",
+      "items": [
+        {
+          "image": "assets/images/orst/news/data0005-00005386-640.jpg",
+          "alt": "Royal Society Brings Knowledge to Society Project: Academic Forum on “Biodiversity: Assets for Future Economic and Social Development”",
+          "category": "Training and seminars",
+          "tag": "7 ภาพ",
+          "title": "Royal Society Brings Knowledge to Society Project: Academic Forum on “Biodiversity: Assets for Future Economic and Social Development”",
+          "desc": "14 ส.ค. 2569",
+          "href": "album.html?id=69hni1055034"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005374-640.jpg",
+          "alt": "Merit-Making Ceremony on the 50th Day in Dedication to Her Royal Highness Princess Bajrakitiyabha Narendiradebyavati Kromluang Rajasarini Siribajra Maha Vajrarajadhita",
+          "category": "Press Releases",
+          "tag": "11 ภาพ",
+          "title": "Merit-Making Ceremony on the 50th Day in Dedication to Her Royal Highness Princess Bajrakitiyabha Narendiradebyavati Kromluang Rajasarini Siribajra Maha Vajrarajadhita",
+          "desc": "5 ส.ค. 2569",
+          "href": "album.html?id=69hep1411031"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005324-640.jpg",
+          "alt": "Office of the Royal Society Holds Oath-Taking Ceremony to Be Good Civil Servants and the Strength of the Nation on the Occasion of His Majesty the King’s Birthday",
+          "category": "Press Releases",
+          "tag": "12 ภาพ",
+          "title": "Office of the Royal Society Holds Oath-Taking Ceremony to Be Good Civil Servants and the Strength of the Nation on the Occasion of His Majesty the King’s Birthday",
+          "desc": "24 ก.ค. 2569",
+          "href": "album.html?id=69gxi2522022"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005306-640.jpg",
+          "alt": "The Office of the Royal Society holds a ceremony to offer blessings to His Majesty the King, together with volunteer public service and charitable activities in honor of His Majesty the King, on the occasion of His Majesty's Birthday, 28 July 2026",
+          "category": "Press Releases",
+          "tag": "17 ภาพ",
+          "title": "The Office of the Royal Society holds a ceremony to offer blessings to His Majesty the King, together with volunteer public service and charitable activities in honor of His Majesty the King, on the occasion of His Majesty's Birthday, 28 July 2026",
+          "desc": "20 ก.ค. 2569",
+          "href": "album.html?id=69gti3132000"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005295-640.jpg",
+          "alt": "Summary report of the Royal Society of Thailand 100th Anniversary Project activities, Academy of Science, fiscal year 2026: the Academy of Science, together with Rajamangala University of Technology Srivijaya, held an academic seminar on coastal erosion in the Gulf of Thailand and sustainable solutions",
+          "category": "Training and seminars",
+          "tag": "9 ภาพ",
+          "title": "Summary report of the Royal Society of Thailand 100th Anniversary Project activities, Academy of Science, fiscal year 2026: the Academy of Science, together with Rajamangala University of Technology Srivijaya, held an academic seminar on coastal erosion in the Gulf of Thailand and sustainable solutions",
+          "desc": "10 ก.ค. 2569",
+          "href": "album.html?id=69gjk0206009"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005277-640.jpg",
+          "alt": "Department-level Meeting (Town Hall Meeting) No. 2/2026",
+          "category": "Press Releases",
+          "tag": "14 ภาพ",
+          "title": "Department-level Meeting (Town Hall Meeting) No. 2/2026",
+          "desc": "30 มิ.ย. 2569",
+          "href": "album.html?id=69fdi2503034"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005229-640.jpg",
+          "alt": "The Office of the Royal Society holds a ceremony to offer blessings on the auspicious occasion of the 4th Cycle Birthday Anniversary of Her Majesty Queen Suthida Bajrasudhabimalalakshana, 3 June 2026",
+          "category": "Press Releases",
+          "tag": "8 ภาพ",
+          "title": "The Office of the Royal Society holds a ceremony to offer blessings on the auspicious occasion of the 4th Cycle Birthday Anniversary of Her Majesty Queen Suthida Bajrasudhabimalalakshana, 3 June 2026",
+          "desc": "5 มิ.ย. 2569",
+          "href": "album.html?id=69fem4020063"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005221-640.jpg",
+          "alt": "Office of the Royal Society Signs Book of Good Wishes",
+          "category": "Press Releases",
+          "tag": "5 ภาพ",
+          "title": "Office of the Royal Society Signs Book of Good Wishes",
+          "desc": "3 มิ.ย. 2569",
+          "href": "album.html?id=69fcl0048005"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005024-640.jpg",
+          "alt": "The Royal Society of Thailand holds the Royal Society Tribute Project: academic forum on \"Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 14\" and brainstorming forum on the Royal Society of Thailand 5-Year Strategy, No. 3, on the occasion of the 100th anniversary of the Royal Society of Thailand",
+          "category": "Training and seminars",
+          "tag": "20 ภาพ",
+          "title": "The Royal Society of Thailand holds the Royal Society Tribute Project: academic forum on \"Fellows of the Royal Society, Revered Persons, Scholars of the Land, No. 14\" and brainstorming forum on the Royal Society of Thailand 5-Year Strategy, No. 3, on the occasion of the 100th anniversary of the Royal Society of Thailand",
+          "desc": "25 ธ.ค. 2568",
+          "href": "album.html?id=68lyo0509028"
+        },
+        {
+          "image": "assets/images/orst/news/data0004-00004279-640.jpg",
+          "alt": "The Office of the Royal Society organizes volunteer public service and charitable activities on the occasion of the birthday anniversary of His Majesty King Bhumibol Adulyadej The Great, National Day and National Father's Day, 5 December 2024",
+          "category": "Activities",
+          "tag": "5 ภาพ",
+          "title": "The Office of the Royal Society organizes volunteer public service and charitable activities on the occasion of the birthday anniversary of His Majesty King Bhumibol Adulyadej The Great, National Day and National Father's Day, 5 December 2024",
+          "desc": "23 ธ.ค. 2567",
+          "href": "album.html?id=67lwp3919091"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001961-640.jpg",
+          "alt": "Minister Attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society",
+          "category": "Activities",
+          "tag": "10 ภาพ",
+          "title": "Minister Attached to the Prime Minister's Office visits and gives policy guidance to the Office of the Royal Society",
+          "desc": "26 ส.ค. 2563",
+          "href": "album.html?id=63hyj1446063"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001939-640.jpg",
+          "alt": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 4, Southern Region",
+          "category": "Activities",
+          "tag": "12 ภาพ",
+          "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 4, Southern Region",
+          "desc": "17 ส.ค. 2563",
+          "href": "album.html?id=63hqn2359047"
+        },
+        {
+          "image": "assets/images/orst/news/data0001-00001953-640.jpg",
+          "alt": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region",
+          "category": "Activities",
+          "tag": "6 ภาพ",
+          "title": "Results of the Storytelling Contest “Local Wisdom: Food, Toys and Utensils”, Group 2, Northern Region",
+          "desc": "17 ส.ค. 2563",
+          "href": "album.html?id=63hqn2824081"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

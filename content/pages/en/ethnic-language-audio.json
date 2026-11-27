@@ -1,0 +1,77 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=42 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Local Language Audio Recordings",
+  "navKey": "knowledge",
+  "description": "Audio recordings accompanying the manuals on writing systems for ethnic minority local languages using the Thai script",
+  "sideNav": false,
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Local Language Audio Recordings",
+      "image": "assets/images/orst/news/data0005-00005324-960.jpg",
+      "lead": "Audio recordings accompanying the manuals on writing systems for ethnic minority local languages using the Thai script",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Hub",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Local Language Audio Recordings"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Northern Khmer (Thai Khmer)",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001587.HTM"
+        },
+        {
+          "title": "Lavua",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001591.HTM"
+        },
+        {
+          "title": "Nyah Kur",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001592.HTM"
+        },
+        {
+          "title": "So (Thavueng)",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001593.HTM"
+        },
+        {
+          "title": "Kasong",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001594.HTM"
+        },
+        {
+          "title": "Bisu",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001595.HTM"
+        },
+        {
+          "title": "Bru",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001596.HTM"
+        },
+        {
+          "title": "Khmu",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001597.HTM"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

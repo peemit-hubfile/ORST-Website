@@ -1,0 +1,109 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=10 และหน้า ABOUT-*-ETHICS (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Integrity & Transparency",
+  "navKey": "about",
+  "description": "Code of Ethics, Ethical Requirements, and Measures to Promote Integrity and Transparency of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Integrity & Transparency",
+      "lead": "Code of Ethics, Ethical Requirements, and Measures to Promote Integrity and Transparency of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Anti-Corruption Center",
+          "href": "anti-corruption-center.html"
+        },
+        {
+          "label": "Integrity & Transparency"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Declaration of Intent to Administer with Honesty and Integrity",
+          "publishedAt": "2023-12-07",
+          "category": "Commitment to Management with Honesty and Integrity",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000190.PDF"
+        },
+        {
+          "title": "The Declaration of the Office of the Royal Society Subject: Statement of Intent: Administration with Integrity and Morality",
+          "publishedAt": "2023-12-07",
+          "category": "Commitment to Management with Honesty and Integrity",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000191.PDF"
+        },
+        {
+          "title": "Code of Ethics",
+          "category": "Code of Ethics",
+          "note": "The former website has no attachment"
+        },
+        {
+          "title": "Civil Service Code of Conduct",
+          "category": "Civil Service Code of Conduct",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000032.PDF",
+          "fileSize": 4707435
+        },
+        {
+          "title": "Ethics Committee",
+          "category": "Ethics Committee",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000034.PDF",
+          "fileSize": 734464
+        },
+        {
+          "title": "Related projects/activities",
+          "category": "Related projects/activities",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000038.PDF",
+          "fileSize": 88681
+        },
+        {
+          "title": "Prevention of Sexual Harassment and Abuse",
+          "category": "Prevention of Sexual Harassment and Abuse",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000186.PDF",
+          "fileSize": 3236357
+        },
+        {
+          "title": "Model Moral Organization",
+          "category": "Model Moral Organization",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000195.PDF",
+          "fileSize": 790998
+        },
+        {
+          "title": "Ethical Requirements",
+          "category": "Ethical Requirements",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000197.PDF",
+          "fileSize": 1924667
+        },
+        {
+          "title": "Guidelines for Conduct under the Code of Ethics",
+          "category": "Guidelines for Conduct under the Code of Ethics",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000199.PDF",
+          "fileSize": 2621156
+        },
+        {
+          "title": "Report Form on the Use of Ethics Assessment Results",
+          "category": "Report Form on the Use of Ethics Assessment Results",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000206.PDF",
+          "fileSize": 1513938
+        },
+        {
+          "title": "Report Form on Opportunities for Public Participation",
+          "category": "Report Form on Opportunities for Public Participation",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000202.PDF",
+          "fileSize": 1540362
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,173 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=22 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิต / งบทดลอง",
+  "navKey": "about",
+  "description": "รายงานผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตและงบทดลอง",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิต / งบทดลอง",
+      "lead": "รายงานผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตและงบทดลอง",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิต / งบทดลอง"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "รายงานต้นทุนผลผลิต ประจำปีงบประมาณ พ.ศ. 2568",
+          "publishedAt": "2026-11-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001042.PDF"
+        },
+        {
+          "title": "รายงานงบทดลองหน่วยเบิกจ่ายรายเดือน งวด 1-16",
+          "publishedAt": "2026-10-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001039.PDF"
+        },
+        {
+          "title": "รายงานของผู้สอบบัญชีและรายงานการเงิน สำหรับปีสิ้นสุดวันที่ 30 กันยายน 2568",
+          "publishedAt": "2026-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001009.PDF"
+        },
+        {
+          "title": "รายงานงบทดลองประจำปีงบประมาณ พ.ศ. ๒๕๖๘ และรายงานที่เกี่ยวข้องกับเงินทดรองราชการ",
+          "publishedAt": "2025-11-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005315.PDF"
+        },
+        {
+          "title": "รายงานของผู้สอบบัญชีและรายงานการเงิน สำหรับปีสิ้นสุดวันที่ 30 กันยายน 2567",
+          "publishedAt": "2025-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000997.PDF"
+        },
+        {
+          "title": "รายงานของผู้สอบบัญชีและรายงานการเงิน สำหรับปีสิ้นสุดวันที่ 30 กันยายน 2566",
+          "publishedAt": "2024-04-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000965.PDF"
+        },
+        {
+          "title": "รายงานงบทดลองหน่วยงานรายเดือน สำนักงานราชบัณฑิตยสภา รหัสหน่วยงาน 2506 ประจำเดือน กันยายน พ.ศ 2566",
+          "publishedAt": "2023-11-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000940.PDF"
+        },
+        {
+          "title": "รายละเอียดประกอบรายการบัญชีที่ส าคัญของงบทดลอง รหัสหน่วยงาน 2506 สำนักงานราชบัณฑิตยสภา หน่วยเบิกจ่าย 2500600000 สำนักงานเลขานุการกรม ณ วันที่ 30 กันยายน 2566",
+          "publishedAt": "2023-11-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000941.PDF"
+        },
+        {
+          "title": "รายงานของผู้สอบบัญชีและรายงานการเงิน สำหรับปีสิ้นสุดวันที่ 30 กันยายน 2565",
+          "publishedAt": "2023-03-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000894.PDF"
+        },
+        {
+          "title": "รายงานงบทดลองหน่วยงานรายเดือน สำนักงานราชบัณฑิตยสภา รหัสหน่วยงาน 2506 ประจำเดือน กันยายน พ.ศ 2565",
+          "publishedAt": "2022-11-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000881.PDF"
+        },
+        {
+          "title": "รายละเอียดประกอบรายการบัญชีที่ส าคัญของงบทดลอง รหัสหน่วยงาน 2506 ส านักงานราชบัณฑิตยสภา หน่วยเบิกจ่าย 2500600000 ส านักงานเลขานุการกรม ณ วันที่30 กันยายน 2565",
+          "publishedAt": "2022-11-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000884.PDF"
+        },
+        {
+          "title": "รายงานผลการตรวจสอบรายงานการเงิน สำหรับปีสิ้นสุดวันที่ 30 กันยายน 2564 ของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2022-04-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004914.PDF"
+        },
+        {
+          "title": "รายงานงบทดลองหน่วยงานรายเดือน สำนักงานราชบัณฑิตยสภา รหัสหน่วยงาน 2506 ประจำเดือน กันยายน พ.ศ 2564",
+          "publishedAt": "2021-11-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000811.PDF"
+        },
+        {
+          "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตของสำนักงานราชบัณฑิตยสภา สำหรับปีงบประมาณ พ.ศ. 2563",
+          "publishedAt": "2021-08-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000808.PDF"
+        },
+        {
+          "title": "รายงานผลการตรวจสอบรายงานการเงิน สำหรับปีสิ้นสุดวันที่ 30 กันยายน 2563 ของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2021-03-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000774.PDF"
+        },
+        {
+          "title": "งบทดลองสำนักงานราชบัณฑิตยสภา ประจำเดือนกันยายน พ.ศ. ๒๕๖๓",
+          "publishedAt": "2020-11-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000655.PDF"
+        },
+        {
+          "title": "รายงานของผู้สอบบัญชีและรายงานการเงินสำนักงานราชบัณฑิตยสภา สำหรับปีสิ้นสุดวันที่ ๓๐ กันยายน ๒๕๖๒",
+          "publishedAt": "2020-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000157.PDF"
+        },
+        {
+          "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตของสำนักงานราชบัณฑิตยสภา สำหรับปีงบประมาณ พ.ศ. ๒๕๖๒",
+          "publishedAt": "2020-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000654.PDF"
+        },
+        {
+          "title": "งบทดลองสำนักงานราชบัณฑิตยสภา ประจำเดือนกันยายน พ.ศ. ๒๕๖๒",
+          "publishedAt": "2020-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000151.PDF"
+        },
+        {
+          "title": "งบทดลองสำนักงานราชบัณฑิตยสภาปีงบประมาณ พ.ศ. ๒๕๖๑ เดือนตุลาคม ๒๕๖๐",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000152.PDF"
+        },
+        {
+          "title": "งบทดลองสำนักงานราชบัณฑิตยสภาปีงบประมาณ พ.ศ. ๒๕๖๑ เดือนพฤศจิกายน ๒๕๖๐",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000153.PDF"
+        },
+        {
+          "title": "งบทดลองสำนักงานราชบัณฑิตยสภาปีงบประมาณ พ.ศ. ๒๕๖๑ เดือนธันวาคม ๒๕๖๐",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000154.PDF"
+        },
+        {
+          "title": "งบทดลองสำนักงานราชบัณฑิตยสภาปีงบประมาณ พ.ศ. ๒๕๖๑ งวดที่ ๑-๑๖",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000155.PDF"
+        },
+        {
+          "title": "รายงานของผู้สอบบัญชีและรายงานการเงินสำนักงานราชบัณฑิตยสภา สำหรับปีสิ้นสุดวันที่ ๓๐ กันยายน ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000156.PDF"
+        },
+        {
+          "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตของสำนักงานราชบัณฑิตยสภา สำหรับปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000147.PDF"
+        },
+        {
+          "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตของราชบัณฑิตยสถาน สำหรับปีงบประมาณ พ.ศ. ๒๕๕๙",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000148.PDF"
+        },
+        {
+          "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตของราชบัณฑิตยสถาน สำหรับปีงบประมาณ พ.ศ. ๒๕๕๕",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000149.PDF"
+        },
+        {
+          "title": "รายงานสรุปผลการวิเคราะห์ต้นทุนต่อหน่วยผลผลิตของราชบัณฑิตยสถาน สำหรับปีงบประมาณ พ.ศ. ๒๕๕๔",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000150.PDF"
+        }
+      ]
+    }
+  ]
+}

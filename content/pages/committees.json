@@ -1,0 +1,76 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=BOARD-LIST (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "คณะกรรมการวิชาการ และกรรมการอื่น",
+  "navKey": "about",
+  "description": "รายชื่อคณะกรรมการวิชาการและคณะกรรมการอื่นของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "คณะกรรมการวิชาการ และกรรมการอื่น",
+      "lead": "รายชื่อคณะกรรมการวิชาการและคณะกรรมการอื่นของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "คณะกรรมการวิชาการ และกรรมการอื่น"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "กองธรรมศาสตร์และการเมือง",
+          "category": "กองธรรมศาสตร์และการเมือง",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000009.PDF",
+          "fileSize": 70156
+        },
+        {
+          "title": "กองวิทยาศาสตร์",
+          "category": "กองวิทยาศาสตร์",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000037.PDF",
+          "fileSize": 73365
+        },
+        {
+          "title": "กองศิลปกรรม",
+          "category": "กองศิลปกรรม",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000065.PDF",
+          "fileSize": 61547
+        },
+        {
+          "title": "คณะกรรมการส่วนกลาง",
+          "category": "คณะกรรมการส่วนกลาง",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000092.PDF",
+          "fileSize": 63373
+        },
+        {
+          "title": "คณะราชบัณฑิตที่ปรึกษา",
+          "category": "คณะราชบัณฑิตที่ปรึกษา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000108.PDF",
+          "fileSize": 58734
+        },
+        {
+          "title": "คณะกรรมการกิจการสำนักงานราชบัณฑิตยสภา",
+          "category": "คณะกรรมการกิจการสำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000111.PDF",
+          "fileSize": 89095
+        },
+        {
+          "title": "คณะกรรมการสหวิทยาการเพื่อการวิจัยและพัฒนา",
+          "category": "คณะกรรมการสหวิทยาการเพื่อการวิจัยและพัฒนา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000114.PDF",
+          "fileSize": 62584
+        }
+      ],
+      "sort": "none"
+    }
+  ]
+}

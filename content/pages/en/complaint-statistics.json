@@ -1,0 +1,98 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=14 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Complaint Statistics",
+  "navKey": "about",
+  "description": "Statistics on complaints of corruption and misconduct by staff of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Complaint Statistics",
+      "lead": "Statistics on complaints of corruption and misconduct by staff of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Anti-Corruption Center",
+          "href": "anti-corruption-center.html"
+        },
+        {
+          "label": "Complaint Statistics"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Statistics on Complaints of Corruption and Misconduct by Staff of the Office of the Royal Society, Fiscal Year 2025, 12-Month Period (1 October 2024-30 September 2025)",
+          "publishedAt": "2026-05-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001016.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption and Misconduct by Staff of the Office of the Royal Society, Fiscal Year 2025, 12-Month Period (1 October 2024-30 September 2025)",
+          "publishedAt": "2026-05-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001018.CSV"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption and Misconduct by Staff of the Office of the Royal Society, Fiscal Year 2024, 12-Month Period (1 October 2023-30 September 2024)",
+          "publishedAt": "2024-12-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000982.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption and Misconduct by Staff of the Office of the Royal Society, Fiscal Year 2023, 12-Month Period (1 October 2022-30 September 2023)",
+          "publishedAt": "2024-01-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000946.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption and Misconduct by Staff of the Office of the Royal Society, Fiscal Year 2023, 6-Month Period (1 October 2022-31 March 2023)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000905.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption and Misconduct by Staff of the Office of the Royal Society, Fiscal Year 2022, 6-Month Period (1 October 2021-31 March 2022)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000865.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption or Misconduct by Government Officials, Fiscal Year 2021, 6-Month Period, 1 October 2020-31 March 2021",
+          "publishedAt": "2021-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000780.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption or Misconduct by Government Officials, Fiscal Year 2020, 12-Month Period, 1 October 2019-30 September 2020",
+          "publishedAt": "2021-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000781.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption or Misconduct by Government Officials, Fiscal Year 2019, 12-Month Period, 1 October 2018-30 September 2019",
+          "publishedAt": "2020-07-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000208.PDF"
+        },
+        {
+          "title": "Statistics on Complaints of Corruption or Misconduct by Government Officials, Fiscal Year 2020, 6-Month Period, 1 October 2019-31 March 2020",
+          "publishedAt": "2020-07-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000455.PDF"
+        },
+        {
+          "title": "Complaints about procurement",
+          "publishedAt": "2020-07-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000440.HTM"
+        },
+        {
+          "title": "Complaints about the agency's work or operations",
+          "publishedAt": "2020-07-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000441.HTM"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

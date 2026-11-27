@@ -1,0 +1,174 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=22 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Unit Cost & Trial Balance",
+  "navKey": "about",
+  "description": "Unit Cost Analysis and Trial Balance Reports",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Unit Cost & Trial Balance",
+      "lead": "Unit Cost Analysis and Trial Balance Reports",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Unit Cost & Trial Balance"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Output Cost Report, Fiscal Year 2025",
+          "publishedAt": "2026-11-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001042.PDF"
+        },
+        {
+          "title": "Monthly Trial Balance Report of the Disbursement Unit, Periods 1-16",
+          "publishedAt": "2026-10-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001039.PDF"
+        },
+        {
+          "title": "Auditor's Report and Financial Statements for the Year Ended 30 September 2025",
+          "publishedAt": "2026-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001009.PDF"
+        },
+        {
+          "title": "Trial Balance Report for Fiscal Year 2025 and Reports on Government Advance Funds",
+          "publishedAt": "2025-11-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0005/00005315.PDF"
+        },
+        {
+          "title": "Auditor's Report and Financial Statements for the Year Ended 30 September 2024",
+          "publishedAt": "2025-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000997.PDF"
+        },
+        {
+          "title": "Auditor's Report and Financial Statements for the Year Ended 30 September 2023",
+          "publishedAt": "2024-04-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000965.PDF"
+        },
+        {
+          "title": "Monthly Trial Balance Report, Office of the Royal Society, Agency Code 2506, September 2023",
+          "publishedAt": "2023-11-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000940.PDF"
+        },
+        {
+          "title": "Details of Significant Trial Balance Accounts, Agency Code 2506, Office of the Royal Society, Disbursement Unit 2500600000, Office of the Secretary, as of 30 September 2023",
+          "publishedAt": "2023-11-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000941.PDF"
+        },
+        {
+          "title": "Auditor's Report and Financial Statements for the Year Ended 30 September 2022",
+          "publishedAt": "2023-03-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000894.PDF"
+        },
+        {
+          "title": "Monthly Trial Balance Report, Office of the Royal Society, Agency Code 2506, September 2022",
+          "publishedAt": "2022-11-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000881.PDF"
+        },
+        {
+          "title": "Details of Significant Trial Balance Accounts, Agency Code 2506, Office of the Royal Society, Disbursement Unit 2500600000, Office of the Secretary, as of 30 September 2022",
+          "publishedAt": "2022-11-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000884.PDF"
+        },
+        {
+          "title": "Financial Statement Audit Report for the Year Ended 30 September 2021, Office of the Royal Society",
+          "publishedAt": "2022-04-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0004/00004914.PDF"
+        },
+        {
+          "title": "Monthly Trial Balance Report, Office of the Royal Society, Agency Code 2506, September 2021",
+          "publishedAt": "2021-11-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000811.PDF"
+        },
+        {
+          "title": "Summary Report on Unit Cost Analysis of the Office of the Royal Society, Fiscal Year 2020",
+          "publishedAt": "2021-08-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000808.PDF"
+        },
+        {
+          "title": "Financial Statement Audit Report for the Year Ended 30 September 2020, Office of the Royal Society",
+          "publishedAt": "2021-03-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000774.PDF"
+        },
+        {
+          "title": "Trial Balance of the Office of the Royal Society, September 2020",
+          "publishedAt": "2020-11-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000655.PDF"
+        },
+        {
+          "title": "Auditor's Report and Financial Statements of the Office of the Royal Society for the Year Ended 30 September 2019",
+          "publishedAt": "2020-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000157.PDF"
+        },
+        {
+          "title": "Summary Report on Unit Cost Analysis of the Office of the Royal Society, Fiscal Year 2019",
+          "publishedAt": "2020-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000654.PDF"
+        },
+        {
+          "title": "Trial Balance of the Office of the Royal Society, September 2019",
+          "publishedAt": "2020-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000151.PDF"
+        },
+        {
+          "title": "Trial Balance of the Office of the Royal Society, Fiscal Year 2018, October 2017",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000152.PDF"
+        },
+        {
+          "title": "Trial Balance of the Office of the Royal Society, Fiscal Year 2018, November 2017",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000153.PDF"
+        },
+        {
+          "title": "Trial Balance of the Office of the Royal Society, Fiscal Year 2018, December 2017",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000154.PDF"
+        },
+        {
+          "title": "Trial Balance of the Office of the Royal Society, Fiscal Year 2018, Periods 1-16",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000155.PDF"
+        },
+        {
+          "title": "Auditor's Report and Financial Statements of the Office of the Royal Society for the Year Ended 30 September 2018",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000156.PDF"
+        },
+        {
+          "title": "Summary Report on Unit Cost Analysis of the Office of the Royal Society, Fiscal Year 2018",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000147.PDF"
+        },
+        {
+          "title": "Summary Report on Unit Cost Analysis of the Royal Institute, Fiscal Year 2016",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000148.PDF"
+        },
+        {
+          "title": "Summary Report on Unit Cost Analysis of the Royal Institute, Fiscal Year 2012",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000149.PDF"
+        },
+        {
+          "title": "Summary Report on Unit Cost Analysis of the Royal Institute, Fiscal Year 2011",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000150.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

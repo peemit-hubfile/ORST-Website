@@ -21,11 +21,14 @@
 
   <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 
-  <!-- ลำดับ CSS ห้ามสลับ: base -> blocks -> components (components ท้ายสุดเสมอ) -->
+  <!-- ลำดับ CSS ห้ามสลับ: typography -> base -> blocks -> components (components ท้ายสุดเสมอ) -->
   <!-- โหลดฟอนต์หลักก่อน CSS — กันหน้ากระพริบเป็นฟอนต์สำรอง (กว้างกว่า ทำให้เมนูล้น) -->
   <link rel="preload" href="/assets/fonts/THSarabunNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/THSarabunNew-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/Sarabun-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/blocks.css">
   <link rel="stylesheet" href="/assets/css/components.css">
@@ -70,17 +73,17 @@
             <p>หนังสือ วารสาร และสื่อเผยแพร่ของสำนักงาน</p>
           </a>
 
-          <a class="content-card block-card is-link" href="news.html">
+          <a class="content-card block-card is-link" href="general-news.html">
             <h3>ข่าวสารและกิจกรรม</h3>
             <p>ข่าวประชาสัมพันธ์และกิจกรรมล่าสุด</p>
           </a>
 
-          <a class="content-card block-card is-link" href="services.html">
+          <a class="content-card block-card is-link" href="e-services.html">
             <h3>บริการวิชาการ</h3>
             <p>บริการออนไลน์และแบบฟอร์มต่าง ๆ</p>
           </a>
 
-          <a class="content-card block-card is-link" href="about.html">
+          <a class="content-card block-card is-link" href="history.html">
             <h3>เกี่ยวกับเรา</h3>
             <p>ประวัติ ภารกิจ และโครงสร้างองค์กร</p>
           </a>

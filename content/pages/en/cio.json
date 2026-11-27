@@ -1,0 +1,40 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-CIO (ถอดข้อความจากภาพ) — ข้อ 4.3 ยังขาดที่อยู่ และโทรสาร (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS · รายชื่อดึงจาก content/people/index.json",
+  "title": "Chief Information Officer (CIO)",
+  "navKey": "about",
+  "description": "Information on the Chief Information Officer of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Chief Information Officer (CIO)",
+      "lead": "Information on the Chief Information Officer of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Chief Information Officer (CIO)"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "cio",
+      "layout": "feature",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general"
+        ]
+      }
+    }
+  ],
+  "lang": "en"
+}

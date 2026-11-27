@@ -1,0 +1,349 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แบบฟอร์มออนไลน์ตามแบบคำขอฉบับ PDF ของสำนักงาน (assets/files/publication-permission-form.pdf) — ข้อความ ช่องกรอก และเงื่อนไข คัดลอกจากต้นฉบับ · ยังไม่มีระบบรับข้อมูล (ไม่ใส่ action) จึงแสดงหน้าสรุปคำขอให้พิมพ์ — เมื่อมี API ให้ใส่ \"action\" ใน block form",
+  "title": "Request Form for Permission to Print or Use Publications, Electronic Media, Electronic Data and Other Media",
+  "navKey": "contact",
+  "sideNav": false,
+  "description": "Apply online for permission to print or use publications, electronic media, electronic data and other media of the Office of the Royal Society, or download the PDF request form.",
+  "updatedAt": "2026-11-24",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Request for Permission to Print or Use the Office’s Publications and Media",
+      "lead": "Request permission to print or use publications, electronic media, electronic data and other media of the Office of the Royal Society under the Office of the Royal Society Regulation on Permission to Print and Disseminate Publications, Electronic Media, Electronic Data and Other Media, B.E. 2561 (2018).",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Contact Us",
+          "href": "contact.html"
+        },
+        {
+          "label": "Permission Request to Print or Use Publications"
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "permission",
+      "heading": "Apply Online",
+      "lead": "Takes about 5 minutes. Complete each step in order.",
+      "submitLabel": "Submit a request",
+      "successTitle": "Your request has been received",
+      "successText": "Please review the details of your request below and print a copy for your records.",
+      "sections": [
+        {
+          "heading": "Applicant Type",
+          "fields": [
+            {
+              "name": "applicantType",
+              "label": "The applicant is",
+              "type": "radio",
+              "required": true,
+              "options": [
+                "A juristic person (government agency / private sector)",
+                "An individual"
+              ],
+              "layout": "cards",
+              "icons": [
+                "i-building",
+                "i-user"
+              ],
+              "optionHints": [
+                "A company, partnership or government agency",
+                "Applying on your own behalf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Applicant Details (Juristic Person)",
+          "showWhen": {
+            "field": "applicantType",
+            "value": "A juristic person (government agency / private sector)"
+          },
+          "fields": [
+            {
+              "name": "orgName",
+              "label": "Name of agency / government body / private organization",
+              "required": true,
+              "autocomplete": "organization"
+            },
+            {
+              "name": "orgAddress",
+              "label": "Address",
+              "type": "textarea",
+              "rows": 2,
+              "required": true,
+              "autocomplete": "street-address"
+            },
+            {
+              "name": "orgPhone",
+              "label": "Telephone number",
+              "type": "tel",
+              "required": true,
+              "width": "third",
+              "inputmode": "tel",
+              "autocomplete": "tel"
+            },
+            {
+              "name": "orgFax",
+              "label": "Fax",
+              "type": "tel",
+              "width": "third",
+              "inputmode": "tel"
+            },
+            {
+              "name": "orgEmail",
+              "label": "Email",
+              "type": "email",
+              "required": true,
+              "width": "third",
+              "autocomplete": "email"
+            },
+            {
+              "name": "orgRegType",
+              "label": "Type of juristic person per the certificate of registration",
+              "type": "select",
+              "width": "half",
+              "options": [
+                "Limited company",
+                "Public limited company",
+                "Limited partnership",
+                "Registered ordinary partnership"
+              ],
+              "hint": "Private sector only; government agencies may leave this blank",
+              "placeholder": "Select type"
+            },
+            {
+              "name": "orgRepresentative",
+              "label": "Represented by (authorized signatory / attorney-in-fact)",
+              "required": true,
+              "width": "half",
+              "autocomplete": "name"
+            },
+            {
+              "name": "orgPoaDate",
+              "label": "Date of power of attorney",
+              "type": "date",
+              "width": "half",
+              "hint": "If acting under a power of attorney"
+            }
+          ],
+          "stepLabel": "Applicant Details"
+        },
+        {
+          "heading": "Applicant Details (Individual)",
+          "showWhen": {
+            "field": "applicantType",
+            "value": "An individual"
+          },
+          "fields": [
+            {
+              "name": "personTitle",
+              "label": "Title",
+              "type": "select",
+              "required": true,
+              "width": "third",
+              "options": [
+                "Mr.",
+                "Mrs.",
+                "Ms."
+              ],
+              "autocomplete": "honorific-prefix",
+              "placeholder": "Select title"
+            },
+            {
+              "name": "personFirstName",
+              "label": "Name",
+              "required": true,
+              "width": "third",
+              "autocomplete": "given-name"
+            },
+            {
+              "name": "personLastName",
+              "label": "Surname",
+              "required": true,
+              "width": "third",
+              "autocomplete": "family-name"
+            },
+            {
+              "name": "personOccupation",
+              "label": "Occupation",
+              "width": "half"
+            },
+            {
+              "name": "personPosition",
+              "label": "Position",
+              "width": "half",
+              "autocomplete": "organization-title"
+            },
+            {
+              "name": "personIdCard",
+              "label": "National ID card number",
+              "required": true,
+              "width": "half",
+              "inputmode": "numeric",
+              "pattern": "\\d{13}",
+              "maxlength": 13,
+              "hint": "13 digits, without spaces or dashes"
+            },
+            {
+              "name": "personAddress",
+              "label": "Address",
+              "type": "textarea",
+              "rows": 2,
+              "required": true,
+              "autocomplete": "street-address"
+            },
+            {
+              "name": "personPhone",
+              "label": "Telephone number",
+              "type": "tel",
+              "required": true,
+              "width": "third",
+              "inputmode": "tel",
+              "autocomplete": "tel"
+            },
+            {
+              "name": "personFax",
+              "label": "Fax",
+              "type": "tel",
+              "width": "third",
+              "inputmode": "tel"
+            },
+            {
+              "name": "personEmail",
+              "label": "Email",
+              "type": "email",
+              "required": true,
+              "width": "third",
+              "autocomplete": "email"
+            }
+          ],
+          "stepLabel": "Applicant Details"
+        },
+        {
+          "heading": "Request Details",
+          "fields": [
+            {
+              "name": "mediaTypes",
+              "label": "Permission requested to print or use",
+              "type": "checkbox",
+              "required": true,
+              "options": [
+                "Publications",
+                "Electronic media",
+                "Electronic data"
+              ],
+              "other": "Other media (please specify)",
+              "hint": "You may select more than one"
+            },
+            {
+              "name": "workTitle",
+              "label": "Title of work",
+              "required": true,
+              "hint": "Title of the Office of the Royal Society publication or media requested"
+            },
+            {
+              "name": "quantity",
+              "label": "Quantity",
+              "type": "number",
+              "required": true,
+              "width": "half",
+              "min": "1",
+              "inputmode": "numeric"
+            },
+            {
+              "name": "unit",
+              "label": "Unit",
+              "width": "half",
+              "value": "books",
+              "hint": "Copies, or another unit (please specify)"
+            },
+            {
+              "name": "purpose",
+              "label": "Purpose (please describe in detail)",
+              "type": "textarea",
+              "rows": 3,
+              "required": true
+            },
+            {
+              "name": "details",
+              "label": "Other details of the intended use",
+              "type": "textarea",
+              "rows": 2
+            },
+            {
+              "name": "attachment",
+              "label": "Supporting documents (if any)",
+              "type": "file",
+              "accept": ".pdf,.jpg,.jpeg,.png",
+              "hint": "e.g. a copy of the certificate of juristic person registration or a power of attorney (PDF / JPG / PNG)"
+            }
+          ]
+        }
+      ],
+      "consent": {
+        "text": "I acknowledge and agree to comply with the Office of the Royal Society Regulation on Permission to Print and Disseminate Publications, Electronic Media, Electronic Data and Other Media, B.E. 2561 (2018), and all specified conditions.",
+        "required": true,
+        "stepLabel": "Confirm and Submit",
+        "terms": {
+          "title": "Read the conditions for permit holders",
+          "items": [
+            "The permit holder must use the permitted work without seeking commercial or business gain, whether directly or indirectly.",
+            "The permit holder must strictly preserve the accuracy of the content, format and punctuation of the original prepared by the Office of the Royal Society. Otherwise, the grantor may order the printing, use or dissemination to be suspended, and the permit holder shall have no right to claim any damages whatsoever from the Office of the Royal Society. During printing, use and dissemination, the grantor may require the permit holder to submit evidence or details, including copies of the permitted publications, electronic media, electronic data or other media, for verification.",
+            "The Office of the Royal Society will provide a statement of permission specifying all conditions set by the grantor, which the permit holder must print in the preface or display at the beginning of the permitted publication, electronic media, electronic data or other media.",
+            "The permit holder must not print or display any other text or articles not copyrighted by the Office of the Royal Society in the publication, electronic media, electronic data or other media, unless permitted by the grantor.",
+            "The cover of any publication, electronic media, electronic data or other media to be distributed or used at an event must be printed or displayed as specified by the grantor, showing the title, author, event date and venue. Pictures or patterns in garish colours must not be printed unless permitted in writing by the grantor.",
+            "If the permit holder violates the conditions of the permission, the grantor may revoke the permission immediately, and the permit holder shall remain liable for any damage caused to the grantor."
+          ],
+          "note": "The grantor may specify additional conditions in the permission."
+        }
+      },
+      "aside": [
+        {
+          "heading": "Before You Start",
+          "icon": "i-file",
+          "items": [
+            "13-digit national ID number (individuals)",
+            "Copy of the certificate of juristic person registration (private sector)",
+            "Power of attorney (if acting on behalf of the applicant)",
+            "Title, quantity and intended purpose"
+          ]
+        },
+        {
+          "heading": "Apply with the Paper Form",
+          "icon": "i-print",
+          "text": "Download the request form, complete and sign it, then send it to the Office of the Royal Society.",
+          "links": [
+            {
+              "label": "Download request form (PDF, Thai)",
+              "href": "assets/files/publication-permission-form.pdf",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "heading": "Questions?",
+          "icon": "i-phone-call",
+          "links": [
+            {
+              "label": "0 2141 1718",
+              "href": "tel:021411718",
+              "icon": "i-phone-call"
+            },
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th",
+              "icon": "i-mail"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

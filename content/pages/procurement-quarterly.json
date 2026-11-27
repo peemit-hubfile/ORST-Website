@@ -1,0 +1,127 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=6 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ประกาศผลการจัดซื้อจัดจ้าง (รายไตรมาส)",
+  "navKey": "news",
+  "description": "ประกาศผลการจัดซื้อจัดจ้างรายไตรมาสของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ประกาศผลการจัดซื้อจัดจ้าง (รายไตรมาส)",
+      "lead": "ประกาศผลการจัดซื้อจัดจ้างรายไตรมาสของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ประกาศผลการจัดซื้อจัดจ้าง (รายไตรมาส)"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "รายการการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ ประจำปีงบประมาณ พ.ศ. 2567 หมวดงบลงทุน",
+          "publishedAt": "2024-03-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000225.XLS"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ปี 2566 ประจำไตรมาสที่ 2 (เดือนมกราคม พ.ศ. 2566 ถึง เดือนมีนาคม พ.ศ. 2566)",
+          "publishedAt": "2023-05-19",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000503001005%2F66ESO3330006"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ปี 2566 ประจำไตรมาสที่ 1 (เดือนตุลาคม พ.ศ. 2565 ถึง เดือนธันวาคม พ.ศ. 2565)",
+          "publishedAt": "2023-01-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001586.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ปี 2565 ประจำไตรมาสที่ 4 (เดือนกรกฎาคม พ.ศ. 2565 ถึง เดือนกันยายน พ.ศ. 2565)",
+          "publishedAt": "2022-10-03",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0030000503001005%2F66B%21J4019038"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ปี 2565 ประจำไตรมาสที่ 3 (เดือนเมษายน พ.ศ. 2565 ถึง เดือนมิถุนายน พ.ศ. 2565)",
+          "publishedAt": "2022-07-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001584.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ปี 2565 ประจำไตรมาสที่ 2 (เดือนมกราคม พ.ศ. 2565 ถึง เดือนมีนาคม พ.ศ. 2565)",
+          "publishedAt": "2022-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001583.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ปี 2565 ประจำไตรมาสที่ 1 (เดือนตุลาคม พ.ศ. 2564 ถึง เดือนธันวาคม พ.ศ. 2564)",
+          "publishedAt": "2022-01-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001582.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 4 (เดือนกรกฎาคม พ.ศ. 2564 ถึง เดือนกันยายน พ.ศ. 2564)",
+          "publishedAt": "2021-10-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001581.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 3 (เดือนเมษายน พ.ศ. 2564 ถึง เดือนมิถุนายน พ.ศ. 2564)",
+          "publishedAt": "2021-07-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001228.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 2 (เดือนมกราคม พ.ศ. 2564 ถึง เดือนมีนาคม พ.ศ. 2564)",
+          "publishedAt": "2021-04-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001171.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 1 (เดือนตุลาคม พ.ศ. 2563 ถึง เดือนธันวาคม พ.ศ. 2563)",
+          "publishedAt": "2021-01-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001135.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 4 (เดือนกรกฎาคม พ.ศ. 2563 ถึง เดือนกันยายน พ.ศ. 2563)",
+          "publishedAt": "2020-10-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001102.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 3 (เดือนเมษายน พ.ศ. 2563 ถึง เดือนมิถุนายน พ.ศ. 2563)",
+          "publishedAt": "2020-07-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001003.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 2 (เดือนมกราคม พ.ศ. 2563 ถึง เดือนมีนาคม พ.ศ. 2563)",
+          "publishedAt": "2020-04-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000800.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 4 (เดือนกรกฎาคม พ.ศ. 2562 ถึง เดือนกันยายน พ.ศ. 2562)",
+          "publishedAt": "2019-10-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000798.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 3 (เดือนเมษายน พ.ศ. 2562 ถึง เดือนมิถุนายน พ.ศ. 2562)",
+          "publishedAt": "2019-07-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000797.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 2 (เดือนมกราคม พ.ศ. 2562 ถึง เดือนมีนาคม พ.ศ. 2562)",
+          "publishedAt": "2019-04-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000796.PDF"
+        },
+        {
+          "title": "ประกาศผลผู้ชนะการจัดซื้อจัดจ้าง ประจำไตรมาสที่ 1 (เดือนตุลาคม พ.ศ. 2562 ถึง เดือนธันวาคม พ.ศ. 2562)",
+          "publishedAt": "2018-10-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000799.PDF"
+        },
+        {
+          "title": "รายการการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ ประจำปีงบประมาณ พ.ศ. ๒๕๖๗ หมวด งบลงทุน",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67CVJ4636059"
+        }
+      ]
+    }
+  ]
+}

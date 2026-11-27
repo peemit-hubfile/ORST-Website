@@ -1,0 +1,168 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=39 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ประกาศแผนจัดซื้อจัดจ้าง",
+  "navKey": "news",
+  "description": "ประกาศแผนการจัดซื้อจัดจ้างประจำปีของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ประกาศแผนจัดซื้อจัดจ้าง",
+      "lead": "ประกาศแผนการจัดซื้อจัดจ้างประจำปีของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ประกาศแผนจัดซื้อจัดจ้าง"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2570 (ครั้งที่ 2)",
+          "publishedAt": "2026-10-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002078.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2570 (ครั้งที่ 1)",
+          "publishedAt": "2026-09-17",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002079.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2569 (ครั้งที่ 8)",
+          "publishedAt": "2026-06-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002029.PDF"
+        },
+        {
+          "title": "เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ (ครั้งที่ ๒)",
+          "publishedAt": "2026-03-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001995.PDF"
+        },
+        {
+          "title": "เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ (ครั้งที่ 6)",
+          "publishedAt": "2026-02-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001984.PDF"
+        },
+        {
+          "title": "เปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. ๒๕๖๙ (ครั้งที่ ๑)",
+          "publishedAt": "2026-02-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001967.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่องเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2569 (ครั้งที่ 1)",
+          "publishedAt": "2025-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001939.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง ยกเลิกแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2568",
+          "publishedAt": "2025-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001876.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2568 (ครั้งที่ 2)",
+          "publishedAt": "2025-01-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001812.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่การจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2567 (ครั้งที่ 3)",
+          "publishedAt": "2024-03-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001709.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2567 (ครั้งที่ 2)",
+          "publishedAt": "2023-12-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001689.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2567 (ครั้งที่ 1)",
+          "publishedAt": "2023-09-11",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001688.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2566 (ครั้งที่ 4)",
+          "publishedAt": "2023-05-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001636.PDF"
+        },
+        {
+          "title": "เผยแพร่แผนการจัดซื้อจัดจ้าง (พิมพ์หนังสือ) ประจำปีงบประมาณ พ.ศ. 2566 (ครั้งที่ 4)",
+          "publishedAt": "2022-12-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001600.PDF"
+        },
+        {
+          "title": "เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2566 (ครั้งที่ 3)",
+          "publishedAt": "2022-11-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001428.PDF"
+        },
+        {
+          "title": "เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2566 (ครั้งที่ 2)",
+          "publishedAt": "2022-10-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001427.PDF"
+        },
+        {
+          "title": "เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2566 (ครั้งที่ 1)",
+          "publishedAt": "2022-10-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001426.PDF"
+        },
+        {
+          "title": "แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2565 (แผนการจ้าง 1)",
+          "publishedAt": "2021-12-16",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001294.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2565",
+          "publishedAt": "2021-09-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001266.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564 (ฉบับที่ 7)",
+          "publishedAt": "2021-09-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001251.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564 (ฉบับที่ 6)",
+          "publishedAt": "2021-07-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001230.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564 (ฉบับที่ 5)",
+          "publishedAt": "2021-06-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001215.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564 (ฉบับที่ 4)",
+          "publishedAt": "2021-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001187.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564 (ฉบับที่ 3)",
+          "publishedAt": "2021-04-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001169.PDF"
+        },
+        {
+          "title": "ประกาศเปลี่ยนแปลงแผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564",
+          "publishedAt": "2021-01-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001134.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564 (ฉบับที่ 2)",
+          "publishedAt": "2020-11-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001113.PDF"
+        },
+        {
+          "title": "ประกาศเผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2564",
+          "publishedAt": "2020-09-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001112.PDF"
+        }
+      ]
+    }
+  ]
+}

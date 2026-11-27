@@ -1,0 +1,54 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "การถอดอักษรไทยเป็นอักษรโรมัน",
+  "navKey": "knowledge",
+  "description": "การถอดอักษรไทยเป็นอักษรโรมัน ตามหลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "การถอดอักษรไทยเป็นอักษรโรมัน",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "หลักเกณฑ์ที่สำนักงานราชบัณฑิตยสภากำหนด",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "หลักเกณฑ์ภาษาไทย",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "การถอดอักษรไทยเป็นอักษรโรมัน"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "หลักเกณฑ์การถอดอักษรไทยเป็นอักษรโรมันแบบถ่ายเสียง",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000763.PDF"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "ดูหลักเกณฑ์เรื่องอื่น",
+      "body": "หลักเกณฑ์การใช้ภาษาไทยทั้งหมดของสำนักงานราชบัณฑิตยสภา",
+      "actions": [
+        {
+          "label": "หลักเกณฑ์ภาษาไทยทั้งหมด",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ]
+}

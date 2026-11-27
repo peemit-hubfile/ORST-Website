@@ -1,0 +1,35 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีเอกสารหน้านี้ — รอข้อมูลจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "Open Datasets",
+  "navKey": "about",
+  "description": "Open datasets of the Office of the Royal Society available for public use",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Open Datasets",
+      "lead": "Open datasets of the Office of the Royal Society available for public use",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Open Datasets"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Open Datasets documents — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

@@ -16,7 +16,11 @@
 
 1. **ห้ามเพิ่ม dependency / framework / build tool** — ไม่มี `package.json` และจะไม่มี
    ทุกอย่างต้องรันได้ด้วยการเปิด Live Server เฉย ๆ
-2. **ลำดับ CSS ห้ามสลับ** — `base.css` → `blocks.css` → `pages/<หน้า>.css` → `components.css`
+2. **ลำดับ CSS ห้ามสลับ** — `typography.css` → `base.css` → `blocks.css` → `pages/<หน้า>.css` → `components.css`
+   `typography.css` (ฟอนต์ ขนาดตัวอักษร ระยะห่าง มุมโค้ง — ชุดเดียวกับเว็บไซต์ราชบัณฑิตยสภา) ต้องเป็นไฟล์แรก
+   **ขนาดตัวอักษรใช้ `var(--text-xs|sm|base|md|lg|xl|2xl|3xl)` เท่านั้น ห้ามใส่ rem/px เอง** ระยะบรรทัดใช้ `var(--leading-tight|normal|reading)`
+   มุมโค้งใช้ `var(--radius-sm|md|lg|xl|pill)` (สูงสุด 16px ยกเว้นวงกลม `50%` และ pill)
+   **ความกว้างเนื้อหาใช้ `.container` จาก `typography.css` เท่านั้น** (สูงสุด 1680px ขอบ 16/24/32/48px ตามจอ) ห้ามตั้ง width/max-width ของ `.container` ซ้ำในไฟล์อื่น
    `components.css` ต้องเป็นไฟล์สุดท้ายเสมอ (เดิมมันถูก inject ผ่าน JS จึงชนะทุกไฟล์)
 3. **ลำดับ JS ห้ามสลับ** — `components.js` (classic script) ต้องมาก่อน `page-runtime.js` (module)
 4. **ห้ามเขียน `<header>` / `<footer>` ในไฟล์หน้า** — สร้างจาก `assets/js/components.js` ที่เดียว
@@ -75,6 +79,22 @@ node tools/validate.mjs
 
 ## งานอื่น ๆ
 
+### ข่าวสาร (เชื่อม CMS)
+
+- เพิ่ม/แก้ข่าว = แก้ `content/news/index.json` (+ `content/news/<id>.json` ถ้ามีหน้ารายละเอียด) **ห้ามสร้าง news-*.html ใหม่**
+  หน้ารายการข่าว หน้าแรก RSS อ่านจาก index ให้เอง · ฟิลด์ทั้งหมดอยู่ใน CMS-HANDOFF.md หัวข้อ 2.4.1
+
+### สองภาษา (TH / EN)
+
+- ไฟล์ภาษาอังกฤษสร้างอัตโนมัติ — **ห้ามแก้ `content/pages/en/*`, `content/en/*`, `content/i18n/en.json` ด้วยมือ**
+  แก้คำแปลที่ `tools/i18n/memory.json` (หรือ `overrides.json` สำหรับคำ UI) แล้วรัน `python tools/i18n/i18n.py apply`
+- แก้/เพิ่มเนื้อหาไทยใน JSON แล้ว ให้รัน `python tools/i18n/i18n.py extract` → แปลไฟล์ `tools/i18n/work/pack-*.json`
+  ลง `work/out-*.json` (ตาม `tools/i18n/GLOSSARY.md`) → `apply`
+- เพิ่มข้อความ UI ใหม่ในโค้ด/HTML: เปิดหน้าด้วย `?lang=en` แล้วรัน `orstI18n.missing()` ในคอนโซล
+  เอาข้อความที่ได้ใส่ `tools/i18n/ui-strings.json` + คำแปล แล้ว `apply` · ข้อความมีตัวแปรใส่ที่ `tools/i18n/patterns.json`
+- ส่วนที่ไม่ต้องการให้แปล ใส่ `data-i18n-skip`
+
+
 ### เพิ่ม block ชนิดใหม่
 
 ทำครบ 5 อย่าง มิฉะนั้นระบบจะไม่สมบูรณ์
@@ -126,8 +146,8 @@ $env:SITE_URL = "https://ชื่อเว็บ.netlify.app"; node tools/build
 
 ```
 index.html knowledge.html contact.html   เขียน HTML เอง — อย่ายกเครื่อง
-about.html dictionary.html news.html
-publications.html services.html          shell บาง ๆ ดึงเนื้อหาจาก JSON
+dictionary.html publications.html       shell บาง ๆ ดึงเนื้อหาจาก JSON
+(ไม่มีหน้าหมวด about / operations / news / services แล้ว — ชื่อหมวดในเมนูเปิดเมนูย่อยอย่างเดียว)
 styleguide.html                          คลังบล็อก ดูตัวอย่างทุก block
 _template.html                           แม่แบบหน้าใหม่ (JSON-driven)
 _template-static.html                    แม่แบบหน้าที่เขียน HTML เอง
@@ -138,6 +158,10 @@ netlify.toml  robots.txt  _headers       ไฟล์สำหรับ deploy �
 content/
   blocks.schema.json                     JSON Schema ของไฟล์เนื้อหา
   pages/<slug>.json                      เนื้อหา 1 หน้า = 1 ไฟล์
+  news/index.json                        รายการข่าวทั้งหมด (แหล่งเดียว — หน้ารายการข่าว หน้าแรก RSS)
+  news/<id>.json                         เนื้อหาข่าว 1 เรื่อง แสดงที่ news-detail.html?id=<id>
+  (อัลบั้มภาพ = album.html?id=<id> ใช้ภาพจากไฟล์เดียวกันนี้ ผ่าน block photo-album — ไม่ต้องสร้างไฟล์ต่ออัลบั้ม)
+  people/index.json                      ข้อมูลบุคคล/ผู้บริหารทั้งหมด (แหล่งเดียว — person-grid source people + หน้าประวัติ person.html?id=<id>)
 
 assets/
   css/base.css                           ตัวแปรสี + reset + คลาสพื้นฐาน
@@ -147,6 +171,7 @@ assets/
   js/components.js                        header/footer/เมนู/ไอคอน sprite
   js/blocks.js                            block renderer (pure, รันใน Node ได้)
   js/page-runtime.js                      ตัวโหลด JSON -> render (ES module)
+  js/content-sources.js                   เติมรายการจากแหล่งกลาง (document-list ที่มี source) — pure ใช้ทั้งเบราว์เซอร์และ build
   js/pages/<หน้า>.js                       เฉพาะ 3 หน้าที่เขียน HTML เอง
 
 tools/validate.mjs  tools/build.mjs

@@ -1,0 +1,35 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เว็บไซต์เดิมยังไม่มีเอกสารหน้านี้ — รอข้อมูลจาก ORST แล้วเพิ่มเป็น document-list",
+  "title": "Request a Dataset",
+  "navKey": "about",
+  "description": "Form to request that the Office of the Royal Society publish additional datasets",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Request a Dataset",
+      "lead": "Form to request that the Office of the Royal Society publish additional datasets",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Request a Dataset"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "pending",
+      "tone": "info",
+      "title": "Information is being compiled",
+      "body": "[Request a Dataset documents — awaiting information from the Office]"
+    }
+  ],
+  "lang": "en"
+}

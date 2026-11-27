@@ -1,0 +1,33 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบหน้าประวัติบุคคล person.html?id=<id> — ข้อมูลจาก content/people/index.json (block person-profile) ไม่ต้องสร้างไฟล์ต่อคน · prerender: false = build ไม่สร้าง HTML นิ่ง",
+  "title": "ประวัติผู้บริหาร",
+  "navKey": "about",
+  "description": "ประวัติและข้อมูลติดต่อผู้บริหารสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
+  "prerender": false,
+  "blocks": [
+    {
+      "type": "person-profile",
+      "id": "profile",
+      "source": {
+        "type": "person"
+      },
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "ผู้บริหารสำนักงานราชบัณฑิตยสภา",
+          "href": "executives.html"
+        }
+      ],
+      "backHref": "executives.html",
+      "backLabel": "ผู้บริหารทั้งหมด"
+    }
+  ]
+}

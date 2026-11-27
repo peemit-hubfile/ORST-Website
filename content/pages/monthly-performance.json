@@ -1,0 +1,213 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=19 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม",
+  "navKey": "about",
+  "description": "รายงานผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม",
+      "lead": "รายงานผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "ผลการปฏิบัติราชการรายเดือน แยกตามผลผลิตและกิจกรรม"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "แผนการดำเนินงานตามภารกิจและความก้าวหน้าในการดำเนินงานตามแผนของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2569 (รอบ 6 เดือน)",
+          "publishedAt": "2026-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001023.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานตามแผนดำเนินงาน ประจำปีงบประมาณ พ.ศ. 2568 สำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2026-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001024.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการผ่านช่องทางออนไลน์ (E-Service) ประจำปีงบประมาณ พ.ศ. 2568 รอบ 12 เดือน",
+          "publishedAt": "2026-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001025.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2567 รอบ 12 เดือน (1 ตุลาคม 2566-30 กันยายน 2567)",
+          "publishedAt": "2025-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000992.PDF"
+        },
+        {
+          "title": "แผนการดำเนินงานตามภารกิจและความก้าวหน้าในการดำเนินงานตามแผนของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2568 (รอบ 6 เดือน)",
+          "publishedAt": "2025-04-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000989.PDF"
+        },
+        {
+          "title": "สรุปผลการดำเนินงานโครงการ/กิจกรรม ตามแผนปฏิบัติการและแผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2567 รอบ 12 เดือน",
+          "publishedAt": "2025-03-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000984.PDF"
+        },
+        {
+          "title": "แผนการดำเนินงานและผลความก้าวหน้าในการดำเนินงานตามภารกิจของสำนักงาน ราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2567 รอบ 6 เดือน (1 ตุลาคม 2566-31 มีนาคม 2567)",
+          "publishedAt": "2024-04-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000967.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2566 รอบ 12 เดือน (1 ตุลาคม 2565-30 กันยายน 2566)",
+          "publishedAt": "2024-02-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000960.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานและผลการใช้จ่ายงบประมาณของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2566 รอบ 12 เดือน (1 ตุลาคม 2565-30 กันยายน 2566)",
+          "publishedAt": "2024-02-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000950.PDF"
+        },
+        {
+          "title": "รายงานผลการปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. 2566 รอบ 6 เดือน (1 ตุลาคม 2565-31 มีนาคม 2566)",
+          "publishedAt": "2023-04-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000916.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2566 รอบ 6 เดือน (1 ตุลาคม 2565-31 มีนาคม 2566)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000917.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานประจำปีงบประมาณ พ.ศ. 2565 สำนักงานราชบัณฑิตยสภา รอบ 12 เดือน (1 ตุลาคม 2564-30 กันยายน 2565)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000915.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2565 รอบ 6 เดือน (1 ตุลาคม 2564-31 มีนาคม 2565)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000863.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2565 รอบ 6 เดือน (1 ตุลาคม 2564-31 มีนาคม 2565)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000868.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงาน ประจำปีงบประมาณ พ.ศ. 2564 สำนักงานราชบัณฑิตยสภา รอบ 12 เดือน (1 ตุลาคม 2563-30 กันยายน 2564)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000869.PDF"
+        },
+        {
+          "title": "ผลการเบิกจ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2564 รอบ 12 เดือน (1 ตุลาคม พ.ศ. 2563-30 กันยายน พ.ศ. 2564)",
+          "publishedAt": "2022-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000857.PDF"
+        },
+        {
+          "title": "ผลการเบิกจ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔ รอบ ๖ เดือน (๑ ตุลาคม พ.ศ. ๒๕๖๓-๓๑ มีนาคม พ.ศ. ๒๕๖๔)",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000790.PDF"
+        },
+        {
+          "title": "จำนวนให้บริการประชาชน ปี 2564 รอบ 6 เดือน (1 ตุลาคม 2563-31 มีนาคม 2564)",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000796.PDF"
+        },
+        {
+          "title": "ผลการดำเนินงานตามมาตรการปรับปรุงประสิทธิภาพในการปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. 2563 รอบ 12 เดือน",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000798.PDF"
+        },
+        {
+          "title": "ผลงานคณะกรรมการวิชาการ ปี 2564 รอบ 6 เดือน (1ตุลาคม 2563-31 มีนาคม 2564)",
+          "publishedAt": "2021-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000787.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. 2563 รอบ 12 เดือน",
+          "publishedAt": "2021-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000797.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายเงินงบประมาณประจำปีงบประมาณ พ.ศ. ๒๕๖๓ ข้อมูล ณ วันที่ ๒๙ มิถุนายน ๒๕๖๓",
+          "publishedAt": "2020-06-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000442.PDF"
+        },
+        {
+          "title": "จำนวนการให้บริการประชาชน ตั้งแต่เดือนตุลาคม ๒๕๖๒-พฤษภาคม ๒๕๖๓",
+          "publishedAt": "2020-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000443.PDF"
+        },
+        {
+          "title": "ผลการปฏิบัติงานของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๒ รอบ ๖ เดือน (๑ ตุลาคม ๒๕๖๑-๓๑ มีนาคม ๒๕๖๒)",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000123.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายเงินงบประมาณประจำปีงบประมาณ พ.ศ. ๒๕๖๒ ตั้งแต่วันที่ ๑ ตุลาคม ๒๕๖๑-๓๑ มีนาคม ๒๕๖๒",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000124.PDF"
+        },
+        {
+          "title": "รายงานผลการเบิกจ่ายเงินงบประมาณประจำปีงบประมาณ พ.ศ. ๒๕๖๑ ตั้งแต่วันที่ ๑ ตุลาคม ๒๕๖๐-๓๐ กันยายน ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000125.PDF"
+        },
+        {
+          "title": "รายงานผลการประเมินส่วนราชการ ตามมาตรการปรับปรุงประสิทธิภาพในการปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000126.PDF"
+        },
+        {
+          "title": "ผลการปฏิบัติงานของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000127.PDF"
+        },
+        {
+          "title": "ปีงบประมาณ พ.ศ. ๒๕๕๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000128.XLS"
+        },
+        {
+          "title": "ปีงบประมาณ พ.ศ. ๒๕๕๒",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000129.XLS"
+        },
+        {
+          "title": "ปีงบประมาณ พ.ศ. ๒๕๕๓",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000130.XLS"
+        },
+        {
+          "title": "ปีงบประมาณ พ.ศ. ๒๕๕๔",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000131.PDF"
+        },
+        {
+          "title": "รายงานผลการตรวจสอบงบการเงินจากสำนักงานตรวจเงินแผ่นดิน ตาม พรบ.วินัยการเงินการคลังของรัฐ พ.ศ. ๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000132.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๓ รอบ ๖ เดือน (๑ ตุลาคม ๒๕๖๒-๓๑ มีนาคม ๒๕๖๓)",
+          "publishedAt": "2020-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000445.PDF"
+        },
+        {
+          "title": "รายงานผลการดำเนินงานของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๒ รอบ ๑๒ เดือน (๑ ตุลาคม ๒๕๖๑-๓๐ กันยายน ๒๕๖๒)",
+          "publishedAt": "2019-09-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000446.PDF"
+        },
+        {
+          "title": "รายงานผลการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๒ ตั้งแต่วันที่ ๑ ตุลาคม ๒๕๖๑-๓๐ กันยายน ๒๕๖๒",
+          "publishedAt": "2019-09-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000444.PDF"
+        }
+      ]
+    }
+  ]
+}

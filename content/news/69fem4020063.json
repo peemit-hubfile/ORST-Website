@@ -1,0 +1,122 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69FEM4020063 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69fem4020063",
+  "title": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา",
+  "navKey": "news",
+  "description": "เมื่อวันที่ ๔ มิถุนายน พ.ศ. ๒๕๖๙ เวลา ๑๕.๐๐ น. ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ดร.ศุภฤกษ์ ภู่พงศ์",
+  "sideNav": false,
+  "updatedAt": "2026-06-05",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "ข่าวประชาสัมพันธ์",
+      "date": "2026-06-05",
+      "heading": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙",
+      "image": "assets/images/orst/news/data0005-00005229-960.jpg",
+      "imageAlt": "ภาพประกอบข่าว สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิม",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ข่าวประชาสัมพันธ์ทั่วไป",
+          "href": "general-news.html"
+        },
+        {
+          "label": "สำนักงานราชบัณฑิตยสภาจัดพิธีถวายพระพรชัยมงคล เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "เมื่อวันที่ ๔ มิถุนายน พ.ศ. ๒๕๖๙ เวลา ๑๕.๐๐ น. ณ โถงชั้น ๒ สำนักงานราชบัณฑิตยสภา ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา ๕ ธันวาคม ๒๕๕๐ ดร.ศุภฤกษ์ ภู่พงศ์ศักดิ์ เลขาธิการราชบัณฑิตยสภา เป็นประธานเปิดกรวยกระทงดอกไม้ และกล่าวคำถวายพระพรชัยมงคล พร้อมลงนามถวายพระพรหน้าพระฉายาลักษณ์สมเด็จพระนางเจ้าฯ พระบรมราชินี เนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา ๔ รอบ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ๓ มิถุนายน ๒๕๖๙ โดยมีผู้บริหาร ข้าราชการ และบุคลากรสำนักงานราชบัณฑิตยสภาเข้าร่วมพิธีอย่างพร้อมเพรียง"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005229-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005229.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005230-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005230.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005231-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005231.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005232-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005232.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005233-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005233.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005234-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005234.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005235-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005235.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005236-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005236.JPG",
+          "alt": "ภาพประกอบข่าว ภาพที่ 8"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "ข่าวที่เกี่ยวข้อง",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "พิธีลงนามถวายพระพรชัยมงคลสมเด็จพระนางเจ้าฯ พระบรมราชินี เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๓ มิถุนายน ๒๕๖๓",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63FTU3628056",
+          "category": "ข่าว",
+          "publishedAt": "2020-06-02"
+        },
+        {
+          "title": "กิจกรรมเฉลิมพระเกียรติ สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี เนื่องในโอกาสวันเฉลิมพระชนมพรรษา ๓ มิถุนายน ๒๕๖๘",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68FWS0141005",
+          "category": "ข่าว",
+          "publishedAt": "2025-06-23"
+        },
+        {
+          "title": "“การใช้ถ้อยคำถวายพระพรชัยมงคลแด่สมเด็จพระนางเจ้าฯ พระบรมราชินีนาถ ในรัชกาลที่ ๙”",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63GQP5903094",
+          "category": "กิจกรรม",
+          "publishedAt": "2018-08-10"
+        },
+        {
+          "title": "ตัวอย่างบทอาศิรวาทและถ้อยคำกล่าวถวายพระพรชัยมงคล แด่สมเด็จพระนางเจ้าฯ พระบรมราชินี ในโอกาสวันเฉลิมพระชนมพรรษา ๓ มิถุนายน ๒๕๖๒",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63E%23N1522075",
+          "category": "ข่าว",
+          "publishedAt": "2019-05-21"
+        }
+      ]
+    }
+  ]
+}

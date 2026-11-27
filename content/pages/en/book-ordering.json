@@ -1,0 +1,136 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-BUY-BOOK — ที่อยู่ ธนาณัติ/แฟกซ์/โทร เป็นของเดิมสมัยสนามเสือป่า ให้ ORST ยืนยัน (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "How to Order Books and Payment",
+  "navKey": "services",
+  "description": "Procedure for ordering books from the Office of the Royal Society and payment methods",
+  "sideNav": false,
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "How to Order Books and Payment",
+      "lead": "Procedure for ordering books from the Office of the Royal Society and payment methods",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services"
+        },
+        {
+          "label": "How to Order Books and Payment"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "order",
+      "layout": "timeline",
+      "heading": "How to order",
+      "lead": "Buyers must pay for the books and shipping in advance before staff can send the books.",
+      "items": [
+        {
+          "title": "List the books you want",
+          "body": "Send the list of books you are ordering so staff can calculate the shipping cost."
+        },
+        {
+          "title": "Make payment",
+          "body": "Pay for the books and shipping using one of the two methods below."
+        },
+        {
+          "title": "Send your order details",
+          "body": "Send your order details and delivery address with proof of payment."
+        },
+        {
+          "title": "Receive your books",
+          "body": "Staff send the books to the address you provided."
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "payment",
+      "layout": "directory",
+      "variant": "alt",
+      "heading": "Payment methods",
+      "lead": "There are two ways to pay.",
+      "items": [
+        {
+          "title": "Postal money order",
+          "body": "Enclose your order details and delivery address with the money order.",
+          "details": [
+            {
+              "label": "Payable to",
+              "value": "Secretary of the Department, Office of the Royal Society",
+              "wide": true
+            },
+            {
+              "label": "Address",
+              "value": "Sanam Suea Pa, Dusit, Bangkok 10300"
+            },
+            {
+              "label": "Post office",
+              "value": "Dusit Post Office"
+            }
+          ]
+        },
+        {
+          "title": "Bank transfer",
+          "body": "Fax the transfer slip with your order details and delivery address to the Book Shop.",
+          "details": [
+            {
+              "label": "Account number",
+              "value": "406-347071-9",
+              "copy": true
+            },
+            {
+              "label": "Bank and branch",
+              "value": "Siam Commercial Bank PCL, Bureau of the Royal Household (Sanam Suea Pa) branch",
+              "wide": true
+            },
+            {
+              "label": "Account name",
+              "value": "Office of the Royal Society (Book Shop)",
+              "wide": true
+            },
+            {
+              "label": "Account type",
+              "value": "Savings account"
+            },
+            {
+              "label": "Fax",
+              "value": "0 2356 0492"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "contact",
+      "layout": "directory",
+      "heading": "Further inquiries",
+      "items": [
+        {
+          "title": "Bookshop",
+          "body": "Ask about available books, shipping costs and ordering.",
+          "links": [
+            {
+              "kind": "Telephone (ext. 1020)",
+              "label": "0 2356 0466-70",
+              "href": "tel:023560466"
+            },
+            {
+              "kind": "Email",
+              "label": "ribook@orst.go.th",
+              "href": "mailto:ribook@orst.go.th"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

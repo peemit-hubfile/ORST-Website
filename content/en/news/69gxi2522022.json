@@ -1,0 +1,150 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69GXI2522022 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=69gxi2522022",
+  "title": "The Office of the Royal Society holds an oath-taking ceremony to be good civil servants and a strength of the nation on the occasion of His Majesty the King's Birthday",
+  "navKey": "news",
+  "description": "On 22 July 2026 at 1:00 p.m., at the hall on floor",
+  "sideNav": false,
+  "updatedAt": "2026-07-24",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Press Releases",
+      "date": "2026-07-24",
+      "heading": "Office of the Royal Society Holds Oath-Taking Ceremony to Be Good Civil Servants and the Strength of the Nation on the Occasion of His Majesty the King’s Birthday",
+      "image": "assets/images/orst/news/data0005-00005324-960.jpg",
+      "imageAlt": "News photo: the Office of the Royal Society holds an oath-taking ceremony to be good civil servants and a strength of the land",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005324.JPG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "General News",
+          "href": "general-news.html"
+        },
+        {
+          "label": "Office of the Royal Society Holds Oath-Taking Ceremony to Be Good Civil Servants and the Strength of the Nation on the Occasion of His Majesty the King’s Birthday"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "content",
+      "paragraphs": [
+        "On 22 July 2026 at 1:00 p.m., at the hall on floor",
+        "2, Office of the Royal Society, The Government Complex Commemorating His Majesty the King's 80th Birthday Anniversary, 5th December B.E. 2550, Dr. Supharoek",
+        "Phuphongsak, Secretary-General of the Royal Society, led executives,",
+        "civil servants and staff of the Office of the Royal Society in an oath-taking ceremony to be good civil servants and a strength of the nation",
+        "for 2026 on the occasion of His Majesty the King's Birthday, 28",
+        "July 2026, by unveiling the floral cone offering with incense and candles before the royal portrait of His Majesty the King and offering birthday blessings",
+        "leading the oath of allegiance, and singing the Royal Anthem and the song Sadudi Chom Racha to express loyalty",
+        "and boundless gratitude for His Majesty's grace"
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005324-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005324.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005325-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005325.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005326-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005326.JPG",
+          "alt": "News photo 3"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005327-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005327.JPG",
+          "alt": "News image 4"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005328-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005328.JPG",
+          "alt": "News image 5"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005329-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005329.JPG",
+          "alt": "News image 6"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005330-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005330.JPG",
+          "alt": "News image 7"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005331-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005331.JPG",
+          "alt": "News image 8"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005332-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005332.JPG",
+          "alt": "News image 9"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005333-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005333.JPG",
+          "alt": "News image 10"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005334-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005334.JPG",
+          "alt": "News image 11"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005335-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005335.JPG",
+          "alt": "News image 12"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "The Office of the Royal Society joins the oath-taking ceremony to be good civil servants and a strength of the nation on the occasion of His Majesty the King's Birthday, 28 July 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68G%2DP0902091",
+          "category": "News",
+          "publishedAt": "2025-07-30"
+        },
+        {
+          "title": "Oath-taking ceremony to be good civil servants and a strength of the land, on the occasion of His Majesty the King's Birthday, 28 July 2019",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F63DOO3030044",
+          "category": "Activities",
+          "publishedAt": "2019-07-24"
+        },
+        {
+          "title": "The Office of the Royal Society holds a signing ceremony of birthday blessings for His Majesty the King on the occasion of His Majesty's Birthday, 28 July 2020, and an oath-taking ceremony to be good civil servants and a strength of the nation",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63HFO3347063",
+          "category": "News",
+          "publishedAt": "2020-07-29"
+        },
+        {
+          "title": "Oath-Taking Ceremony to Be Good Civil Servants and the Strength of the Nation",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66G%21O5733069",
+          "category": "News",
+          "publishedAt": "2023-07-27"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

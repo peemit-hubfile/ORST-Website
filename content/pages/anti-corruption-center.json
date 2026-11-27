@@ -1,0 +1,128 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=9 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)",
+  "navKey": "about",
+  "description": "ข้อมูลของศูนย์ปฏิบัติการต่อต้านการทุจริต สำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)",
+      "lead": "ข้อมูลของศูนย์ปฏิบัติการต่อต้านการทุจริต สำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เกี่ยวกับเรา"
+        },
+        {
+          "label": "ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.)"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "คำสั่งมอบหมายหน้าที่รองเลขาธิการราชบัณฑิตยสภา",
+          "publishedAt": "2026-06-15",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001031.PDF"
+        },
+        {
+          "title": "ประกาศเจตนารมณ์เป็นองค์กรคุณธรรมของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๙",
+          "publishedAt": "2026-06-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001030.PDF"
+        },
+        {
+          "title": "มาตรฐานทางจริยธรรม ข้อกำหนดจริยธรรม และแนวทางปฏิบัติตนของสำนักงานราชบัณฑิตยสภา รูปแบบอินโฟกราฟิก",
+          "publishedAt": "2025-10-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001000.PDF"
+        },
+        {
+          "title": "แผนปฏิบัติการด้านการส่งเสริมคุณธรรมของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๗",
+          "publishedAt": "2023-11-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000214.PDF"
+        },
+        {
+          "title": "แนวทางปฎิบัติตนของข้าราชการพลเรือนและเจ้าหน้าที่ของสำนักงานราชบัณฑิตยสภาตามประมวลจริยธรรมข้าราชการพลเรือน",
+          "publishedAt": "2023-04-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000928.PDF"
+        },
+        {
+          "title": "ข้อกำหนดจริยธรรมของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2023-04-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000930.PDF"
+        },
+        {
+          "title": "แบบฟอร์มการรายงานผลการนำการประเมินจริยธรรม ไปใช้ในกระบวนการบริหารทรัพยากรบุคคล",
+          "publishedAt": "2023-04-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000932.PDF"
+        },
+        {
+          "title": "แบบฟอร์มการรายงานผลการเปิดโอกาสให้เกิดการมีส่วนร่วม",
+          "publishedAt": "2023-04-21",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000933.PDF"
+        },
+        {
+          "title": "ประกาศเจตนารมณ์ เรื่อง การขับเคลื่อนสำนักงานราชบัณฑิตยสภาให้เป็นองค์กรคุณธรรมต้นแบบ",
+          "publishedAt": "2023-04-19",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000901.PDF"
+        },
+        {
+          "title": "คำสั่งศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.) สำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2021-11-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000824.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการส่งเสริมคุณธรรมและความโปร่งใสภายในหน่วยงาน ประจำปีงบประมาณ พ.ศ. 2564",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000795.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการส่งเสริมคุณธรรมและความโปร่งใสภายในหน่วยงาน ประจำปีงบประมาณ พ.ศ. ๒๕๖๓",
+          "publishedAt": "2020-06-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000449.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการตรวจสอบการใช้ดุลพินิจของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000182.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการให้ผู้มีส่วนได้ส่วนเสียมีส่วนร่วมในการดำเนินงานของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000183.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการป้องกันการขัดกันระหว่างผลประโยชน์ส่วนตนกับผลประโยชน์ส่วนรวม",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000184.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการจัดการเรื่องร้องเรียนการทุจริต",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000185.PDF"
+        },
+        {
+          "title": "ศูนย์ปฏิบัติการต่อต้านการทุจริต / Anti-Corruption Operation Centre",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000186.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการป้องกันการรับสินบนหรือการให้สินบน",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000188.PDF"
+        },
+        {
+          "title": "ประกาศสำนักงานราชบัณฑิตยสภา เรื่อง มาตรการส่งเสริมความโปร่งใสในการจัดซื้อจัดจ้างของสำนักงานราชบัณฑิตยสภา",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000189.PDF"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้าข่าว — ข้อมูลจาก https://www.orst.go.th/iwfm_list.asp?n=a&b=e&i=0020000102001001%2F65CQJ0810081 (ดึงเมื่อ 13 พ.ย. 2569) รูปย่อเก็บใน assets/images/orst/news ภาพเต็มและไฟล์แนบยังอยู่บนเว็บไซต์เดิม · ย้ายจาก content/pages/ (ขั้นที่ 15) — แสดงที่ news-detail.html?id=65cqj0810081",
+  "title": "Announcement of students advancing to the final round of the Youth Handwriting Competition 2022, final round",
+  "navKey": "news",
+  "description": "2 photos",
+  "sideNav": false,
+  "updatedAt": "2022-03-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "variant": "article",
+      "tag": "Activities",
+      "date": "2022-03-17",
+      "heading": "Announcement of students qualifying for the final round of the Youth Handwriting Competition 2022, to compete on Saturday, 26 March 2022, as attached",
+      "image": "assets/images/orst/news/data0002-00002523-960.jpg",
+      "imageAlt": "News image: Announcement of students advancing to the final round of the handwriting competition for",
+      "imageHref": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Activities",
+          "href": "activity-news.html"
+        },
+        {
+          "label": "Announcement of students qualifying for the final round of the Youth Handwriting Competition 2022, to compete on Saturday, 26 March 2022, as attached"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0002-00002523-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002523.PNG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0002-00002524-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0002/00002524.PNG",
+          "alt": "News photo 2"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "related",
+      "heading": "Related news",
+      "href": "activity-news.html",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Youth Handwriting Competition 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68EGN1525066",
+          "category": "Announcements",
+          "publishedAt": "2025-05-07"
+        },
+        {
+          "title": "Youth Handwriting Competition 2020, Final Round",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F63JEJ2639056",
+          "category": "News",
+          "publishedAt": "2020-09-28"
+        },
+        {
+          "title": "Announcement of students qualifying for the final round of the Youth Handwriting Competition 2023",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F66GCM0502063",
+          "category": "Announcements",
+          "publishedAt": "2023-07-03"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Results of the Youth Handwriting Competition 2025",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F68HAN1248053",
+          "category": "Announcements",
+          "publishedAt": "2025-08-01"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

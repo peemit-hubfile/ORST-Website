@@ -1,0 +1,106 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-VISION (อำนาจหน้าที่) และ ABOUT-ORGCHART (หน่วยงานภายใน) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS · หน่วยงานภายใน 4 หน่วยตามแผนผังการบริหารงาน (organization-structure.json) · หัวข้อสั้นของอำนาจหน้าที่ใช้ชุดเดียวกับพันธกิจ ควรให้สำนักงานยืนยัน",
+  "title": "Duties & Responsibilities",
+  "navKey": "about",
+  "description": "Powers and duties of the Office of the Royal Society under the Royal Society of Thailand Act B.E. 2558 and its organizational divisions",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Duties & Responsibilities",
+      "lead": "Powers and duties of the Office of the Royal Society under the Royal Society of Thailand Act B.E. 2558 and its organizational divisions",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Duties & Responsibilities"
+        }
+      ]
+    },
+    {
+      "type": "image-band",
+      "id": "duties",
+      "heading": "Powers and duties of the Office of the Royal Society",
+      "paragraphs": [
+        "The Office of the Royal Society has the following powers and duties"
+      ],
+      "list": [
+        {
+          "title": "Research and dissemination",
+          "text": "(1) To research and advance all branches of knowledge, and disseminate the resulting works for the benefit of the country and the people"
+        },
+        {
+          "title": "Knowledge exchange and academic cooperation",
+          "text": "(2) To exchange knowledge and coordinate academically with academies and other academic institutions in Thailand and abroad"
+        },
+        {
+          "title": "Academic advice to the government",
+          "text": "(3) To provide academic opinions, recommendations and advice to the Prime Minister or the Council of Ministers"
+        },
+        {
+          "title": "Education, training and academic development",
+          "text": "(4) To provide education, training and academic development in the Thai language, Thai dialects and the fields of study under Section 10, and to award higher diplomas, diplomas, certificates of achievement and certificates to those who complete such education, training and academic development, in accordance with the rules of the Royal Society of Thailand"
+        },
+        {
+          "title": "Academic services",
+          "text": "(5) To provide academic services to government agencies, state enterprises, independent constitutional bodies, public organizations, other state agencies, educational institutions, private organizations and the public"
+        },
+        {
+          "title": "Dictionaries and technical terms",
+          "text": "(6) To carry out work on compiling dictionaries, encyclopedias, orthographic dictionaries and taxonomies, coining technical terms in various fields, including compiling dictionaries of foreign-language technical terms in Thai, and other academic work"
+        },
+        {
+          "title": "Preserving and promoting Thai",
+          "text": "(7) To set guidelines on the use of the Thai language, to preserve the Thai language from deterioration, and to promote the Thai language as a national identity so that it is more prominent"
+        },
+        {
+          "title": "Promoting translation",
+          "text": "(8) To promote and support the translation of all branches of knowledge from other languages into Thai or from Thai into other languages"
+        },
+        {
+          "title": "Welfare for Royal Society members",
+          "text": "(9) To provide welfare, assistance and other benefits to members of the Royal Society of Thailand, in accordance with the regulations of the Royal Society of Thailand"
+        },
+        {
+          "title": "Other duties under the law",
+          "text": "(10) To perform other acts prescribed by law as the powers and duties of the Office of the Royal Society"
+        }
+      ],
+      "tone": "light",
+      "listStyle": "tiles"
+    },
+    {
+      "type": "image-band",
+      "id": "divisions",
+      "heading": "Internal units",
+      "paragraphs": [
+        "The missions and responsibilities of each internal unit are awaiting information from the Office of the Royal Society"
+      ],
+      "list": [
+        {
+          "title": "Moral and Political Sciences Division"
+        },
+        {
+          "title": "Science Division"
+        },
+        {
+          "title": "Arts Division"
+        },
+        {
+          "title": "Office of the Secretary"
+        }
+      ],
+      "tone": "light",
+      "listStyle": "tiles",
+      "tint": true
+    }
+  ],
+  "lang": "en"
+}

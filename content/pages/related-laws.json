@@ -1,0 +1,38 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-RDL (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "กฎหมายที่เกี่ยวข้อง",
+  "navKey": "about",
+  "description": "กฎหมายที่เกี่ยวข้องกับการปฏิบัติราชการของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "กฎหมายที่เกี่ยวข้อง",
+      "lead": "กฎหมายที่เกี่ยวข้องกับการปฏิบัติราชการของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "กฎหมายที่เกี่ยวข้อง"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "รัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช ๒๕๖๐",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000804.PDF",
+          "fileSize": 595476
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Names of Seas",
+  "navKey": "knowledge",
+  "description": "Names of Seas — seas connected to the Pacific Ocean · seas connected to the Indian Ocean · seas connected to the Atlantic Ocean, and more",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Names of Seas",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society — 5 topics",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Names of Seas"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": true,
+      "sections": [
+        {
+          "heading": "Seas Connected to the Pacific Ocean",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Bering Sea</td> <td>ทะเลเบริง (Bering Sea)</td> </tr> <tr> <td>Sea of Okhotsk</td> <td>ทะเลโอค็อตสค์ (Sea of Okhotsk)</td> </tr> <tr> <td>Sea of Japan</td> <td>ทะเลญี่ปุ่น (Sea of Japan)</td> </tr> <tr> <td>Yellow Sea, or Huang Hai</td> <td>ทะเลเหลือง, หรือทะเลหวางไห่ (Yellow Sea, or Huang Hai)</td> </tr> <tr> <td>China Sea</td> <td>ทะเลจีน (China Sea)</td> </tr> <tr> <td>East China Sea, or Eastern Sea, or Tung Hai</td> <td>ทะเลจีนตะวันออก, หรือทะเลถงไห่ (East China Sea, or Dong Hai)</td> </tr> <tr> <td>South China Sea, or Nan Hai</td> <td>ทะเลจีนใต้, หรือทะเลหนานไห่ (South China Sea, or Nan Hai)</td> </tr> <tr> <td>Inland Sea</td> <td>ทะเลอินแลนด์ (Inland Sea)</td> </tr> <tr> <td>Philippine Sea</td> <td>ทะเลฟิลิปปิน (Philippine Sea)</td> </tr> <tr> <td>Sulu Sea</td> <td>ทะเลซูลู (Sulu Sea)</td> </tr> <tr> <td>Celebes Sea</td> <td>ทะเลเซเลเบส (Celebes Sea)</td> </tr> <tr> <td>Mindanao Sea</td> <td>ทะเลมินดาเนา (Mindanao Sea)</td> </tr> <tr> <td>Molucca Sea</td> <td>ทะเลโมลุกกะ (Molucca Sea)</td> </tr> <tr> <td>Ceram Sea</td> <td>ทะเลเซรัม (Ceram Sea)</td> </tr> <tr> <td>Banda Sea</td> <td>ทะเลบันดา (Banda Sea)</td> </tr> <tr> <td>Java Sea</td> <td>ทะเลชวา (Java Sea)</td> </tr> <tr> <td>Flores Sea</td> <td>ทะเลฟลอเรส (Flores Sea)</td> </tr> <tr> <td>Timor Sea</td> <td>ทะเลติมอร์ (Timor Sea)</td> </tr> <tr> <td>Arafura Sea</td> <td>ทะเลอาราฟูรา (Arafura Sea)</td> </tr> <tr> <td>Coral Sea</td> <td>ทะเลคอรัล (Coral Sea)</td> </tr> <tr> <td>Tasman Sea</td> <td>ทะเลแทสมัน (Tasman Sea)</td> </tr> <tr> <td>Ross Sea</td> <td>ทะเลรอสซี (Ross Sea)</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "Seas Connected to the Indian Ocean",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Andaman Sea</td> <td>ทะเลอันดามัน (Andaman Sea)</td> </tr> <tr> <td>Arabian Sea</td> <td>ทะเลอาหรับ (Arabian Sea)</td> </tr> <tr> <td>Red Sea</td> <td>ทะเลแดง (Red Sea)</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "Seas Connected to the Atlantic Ocean",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Norwegian Sea</td> <td>ทะเลนอร์วีเจียน (Norwegian Sea)</td> </tr> <tr> <td>North Sea</td> <td>ทะเลเหนือ (North Sea)</td> </tr> <tr> <td>Irish Sea</td> <td>ทะเลไอริช (Irish Sea)</td> </tr> <tr> <td>Baltic Sea</td> <td>ทะเลบอลติก (Baltic Sea)</td> </tr> <tr> <td>Mediterranean Sea</td> <td>ทะเลเมดิเตอร์เรเนียน (Mediterranean Sea)</td> </tr> <tr> <td>Adriatic Sea</td> <td>ทะเลเอเดรียติก (Adriatic Sea)</td> </tr> <tr> <td>Ionian Sea</td> <td>ทะเลไอโอเนียน (Ionian Sea)</td> </tr> <tr> <td>Tyrhenian Sea</td> <td>ทะเลติร์เรเนียน (Tyrrhenian Sea)</td> </tr> <tr> <td>Sicilian Sea</td> <td>ทะเลซิซิเลียน (Sicilian Sea)</td> </tr> <tr> <td>Ligurian Sea</td> <td>ทะเลลิกูเรียน (Ligurian Sea)</td> </tr> <tr> <td>Sea of Marmara</td> <td>ทะเลมาร์มะรา (Sea of Marmara)</td> </tr> <tr> <td>Black Sea</td> <td>ทะเลดำ (Black Sea)</td> </tr> <tr> <td>Sea of Azov</td> <td>ทะเลอะซอฟ (Sea of Azov)</td> </tr> <tr> <td>Caribbean Sea</td> <td>ทะเลแคริบเบียน (Caribbean Sea)</td> </tr> <tr> <td>Scoia Sea</td> <td>ทะเลสโกเชีย (Scotia Sea)</td> </tr> <tr> <td>Weddell Sea</td> <td>ทะเลเวดเดลล์ (Weddell Sea)</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "Seas Connected to the Arctic Ocean",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Barents Sea</td> <td>ทะเลแบเร็นตส์ (Barents Sea)</td> </tr> <tr> <td>White Sea</td> <td>ทะเลขาว (White Sea)</td> </tr> <tr> <td>Kara Sea</td> <td>ทะเลคารา (Kara Sea)</td> </tr> <tr> <td>Laptev Sea</td> <td>ทะเลแลปทิฟ (Laptev Sea)</td> </tr> <tr> <td>East Siberian Sea</td> <td>ทะเลไซบีเรียนตะวันออก (East Siberian Sea)</td> </tr> <tr> <td>Chuckchee Sea; Chuckchi Sea</td> <td>ทะเลชุกชี (Chukchi Sea)</td> </tr> <tr> <td>Beaufort Sea</td> <td>ทะเลโบฟอร์ต (Beaufort Sea)</td> </tr> <tr> <td>Greenland Sea</td> <td>ทะเลกรีนแลนด์ (Greenland Sea)</td> </tr></tbody></table></div><br>"
+        },
+        {
+          "heading": "Enclosed Inland Seas",
+          "html": "<div class=\"table-scroll\"><table> <tbody><tr> <td>Aegean Sea</td> <td>ทะเลอีเจียน (Aegean Sea)</td> </tr> <tr> <td>Caspian Sea</td> <td>ทะเลแคสเปียน (Caspian Sea)</td> </tr> <tr> <td>Aral Sea</td> <td>ทะเลอารัล (Aral Sea)</td> </tr> <tr> <td>Dead Sea</td> <td>ทะเลเดดซี (Dead Sea)</td> </tr> <tr> <td>Sea of Tiberias, or Sea of Galilee</td> <td>ทะเลไทบิรีอัส, หรือทะเลแกลิลี (Sea of Tiberias, or Sea of Galilee)</td> </tr></tbody></table></div><br>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

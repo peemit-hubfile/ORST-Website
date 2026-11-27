@@ -1,0 +1,44 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=40 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Auction Notices",
+  "navKey": "news",
+  "description": "Auction announcements of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Auction Notices",
+      "lead": "Auction announcements of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Auction Notices"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Announcement of the Auction of Damaged, Deteriorated or Unnecessary Government Supplies, Fiscal Year 2024",
+          "publishedAt": "2024-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001729.PDF"
+        },
+        {
+          "title": "Announcement of the Auction of Damaged, Deteriorated or Unnecessary Supplies, Fiscal Year 2020",
+          "publishedAt": "2021-02-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001145.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

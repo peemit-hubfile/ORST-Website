@@ -1,0 +1,59 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "6-Month Report",
+  "navKey": "about",
+  "description": "Six-month monitoring reports on the operations and budget spending of the Office of the Royal Society",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "6-Month Report",
+      "lead": "Six-month monitoring reports on the operations and budget spending of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "6-Month Report"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Performance report, fiscal year 2023, 6-month period (1 October 2022 - 31 March 2023)",
+          "publishedAt": "2023-04-25",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000916.PDF"
+        },
+        {
+          "title": "Budget disbursement report, fiscal year 2022, 6-month period (1 October 2021 - 31 March 2022)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000863.PDF"
+        },
+        {
+          "title": "Budget disbursement results, fiscal year 2021, 6-month period (1 October 2020 - 31 March 2021)",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000790.PDF"
+        },
+        {
+          "title": "Performance of the Office of the Royal Society, fiscal year 2019, 6-month period (1 October 2018 - 31 March 2019)",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000123.PDF"
+        },
+        {
+          "title": "Operational results report of the Office of the Royal Society, fiscal year 2020, 6-month period (1 October 2019 - 31 March 2020)",
+          "publishedAt": "2020-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000445.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

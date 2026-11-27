@@ -1,0 +1,44 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-ITMS (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "IT Master Plan",
+  "navKey": "about",
+  "description": "Information Technology Master Plan and Digital Action Plan of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "IT Master Plan",
+      "lead": "Information Technology Master Plan and Digital Action Plan of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "IT Master Plan"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Digital Action Plan of the Office of the Royal Society, 2020-2022",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000167.PDF",
+          "fileSize": 961437
+        },
+        {
+          "title": "Digital Action Plan of the Office of the Royal Society, 2020-2022",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000805.PDF",
+          "fileSize": 961437
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

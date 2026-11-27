@@ -1,0 +1,145 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ลิงก์หน่วยงานจากกล่อง \"เชื่อมโยงเว็บไซต์อื่น\" ของเว็บเดิม orst.go.th (ดึงเมื่อ 22 พ.ย. 2569 · ตัดลิงก์ที่เสียแล้ว/ชี้ไปเว็บ royin.go.th เดิม) + ตัวอย่างในคอมเมนต์ลูกค้า (ป.ป.ช. ศปท. ก.พ. DGA) · ชุดเดียวกับหน้าแรก (index.html #agency) แก้ต้องแก้ทั้งสองที่",
+  "title": "เว็บลิงก์หน่วยงานที่เกี่ยวข้อง",
+  "navKey": "home",
+  "description": "ลิงก์ไปยังเว็บไซต์ของหน่วยงานและระบบที่เกี่ยวข้องกับสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "เว็บลิงก์หน่วยงานที่เกี่ยวข้อง",
+      "lead": "ลิงก์ไปยังเว็บไซต์ของหน่วยงานและระบบที่เกี่ยวข้องกับสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "เว็บลิงก์หน่วยงานที่เกี่ยวข้อง"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "agencies",
+      "heading": "หน่วยงานที่เกี่ยวข้อง",
+      "items": [
+        {
+          "title": "ราชบัณฑิตยสภา",
+          "href": "https://royalsociety.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "เว็บไซต์เดิมของสำนักงานราชบัณฑิตยสภา",
+          "href": "https://www.orst.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "สำนักงานคณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ (ป.ป.ช.)",
+          "href": "https://www.nacc.go.th/",
+          "icon": "i-shield"
+        },
+        {
+          "title": "ศูนย์ปฏิบัติการต่อต้านการทุจริต (ศปท.) สำนักงานราชบัณฑิตยสภา",
+          "href": "anti-corruption-center.html",
+          "icon": "i-shield"
+        },
+        {
+          "title": "สำนักงานคณะกรรมการข้าราชการพลเรือน (ก.พ.)",
+          "href": "https://www.ocsc.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "สำนักงานพัฒนารัฐบาลดิจิทัล (องค์การมหาชน) (DGA)",
+          "href": "https://www.dga.or.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "สำนักงานคณะกรรมการพัฒนาระบบราชการ (ก.พ.ร.)",
+          "href": "https://www.opdc.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (ETDA)",
+          "href": "https://www.etda.or.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "ศูนย์ข้อมูลข่าวสารของราชการ สำนักงานราชบัณฑิตยสภา",
+          "href": "http://www.oic.go.th/infocenter6/664/",
+          "icon": "i-external"
+        },
+        {
+          "title": "GINFO ฐานข้อมูลหน่วยงานภาครัฐ",
+          "href": "http://www.oic.go.th/ginfo/",
+          "icon": "i-database"
+        },
+        {
+          "title": "ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน (สายด่วน 1111)",
+          "href": "https://gcc.go.th/",
+          "icon": "i-external"
+        },
+        {
+          "title": "กองทุนบำเหน็จบำนาญข้าราชการ (กบข.)",
+          "href": "https://www.gpf.or.th/",
+          "icon": "i-external"
+        }
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "systems",
+      "variant": "alt",
+      "heading": "ระบบฐานข้อมูลและบริการออนไลน์",
+      "items": [
+        {
+          "title": "พจนานุกรม",
+          "href": "https://dictionary.orst.go.th/",
+          "icon": "i-dictionary"
+        },
+        {
+          "title": "ศัพท์บัญญัติ สำนักงานราชบัณฑิตยสภา ออนไลน์",
+          "href": "https://coined-word.orst.go.th/",
+          "icon": "i-journal"
+        },
+        {
+          "title": "ระบบฐานข้อมูลคำทับศัพท์สำนักงานราชบัณฑิตยสภา",
+          "href": "https://transliteration.orst.go.th/",
+          "icon": "i-pen"
+        },
+        {
+          "title": "อักขรานุกรมภูมิศาสตร์ไทย",
+          "href": "https://gazetteer.orst.go.th/",
+          "icon": "i-map"
+        },
+        {
+          "title": "สารานุกรมและอนุกรมวิธาน",
+          "href": "https://lst.nectec.or.th/encyclopedia/",
+          "icon": "i-book"
+        },
+        {
+          "title": "คลังเอกสารเก่า",
+          "href": "https://da3.thaidlt.org/",
+          "icon": "i-database"
+        },
+        {
+          "title": "ระบบทดสอบความรู้ด้านภาษาไทย",
+          "href": "https://etest.orst.go.th/",
+          "icon": "i-puzzle"
+        },
+        {
+          "title": "พจนานุกรมภาษามือไทย ฉบับราชบัณฑิตยสภา",
+          "href": "http://164.115.33.116/",
+          "icon": "i-people"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "more",
+      "tone": "info",
+      "body": "[เว็บลิงก์หน่วยงานภาครัฐอื่นที่สำนักงานต้องการแสดง — รอข้อมูลจากสำนักงาน]"
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=5 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Monthly Procurement Summary (SKR.1)",
+  "navKey": "news",
+  "description": "Monthly Procurement Summaries of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Monthly Procurement Summary (SKR.1)",
+      "lead": "Monthly Procurement Summaries of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "News and Activities"
+        },
+        {
+          "label": "Monthly Procurement Summary (SKR.1)"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: June 2026",
+          "publishedAt": "2026-07-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002058.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: May 2026",
+          "publishedAt": "2026-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002051.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: April 2026",
+          "publishedAt": "2026-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002050.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: March 2026",
+          "publishedAt": "2026-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002049.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: February 2026",
+          "publishedAt": "2026-02-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002048.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: January 2026",
+          "publishedAt": "2026-01-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002047.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: December 2025",
+          "publishedAt": "2025-12-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002046.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: November 2025",
+          "publishedAt": "2025-11-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002045.PDF"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2025",
+          "publishedAt": "2025-10-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002055.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2026: October 2025",
+          "publishedAt": "2025-10-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002044.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: September 2025",
+          "publishedAt": "2025-09-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002043.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: August 2025",
+          "publishedAt": "2025-08-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002042.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: July 2025",
+          "publishedAt": "2025-07-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002041.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: June 2025",
+          "publishedAt": "2025-06-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002040.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: May 2025",
+          "publishedAt": "2025-05-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002039.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: April 2025",
+          "publishedAt": "2025-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002038.PDF"
+        },
+        {
+          "title": "ITA: Procurement and Supply Results for 2024",
+          "publishedAt": "2025-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001841.XLSX"
+        },
+        {
+          "title": "ITA: Procurement and Supply List and Procurement Progress for 2025",
+          "publishedAt": "2025-03-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001842.XLSX"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: March 2025",
+          "publishedAt": "2025-03-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002037.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: February 2025",
+          "publishedAt": "2025-02-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002036.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: January 2025",
+          "publishedAt": "2025-01-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002035.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: December 2024",
+          "publishedAt": "2024-12-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002034.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: November 2024",
+          "publishedAt": "2024-11-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002033.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2025: October 2024",
+          "publishedAt": "2024-10-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0002/00002032.CSV"
+        },
+        {
+          "title": "Summary Report of Procurement and Supply Results for Fiscal Year 2023",
+          "publishedAt": "2024-03-13",
+          "href": "https://www.orst.go.th/iwfm_view.asp?i=0010000101001001%2F67CMI0646075"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: September 2023",
+          "publishedAt": "2023-10-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001656.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: August 2023",
+          "publishedAt": "2023-08-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001653.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: July 2023",
+          "publishedAt": "2023-07-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001652.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: June 2023",
+          "publishedAt": "2023-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001651.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: May 2023",
+          "publishedAt": "2023-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001650.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: April 2023",
+          "publishedAt": "2023-05-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001612.PDF"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2022",
+          "publishedAt": "2023-04-20",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001606.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: March 2023",
+          "publishedAt": "2023-04-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001608.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: February 2023",
+          "publishedAt": "2023-03-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001607.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: January 2023",
+          "publishedAt": "2023-02-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001571.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: December 2022",
+          "publishedAt": "2023-01-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001570.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: November 2022",
+          "publishedAt": "2022-12-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001569.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2023: October 2022",
+          "publishedAt": "2022-11-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001568.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: September 2022",
+          "publishedAt": "2022-10-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001567.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: August 2022",
+          "publishedAt": "2022-09-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001566.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: July 2022",
+          "publishedAt": "2022-08-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001565.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: April 2022",
+          "publishedAt": "2022-05-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001340.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: March 2022",
+          "publishedAt": "2022-03-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001323.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: February 2022",
+          "publishedAt": "2022-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001322.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: January 2022",
+          "publishedAt": "2022-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001321.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: December 2021",
+          "publishedAt": "2021-12-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001320.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: November 2021",
+          "publishedAt": "2021-11-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001319.PDF"
+        },
+        {
+          "title": "Procurement Summary, Fiscal Year 2022: October 2021",
+          "publishedAt": "2021-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001318.PDF"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2021",
+          "publishedAt": "2021-10-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001324.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2021",
+          "publishedAt": "2021-08-02",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001244.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2021",
+          "publishedAt": "2021-06-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001226.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2021",
+          "publishedAt": "2021-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001209.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), April 2021",
+          "publishedAt": "2021-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001192.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), March 2021",
+          "publishedAt": "2021-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001168.PDF"
+        },
+        {
+          "title": "Analysis of Procurement Results for Fiscal Year 2020",
+          "publishedAt": "2021-03-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001153.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), February 2021",
+          "publishedAt": "2021-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001167.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), January 2021",
+          "publishedAt": "2021-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001166.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), December 2020",
+          "publishedAt": "2021-01-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001132.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), November 2020",
+          "publishedAt": "2020-12-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001121.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), October 2020",
+          "publishedAt": "2020-11-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001107.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), September 2020",
+          "publishedAt": "2020-10-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001103.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), August 2020",
+          "publishedAt": "2020-09-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001072.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2020",
+          "publishedAt": "2020-08-13",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001063.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2020",
+          "publishedAt": "2020-07-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001005.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2020",
+          "publishedAt": "2020-06-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001004.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), April 2020",
+          "publishedAt": "2020-05-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000804.PDF"
+        },
+        {
+          "title": "Procurement Results Analysis Report Table for Fiscal Year 2019",
+          "publishedAt": "2020-04-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000805.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), March 2020",
+          "publishedAt": "2020-04-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000806.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), February 2020",
+          "publishedAt": "2020-03-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000807.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), January 2020",
+          "publishedAt": "2020-02-05",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000808.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), December 2019",
+          "publishedAt": "2020-01-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000809.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), November 2019",
+          "publishedAt": "2019-12-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000810.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), October 2019",
+          "publishedAt": "2019-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000811.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), September 2019",
+          "publishedAt": "2019-10-09",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000812.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), August 2019",
+          "publishedAt": "2019-09-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000813.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2019",
+          "publishedAt": "2019-08-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000814.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2019",
+          "publishedAt": "2019-07-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000815.PDF"
+        },
+        {
+          "title": "Summary of the Procurement Results Analysis Report 2018",
+          "publishedAt": "2019-06-26",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000816.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2019",
+          "publishedAt": "2019-06-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000817.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), April 2019",
+          "publishedAt": "2019-05-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001009.JPG"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), March 2019",
+          "publishedAt": "2019-04-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000818.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), February 2019",
+          "publishedAt": "2019-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000819.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), January 2019",
+          "publishedAt": "2019-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000820.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), December 2018",
+          "publishedAt": "2019-01-01",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000821.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), November 2018",
+          "publishedAt": "2018-11-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000822.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), October 2018",
+          "publishedAt": "2018-10-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000823.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), September 2018",
+          "publishedAt": "2018-09-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000824.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), August 2018",
+          "publishedAt": "2018-08-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000825.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), July 2018",
+          "publishedAt": "2018-07-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000826.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), June 2018",
+          "publishedAt": "2018-06-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000827.PDF"
+        },
+        {
+          "title": "Form SKR.1 (Procurement Summary), May 2018",
+          "publishedAt": "2018-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000828.PDF"
+        },
+        {
+          "title": "Procurement Summary for April 2018",
+          "publishedAt": "2018-04-30",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000829.PDF"
+        },
+        {
+          "title": "Procurement Summary for March 2018",
+          "publishedAt": "2018-03-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000830.PDF"
+        },
+        {
+          "title": "Procurement Summary for February 2018",
+          "publishedAt": "2018-02-28",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000831.PDF"
+        },
+        {
+          "title": "Procurement Summary for January 2018",
+          "publishedAt": "2018-01-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000832.PDF"
+        },
+        {
+          "title": "Procurement Summary for December 2017",
+          "publishedAt": "2018-01-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000833.PDF"
+        },
+        {
+          "title": "Procurement Summary for November 2017",
+          "publishedAt": "2017-12-06",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000834.PDF"
+        },
+        {
+          "title": "Procurement Summary for October 2017",
+          "publishedAt": "2017-11-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0000/00000835.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

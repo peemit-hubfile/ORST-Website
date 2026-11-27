@@ -1,0 +1,34 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบหน้าประวัติบุคคล person.html?id=<id> — ข้อมูลจาก content/people/index.json (block person-profile) ไม่ต้องสร้างไฟล์ต่อคน · prerender: false = build ไม่สร้าง HTML นิ่ง",
+  "title": "Executive profile",
+  "navKey": "about",
+  "description": "Profiles and contact details of the executives of the Office of the Royal Society",
+  "sideNav": false,
+  "prerender": false,
+  "blocks": [
+    {
+      "type": "person-profile",
+      "id": "profile",
+      "source": {
+        "type": "person"
+      },
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Office Executives",
+          "href": "executives.html"
+        }
+      ],
+      "backHref": "executives.html",
+      "backLabel": "All executives"
+    }
+  ],
+  "lang": "en"
+}

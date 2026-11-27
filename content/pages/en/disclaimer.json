@@ -1,0 +1,45 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อความจากคอมเมนต์ลูกค้า (22 พ.ย. 2569) คัดลอกตามต้นฉบับทุกคำ",
+  "title": "Disclaimer",
+  "navKey": "about",
+  "description": "Disclaimer of liability for the use of the Office of the Royal Society website and its content",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Disclaimer",
+      "lead": "Terms on liability for the use of the Office of the Royal Society website and its content",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Sitemap",
+          "href": "sitemap.html"
+        },
+        {
+          "label": "Disclaimer"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "disclaimer",
+      "paragraphs": [
+        "The Office of the Royal Society shall not be liable for any damage, including any damage, loss or expense arising, whether directly or indirectly, as a result of or in connection with a user's access to this website or to any website linked to it, or for any damage, loss or expense arising from failure of use, error, omission, interruption, defect, incompleteness or computer virus, even if the Office of the Royal Society has been advised that such damage, loss or expense may occur. In addition, the Office of the Royal Society shall not be liable to any website user or person for any claim arising from the website or any of its content, including any decision made or action taken by a website user in reliance on such content, or for any damage whatsoever, whether direct or indirect, including any other damage that may occur. Users acknowledge and understand that the Office of the Royal Society shall not be responsible for any action of users whatsoever."
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "Contact the website administrator",
+      "actions": [
+        {
+          "label": "Contact Us",
+          "href": "contact.html#contact-form"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

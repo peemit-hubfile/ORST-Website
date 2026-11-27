@@ -1,0 +1,55 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Royal vocabulary",
+  "navKey": "knowledge",
+  "description": "Royal Vocabulary according to the guidelines set by the Office of the Royal Society",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Royal vocabulary",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Royal vocabulary"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "content",
+      "toc": false,
+      "sections": [
+        {
+          "html": "<p>Work on Setting Guidelines for the Use of Royal Vocabulary</p><p>The royal vocabulary shown here is part of the royal vocabulary for which the Royal Institute's Committee on Guidelines for the Use of the Thai Language is considering usage guidelines. The words selected here are those whose royal-vocabulary form is the same for every rank, namely for use with the King, Somdet Phra Borommarachininat (Her Majesty the Queen), Somdet Phra Borommarachini (the Queen), His Royal Highness the Crown Prince, Her Royal Highness Princess Maha Chakri Sirindhorn, and members of the royal family of the ranks of Somdet Chao Fa, Phra Ong Chao and Mom Chao. Royal vocabulary also differs according to the rank of the royal person. Moreover, even when it is known which royal word is used for an ordinary word, and with the King or royal persons of which rank, one must still consider the context or surrounding text of the sentence or passage in which the royal word is used, so that the meaning is conveyed correctly and clearly.</p><p>Secretariat of the Committee on<br>Guidelines for the Use of the Thai Language</p><p>Ms. Supanya Chomchinda<br>Committee Member and Secretary<br>Ms. Kunsirin Nakphaichit<br>Committee Member and Assistant Secretary</p><div class=\"table-scroll\"><table><tbody><tr><td><p>Ordinary word</p></td><td><p>Royal vocabulary</p></td></tr><tr><td>กราบ (krap)</td><td>ทรงกราบ (song krap)</td></tr><tr><td>กิน (to eat)</td><td>เสวย (sawoei)</td></tr><tr><td>คุกเข่า (to kneel)</td><td>คุกพระชงฆ์ (khuk phra chong)</td></tr><tr><td>เจิม (to anoint (with a mark on the forehead))</td><td>ทรงเจิม (song choem)</td></tr><tr><td>ชอบ, รัก, เอ็นดู (to like, to love, to be fond of)</td><td>โปรด (prot)</td></tr><tr><td>ดู (to look, to see)</td><td>ทอดพระเนตร (thot phra net)</td></tr><tr><td>นั่ง (to sit)</td><td>ประทับ (prathap)</td></tr><tr><td>แปรงฟัน (to brush one's teeth)</td><td>ชำระพระทนต์, แปรงพระทนต์ (chamra phra thon, praeng phra thon)</td></tr><tr><td>ยืน (to stand)</td><td>ทรงยืน (song yuen)</td></tr><tr><td>ระลึกถึง (to remember, to think of)</td><td>ทรงระลึกถึง (song raluek thueng)</td></tr><tr><td>รับศีล, ถือศีล (to receive or observe the precepts)</td><td>ทรงศีล (song sin)</td></tr><tr><td>เรียน, เขียน, อ่าน (to study, to write, to read)</td><td>ทรงพระอักษร (song phra akson)</td></tr><tr><td>ล้างเท้า (to wash one's feet)</td><td>ชำระพระบาท (chamra phra bat)</td></tr><tr><td>ล้างมือ (to wash one's hands)</td><td>ชำระพระหัตถ์ (chamra phra hat)</td></tr><tr><td>ล้างหน้า (to wash one's face)</td><td>สรงพระพักตร์ (song phra phak)</td></tr><tr><td>เล่าเรียน (to study)</td><td>ทรงเล่าเรียน (song lao rian)</td></tr><tr><td>แล่นเรือใบ (to sail a sailboat)</td><td>ทรงเรือใบ (song ruea bai)</td></tr><tr><td>ศึกษา (to study, to be educated)</td><td>ทรงศึกษา (song sueksa)</td></tr><tr><td>สบาย (to be well, comfortable)</td><td>ทรงพระสำราญ (song phra samran)</td></tr><tr><td>สุขสบาย (to be happy and well)</td><td>ทรงพระเกษมสำราญ (song phra kasem samran)</td></tr><tr><td>อาบน้ำ (to bathe)</td><td>สรงน้ำ, สรง (song nam, song)</td></tr></tbody></table></div>"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

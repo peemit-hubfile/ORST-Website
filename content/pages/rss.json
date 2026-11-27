@@ -1,0 +1,85 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "rss.xml สร้างโดย tools/build.mjs จาก general-news.json + activity-news.json (ต้องตั้ง SITE_URL ตอน build)",
+  "title": "RSS ข่าวสาร",
+  "navKey": "news",
+  "description": "ติดตามข่าวประชาสัมพันธ์และข่าวกิจกรรมล่าสุดของสำนักงานราชบัณฑิตยสภาผ่านโปรแกรมอ่าน RSS",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "RSS ข่าวสาร",
+      "lead": "ติดตามข่าวประชาสัมพันธ์และข่าวกิจกรรมล่าสุดของสำนักงานราชบัณฑิตยสภาผ่านโปรแกรมอ่าน RSS",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "RSS ข่าวสาร"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "feeds",
+      "layout": "cards",
+      "columns": 1,
+      "cardStyle": "compact",
+      "heading": "ช่อง RSS ของสำนักงาน",
+      "lead": "RSS (Really Simple Syndication) คือรูปแบบไฟล์สำหรับเผยแพร่ข่าวที่อัปเดตอยู่เสมอ เมื่อนำลิงก์ RSS ไปใส่ในโปรแกรมอ่าน RSS หรือแอปพลิเคชันอ่านข่าว จะได้รับข่าวใหม่ของสำนักงานโดยไม่ต้องเข้าเว็บไซต์",
+      "items": [
+        {
+          "icon": "i-megaphone",
+          "highlight": true,
+          "title": "ข่าวสารและกิจกรรม",
+          "body": "ข่าวประชาสัมพันธ์ทั่วไป และข่าวกิจกรรม",
+          "details": [
+            {
+              "label": "ลิงก์ RSS",
+              "value": "rss.xml",
+              "copy": "url"
+            }
+          ],
+          "links": [
+            {
+              "kind": "เปิดดูไฟล์ RSS",
+              "label": "rss.xml",
+              "href": "rss.xml",
+              "icon": "i-file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "how",
+      "layout": "cards",
+      "variant": "alt",
+      "heading": "วิธีติดตามข่าวผ่าน RSS",
+      "lead": "ใช้เวลาไม่ถึงหนึ่งนาที ทำครั้งเดียว แล้วข่าวใหม่ของสำนักงานจะส่งตรงถึงโปรแกรมอ่าน RSS ของคุณ",
+      "items": [
+        {
+          "title": "คัดลอกลิงก์ RSS",
+          "body": "กดปุ่ม “คัดลอก” ที่ช่องลิงก์ RSS ด้านบน ระบบจะคัดลอกลิงก์แบบเต็มให้ทันที",
+          "icon": "i-copy"
+        },
+        {
+          "title": "เปิดโปรแกรมอ่าน RSS",
+          "body": "เปิดโปรแกรมหรือแอปพลิเคชันอ่าน RSS ที่ใช้อยู่ แล้วเลือกเพิ่มแหล่งข่าวใหม่",
+          "icon": "i-ebook"
+        },
+        {
+          "title": "วางลิงก์และบันทึก",
+          "body": "วางลิงก์ที่คัดลอกไว้ แล้วบันทึก ข่าวใหม่ของสำนักงานจะแสดงในโปรแกรมโดยอัตโนมัติ",
+          "icon": "i-check"
+        }
+      ]
+    }
+  ]
+}

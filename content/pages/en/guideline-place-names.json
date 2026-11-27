@@ -1,0 +1,61 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เนื้อหาจาก orst.go.th/iwfm_table.asp?a=36 (ดึงเมื่อ 16 พ.ย. 2569) ไฟล์ PDF ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Names of Provinces, Districts, Subdistricts, Khet and Khwaeng",
+  "navKey": "knowledge",
+  "description": "Names of provinces, districts, subdistricts, khet and khwaeng — Names of provinces, districts, subdistricts, khet and khwaeng · Spelling of Bangkok's district (khet) names in Thai and Roman script, with their history",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Names of Provinces, Districts, Subdistricts, Khet and Khwaeng",
+      "image": "assets/images/orst/news/data0005-00005306-960.jpg",
+      "lead": "Guidelines set by the Office of the Royal Society — 2 topics",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Knowledge Repository",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "Thai language guidelines",
+          "href": "language-guidelines.html"
+        },
+        {
+          "label": "Names of Provinces, Districts, Subdistricts, Khet and Khwaeng"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Names of Provinces, Districts, Subdistricts, Khet and Khwaeng",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000804.PDF",
+          "category": "Names of Provinces, Districts, Subdistricts, Khet and Khwaeng"
+        },
+        {
+          "title": "Spelling of Bangkok's district (khet) names in Thai and Roman script, with their history",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER004/GENERAL/DATA0000/00000805.PDF",
+          "category": "Spelling of Bangkok's district (khet) names in Thai and Roman script, with their history"
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "heading": "See other guidelines",
+      "body": "All Thai language usage guidelines of the Office of the Royal Society",
+      "actions": [
+        {
+          "label": "All Thai language guidelines",
+          "href": "language-guidelines.html"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

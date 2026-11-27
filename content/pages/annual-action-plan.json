@@ -1,0 +1,99 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "แม่แบบ T1 (รายการเอกสาร) — เมนู 4.1.4 ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-AAP ไฟล์ยังชี้ไปเว็บเดิม รอย้ายเข้า CMS",
+  "title": "แผนปฏิบัติราชการประจำปี",
+  "navKey": "about",
+  "description": "แผนปฏิบัติราชการประจำปีและแผนการใช้จ่ายงบประมาณของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "แผนปฏิบัติราชการประจำปี",
+      "lead": "แผนปฏิบัติราชการประจำปีและแผนการใช้จ่ายงบประมาณของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "แผนปฏิบัติราชการประจำปี"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "แผนปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๓",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000175.PDF",
+          "fiscalYear": 2563,
+          "fileSize": 289145
+        },
+        {
+          "title": "แผนการปฏิบัติงานของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. ๒๕๖๒",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000176.PDF",
+          "fiscalYear": 2562,
+          "fileSize": 161672
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปี พ.ศ. ๒๕๖๑",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000178.PDF",
+          "fiscalYear": 2561,
+          "fileSize": 14739428
+        },
+        {
+          "title": "แผนการปฏิบัติราชการและแผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000771.PDF",
+          "fiscalYear": 2564,
+          "fileSize": 5316877
+        },
+        {
+          "title": "แผนปฏิบัติราชการ ประจำปีงบประมาณ พ.ศ. ๒๕๖๔",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF",
+          "fiscalYear": 2564,
+          "fileSize": 505108
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๕ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF",
+          "fiscalYear": 2565,
+          "fileSize": 683368
+        },
+        {
+          "title": "แผนการใช้จ่ายงบประมาณ ประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 20243363
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๖ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 320585
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๗ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF",
+          "fiscalYear": 2567,
+          "fileSize": 333458
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๘ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF",
+          "fiscalYear": 2568,
+          "fileSize": 296823
+        },
+        {
+          "title": "แผนปฏิบัติราชการประจำปีงบประมาณ พ.ศ. ๒๕๖๙ สำนักงานราชบัณฑิตยสภา",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF",
+          "fiscalYear": 2569,
+          "fileSize": 1839934
+        }
+      ]
+    }
+  ]
+}

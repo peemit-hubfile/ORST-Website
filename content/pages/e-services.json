@@ -1,0 +1,108 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/info.asp (งานบริการ e-Services) — ไฟล์ระเบียบ/แบบฟอร์มยังชี้ไปเว็บไซต์เดิม เว็บเดิมส่งไฟล์อัปโหลดไปที่ saraban@orst.go.th",
+  "title": "งานบริการ (E-Service)",
+  "navKey": "services",
+  "description": "บริการยื่นคำขออนุญาตออนไลน์ของสำนักงานราชบัณฑิตยสภา อ่านระเบียบ ดาวน์โหลดแบบฟอร์ม และส่งเอกสารทางอีเมล",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "งานบริการ (E-Service)",
+      "lead": "บริการยื่นคำขออนุญาตออนไลน์ของสำนักงานราชบัณฑิตยสภา อ่านระเบียบ ดาวน์โหลดแบบฟอร์ม และส่งเอกสารทางอีเมล",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "บริการวิชาการ"
+        },
+        {
+          "label": "งานบริการ (E-Service)"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "services",
+      "layout": "directory",
+      "heading": "บริการที่ยื่นคำขอได้",
+      "lead": "อ่านระเบียบของบริการที่ต้องการ ดาวน์โหลดแบบฟอร์มคำขอ แล้วส่งเอกสารทางอีเมล",
+      "items": [
+        {
+          "title": "การจัดพิมพ์และเผยแพร่",
+          "body": "การขออนุญาตจัดพิมพ์และเผยแพร่สิ่งพิมพ์ สื่ออิเล็กทรอนิกส์ ข้อมูลอิเล็กทรอนิกส์ และสื่ออื่น ๆ ของสำนักงานราชบัณฑิตยสภา",
+          "links": [
+            {
+              "label": "ระเบียบ (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF",
+              "kind": "อ่านระเบียบ"
+            },
+            {
+              "label": "แบบฟอร์ม (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF",
+              "kind": "ดาวน์โหลดแบบฟอร์มคำขอ"
+            },
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th",
+              "kind": "ส่งเอกสาร"
+            }
+          ]
+        },
+        {
+          "title": "การใช้สิทธิจัดพิมพ์และจำหน่าย",
+          "body": "การขออนุญาตใช้สิทธิในการจัดพิมพ์และจำหน่ายหนังสือที่สำนักงานราชบัณฑิตยสภาผลิตขึ้นเพื่อเผยแพร่และจำหน่าย",
+          "links": [
+            {
+              "label": "ระเบียบ (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF",
+              "kind": "อ่านระเบียบ"
+            },
+            {
+              "label": "แบบฟอร์ม (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF",
+              "kind": "ดาวน์โหลดแบบฟอร์มคำขอ"
+            },
+            {
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th",
+              "kind": "ส่งเอกสาร"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "how",
+      "layout": "timeline",
+      "variant": "alt",
+      "heading": "ขั้นตอนการยื่นคำขอ",
+      "items": [
+        {
+          "title": "อ่านระเบียบ",
+          "body": "ตรวจสอบหลักเกณฑ์และเงื่อนไขตามระเบียบของบริการที่ต้องการ"
+        },
+        {
+          "title": "กรอกแบบฟอร์มคำขอ",
+          "body": "ดาวน์โหลดแบบฟอร์ม (PDF) และกรอกข้อมูลให้ครบถ้วน"
+        },
+        {
+          "title": "ส่งเอกสารทางอีเมล",
+          "body": "ส่งแบบฟอร์มพร้อมเอกสารประกอบไปที่ saraban@orst.go.th รองรับไฟล์ .pdf .doc .docx ขนาดไม่เกิน 10MB"
+        },
+        {
+          "title": "ติดตามความคืบหน้า",
+          "body": "สอบถามสถานะคำขอทางอีเมลหรือโทรศัพท์ ดูช่องทางที่หน้าติดตามสถานะคำขอรับบริการ"
+        }
+      ],
+      "action": {
+        "label": "ติดตามสถานะคำขอ",
+        "href": "track-request.html"
+      }
+    }
+  ]
+}

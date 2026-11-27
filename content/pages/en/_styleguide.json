@@ -1,0 +1,1242 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "หน้านี้คือคลังบล็อก แสดง block ทุกชนิดที่ระบบรองรับ พร้อมค่าที่ใช้ได้จริง ใช้เป็นตัวอ้างอิงตอนเขียน JSON หน้าใหม่",
+  "title": "Block Library (Style Guide)",
+  "navKey": "home",
+  "description": "Examples of every block type used to build web pages from JSON files",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "eyebrow": "Design system",
+      "heading": "Block library",
+      "lead": "Every block type supported by the system, with usage examples — copy the JSON from content/pages/_styleguide.json and use it directly",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Block library"
+        }
+      ],
+      "actions": [
+        {
+          "label": "Read CONTENT-MODEL.md",
+          "href": "#"
+        },
+        {
+          "label": "Back to Home",
+          "href": "index.html",
+          "variant": "ghost"
+        }
+      ]
+    },
+    {
+      "type": "anchor-nav",
+      "items": [
+        {
+          "label": "Cards",
+          "href": "#b-card-grid"
+        },
+        {
+          "label": "Steps (dark)",
+          "href": "#b-steps-timeline"
+        },
+        {
+          "label": "Documents",
+          "href": "#b-document-list"
+        },
+        {
+          "label": "Table",
+          "href": "#b-table"
+        },
+        {
+          "label": "Questions",
+          "href": "#b-faq"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "tone": "info",
+      "id": "b-notice",
+      "heading": "notice",
+      "lead": "Notice box — tone: info | warn | success",
+      "title": "This is a notice block",
+      "body": "Use it to highlight important messages, such as cautions, terms of service or temporary announcements"
+    },
+    {
+      "type": "rich-text",
+      "id": "b-rich-text",
+      "variant": "alt",
+      "heading": "rich-text",
+      "lead": "Long text: use paragraphs (safe) or html (source must be trusted)",
+      "paragraphs": [
+        "Enter text as an array of paragraphs in paragraphs. The system escapes special characters automatically, so it is safe when content comes from a CMS or users",
+        "If you need full HTML (lists, bold text, links), use the html field instead, but make sure the content comes only from trusted sources",
+        "By default the width is limited to 78 characters for readability. Set width to full for full width"
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "b-card-grid",
+      "heading": "card-grid",
+      "lead": "Content cards arranged in a grid — the most frequently used block (columns: 2, 3 or 4)",
+      "action": {
+        "label": "Sample top-right button",
+        "href": "#"
+      },
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-book",
+          "title": "Card with an icon",
+          "body": "Set icon to an id from the sprite, such as i-book, i-file, i-people",
+          "meta": "The meta field sits at the bottom"
+        },
+        {
+          "tag": "Has a tag",
+          "title": "Clickable card",
+          "body": "If href is set, the whole card becomes a link with a hover effect. Set action to show a button at the bottom of the card",
+          "href": "#",
+          "action": "Submit a request"
+        },
+        {
+          "title": "Plain card",
+          "body": "Icon and href are optional, leaving just the heading and content"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "b-cards-numbered",
+      "variant": "alt",
+      "heading": "card-grid (numbered)",
+      "columns": 3,
+      "numbered": true,
+      "lead": "numbered: true = เลข 01 02 03 จาง ๆ มุมการ์ด การ์ดกะทัดรัด",
+      "items": [
+        {
+          "icon": "i-book",
+          "tag": "Strategy 1",
+          "title": "Developing and applying digital technology to disseminate knowledge and provide knowledge services",
+          "meta": "2 แผนงาน"
+        },
+        {
+          "icon": "i-database",
+          "tag": "Strategy 2",
+          "title": "Managing the use of digital technology within the organization",
+          "meta": "2 แผนงาน"
+        },
+        {
+          "icon": "i-people",
+          "tag": "Strategy 3",
+          "title": "Developing personnel's digital technology knowledge and skills",
+          "meta": "1 แผนงาน"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "b-feature-list",
+      "variant": "alt",
+      "heading": "feature-list",
+      "lead": "Icon + heading + description arranged in a row, suitable for summarizing highlights or features",
+      "columns": 2,
+      "items": [
+        {
+          "icon": "i-shield",
+          "title": "Item heading 1",
+          "body": "A short description following the heading"
+        },
+        {
+          "icon": "i-people",
+          "title": "Item heading 2",
+          "body": "A short description following the heading"
+        },
+        {
+          "icon": "i-service",
+          "title": "Item heading 3",
+          "body": "A short description following the heading"
+        },
+        {
+          "icon": "i-database",
+          "title": "Item heading 4",
+          "body": "A short description following the heading"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "b-card-grid-service",
+      "heading": "card-grid (layout: service)",
+      "layout": "service",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-form",
+          "tags": [
+            "Online",
+            "Reply by email"
+          ],
+          "title": "Service name",
+          "body": "Service description, 1-2 lines",
+          "href": "#",
+          "action": "Start service"
+        },
+        {
+          "icon": "i-file",
+          "tags": [
+            "Documents can be attached"
+          ],
+          "title": "Service name",
+          "body": "Service description",
+          "href": "#",
+          "action": "Submit a request"
+        },
+        {
+          "icon": "i-people",
+          "tags": [
+            "Unit"
+          ],
+          "title": "Service name",
+          "body": "Service description",
+          "href": "#",
+          "action": "Submit a request"
+        }
+      ]
+    },
+    {
+      "type": "card-grid",
+      "id": "b-card-grid-tiles",
+      "heading": "card-grid (layout: tiles)",
+      "layout": "tiles",
+      "columns": 4,
+      "variant": "alt",
+      "items": [
+        {
+          "icon": "i-dictionary",
+          "title": "Dictionary",
+          "body": "External link, opens in a new tab",
+          "href": "https://dictionary.orst.go.th/"
+        },
+        {
+          "icon": "i-journal",
+          "title": "Coined technical terms",
+          "body": "External link",
+          "href": "https://coined-word.orst.go.th/"
+        },
+        {
+          "icon": "i-book",
+          "title": "Internal page",
+          "body": "Internal site link",
+          "href": "knowledge-base.html"
+        },
+        {
+          "icon": "i-form",
+          "title": "No link yet",
+          "body": "Content in preparation"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "b-feature-cards",
+      "heading": "feature-list (layout: cards)",
+      "layout": "cards",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "i-megaphone",
+          "title": "Heading",
+          "body": "Description"
+        },
+        {
+          "icon": "i-shield",
+          "title": "Heading",
+          "body": "Description"
+        },
+        {
+          "icon": "i-pen",
+          "title": "Heading",
+          "body": "Description"
+        }
+      ]
+    },
+    {
+      "type": "stat-row",
+      "id": "b-stat-row",
+      "heading": "stat-row",
+      "lead": "Statistics figures; the number of columns adjusts automatically to screen width",
+      "items": [
+        {
+          "value": "14",
+          "label": "Block types",
+          "note": "Extensible"
+        },
+        {
+          "value": "0",
+          "label": "External dependencies",
+          "note": "No npm install needed"
+        },
+        {
+          "value": "1",
+          "label": "JSON file per page",
+          "note": "Edit in one place"
+        }
+      ]
+    },
+    {
+      "type": "stat-row",
+      "id": "b-stat-progress",
+      "variant": "alt",
+      "heading": "stat-row (progress)",
+      "lead": "ใส่ progress 0-100 = วงแหวนความคืบหน้าแทนตัวเลขใหญ่ — ตัวอย่างจากเป้าหมายแผนปฏิบัติการดิจิทัล พ.ศ. 2563–2565",
+      "items": [
+        {
+          "value": "80%",
+          "label": "Public services",
+          "note": "of government services can be accessed by the public through digital technology",
+          "progress": 80
+        },
+        {
+          "value": "80%",
+          "label": "Personnel",
+          "note": "of personnel have developed their digital technology knowledge and skills",
+          "progress": 80
+        }
+      ]
+    },
+    {
+      "type": "stat-row",
+      "id": "b-stat-dark",
+      "variant": "dark",
+      "heading": "stat-row (variant dark)",
+      "lead": "การ์ดโปร่งบนแถบเขียวเข้ม ตัวเลขสีทอง",
+      "items": [
+        {
+          "value": "3",
+          "label": "Strategic issues"
+        },
+        {
+          "value": "5",
+          "label": "Work plans"
+        },
+        {
+          "value": "12",
+          "label": "โครงการ (project)"
+        }
+      ]
+    },
+    {
+      "type": "rich-text",
+      "id": "b-quote",
+      "eyebrow": "headingStyle: quote",
+      "headingStyle": "quote",
+      "heading": "“An agency that serves through digital technology, giving users easy and fast access to knowledge”",
+      "paragraphs": [
+        "ใส่ headingStyle: \"quote\" ให้ block ใดก็ได้ หัวข้อจะเป็นกล่องคำคม — ใช้กับวิสัยทัศน์หรือข้อความสำคัญ 1 ประโยค"
+      ]
+    },
+    {
+      "type": "link-list",
+      "id": "b-link-list",
+      "variant": "alt",
+      "heading": "link-list",
+      "lead": "List of documents/links with file type and date, suitable for download and announcement pages",
+      "items": [
+        {
+          "title": "Item with all fields",
+          "desc": "Description below the item name",
+          "tag": "PDF",
+          "meta": "1 Jan 2026",
+          "href": "#"
+        },
+        {
+          "title": "Item with name only",
+          "href": "#"
+        },
+        {
+          "title": "Item with a custom icon",
+          "desc": "Set icon to replace the default file icon",
+          "icon": "i-journal",
+          "tag": "Journal",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-document-list",
+      "heading": "document-list",
+      "lead": "Template T1 document/announcement list — with a search box, fiscal year filter and a Show more button (the search bar appears when there are more than 5 items). This example uses real data from the former website",
+      "pageSize": 5,
+      "items": [
+        {
+          "title": "Action Plan for Fiscal Year 2026, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF",
+          "fiscalYear": 2569,
+          "fileSize": 1839934
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2025, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000981.PDF",
+          "fiscalYear": 2568,
+          "fileSize": 296823
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2024, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000968.PDF",
+          "fiscalYear": 2567,
+          "fileSize": 333458
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2023, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000893.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 320585
+        },
+        {
+          "title": "Budget Expenditure Plan for Fiscal Year 2023, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000860.PDF",
+          "fiscalYear": 2566,
+          "fileSize": 20243363
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2022, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000856.PDF",
+          "fiscalYear": 2565,
+          "fileSize": 683368
+        },
+        {
+          "title": "Action Plan for Fiscal Year 2021",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000792.PDF",
+          "fiscalYear": 2564,
+          "fileSize": 505108
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-document-list-compact",
+      "variant": "alt",
+      "layout": "compact",
+      "heading": "document-list (layout: compact)",
+      "lead": "Compact version without a search bar — used as \"Attachments\" at the end of a content page",
+      "items": [
+        {
+          "title": "Action Plan for Fiscal Year 2026, Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001007.PDF",
+          "fiscalYear": 2569,
+          "fileSize": 1839934
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-document-list-empty",
+      "heading": "document-list (no documents yet)",
+      "lead": "When items is empty, a message is shown instead of a blank page — change the message with emptyText",
+      "emptyText": "There are no documents in this category yet. Information is being compiled",
+      "items": []
+    },
+    {
+      "type": "article",
+      "id": "b-article",
+      "variant": "alt",
+      "heading": "article",
+      "lead": "Template T2 long content divided into sections — an automatic \"On this page\" table of contents appears when there are 3 or more headings (sticky at the side on large screens, moved to the top on mobile)",
+      "intro": [
+        "Intro paragraph, slightly larger than body text, used to summarize the page"
+      ],
+      "sections": [
+        {
+          "heading": "Section with paragraphs",
+          "paragraphs": [
+            "Each section has paragraphs as a list of paragraphs",
+            "The second paragraph of the same section"
+          ]
+        },
+        {
+          "heading": "Section with a list",
+          "list": [
+            "Bulleted list item 1",
+            "Bulleted list item 2",
+            "Bulleted list item 3"
+          ]
+        },
+        {
+          "heading": "Section using HTML",
+          "html": "<p>Use the field <strong>html</strong> when you need bold text, links or tables — include only trusted content</p>"
+        }
+      ]
+    },
+    {
+      "type": "page-index",
+      "id": "b-page-index",
+      "heading": "page-index",
+      "columns": 2,
+      "lead": "Template T3 category page — a table of child pages divided into groups. External links (http) open in a new tab. Items without href are shown as \"Content pending\"",
+      "groups": [
+        {
+          "heading": "Group with an icon and description",
+          "icon": "i-journal",
+          "desc": "The group description (desc) is shown below the group name",
+          "items": [
+            {
+              "title": "Link to a page on this site",
+              "href": "styleguide.html"
+            },
+            {
+              "title": "Item with a description",
+              "href": "styleguide.html",
+              "desc": "Short description below the item name"
+            },
+            {
+              "title": "External link with a label",
+              "href": "https://www.orst.go.th/",
+              "tag": "Former website"
+            },
+            {
+              "title": "Item without a page yet"
+            }
+          ]
+        },
+        {
+          "heading": "Group without an icon",
+          "items": [
+            {
+              "title": "Item 1",
+              "href": "styleguide.html"
+            },
+            {
+              "title": "Item 2",
+              "href": "styleguide.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "b-person-grid",
+      "variant": "alt",
+      "heading": "person-grid",
+      "columns": 4,
+      "lead": "Template T5 people — portrait photos at 3:4, cropped from the bottom so heads are not cut off. Phone numbers and emails are clickable. If there is no photo, an icon is shown instead",
+      "items": [
+        {
+          "name": "Mr. Santi Phakdikham",
+          "position": "Deputy Secretary-General of the Office of the Royal Society",
+          "image": "assets/images/orst/people/deputy-secretary-general.jpg",
+          "alt": "Mr. Santi Phakdikham",
+          "phone": "02-141-1718",
+          "email": "Santi.p@orst.go.th"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "note": "Example without a photo"
+        }
+      ]
+    },
+    {
+      "type": "person-grid",
+      "id": "b-person-feature",
+      "heading": "person-grid (layout feature)",
+      "layout": "feature",
+      "lead": "ผู้บริหารสูงสุด 1 คน — รูปมีกรอบ ตารางข้อมูลติดต่อ ปุ่มดูประวัติ · ดึงจาก content/people/index.json ด้วย source people กดได้ทั้งการ์ดไป person.html?id=",
+      "source": {
+        "type": "people",
+        "ids": [
+          "secretary-general"
+        ]
+      }
+    },
+    {
+      "type": "person-grid",
+      "id": "b-person-row",
+      "variant": "alt",
+      "heading": "person-grid (layout row)",
+      "layout": "row",
+      "lead": "รองผู้บริหาร / ผู้อำนวยการ — รูปมีกรอบ ข้อมูลด้านข้าง 2 คอลัมน์ (จอแคบเหลือ 1 คอลัมน์)",
+      "source": {
+        "type": "people",
+        "ids": [
+          "deputy-secretary-general",
+          "director-1"
+        ]
+      }
+    },
+    {
+      "type": "staff-directory",
+      "id": "sg-staff-directory",
+      "heading": "staff-directory — Staff directory",
+      "lead": "Search by name, position or unit, filter by unit and switch between card and list views · No photo = initials circle",
+      "variant": "alt",
+      "units": [
+        "Science Division",
+        "Arts Division"
+      ],
+      "items": [
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Science Division",
+          "ext": "[Internal extension]",
+          "email": "name@example.com"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Arts Division",
+          "ext": "[Internal extension]"
+        },
+        {
+          "name": "[Full name]",
+          "position": "[Position]",
+          "unit": "Arts Division",
+          "ext": "[Internal extension]"
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "sg-form",
+      "variant": "alt",
+      "heading": "form — Online form (e-Form)",
+      "lead": "Numbered sections · sections shown by choice (showWhen) · Thai validation messages · no action = printable summary",
+      "submitLabel": "Submit form",
+      "sections": [
+        {
+          "heading": "Contact type",
+          "fields": [
+            {
+              "name": "who",
+              "label": "Contacting as",
+              "type": "radio",
+              "required": true,
+              "options": [
+                "Individual",
+                "Unit"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Organization details",
+          "showWhen": {
+            "field": "who",
+            "value": "Unit"
+          },
+          "fields": [
+            {
+              "name": "org",
+              "label": "Name of the Office",
+              "required": true
+            }
+          ]
+        },
+        {
+          "heading": "Details",
+          "fields": [
+            {
+              "name": "name",
+              "label": "Full name",
+              "required": true,
+              "width": "half"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "type": "email",
+              "required": true,
+              "width": "half"
+            },
+            {
+              "name": "topics",
+              "label": "Heading",
+              "type": "checkbox",
+              "required": true,
+              "options": [
+                "Thai language",
+                "Dictionary"
+              ],
+              "other": "Other (please specify)"
+            },
+            {
+              "name": "message",
+              "label": "Message",
+              "type": "textarea"
+            }
+          ]
+        }
+      ],
+      "consent": {
+        "text": "I consent to this information being used to contact me"
+      }
+    },
+    {
+      "type": "media-grid",
+      "id": "b-media-contain",
+      "heading": "media-grid (ratio 3:4, fit contain)",
+      "columns": 4,
+      "ratio": "3:4",
+      "fit": "contain",
+      "lead": "Book cover or scanned image — the whole image is shown without cropping",
+      "items": [
+        {
+          "image": "assets/images/orst/publications/00000355.jpg",
+          "alt": "Sample book cover",
+          "title": "Book cover example"
+        },
+        {
+          "youtube": "trzQRPLZ9Xw",
+          "image": "assets/images/orst/video/trzQRPLZ9Xw.jpg",
+          "alt": "Sample video thumbnail: Regional Words, Poetic Words",
+          "title": "YouTube video (set youtube = video ID); click to play in a pop-up",
+          "tag": "Academic forum"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "b-news-list",
+      "layout": "news",
+      "heading": "document-list (layout: news)",
+      "lead": "Template T4 news list — cover image + headline + date + summary. News without an image shows a date badge (real data from the former website)",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "publishedAt": "2026-11-02",
+          "href": "news-detail.html?id=69kbj5538066",
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "excerpt": "3 photos"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+          "publishedAt": "2026-10-31",
+          "href": "news-detail.html?id=69jaj1403044",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "excerpt": "10 photos · 5 attachments"
+        },
+        {
+          "title": "Announcement on the Recruitment of Associate Fellows as Fellows of the Royal Society",
+          "publishedAt": "2026-08-26",
+          "href": "https://www.orst.go.th/iwfm_list.asp?n=g&b=e&i=0020000402001002%2F69HZK5054022"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "id": "b-share"
+    },
+    {
+      "type": "figure",
+      "id": "b-figure",
+      "variant": "alt",
+      "heading": "figure",
+      "lead": "Featured image of a news page — the whole image is shown; click to view full size in a lightbox",
+      "image": "assets/images/orst/news/data0005-00005324-960.jpg",
+      "alt": "News photo: the Office of the Royal Society holds an oath-taking ceremony to be good civil servants and a strength of the land",
+      "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005324.JPG",
+      "caption": "Image caption"
+    },
+    {
+      "type": "media-grid",
+      "id": "b-media-grid",
+      "heading": "media-grid",
+      "lead": "Cards with images; the image ratio is fixed at 4:3 so rows line up evenly",
+      "columns": 4,
+      "items": [
+        {
+          "image": "assets/images/e-Book01.png",
+          "alt": "Sample book cover 1",
+          "title": "Clickable media card",
+          "desc": "Set href to make it clickable",
+          "tag": "e-Book",
+          "href": "#"
+        },
+        {
+          "image": "assets/images/e-Book02.png",
+          "alt": "Sample book cover 2",
+          "title": "Card without a tag",
+          "desc": "The tag is optional",
+          "href": "#"
+        },
+        {
+          "image": "assets/images/e-Book03.png",
+          "alt": "Sample book cover 3",
+          "title": "Non-clickable card",
+          "desc": "Without href it is just a plain card"
+        },
+        {
+          "image": "assets/images/e-Book04.png",
+          "alt": "Sample book cover 4",
+          "title": "Card with name only",
+          "tag": "New",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "b-table",
+      "variant": "alt",
+      "heading": "table",
+      "lead": "Data table. The first column automatically becomes the row header, and the table scrolls horizontally on small screens",
+      "caption": "Sample table — columns are the table headers, rows is an array of arrays",
+      "columns": [
+        "Block name",
+        "Purpose",
+        "Required fields"
+      ],
+      "rows": [
+        [
+          "page-hero",
+          "Page header",
+          "heading"
+        ],
+        [
+          "card-grid",
+          "Card grid",
+          "items"
+        ],
+        [
+          "faq",
+          "Frequently asked questions",
+          "items"
+        ]
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "b-steps",
+      "heading": "steps",
+      "lead": "Process steps; the system numbers them automatically",
+      "items": [
+        {
+          "title": "Step one",
+          "body": "Description of the step"
+        },
+        {
+          "title": "Step two",
+          "body": "Description of the step"
+        },
+        {
+          "title": "Step three",
+          "body": "Description of the step"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "b-steps-timeline",
+      "heading": "steps (layout: timeline, variant: dark)",
+      "layout": "timeline",
+      "items": [
+        {
+          "title": "Step 1",
+          "body": "Short description"
+        },
+        {
+          "title": "Step 2",
+          "body": "Short description"
+        },
+        {
+          "title": "Step 3",
+          "body": "Short description"
+        },
+        {
+          "title": "Step 4",
+          "body": "Short description"
+        }
+      ],
+      "variant": "dark"
+    },
+    {
+      "type": "two-column",
+      "id": "b-two-column",
+      "variant": "alt",
+      "heading": "two-column",
+      "lead": "Text paired with an image; swap sides with imageSide: left",
+      "subheading": "Subheading of the text column",
+      "paragraphs": [
+        "Enter text as an array in paragraphs, the same as rich-text",
+        "On mobile screens it stacks vertically automatically, with the text always above and the image below"
+      ],
+      "image": "assets/images/ConnectedNetwork01.JPG",
+      "imageAlt": "Sample illustration",
+      "imageSide": "right",
+      "actions": [
+        {
+          "label": "Primary button",
+          "href": "#"
+        },
+        {
+          "label": "Secondary button",
+          "href": "#",
+          "variant": "ghost"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "b-faq",
+      "heading": "faq",
+      "lead": "Frequently asked questions that open/close on click (components.js binds the events automatically)",
+      "items": [
+        {
+          "q": "Do I need to give a block an id?",
+          "a": "It is optional, but if set, anchor links can point to that section, and the faq block also uses the id to generate the ids of its answers"
+        },
+        {
+          "q": "How do I change a section's background color?",
+          "a": "Set variant to alt for a white background. Without it, the background is the theme's paper color"
+        },
+        {
+          "q": "Can I add a new block type?",
+          "a": "Yes. Write a render function in assets/js/blocks.js and register it in BLOCKS at the end of the file"
+        }
+      ]
+    },
+    {
+      "type": "contact-info",
+      "id": "b-contact-info",
+      "variant": "alt",
+      "heading": "contact-info",
+      "lead": "Contact information. Phone numbers and emails automatically become tel: / mailto: links",
+      "address": "[Office address]",
+      "phone": "[Telephone number]",
+      "email": "[Contact email]",
+      "hours": "[Business days and hours]"
+    },
+    {
+      "type": "cta-band",
+      "id": "b-cta-band",
+      "heading": "cta-band",
+      "body": "Call-to-action bar, placed at the end of a page to guide users onward",
+      "actions": [
+        {
+          "label": "Primary button",
+          "href": "#"
+        },
+        {
+          "label": "Secondary button",
+          "href": "#",
+          "variant": "ghost"
+        }
+      ]
+    },
+    {
+      "type": "news-media",
+      "id": "b-news-media",
+      "images": [
+        {
+          "image": "assets/images/orst/news/data0005-00005462-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005462.JPG",
+          "alt": "News photo 1"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005463-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005463.JPG",
+          "alt": "News photo 2"
+        },
+        {
+          "image": "assets/images/orst/news/data0005-00005464-640.jpg",
+          "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER002/GENERAL/DATA0005/00005464.JPG",
+          "alt": "News photo 3"
+        }
+      ]
+    },
+    {
+      "type": "news-related",
+      "id": "b-news-related",
+      "heading": "news-related — other news at the end of a news page",
+      "href": "general-news.html",
+      "items": [
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment of Individuals for Service Contracts",
+          "href": "news-detail.html?id=69jaj1403044",
+          "image": "assets/images/orst/news/data0005-00005446-640.jpg",
+          "category": "Announcement",
+          "publishedAt": "2026-10-31"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: Competition for Writing Books Teaching Buddhism to Children 2027, on the theme “The More You Lose, the More You Gain; the More You Give, the More You Have”",
+          "href": "news-detail.html?id=69jsh5647044",
+          "image": "assets/images/orst/news/data0005-00005428-640.jpg",
+          "category": "Announcement",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Moral and Political Sciences",
+          "href": "news-detail.html?id=69jsn0030075",
+          "image": "assets/images/orst/news/data0005-00005433-640.jpg",
+          "category": "Announcement",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society on the Recruitment and Selection of Individuals for Appointment as Associate Fellows, Academy of Science",
+          "href": "news-detail.html?id=69jsm4847075",
+          "image": "assets/images/orst/news/data0005-00005420-640.jpg",
+          "category": "Announcement",
+          "publishedAt": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "type": "event-calendar",
+      "id": "sg-event-calendar",
+      "heading": "event-calendar — Activity calendar",
+      "listHeading": "Latest activities",
+      "items": [
+        {
+          "title": "[Activity name]",
+          "start": "2026-01-15",
+          "location": "[Venue]",
+          "unit": "[Unit]"
+        },
+        {
+          "title": "[Multi-day activity name]",
+          "start": "2026-02-02",
+          "end": "2026-02-04",
+          "location": "[Venue]"
+        }
+      ]
+    },
+    {
+      "type": "photo-album",
+      "id": "sg-photo-album",
+      "source": {
+        "type": "album",
+        "id": "69hni1055034"
+      }
+    },
+    {
+      "type": "timeline",
+      "id": "b-timeline",
+      "variant": "alt",
+      "heading": "timeline",
+      "lead": "เส้นเวลา — จอกว้างสลับซ้าย/ขวาตามเส้นกลาง จอแคบเรียงแถวเดียว · image ไม่บังคับ (ตัวอย่างจากหน้าประวัติความเป็นมา)",
+      "items": [
+        {
+          "year": "2469",
+          "title": "Founding of the “Royal Society”",
+          "body": "[ข้อความสั้น ๆ ของเหตุการณ์]"
+        },
+        {
+          "year": "2558",
+          "title": "Royal Society of Thailand Act, B.E. 2558",
+          "body": "[ข้อความสั้น ๆ ของเหตุการณ์]",
+          "image": "assets/images/orst/news/data0005-00005374-640.jpg",
+          "alt": "ภาพตัวอย่าง"
+        }
+      ]
+    },
+    {
+      "type": "pillars",
+      "id": "b-pillars",
+      "heading": "pillars",
+      "lead": "แผงเทียบส่วนงานเคียงกัน — หัวสีเข้ม/สีทอง ตารางตำแหน่ง รายการหน้าที่ ป้ายคำ ข้อความฉบับเต็มพับเก็บ (ตัวอย่างจากหน้าประวัติความเป็นมา)",
+      "items": [
+        {
+          "icon": "i-people",
+          "eyebrow": "ส่วนที่ ๑",
+          "title": "[ชื่อส่วนงาน]",
+          "lead": "[บทบาทโดยย่อ]",
+          "facts": [
+            {
+              "label": "[Position]",
+              "value": "[ผู้ดำรงตำแหน่ง]"
+            }
+          ],
+          "listHeading": "Powers and duties",
+          "list": [
+            "[หน้าที่ข้อ ๑]",
+            "[หน้าที่ข้อ ๒]"
+          ]
+        },
+        {
+          "icon": "i-service",
+          "eyebrow": "ส่วนที่ ๒",
+          "title": "[ชื่อส่วนงาน]",
+          "lead": "[บทบาทโดยย่อ]",
+          "tagsHeading": "Internal units",
+          "tags": [
+            "[หน่วยงาน ๑]",
+            "[หน่วยงาน ๒]"
+          ],
+          "more": [
+            "[ข้อความฉบับเต็ม]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org-chart",
+      "id": "b-org-chart",
+      "variant": "alt",
+      "heading": "org-chart",
+      "lead": "แผนผังโครงสร้าง — ชั้นบนลงล่าง เชื่อมเส้น หน่วยย่อยแยกกิ่ง (ตัวอย่างจากหน้าประวัติความเป็นมา)",
+      "tiers": [
+        {
+          "tone": "deep",
+          "eyebrow": "[บทบาท]",
+          "title": "[ส่วนบน]",
+          "roles": [
+            {
+              "role": "[Position]",
+              "holder": "[ผู้ดำรงตำแหน่ง]"
+            }
+          ],
+          "childrenLabel": "[กลุ่มย่อย]",
+          "children": [
+            "[หน่วย ๑]",
+            "[หน่วย ๒]",
+            "[หน่วย ๓]"
+          ]
+        },
+        {
+          "tone": "gold",
+          "title": "[ตำแหน่งเชื่อม]",
+          "note": "[คำอธิบาย]"
+        },
+        {
+          "tone": "plain",
+          "title": "[ส่วนล่าง]",
+          "childrenLabel": "[Internal unit]",
+          "children": [
+            "[หน่วย ๑]",
+            "[หน่วย ๒]"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "title": "[อำนาจหน้าที่]",
+          "items": [
+            "[ข้อ ๑]",
+            "[ข้อ ๒]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org-tree",
+      "id": "b-org-tree",
+      "variant": "alt",
+      "heading": "org-tree",
+      "lead": "แผนผังการบริหารงาน 2 สาย + เอกสารฉบับเผยแพร่ (ตัวอย่างจริง: หน้าโครงสร้างหน่วยงาน)",
+      "top": {
+        "title": "[ผู้บังคับบัญชาสูงสุด]",
+        "aside": "[หน่วยที่เชื่อมโยง]"
+      },
+      "branches": [
+        {
+          "title": "[สายที่ ๑]",
+          "tone": "deep",
+          "nodes": [
+            {
+              "title": "[Position]",
+              "side": [
+                {
+                  "title": "[คณะที่ปรึกษา]"
+                }
+              ]
+            }
+          ],
+          "unitsLabel": "[กลุ่มย่อย]",
+          "units": [
+            {
+              "title": "[หน่วย ๑]",
+              "roles": [
+                "[ประธาน]",
+                "[เลขานุการ]"
+              ]
+            },
+            {
+              "title": "[หน่วย ๒]"
+            }
+          ]
+        },
+        {
+          "title": "[สายที่ ๒]",
+          "tone": "gold",
+          "nodes": [
+            {
+              "title": "[Position]",
+              "rolesLabel": "Also serves as",
+              "roles": [
+                "[บทบาท]"
+              ]
+            }
+          ],
+          "unitsLabel": "[Internal unit]",
+          "units": [
+            {
+              "title": "[หน่วย ๑]"
+            },
+            {
+              "title": "[หน่วย ๒]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "annotated-figure",
+      "id": "b-annotated-figure",
+      "heading": "annotated-figure",
+      "lead": "ภาพพร้อมหมุดชี้ส่วนต่าง ๆ + ความหมาย (ตัวอย่างจริง: หน้าเครื่องหมายราชการ)",
+      "image": "assets/images/orst/about/emblem.png",
+      "imageAlt": "",
+      "parts": [
+        {
+          "title": "[ส่วนที่ ๑]",
+          "text": "[ความหมาย]",
+          "x": 50,
+          "y": 22
+        },
+        {
+          "title": "[ส่วนที่ ๒]",
+          "text": "[ความหมาย]",
+          "x": 50,
+          "y": 57
+        }
+      ]
+    },
+    {
+      "type": "image-band",
+      "id": "b-image-band",
+      "eyebrow": "image-band · tone light · imageSide right",
+      "heading": "Vision",
+      "statement": "[ข้อความวิสัยทัศน์]",
+      "highlights": [
+        "ข้อความวิสัยทัศน์"
+      ],
+      "image": "assets/images/orst-bg.jpg",
+      "imageAlt": "Office building"
+    },
+    {
+      "type": "image-band",
+      "id": "b-image-band-dark",
+      "eyebrow": "image-band · tone dark · imageSide cover",
+      "heading": "Mission",
+      "paragraphs": [
+        "[ข้อความนำ]"
+      ],
+      "list": [
+        "(๑) [รายการที่ ๑]",
+        "(๒) [รายการที่ ๒]",
+        "(๓) [รายการที่ ๓]"
+      ],
+      "image": "assets/images/orst/services-hero.jpg",
+      "imageAlt": "",
+      "imageSide": "cover",
+      "tone": "dark"
+    }
+  ],
+  "updatedAt": "2026-11-13",
+  "lang": "en"
+}

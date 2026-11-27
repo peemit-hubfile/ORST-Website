@@ -1,0 +1,62 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ATP-PAP (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Operation Manuals & Standards",
+  "navKey": "about",
+  "description": "Operation manuals and operating standards of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Operation Manuals & Standards",
+      "lead": "Operation manuals and operating standards of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Operations"
+        },
+        {
+          "label": "Operation Manuals & Standards"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Operation manual: the process of creating knowledge in various disciplines and language guidelines of the Office of the Royal Society, edition 4",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000164.PDF",
+          "fileSize": 3217290
+        },
+        {
+          "title": "Process for disbursing allowances for Fellows and Associate Fellows and meeting allowances",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000620.PDF",
+          "fileSize": 166416
+        },
+        {
+          "title": "Operation manual: appointment of Fellows, Associate Fellows, and the President and Vice Presidents of the Royal Society of Thailand",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000848.PDF",
+          "category": "Disbursement of meeting allowances",
+          "fileSize": 2226065
+        },
+        {
+          "title": "User manual for the online service system (E-Service) of the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000952.PDF",
+          "category": "Disbursement of meeting allowances",
+          "fileSize": 2508770
+        },
+        {
+          "title": "Service guidelines for service users and visitors to the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000954.PDF",
+          "category": "Disbursement of meeting allowances",
+          "fileSize": 233415
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

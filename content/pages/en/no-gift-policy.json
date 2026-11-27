@@ -1,0 +1,73 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=11 (เฉพาะรายการที่เกี่ยวกับ No Gift) (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "No Gift Policy",
+  "navKey": "about",
+  "description": "Declaration of intent and results of the No Gift Policy",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "No Gift Policy",
+      "lead": "Declaration of intent and results of the No Gift Policy",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Anti-Corruption Center",
+          "href": "anti-corruption-center.html"
+        },
+        {
+          "label": "No Gift Policy"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Summary report under the No Gift Policy in the performance of duties, fiscal year 2025, 12-month period",
+          "publishedAt": "2025-11-12",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001005.PDF"
+        },
+        {
+          "title": "Assessment of the risk of giving or receiving bribes in the missions of the Office of the Royal Society, fiscal year 2025",
+          "publishedAt": "2025-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000994.PDF"
+        },
+        {
+          "title": "Summary report on receipt of property or other benefits with monetary value, fiscal year 2024, 12-month period (1 October 2023 - 30 September 2024)",
+          "publishedAt": "2024-12-18",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000977.PDF"
+        },
+        {
+          "title": "Announcement of the Office of the Royal Society: No Gift Policy (no acceptance of gifts or presents of any kind in the performance of duties) of the Office of the Royal Society, fiscal year 2025",
+          "publishedAt": "2024-12-04",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000972.PDF"
+        },
+        {
+          "title": "Summary report on receipt of property or other benefits with monetary value, fiscal year 2023, 12-month period (1 October 2022 - 30 September 2023)",
+          "publishedAt": "2024-02-08",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000949.PDF"
+        },
+        {
+          "title": "Summary report under the No Gift Policy in the performance of duties, fiscal year 2023, 12-month period (1 October 2022 - 30 September 2023)",
+          "publishedAt": "2023-10-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000947.PDF"
+        },
+        {
+          "title": "Summary report under the No Gift Policy in the performance of duties, fiscal year 2023, 6-month period (1 October 2022 - 31 March 2023)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000910.PDF"
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

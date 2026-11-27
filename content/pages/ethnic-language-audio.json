@@ -1,0 +1,76 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=42 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ข้อมูลเสียงภาษาถิ่น",
+  "navKey": "knowledge",
+  "description": "ข้อมูลเสียงประกอบคู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+  "sideNav": false,
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ข้อมูลเสียงภาษาถิ่น",
+      "image": "assets/images/orst/news/data0005-00005324-960.jpg",
+      "lead": "ข้อมูลเสียงประกอบคู่มือระบบเขียนภาษาท้องถิ่นของกลุ่มชาติพันธุ์ด้วยอักษรไทย",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "คลังองค์ความรู้",
+          "href": "knowledge.html"
+        },
+        {
+          "label": "ข้อมูลเสียงภาษาถิ่น"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ภาษาเขมรถิ่นไทย",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001587.HTM"
+        },
+        {
+          "title": "ภาษาเลอเวือะ",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001591.HTM"
+        },
+        {
+          "title": "ภาษาญัฮกุร",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001592.HTM"
+        },
+        {
+          "title": "ภาษาโซ่ (ทะวืง)",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001593.HTM"
+        },
+        {
+          "title": "ภาษากฺ๋อง",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001594.HTM"
+        },
+        {
+          "title": "ภาษาบีซู",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001595.HTM"
+        },
+        {
+          "title": "ภาษาโทรฺ",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001596.HTM"
+        },
+        {
+          "title": "ภาษาขมุ",
+          "publishedAt": "2023-03-03",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001597.HTM"
+        }
+      ]
+    }
+  ]
+}

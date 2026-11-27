@@ -1,0 +1,40 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=35 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ข่าวกิจกรรม",
+  "navKey": "news",
+  "description": "ข่าวกิจกรรมของสำนักงานราชบัณฑิตยสภา",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ข่าวกิจกรรม",
+      "lead": "ข่าวกิจกรรมของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ข่าวกิจกรรม"
+        }
+      ],
+      "image": "assets/images/orst/news/data0004-00004279-960.jpg",
+      "imageAlt": ""
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "layout": "news",
+      "source": {
+        "type": "news",
+        "channel": "activity"
+      },
+      "keepImages": true
+    }
+  ],
+  "updatedAt": "2026-11-13"
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_table.asp?a=40 (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ประกาศขายทอดตลาด",
+  "navKey": "news",
+  "description": "ประกาศขายทอดตลาดของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ประกาศขายทอดตลาด",
+      "lead": "ประกาศขายทอดตลาดของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "ข่าวสารและกิจกรรม"
+        },
+        {
+          "label": "ประกาศขายทอดตลาด"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ประกาศขายทอดตลาดพัสดุชำรุด เสื่อมสภาพ หรือไม่จำเป็นต่อการใช้งานในราชการ ประจำปีงบประมาณ พ.ศ. 2567",
+          "publishedAt": "2024-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001729.PDF"
+        },
+        {
+          "title": "ประกาศขายทอดตลาดพัสดุชำรุด เสื่อมสภาพ หรือไม่จำเป็นต้องใช้ในหน่วยงาน ประจำปีงบประมาณ พ.ศ. 2563",
+          "publishedAt": "2021-02-23",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER003/GENERAL/DATA0001/00001145.PDF"
+        }
+      ]
+    }
+  ]
+}

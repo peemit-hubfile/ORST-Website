@@ -1,0 +1,544 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "สร้างอัตโนมัติจาก tools/scrape-old-site/step6_sitemap.py — อย่าแก้ด้วยมือ ให้แก้หน้าหมวดแล้วรันใหม่",
+  "title": "Sitemap",
+  "navKey": "home",
+  "description": "Sitemap of the Office of the Royal Society website, with links to every section and page",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Sitemap",
+      "lead": "Links to every section and page of the Office of the Royal Society website",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Sitemap"
+        }
+      ]
+    },
+    {
+      "type": "page-index",
+      "id": "sitemap",
+      "columns": 3,
+      "groups": [
+        {
+          "heading": "Website home page",
+          "icon": "i-home",
+          "items": [
+            {
+              "title": "Home",
+              "href": "index.html"
+            },
+            {
+              "title": "Dictionaries and vocabulary",
+              "href": "dictionary.html"
+            },
+            {
+              "title": "Knowledge",
+              "href": "knowledge.html"
+            },
+            {
+              "title": "Books and Publications",
+              "href": "publications.html"
+            },
+            {
+              "title": "News and Activities"
+            },
+            {
+              "title": "Academic Services"
+            },
+            {
+              "title": "About Us"
+            },
+            {
+              "title": "Operations"
+            },
+            {
+              "title": "Contact Us",
+              "href": "contact.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · Organization",
+          "icon": "i-book",
+          "items": [
+            {
+              "title": "History",
+              "href": "history.html"
+            },
+            {
+              "title": "Vision & Mission",
+              "href": "vision-mission.html"
+            },
+            {
+              "title": "Core Values",
+              "href": "core-values.html"
+            },
+            {
+              "title": "Organization Structure & Divisions",
+              "href": "organization-structure.html"
+            },
+            {
+              "title": "Official Emblem",
+              "href": "emblem.html"
+            },
+            {
+              "title": "Laws & Regulations",
+              "href": "laws-regulations.html"
+            },
+            {
+              "title": "Duties & Responsibilities",
+              "href": "duties.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · Office Executives",
+          "icon": "i-user",
+          "items": [
+            {
+              "title": "Office Executives",
+              "href": "executives.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · IT Executives",
+          "icon": "i-user",
+          "items": [
+            {
+              "title": "Chief Information Officer (CIO)",
+              "href": "cio.html"
+            },
+            {
+              "title": "IT Management",
+              "href": "cio-it-management.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · Personnel",
+          "icon": "i-people",
+          "items": [
+            {
+              "title": "Staff Directory",
+              "href": "staff-directory.html"
+            },
+            {
+              "title": "Committees",
+              "href": "committees.html"
+            },
+            {
+              "title": "HR Criteria",
+              "href": "hr-criteria.html"
+            }
+          ]
+        },
+        {
+          "heading": "About Us · Anti-Corruption Center",
+          "icon": "i-shield",
+          "items": [
+            {
+              "title": "About the Center",
+              "href": "anti-corruption-center.html"
+            },
+            {
+              "title": "Report Corruption & Misconduct",
+              "href": "corruption-complaints.html"
+            },
+            {
+              "title": "Complaint Handling Guidelines",
+              "href": "complaint-guidelines.html"
+            },
+            {
+              "title": "Complaint Statistics",
+              "href": "complaint-statistics.html"
+            },
+            {
+              "title": "No Gift Policy",
+              "href": "no-gift-policy.html"
+            },
+            {
+              "title": "Anti-Corruption Plan",
+              "href": "anti-corruption-plan.html"
+            },
+            {
+              "title": "Integrity & Transparency",
+              "href": "ethics.html"
+            }
+          ]
+        },
+        {
+          "heading": "Operations · Plans",
+          "icon": "i-journal",
+          "items": [
+            {
+              "title": "Related Laws",
+              "href": "related-laws.html"
+            },
+            {
+              "title": "Operation Manuals & Standards",
+              "href": "operation-manuals.html"
+            },
+            {
+              "title": "5-Year Strategic Plan",
+              "href": "strategic-plans.html"
+            },
+            {
+              "title": "Annual Action Plan",
+              "href": "annual-action-plan.html"
+            },
+            {
+              "title": "Business Continuity Plan",
+              "href": "continuity-plan.html"
+            },
+            {
+              "title": "IT Master Plan",
+              "href": "it-master-plan.html"
+            },
+            {
+              "title": "Risk Management Plan",
+              "href": "risk-management-plan.html"
+            },
+            {
+              "title": "Energy Saving",
+              "href": "energy-saving.html"
+            },
+            {
+              "title": "Internal Audit Charter",
+              "href": "internal-audit-charter.html"
+            },
+            {
+              "title": "Annual Plan & Budget",
+              "href": "annual-budget-plan.html"
+            },
+            {
+              "title": "HR Plan",
+              "href": "hr-plan.html"
+            }
+          ]
+        },
+        {
+          "heading": "Operations · Performance",
+          "icon": "i-file",
+          "items": [
+            {
+              "title": "Service Manuals & Standards",
+              "href": "service-manuals.html"
+            },
+            {
+              "title": "Monthly Performance",
+              "href": "monthly-performance.html"
+            },
+            {
+              "title": "Service Time Standards",
+              "href": "service-time-standards.html"
+            },
+            {
+              "title": "Performance Agreement Results",
+              "href": "performance-agreement.html"
+            },
+            {
+              "title": "Unit Cost & Trial Balance",
+              "href": "unit-cost.html"
+            },
+            {
+              "title": "Feedback Form",
+              "href": "https://forms.gle/mc1qF9RCDQbvLnho6"
+            },
+            {
+              "title": "6-Month Report",
+              "href": "six-month-report.html"
+            },
+            {
+              "title": "Annual Report",
+              "href": "annual-report.html"
+            },
+            {
+              "title": "Budget Spending Report",
+              "href": "budget-spending-report.html"
+            },
+            {
+              "title": "Service Statistics",
+              "href": "service-statistics.html"
+            },
+            {
+              "title": "Satisfaction Survey Results",
+              "href": "satisfaction-survey.html"
+            },
+            {
+              "title": "HR Annual Report",
+              "href": "hr-annual-report.html"
+            }
+          ]
+        },
+        {
+          "heading": "Operations · Open Government Data",
+          "icon": "i-database",
+          "items": [
+            {
+              "title": "Official Information",
+              "href": "official-information.html"
+            },
+            {
+              "title": "Open Datasets",
+              "href": "open-data.html"
+            },
+            {
+              "title": "Request a Dataset",
+              "href": "open-data-request.html"
+            },
+            {
+              "title": "Data Policy & Plan",
+              "href": "data-policy.html"
+            },
+            {
+              "title": "Public Disclosure (ITA/OIT)",
+              "href": "public-disclosure.html"
+            },
+            {
+              "title": "Data Subject Request",
+              "href": "data-subject-request.html"
+            }
+          ]
+        },
+        {
+          "heading": "News · Press Releases",
+          "icon": "i-megaphone",
+          "items": [
+            {
+              "title": "General News",
+              "href": "general-news.html"
+            },
+            {
+              "title": "Activities",
+              "href": "activity-news.html"
+            },
+            {
+              "title": "Event Calendar",
+              "href": "event-calendar.html"
+            },
+            {
+              "title": "Q&A",
+              "href": "qa.html"
+            },
+            {
+              "title": "Photo Gallery",
+              "href": "media-gallery.html"
+            },
+            {
+              "title": "Video Gallery",
+              "href": "videos.html"
+            },
+            {
+              "title": "RSS Feed",
+              "href": "rss.html"
+            }
+          ]
+        },
+        {
+          "heading": "News · Announcements",
+          "icon": "i-file",
+          "items": [
+            {
+              "title": "Procurement Notices",
+              "href": "procurement-notices.html"
+            },
+            {
+              "title": "Procurement Results",
+              "href": "procurement-results.html"
+            },
+            {
+              "title": "Reference Prices",
+              "href": "reference-prices.html"
+            },
+            {
+              "title": "Monthly Procurement Summary (SKR.1)",
+              "href": "procurement-summary.html"
+            },
+            {
+              "title": "Quarterly Procurement Results",
+              "href": "procurement-quarterly.html"
+            },
+            {
+              "title": "Procurement Plan",
+              "href": "procurement-plans.html"
+            },
+            {
+              "title": "Auction Notices",
+              "href": "auctions.html"
+            },
+            {
+              "title": "Job Vacancies & HR Notices",
+              "href": "job-announcements.html"
+            },
+            {
+              "title": "Official News",
+              "href": "official-news.html"
+            },
+            {
+              "title": "Contracts",
+              "href": "contracts.html"
+            }
+          ]
+        },
+        {
+          "heading": "Academic Services",
+          "icon": "i-service",
+          "items": [
+            {
+              "title": "Dictionary",
+              "href": "dictionary.html"
+            },
+            {
+              "title": "ORST Coined Words Online",
+              "href": "https://coined-word.orst.go.th/"
+            },
+            {
+              "title": "Encyclopedia & Taxonomy",
+              "href": "https://lst.nectec.or.th/encyclopedia/"
+            },
+            {
+              "title": "Archives",
+              "href": "https://da3.thaidlt.org/"
+            },
+            {
+              "title": "ORST Transliteration Database",
+              "href": "https://transliteration.orst.go.th/search"
+            },
+            {
+              "title": "Thai Gazetteer",
+              "href": "https://gazetteer.orst.go.th/"
+            },
+            {
+              "title": "Knowledge Base",
+              "href": "knowledge-base.html"
+            },
+            {
+              "title": "How to Order Books and Payment",
+              "href": "book-ordering.html"
+            },
+            {
+              "title": "Infographics",
+              "href": "infographics.html"
+            },
+            {
+              "title": "Thai Language Proficiency Test",
+              "href": "https://etest.orst.go.th/"
+            },
+            {
+              "title": "Thai Sign Language Dictionary (Royal Society Edition)",
+              "href": "http://164.115.33.116/"
+            },
+            {
+              "title": "Language Guidelines",
+              "href": "language-guidelines.html"
+            },
+            {
+              "title": "Ethnic Language Audio",
+              "href": "ethnic-language-audio.html"
+            },
+            {
+              "title": "e-Services",
+              "href": "e-services.html"
+            },
+            {
+              "title": "Citizen's Manual",
+              "href": "citizen-manual.html"
+            },
+            {
+              "title": "Download Forms",
+              "href": "download-forms.html"
+            },
+            {
+              "title": "e-Channels Notice",
+              "href": "e-channels.html"
+            },
+            {
+              "title": "Permits Issued",
+              "href": "permits-issued.html"
+            },
+            {
+              "title": "Track Request",
+              "href": "track-request.html"
+            },
+            {
+              "title": "How to Use e-Services",
+              "href": "e-service-guide.html"
+            }
+          ]
+        },
+        {
+          "heading": "Contact Us",
+          "href": "contact.html",
+          "icon": "i-phone-call",
+          "items": [
+            {
+              "title": "Complaints",
+              "href": "complaints.html"
+            },
+            {
+              "title": "Contact Form",
+              "href": "contact.html#message-form"
+            },
+            {
+              "title": "Permission Request to Print or Use the Office’s Publications and Media (e-Form)",
+              "href": "publication-permission.html"
+            },
+            {
+              "title": "Website Survey",
+              "href": "website-survey.html"
+            },
+            {
+              "title": "Social Media",
+              "href": "social-media.html"
+            }
+          ]
+        },
+        {
+          "heading": "Website & Policies",
+          "icon": "i-shield",
+          "items": [
+            {
+              "title": "FAQ",
+              "href": "qa.html"
+            },
+            {
+              "title": "Related Links",
+              "href": "related-links.html"
+            },
+            {
+              "title": "Disclaimer",
+              "href": "disclaimer.html"
+            },
+            {
+              "title": "Website Policy",
+              "href": "website-policy.html"
+            },
+            {
+              "title": "Privacy Policy",
+              "href": "privacy-policy.html"
+            },
+            {
+              "title": "Cookie Policy",
+              "href": "cookie-policy.html"
+            },
+            {
+              "title": "Security Policy",
+              "href": "security-policy.html"
+            },
+            {
+              "title": "Accessibility",
+              "href": "accessibility.html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

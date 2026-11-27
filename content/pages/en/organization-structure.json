@@ -1,0 +1,166 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=ABOUT-ORGCHART (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS · แผนผังสร้างจากเอกสาร PDF ต้นฉบับ (ถอดข้อความทุกกรอบ) ภาพย่อ assets/images/orst/about/org-chart-2564.jpg สร้างจากหน้าแรกของ PDF",
+  "title": "Organization Structure & Divisions",
+  "navKey": "about",
+  "description": "Organization chart and divisions of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "sideNav": false,
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Organization Structure & Divisions",
+      "lead": "Organization chart and divisions of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Organization Structure & Divisions"
+        }
+      ]
+    },
+    {
+      "type": "org-tree",
+      "id": "chart",
+      "eyebrow": "Organizational structure",
+      "heading": "Administrative chart",
+      "lead": "The Royal Society of Thailand and the Office of the Royal Society",
+      "top": {
+        "title": "The Prime Minister, as superior authority",
+        "note": "Act on the Reorganization of Ministries, Sub-Ministries and Departments B.E. 2545, Section 46 paragraph 2 · Royal Society Act, Section 5; Prime Minister's Order No. 238/2563, Parts 3 and 8",
+        "aside": "Council of Ministers",
+        "icon": "i-shield"
+      },
+      "branches": [
+        {
+          "title": "Royal Society of Thailand",
+          "note": "Royal Society Act, Sections 4, 6, 12, 24, 31",
+          "tone": "deep",
+          "nodes": [
+            {
+              "title": "President of the Royal Society",
+              "note": "Royal Society Act, Section 8 (2), (3), Section 26 and Section 36 paragraphs 1 and 2",
+              "side": [
+                {
+                  "title": "Advisory Board of Fellows of the Royal Society",
+                  "note": "Letter No. Kor Kor 0406.6/20027, dated 29 July 2008"
+                },
+                {
+                  "title": "Committee on the Affairs of the Office of the Royal Society",
+                  "note": "Royal Society Act, Section 37"
+                }
+              ]
+            },
+            {
+              "title": "Vice President of the Royal Society of Thailand",
+              "chips": [
+                "First",
+                "Second"
+              ],
+              "note": "Royal Society Act, Section 27"
+            }
+          ],
+          "unitsLabel": "3 academies",
+          "units": [
+            {
+              "title": "Academy of Moral and Political Sciences",
+              "note": "Royal Society Act, Section 9",
+              "roles": [
+                "Academy President",
+                "Academy Secretary"
+              ]
+            },
+            {
+              "title": "Academy of Science",
+              "note": "Royal Society Act, Section 9",
+              "roles": [
+                "Academy President",
+                "Academy Secretary"
+              ]
+            },
+            {
+              "title": "Academy of Arts",
+              "note": "Royal Society Act, Section 9",
+              "roles": [
+                "Academy President",
+                "Academy Secretary"
+              ]
+            }
+          ],
+          "icon": "i-people"
+        },
+        {
+          "title": "Office of the Royal Society",
+          "note": "Royal Society Act, Sections 4, 7, 8 and the Act on the Reorganization of Ministries, Sub-Ministries and Departments B.E. 2545, Section 46 (6)",
+          "tone": "gold",
+          "nodes": [
+            {
+              "title": "Secretary-General of the Royal Society of Thailand",
+              "note": "Royal Society Act, Section 38",
+              "rolesLabel": "Also serves as",
+              "roles": [
+                "Secretary of the Royal Society of Thailand (Section 24)",
+                "Secretary of the Committee on the Affairs of the Office (Section 37 (5))"
+              ]
+            },
+            {
+              "title": "Deputy Secretary-General of the Office of the Royal Society",
+              "note": "Royal Society Act, Section 38",
+              "rolesLabel": "Also serves as",
+              "roles": [
+                "Assistant Secretary of the Royal Society of Thailand (Section 24)",
+                "Assistant Secretary of the Committee on the Affairs of the Office (Section 37 (5))"
+              ]
+            }
+          ],
+          "unitsLabel": "Internal units",
+          "units": [
+            {
+              "title": "Moral and Political Sciences Division",
+              "note": "Ministerial Regulation (B.E. 2545), Clause 2"
+            },
+            {
+              "title": "Science Division",
+              "note": "Ministerial Regulation (B.E. 2545), Clause 2"
+            },
+            {
+              "title": "Arts Division",
+              "note": "Ministerial Regulation (B.E. 2545), Clause 2"
+            },
+            {
+              "title": "Office of the Secretary",
+              "note": "Ministerial Regulation (B.E. 2545), Clause 2"
+            }
+          ],
+          "extrasLabel": "Committees",
+          "extras": [
+            {
+              "title": "Academic committees of the Office of the Royal Society",
+              "note": "Royal Society Act, Section 36 and Cabinet resolution of 21 February 2017"
+            },
+            {
+              "title": "Other committees",
+              "note": "Royal Society Act, Section 36 and Cabinet resolution of 21 February 2017"
+            }
+          ],
+          "icon": "i-service"
+        }
+      ],
+      "legend": "Dashed frames indicate linked work",
+      "document": {
+        "heading": "Documents",
+        "title": "Organization chart, 2021",
+        "lead": "The administrative chart of the Royal Society of Thailand and the Office of the Royal Society, as published by the Office",
+        "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000005.PDF",
+        "fileSize": 584921,
+        "thumb": "assets/images/orst/about/org-chart-2564.jpg"
+      }
+    }
+  ],
+  "lang": "en"
+}

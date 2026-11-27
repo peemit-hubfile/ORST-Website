@@ -1,0 +1,108 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ขั้นตอนตามระบบงานบริการ e-Services ของเว็บเดิม (orst.go.th/info.asp)",
+  "title": "How to Use e-Services",
+  "navKey": "services",
+  "description": "Steps for submitting online service requests to the Office of the Royal Society",
+  "sideNav": false,
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "How to Use e-Services",
+      "lead": "Steps for submitting online service requests to the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "Academic Services"
+        },
+        {
+          "label": "How to Use e-Services"
+        }
+      ]
+    },
+    {
+      "type": "feature-list",
+      "id": "steps",
+      "layout": "directory",
+      "heading": "How to submit a request",
+      "lead": "Follow the steps below. Each step links to the documents and channels you need.",
+      "items": [
+        {
+          "title": "Choose a service",
+          "body": "Choose the service you need on the e-Services page",
+          "links": [
+            {
+              "kind": "Available services",
+              "label": "e-Services",
+              "href": "e-services.html"
+            }
+          ]
+        },
+        {
+          "title": "Read the regulations",
+          "body": "Read the regulations and conditions of the service in full",
+          "links": [
+            {
+              "kind": "Permission to print and publish",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000100.PDF"
+            },
+            {
+              "kind": "Licence to print and sell",
+              "label": "Regulation (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000097.PDF"
+            }
+          ]
+        },
+        {
+          "title": "Download and complete the form",
+          "body": "Download the request form, fill it in and prepare supporting documents",
+          "links": [
+            {
+              "kind": "Permission to print and publish",
+              "label": "Form (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000237.PDF"
+            },
+            {
+              "kind": "Licence to print and sell",
+              "label": "Form (PDF)",
+              "href": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER001/GENERAL/DATA0000/00000238.PDF"
+            },
+            {
+              "kind": "Other forms",
+              "label": "Download Forms",
+              "href": "download-forms.html"
+            }
+          ]
+        },
+        {
+          "title": "Submit documents",
+          "body": "Send the form and supporting documents by email. Accepted files: .pdf, .doc and .docx, up to 10MB.",
+          "links": [
+            {
+              "kind": "Send documents by email",
+              "label": "saraban@orst.go.th",
+              "href": "mailto:saraban@orst.go.th"
+            }
+          ]
+        },
+        {
+          "title": "Track request",
+          "body": "Ask about the progress of your request by email or telephone.",
+          "links": [
+            {
+              "kind": "How to ask",
+              "label": "Track Request",
+              "href": "track-request.html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lang": "en"
+}

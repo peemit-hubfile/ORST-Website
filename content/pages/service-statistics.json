@@ -1,0 +1,73 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "เอกสารคัดจากหน้าเว็บเดิม orst.go.th ตามชื่อเอกสาร — ลิงก์ยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "ข้อมูลเชิงสถิติการให้บริการ",
+  "navKey": "about",
+  "description": "ข้อมูลสถิติการให้บริการประชาชนของสำนักงานราชบัณฑิตยสภา",
+  "updatedAt": "2026-11-17",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "ข้อมูลเชิงสถิติการให้บริการ",
+      "lead": "ข้อมูลสถิติการให้บริการประชาชนของสำนักงานราชบัณฑิตยสภา",
+      "breadcrumb": [
+        {
+          "label": "หน้าหลัก",
+          "href": "index.html"
+        },
+        {
+          "label": "การปฏิบัติราชการ"
+        },
+        {
+          "label": "ข้อมูลเชิงสถิติการให้บริการ"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "ข้อมูลสถิติการให้บริการผ่านช่องทางออนไลน์ (E-Service) ประจำปีงบประมาณ พ.ศ. 2568 รอบ 12 เดือน",
+          "publishedAt": "2026-05-14",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0001/00001025.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2567 รอบ 12 เดือน (1 ตุลาคม 2566-30 กันยายน 2567)",
+          "publishedAt": "2025-04-10",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000992.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2566 รอบ 12 เดือน (1 ตุลาคม 2565-30 กันยายน 2566)",
+          "publishedAt": "2024-02-29",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000960.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2566 รอบ 6 เดือน (1 ตุลาคม 2565-31 มีนาคม 2566)",
+          "publishedAt": "2023-04-24",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000917.PDF"
+        },
+        {
+          "title": "ข้อมูลสถิติการให้บริการของสำนักงานราชบัณฑิตยสภา ประจำปีงบประมาณ พ.ศ. 2565 รอบ 6 เดือน (1 ตุลาคม 2564-31 มีนาคม 2565)",
+          "publishedAt": "2022-04-22",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000868.PDF"
+        },
+        {
+          "title": "จำนวนให้บริการประชาชน ปี 2564 รอบ 6 เดือน (1 ตุลาคม 2563-31 มีนาคม 2564)",
+          "publishedAt": "2021-04-27",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000796.PDF"
+        },
+        {
+          "title": "จำนวนการให้บริการประชาชน ตั้งแต่เดือนตุลาคม ๒๕๖๒-พฤษภาคม ๒๕๖๓",
+          "publishedAt": "2020-05-31",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000443.PDF"
+        },
+        {
+          "title": "สรุปผู้ใช้บริการทางอินเทอร์เน็ตของสำนักงานราชบัณฑิตยสภา พ.ศ. ๒๕๕๗-๒๕๖๑",
+          "publishedAt": "2020-05-07",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000133.PDF"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "../blocks.schema.json",
+  "_note": "ข้อมูลจาก orst.go.th/iwfm_list.asp?p=BOARD-LIST (ดึงเมื่อ 13 พ.ย. 2569) ลิงก์เอกสารยังชี้ไปเว็บไซต์เดิม รอย้ายไฟล์เข้า CMS",
+  "title": "Committees",
+  "navKey": "about",
+  "description": "Lists of academic committees and other committees of the Office of the Royal Society",
+  "updatedAt": "2026-11-13",
+  "blocks": [
+    {
+      "type": "page-hero",
+      "heading": "Committees",
+      "lead": "Lists of academic committees and other committees of the Office of the Royal Society",
+      "breadcrumb": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Committees"
+        }
+      ]
+    },
+    {
+      "type": "document-list",
+      "id": "documents",
+      "items": [
+        {
+          "title": "Moral and Political Sciences Division",
+          "category": "Moral and Political Sciences Division",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000009.PDF",
+          "fileSize": 70156
+        },
+        {
+          "title": "Science Division",
+          "category": "Science Division",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000037.PDF",
+          "fileSize": 73365
+        },
+        {
+          "title": "Arts Division",
+          "category": "Arts Division",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000065.PDF",
+          "fileSize": 61547
+        },
+        {
+          "title": "Central committees",
+          "category": "Central committees",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000092.PDF",
+          "fileSize": 63373
+        },
+        {
+          "title": "Advisory Board of Fellows of the Royal Society",
+          "category": "Advisory Board of Fellows of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000108.PDF",
+          "fileSize": 58734
+        },
+        {
+          "title": "Committee on the Affairs of the Office of the Royal Society",
+          "category": "Committee on the Affairs of the Office of the Royal Society",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000111.PDF",
+          "fileSize": 89095
+        },
+        {
+          "title": "Interdisciplinary Committee for Research and Development",
+          "category": "Interdisciplinary Committee for Research and Development",
+          "file": "https://www.orst.go.th/FILEROOM/CABROYINWEB/DRAWER005/GENERAL/DATA0000/00000114.PDF",
+          "fileSize": 62584
+        }
+      ],
+      "sort": "none"
+    }
+  ],
+  "lang": "en"
+}
